@@ -1,6 +1,7 @@
 ---
 title: Test page
 date: 2021-04-10 01:54:00 Z
+permalink: "/"
 ---
 
 <ul>
