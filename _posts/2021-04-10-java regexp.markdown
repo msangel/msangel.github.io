@@ -3,7 +3,7 @@ title: java regexp
 date: 2021-04-10 01:57:00 Z
 ---
 
-### Theory and history.  
+### Theory and history.
   
 Regular expressions (regexp) is a formal language for searching and manipulating with substrings in text. Regular expressions is based on usage if meta-symbols (wildcard characters). This is, actually, a string pattern, which formalizing a search rule ([wiki](https://en.wikipedia.org/wiki/Regular_expression)) .
 
