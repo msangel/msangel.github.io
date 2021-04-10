@@ -10,7 +10,7 @@ date: 2021-04-10 01:57:00 Z
 
 ### Theory and history.
 
-Regular expressions (regexp) is a formal language for searching and manipulating with substrings in text. Regular expressions is based on usage if meta-symbols (wildcard characters). This is, actually, a string pattern, which formalizing a search rule ([wiki](https://en.wikipedia.org/wiki/Regular_expression)) .
+Regular expressions (regexp) is a formal language for searching and manipulating with substrings in text. Regular expressions is based on usage if meta-symbols (wildcard characters). This is, actually, a string pattern, which formalizing a search rule ([wiki](https://en.wikipedia.org/wiki/Regular_expression){:target="_blank"}) .
 
 There exists two kinds of regular expressions:
 
@@ -18,13 +18,13 @@ There exists two kinds of regular expressions:
 
 * PCRE (perl-compatible regular expressions, more extended)
 
-Regular expressions have a huge flexibility but are not guaranteed optimal, because they works based of exhaustive  search. So badly written regular expression can kill your program.  So far, there are techniques for optimizing them, for example build search pattern based on search input with [Aho–Corasick algorithm](https://en.wikipedia.org/wiki/Aho%E2%80%93Corasick_algorithm) (keywords for more deep search: NFA and minimal DFA, prefix tree). Here is just example implementation: [PreSuf](http://search.cpan.org/\~jhi/Regex-PreSuf-1.17/PreSuf.pm).
+Regular expressions have a huge flexibility but are not guaranteed optimal, because they works based of exhaustive  search. So badly written regular expression can kill your program.  So far, there are techniques for optimizing them, for example build search pattern based on search input with [Aho–Corasick algorithm](https://en.wikipedia.org/wiki/Aho%E2%80%93Corasick_algorithm) (keywords for more deep search: NFA and minimal DFA, prefix tree). Here is just example implementation: [PreSuf](http://search.cpan.org/\~jhi/Regex-PreSuf-1.17/PreSuf.pm){:target="_blank"}.
 
 Also you need to understand, that there is no so easy to work with regexps on huge files due their nature. Also regular expressions are possible to use with streaming data, but that's another hard moment that needs more research.
 
 ### RegExp in Java
 
-There are many regexp implementations in Java. Some a bit outdated list with performance comparisons you can find here: http://www.tusker.org/regex/regex_benchmark.html.
+There are many regexp implementations in Java. Some a bit outdated list with performance comparisons you can find here: [http://www.tusker.org/regex/regex_benchmark.html](http://www.tusker.org/regex/regex_benchmark.html){:target="_blank"}.
 
 In scope of this article we are going to review regular expressions implementation from Java standard library.  This implementation is represented by three classes:
 
@@ -57,7 +57,7 @@ Method 2:
 
 #### Flags
 
-Flags are calculating as bit mask. List of them are in documentation about [Pattern](https://docs.oracle.com/javase/tutorial/essential/regex/pattern.html) class.
+Flags are calculating as bit mask. List of them are in documentation about [Pattern](https://docs.oracle.com/javase/tutorial/essential/regex/pattern.html){:target="_blank"} class.
 
 #### Split string with delimiter
 
@@ -279,7 +279,7 @@ OUT:
 
 #### Greedy match
 
-First go to wikipedia, or to good answer on [stackoverflow](https://stackoverflow.com/questions/2301285/what-do-lazy-and-greedy-mean-in-the-context-of-regular-expressions) for getting familiar with conception.
+First go to wikipedia, or to good answer on [stackoverflow](https://stackoverflow.com/questions/2301285/what-do-lazy-and-greedy-mean-in-the-context-of-regular-expressions){:target="_blank"} for getting familiar with conception.
 By default the pattern took longest possible string. But this is changeable. Here's samples with manipulation of these settings.
 
     String input = "abdcxyz";
@@ -380,5 +380,5 @@ Quick references:
 
 Official tutorial: http://docs.oracle.com/javase/tutorial/essential/regex/
 
-Different:
-testing online: http://myregexp.com/signedJar.html
+Testing online: 
+http://myregexp.com/
