@@ -9,4 +9,5 @@ collections:
     title: Uploads
     output: true
 markdown: kramdown
-kramdown.entity_output: ":as_input"
+kramdown:
+  entity_output: :as_input
