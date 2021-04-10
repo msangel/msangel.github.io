@@ -3,7 +3,7 @@ title: java regexp
 date: 2021-04-10 01:57:00 Z
 ---
 
-* TOC {:toc}
+TOC {:toc}
 
 ### Theory and history.
 
