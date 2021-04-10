@@ -383,4 +383,3 @@ Official tutorial: http://docs.oracle.com/javase/tutorial/essential/regex/
 
 Testing online:
 http://myregexp.com/
-<script src="{{ base.url | prepend: site.url }}/assets/links.js"></script>
