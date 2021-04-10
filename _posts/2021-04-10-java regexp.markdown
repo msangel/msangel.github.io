@@ -3,17 +3,6 @@ title: java regexp
 date: 2021-04-10 01:57:00 Z
 ---
 
----
-title: Regexp in java
-date: '2014-04-16 04:34:28 +0300'
-tags:
-  - java
-  - regexp
-  - tutorial
----
-
-[TOC levels=1-4 hierarchy numbered]: # "Contents"
-  
 ### Theory and history.  
   
 Regular expressions (regexp) is a formal language for searching and manipulating with substrings in text. Regular expressions is based on usage if meta-symbols (wildcard characters). This is, actually, a string pattern, which formalizing a search rule ([wiki](https://en.wikipedia.org/wiki/Regular_expression)) .
