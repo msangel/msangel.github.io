@@ -8,4 +8,3 @@ collections:
   uploads:
     title: Uploads
     output: true
-remote_theme: riggraz/no-style-please
