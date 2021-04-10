@@ -3,10 +3,9 @@ title: java regexp
 date: 2021-04-10 01:57:00 Z
 ---
 
-# Contents
 {:.no_toc}
 
-* Will be replaced with the ToC, excluding the "Contents" header
+* TOC
 {:toc}
 
 ### Theory and history.
