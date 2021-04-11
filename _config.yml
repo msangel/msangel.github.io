@@ -1,5 +1,5 @@
 ---
-name: "Vasyl Khrystiuk"
+title: msangel
 timezone: UTC
 collections:
   posts:
@@ -8,6 +8,7 @@ collections:
   uploads:
     title: Uploads
     output: true
+name: Vasyl Khrystiuk
 markdown: kramdown
 kramdown:
   entity_output: :as_input
