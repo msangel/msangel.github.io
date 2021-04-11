@@ -11,4 +11,4 @@ collections:
 markdown: kramdown
 kramdown:
   entity_output: :as_input
-google_analytics: "G-5P480BRDV9"
+google_analytics: G-5P480BRDV9
