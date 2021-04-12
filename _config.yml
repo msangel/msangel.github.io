@@ -8,15 +8,14 @@ collections:
   uploads:
     title: Uploads
     output: true
+defaults:
+- scope:
+    path: ''
+    type: posts
+  values:
+    permalink: blog/:year/:month/:day/:title.html
 markdown: kramdown
 kramdown:
   entity_output: :as_input
 theme: jekyll-theme-primer
 google_analytics: UA-194224445-1
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      permalink: blog/:year/:month/:day/:title.html
