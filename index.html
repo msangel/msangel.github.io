@@ -1,0 +1,28 @@
+---
+title: Blog
+date: 2021-04-10 01:54:00 Z
+permalink: "/"
+layout: default
+---
+
+<div class="container central blogindex">
+  <div class="row">
+    <div class="col-lg-12 records">
+      <div class="row">
+        {% for post in site.posts %}
+        <div class="col-lg-12">
+          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+          <h5>Posted {{ post.date |  date: "%e %b, %Y" }}</h5>
+          {% if post.content contains "<!-- excerpt-start -->" %}
+              {% assign excerptParts = post.content | split: "<!-- excerpt-start -->"  %}
+              {% assign excerpt =  excerptParts[1] | markdownify | strip_html | truncatewords: 50  %}
+          {% else %}
+              {% assign excerpt = post.excerpt | truncatewords: 50 %}
+          {% endif %}
+          <p>{{ excerpt }}... <a href="{{ post.url }}">See more</a></p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

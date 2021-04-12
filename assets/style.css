@@ -27,20 +27,22 @@ body {
     font-weight: bold; /**/
 }
 
-.jumbotron a,
-.jumbotron a > span {
+.jumbotron .myname a,
+.jumbotron .myname a > span {
     color: #fff;
     font: normal bold 40px "Open Sans";
     text-decoration: none;
 }
-.jumbotron a > span {
+.jumbotron .myname a > span {
     color: #89BC23;
 }
 
-.subtitle {
+.jumbotron .subtitle,
+.jumbotron .subtitle > a {
     font-size: 20px;
     margin-top: 5px;
     color: rgb(221,221,221);
+    text-decoration: none;
 }
 
 .mysite .navbar-default .navbar-nav>li>a {
