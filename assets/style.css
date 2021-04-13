@@ -18,7 +18,8 @@ body {
     background: #23272d; /**/
     font-size: 24px; /**/
     color: rgb(137,188,35);
-    padding-bottom: 25px;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 
@@ -162,11 +163,13 @@ body {
     padding-bottom: 40px;
 }
 
-.index .greeting span {
+.index .greeting span.hello {
     font: normal normal normal 75px 'Open Sans',sans-serif;
     color: #89BC23;
     text-transform: uppercase;
     font-weight: bold;
+    position: relative;
+    left: -8px;
 }
 
 
@@ -300,9 +303,11 @@ body {
     font: normal normal normal 16px 'Open Sans',sans-serif;
 }
 
-.index .contacts .row {
-    padding-left: 15px;
-    padding-right: 15px;
+@media only screen and (min-width:1200px) {
+    .index .contacts .row {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 .index .contacts span {
@@ -332,8 +337,8 @@ body {
     .index .testimonial {
         margin-top: 40px;
         margin-bottom: 40px;
-        padding-right: 35px;
-        padding-left: 35px;
+        padding-right: 20px;
+        padding-left: 20px;
     }
 
     .index .testimonial2 {
