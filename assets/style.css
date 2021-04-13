@@ -13,6 +13,10 @@ body {
     font-family: 'Open Sans', sans-serif;
     color: #494949;
 }
+body * .container,
+body > .container {
+    padding-left: calc((100vw - 100%)/2);
+}
 .jumbotron {
     margin-bottom: 0; /**/
     background: #23272d; /**/
