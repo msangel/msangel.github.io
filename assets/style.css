@@ -103,7 +103,7 @@ body {
     font: normal normal normal 12px Arial, sans-serif;
 }
 .footer .copyright a {
-    text-decoration: underline;
+    text-decoration: none;
     color: #494949;
 }
 
