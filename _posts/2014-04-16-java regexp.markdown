@@ -1,16 +1,17 @@
 ---
-title: java regexp
+title: Regexp in java
 date: 2014-04-16 01:57:00 Z
 ---
 
 {:.no_toc}
+## {{ page.title }}
 
 * TOC
 {:toc}
 
 ### Theory and history.
 <!-- excerpt-start -->
-Regular expressions (regexp) is a formal language for searching and manipulating with substrings in text. Regular expressions is based on usage if meta-symbols (wildcard characters). This is, actually, a string pattern, which formalizing a search rule ([wiki](https://en.wikipedia.org/wiki/Regular_expression){:target="_blank"}) .
+Regular expressions (regexp) is a formal language for searching and manipulating with substrings in text. Regular expressions is based on usage if meta-symbols (wildcard characters). This is, actually, a string pattern, which formalizing a search rule ([wiki](https://en.wikipedia.org/wiki/Regular_expression)) .
 
 There exists two kinds of regular expressions:
 

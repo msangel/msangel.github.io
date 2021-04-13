@@ -406,7 +406,9 @@ body {
     font-size: 16px;
 }
 
-.blogindex .records p > a{
+.blogindex .records p > a,
+.blogindex .records #markdown-toc a
+{
     color: #89BC23;
 }
 
