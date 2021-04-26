@@ -1,6 +1,7 @@
 ## general
 * web: https://k.co.ua/
 * editor: https://manage.siteleaf.com/sites/607100b8a8712a562567c16b/pages
+* online hyphenation: http://www.plazoo.com/ru/tools.asp
 
 Default there defined [here](https://github.com/github/pages-gem/blob/master/lib/github-pages/configuration.rb), and it reffer to `jekyll-theme-primer`(0.5.4): https://github.com/pages-themes/primer
 
