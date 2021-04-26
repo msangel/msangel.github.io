@@ -22,3 +22,6 @@ where `214` is a a version of `github-pages` from https://pages.github.com/versi
  3. eventually! run `bundle update github-pages` for updating dependencies
  4. run locally with: `bundle exec jekyll serve`
  5. http://localhost:4000/ is your friend
+
+## dev help
+* bootstrap docs: https://getbootstrap.com/docs/3.3/css/#grid
