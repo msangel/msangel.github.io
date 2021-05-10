@@ -25,3 +25,4 @@ where `214` is a a version of `github-pages` from https://pages.github.com/versi
 
 ## dev help
 * bootstrap docs: https://getbootstrap.com/docs/3.3/css/#grid
+* footer magic: https://matthewjamestaylor.com/bottom-footer
