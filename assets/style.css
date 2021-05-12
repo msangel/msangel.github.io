@@ -494,11 +494,11 @@ body {
 }
 
 .blogpost a:hover, .blogpost li:before:hover {
-    color: #193859;
+    color: #337ab7;
 }
 
 .blogpost a:visited, .blogpost li:visited {
-    color: #193859;
+    color: #337ab7;
 }
 
 .blogpost .content div:first-child ol {
