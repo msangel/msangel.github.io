@@ -11,7 +11,7 @@ body {
 
 body {
     font-family: 'Open Sans', sans-serif;
-    color: #494949;
+    color: #222;
 }
 @media only screen and (min-width:768px){
     body * .container,
@@ -374,7 +374,7 @@ body {
 /* blog index page styles*/
 
 .blogindex {
-
+    font-family: Ubuntu,Georgia,Times,"Times New Roman",serif;
 }
 
 .blogindex .tags h3, .blogpost .tags h3 {
@@ -404,6 +404,12 @@ body {
 .blogindex .records p {
     text-align: justify;
     font-size: 16px;
+    line-height: 1.5em;
+}
+@media only screen and (min-width:992px){
+    .blogindex .records p {
+        font-size: 18px;
+    }
 }
 
 .blogindex .records p > a,
@@ -574,74 +580,6 @@ body {
 }
 
 /* end of blog post styles*/
-
-
-/* contacts page styles*/
-.contact h1{
-    font: normal normal normal 44px 'Open Sans',sans-serif;
-    color: #89BC23;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-}
-
-.contact h1 + p {
-    font: normal normal normal 20px 'Open Sans',sans-serif;
-    color: #89BC23;
-    text-transform: capitalize;
-    margin-bottom: 20px;
-}
-
-.contact p {
-    font: normal normal normal 14px 'Open Sans',sans-serif;
-    color: #494949;
-    margin: 0;
-}
-
-.contact .form-col {
-    margin-top: 28px;
-}
-
-.contact .form-col p {
-    margin-bottom: 20px;
-}
-
-.contact .form-control {
-    height: 28px;
-    padding: 5px;
-    border: 0;
-    border-radius: 0;
-    background: rgba(154, 154, 154, 0.14);
-    margin-bottom: 5px;
-    box-shadow: none;
-    font: normal normal normal 14px 'Open Sans',sans-serif;
-}
-
-.contact textarea.form-control {
-    min-height: 130px;
-    resize: none;
-    margin-bottom: 0;
-}
-
-.contact .form-control:focus {
-    border: 0;
-    box-shadow: none;
-}
-.contact .email {
-    margin: 20px 0;
-}
-
-.contact .form-btn {
-    background-color: rgba(137, 188, 35, 1);
-    font: normal normal normal 15px 'Open Sans',sans-serif;
-    border: 0;
-    color: #FFFFFF;
-    border-radius: 0;
-    float: right;
-    margin-top: 7px;
-}
-
-/* end of contacts page styles*/
-
 
 
 /* this ------------------------------------------   */
