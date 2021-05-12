@@ -23,16 +23,17 @@ body {
 .jumbotron {
     margin-bottom: 0; /**/
     background: #23272d; /**/
-    font-size: 24px; /**/
-    color: rgb(137,188,35);
     padding-bottom: 10px;
     padding-top: 10px;
 }
 
+.jumbotron .container{
+    max-width: 960px;
+}
 
 .jumbotron .myname {
-    font-family: "OpenSans-Bold", sans-serif; /**/
-    font-weight: bold; /**/
+    font-family: "OpenSans-Bold", sans-serif;
+    font-weight: bold;
 }
 
 .jumbotron .myname a,
@@ -69,9 +70,9 @@ body {
     background-color: #191d23 !important;
 }
 
-.nav .navbar{
-    margin-top: 0;
-    margin-bottom: 0;
+
+.navbar .container{
+    max-width: 960px;
 }
 
 .navbar-nav>li:not(:last-child):after {
@@ -94,9 +95,10 @@ body {
 
 .central {
     padding-bottom:54px;
+    max-width: 960px;
 }
 
-.footer{
+.footer {
     background-color: #f7f7f7;
     padding: 15px;
     width: 100%;
@@ -104,7 +106,9 @@ body {
     bottom:0;
     height:54px;   /* Height of the footer */
 }
-
+.footer .container {
+    max-width: 960px;
+}
 
 .footer .copyright {
     font: normal normal normal 12px Arial, sans-serif;
@@ -455,6 +459,18 @@ body {
 /* blog post page styles*/
 
 .blogpost {
+}
+
+.blogpost {
+    font-family: Ubuntu,Georgia,Times,"Times New Roman",serif;
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.5em;
+}
+@media only screen and (min-width:992px){
+    .blogpost {
+        font-size: 18px;
+    }
 }
 
 .blogpost .title {
