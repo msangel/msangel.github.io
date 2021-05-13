@@ -152,29 +152,43 @@ body {
 /* end of global */
 
 
-/* index page items*/
+/* about page items*/
 
-.index .pic {
+.about {
+    font-family: Ubuntu,Georgia,Times,"Times New Roman",serif;
+}
+
+.about p {
+    font-size: 16px;
+}
+@media only screen and (min-width:992px){
+    .about p {
+        font-size: 18px;
+        line-height: 1.5em;
+    }
+}
+
+.about .pic {
     max-width: 100%;
     height: auto;
 }
 
 @media only screen and (max-width:767px){
-    .index .pic {
+    .about .pic {
         width: 358px;
     }
 }
 
-.index .greeting {
+.about .greeting {
     font: normal normal normal 24px 'Open Sans',sans-serif;
     color: #89BC23;
 }
 
-.index .greeting-col{
+.about .greeting-col{
     padding-bottom: 40px;
 }
 
-.index .greeting span.hello {
+.about .greeting span.hello {
     font: normal normal normal 75px 'Open Sans',sans-serif;
     color: #89BC23;
     text-transform: uppercase;
@@ -184,31 +198,30 @@ body {
 }
 
 
-.index .maintext{
+.about .maintext{
     padding-top: 35px;
     padding-bottom: 30px;
 }
 
-.index .maintext .greeting{
+.about .maintext .greeting{
     position: relative;
     top: -25px;
 }
 
-.index .maintext p{
+.about .maintext p{
     text-align: justify;
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
     hyphens: auto;
-    font-size: 16px;
 }
 
 @media only screen and (min-width:768px){
-    .index .maintext p {
+    .about .maintext p {
         max-width: 360px;
     }
 }
 
-.index .btn-cv {
+.about .btn-cv {
     width: 130px;
     height: 30px;
     line-height: 30px;
@@ -223,20 +236,20 @@ body {
     transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
     border: solid rgba(137, 188, 35, 1) 0;
 }
-.index .btn-cv:hover {
+.about .btn-cv:hover {
     background-color: rgba(91, 125, 23, 1);
 }
 
-.index .lasttest{
+.about .lasttest{
     margin-bottom: 40px;
 }
 @media only screen and (min-width:1200px){
-    .index .lasttest{
+    .about .lasttest{
         margin-bottom: 0px;
     }
 }
 
-.index .flex-container {
+.about .flex-container {
     display: flex;
     flex-direction: row;
     flex-grow: 1;
@@ -248,20 +261,20 @@ body {
 }
 
 @media only screen and (max-width:767px){
-    .index .flex-container{
+    .about .flex-container{
         flex-direction: column;
     }
 }
 
 @media only screen and (max-width:1199px){
-    .index .flex-container{
+    .about .flex-container{
         margin-bottom: 0px;
     }
 }
 
 
 
-.index .secondary h4{
+.about .secondary h4{
     color: #89BC23;
     text-transform: uppercase;
     font: normal normal normal 16px 'Open Sans',sans-serif;
@@ -272,14 +285,14 @@ body {
 
 /* Small and Medium screen fix with reordering */
 @media only screen and (min-width:768px){
-    .index .maintext{
+    .about .maintext{
         padding-top: 0px;
         padding-bottom: 30px;
     }
 
     /* fix margins */
 
-    .index .secondary h4:first-child{
+    .about .secondary h4:first-child{
         margin-top: 0px;
     }
 }
@@ -287,72 +300,72 @@ body {
 /* Large */
 @media only screen and (min-width:1200px){
 
-    .index .flex-container div {
+    .about .flex-container div {
         order: 2;
     }
 
-    .index .flex-container div:nth-child(7), .flex-container div:nth-child(-n+3){
+    .about .flex-container div:nth-child(7), .flex-container div:nth-child(-n+3){
         order: 1;
     }
 
 }
 
 
-.index .secondary p {
+.about .secondary p {
     text-align: justify;
     margin-bottom: 5px;
     font-size: 16px;
 }
 
-.index .secondary hr {
+.about .secondary hr {
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
-.index .contacts {
+.about .contacts {
     margin-bottom: 20px;
     font: normal normal normal 16px 'Open Sans',sans-serif;
 }
 
 @media only screen and (min-width:1200px) {
-    .index .contacts .row {
+    .about .contacts .row {
         padding-left: 15px;
         padding-right: 15px;
     }
 }
 
-.index .contacts span {
+.about .contacts span {
     color: #89BC23;
 }
 @media only screen and (min-width:992px) and (max-width:1199px){
-    .index .contacts > .row > div {
+    .about .contacts > .row > div {
         min-height: 70px;
     }
-    .index .contacts > .row > div:not(:first-child):not(:last-child){
+    .about .contacts > .row > div:not(:first-child):not(:last-child){
         border-left: 1px solid #eee;
     }
 }
 
-.index .contacts > .row > div{
+.about .contacts > .row > div{
     margin-bottom: 20px;
 }
 
 @media only screen and (min-width:992px) and (max-width:1199px){
-    .index .contacts .tags {
+    .about .contacts .tags {
         margin-top: 40px;
     }
 }
 
 
 @media only screen and (min-width:1200px){
-    .index .testimonial {
+    .about .testimonial {
         margin-top: 40px;
         margin-bottom: 40px;
         padding-right: 20px;
         padding-left: 20px;
     }
 
-    .index .testimonial2 {
+    .about .testimonial2 {
         border-left: 1px solid #eee;
         border-right: 1px solid #eee;
 
@@ -360,7 +373,7 @@ body {
 }
 
 @media only screen and (min-width:992px) and (max-width:1199px){
-    .index .testimonial {
+    .about .testimonial {
         margin-top: 40px;
     }
 

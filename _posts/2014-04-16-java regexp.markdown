@@ -40,33 +40,33 @@ What we can do with all of this?
 #### Test string for pattern matching
 
 Method 1:
-
-    Pattern.compile("a*b",Pattern.CASE_INSENSITIVE).matcher("aaab").matches();// true  
-
+```java
+Pattern.compile("a*b",Pattern.CASE_INSENSITIVE).matcher("aaab").matches();// true  
+```
 ATTENTION: only full matching - from string beginning to its end, so the next example:
-
-    Pattern.compile("a*b",Pattern.CASE_INSENSITIVE & Pattern.MULTILINE).matcher("aaabaaab").matches();// false  
-
+```java
+Pattern.compile("a*b",Pattern.CASE_INSENSITIVE & Pattern.MULTILINE).matcher("aaabaaab").matches();// false  
+```
 will return  false , as far as whole string is not match the pattern.
 The solution:
-
-    Pattern.compile(".*a*b.*",Pattern.CASE_INSENSITIVE).matcher("aaabaaab").matches() /* full maching */: true  
-
+```java
+Pattern.compile(".*a*b.*",Pattern.CASE_INSENSITIVE).matcher("aaabaaab").matches() /* full maching */: true  
+```
 Method 2:
-
-    "dreedisgood".matches("(?i).\*IS.\*"); // where (?i) - flags  
-
+```java
+"dreedisgood".matches("(?i).\\*IS.\\*"); // where (?i) - flags  
+```
 #### Flags
 
 Flags are calculating as bit mask. List of them are in documentation about [Pattern](https://docs.oracle.com/javase/tutorial/essential/regex/pattern.html){:target="_blank"} class.
 
 #### Split string with delimiter
-
-    String[] strings = Pattern.compile("a").split("asdasdasd");
-    for (String word : strings) {  
-        System.out.println("splitted: " + word);
-    }  
-
+```java
+String[] strings = Pattern.compile("a").split("asdasdasd");
+for (String word : strings) {  
+    System.out.println("splitted: " + word);
+}  
+```
 OUT:
 
     splitted:  
@@ -78,11 +78,13 @@ If you look carefully, you can find that before the first "a" letter there is on
 
 Another  example:
 
-    Pattern p3 = Pattern.compile("\\d+\\s?");  
-    String[] words =  p3.split("java5tiger 77 java6mustang");  
-    for (String word : words){  
-        System.out.println("splitted: "+word);
-    }  
+```java
+Pattern p3 = Pattern.compile("\\d+\\s?");  
+String[] words =  p3.split("java5tiger 77 java6mustang");  
+for (String word : words){  
+    System.out.println("splitted: "+word);
+}  
+```
 
 OUT:
 
@@ -93,13 +95,15 @@ OUT:
 
 And one more sample, where we gonna split only into 2 groups: the first one and the rest:
 
-    String ssstr = "";  
-    int c = 0;
-    String[] strings = Pattern.compile("\\d").split("va1sda1sda3sd",2);
-    for (String s: strings) {  
-        ssstr+="s\["+(c++)+"\]:"+s+"  ";
-    }  
-    System.out.println("split with arg: "+ssstr);  
+```java
+String ssstr = "";  
+int c = 0;
+String[] strings = Pattern.compile("\\d").split("va1sda1sda3sd",2);
+for (String s: strings) {  
+    ssstr+="s\["+(c++)+"\]:"+s+"  ";
+}  
+System.out.println("split with arg: "+ssstr); 
+``` 
 
 OUT:
 
@@ -109,24 +113,30 @@ OUT:
 
 This will return true
 
-    Pattern.compile("va.*b").matcher("va1sda1sda 3sbd").lookingAt(); //  true  
+```java
+Pattern.compile("va.*b").matcher("va1sda1sda 3sbd").lookingAt(); //  true 
+```
 
 And this will return false
 
-    Pattern.compile("a.*b").matcher("va1sda1sda 3sbd").lookingAt(); //  false  
+```java
+Pattern.compile("a.*b").matcher("va1sda1sda 3sbd").lookingAt(); //  false  
+```
 
 #### Changing pattern/data in existing matcher
 
-    Pattern p3 = Pattern.compile("va.+?b"); // base pattern
-    Matcher m3 = p3.matcher("va1sda1bda 3sbd"); // base mather
-    System.out.println("find smth? "+m3.find());  
-    System.out.println("what? "+m3.group());  
-    System.out.println(m3.toString());//gives the information about used pattern and matcher's state  
-    m3.usePattern(Pattern.compile("\\d")); // set new pattern  
-    System.out.println(m3.toString());// info after reset
-    m3.reset(); // matcher reset state
-    System.out.println("can we search again?: "+ m3.find());  
-    System.out.println("Whats there? "+m3.group());  
+```java
+Pattern p3 = Pattern.compile("va.+?b"); // base pattern
+Matcher m3 = p3.matcher("va1sda1bda 3sbd"); // base mather
+System.out.println("find smth? "+m3.find());  
+System.out.println("what? "+m3.group());  
+System.out.println(m3.toString());//gives the information about used pattern and matcher's state  
+m3.usePattern(Pattern.compile("\\d")); // set new pattern  
+System.out.println(m3.toString());// info after reset
+m3.reset(); // matcher reset state
+System.out.println("can we search again?: "+ m3.find());  
+System.out.println("Whats there? "+m3.group()); 
+``` 
 
 OUT:
 
@@ -139,7 +149,9 @@ OUT:
 
 If we will take this line from code above:
 
-    m3.reset();  
+```java
+m3.reset(); 
+```
 
 then the new pattern will continue to search from the last place and the last line would be
 
@@ -151,13 +163,15 @@ Also the method `reset()` can be parameterized  with new string for matcher, so 
 
 #### Substring search
 
-    Matcher m3 = Pattern.compile("\\d(.{1})").matcher("va1sda1dda 3jhbd");  
-    while (m3.find()) {
-        // group() is equal to group(0), where 0 mean the full found substring 
-        System.out.println("new group after find: "+ m3.group()); 
-        // and here 1 mean the first selectet with parentheses group in substring
-        System.out.println("new subgroup in found: "+ m3.group(1));
-    }  
+```java
+Matcher m3 = Pattern.compile("\\d(.{1})").matcher("va1sda1dda 3jhbd");  
+while (m3.find()) {
+    // group() is equal to group(0), where 0 mean the full found substring 
+    System.out.println("new group after find: "+ m3.group()); 
+    // and here 1 mean the first selectet with parentheses group in substring
+    System.out.println("new subgroup in found: "+ m3.group(1));
+}  
+```
 
 OUT:
 
@@ -176,19 +190,22 @@ which is looking by offset.
 
 Another example:
 
-     String regex = "(\\w+)@(\\w+\\.)(\\w+)(\\.\\w+)*";
-     String s ="emeil adresses:mymail@tut.by and rom@bsu.by";
-     Pattern p2 = Pattern.compile(regex);
-     Matcher m2 = p2.matcher(s);
-     if(m2.find()) {
-        for(int i=0; i<m2.groupCount(); i++) { 
-             System.out.println("all groupes: "+m2.group(i)); 
-        }
+```java
+
+String regex = "(\\w+)@(\\w+\\.)(\\w+)(\\.\\w+)*";
+String s ="emeil adresses:mymail@tut.by and rom@bsu.by";
+Pattern p2 = Pattern.compile(regex);
+Matcher m2 = p2.matcher(s);
+if(m2.find()) {
+    for(int i=0; i<m2.groupCount(); i++) { 
+         System.out.println("all groupes: "+m2.group(i)); 
     }
-    m2.reset();
-    while (m2.find()) {
-        System.out.println("e-mail: "+  m2.group());
-    }
+}
+m2.reset();
+while (m2.find()) {
+    System.out.println("e-mail: "+  m2.group());
+}
+```
 
 OUT:
 
@@ -205,14 +222,16 @@ OUT:
 
 Simple replace letter "i" for "1"
 
-    CharSequence inputStr =  "this is simple tex thaw i want to chancE ";  
-    System.out.println(inputStr);
-    String patternStr = "i";
-    String replacementStr = "1";
-    Pattern pattern = Pattern.compile(patternStr);
-    Matcher matcher = pattern.matcher(inputStr);
-    String output = matcher.replaceAll(replacementStr);
-    System.out.println(output);
+```java
+CharSequence inputStr =  "this is simple tex thaw i want to chancE ";  
+System.out.println(inputStr);
+String patternStr = "i";
+String replacementStr = "1";
+Pattern pattern = Pattern.compile(patternStr);
+Matcher matcher = pattern.matcher(inputStr);
+String output = matcher.replaceAll(replacementStr);
+System.out.println(output);
+```
 
 OUT:
 
@@ -223,10 +242,12 @@ OUT:
 
 This example of more complex replace with usage of groups. Access to groups are made via $x, where х - group number. This is replacing order of worlds with their spaces :
 
+```java
     ...
     String patternStr = "(\\s?is)(\\s?+simple)(\\s+tex)";
     String replacementStr = "$3$1$2";
     ...
+```
 
 OUT:
 
@@ -237,18 +258,20 @@ OUT:
 
 Next sample looking for world which starts with  letter and ends with digit. Found result is wrapping with text in the beginning and in the end:
 
-    CharSequence inputStr = "ab12 cd efg34 asdf 123";
-    System.out.println(inputStr);
-    String patternStr = "([a-zA-Z]+[0-9]+)";  
-    Pattern pattern = Pattern.compile(patternStr);
-    Matcher matcher = pattern.matcher(inputStr);  
-    StringBuffer buf = new StringBuffer();
-    while (matcher.find()) {
-        String replaceStr = matcher.group();
-        matcher.appendReplacement(buf, "found<" + replaceStr + ">");
-    }
-    matcher.appendTail(buf);
-    System.out.println(buf.toString());
+```java
+CharSequence inputStr = "ab12 cd efg34 asdf 123";
+System.out.println(inputStr);
+String patternStr = "([a-zA-Z]+[0-9]+)";  
+Pattern pattern = Pattern.compile(patternStr);
+Matcher matcher = pattern.matcher(inputStr);  
+StringBuffer buf = new StringBuffer();
+while (matcher.find()) {
+    String replaceStr = matcher.group();
+    matcher.appendReplacement(buf, "found<" + replaceStr + ">");
+}
+matcher.appendTail(buf);
+System.out.println(buf.toString());
+```
 
 OUT:
 
@@ -259,19 +282,21 @@ OUT:
 
 One more good sample. Replacing values in string by key.
 
-    Map<String, String> props = new HashMap<String, String>();  
-    props.put("key1", "fox");
-    props.put("key2", "dog");
-    String input = "The quick brown ${key1} jumps over the lazy ${key2}."; System.out.println(input); 
-    Pattern p = Pattern.compile("\\$\\{([^}]+)\\}");
-    Matcher m = p.matcher(input);
-    StringBuffer sb = new StringBuffer();
-    while (m.find()) { 
-        m.appendReplacement(sb, "");
-        sb.append(props.get(m.group(1)));
-    }
-    m.appendTail(sb);
-    System.out.println(sb.toString());
+```java
+Map<String, String> props = new HashMap<String, String>();  
+props.put("key1", "fox");
+props.put("key2", "dog");
+String input = "The quick brown ${key1} jumps over the lazy ${key2}."; System.out.println(input); 
+Pattern p = Pattern.compile("\\$\\{([^}]+)\\}");
+Matcher m = p.matcher(input);
+StringBuffer sb = new StringBuffer();
+while (m.find()) { 
+    m.appendReplacement(sb, "");
+    sb.append(props.get(m.group(1)));
+}
+m.appendTail(sb);
+System.out.println(sb.toString());
+```
 
 OUT:
 
@@ -283,46 +308,50 @@ OUT:
 First go to wikipedia, or to good answer on [stackoverflow](https://stackoverflow.com/questions/2301285/what-do-lazy-and-greedy-mean-in-the-context-of-regular-expressions){:target="_blank"} for getting familiar with conception.
 By default the pattern took longest possible string. But this is changeable. Here's samples with manipulation of these settings.
 
-    String input = "abdcxyz";
-    
-    // in this case to the first group belongs all possible symbols, 
-    // but the minimal amoung for the second group is preserved
-    myMatches("([a-z]*)([a-z]+)", input);  // 1st: abdcxy 2nd: z
-    
-    // this case the first group is greedy so the matching string 
-    // is shortest possible, all the rest goes to 2nd
-    myMatches("([a-z]?)([a-z]+)", input); // 1st: a 2nd: bdcxyz
-    
-    // this case the 1st will took all string and 
-    // the 2nd will be empty as far as * mean zero or more
-    myMatches("([a-z]+)([a-z]*)", input); // 1st: abdcxyz 2nd:
-    
-    // and this case we will not match the string as it looks 
-    // for minimal in both
-    myMatches("([a-z]?)([a-z]?)", input); // nothing
-    
-    public static void myMatches(String regex, String input) {
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(input);
-        if (matcher.matches()) {
-            System.out.print("1st: "+ matcher.group(1)+"     ");
-            System.out.println("2nd: "+ matcher.group(2)); 
-        } else {
-            System.out.println("nothing");
-        }  
-    }
+```java
+String input = "abdcxyz";
+
+// in this case to the first group belongs all possible symbols, 
+// but the minimal amoung for the second group is preserved
+myMatches("([a-z]*)([a-z]+)", input);  // 1st: abdcxy 2nd: z
+
+// this case the first group is greedy so the matching string 
+// is shortest possible, all the rest goes to 2nd
+myMatches("([a-z]?)([a-z]+)", input); // 1st: a 2nd: bdcxyz
+
+// this case the 1st will took all string and 
+// the 2nd will be empty as far as * mean zero or more
+myMatches("([a-z]+)([a-z]*)", input); // 1st: abdcxyz 2nd:
+
+// and this case we will not match the string as it looks 
+// for minimal in both
+myMatches("([a-z]?)([a-z]?)", input); // nothing
+
+public static void myMatches(String regex, String input) {
+    Pattern pattern = Pattern.compile(regex);
+    Matcher matcher = pattern.matcher(input);
+    if (matcher.matches()) {
+        System.out.print("1st: "+ matcher.group(1)+"     ");
+        System.out.println("2nd: "+ matcher.group(2)); 
+    } else {
+        System.out.println("nothing");
+    }  
+}
+```
 
 #### Regions
 
 Quite simple conception - we can limit search area in string by creating "region" on it with defining start and end positions:
 
-    String text = "012 456 890 234";
-    Pattern ddd = Pattern.compile("\\d{3}");
-    Matcher m = ddd.matcher(text).region(3, 12);
-    System.out.println("region start here: "+m.regionStart()); System.out.println("region end here: "+m.regionEnd());
-    while (m.find()) {
-        System.out.printf("[%s] [%d,%d)%n", m.group(), m.start(), m.end()); 
-    }
+```java
+String text = "012 456 890 234";
+Pattern ddd = Pattern.compile("\\d{3}");
+Matcher m = ddd.matcher(text).region(3, 12);
+System.out.println("region start here: "+m.regionStart()); System.out.println("region end here: "+m.regionEnd());
+while (m.find()) {
+    System.out.printf("[%s] [%d,%d)%n", m.group(), m.start(), m.end()); 
+}
+```
 
 OUT:
 
@@ -332,24 +361,25 @@ OUT:
     [890] [8,11)  
 
 Creating of region affect special symbols of start and end of string in pattern(^ and $). But this also might be changed with command `Matcher#useAnchoringBounds(true)`.
+```java
+String text = "012 456 890 234";
+Pattern ddd = Pattern.compile("^.*$");
+Matcher m = ddd.matcher(text).region(3, 12);
+System.out.println("region start here: "+m.regionStart()); System.out.println("region end here: "+m.regionEnd());
+if(m.find()){
+    System.out.println("find matcher text with AnchoringBounds "+m.group());
+    System.out.println("check AnchoringBounds: "+ m.hasAnchoringBounds());
+}
+m.reset();
+m.useAnchoringBounds(false);
+if(m.find()){
+    System.out.println("find matcher text WITHOUT  AnchoringBounds "+m.group());
+    System.out.println("check AnchoringBounds: "+ m.hasAnchoringBounds());
+}
+m.reset();  
+System.out.println("region start here: "+m.regionStart()); System.out.println("region end here: "+m.regionEnd());
 
-    String text = "012 456 890 234";
-    Pattern ddd = Pattern.compile("^.*$");
-    Matcher m = ddd.matcher(text).region(3, 12);
-    System.out.println("region start here: "+m.regionStart()); System.out.println("region end here: "+m.regionEnd());
-    if(m.find()){
-        System.out.println("find matcher text with AnchoringBounds "+m.group());
-        System.out.println("check AnchoringBounds: "+ m.hasAnchoringBounds());
-    }
-    m.reset();
-    m.useAnchoringBounds(false);
-    if(m.find()){
-        System.out.println("find matcher text WITHOUT  AnchoringBounds "+m.group());
-        System.out.println("check AnchoringBounds: "+ m.hasAnchoringBounds());
-    }
-    m.reset();  
-    System.out.println("region start here: "+m.regionStart()); System.out.println("region end here: "+m.regionEnd());
-
+```
 OUT:
 
     region start here: 3  
@@ -365,7 +395,9 @@ OUT:
 
 As we saw before - inside of string that we have passed for search or replacement there might be symbols with special meaning. For getting rid of this effect where its not needed these strings needs to be escaping in some way. I do not know how to do this, but that is not a problem - library developers have added this method into Pattern class:
 
-    public static String quote(String s);
+```java
+public static String quote(String s);
+```
 
 This one escape string, making it safe for use with regexp.
 
