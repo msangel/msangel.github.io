@@ -43,6 +43,3 @@ Examples:
 VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEMU
  
 
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDM0NjA5ODhdfQ==
--->
