@@ -10,6 +10,7 @@ Docker is a software (Docker community edition (CE) and Docker enterprise editio
 # What it is, and why we need this. The difference between Virtual Servers and Dedicated servers.
 
 A very simple answer to the question of why we need it is: it allows us to run our applications in the same way and in the same environment whenever we have either this is Windows PC, Linux Laptop, dedicated server or virtual hosting.  It's a common problem when developers create their software on their computer and so it can be run only on their computer. Docker creates an isolated environment that is the same everywhere.
+There exists known "Matrix of hell" that show wide verieties of 
 
 ## Hosting history
 On computers in offices
@@ -46,6 +47,6 @@ VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEM
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2NzQxNDI5MCw2NjA5NDE4NjcsLTE2MT
-M2NzI1MzFdfQ==
+eyJoaXN0b3J5IjpbLTUwNTAzNzIyOCwxMjY3NDE0MjkwLDY2MD
+k0MTg2NywtMTYxMzY3MjUzMV19
 -->
