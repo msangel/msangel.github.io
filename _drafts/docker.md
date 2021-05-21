@@ -9,6 +9,7 @@ Docker is a software (Docker community edition (CE) and Docker enterprise editio
 
 # What it is, and why we need this. The difference between Virtual Servers and Dedicated servers.
 
+Very simple answer on the question why we need it is: it allow us to run our applications in the same way and in same envirounment whenever
 ## Hosting history
 On computers in offices
 As an additional service of dns-providers (addon-service)
@@ -44,5 +45,5 @@ VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEM
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTM2NzI1MzFdfQ==
+eyJoaXN0b3J5IjpbMjEwMjkxOTc3NiwtMTYxMzY3MjUzMV19
 -->
