@@ -2,6 +2,7 @@
 title: docker intro
 date: 2019-06-08 03:06:00 Z
 ---
+https://sites.google.com/site/modernskyangel/in-progress/docker-big
 
 # The "Docker" keyword
 Docker is a company.
@@ -18,8 +19,7 @@ But server operations want to use the same as they used yesterday, what they use
 And docker allows combining both, it's like an interaction contract.
 Operations are satisfied because they only have to care about one thing. They have to support deploying containers. Developers are also happy. They can develop with whatever the fad of the day is and then just stick it into a container and throw it over the wall to operations.
 
-
-And so docker allows to solve this matrix in a very straightforward way:
+So docker allows to solve this matrix in a very straightforward way:
 ![Matrix solved](https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/the_matrix_of_hell_solved.png "Matrix solved")
 
 
@@ -58,7 +58,7 @@ VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEM
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExMDMwNTIwOSwxNTQ1NjI5NTQsMTY5OD
-Y4MjgwNSw2OTkzNTcwODksMjAyMzU2ODEzLC01MDUwMzcyMjgs
-MTI2NzQxNDI5MCw2NjA5NDE4NjcsLTE2MTM2NzI1MzFdfQ==
+eyJoaXN0b3J5IjpbLTIwMzc1MDI3NTUsMTU0NTYyOTU0LDE2OT
+g2ODI4MDUsNjk5MzU3MDg5LDIwMjM1NjgxMywtNTA1MDM3MjI4
+LDEyNjc0MTQyOTAsNjYwOTQxODY3LC0xNjEzNjcyNTMxXX0=
 -->
