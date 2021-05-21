@@ -3,7 +3,6 @@ title: docker intro
 date: 2019-06-08 03:06:00 Z
 ---
 
-
 # The "Docker" keyword
 Docker is a company.
 Docker is a software (Docker community edition (CE) and Docker enterprise edition (EE)).
@@ -43,7 +42,7 @@ VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEM
  
 
 
-Presentation: 
+Presentation
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2NjIzMDMwNCwtODEyMTQ0ODI2XX0=
+eyJoaXN0b3J5IjpbLTgxMjE0NDgyNl19
 -->
