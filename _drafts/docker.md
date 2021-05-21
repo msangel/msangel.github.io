@@ -3,7 +3,6 @@ title: docker intro
 date: 2019-06-08 03:06:00 Z
 ---
 
-https://sites.google.com/site/modernskyangel/pub/docker
 
 # The "Docker" keyword
 Docker is a company.
@@ -43,6 +42,8 @@ Examples:
 VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEMU
  
 
+
+Presentation
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDM0NjA5ODhdfQ==
+eyJoaXN0b3J5IjpbLTgxMjE0NDgyNl19
 -->
