@@ -13,8 +13,8 @@ A very simple answer to the question of why we need it is: it allows us to run o
 There exists a known "Matrix of hell" that show a wide variety of different systems and their different behavior on different hardware:
 ![Matrix of hell](https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/the_matrix_of_hell.jpg "Matrix of hell")
 And so docker allows to solve this matrix in a very straightforward way:
-![Matrix of hell](https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/the_matrix_of_hell.jpg "Matrix of hell")
-https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/the_matrix_of_hell_solved.jpg
+![Matrix solved](https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/the_matrix_of_hell_solved.jpg "Matrix solved")
+
 
 ## Hosting history
 On computers in offices
@@ -51,7 +51,7 @@ VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEM
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjk5MzU3MDg5LC0xNzY4ODcxMjQzLDIwMj
-M1NjgxMywtNTA1MDM3MjI4LDEyNjc0MTQyOTAsNjYwOTQxODY3
-LC0xNjEzNjcyNTMxXX0=
+eyJoaXN0b3J5IjpbMTY5ODY4MjgwNSw2OTkzNTcwODksMjAyMz
+U2ODEzLC01MDUwMzcyMjgsMTI2NzQxNDI5MCw2NjA5NDE4Njcs
+LTE2MTM2NzI1MzFdfQ==
 -->
