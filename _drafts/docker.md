@@ -42,7 +42,7 @@ VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEM
  
 
 
-Presentation
+Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxMjE0NDgyNl19
+eyJoaXN0b3J5IjpbLTE2MTM2NzI1MzFdfQ==
 -->
