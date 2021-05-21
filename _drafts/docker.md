@@ -15,7 +15,7 @@ There exists a known "Matrix of hell" that show a wide variety of different syst
 
 Also there exists another problem: developers want to use the next shiny thing, they want to use Node.js, Rust, Go, Microservices, Cassandra, Hadoop, blablabla, blablabla, …
 In opposite, operations want to use the same as they used yesterday, what they used last year, because it is proven, it works!
-Docker act like a co
+Docker act like a contra
 But, this is where Docker shines. Operations are satisfied because they only have to care about one thing. They have to support deploying containers. Developers are also happy. They can develop with whatever the fad of the day is and then just stick it into a container and throw it over the wall to Operations.
 
 
@@ -58,7 +58,7 @@ VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEM
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2NzMwMDE1LDE2OTg2ODI4MDUsNjk5Mz
-U3MDg5LDIwMjM1NjgxMywtNTA1MDM3MjI4LDEyNjc0MTQyOTAs
-NjYwOTQxODY3LC0xNjEzNjcyNTMxXX0=
+eyJoaXN0b3J5IjpbMTU0NTYyOTU0LDE5NjczMDAxNSwxNjk4Nj
+gyODA1LDY5OTM1NzA4OSwyMDIzNTY4MTMsLTUwNTAzNzIyOCwx
+MjY3NDE0MjkwLDY2MDk0MTg2NywtMTYxMzY3MjUzMV19
 -->
