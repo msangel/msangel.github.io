@@ -14,6 +14,7 @@ There exists a known "Matrix of hell" that show a wide variety of different syst
 ![Matrix of hell](https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/the_matrix_of_hell.jpg "Matrix of hell")
 And so docker allows to solve this matrix in a very straightforward way:
 
+https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/the_matrix_of_hell_solved.jpg
 
 ## Hosting history
 On computers in offices
@@ -50,7 +51,7 @@ VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEM
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQwNzc5NDUxLDIwMjM1NjgxMywtNTA1MD
-M3MjI4LDEyNjc0MTQyOTAsNjYwOTQxODY3LC0xNjEzNjcyNTMx
-XX0=
+eyJoaXN0b3J5IjpbLTE3Njg4NzEyNDMsMjAyMzU2ODEzLC01MD
+UwMzcyMjgsMTI2NzQxNDI5MCw2NjA5NDE4NjcsLTE2MTM2NzI1
+MzFdfQ==
 -->
