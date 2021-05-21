@@ -13,6 +13,8 @@ A very simple answer to the question of why we need it is: it allows us to run o
 There exists a known "Matrix of hell" that show a wide variety of different systems and their different behavior on different hardware:
 ![Matrix of hell](https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/the_matrix_of_hell.png "Matrix of hell")
 
+Also there exists another problem: developers want to use the next shiny thing, we want to use Node.js, Rust, Go, Microservices, Cassandra, Hadoop, blablabla, blablabla, …
+
 
 And so docker allows to solve this matrix in a very straightforward way:
 ![Matrix solved](https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/the_matrix_of_hell_solved.png "Matrix solved")
@@ -53,7 +55,7 @@ VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEM
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzk2NDA3NDMsMTY5ODY4MjgwNSw2OT
-kzNTcwODksMjAyMzU2ODEzLC01MDUwMzcyMjgsMTI2NzQxNDI5
-MCw2NjA5NDE4NjcsLTE2MTM2NzI1MzFdfQ==
+eyJoaXN0b3J5IjpbLTgxNjA0ODE4MCwxNjk4NjgyODA1LDY5OT
+M1NzA4OSwyMDIzNTY4MTMsLTUwNTAzNzIyOCwxMjY3NDE0Mjkw
+LDY2MDk0MTg2NywtMTYxMzY3MjUzMV19
 -->
