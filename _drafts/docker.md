@@ -18,7 +18,9 @@ There exists a known "Matrix of hell" that show a wide variety of different syst
 
 Also, there exists another problem: developers want to use edge technologies like Node.js, Rust, Go, Microservices, Cassandra, Hadoop, etc.
 But server operations want to use the same as they used yesterday, what they used last year because it is proven, it works!
+
 And docker allows combining both, it's like an interaction contract.
+
 Operations are satisfied because they only have to care about one thing. They have to support deploying containers. Developers are also happy. They can develop with whatever the fad of the day is and then just stick it into a container and throw it over the wall to operations.
 
 So docker allows to solve this matrix in a very straightforward way:
@@ -60,7 +62,7 @@ VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEM
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0NDYwODczOSwxNTQ1NjI5NTQsMTY5OD
+eyJoaXN0b3J5IjpbMTI2MjIyNTA4MSwxNTQ1NjI5NTQsMTY5OD
 Y4MjgwNSw2OTkzNTcwODksMjAyMzU2ODEzLC01MDUwMzcyMjgs
 MTI2NzQxNDI5MCw2NjA5NDE4NjcsLTE2MTM2NzI1MzFdfQ==
 -->
