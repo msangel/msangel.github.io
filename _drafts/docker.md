@@ -13,7 +13,10 @@ A very simple answer to the question of why we need it is: it allows us to run o
 There exists a known "Matrix of hell" that show a wide variety of different systems and their different behavior on different hardware:
 ![Matrix of hell](https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/the_matrix_of_hell.png "Matrix of hell")
 
-Also there exists another problem: developers want to use the next shiny thing, we want to use Node.js, Rust, Go, Microservices, Cassandra, Hadoop, blablabla, blablabla, …
+Also there exists another problem: developers want to use the next shiny thing, they want to use Node.js, Rust, Go, Microservices, Cassandra, Hadoop, blablabla, blablabla, …
+In opposite, operations want to use the same as they used yesterday, what they used last year, because it is proven, it works!
+Docker act like a co
+But, this is where Docker shines. Operations are satisfied because they only have to care about one thing. They have to support deploying containers. Developers are also happy. They can develop with whatever the fad of the day is and then just stick it into a container and throw it over the wall to Operations.
 
 
 And so docker allows to solve this matrix in a very straightforward way:
@@ -55,7 +58,7 @@ VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEM
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxNjA0ODE4MCwxNjk4NjgyODA1LDY5OT
-M1NzA4OSwyMDIzNTY4MTMsLTUwNTAzNzIyOCwxMjY3NDE0Mjkw
-LDY2MDk0MTg2NywtMTYxMzY3MjUzMV19
+eyJoaXN0b3J5IjpbMTk2NzMwMDE1LDE2OTg2ODI4MDUsNjk5Mz
+U3MDg5LDIwMjM1NjgxMywtNTA1MDM3MjI4LDEyNjc0MTQyOTAs
+NjYwOTQxODY3LC0xNjEzNjcyNTMxXX0=
 -->
