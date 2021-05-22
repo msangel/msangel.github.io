@@ -54,7 +54,7 @@ There exists two types of hypervisor: native(or bare metal) and hosted.
 In native type the hypervisor is installed right on top of the underlying machine’s hardware (so, in this case, there is no host OS, there are only guest OS’s). This is usually installed on a machine on which the whole purpose was to run many virtual machines. The hypervisor here have its own device drivers and interact with hardware directly. Such hypervisors are faster, simpler and hence more stable.
 
 Examples:
-AntsleOs, Xen, XCP-ng, Oracle VM Server, Microsoft Hyper-V, Xbox One system software, and VMware ESX/ESXi
+antsleOS, Xen, XCP-ng, Oracle VM Server, Microsoft Hyper-V, Xbox One system software, and VMware ESX/ESXi
 
 Type 2, also called “Hosted Hypervisor”
 This is a program that is installed on top of the operating system. This type of hypervisor is something like a “translator” that translates the guest operating system’s system calls into the host operating system’s system calls.
@@ -66,7 +66,7 @@ VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEM
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTUwMjkyMTksLTIxMTM3Nzk3OTYsLT
+eyJoaXN0b3J5IjpbLTE3NjY0NzM1MDcsLTIxMTM3Nzk3OTYsLT
 c5NjY2ODI0MywxMzc3MjEwMTg2LC0xMjExMjgwNTUzLDIxMDU0
 MDk3NTUsNDk2ODE5MzM3LC0xNTExODI2OTMzLDU5MTY2Nzg1NS
 w2NDQ5OTI0NTUsLTE1NzM2NTkzODUsMTQyMTg2MjA4Nyw3MTEw
