@@ -9,7 +9,9 @@ https://sites.google.com/site/modernskyangel/in-progress/docker-big
 Before diving into the docker world, lets clarify basics about what Docker is:
 
  1. Docker is a company
- 2. Docker is a software. Docker community edition (CE) and Docker enterprise edition (EE)).
+ 2. Docker is a software. Actually two kinds of it
+	 1. Docker CE (community edition) 
+	 2. Docker EE (enterprise edition)
 
 # What it is, and why we need this. The difference between Virtual Servers and Dedicated servers.
 
@@ -64,7 +66,7 @@ VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEM
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODIxMzY0NzMsLTg5OTczMTQxNCwxMj
+eyJoaXN0b3J5IjpbLTE1NjQxNTYyOTQsLTg5OTczMTQxNCwxMj
 YyMjI1MDgxLDE1NDU2Mjk1NCwxNjk4NjgyODA1LDY5OTM1NzA4
 OSwyMDIzNTY4MTMsLTUwNTAzNzIyOCwxMjY3NDE0MjkwLDY2MD
 k0MTg2NywtMTYxMzY3MjUzMV19
