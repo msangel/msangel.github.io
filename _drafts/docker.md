@@ -50,10 +50,7 @@ The hypervisor, also referred to as Virtual Machine Manager (VMM), is what enabl
 There exists two types of hypervisor: native(or bare metal) and hosted.
 
 ### native
-In native type the hypervisor is installed right on top of the underlying machine’s hardware (so, in this case, there is no host OS, there are only guest OS’s). You would do this on a machine on which the whole purpose was to run many virtual machines.
-
-Type 1, also called “Bare Metal Hypervisor”
-Type 1 hypervisors have their own device drivers and interact with hardware directly unlike type 2 hypervisors. That’s what makes them faster, simpler and hence more stable.
+In native type the hypervisor is installed right on top of the underlying machine’s hardware (so, in this case, there is no host OS, there are only guest OS’s). This is usually installed on a machine on which the whole purpose was to run many virtual machines. The hypervisor here have its own device drivers and interact with hardware directly. And so, such hypervisors are faster, simpler and hence more stable.
 
 Examples:
 AntsleOs, Xen, XCP-ng, Oracle VM Server, Microsoft Hyper-V, Xbox One system software, and VMware ESX/ESXi
@@ -68,11 +65,11 @@ VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEM
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTM3Nzk3OTYsLTc5NjY2ODI0MywxMz
-c3MjEwMTg2LC0xMjExMjgwNTUzLDIxMDU0MDk3NTUsNDk2ODE5
-MzM3LC0xNTExODI2OTMzLDU5MTY2Nzg1NSw2NDQ5OTI0NTUsLT
-E1NzM2NTkzODUsMTQyMTg2MjA4Nyw3MTEwMzQ4NTIsLTc0MjY4
-NDgxNCwxMjQ0MjEwNzI5LC0xNTY0MTU2Mjk0LC04OTk3MzE0MT
-QsMTI2MjIyNTA4MSwxNTQ1NjI5NTQsMTY5ODY4MjgwNSw2OTkz
-NTcwODldfQ==
+eyJoaXN0b3J5IjpbLTg5MzY5MTI3OSwtMjExMzc3OTc5NiwtNz
+k2NjY4MjQzLDEzNzcyMTAxODYsLTEyMTEyODA1NTMsMjEwNTQw
+OTc1NSw0OTY4MTkzMzcsLTE1MTE4MjY5MzMsNTkxNjY3ODU1LD
+Y0NDk5MjQ1NSwtMTU3MzY1OTM4NSwxNDIxODYyMDg3LDcxMTAz
+NDg1MiwtNzQyNjg0ODE0LDEyNDQyMTA3MjksLTE1NjQxNTYyOT
+QsLTg5OTczMTQxNCwxMjYyMjI1MDgxLDE1NDU2Mjk1NCwxNjk4
+NjgyODA1XX0=
 -->
