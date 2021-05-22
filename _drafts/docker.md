@@ -63,19 +63,22 @@ Examples:
 [VirtualBox](https://www.virtualbox.org/), [Parallels Desktop for Mac](https://www.parallels.com/), [QEMU](https://www.qemu.org/), [VMware Workstation](https://www.vmware.com/products/workstation), [VMware Player](https://www.vmware.com/products/player) and many more
  
  #### Pros and Cons of virtual servers
-| Pros          | Cons          |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+Pros:
+ - Controlled environment
+ - Resources on demand
+ - Easy backups and restoring
+ - Easy new instances start 
+ - Less power consumption(for providers)
 
+Cons
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDc5MDk0NTYsLTIxMjk1MzQ0Myw0ND
-gwMzAxNzcsNzI5NTk1MjI4LC05MDkxOTg3MzgsLTg2OTEzODEy
-OCwtMjExMzc3OTc5NiwtNzk2NjY4MjQzLDEzNzcyMTAxODYsLT
-EyMTEyODA1NTMsMjEwNTQwOTc1NSw0OTY4MTkzMzcsLTE1MTE4
-MjY5MzMsNTkxNjY3ODU1LDY0NDk5MjQ1NSwtMTU3MzY1OTM4NS
-wxNDIxODYyMDg3LDcxMTAzNDg1MiwtNzQyNjg0ODE0LDEyNDQy
-MTA3MjldfQ==
+eyJoaXN0b3J5IjpbLTg1OTkxNzU2NywtMjEyOTUzNDQzLDQ0OD
+AzMDE3Nyw3Mjk1OTUyMjgsLTkwOTE5ODczOCwtODY5MTM4MTI4
+LC0yMTEzNzc5Nzk2LC03OTY2NjgyNDMsMTM3NzIxMDE4NiwtMT
+IxMTI4MDU1MywyMTA1NDA5NzU1LDQ5NjgxOTMzNywtMTUxMTgy
+NjkzMyw1OTE2Njc4NTUsNjQ0OTkyNDU1LC0xNTczNjU5Mzg1LD
+E0MjE4NjIwODcsNzExMDM0ODUyLC03NDI2ODQ4MTQsMTI0NDIx
+MDcyOV19
 -->
