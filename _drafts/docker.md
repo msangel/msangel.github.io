@@ -24,7 +24,7 @@ But server operations want to use the same tooling as they used yesterday, what 
 
 And docker allows to combine wishes of both sides, it's like an interaction contract.
 
-Operations only have to care about only one thing. They have to support deploying containers. are satisfied because theyDevelopers are also happy. They can develop with whatever the fad of the day is and then just stick it into a container and throw it over the wall to operations.
+Operations have to care about only one thing. They have to support deploying containers. So they are satisfied. Developers are happy too. They can develop with whatever the fad of the day is and then just stick it into a container and throw it over the wall to operations.
 
 So docker allows to solve this matrix in a very straightforward way:
 ![Matrix solved](https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/the_matrix_of_hell_solved.png "Matrix solved")
@@ -65,7 +65,7 @@ VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEM
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzExMDM0ODUyLDExMTI4NDY1NjAsLTc0Mj
+eyJoaXN0b3J5IjpbMTQyMTg2MjA4Nyw3MTEwMzQ4NTIsLTc0Mj
 Y4NDgxNCwxMjQ0MjEwNzI5LC0xNTY0MTU2Mjk0LC04OTk3MzE0
 MTQsMTI2MjIyNTA4MSwxNTQ1NjI5NTQsMTY5ODY4MjgwNSw2OT
 kzNTcwODksMjAyMzU2ODEzLC01MDUwMzcyMjgsMTI2NzQxNDI5
