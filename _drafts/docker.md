@@ -22,9 +22,9 @@ There exists a known "Matrix of hell" that show a wide variety of different syst
 Also, there exists another problem: developers want to use edge technologies like Node.js, Rust, Go, Microservices, Cassandra, Hadoop, etc.
 But server operations want to use the same tooling as they used yesterday, what they used last year because it is proven, it works!
 
-And docker allows combining both, it's like an interaction contract.
+And docker allows to combine wishes of both sides, it's like an interaction contract.
 
-Operations are satisfied because they only have to care about one thing. They have to support deploying containers. Developers are also happy. They can develop with whatever the fad of the day is and then just stick it into a container and throw it over the wall to operations.
+Operations only have to care about only one thing. They have to support deploying containers. Developers are also happy. They can develop with whatever the fad of the day is and then just stick it into a container and throw it over the wall to operations.
 
 So docker allows to solve this matrix in a very straightforward way:
 ![Matrix solved](https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/the_matrix_of_hell_solved.png "Matrix solved")
@@ -65,9 +65,9 @@ VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEM
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0MjY4NDgxNCwxMjQ0MjEwNzI5LC0xNT
-Y0MTU2Mjk0LC04OTk3MzE0MTQsMTI2MjIyNTA4MSwxNTQ1NjI5
-NTQsMTY5ODY4MjgwNSw2OTkzNTcwODksMjAyMzU2ODEzLC01MD
-UwMzcyMjgsMTI2NzQxNDI5MCw2NjA5NDE4NjcsLTE2MTM2NzI1
-MzFdfQ==
+eyJoaXN0b3J5IjpbMTExMjg0NjU2MCwtNzQyNjg0ODE0LDEyND
+QyMTA3MjksLTE1NjQxNTYyOTQsLTg5OTczMTQxNCwxMjYyMjI1
+MDgxLDE1NDU2Mjk1NCwxNjk4NjgyODA1LDY5OTM1NzA4OSwyMD
+IzNTY4MTMsLTUwNTAzNzIyOCwxMjY3NDE0MjkwLDY2MDk0MTg2
+NywtMTYxMzY3MjUzMV19
 -->
