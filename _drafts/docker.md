@@ -31,7 +31,7 @@ So docker allows to solve this matrix in a very straightforward way:
 
 ## Hosting history
 First sites and services were hosted on office computers. Well, you can even imagine how many problems there were with this approach. Staring from "I accidentally turned it off" to real power supply stability issues.
-
+Ne
 As an additional service of dns-providers (addon-service)
 Data centers and dedicated computers (Dedicated servers)
 Virtual servers
@@ -65,10 +65,10 @@ VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEM
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1MDU1MjM4NiwtMTU3MzY1OTM4NSwxND
-IxODYyMDg3LDcxMTAzNDg1MiwtNzQyNjg0ODE0LDEyNDQyMTA3
-MjksLTE1NjQxNTYyOTQsLTg5OTczMTQxNCwxMjYyMjI1MDgxLD
-E1NDU2Mjk1NCwxNjk4NjgyODA1LDY5OTM1NzA4OSwyMDIzNTY4
-MTMsLTUwNTAzNzIyOCwxMjY3NDE0MjkwLDY2MDk0MTg2NywtMT
-YxMzY3MjUzMV19
+eyJoaXN0b3J5IjpbNjQ0OTkyNDU1LC03NTA1NTIzODYsLTE1Nz
+M2NTkzODUsMTQyMTg2MjA4Nyw3MTEwMzQ4NTIsLTc0MjY4NDgx
+NCwxMjQ0MjEwNzI5LC0xNTY0MTU2Mjk0LC04OTk3MzE0MTQsMT
+I2MjIyNTA4MSwxNTQ1NjI5NTQsMTY5ODY4MjgwNSw2OTkzNTcw
+ODksMjAyMzU2ODEzLC01MDUwMzcyMjgsMTI2NzQxNDI5MCw2Nj
+A5NDE4NjcsLTE2MTM2NzI1MzFdfQ==
 -->
