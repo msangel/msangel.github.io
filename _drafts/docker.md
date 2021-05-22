@@ -35,7 +35,8 @@ First sites and services were hosted on office computers. Well, you can even ima
 After, the dns-providers starts providing additional service for hosting, as add-on service. And it's a good point, as dns-servers anyway must work 24/7 with extreme stability, so the companies running that knew well how to achieve this stability for sites and services of their users.
 Quite fast the specialization took the place and so appears entire data centers with dedicated computers (dedicated servers). Still, the prices for that were not flexible and because of usually low utilization of the server per user, the same computers start to sell to many people, of course with some isolation level between user's data. These isolation requirements cause appearing and evolution of virtual server software.
 
-## Virtual servers, because of...
+## About virtual servers
+The virtual servers 
 Advantages
 1. managed environment (including choice of operating system)
 2. the required amount of resources (cheaper where possible)
@@ -64,11 +65,11 @@ VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEM
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwNTQwOTc1NSw0OTY4MTkzMzcsLTE1MT
-E4MjY5MzMsNTkxNjY3ODU1LDY0NDk5MjQ1NSwtMTU3MzY1OTM4
-NSwxNDIxODYyMDg3LDcxMTAzNDg1MiwtNzQyNjg0ODE0LDEyND
-QyMTA3MjksLTE1NjQxNTYyOTQsLTg5OTczMTQxNCwxMjYyMjI1
-MDgxLDE1NDU2Mjk1NCwxNjk4NjgyODA1LDY5OTM1NzA4OSwyMD
-IzNTY4MTMsLTUwNTAzNzIyOCwxMjY3NDE0MjkwLDY2MDk0MTg2
-N119
+eyJoaXN0b3J5IjpbLTE0MjU4MTEwMjcsMjEwNTQwOTc1NSw0OT
+Y4MTkzMzcsLTE1MTE4MjY5MzMsNTkxNjY3ODU1LDY0NDk5MjQ1
+NSwtMTU3MzY1OTM4NSwxNDIxODYyMDg3LDcxMTAzNDg1MiwtNz
+QyNjg0ODE0LDEyNDQyMTA3MjksLTE1NjQxNTYyOTQsLTg5OTcz
+MTQxNCwxMjYyMjI1MDgxLDE1NDU2Mjk1NCwxNjk4NjgyODA1LD
+Y5OTM1NzA4OSwyMDIzNTY4MTMsLTUwNTAzNzIyOCwxMjY3NDE0
+MjkwXX0=
 -->
