@@ -45,28 +45,28 @@ easy launch of new instances (for providers)
 4. better use of resources (for providers) incl. electricity
 The root place in virtual servers took hypervisor.
 
-## Hypervisor
+### Hypervisor
 The hypervisor, also referred to as Virtual Machine Manager (VMM), is what enables virtualization (running several operating systems on one physical computer). It allows the host computer to share its resources between VMs([link](https://www.vmware.com/topics/glossary/content/hypervisor)).
 There exists two types of hypervisor: native(or bare metal) and hosted.
 ![Hypervisor types](https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/hypervisor.png "Hypervisor types")
 
-### Native hypervisor
+#### Native hypervisor
 Native hypervisor is installed right on top of the underlying machine’s hardware (so, in this case, there is no host OS, there are only guest OS’s). This is usually installed on a machine on which the whole purpose was to run many virtual machines. The hypervisor here have its own device drivers and interact with hardware directly. Such hypervisors are faster, simpler and hence more stable.
 
 Examples:
 [antsleOS](https://antsle.com/all/os-used-in-antsle/), [Xen](https://xenproject.org/), [XCP-ng](https://xcp-ng.org/), [Oracle VM Server](https://www.oracle.com/virtualization/vm-server-for-x86/), [Microsoft Hyper-V](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/hyper-v-technology-overview), [Xbox One system software](https://direct.playstation.com/en-us/ps5), [VMware ESX/ESXi](https://www.vmware.com/products/esxi-and-esx.html) and many more
 
-### Hosted hypervisor
+#### Hosted hypervisor
 This is a program(regular executable file) that is running on top of the operating system. This type of hypervisor is something like a “translator” that translates the guest operating system’s system calls into the host operating system’s system calls.
 
 Examples:
-[VirtualBox](https://www.virtualbox.org/), [VMware Workstation](https://www.vmware.com/products/workstation), [VMware Player](https://www.vmware.com/products/player), and QEMU
+[VirtualBox](https://www.virtualbox.org/), [Parallels Desktop for Mac](https://www.parallels.com/), [QEMU](https://www.qemu.org/), [VMware Workstation](https://www.vmware.com/products/workstation), [VMware Player](https://www.vmware.com/products/player) and many more
  
 
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQ4MDMwMTc3LDEwMzYyMzMyNzksNzI5NT
+eyJoaXN0b3J5IjpbLTE0MTUyMTY4MSw0NDgwMzAxNzcsNzI5NT
 k1MjI4LC05MDkxOTg3MzgsLTg2OTEzODEyOCwtMjExMzc3OTc5
 NiwtNzk2NjY4MjQzLDEzNzcyMTAxODYsLTEyMTEyODA1NTMsMj
 EwNTQwOTc1NSw0OTY4MTkzMzcsLTE1MTE4MjY5MzMsNTkxNjY3
