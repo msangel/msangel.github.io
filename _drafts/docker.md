@@ -28,7 +28,7 @@ Operations have to care about only one thing. They have to support deploying con
 
 So docker allows to solve this matrix in a very straightforward way:
 ![Matrix solved](https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/the_matrix_of_hell_solved.png "Matrix solved")
-This is really cool aproach. But technologies came to it not from beginning. 
+This is really cool aproach. But technologies came to it not from beginning. Hosting have long and complex history of  that have the impact on the docker  
 
 ## Hosting history
 On computers in offices
@@ -65,10 +65,9 @@ VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEM
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTE3NTk2NjYsMTQyMTg2MjA4Nyw3MT
-EwMzQ4NTIsLTc0MjY4NDgxNCwxMjQ0MjEwNzI5LC0xNTY0MTU2
-Mjk0LC04OTk3MzE0MTQsMTI2MjIyNTA4MSwxNTQ1NjI5NTQsMT
-Y5ODY4MjgwNSw2OTkzNTcwODksMjAyMzU2ODEzLC01MDUwMzcy
-MjgsMTI2NzQxNDI5MCw2NjA5NDE4NjcsLTE2MTM2NzI1MzFdfQ
-==
+eyJoaXN0b3J5IjpbLTI2MjQyODAzMiwxNDIxODYyMDg3LDcxMT
+AzNDg1MiwtNzQyNjg0ODE0LDEyNDQyMTA3MjksLTE1NjQxNTYy
+OTQsLTg5OTczMTQxNCwxMjYyMjI1MDgxLDE1NDU2Mjk1NCwxNj
+k4NjgyODA1LDY5OTM1NzA4OSwyMDIzNTY4MTMsLTUwNTAzNzIy
+OCwxMjY3NDE0MjkwLDY2MDk0MTg2NywtMTYxMzY3MjUzMV19
 -->
