@@ -36,7 +36,7 @@ After, the dns-providers starts providing additional service for hosting, as add
 Quite fast the specialization took the place and so appears entire data centers with dedicated computers (dedicated servers). Still, the prices for that were not flexible and because of usually low utilization of the server per user, the same computers start to sell to many people, of course with some isolation level between user's data. These isolation requirements cause appearing and evolution of virtual server software.
 
 ## About virtual servers
-The virtual servers are software that allow to run another virtual emulated computer as any regular application. And as far as that cumputer is emulated, its environment also emulated, so running any programs in it will not harm you primary operation system(if you have one, steping a bit forward, I can said that there are virtual s)   
+The virtual servers are software that allow to run another virtual emulated computer as any regular application. And as far as that cumputer is emulated, its environment also emulated, so running any programs in it will not harm you primary operation system(if you have one, steping a bit forward, I can said that there are virtual server )   
 Advantages
 1. managed environment (including choice of operating system)
 2. the required amount of resources (cheaper where possible)
@@ -65,11 +65,11 @@ VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEM
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2Mzc5NjY4NSwtMzQ5MDUxMTQ4LDIxMD
-U0MDk3NTUsNDk2ODE5MzM3LC0xNTExODI2OTMzLDU5MTY2Nzg1
-NSw2NDQ5OTI0NTUsLTE1NzM2NTkzODUsMTQyMTg2MjA4Nyw3MT
-EwMzQ4NTIsLTc0MjY4NDgxNCwxMjQ0MjEwNzI5LC0xNTY0MTU2
-Mjk0LC04OTk3MzE0MTQsMTI2MjIyNTA4MSwxNTQ1NjI5NTQsMT
-Y5ODY4MjgwNSw2OTkzNTcwODksMjAyMzU2ODEzLC01MDUwMzcy
-MjhdfQ==
+eyJoaXN0b3J5IjpbLTEyMTEyODA1NTMsMTg2Mzc5NjY4NSwyMT
+A1NDA5NzU1LDQ5NjgxOTMzNywtMTUxMTgyNjkzMyw1OTE2Njc4
+NTUsNjQ0OTkyNDU1LC0xNTczNjU5Mzg1LDE0MjE4NjIwODcsNz
+ExMDM0ODUyLC03NDI2ODQ4MTQsMTI0NDIxMDcyOSwtMTU2NDE1
+NjI5NCwtODk5NzMxNDE0LDEyNjIyMjUwODEsMTU0NTYyOTU0LD
+E2OTg2ODI4MDUsNjk5MzU3MDg5LDIwMjM1NjgxMywtNTA1MDM3
+MjI4XX0=
 -->
