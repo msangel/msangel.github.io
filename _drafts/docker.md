@@ -48,9 +48,10 @@ The root place in virtual servers took hypervisor.
 ## Hypervisor
 The hypervisor, also referred to as Virtual Machine Manager (VMM), is what enables virtualization (running several operating systems on one physical computer). It allows the host computer to share its resources between VMs([link](https://www.vmware.com/topics/glossary/content/hypervisor)).
 There exists two types of hypervisor: native(or bare metal) and hosted.
+![Hypervisor types](https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/hypervisor.png "Hypervisor types")
 
-### native
-In native type the hypervisor is installed right on top of the underlying machine’s hardware (so, in this case, there is no host OS, there are only guest OS’s). This is usually installed on a machine on which the whole purpose was to run many virtual machines. The hypervisor here have its own device drivers and interact with hardware directly. And so, such hypervisors are faster, simpler and hence more stable.
+### Native hypervisor
+In native type the hypervisor is installed right on top of the underlying machine’s hardware (so, in this case, there is no host OS, there are only guest OS’s). This is usually installed on a machine on which the whole purpose was to run many virtual machines. The hypervisor here have its own device drivers and interact with hardware directly. Such hypervisors are faster, simpler and hence more stable.
 
 Examples:
 AntsleOs, Xen, XCP-ng, Oracle VM Server, Microsoft Hyper-V, Xbox One system software, and VMware ESX/ESXi
@@ -60,16 +61,16 @@ This is a program that is installed on top of the operating system. This type of
 
 Examples:
 VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEMU
- ![Hypervisor types](https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/hypervisor.png "Hypervisor types")
+ 
 
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5MzY5MTI3OSwtMjExMzc3OTc5NiwtNz
-k2NjY4MjQzLDEzNzcyMTAxODYsLTEyMTEyODA1NTMsMjEwNTQw
-OTc1NSw0OTY4MTkzMzcsLTE1MTE4MjY5MzMsNTkxNjY3ODU1LD
-Y0NDk5MjQ1NSwtMTU3MzY1OTM4NSwxNDIxODYyMDg3LDcxMTAz
-NDg1MiwtNzQyNjg0ODE0LDEyNDQyMTA3MjksLTE1NjQxNTYyOT
-QsLTg5OTczMTQxNCwxMjYyMjI1MDgxLDE1NDU2Mjk1NCwxNjk4
-NjgyODA1XX0=
+eyJoaXN0b3J5IjpbLTE5OTUwMjkyMTksLTIxMTM3Nzk3OTYsLT
+c5NjY2ODI0MywxMzc3MjEwMTg2LC0xMjExMjgwNTUzLDIxMDU0
+MDk3NTUsNDk2ODE5MzM3LC0xNTExODI2OTMzLDU5MTY2Nzg1NS
+w2NDQ5OTI0NTUsLTE1NzM2NTkzODUsMTQyMTg2MjA4Nyw3MTEw
+MzQ4NTIsLTc0MjY4NDgxNCwxMjQ0MjEwNzI5LC0xNTY0MTU2Mj
+k0LC04OTk3MzE0MTQsMTI2MjIyNTA4MSwxNTQ1NjI5NTQsMTY5
+ODY4MjgwNV19
 -->
