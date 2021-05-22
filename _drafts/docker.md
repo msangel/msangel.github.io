@@ -46,7 +46,7 @@ easy launch of new instances (for providers)
 The root place in virtual servers took hypervisor.
 
 ## Hypervisor
-The hypervisor, also referred to as Virtual Machine Manager (VMM), is what enables virtualization (running several operating systems on one physical computer). It allows the host computer to share its resources between VMs.
+The hypervisor, also referred to as Virtual Machine Manager (VMM), is what enables virtualization (running several operating systems on one physical computer). It allows the host computer to share its resources between VMs([link](https://www.vmware.com/topics/glossary/content/hypervisor)).
 
 This software is installed right on top of the underlying machine’s hardware (so, in this case, there is no Host OS, there are only Guest OS’s). You would do this on a machine on which the whole purpose was to run many virtual machines.
 
@@ -66,7 +66,7 @@ VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEM
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1NjU1NzMzOSwtMTIxMTI4MDU1MywyMT
+eyJoaXN0b3J5IjpbMTM3NzIxMDE4NiwtMTIxMTI4MDU1MywyMT
 A1NDA5NzU1LDQ5NjgxOTMzNywtMTUxMTgyNjkzMyw1OTE2Njc4
 NTUsNjQ0OTkyNDU1LC0xNTczNjU5Mzg1LDE0MjE4NjIwODcsNz
 ExMDM0ODUyLC03NDI2ODQ4MTQsMTI0NDIxMDcyOSwtMTU2NDE1
