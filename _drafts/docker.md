@@ -27,10 +27,10 @@ And docker allows to combine wishes of both sides, it's like an interaction cont
 Operations have to care about only one thing. They have to support deploying containers. So they are satisfied. Developers are happy too. They can develop with whatever the fad of the day is and then just stick it into a container and throw it over the wall to operations.
 
 So docker allows to solve this matrix in a very straightforward way:
-![Matrix solved](https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/the_matrix_of_hell_solved.png "Matrix solved")
-This is really cool aproach. But technologies came to it not from beginning. Hosting have long and complex history of that have the impact on the docker, and I pretty sure we must overview some basics of hosting history for understanding what requirements and problem exists prior docker.
+![Matrix solved](https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/the_matrix_of_hell_solved.png "Matrix solved")This is really cool approach. But technologies came to it not from the beginning. Hosting have long and complex history of that have the impact on the docker, and I pretty sure we must overview some basics of hosting history for understanding what requirements and problem exist prior docker.
 
 ## Hosting history
+First sites and services were hos
 On computers in offices
 As an additional service of dns-providers (addon-service)
 Data centers and dedicated computers (Dedicated servers)
@@ -65,7 +65,7 @@ VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEM
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODYyMTIyODYsMTQyMTg2MjA4Nyw3MT
+eyJoaXN0b3J5IjpbLTIwMDA1NTc4NjIsMTQyMTg2MjA4Nyw3MT
 EwMzQ4NTIsLTc0MjY4NDgxNCwxMjQ0MjEwNzI5LC0xNTY0MTU2
 Mjk0LC04OTk3MzE0MTQsMTI2MjIyNTA4MSwxNTQ1NjI5NTQsMT
 Y5ODY4MjgwNSw2OTkzNTcwODksMjAyMzU2ODEzLC01MDUwMzcy
