@@ -57,7 +57,7 @@ Examples:
 [antsleOS](https://antsle.com/all/os-used-in-antsle/), [Xen](https://xenproject.org/), [XCP-ng](https://xcp-ng.org/), [Oracle VM Server](https://www.oracle.com/virtualization/vm-server-for-x86/), [Microsoft Hyper-V](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/hyper-v-technology-overview), [Xbox One system software](https://direct.playstation.com/en-us/ps5), [VMware ESX/ESXi](https://www.vmware.com/products/esxi-and-esx.html) and many more
 
 ### Hosted hypervisor
-This is a program that is installed on top of the operating system. This type of hypervisor is something like a “translator” that translates the guest operating system’s system calls into the host operating system’s system calls.
+This is a program(regular executable file) that is running on top of the operating system. This type of hypervisor is something like a “translator” that translates the guest operating system’s system calls into the host operating system’s system calls.
 
 Examples:
 VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEMU
@@ -66,7 +66,7 @@ VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEM
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwOTM3ODk0NSw3Mjk1OTUyMjgsLTkwOT
+eyJoaXN0b3J5IjpbMTEyNDQyNDYwNSw3Mjk1OTUyMjgsLTkwOT
 E5ODczOCwtODY5MTM4MTI4LC0yMTEzNzc5Nzk2LC03OTY2Njgy
 NDMsMTM3NzIxMDE4NiwtMTIxMTI4MDU1MywyMTA1NDA5NzU1LD
 Q5NjgxOTMzNywtMTUxMTgyNjkzMyw1OTE2Njc4NTUsNjQ0OTky
