@@ -54,7 +54,7 @@ There exists two types of hypervisor: native(or bare metal) and hosted.
 In native type the hypervisor is installed right on top of the underlying machine’s hardware (so, in this case, there is no host OS, there are only guest OS’s). This is usually installed on a machine on which the whole purpose was to run many virtual machines. The hypervisor here have its own device drivers and interact with hardware directly. Such hypervisors are faster, simpler and hence more stable.
 
 Examples:
-[antsleOS](https://antsle.com/all/os-used-in-antsle/), [Xen](https://xenproject.org/), [XCP-ng](https://xcp-ng.org/), [Oracle VM Server](https://www.oracle.com/virtualization/vm-server-for-x86/), [Microsoft Hyper-V](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/hyper-v-technology-overview), Xbox One system software, and VMware ESX/ESXi
+[antsleOS](https://antsle.com/all/os-used-in-antsle/), [Xen](https://xenproject.org/), [XCP-ng](https://xcp-ng.org/), [Oracle VM Server](https://www.oracle.com/virtualization/vm-server-for-x86/), [Microsoft Hyper-V](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/hyper-v-technology-overview), [Xbox One system software](https://direct.playstation.com/en-us/ps5), and VMware ESX/ESXi
 
 Type 2, also called “Hosted Hypervisor”
 This is a program that is installed on top of the operating system. This type of hypervisor is something like a “translator” that translates the guest operating system’s system calls into the host operating system’s system calls.
@@ -66,11 +66,11 @@ VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEM
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwOTE5ODczOCwtODY5MTM4MTI4LC0yMT
-EzNzc5Nzk2LC03OTY2NjgyNDMsMTM3NzIxMDE4NiwtMTIxMTI4
-MDU1MywyMTA1NDA5NzU1LDQ5NjgxOTMzNywtMTUxMTgyNjkzMy
-w1OTE2Njc4NTUsNjQ0OTkyNDU1LC0xNTczNjU5Mzg1LDE0MjE4
-NjIwODcsNzExMDM0ODUyLC03NDI2ODQ4MTQsMTI0NDIxMDcyOS
-wtMTU2NDE1NjI5NCwtODk5NzMxNDE0LDEyNjIyMjUwODEsMTU0
-NTYyOTU0XX0=
+eyJoaXN0b3J5IjpbNzI5NTk1MjI4LC05MDkxOTg3MzgsLTg2OT
+EzODEyOCwtMjExMzc3OTc5NiwtNzk2NjY4MjQzLDEzNzcyMTAx
+ODYsLTEyMTEyODA1NTMsMjEwNTQwOTc1NSw0OTY4MTkzMzcsLT
+E1MTE4MjY5MzMsNTkxNjY3ODU1LDY0NDk5MjQ1NSwtMTU3MzY1
+OTM4NSwxNDIxODYyMDg3LDcxMTAzNDg1MiwtNzQyNjg0ODE0LD
+EyNDQyMTA3MjksLTE1NjQxNTYyOTQsLTg5OTczMTQxNCwxMjYy
+MjI1MDgxXX0=
 -->
