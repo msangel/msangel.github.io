@@ -32,8 +32,7 @@ So docker allows to solve this matrix in a very straightforward way:
 ## Hosting history
 First sites and services were hosted on office computers. Well, you can even imagine how many problems there were with this approach. Staring from "I accidentally turned it off" to real power supply stability issues.
 After, the dns-providers starts providing additional service for hosting, as add-on service. 
-Quite fast the specialization took the place and so appears entire data centers with dedicated computers (dedicated servers). Still, the prices for that were not flexible and because of usually low utilization of the servers, the same computers start to sell to many people, of course with some isolation level between users data. This isolation requirements cause appearing o 
-Virtual servers
+Quite fast the specialization took the place and so appears entire data centers with dedicated computers (dedicated servers). Still, the prices for that were not flexible and because of usually low utilization of the servers, the same computers start to sell to many people, of course with some isolation level between users data. This isolation requirements cause appearing and evolution of  virtual servers software.
 
 ## Virtual servers, because of...
 Advantages
@@ -64,10 +63,10 @@ VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEM
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTkxNjY3ODU1LC0xMDkyNzQyNzIyLDY0ND
-k5MjQ1NSwtMTU3MzY1OTM4NSwxNDIxODYyMDg3LDcxMTAzNDg1
-MiwtNzQyNjg0ODE0LDEyNDQyMTA3MjksLTE1NjQxNTYyOTQsLT
-g5OTczMTQxNCwxMjYyMjI1MDgxLDE1NDU2Mjk1NCwxNjk4Njgy
-ODA1LDY5OTM1NzA4OSwyMDIzNTY4MTMsLTUwNTAzNzIyOCwxMj
-Y3NDE0MjkwLDY2MDk0MTg2NywtMTYxMzY3MjUzMV19
+eyJoaXN0b3J5IjpbLTgzNzM2OTc1MCw1OTE2Njc4NTUsNjQ0OT
+kyNDU1LC0xNTczNjU5Mzg1LDE0MjE4NjIwODcsNzExMDM0ODUy
+LC03NDI2ODQ4MTQsMTI0NDIxMDcyOSwtMTU2NDE1NjI5NCwtOD
+k5NzMxNDE0LDEyNjIyMjUwODEsMTU0NTYyOTU0LDE2OTg2ODI4
+MDUsNjk5MzU3MDg5LDIwMjM1NjgxMywtNTA1MDM3MjI4LDEyNj
+c0MTQyOTAsNjYwOTQxODY3LC0xNjEzNjcyNTMxXX0=
 -->
