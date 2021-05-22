@@ -31,7 +31,7 @@ So docker allows to solve this matrix in a very straightforward way:
 
 ## Hosting history
 First sites and services were hosted on office computers. Well, you can even imagine how many problems there were with this approach. Staring from "I accidentally turned it off" to real power supply stability issues.
-After, the dns-providers starts providing additional service for hosting, as add-on service. And its good point, as dns-servers anyway must work 24/7 with extreme stability, so the companies running that knew well how to achieve this stability for sites and services of their users.
+After, the dns-providers starts providing additional service for hosting, as add-on service. And it's a good point, as dns-servers anyway must work 24/7 with extreme stability, so the companies running that knew well how to achieve this stability for sites and services of their users.
 Quite fast the specialization took the place and so appears entire data centers with dedicated computers (dedicated servers). Still, the prices for that were not flexible and because of usually low utilization of the server per user, the same computers start to sell to many people, of course with some isolation level between user's data. These isolation requirements cause appearing and evolution of virtual server software.
 
 ## Virtual servers, because of...
@@ -63,7 +63,7 @@ VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEM
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4MDUyNTY3LC0xNTExODI2OTMzLDU5MT
+eyJoaXN0b3J5IjpbNDk2ODE5MzM3LC0xNTExODI2OTMzLDU5MT
 Y2Nzg1NSw2NDQ5OTI0NTUsLTE1NzM2NTkzODUsMTQyMTg2MjA4
 Nyw3MTEwMzQ4NTIsLTc0MjY4NDgxNCwxMjQ0MjEwNzI5LC0xNT
 Y0MTU2Mjk0LC04OTk3MzE0MTQsMTI2MjIyNTA4MSwxNTQ1NjI5
