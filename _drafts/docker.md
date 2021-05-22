@@ -62,11 +62,13 @@ This is a program(regular executable file) that is running on top of the operati
 Examples:
 [VirtualBox](https://www.virtualbox.org/), [Parallels Desktop for Mac](https://www.parallels.com/), [QEMU](https://www.qemu.org/), [VMware Workstation](https://www.vmware.com/products/workstation), [VMware Player](https://www.vmware.com/products/player) and many more
  
+ #### Pros and Cons of virtual servers
+ 
 
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTUyMTY4MSw0NDgwMzAxNzcsNzI5NT
+eyJoaXN0b3J5IjpbLTIxMjk1MzQ0Myw0NDgwMzAxNzcsNzI5NT
 k1MjI4LC05MDkxOTg3MzgsLTg2OTEzODEyOCwtMjExMzc3OTc5
 NiwtNzk2NjY4MjQzLDEzNzcyMTAxODYsLTEyMTEyODA1NTMsMj
 EwNTQwOTc1NSw0OTY4MTkzMzcsLTE1MTE4MjY5MzMsNTkxNjY3
