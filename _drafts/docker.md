@@ -20,7 +20,7 @@ There exists a known "Matrix of hell" that show a wide variety of different syst
 ![Matrix of hell](https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/the_matrix_of_hell.png "Matrix of hell")
 
 Also, there exists another problem: developers want to use edge technologies like Node.js, Rust, Go, Microservices, Cassandra, Hadoop, etc.
-But server operations want to use the same to as they used yesterday, what they used last year because it is proven, it works!
+But server operations want to use the same tooling as they used yesterday, what they used last year because it is proven, it works!
 
 And docker allows combining both, it's like an interaction contract.
 
@@ -65,8 +65,9 @@ VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEM
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0NDIxMDcyOSwtMTU2NDE1NjI5NCwtOD
-k5NzMxNDE0LDEyNjIyMjUwODEsMTU0NTYyOTU0LDE2OTg2ODI4
-MDUsNjk5MzU3MDg5LDIwMjM1NjgxMywtNTA1MDM3MjI4LDEyNj
-c0MTQyOTAsNjYwOTQxODY3LC0xNjEzNjcyNTMxXX0=
+eyJoaXN0b3J5IjpbLTc0MjY4NDgxNCwxMjQ0MjEwNzI5LC0xNT
+Y0MTU2Mjk0LC04OTk3MzE0MTQsMTI2MjIyNTA4MSwxNTQ1NjI5
+NTQsMTY5ODY4MjgwNSw2OTkzNTcwODksMjAyMzU2ODEzLC01MD
+UwMzcyMjgsMTI2NzQxNDI5MCw2NjA5NDE4NjcsLTE2MTM2NzI1
+MzFdfQ==
 -->
