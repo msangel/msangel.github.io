@@ -54,7 +54,7 @@ There exists two types of hypervisor: native(or bare metal) and hosted.
 In native type the hypervisor is installed right on top of the underlying machine’s hardware (so, in this case, there is no host OS, there are only guest OS’s). This is usually installed on a machine on which the whole purpose was to run many virtual machines. The hypervisor here have its own device drivers and interact with hardware directly. Such hypervisors are faster, simpler and hence more stable.
 
 Examples:
-antsleOS, Xen, XCP-ng, Oracle VM Server, Microsoft Hyper-V, Xbox One system software, and VMware ESX/ESXi
+[antsleOS](https://antsle.com/all/os-used-in-antsle/), [Xen](https://xenproject.org/), [XCP-ng](https://xcp-ng.org/), Oracle VM Server, Microsoft Hyper-V, Xbox One system software, and VMware ESX/ESXi
 
 Type 2, also called “Hosted Hypervisor”
 This is a program that is installed on top of the operating system. This type of hypervisor is something like a “translator” that translates the guest operating system’s system calls into the host operating system’s system calls.
@@ -66,11 +66,11 @@ VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEM
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjY0NzM1MDcsLTIxMTM3Nzk3OTYsLT
-c5NjY2ODI0MywxMzc3MjEwMTg2LC0xMjExMjgwNTUzLDIxMDU0
-MDk3NTUsNDk2ODE5MzM3LC0xNTExODI2OTMzLDU5MTY2Nzg1NS
-w2NDQ5OTI0NTUsLTE1NzM2NTkzODUsMTQyMTg2MjA4Nyw3MTEw
-MzQ4NTIsLTc0MjY4NDgxNCwxMjQ0MjEwNzI5LC0xNTY0MTU2Mj
-k0LC04OTk3MzE0MTQsMTI2MjIyNTA4MSwxNTQ1NjI5NTQsMTY5
-ODY4MjgwNV19
+eyJoaXN0b3J5IjpbLTg2OTEzODEyOCwtMjExMzc3OTc5NiwtNz
+k2NjY4MjQzLDEzNzcyMTAxODYsLTEyMTEyODA1NTMsMjEwNTQw
+OTc1NSw0OTY4MTkzMzcsLTE1MTE4MjY5MzMsNTkxNjY3ODU1LD
+Y0NDk5MjQ1NSwtMTU3MzY1OTM4NSwxNDIxODYyMDg3LDcxMTAz
+NDg1MiwtNzQyNjg0ODE0LDEyNDQyMTA3MjksLTE1NjQxNTYyOT
+QsLTg5OTczMTQxNCwxMjYyMjI1MDgxLDE1NDU2Mjk1NCwxNjk4
+NjgyODA1XX0=
 -->
