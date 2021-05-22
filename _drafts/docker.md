@@ -51,12 +51,12 @@ There exists two types of hypervisor: native(or bare metal) and hosted.
 ![Hypervisor types](https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/hypervisor.png "Hypervisor types")
 
 ### Native hypervisor
-In native type the hypervisor is installed right on top of the underlying machine’s hardware (so, in this case, there is no host OS, there are only guest OS’s). This is usually installed on a machine on which the whole purpose was to run many virtual machines. The hypervisor here have its own device drivers and interact with hardware directly. Such hypervisors are faster, simpler and hence more stable.
+Native hypervisor is installed right on top of the underlying machine’s hardware (so, in this case, there is no host OS, there are only guest OS’s). This is usually installed on a machine on which the whole purpose was to run many virtual machines. The hypervisor here have its own device drivers and interact with hardware directly. Such hypervisors are faster, simpler and hence more stable.
 
 Examples:
 [antsleOS](https://antsle.com/all/os-used-in-antsle/), [Xen](https://xenproject.org/), [XCP-ng](https://xcp-ng.org/), [Oracle VM Server](https://www.oracle.com/virtualization/vm-server-for-x86/), [Microsoft Hyper-V](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/hyper-v-technology-overview), [Xbox One system software](https://direct.playstation.com/en-us/ps5), [VMware ESX/ESXi](https://www.vmware.com/products/esxi-and-esx.html) and many more
 
-Type 2, also called “Hosted Hypervisor”
+### Hosted hypervisor
 This is a program that is installed on top of the operating system. This type of hypervisor is something like a “translator” that translates the guest operating system’s system calls into the host operating system’s system calls.
 
 Examples:
@@ -66,7 +66,7 @@ VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEM
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4MDYzNzM5Myw3Mjk1OTUyMjgsLTkwOT
+eyJoaXN0b3J5IjpbMTQwOTM3ODk0NSw3Mjk1OTUyMjgsLTkwOT
 E5ODczOCwtODY5MTM4MTI4LC0yMTEzNzc5Nzk2LC03OTY2Njgy
 NDMsMTM3NzIxMDE4NiwtMTIxMTI4MDU1MywyMTA1NDA5NzU1LD
 Q5NjgxOTMzNywtMTUxMTgyNjkzMyw1OTE2Njc4NTUsNjQ0OTky
