@@ -36,7 +36,7 @@ After, the dns-providers starts providing additional service for hosting, as add
 Quite fast the specialization took the place and so appears entire data centers with dedicated computers (dedicated servers). Still, the prices for that were not flexible and because of usually low utilization of the server per user, the same computers start to sell to many people, of course with some isolation level between user's data. These isolation requirements cause appearing and evolution of virtual server software.
 
 ## About virtual servers
-The virtual servers 
+The virtual servers a
 Advantages
 1. managed environment (including choice of operating system)
 2. the required amount of resources (cheaper where possible)
@@ -65,11 +65,11 @@ VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEM
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MjU4MTEwMjcsMjEwNTQwOTc1NSw0OT
-Y4MTkzMzcsLTE1MTE4MjY5MzMsNTkxNjY3ODU1LDY0NDk5MjQ1
-NSwtMTU3MzY1OTM4NSwxNDIxODYyMDg3LDcxMTAzNDg1MiwtNz
-QyNjg0ODE0LDEyNDQyMTA3MjksLTE1NjQxNTYyOTQsLTg5OTcz
-MTQxNCwxMjYyMjI1MDgxLDE1NDU2Mjk1NCwxNjk4NjgyODA1LD
-Y5OTM1NzA4OSwyMDIzNTY4MTMsLTUwNTAzNzIyOCwxMjY3NDE0
-MjkwXX0=
+eyJoaXN0b3J5IjpbMjcxMzk1MTM2LC0xNDI1ODExMDI3LDIxMD
+U0MDk3NTUsNDk2ODE5MzM3LC0xNTExODI2OTMzLDU5MTY2Nzg1
+NSw2NDQ5OTI0NTUsLTE1NzM2NTkzODUsMTQyMTg2MjA4Nyw3MT
+EwMzQ4NTIsLTc0MjY4NDgxNCwxMjQ0MjEwNzI5LC0xNTY0MTU2
+Mjk0LC04OTk3MzE0MTQsMTI2MjIyNTA4MSwxNTQ1NjI5NTQsMT
+Y5ODY4MjgwNSw2OTkzNTcwODksMjAyMzU2ODEzLC01MDUwMzcy
+MjhdfQ==
 -->
