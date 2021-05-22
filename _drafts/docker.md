@@ -6,7 +6,7 @@ date: 2019-06-08 03:06:00 Z
 https://sites.google.com/site/modernskyangel/in-progress/docker-big
 
 # The "Docker" keyword
-Docker is a company.
+Before diving into the docker world, lets clarify basic  Docker is a company.
 Docker is a software (Docker community edition (CE) and Docker enterprise edition (EE)).
 
 # What it is, and why we need this. The difference between Virtual Servers and Dedicated servers.
@@ -62,7 +62,8 @@ VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEM
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2MjIyNTA4MSwxNTQ1NjI5NTQsMTY5OD
-Y4MjgwNSw2OTkzNTcwODksMjAyMzU2ODEzLC01MDUwMzcyMjgs
-MTI2NzQxNDI5MCw2NjA5NDE4NjcsLTE2MTM2NzI1MzFdfQ==
+eyJoaXN0b3J5IjpbLTg5OTczMTQxNCwxMjYyMjI1MDgxLDE1ND
+U2Mjk1NCwxNjk4NjgyODA1LDY5OTM1NzA4OSwyMDIzNTY4MTMs
+LTUwNTAzNzIyOCwxMjY3NDE0MjkwLDY2MDk0MTg2NywtMTYxMz
+Y3MjUzMV19
 -->
