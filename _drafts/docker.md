@@ -30,7 +30,7 @@ So docker allows to solve this matrix in a very straightforward way:
 ![Matrix solved](https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/the_matrix_of_hell_solved.png "Matrix solved")This is really cool approach. But technologies came to it not from the beginning. Hosting have long and complex history of that have the impact on the docker, and I pretty sure we must overview some basics of hosting history for understanding what requirements and problem exist prior docker.
 
 ## Hosting history
-First sites and services were hosted 
+First sites and services were hosted on office computers. Well, you can even imagine how many problems had that approach. 
 On computers in offices
 As an additional service of dns-providers (addon-service)
 Data centers and dedicated computers (Dedicated servers)
@@ -65,7 +65,7 @@ VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEM
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzM2NTkzODUsLTIwMDA1NTc4NjIsMT
+eyJoaXN0b3J5IjpbLTExMjQ2ODY2OTYsLTE1NzM2NTkzODUsMT
 QyMTg2MjA4Nyw3MTEwMzQ4NTIsLTc0MjY4NDgxNCwxMjQ0MjEw
 NzI5LC0xNTY0MTU2Mjk0LC04OTk3MzE0MTQsMTI2MjIyNTA4MS
 wxNTQ1NjI5NTQsMTY5ODY4MjgwNSw2OTkzNTcwODksMjAyMzU2
