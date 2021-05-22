@@ -70,11 +70,16 @@ Pros:
  - Easy new instances start 
  - Less power consumption(for providers)
 
-Cons
+Cons:
+
+ - Low computational performance
+ - Huge memory usage
+ - Problems with hardware (USB, printers, etc.)
+ - Complex management
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1OTkxNzU2NywtMjEyOTUzNDQzLDQ0OD
+eyJoaXN0b3J5IjpbLTc5NTE4OTQ2MSwtMjEyOTUzNDQzLDQ0OD
 AzMDE3Nyw3Mjk1OTUyMjgsLTkwOTE5ODczOCwtODY5MTM4MTI4
 LC0yMTEzNzc5Nzk2LC03OTY2NjgyNDMsMTM3NzIxMDE4NiwtMT
 IxMTI4MDU1MywyMTA1NDA5NzU1LDQ5NjgxOTMzNywtMTUxMTgy
