@@ -12,15 +12,15 @@ Before diving into the docker world, lets clarify basics about what Docker is:
 	 1. Docker CE (community edition) 
 	 2. Docker EE (enterprise edition)
 
-# What it is, and why we need this. The difference between Virtual Servers and Dedicated servers.
+# What it is, and why we need this
 
-A very simple answer to the question of why we need it is: it allows us to run our applications in the same way and in the same environment whenever we have either this is Windows PC, Linux Laptop, dedicated server or virtual hosting.  It's a common problem when developers create their software on their computer and so it can be run only on their computer. Docker creates an isolated environment that is the same everywhere.
+A very simple answer to the question of why we need it is: it allows us to run our applications in the same way and in the same environment whenever we have either this is Windows PC, Linux laptop, dedicated server or virtual hosting.  It's a common problem when developers create their software on their computer and so it can be run only on their computer. Docker creates an isolated environment that is the same everywhere.
 There exists a known "Matrix of hell" that show a wide variety of different systems and their different behavior on different hardware:
 
 ![Matrix of hell](https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/the_matrix_of_hell.png "Matrix of hell")
 
 Also, there exists another problem: developers want to use edge technologies like Node.js, Rust, Go, Microservices, Cassandra, Hadoop, etc.
-But server operations want to use the same as they used yesterday, what they used last year because it is proven, it works!
+But server operations want to use the same to as they used yesterday, what they used last year because it is proven, it works!
 
 And docker allows combining both, it's like an interaction contract.
 
@@ -65,8 +65,8 @@ VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEM
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzExMzMyNzk3LC0xNTY0MTU2Mjk0LC04OT
-k3MzE0MTQsMTI2MjIyNTA4MSwxNTQ1NjI5NTQsMTY5ODY4Mjgw
-NSw2OTkzNTcwODksMjAyMzU2ODEzLC01MDUwMzcyMjgsMTI2Nz
-QxNDI5MCw2NjA5NDE4NjcsLTE2MTM2NzI1MzFdfQ==
+eyJoaXN0b3J5IjpbMTI0NDIxMDcyOSwtMTU2NDE1NjI5NCwtOD
+k5NzMxNDE0LDEyNjIyMjUwODEsMTU0NTYyOTU0LDE2OTg2ODI4
+MDUsNjk5MzU3MDg5LDIwMjM1NjgxMywtNTA1MDM3MjI4LDEyNj
+c0MTQyOTAsNjYwOTQxODY3LC0xNjEzNjcyNTMxXX0=
 -->
