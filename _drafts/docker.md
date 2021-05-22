@@ -31,9 +31,8 @@ So docker allows to solve this matrix in a very straightforward way:
 
 ## Hosting history
 First sites and services were hosted on office computers. Well, you can even imagine how many problems there were with this approach. Staring from "I accidentally turned it off" to real power supply stability issues.
-After, the dns-providers starts providing additional service for hosting, as addon-service.   
-As an additional service of dns-providers (addon-service)
-Data centers and dedicated computers (Dedicated servers)
+After, the dns-providers starts providing additional service for hosting, as add-on service. 
+Quite fast the specialization took the place and so appears entire data centers with dedicated computers (Dedicated servers).
 Virtual servers
 
 ## Virtual servers, because of...
@@ -65,10 +64,10 @@ VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEM
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3OTAyNTU1MSw2NDQ5OTI0NTUsLTE1Nz
-M2NTkzODUsMTQyMTg2MjA4Nyw3MTEwMzQ4NTIsLTc0MjY4NDgx
-NCwxMjQ0MjEwNzI5LC0xNTY0MTU2Mjk0LC04OTk3MzE0MTQsMT
-I2MjIyNTA4MSwxNTQ1NjI5NTQsMTY5ODY4MjgwNSw2OTkzNTcw
-ODksMjAyMzU2ODEzLC01MDUwMzcyMjgsMTI2NzQxNDI5MCw2Nj
-A5NDE4NjcsLTE2MTM2NzI1MzFdfQ==
+eyJoaXN0b3J5IjpbLTEzNTMxNDczNTYsNjQ0OTkyNDU1LC0xNT
+czNjU5Mzg1LDE0MjE4NjIwODcsNzExMDM0ODUyLC03NDI2ODQ4
+MTQsMTI0NDIxMDcyOSwtMTU2NDE1NjI5NCwtODk5NzMxNDE0LD
+EyNjIyMjUwODEsMTU0NTYyOTU0LDE2OTg2ODI4MDUsNjk5MzU3
+MDg5LDIwMjM1NjgxMywtNTA1MDM3MjI4LDEyNjc0MTQyOTAsNj
+YwOTQxODY3LC0xNjEzNjcyNTMxXX0=
 -->
