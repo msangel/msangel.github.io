@@ -36,13 +36,14 @@ After, the dns-providers starts providing additional service for hosting, as add
 Quite fast the specialization took the place and so appears entire data centers with dedicated computers (dedicated servers). Still, the prices for that were not flexible and because of usually low utilization of the server per user, the same computers start to sell to many people, of course with some isolation level between user's data. These isolation requirements cause appearing and evolution of virtual server software.
 
 ## About virtual servers
-The virtual servers are software that allow to run another virtual emulated computer as any regular application. And as far as that cumputer is emulated, its environment also emulated, so running any programs in it will not harm you primary operation system(if you have one, steping a bit forward, I can said that there are virtual servers that run directly on hardware and dont requires OS to be installed).   
-Advantages
+The virtual servers are software that allow to run another virtual emulated computer as any regular application. And as far as that cumputer is emulated, its environment also emulated, so running any programs in it will not harm you primary operation system(if you have one, as steping a bit forward, I can said that there exists virtual servers applications that run directly on hardware and don't requires OS to be installed).
+The advantages of vitrual servers are:
 1. managed environment (including choice of operating system)
 2. the required amount of resources (cheaper where possible)
 3. easy creation of backups and restoration from them
 easy launch of new instances (for providers)
 4. better use of resources (for providers) incl. electricity
+The root place in virtual servers took hypervisor.
 
 ## Hypervisor
 The hypervisor, also referred to as Virtual Machine Manager (VMM), is what enables virtualization (running several operating systems on one physical computer). It allows the host computer to share its resources between VMs.[5]
@@ -65,7 +66,7 @@ VMware Workstation, VMware Player, VirtualBox, Parallels Desktop for Mac and QEM
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyMTY0MjYwMSwtMTIxMTI4MDU1MywyMT
+eyJoaXN0b3J5IjpbMTIwNjU4MTE5MCwtMTIxMTI4MDU1MywyMT
 A1NDA5NzU1LDQ5NjgxOTMzNywtMTUxMTgyNjkzMyw1OTE2Njc4
 NTUsNjQ0OTkyNDU1LC0xNTczNjU5Mzg1LDE0MjE4NjIwODcsNz
 ExMDM0ODUyLC03NDI2ODQ4MTQsMTI0NDIxMDcyOSwtMTU2NDE1
