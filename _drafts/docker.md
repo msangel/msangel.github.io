@@ -60,17 +60,17 @@ Examples:
 This is a program(regular executable file) that is running on top of the operating system. This type of hypervisor is something like a “translator” that translates the guest operating system’s system calls into the host operating system’s system calls.
 
 Examples:
-[VirtualBox](https://www.virtualbox.org/), [VMware Workstation](https://www.vmware.com/products/workstation), [VMware Player](https://www.vmware.com/products/player),  and QEMU
+[VirtualBox](https://www.virtualbox.org/), [VMware Workstation](https://www.vmware.com/products/workstation), [VMware Player](https://www.vmware.com/products/player), and QEMU
  
 
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzNjIzMzI3OSw3Mjk1OTUyMjgsLTkwOT
-E5ODczOCwtODY5MTM4MTI4LC0yMTEzNzc5Nzk2LC03OTY2Njgy
-NDMsMTM3NzIxMDE4NiwtMTIxMTI4MDU1MywyMTA1NDA5NzU1LD
-Q5NjgxOTMzNywtMTUxMTgyNjkzMyw1OTE2Njc4NTUsNjQ0OTky
-NDU1LC0xNTczNjU5Mzg1LDE0MjE4NjIwODcsNzExMDM0ODUyLC
-03NDI2ODQ4MTQsMTI0NDIxMDcyOSwtMTU2NDE1NjI5NCwtODk5
-NzMxNDE0XX0=
+eyJoaXN0b3J5IjpbNDQ4MDMwMTc3LDEwMzYyMzMyNzksNzI5NT
+k1MjI4LC05MDkxOTg3MzgsLTg2OTEzODEyOCwtMjExMzc3OTc5
+NiwtNzk2NjY4MjQzLDEzNzcyMTAxODYsLTEyMTEyODA1NTMsMj
+EwNTQwOTc1NSw0OTY4MTkzMzcsLTE1MTE4MjY5MzMsNTkxNjY3
+ODU1LDY0NDk5MjQ1NSwtMTU3MzY1OTM4NSwxNDIxODYyMDg3LD
+cxMTAzNDg1MiwtNzQyNjg0ODE0LDEyNDQyMTA3MjksLTE1NjQx
+NTYyOTRdfQ==
 -->
