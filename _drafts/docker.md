@@ -71,18 +71,18 @@ Pros:
  - Less power consumption, for providers, as allow to host many VM of one physical computer. 
 
 Cons:
- - Low computational performance, as the calls to system are translated via intermediate layer.
- - Huge memory usage, as the RAM is reserverved for each VM as a resource that cannot be scaled at runtime.
- - Problems with hardware (USB, printers, etc.), as the access tto those devices is not direct, so if V
- - Complex management
+ - Low computational performance, as the calls to system are translated via intermediate layer;
+ - Huge memory usage, as the RAM is reserverved for each VM as a resource that cannot be scaled at runtime;
+ - Problems with hardware (USB, printers, etc.), as the access tto those devices is not direct;
+ - Complex management;
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMTc5MzU3NjgsODk3NjI0MjQ0LC0yMT
-I5NTM0NDMsNDQ4MDMwMTc3LDcyOTU5NTIyOCwtOTA5MTk4NzM4
-LC04NjkxMzgxMjgsLTIxMTM3Nzk3OTYsLTc5NjY2ODI0MywxMz
-c3MjEwMTg2LC0xMjExMjgwNTUzLDIxMDU0MDk3NTUsNDk2ODE5
-MzM3LC0xNTExODI2OTMzLDU5MTY2Nzg1NSw2NDQ5OTI0NTUsLT
-E1NzM2NTkzODUsMTQyMTg2MjA4Nyw3MTEwMzQ4NTIsLTc0MjY4
-NDgxNF19
+eyJoaXN0b3J5IjpbLTMxMDc0NDc0NywtMTExNzkzNTc2OCwtMj
+EyOTUzNDQzLDQ0ODAzMDE3Nyw3Mjk1OTUyMjgsLTkwOTE5ODcz
+OCwtODY5MTM4MTI4LC0yMTEzNzc5Nzk2LC03OTY2NjgyNDMsMT
+M3NzIxMDE4NiwtMTIxMTI4MDU1MywyMTA1NDA5NzU1LDQ5Njgx
+OTMzNywtMTUxMTgyNjkzMyw1OTE2Njc4NTUsNjQ0OTkyNDU1LC
+0xNTczNjU5Mzg1LDE0MjE4NjIwODcsNzExMDM0ODUyLC03NDI2
+ODQ4MTRdfQ==
 -->
