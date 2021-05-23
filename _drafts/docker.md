@@ -64,11 +64,11 @@ Examples:
  
  #### Pros and Cons of virtual servers
 Pros:
- - Controlled environment, as each VM has own
- - Resources on demand, as this is simply hypervisor's option, that can be changed even without guests OS restart
- - Easy backups and restoring
- - Easy new instances start 
- - Less power consumption(for providers)
+ - Controlled environment, as each VM has own;
+ - Resources on demand, as this is simply hypervisor's option, that can be changed even without guests OS restart;
+ - Easy backups and restoring, as each VM's files are kept in one place, actually the drive storage often is also emulated.
+ - Easy new instances start, just click a button
+ - Less power consumption, for providers.  
 
 Cons:
  - Low computational performance
@@ -78,11 +78,11 @@ Cons:
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzMwMzg3NTEsLTIxMjk1MzQ0Myw0ND
-gwMzAxNzcsNzI5NTk1MjI4LC05MDkxOTg3MzgsLTg2OTEzODEy
-OCwtMjExMzc3OTc5NiwtNzk2NjY4MjQzLDEzNzcyMTAxODYsLT
-EyMTEyODA1NTMsMjEwNTQwOTc1NSw0OTY4MTkzMzcsLTE1MTE4
-MjY5MzMsNTkxNjY3ODU1LDY0NDk5MjQ1NSwtMTU3MzY1OTM4NS
-wxNDIxODYyMDg3LDcxMTAzNDg1MiwtNzQyNjg0ODE0LDEyNDQy
-MTA3MjldfQ==
+eyJoaXN0b3J5IjpbLTU0NDA4ODA1NSwtMjEyOTUzNDQzLDQ0OD
+AzMDE3Nyw3Mjk1OTUyMjgsLTkwOTE5ODczOCwtODY5MTM4MTI4
+LC0yMTEzNzc5Nzk2LC03OTY2NjgyNDMsMTM3NzIxMDE4NiwtMT
+IxMTI4MDU1MywyMTA1NDA5NzU1LDQ5NjgxOTMzNywtMTUxMTgy
+NjkzMyw1OTE2Njc4NTUsNjQ0OTkyNDU1LC0xNTczNjU5Mzg1LD
+E0MjE4NjIwODcsNzExMDM0ODUyLC03NDI2ODQ4MTQsMTI0NDIx
+MDcyOV19
 -->
