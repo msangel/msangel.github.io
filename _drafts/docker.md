@@ -81,7 +81,7 @@ Containerization is a lightweight alternative to full machine virtualization tha
 
 ![VM vs Container](https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/vm_vs_container.png "VM vs Container")
 
-### First attempts in processes isolation.
+### Chroot - first attempts in processes isolation.
 ![chroot](https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/chroot.png "Chroot")
 A chroot on Unix operating systems is an operation 
 that changes the apparent root directory for the current 
@@ -92,14 +92,33 @@ the designated directory tree.
 The chroot system call was introduced during development of Version 7 Unix in 1979, and added to BSD by Bill Joy on 18 March 1982 – in order to test installation and build system of 4.2BSD. An early use of the term "jail" as applied to chroot comes from Bill Cheswick creating a honeypot to monitor a cracker in 1991.
 First known breaking out of chroot jail was published in 1999.
 
+### Chroot on steroids
+Docker's technology is based on LXC(Linux Containers) for <1.8 and libcontainer (now opencontainers/runc). All containers on a given host run under the same kernel, with other resources isolated per container. 
+Docker allows isolating a process at multiple levels through namespaces and utilities:
+-   cgroups  (for cpu and memory limits) reduced capabilities, controlling what you can use
+-   mnt namespace provides a root filesystem (this one can be compared to chroot)
+    
+-   pid namespace so the process only sees itself and its  
+    children
+    
+-   network namespace which allows the container to have its dedicated network stack 
+-   user namespace (quite new) which allows a non-root user on a host to be mapped with the root user within the container
+-   uts provides dedicated hostname per process tree  
+    (bootstrap from system values)
+-   ipc (inter-process communication)provides dedicated shared memory
+-   seccomp (secure computing mode with instructions checkings)
+-   selinux/apparmor (Security-Enhanced Linux / "Application Armor") - linux kernel security modules
+-   ulimits (number of open file descriptors per process)
+-   Union File Systems
+
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4MzcwODg2NSwtODg0MDQxMDY2LC0yMD
-kyODg4NzY4LC05NDkxNTEwOTMsLTE2NzA3NDAyNzIsNzY3OTY4
-Nzk2LC0yMjkyODIwMDAsMzE4MDEzNjI2LC0zMTA3NDQ3NDcsLT
-ExMTc5MzU3NjgsLTIxMjk1MzQ0Myw0NDgwMzAxNzcsNzI5NTk1
-MjI4LC05MDkxOTg3MzgsLTg2OTEzODEyOCwtMjExMzc3OTc5Ni
-wtNzk2NjY4MjQzLDEzNzcyMTAxODYsLTEyMTEyODA1NTMsMjEw
-NTQwOTc1NV19
+eyJoaXN0b3J5IjpbLTE0NjE4MDI0NTgsLTg4NDA0MTA2NiwtMj
+A5Mjg4ODc2OCwtOTQ5MTUxMDkzLC0xNjcwNzQwMjcyLDc2Nzk2
+ODc5NiwtMjI5MjgyMDAwLDMxODAxMzYyNiwtMzEwNzQ0NzQ3LC
+0xMTE3OTM1NzY4LC0yMTI5NTM0NDMsNDQ4MDMwMTc3LDcyOTU5
+NTIyOCwtOTA5MTk4NzM4LC04NjkxMzgxMjgsLTIxMTM3Nzk3OT
+YsLTc5NjY2ODI0MywxMzc3MjEwMTg2LC0xMjExMjgwNTUzLDIx
+MDU0MDk3NTVdfQ==
 -->
