@@ -71,18 +71,18 @@ Pros:
  - Less power consumption, for providers, as allow to host many VM of one physical computer. 
 
 Cons:
- - Low computational performance, as the calls to system are translat
+ - Low computational performance, as the calls to system are translated 
  - Huge memory usage
  - Problems with hardware (USB, printers, etc.)
  - Complex management
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjM5MTQzNDIsLTIxMjk1MzQ0Myw0ND
-gwMzAxNzcsNzI5NTk1MjI4LC05MDkxOTg3MzgsLTg2OTEzODEy
-OCwtMjExMzc3OTc5NiwtNzk2NjY4MjQzLDEzNzcyMTAxODYsLT
-EyMTEyODA1NTMsMjEwNTQwOTc1NSw0OTY4MTkzMzcsLTE1MTE4
-MjY5MzMsNTkxNjY3ODU1LDY0NDk5MjQ1NSwtMTU3MzY1OTM4NS
-wxNDIxODYyMDg3LDcxMTAzNDg1MiwtNzQyNjg0ODE0LDEyNDQy
-MTA3MjldfQ==
+eyJoaXN0b3J5IjpbMTU2MTcwNzUsLTExNjM5MTQzNDIsLTIxMj
+k1MzQ0Myw0NDgwMzAxNzcsNzI5NTk1MjI4LC05MDkxOTg3Mzgs
+LTg2OTEzODEyOCwtMjExMzc3OTc5NiwtNzk2NjY4MjQzLDEzNz
+cyMTAxODYsLTEyMTEyODA1NTMsMjEwNTQwOTc1NSw0OTY4MTkz
+MzcsLTE1MTE4MjY5MzMsNTkxNjY3ODU1LDY0NDk5MjQ1NSwtMT
+U3MzY1OTM4NSwxNDIxODYyMDg3LDcxMTAzNDg1MiwtNzQyNjg0
+ODE0XX0=
 -->
