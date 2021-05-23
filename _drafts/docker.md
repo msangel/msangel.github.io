@@ -72,17 +72,17 @@ Pros:
 
 Cons:
  - Low computational performance, as the calls to system are translated via intermediate layer;
- - Huge memory usage, as the RAM is reserverved for each VM as a resource that cannot be scaled at runtime;
+ - Huge memory usage, as guests OSs tends to fill all available RAM, ;
  - Problems with hardware (USB, printers, etc.), as the access tto those devices is not direct;
  - Complex management;
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxMDc0NDc0NywtMTExNzkzNTc2OCwtMj
-EyOTUzNDQzLDQ0ODAzMDE3Nyw3Mjk1OTUyMjgsLTkwOTE5ODcz
-OCwtODY5MTM4MTI4LC0yMTEzNzc5Nzk2LC03OTY2NjgyNDMsMT
-M3NzIxMDE4NiwtMTIxMTI4MDU1MywyMTA1NDA5NzU1LDQ5Njgx
-OTMzNywtMTUxMTgyNjkzMyw1OTE2Njc4NTUsNjQ0OTkyNDU1LC
-0xNTczNjU5Mzg1LDE0MjE4NjIwODcsNzExMDM0ODUyLC03NDI2
-ODQ4MTRdfQ==
+eyJoaXN0b3J5IjpbLTQ0NDQwNTg0MSwtMzEwNzQ0NzQ3LC0xMT
+E3OTM1NzY4LC0yMTI5NTM0NDMsNDQ4MDMwMTc3LDcyOTU5NTIy
+OCwtOTA5MTk4NzM4LC04NjkxMzgxMjgsLTIxMTM3Nzk3OTYsLT
+c5NjY2ODI0MywxMzc3MjEwMTg2LC0xMjExMjgwNTUzLDIxMDU0
+MDk3NTUsNDk2ODE5MzM3LC0xNTExODI2OTMzLDU5MTY2Nzg1NS
+w2NDQ5OTI0NTUsLTE1NzM2NTkzODUsMTQyMTg2MjA4Nyw3MTEw
+MzQ4NTJdfQ==
 -->
