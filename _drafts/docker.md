@@ -82,7 +82,7 @@ Containerization is a lightweight alternative to full machine virtualization tha
 ![VM vs Container](https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/vm_vs_container.png "VM vs Container")
 
 ### Chroot
-![chroot](https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/vm_vs_container.png "VM vs Container")
+![chroot](https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/chroot.png "Chroot")
 A chroot on Unix operating systems is an operation 
 that changes the apparent root directory for the current 
 running process and its children. A program that is 
@@ -92,12 +92,14 @@ the designated directory tree .
 The chroot system call was introduced during development of Version 7 Unix in 1979, and added to BSD by Bill Joy on 18 March 1982 – in order to test installation and build system of 4.2BSD. An early use of the term "jail" as applied to chroot comes from Bill Cheswick creating a honeypot to monitor a cracker in 1991.
 First known breaking out of chroot jail was published in 1999.
 
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA0MDY0ODg4LC04ODQwNDEwNjYsLTIwOT
-I4ODg3NjgsLTk0OTE1MTA5MywtMTY3MDc0MDI3Miw3Njc5Njg3
-OTYsLTIyOTI4MjAwMCwzMTgwMTM2MjYsLTMxMDc0NDc0NywtMT
-ExNzkzNTc2OCwtMjEyOTUzNDQzLDQ0ODAzMDE3Nyw3Mjk1OTUy
-MjgsLTkwOTE5ODczOCwtODY5MTM4MTI4LC0yMTEzNzc5Nzk2LC
-03OTY2NjgyNDMsMTM3NzIxMDE4NiwtMTIxMTI4MDU1MywyMTA1
-NDA5NzU1XX0=
+eyJoaXN0b3J5IjpbLTE4MzM4NDM0NjAsLTg4NDA0MTA2NiwtMj
+A5Mjg4ODc2OCwtOTQ5MTUxMDkzLC0xNjcwNzQwMjcyLDc2Nzk2
+ODc5NiwtMjI5MjgyMDAwLDMxODAxMzYyNiwtMzEwNzQ0NzQ3LC
+0xMTE3OTM1NzY4LC0yMTI5NTM0NDMsNDQ4MDMwMTc3LDcyOTU5
+NTIyOCwtOTA5MTk4NzM4LC04NjkxMzgxMjgsLTIxMTM3Nzk3OT
+YsLTc5NjY2ODI0MywxMzc3MjEwMTg2LC0xMjExMjgwNTUzLDIx
+MDU0MDk3NTVdfQ==
 -->
