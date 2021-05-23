@@ -81,7 +81,7 @@ Containerization is a lightweight alternative to full machine virtualization tha
 
 ![VM vs Container](https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/vm_vs_container.png "VM vs Container")
 
-### Chroot
+### First attempts in processes isolation.
 ![chroot](https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/chroot.png "Chroot")
 A chroot on Unix operating systems is an operation 
 that changes the apparent root directory for the current 
@@ -95,7 +95,7 @@ First known breaking out of chroot jail was published in 1999.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyMjU4MjI2MCwtODg0MDQxMDY2LC0yMD
+eyJoaXN0b3J5IjpbLTQ4MzcwODg2NSwtODg0MDQxMDY2LC0yMD
 kyODg4NzY4LC05NDkxNTEwOTMsLTE2NzA3NDAyNzIsNzY3OTY4
 Nzk2LC0yMjkyODIwMDAsMzE4MDEzNjI2LC0zMTA3NDQ3NDcsLT
 ExMTc5MzU3NjgsLTIxMjk1MzQ0Myw0NDgwMzAxNzcsNzI5NTk1
