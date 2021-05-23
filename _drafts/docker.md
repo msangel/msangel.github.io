@@ -77,13 +77,13 @@ Cons:
  - Complex management;
 
 ## Containerization
-Containerization is a lightweight alternative to full machine virtualization that involves encapsulating an application in a container with its own operating environment. Basucally containers uses existed host kernel, but interacct in own 
+Containerization is a lightweight alternative to full machine virtualization that involves encapsulating an application in a container with its own operating environment. For easy understanding we can say, that container is just a native process that running in own environment, so its execution is not a
 
 ![VM vs Container](https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/vm_vs_container.png "VM vs Container")
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2NDc2NzgwMCwtMTY3MDc0MDI3Miw3Nj
+eyJoaXN0b3J5IjpbMTgzNDU4NDI2NywtMTY3MDc0MDI3Miw3Nj
 c5Njg3OTYsLTIyOTI4MjAwMCwzMTgwMTM2MjYsLTMxMDc0NDc0
 NywtMTExNzkzNTc2OCwtMjEyOTUzNDQzLDQ0ODAzMDE3Nyw3Mj
 k1OTUyMjgsLTkwOTE5ODczOCwtODY5MTM4MTI4LC0yMTEzNzc5
