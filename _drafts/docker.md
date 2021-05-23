@@ -95,30 +95,26 @@ First known breaking out of chroot jail was published in 1999.
 ### Chroot on steroids
 Docker's technology is based on LXC(Linux Containers) for <1.8 and libcontainer (now opencontainers/runc). All containers on a given host run under the same kernel, with other resources isolated per container. 
 Docker allows isolating a process at multiple levels through namespaces and utilities:
--   cgroups  (for cpu and memory limits) reduced capabilities, controlling what you can use
--   mnt namespace provides a root filesystem (this one can be compared to chroot)
-    
--   pid namespace so the process only sees itself and its  
-    children
-    
--   network namespace which allows the container to have its dedicated network stack 
--   user namespace (quite new) which allows a non-root user on a host to be mapped with the root user within the container
--   uts provides dedicated hostname per process tree  
-    (bootstrap from system values)
--   ipc (inter-process communication)provides dedicated shared memory
--   seccomp (secure computing mode with instructions checkings)
--   selinux/apparmor (Security-Enhanced Linux / "Application Armor") - linux kernel security modules
--   ulimits (number of open file descriptors per process)
--   Union File Systems
+- cgroups  (for cpu and memory limits) reduced capabilities, controlling what you can use
+- mnt namespace provides a root filesystem (this one can be compared to chroot)    
+- pid namespace so the process only sees itself and its children
+- network namespace which allows the container to have its dedicated network stack 
+- user namespace (quite new) which allows a non-root user on a host to be mapped with the root user within the container
+- uts provides dedicated hostname per process tree (bootstrap from system values)
+- ipc (inter-process communication)provides dedicated shared memory
+- seccomp (secure computing mode with instructions checkings)
+- selinux/apparmor (Security-Enhanced Linux / "Application Armor") - linux kernel security modules
+- ulimits (number of open file descriptors per process)
+- Union File Systems
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjE4MDI0NTgsLTg4NDA0MTA2NiwtMj
-A5Mjg4ODc2OCwtOTQ5MTUxMDkzLC0xNjcwNzQwMjcyLDc2Nzk2
-ODc5NiwtMjI5MjgyMDAwLDMxODAxMzYyNiwtMzEwNzQ0NzQ3LC
-0xMTE3OTM1NzY4LC0yMTI5NTM0NDMsNDQ4MDMwMTc3LDcyOTU5
-NTIyOCwtOTA5MTk4NzM4LC04NjkxMzgxMjgsLTIxMTM3Nzk3OT
-YsLTc5NjY2ODI0MywxMzc3MjEwMTg2LC0xMjExMjgwNTUzLDIx
-MDU0MDk3NTVdfQ==
+eyJoaXN0b3J5IjpbNTQ4MTE0MjU0LC04ODQwNDEwNjYsLTIwOT
+I4ODg3NjgsLTk0OTE1MTA5MywtMTY3MDc0MDI3Miw3Njc5Njg3
+OTYsLTIyOTI4MjAwMCwzMTgwMTM2MjYsLTMxMDc0NDc0NywtMT
+ExNzkzNTc2OCwtMjEyOTUzNDQzLDQ0ODAzMDE3Nyw3Mjk1OTUy
+MjgsLTkwOTE5ODczOCwtODY5MTM4MTI4LC0yMTEzNzc5Nzk2LC
+03OTY2NjgyNDMsMTM3NzIxMDE4NiwtMTIxMTI4MDU1MywyMTA1
+NDA5NzU1XX0=
 -->
