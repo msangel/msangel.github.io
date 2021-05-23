@@ -72,17 +72,19 @@ Pros:
 
 Cons:
  - Low computational performance, as the calls to system are translated via intermediate layer;
- - Huge memory usage, as guests OSs tends to fill all available RAM, ;
- - Problems with hardware (USB, printers, etc.), as the access tto those devices is not direct;
+ - Huge memory usage, as guests OSs tends to fill all available RAM (as any regular OS), but we have many of them;
+ - Problems with hardware (USB, printers, etc.), as the access to those devices is not direct;
  - Complex management;
+
+A virtual machine mimics a complete server. In a typical virtualized server, each VM “guest” includes a complete operating system along with any drivers, binaries or libraries, and then the actual application. Each VM then runs atop a hypervisor, which itself runs on a host operating system and in turn operates the physical server hardware. It’s a tried-and-true approach, but it’s also easy to see how each iteration of the guest operating system and supporting binaries can cause duplication between VMs; it wastes precious server memory, which limits the number of VMs that each server can support.
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ0NDQwNTg0MSwtMzEwNzQ0NzQ3LC0xMT
-E3OTM1NzY4LC0yMTI5NTM0NDMsNDQ4MDMwMTc3LDcyOTU5NTIy
-OCwtOTA5MTk4NzM4LC04NjkxMzgxMjgsLTIxMTM3Nzk3OTYsLT
-c5NjY2ODI0MywxMzc3MjEwMTg2LC0xMjExMjgwNTUzLDIxMDU0
-MDk3NTUsNDk2ODE5MzM3LC0xNTExODI2OTMzLDU5MTY2Nzg1NS
-w2NDQ5OTI0NTUsLTE1NzM2NTkzODUsMTQyMTg2MjA4Nyw3MTEw
-MzQ4NTJdfQ==
+eyJoaXN0b3J5IjpbMzE4MDEzNjI2LC0zMTA3NDQ3NDcsLTExMT
+c5MzU3NjgsLTIxMjk1MzQ0Myw0NDgwMzAxNzcsNzI5NTk1MjI4
+LC05MDkxOTg3MzgsLTg2OTEzODEyOCwtMjExMzc3OTc5NiwtNz
+k2NjY4MjQzLDEzNzcyMTAxODYsLTEyMTEyODA1NTMsMjEwNTQw
+OTc1NSw0OTY4MTkzMzcsLTE1MTE4MjY5MzMsNTkxNjY3ODU1LD
+Y0NDk5MjQ1NSwtMTU3MzY1OTM4NSwxNDIxODYyMDg3LDcxMTAz
+NDg1Ml19
 -->
