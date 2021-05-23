@@ -76,15 +76,15 @@ Cons:
  - Problems with hardware (USB, printers, etc.), as the access to those devices is not direct;
  - Complex management;
 
-A virtual machine mimics a complete server. In a typical virtualized server, each VM “guest” includes a complete operating system along with any drivers, binaries or libraries, and then the actual application. Each VM then runs atop a hypervisor, which itself runs on a host operating system and in turn operates the physical server hardware. It’s a tried-and-true approach, but it’s also easy to see how each iteration of the guest operating system and supporting binaries can cause duplication between VMs; it wastes precious server memory, which limits the number of VMs that each server can support.
+## Containerization
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzE4MDEzNjI2LC0zMTA3NDQ3NDcsLTExMT
-c5MzU3NjgsLTIxMjk1MzQ0Myw0NDgwMzAxNzcsNzI5NTk1MjI4
-LC05MDkxOTg3MzgsLTg2OTEzODEyOCwtMjExMzc3OTc5NiwtNz
-k2NjY4MjQzLDEzNzcyMTAxODYsLTEyMTEyODA1NTMsMjEwNTQw
-OTc1NSw0OTY4MTkzMzcsLTE1MTE4MjY5MzMsNTkxNjY3ODU1LD
-Y0NDk5MjQ1NSwtMTU3MzY1OTM4NSwxNDIxODYyMDg3LDcxMTAz
-NDg1Ml19
+eyJoaXN0b3J5IjpbLTIyOTI4MjAwMCwzMTgwMTM2MjYsLTMxMD
+c0NDc0NywtMTExNzkzNTc2OCwtMjEyOTUzNDQzLDQ0ODAzMDE3
+Nyw3Mjk1OTUyMjgsLTkwOTE5ODczOCwtODY5MTM4MTI4LC0yMT
+EzNzc5Nzk2LC03OTY2NjgyNDMsMTM3NzIxMDE4NiwtMTIxMTI4
+MDU1MywyMTA1NDA5NzU1LDQ5NjgxOTMzNywtMTUxMTgyNjkzMy
+w1OTE2Njc4NTUsNjQ0OTkyNDU1LC0xNTczNjU5Mzg1LDE0MjE4
+NjIwODddfQ==
 -->
