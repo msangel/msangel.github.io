@@ -77,17 +77,17 @@ Cons:
  - Complex management;
 
 ## Containerization
-Containerization is a lightweight alternative to full machine virtualization that involves encapsulating an application in a container with its own operating environment. For easy understanding we can say, that container is just a native process that running in own environment, so its execution is not a
+Containerization is a lightweight alternative to full machine virtualization that involves encapsulating an application in a container with its own operating environment. For easy understanding we can say, that container is just a native process that running in own environment, so its execution is not affect
 
 ![VM vs Container](https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/vm_vs_container.png "VM vs Container")
 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzNDU4NDI2NywtMTY3MDc0MDI3Miw3Nj
-c5Njg3OTYsLTIyOTI4MjAwMCwzMTgwMTM2MjYsLTMxMDc0NDc0
-NywtMTExNzkzNTc2OCwtMjEyOTUzNDQzLDQ0ODAzMDE3Nyw3Mj
-k1OTUyMjgsLTkwOTE5ODczOCwtODY5MTM4MTI4LC0yMTEzNzc5
-Nzk2LC03OTY2NjgyNDMsMTM3NzIxMDE4NiwtMTIxMTI4MDU1My
-wyMTA1NDA5NzU1LDQ5NjgxOTMzNywtMTUxMTgyNjkzMyw1OTE2
-Njc4NTVdfQ==
+eyJoaXN0b3J5IjpbMTI3ODg5MTAwOSwxODM0NTg0MjY3LC0xNj
+cwNzQwMjcyLDc2Nzk2ODc5NiwtMjI5MjgyMDAwLDMxODAxMzYy
+NiwtMzEwNzQ0NzQ3LC0xMTE3OTM1NzY4LC0yMTI5NTM0NDMsND
+Q4MDMwMTc3LDcyOTU5NTIyOCwtOTA5MTk4NzM4LC04NjkxMzgx
+MjgsLTIxMTM3Nzk3OTYsLTc5NjY2ODI0MywxMzc3MjEwMTg2LC
+0xMjExMjgwNTUzLDIxMDU0MDk3NTUsNDk2ODE5MzM3LC0xNTEx
+ODI2OTMzXX0=
 -->
