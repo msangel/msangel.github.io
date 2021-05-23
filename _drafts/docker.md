@@ -82,7 +82,6 @@ Containerization is a lightweight alternative to full machine virtualization tha
 ![VM vs Container](https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/vm_vs_container.png "VM vs Container")
 
 ### Chroot
-Chroot is basically early containerization tool that achieve re
 A chroot on Unix operating systems is an operation 
 that changes the apparent root directory for the current 
 running process and its children. A program that is 
@@ -95,7 +94,7 @@ First known breaking out of chroot jail was published in 1999.
 First conteiner-like tools was created 
 Also take a look on [presentation](https://docs.google.com/presentation/d/e/2PACX-1vT9OVJT6Etyzd-FJEKitGW5g7t8zzEmPdykV9AoCGZSYoLSuCo1hUxrffhkzwaiwtQ7r3o4VJjp_e57/pub?start=false&loop=false&delayms=3000)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4NDA0MTA2NiwxMjQ1MDk0MTcsLTIwOT
+eyJoaXN0b3J5IjpbLTg0MjgxOTc0LC04ODQwNDEwNjYsLTIwOT
 I4ODg3NjgsLTk0OTE1MTA5MywtMTY3MDc0MDI3Miw3Njc5Njg3
 OTYsLTIyOTI4MjAwMCwzMTgwMTM2MjYsLTMxMDc0NDc0NywtMT
 ExNzkzNTc2OCwtMjEyOTUzNDQzLDQ0ODAzMDE3Nyw3Mjk1OTUy
