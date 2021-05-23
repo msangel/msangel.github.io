@@ -88,18 +88,18 @@ that changes the apparent root directory for the current
 running process and its children. A program that is 
 run in such a modified environment cannot name 
 (and therefore normally cannot access) files outside 
-the designated directory tree .
+the designated directory tree.
 The chroot system call was introduced during development of Version 7 Unix in 1979, and added to BSD by Bill Joy on 18 March 1982 – in order to test installation and build system of 4.2BSD. An early use of the term "jail" as applied to chroot comes from Bill Cheswick creating a honeypot to monitor a cracker in 1991.
 First known breaking out of chroot jail was published in 1999.
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzM4NDM0NjAsLTg4NDA0MTA2NiwtMj
-A5Mjg4ODc2OCwtOTQ5MTUxMDkzLC0xNjcwNzQwMjcyLDc2Nzk2
-ODc5NiwtMjI5MjgyMDAwLDMxODAxMzYyNiwtMzEwNzQ0NzQ3LC
-0xMTE3OTM1NzY4LC0yMTI5NTM0NDMsNDQ4MDMwMTc3LDcyOTU5
-NTIyOCwtOTA5MTk4NzM4LC04NjkxMzgxMjgsLTIxMTM3Nzk3OT
-YsLTc5NjY2ODI0MywxMzc3MjEwMTg2LC0xMjExMjgwNTUzLDIx
-MDU0MDk3NTVdfQ==
+eyJoaXN0b3J5IjpbLTUyMjU4MjI2MCwtODg0MDQxMDY2LC0yMD
+kyODg4NzY4LC05NDkxNTEwOTMsLTE2NzA3NDAyNzIsNzY3OTY4
+Nzk2LC0yMjkyODIwMDAsMzE4MDEzNjI2LC0zMTA3NDQ3NDcsLT
+ExMTc5MzU3NjgsLTIxMjk1MzQ0Myw0NDgwMzAxNzcsNzI5NTk1
+MjI4LC05MDkxOTg3MzgsLTg2OTEzODEyOCwtMjExMzc3OTc5Ni
+wtNzk2NjY4MjQzLDEzNzcyMTAxODYsLTEyMTEyODA1NTMsMjEw
+NTQwOTc1NV19
 -->
