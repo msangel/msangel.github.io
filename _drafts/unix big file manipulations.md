@@ -29,13 +29,13 @@ sed -i '$d' <file>
 
 Copy from one file to another with skipping header
 ```bash
-# where +2 is "starting fromm line 2
+# where +2 is "starting fromm line 2"
 cat in.csv | tail -n +2  >> out.csv
 ```
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4NjU3NzM5NCwxMjI5OTY3MzE0LC0yMD
-AyMzA5MjYwLC0xODk4OTQwMDIzLDE4NjExMjkyNzksNDk1Mzgz
-ODAyXX0=
+eyJoaXN0b3J5IjpbNDUwMTM3MTYwLDEyMjk5NjczMTQsLTIwMD
+IzMDkyNjAsLTE4OTg5NDAwMjMsMTg2MTEyOTI3OSw0OTUzODM4
+MDJdfQ==
 -->
