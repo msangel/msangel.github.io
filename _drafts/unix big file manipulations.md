@@ -22,8 +22,13 @@ sed -n '10000000,10000020p; 10000021q' filename
 sed -n '10000000,+20p'  filename
 ``` 
 
+Delete lines by number:
+```bash
+sed -i '$d' <file>
+```
+
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4MTAyMzUzNiwtMTg5ODk0MDAyMywxOD
-YxMTI5Mjc5LDQ5NTM4MzgwMl19
+eyJoaXN0b3J5IjpbLTIwMDIzMDkyNjAsLTE4OTg5NDAwMjMsMT
+g2MTEyOTI3OSw0OTUzODM4MDJdfQ==
 -->
