@@ -1,6 +1,6 @@
 ---
 title: Snowflake
-date: 2021-05-31 03:08:38.225000000 Z
+date: 2021-05-31 03:08:38 Z
 ---
 
 Maven config:
