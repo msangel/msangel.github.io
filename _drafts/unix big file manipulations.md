@@ -13,6 +13,7 @@ Count lines in file:
 wc -l /dir/file.txt
 3272485 /dir/file.txt
 # show just numbers
+wc -l < /dir/file.txt
 
 ```
 Show lines by number:
@@ -23,6 +24,6 @@ sed -n '10000000,+20p'  filename
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzE2NzM2ODQsLTE4OTg5NDAwMjMsMT
-g2MTEyOTI3OSw0OTUzODM4MDJdfQ==
+eyJoaXN0b3J5IjpbLTY4MTAyMzUzNiwtMTg5ODk0MDAyMywxOD
+YxMTI5Mjc5LDQ5NTM4MzgwMl19
 -->
