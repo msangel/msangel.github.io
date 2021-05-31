@@ -3,8 +3,6 @@ title: Unix big file manipulations
 date: 2021-05-31 11:51:14 Z
 ---
 
-
-
 sed flags:
 * `p` - print
 * `q` - quit processing after that line
