@@ -27,10 +27,15 @@ Delete lines by number:
 sed -i '$d' <file>
 ```
 
-Copy from one file to another by 
+Copy from one file to another with skipping header
+```bash
+# where +2 is "starting fromm line 2
+cat in.csv | tail -n +2  >> out.csv
+```
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyOTk2NzMxNCwtMjAwMjMwOTI2MCwtMT
-g5ODk0MDAyMywxODYxMTI5Mjc5LDQ5NTM4MzgwMl19
+eyJoaXN0b3J5IjpbLTM4NjU3NzM5NCwxMjI5OTY3MzE0LC0yMD
+AyMzA5MjYwLC0xODk4OTQwMDIzLDE4NjExMjkyNzksNDk1Mzgz
+ODAyXX0=
 -->
