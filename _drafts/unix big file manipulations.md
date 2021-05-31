@@ -27,8 +27,10 @@ Delete lines by number:
 sed -i '$d' <file>
 ```
 
+Copy from one file to another by 
+
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDIzMDkyNjAsLTE4OTg5NDAwMjMsMT
-g2MTEyOTI3OSw0OTUzODM4MDJdfQ==
+eyJoaXN0b3J5IjpbMTIyOTk2NzMxNCwtMjAwMjMwOTI2MCwtMT
+g5ODk0MDAyMywxODYxMTI5Mjc5LDQ5NTM4MzgwMl19
 -->
