@@ -3,10 +3,7 @@ title: Unix big file manipulations
 date: 2021-05-31 11:51:14 Z
 ---
 
----
-title: Unix big file manipulations
-date: 2021-05-31 11:48:11.276000000 Z
----
+
 
 sed flags:
 * `p` - print
@@ -20,5 +17,5 @@ sed -n '10000000,+20p'  filename
 ``` 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDk1MzgzODAyXX0=
+eyJoaXN0b3J5IjpbMTg2MTEyOTI3OSw0OTUzODM4MDJdfQ==
 -->
