@@ -1,6 +1,6 @@
 ---
 title: Azure_blobstorage
-date: 2021-06-10 12:38:32.379000000 Z
+date: 2021-06-10 12:38:32 Z
 ---
 
 latest SDK:
