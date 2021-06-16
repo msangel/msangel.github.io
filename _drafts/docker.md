@@ -29,7 +29,7 @@ And so docker allows to combine wishes of both sides, it's like an interaction c
 Server operations have to care about only one thing. They have to support deploying containers. So they are satisfied. Developers are happy too. They can develop with whatever the fad of the day is and then just stick it into a container and throw it over the wall to operations.
 
 So docker allows to solve this matrix in a very straightforward way:
-![Matrix solved](https://github.com/msangel/msangel.github.io/raw/master/resources/docker/the_matrix_of_hell_solved.png "Matrix solved")This is really cool approach. But technologies came to it not from the beginning. Hosting have long and complex history of that have the impact on the docker, and I pretty sure we must overview some basics of hosting history for understanding what requirements and problem exist prior docker.
+![Matrix solved](https://github.com/msangel/msangel.github.io/raw/master/resources/docker/the_matrix_of_hell_solved.png "Matrix solved")This is really cool approach. But technologies were like that not from the beginning. Hosting have long and very complex history. And that have the impact on the docker. I pretty sure we must overview some basics of hosting history for understanding what requirements and problem exist prior docker.
 
 ## Hosting history
 
@@ -141,11 +141,11 @@ The mentined above "Union File sysytem" built on top of   "Copy-On-Write" princi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjM4MDc4NTE1LDk1NzMyNjA1OCwtMTkzMj
-EzMzM1Miw1MDMwMjQ0MjEsLTMyMjA0ODgyOCwtMTg3OTE5MDM3
-MCwxNzEzODg5MDg0LC0xMjQ4OTk0ODc4LC0xMzM0NzYwOTg4LD
-c5MDAzODExMiwtOTgyMTQ3NzI1LC04OTQzMjcyNzUsLTIxNDI1
-NDMyNDUsNjQwNTA2NjU0LC0yMDAyMDQ1MjU5LDE4NjYzNDMwMT
-UsLTIwMDIwNDUyNTksLTIwMDIwNDUyNTksNTQ4MTE0MjU0LC04
-ODQwNDEwNjZdfQ==
+eyJoaXN0b3J5IjpbLTEzMTgwODAzNyw5NTczMjYwNTgsLTE5Mz
+IxMzMzNTIsNTAzMDI0NDIxLC0zMjIwNDg4MjgsLTE4NzkxOTAz
+NzAsMTcxMzg4OTA4NCwtMTI0ODk5NDg3OCwtMTMzNDc2MDk4OC
+w3OTAwMzgxMTIsLTk4MjE0NzcyNSwtODk0MzI3Mjc1LC0yMTQy
+NTQzMjQ1LDY0MDUwNjY1NCwtMjAwMjA0NTI1OSwxODY2MzQzMD
+E1LC0yMDAyMDQ1MjU5LC0yMDAyMDQ1MjU5LDU0ODExNDI1NCwt
+ODg0MDQxMDY2XX0=
 -->
