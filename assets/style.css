@@ -432,7 +432,7 @@ body {
 .blogindex .records p > a,
 .blogindex .records #markdown-toc a
 {
-    color: #89BC23;
+    color: #337ab7;
 }
 
 
@@ -441,17 +441,14 @@ body {
 }
 
 .blogindex .records h3 a {
-    color: #89BC23;
+    color: #337ab7;
     text-decoration: none;
-    border-bottom: 3px solid #89BC23;
     transition: border-color 0.4s ease 0s, color 0.4s ease 0s;
     line-height: 150%;
 }
 
 .blogindex .records h3 a:hover {
-    color: #5b7d17;
-    border-bottom: 3px solid #5b7d17;
-    text-decoration: none;
+    color: #103c63;
 }
 
 
