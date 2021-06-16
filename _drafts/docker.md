@@ -110,7 +110,7 @@ Docker allows isolating a process at multiple levels through namespaces and util
 Using this capabilities same time, docker provide these  advantages:
 - **Flexible**: Even the most complex applications can be containerized.
 - **Lightweight**: Containers leverage and share the host kernel.
-- Interchangeable: You can deploy updates and upgrades on-the-fly.
+- **Interchangeable: You can deploy updates and upgrades on-the-fly.
 Portable: You can build locally, deploy to the cloud, and run anywhere.
 Scalable: You can increase and automatically distribute container replicas.
 Stackable: You can stack services vertically and on-the-fly.
@@ -118,11 +118,11 @@ Stackable: You can stack services vertically and on-the-fly.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4NTUwNDkzOSwtMjE0MjU0MzI0NSw2ND
-A1MDY2NTQsLTIwMDIwNDUyNTksMTg2NjM0MzAxNSwtMjAwMjA0
-NTI1OSwtMjAwMjA0NTI1OSw1NDgxMTQyNTQsLTg4NDA0MTA2Ni
-wtMjA5Mjg4ODc2OCwtOTQ5MTUxMDkzLC0xNjcwNzQwMjcyLDc2
-Nzk2ODc5NiwtMjI5MjgyMDAwLDMxODAxMzYyNiwtMzEwNzQ0Nz
-Q3LC0xMTE3OTM1NzY4LC0yMTI5NTM0NDMsNDQ4MDMwMTc3LDcy
-OTU5NTIyOF19
+eyJoaXN0b3J5IjpbLTg5NDMyNzI3NSwtMzg1NTA0OTM5LC0yMT
+QyNTQzMjQ1LDY0MDUwNjY1NCwtMjAwMjA0NTI1OSwxODY2MzQz
+MDE1LC0yMDAyMDQ1MjU5LC0yMDAyMDQ1MjU5LDU0ODExNDI1NC
+wtODg0MDQxMDY2LC0yMDkyODg4NzY4LC05NDkxNTEwOTMsLTE2
+NzA3NDAyNzIsNzY3OTY4Nzk2LC0yMjkyODIwMDAsMzE4MDEzNj
+I2LC0zMTA3NDQ3NDcsLTExMTc5MzU3NjgsLTIxMjk1MzQ0Myw0
+NDgwMzAxNzddfQ==
 -->
