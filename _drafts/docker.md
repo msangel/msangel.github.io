@@ -95,13 +95,13 @@ First known breaking out of chroot jail was published in 1999.
 ### Chroot on steroids
 Docker's technology is based on LXC(Linux Containers) for <1.8 and libcontainer (now opencontainers/runc). All containers on a given host run under the same kernel, with other resources isolated per container. 
 Docker allows isolating a process at multiple levels through namespaces and utilities:
-- cgroups: for cpu and memory limits, reduced capabilities, controlling what you can use;
-- mnt: namespace provides a root filesystem, this one can be compared to chroot
-- pid: namespace so the process only sees itself and its children
-- network namespace which allows the container to have its dedicated network stack 
-- user namespace (quite new) which allows a non-root user on a host to be mapped with the root user within the container
-- uts provides dedicated hostname per process tree (bootstrap from system values)
-- ipc (inter-process communication)provides dedicated shared memory
+- **cgroups** for cpu and memory limits, reduced capabilities, controlling what you can use;
+- **mnt** namespace provides a root filesystem, this one can be compared to chroot
+- **pid** namespace so the process only sees itself and its children
+- **network** namespace which allows the container to have its dedicated network stack 
+- **user** namespace which allows a non-root user on a host to be mapped with the root user within the container
+- **uts** provides dedicated hostname per process tree (bootstrap from system values)
+- **ipc** (inter-process communication)provides dedicated shared memory
 - seccomp (secure computing mode with instructions checkings)
 - selinux/apparmor (Security-Enhanced Linux / "Application Armor") - linux kernel security modules
 - ulimits (number of open file descriptors per process)
@@ -111,11 +111,11 @@ The docker have
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NzI0MzEyNjYsLTIwMDIwNDUyNTksMT
-g2NjM0MzAxNSwtMjAwMjA0NTI1OSwtMjAwMjA0NTI1OSw1NDgx
-MTQyNTQsLTg4NDA0MTA2NiwtMjA5Mjg4ODc2OCwtOTQ5MTUxMD
-kzLC0xNjcwNzQwMjcyLDc2Nzk2ODc5NiwtMjI5MjgyMDAwLDMx
-ODAxMzYyNiwtMzEwNzQ0NzQ3LC0xMTE3OTM1NzY4LC0yMTI5NT
-M0NDMsNDQ4MDMwMTc3LDcyOTU5NTIyOCwtOTA5MTk4NzM4LC04
-NjkxMzgxMjhdfQ==
+eyJoaXN0b3J5IjpbLTQ3MDk1NjM5MywtMjAwMjA0NTI1OSwxOD
+Y2MzQzMDE1LC0yMDAyMDQ1MjU5LC0yMDAyMDQ1MjU5LDU0ODEx
+NDI1NCwtODg0MDQxMDY2LC0yMDkyODg4NzY4LC05NDkxNTEwOT
+MsLTE2NzA3NDAyNzIsNzY3OTY4Nzk2LC0yMjkyODIwMDAsMzE4
+MDEzNjI2LC0zMTA3NDQ3NDcsLTExMTc5MzU3NjgsLTIxMjk1Mz
+Q0Myw0NDgwMzAxNzcsNzI5NTk1MjI4LC05MDkxOTg3MzgsLTg2
+OTEzODEyOF19
 -->
