@@ -133,11 +133,13 @@ Terminology:
 -   **volume** — storage outside the container.
 -   **Dockerfile** — a script for creating images.
 ![Docker use](https://github.com/msangel/msangel.github.io/raw/master/resources/docker/docker_use.png "Docker use")
+
 The mentined above "Union File sysytem" built on top of   "Copy-On-Write" principle and allows hight reuse of file systems.
+![Union File System](https://github.com/msangel/msangel.github.io/raw/master/resources/docker/copy_on_write_fs.png "Union File System")
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4MDAxNDQ5MCwtMTg3OTE5MDM3MCwxNz
+eyJoaXN0b3J5IjpbLTMyMjA0ODgyOCwtMTg3OTE5MDM3MCwxNz
 EzODg5MDg0LC0xMjQ4OTk0ODc4LC0xMzM0NzYwOTg4LDc5MDAz
 ODExMiwtOTgyMTQ3NzI1LC04OTQzMjcyNzUsLTIxNDI1NDMyND
 UsNjQwNTA2NjU0LC0yMDAyMDQ1MjU5LDE4NjYzNDMwMTUsLTIw
