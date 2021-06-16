@@ -12,11 +12,11 @@ Before diving into the docker world, lets clarify basics about what Docker is:
  2. Docker is a software. Actually two kind of it
 	 1. Docker CE (community edition) 
 	 2. Docker EE (enterprise edition)
-This very important 
+The company develops the software and also build the infrastructure that people need around it.
 
 # What it is, and why we need this
 
-A very simple answer to the question of why we need it is: it allows us to run our applications in the same way and in the same environment whenever we have either this is Windows PC, Linux laptop, dedicated server or virtual hosting.  It's a common problem when developers create their software on their computer and so it can be run only on their computer. Docker creates an isolated environment that is the same everywhere.
+A very simple answer to the question of why we need it is: it allows us to run our applications in the same way and in the same environment whenever we have. Either this is Windows PC, Linux laptop, dedicated server or virtual hosting.  It's a common problem when developers create their software on their computer and so it can be run only on their computer. Docker creates an isolated environment that is the same everywhere.
 There exists a known "Matrix of hell" that show a wide variety of different systems and their different behavior on different hardware:
 
 ![Matrix of hell](https://github.com/msangel/msangel.github.io/raw/master/resources/docker/the_matrix_of_hell.png "Matrix of hell")
@@ -141,7 +141,7 @@ The mentined above "Union File sysytem" built on top of   "Copy-On-Write" princi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2NzAxNjMzOSw5NTczMjYwNTgsLTE5Mz
+eyJoaXN0b3J5IjpbLTE1NzU2MjQwNSw5NTczMjYwNTgsLTE5Mz
 IxMzMzNTIsNTAzMDI0NDIxLC0zMjIwNDg4MjgsLTE4NzkxOTAz
 NzAsMTcxMzg4OTA4NCwtMTI0ODk5NDg3OCwtMTMzNDc2MDk4OC
 w3OTAwMzgxMTIsLTk4MjE0NzcyNSwtODk0MzI3Mjc1LC0yMTQy
