@@ -19,7 +19,7 @@ The company develops the software and also build the infrastructure that people 
 A very simple answer to the question of why we need it is: it allows us to run our applications in the same way and in the same environment whenever we have. Either this is Windows PC, Linux laptop, dedicated server or virtual hosting.  It's a common problem when developers create their software on their computer and so it can be run only on their computer. Docker creates an isolated environment that is the same everywhere.
 There exists a known "Matrix of hell" that show a wide variety of different systems and their different behavior on different hardware:
 
-![Matrix of hell](https://github.com/msangel/msangel.github.io/raw/master/resources/docker/the_matrix_of_hell.png "Matrix of hell")
+![Matrix of hell](https://k.co.ua/resources/docker/the_matrix_of_hell.png "Matrix of hell")
 
 Also, there exists another problem: developers want to use edge technologies like Node.js, Rust, Go, Microservices, Cassandra, Hadoop, etc.
 But server engineers and security want to use the same tooling as they used before, something that is proven, works, and don't require additional work to configure/secure.
@@ -136,14 +136,14 @@ The mentined above "Union File sysytem" built on top of   "Copy-On-Write" princi
 ![Union File System](https://github.com/msangel/msangel.github.io/raw/master/resources/docker/copy_on_write_fs.png "Union File System")For example: if you build most of your applications as PHP site driven by Apache Http Server, the single layer with Apache server will be shared between all of your applications. 
 
 ## Conclusion
-The docker is powerfull tool that 
+The docker is powerfull tool that is created to solve many common developer's problems and tasks. 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzNTQ2NjU1NywxNjgzNDA3OTQ0LDE1Mz
-M1ODE1ODAsLTE1NDg5MDcxNyw5NTczMjYwNTgsLTE5MzIxMzMz
-NTIsNTAzMDI0NDIxLC0zMjIwNDg4MjgsLTE4NzkxOTAzNzAsMT
-cxMzg4OTA4NCwtMTI0ODk5NDg3OCwtMTMzNDc2MDk4OCw3OTAw
-MzgxMTIsLTk4MjE0NzcyNSwtODk0MzI3Mjc1LC0yMTQyNTQzMj
-Q1LDY0MDUwNjY1NCwtMjAwMjA0NTI1OSwxODY2MzQzMDE1LC0y
-MDAyMDQ1MjU5XX0=
+eyJoaXN0b3J5IjpbMjYxOTE4NzkwLC05MzU0NjY1NTcsMTUzMz
+U4MTU4MCwtMTU0ODkwNzE3LDk1NzMyNjA1OCwtMTkzMjEzMzM1
+Miw1MDMwMjQ0MjEsLTMyMjA0ODgyOCwtMTg3OTE5MDM3MCwxNz
+EzODg5MDg0LC0xMjQ4OTk0ODc4LC0xMzM0NzYwOTg4LDc5MDAz
+ODExMiwtOTgyMTQ3NzI1LC04OTQzMjcyNzUsLTIxNDI1NDMyND
+UsNjQwNTA2NjU0LC0yMDAyMDQ1MjU5LDE4NjYzNDMwMTUsLTIw
+MDIwNDUyNTldfQ==
 -->
