@@ -125,7 +125,7 @@ Client is usually CLI app. Daemon is accessible via socket connection(TCP or UNI
 
 Terminology:
 -   Host(also docker server) - the machine that is running the containers.
-    
+  
 -   Image - a hierarchy of files, with  
     meta-data for how to run a container.  
     They are read-only. This give:
@@ -151,11 +151,11 @@ Terminology:
 -   Dockerfile - a script for creating images.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDk4MTY2MCw3OTAwMzgxMTIsLTk4Mj
-E0NzcyNSwtODk0MzI3Mjc1LC0yMTQyNTQzMjQ1LDY0MDUwNjY1
-NCwtMjAwMjA0NTI1OSwxODY2MzQzMDE1LC0yMDAyMDQ1MjU5LC
-0yMDAyMDQ1MjU5LDU0ODExNDI1NCwtODg0MDQxMDY2LC0yMDky
-ODg4NzY4LC05NDkxNTEwOTMsLTE2NzA3NDAyNzIsNzY3OTY4Nz
-k2LC0yMjkyODIwMDAsMzE4MDEzNjI2LC0zMTA3NDQ3NDcsLTEx
-MTc5MzU3NjhdfQ==
+eyJoaXN0b3J5IjpbLTEzMzQ3NjA5ODgsLTIxNDk4MTY2MCw3OT
+AwMzgxMTIsLTk4MjE0NzcyNSwtODk0MzI3Mjc1LC0yMTQyNTQz
+MjQ1LDY0MDUwNjY1NCwtMjAwMjA0NTI1OSwxODY2MzQzMDE1LC
+0yMDAyMDQ1MjU5LC0yMDAyMDQ1MjU5LDU0ODExNDI1NCwtODg0
+MDQxMDY2LC0yMDkyODg4NzY4LC05NDkxNTEwOTMsLTE2NzA3ND
+AyNzIsNzY3OTY4Nzk2LC0yMjkyODIwMDAsMzE4MDEzNjI2LC0z
+MTA3NDQ3NDddfQ==
 -->
