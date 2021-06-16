@@ -4,6 +4,7 @@ date: 2019-06-08 03:06:00 Z
 ---
 
 This article is about docker and the technologies it is built on. Mostly theory here.
+For more practical things read that.
   
 # The "Docker" keyword
 Before diving into the docker world, lets clarify basics about what Docker is:
@@ -11,6 +12,7 @@ Before diving into the docker world, lets clarify basics about what Docker is:
  2. Docker is a software. Actually two kind of it
 	 1. Docker CE (community edition) 
 	 2. Docker EE (enterprise edition)
+This very important 
 
 # What it is, and why we need this
 
@@ -139,11 +141,11 @@ The mentined above "Union File sysytem" built on top of   "Copy-On-Write" princi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU3MzI2MDU4LC0xOTMyMTMzMzUyLDUwMz
-AyNDQyMSwtMzIyMDQ4ODI4LC0xODc5MTkwMzcwLDE3MTM4ODkw
-ODQsLTEyNDg5OTQ4NzgsLTEzMzQ3NjA5ODgsNzkwMDM4MTEyLC
-05ODIxNDc3MjUsLTg5NDMyNzI3NSwtMjE0MjU0MzI0NSw2NDA1
-MDY2NTQsLTIwMDIwNDUyNTksMTg2NjM0MzAxNSwtMjAwMjA0NT
-I1OSwtMjAwMjA0NTI1OSw1NDgxMTQyNTQsLTg4NDA0MTA2Niwt
-MjA5Mjg4ODc2OF19
+eyJoaXN0b3J5IjpbLTU2NzAxNjMzOSw5NTczMjYwNTgsLTE5Mz
+IxMzMzNTIsNTAzMDI0NDIxLC0zMjIwNDg4MjgsLTE4NzkxOTAz
+NzAsMTcxMzg4OTA4NCwtMTI0ODk5NDg3OCwtMTMzNDc2MDk4OC
+w3OTAwMzgxMTIsLTk4MjE0NzcyNSwtODk0MzI3Mjc1LC0yMTQy
+NTQzMjQ1LDY0MDUwNjY1NCwtMjAwMjA0NTI1OSwxODY2MzQzMD
+E1LC0yMDAyMDQ1MjU5LC0yMDAyMDQ1MjU5LDU0ODExNDI1NCwt
+ODg0MDQxMDY2XX0=
 -->
