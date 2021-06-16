@@ -3,7 +3,7 @@ title: docker basis
 date: 2019-06-08 03:06:00 Z
 ---
 
-This article is about docker and technologies it is build on. Mostly theory here.  
+This article is about docker and the technologies it is built on. Mostly theory here.  
 # The "Docker" keyword
 Before diving into the docker world, lets clarify basics about what Docker is:
  1. Docker is a company
@@ -138,11 +138,11 @@ The mentined above "Union File sysytem" built on top of   "Copy-On-Write" princi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDk3OTU4ODQxLDUwMzAyNDQyMSwtMzIyMD
-Q4ODI4LC0xODc5MTkwMzcwLDE3MTM4ODkwODQsLTEyNDg5OTQ4
-NzgsLTEzMzQ3NjA5ODgsNzkwMDM4MTEyLC05ODIxNDc3MjUsLT
-g5NDMyNzI3NSwtMjE0MjU0MzI0NSw2NDA1MDY2NTQsLTIwMDIw
-NDUyNTksMTg2NjM0MzAxNSwtMjAwMjA0NTI1OSwtMjAwMjA0NT
-I1OSw1NDgxMTQyNTQsLTg4NDA0MTA2NiwtMjA5Mjg4ODc2OCwt
-OTQ5MTUxMDkzXX0=
+eyJoaXN0b3J5IjpbLTE5MzIxMzMzNTIsNDk3OTU4ODQxLDUwMz
+AyNDQyMSwtMzIyMDQ4ODI4LC0xODc5MTkwMzcwLDE3MTM4ODkw
+ODQsLTEyNDg5OTQ4NzgsLTEzMzQ3NjA5ODgsNzkwMDM4MTEyLC
+05ODIxNDc3MjUsLTg5NDMyNzI3NSwtMjE0MjU0MzI0NSw2NDA1
+MDY2NTQsLTIwMDIwNDUyNTksMTg2NjM0MzAxNSwtMjAwMjA0NT
+I1OSwtMjAwMjA0NTI1OSw1NDgxMTQyNTQsLTg4NDA0MTA2Niwt
+MjA5Mjg4ODc2OF19
 -->
