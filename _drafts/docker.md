@@ -95,7 +95,7 @@ First known breaking out of chroot jail was published in 1999.
 ### Chroot on steroids
 Docker's technology is based on LXC(Linux Containers) for <1.8 and libcontainer (now opencontainers/runc). All containers on a given host run under the same kernel, with other resources isolated per container. 
 Docker allows isolating a process at multiple levels through namespaces and utilities:
-- cgroups (for cpu and memory limits) reduced capabilities, controlling what you can use
+- cgroups  (for cpu and memory limits) reduced capabilities, controlling what you can use
 - mnt namespace provides a root filesystem (this one can be compared to chroot)    
 - pid namespace so the process only sees itself and its children
 - network namespace which allows the container to have its dedicated network stack 
@@ -111,11 +111,11 @@ The docker have
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2NjM0MzAxNSwtMTcxMjYxOTUsLTIwMD
-IwNDUyNTksLTIwMDIwNDUyNTksNTQ4MTE0MjU0LC04ODQwNDEw
-NjYsLTIwOTI4ODg3NjgsLTk0OTE1MTA5MywtMTY3MDc0MDI3Mi
-w3Njc5Njg3OTYsLTIyOTI4MjAwMCwzMTgwMTM2MjYsLTMxMDc0
-NDc0NywtMTExNzkzNTc2OCwtMjEyOTUzNDQzLDQ0ODAzMDE3Ny
-w3Mjk1OTUyMjgsLTkwOTE5ODczOCwtODY5MTM4MTI4LC0yMTEz
-Nzc5Nzk2XX0=
+eyJoaXN0b3J5IjpbLTIwMDIwNDUyNTksMTg2NjM0MzAxNSwtMj
+AwMjA0NTI1OSwtMjAwMjA0NTI1OSw1NDgxMTQyNTQsLTg4NDA0
+MTA2NiwtMjA5Mjg4ODc2OCwtOTQ5MTUxMDkzLC0xNjcwNzQwMj
+cyLDc2Nzk2ODc5NiwtMjI5MjgyMDAwLDMxODAxMzYyNiwtMzEw
+NzQ0NzQ3LC0xMTE3OTM1NzY4LC0yMTI5NTM0NDMsNDQ4MDMwMT
+c3LDcyOTU5NTIyOCwtOTA5MTk4NzM4LC04NjkxMzgxMjgsLTIx
+MTM3Nzk3OTZdfQ==
 -->
