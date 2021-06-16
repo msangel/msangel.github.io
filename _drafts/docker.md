@@ -132,14 +132,16 @@ Terminology:
 -   **registry** — a repository of images. It's a service that enables users to push images to it, make them public or private, and pull different images, all using the docker client CLI. Docker hub is a docker image registry provided by Docker, Inc itself. Alternatively, you can host your own docker registry.    
 -   **volume** — storage outside the container.
 -   **Dockerfile** — a script for creating images.
-![chroot](https://github.com/msangel/msangel.github.io/raw/master/resources/docker/docker_use.png "Docker use")
+![Docker use](https://github.com/msangel/msangel.github.io/raw/master/resources/docker/docker_use.png "Docker use")
 The mentined above "Union File sysytem" built on top of   "Copy-On-Write" principle and allows hight reuse of file systems.
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzkxOTAzNzAsMTcxMzg4OTA4NCwtMT
-I0ODk5NDg3OCwtMTMzNDc2MDk4OCw3OTAwMzgxMTIsLTk4MjE0
-NzcyNSwtODk0MzI3Mjc1LC0yMTQyNTQzMjQ1LDY0MDUwNjY1NC
-wtMjAwMjA0NTI1OSwxODY2MzQzMDE1LC0yMDAyMDQ1MjU5LC0y
-MDAyMDQ1MjU5LDU0ODExNDI1NCwtODg0MDQxMDY2LC0yMDkyOD
-g4NzY4LC05NDkxNTEwOTMsLTE2NzA3NDAyNzIsNzY3OTY4Nzk2
-LC0yMjkyODIwMDBdfQ==
+eyJoaXN0b3J5IjpbMTY4MDAxNDQ5MCwtMTg3OTE5MDM3MCwxNz
+EzODg5MDg0LC0xMjQ4OTk0ODc4LC0xMzM0NzYwOTg4LDc5MDAz
+ODExMiwtOTgyMTQ3NzI1LC04OTQzMjcyNzUsLTIxNDI1NDMyND
+UsNjQwNTA2NjU0LC0yMDAyMDQ1MjU5LDE4NjYzNDMwMTUsLTIw
+MDIwNDUyNTksLTIwMDIwNDUyNTksNTQ4MTE0MjU0LC04ODQwND
+EwNjYsLTIwOTI4ODg3NjgsLTk0OTE1MTA5MywtMTY3MDc0MDI3
+Miw3Njc5Njg3OTZdfQ==
 -->
