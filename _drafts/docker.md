@@ -124,17 +124,17 @@ Docker is implemented as a client-server system.
 Client is usually CLI app. Daemon is accessible via socket connection(TCP or UNIX) and simply provide controlling API. The client may, but does not have to, be on the same machine as the daemon.  
 
 Terminology:
--   **Host**(also docker server) - the machine that is running the containers.
--   Image - a hierarchy of files, with meta-data for how to run a container.  They are read-only. This give:
+-   **host**(also **docker server**) — the machine that is running the containers.
+-   **image** — a hierarchy of files, with meta-data for how to run a container.  They are read-only. This give:
 	-   many instances of the same
 	-   you don't afraid of crashes
--   Container - a contained running process, started from an image.
--   Registry - a repository of images. It's a service that enables users to push images to it, make them public or private, and pull different images, all using the docker client CLI. Docker hub is a docker image registry provided by Docker, Inc itself. Alternatively, you can host your own docker registry.    
--   Volume - storage outside the container.
--   Dockerfile - a script for creating images.
+-   **container** — a contained running process, started from an image.
+-   **registry** — a repository of images. It's a service that enables users to push images to it, make them public or private, and pull different images, all using the docker client CLI. Docker hub is a docker image registry provided by Docker, Inc itself. Alternatively, you can host your own docker registry.    
+-   **volume** — storage outside the container.
+-   **Dockerfile** — a script for creating images.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODY5NDA4ODAsLTEzMzQ3NjA5ODgsNz
+eyJoaXN0b3J5IjpbLTEyNDg5OTQ4NzgsLTEzMzQ3NjA5ODgsNz
 kwMDM4MTEyLC05ODIxNDc3MjUsLTg5NDMyNzI3NSwtMjE0MjU0
 MzI0NSw2NDA1MDY2NTQsLTIwMDIwNDUyNTksMTg2NjM0MzAxNS
 wtMjAwMjA0NTI1OSwtMjAwMjA0NTI1OSw1NDgxMTQyNTQsLTg4
