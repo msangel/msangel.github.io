@@ -136,10 +136,11 @@ The mentined above "Union File sysytem" built on top of   "Copy-On-Write" princi
 ![Union File System](https://k.co.ua/resources/docker/copy_on_write_fs.png "Union File System")For example: if you build most of your applications as PHP site driven by Apache Http Server, the single layer with Apache server will be shared between all of your applications. 
 
 ## Conclusion
-The docker is powerfull tool that is created to solve many common developer's problems and tasks. 
+The docker is powerfull tool that is created to solve many common developer's problems and tasks. But before using it, nice to have some insights on how we came to it and how it is working inside.
+You may also want to look on more practical part
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzNDEzMzE3NCwtOTM1NDY2NTU3LDE1Mz
+eyJoaXN0b3J5IjpbLTMwMDYxNjAyMSwtOTM1NDY2NTU3LDE1Mz
 M1ODE1ODAsLTE1NDg5MDcxNyw5NTczMjYwNTgsLTE5MzIxMzMz
 NTIsNTAzMDI0NDIxLC0zMjIwNDg4MjgsLTE4NzkxOTAzNzAsMT
 cxMzg4OTA4NCwtMTI0ODk5NDg3OCwtMTMzNDc2MDk4OCw3OTAw
