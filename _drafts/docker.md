@@ -133,13 +133,13 @@ Terminology:
 -   **volume** — storage outside the container.
 -   **Dockerfile** — a script for creating images.
 ![chroot](https://github.com/msangel/msangel.github.io/raw/master/resources/docker/docker_use.png "Docker use")
-The mentined above "Union File sysytem" allow hight reuse of systems 
+The mentined above "Union File sysytem" allow hight reuse of file systems with "Copy-On-Write" principle, 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcxMzg4OTA4NCwtMTI0ODk5NDg3OCwtMT
-MzNDc2MDk4OCw3OTAwMzgxMTIsLTk4MjE0NzcyNSwtODk0MzI3
-Mjc1LC0yMTQyNTQzMjQ1LDY0MDUwNjY1NCwtMjAwMjA0NTI1OS
-wxODY2MzQzMDE1LC0yMDAyMDQ1MjU5LC0yMDAyMDQ1MjU5LDU0
-ODExNDI1NCwtODg0MDQxMDY2LC0yMDkyODg4NzY4LC05NDkxNT
-EwOTMsLTE2NzA3NDAyNzIsNzY3OTY4Nzk2LC0yMjkyODIwMDAs
-MzE4MDEzNjI2XX0=
+eyJoaXN0b3J5IjpbLTgwOTg5MTUyMywxNzEzODg5MDg0LC0xMj
+Q4OTk0ODc4LC0xMzM0NzYwOTg4LDc5MDAzODExMiwtOTgyMTQ3
+NzI1LC04OTQzMjcyNzUsLTIxNDI1NDMyNDUsNjQwNTA2NjU0LC
+0yMDAyMDQ1MjU5LDE4NjYzNDMwMTUsLTIwMDIwNDUyNTksLTIw
+MDIwNDUyNTksNTQ4MTE0MjU0LC04ODQwNDEwNjYsLTIwOTI4OD
+g3NjgsLTk0OTE1MTA5MywtMTY3MDc0MDI3Miw3Njc5Njg3OTYs
+LTIyOTI4MjAwMF19
 -->
