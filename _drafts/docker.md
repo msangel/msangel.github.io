@@ -22,7 +22,7 @@ There exists a known "Matrix of hell" that show a wide variety of different syst
 ![Matrix of hell](https://github.com/msangel/msangel.github.io/raw/master/resources/docker/the_matrix_of_hell.png "Matrix of hell")
 
 Also, there exists another problem: developers want to use edge technologies like Node.js, Rust, Go, Microservices, Cassandra, Hadoop, etc.
-But server operations want to use the same tooling as they used yesterday, what they used last year because it is proven, it works!
+But server operations and security wants to use the same tooling as they used before, something that is proven, works and dont requires additional work to configure/secure.
 
 And docker allows to combine wishes of both sides, it's like an interaction contract.
 
@@ -141,7 +141,7 @@ The mentined above "Union File sysytem" built on top of   "Copy-On-Write" princi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzU2MjQwNSw5NTczMjYwNTgsLTE5Mz
+eyJoaXN0b3J5IjpbMTk1MDU3Mzg3NSw5NTczMjYwNTgsLTE5Mz
 IxMzMzNTIsNTAzMDI0NDIxLC0zMjIwNDg4MjgsLTE4NzkxOTAz
 NzAsMTcxMzg4OTA4NCwtMTI0ODk5NDg3OCwtMTMzNDc2MDk4OC
 w3OTAwMzgxMTIsLTk4MjE0NzcyNSwtODk0MzI3Mjc1LC0yMTQy
