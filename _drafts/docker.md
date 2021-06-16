@@ -85,12 +85,8 @@ Containerization is a lightweight alternative to full machine virtualization tha
 
 ### Chroot - first attempts in processes isolation.
 ![chroot](https://github.com/msangel/msangel.github.io/raw/master/resources/docker/chroot.png "Chroot")
-A chroot on Unix operating systems is an operation 
-that changes the apparent root directory for the current 
-running process and its children. A program that is 
-run in such a modified environment cannot name 
-(and therefore normally cannot access) files outside 
-the designated directory tree.
+A chroot on Unix operating systems is an operation that changes the apparent root directory for the current running process and its children. A program that is 
+run in such a modified environment cannot name (and therefore normally cannot access) files outside the designated directory tree.
 The chroot system call was introduced during development of Version 7 Unix in 1979, and added to BSD by Bill Joy on 18 March 1982 – in order to test installation and build system of 4.2BSD. An early use of the term "jail" as applied to chroot comes from Bill Cheswick creating a honeypot to monitor a cracker in 1991.
 First known breaking out of chroot jail was published in 1999.
 
@@ -141,7 +137,7 @@ The mentined above "Union File sysytem" built on top of   "Copy-On-Write" princi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQ1NjA4NzIzLDk1NzMyNjA1OCwtMTkzMj
+eyJoaXN0b3J5IjpbNzk0NTU2MTE1LDk1NzMyNjA1OCwtMTkzMj
 EzMzM1Miw1MDMwMjQ0MjEsLTMyMjA0ODgyOCwtMTg3OTE5MDM3
 MCwxNzEzODg5MDg0LC0xMjQ4OTk0ODc4LC0xMzM0NzYwOTg4LD
 c5MDAzODExMiwtOTgyMTQ3NzI1LC04OTQzMjcyNzUsLTIxNDI1
