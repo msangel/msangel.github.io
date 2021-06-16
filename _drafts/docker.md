@@ -110,15 +110,16 @@ Docker allows isolating a process at multiple levels through namespaces and util
 Using this capabilities same time, docker provide these  advantages:
 - **Flexible**: Even the most complex applications can be containerized.
 - **Lightweight**: Containers leverage and share the host kernel.
-- **Interchangeable: You can deploy updates and upgrades on-the-fly.
-Portable: You can build locally, deploy to the cloud, and run anywhere.
-Scalable: You can increase and automatically distribute container replicas.
-Stackable: You can stack services vertically and on-the-fly.
+- **Interchangeable**: You can deploy updates and upgrades on-the-fly.
+- **Portable**: You can build locally, deploy to the cloud, and run anywhere.
+- **Scalable**: You can increase and automatically distribute container replicas.
+- **Stackable**: You can stack services vertically and on-the-fly.
+Still there exists some disadvatages: 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5NDMyNzI3NSwtMzg1NTA0OTM5LC0yMT
+eyJoaXN0b3J5IjpbMjA2Nzg3NTE3MCwtODk0MzI3Mjc1LC0yMT
 QyNTQzMjQ1LDY0MDUwNjY1NCwtMjAwMjA0NTI1OSwxODY2MzQz
 MDE1LC0yMDAyMDQ1MjU5LC0yMDAyMDQ1MjU5LDU0ODExNDI1NC
 wtODg0MDQxMDY2LC0yMDkyODg4NzY4LC05NDkxNTEwOTMsLTE2
