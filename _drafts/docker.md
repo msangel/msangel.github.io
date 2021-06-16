@@ -3,8 +3,6 @@ title: docker intro
 date: 2019-06-08 03:06:00 Z
 ---
 
-https://sites.google.com/site/modernskyangel/in-progress/docker-big
-
 # The "Docker" keyword
 Before diving into the docker world, lets clarify basics about what Docker is:
  1. Docker is a company
@@ -139,7 +137,7 @@ The mentined above "Union File sysytem" built on top of   "Copy-On-Write" princi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3NDcwMDM1Myw1MDMwMjQ0MjEsLTMyMj
+eyJoaXN0b3J5IjpbLTMxNDIzNTUzNCw1MDMwMjQ0MjEsLTMyMj
 A0ODgyOCwtMTg3OTE5MDM3MCwxNzEzODg5MDg0LC0xMjQ4OTk0
 ODc4LC0xMzM0NzYwOTg4LDc5MDAzODExMiwtOTgyMTQ3NzI1LC
 04OTQzMjcyNzUsLTIxNDI1NDMyNDUsNjQwNTA2NjU0LC0yMDAy
