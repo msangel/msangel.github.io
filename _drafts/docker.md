@@ -107,11 +107,18 @@ Docker allows isolating a process at multiple levels through namespaces and util
 - **ulimits** (number of open file descriptors per process)
 - **Union File Systems** allows representing the result of multiple layers of filesystems as a single filesystem, where usually only the latest layer is for writing. 
 
-Using this capabilities same time, docker provide these a
+Using this capabilities same time, docker provide these  advantages:
+- **Flexible**: Even the most complex applications can be containerized.
+- **Lightweight**: Containers leverage and share the host kernel.
+- Interchangeable: You can deploy updates and upgrades on-the-fly.
+Portable: You can build locally, deploy to the cloud, and run anywhere.
+Scalable: You can increase and automatically distribute container replicas.
+Stackable: You can stack services vertically and on-the-fly.
+
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTg0MTkzMywtMjE0MjU0MzI0NSw2ND
+eyJoaXN0b3J5IjpbLTM4NTUwNDkzOSwtMjE0MjU0MzI0NSw2ND
 A1MDY2NTQsLTIwMDIwNDUyNTksMTg2NjM0MzAxNSwtMjAwMjA0
 NTI1OSwtMjAwMjA0NTI1OSw1NDgxMTQyNTQsLTg4NDA0MTA2Ni
 wtMjA5Mjg4ODc2OCwtOTQ5MTUxMDkzLC0xNjcwNzQwMjcyLDc2
