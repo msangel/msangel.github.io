@@ -135,13 +135,15 @@ Terminology:
 The mentined above "Union File sysytem" built on top of   "Copy-On-Write" principle and allows hight reuse of file systems.
 ![Union File System](https://github.com/msangel/msangel.github.io/raw/master/resources/docker/copy_on_write_fs.png "Union File System")For example: if you build most of your applications as PHP site driven by Apache Http Server, the single layer with Apache server will be shared between all of your applications. 
 
+## Conclusion
+The docker is powerfull tool t
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzMzU4MTU4MCwtMTU0ODkwNzE3LDk1Nz
-MyNjA1OCwtMTkzMjEzMzM1Miw1MDMwMjQ0MjEsLTMyMjA0ODgy
-OCwtMTg3OTE5MDM3MCwxNzEzODg5MDg0LC0xMjQ4OTk0ODc4LC
-0xMzM0NzYwOTg4LDc5MDAzODExMiwtOTgyMTQ3NzI1LC04OTQz
-MjcyNzUsLTIxNDI1NDMyNDUsNjQwNTA2NjU0LC0yMDAyMDQ1Mj
-U5LDE4NjYzNDMwMTUsLTIwMDIwNDUyNTksLTIwMDIwNDUyNTks
-NTQ4MTE0MjU0XX0=
+eyJoaXN0b3J5IjpbMTY4MzQwNzk0NCwxNTMzNTgxNTgwLC0xNT
+Q4OTA3MTcsOTU3MzI2MDU4LC0xOTMyMTMzMzUyLDUwMzAyNDQy
+MSwtMzIyMDQ4ODI4LC0xODc5MTkwMzcwLDE3MTM4ODkwODQsLT
+EyNDg5OTQ4NzgsLTEzMzQ3NjA5ODgsNzkwMDM4MTEyLC05ODIx
+NDc3MjUsLTg5NDMyNzI3NSwtMjE0MjU0MzI0NSw2NDA1MDY2NT
+QsLTIwMDIwNDUyNTksMTg2NjM0MzAxNSwtMjAwMjA0NTI1OSwt
+MjAwMjA0NTI1OV19
 -->
