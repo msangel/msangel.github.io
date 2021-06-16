@@ -105,17 +105,17 @@ Docker allows isolating a process at multiple levels through namespaces and util
 - **seccomp** (secure computing mode with instructions checkings)
 - **selinux**/**apparmor** (Security-Enhanced Linux / "Application Armor") - linux kernel security modules
 - **ulimits** (number of open file descriptors per process)
-- **Union File Systems** allows to represent result of multiple leyered filesystem wi single filesystem 
+- **Union File Systems** allows to represent result of multiple leyered filesystem with single filesystem 
 
 The docker have 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzk4MDcwNjk4LC0yMDAyMDQ1MjU5LDE4Nj
-YzNDMwMTUsLTIwMDIwNDUyNTksLTIwMDIwNDUyNTksNTQ4MTE0
-MjU0LC04ODQwNDEwNjYsLTIwOTI4ODg3NjgsLTk0OTE1MTA5My
-wtMTY3MDc0MDI3Miw3Njc5Njg3OTYsLTIyOTI4MjAwMCwzMTgw
-MTM2MjYsLTMxMDc0NDc0NywtMTExNzkzNTc2OCwtMjEyOTUzND
-QzLDQ0ODAzMDE3Nyw3Mjk1OTUyMjgsLTkwOTE5ODczOCwtODY5
-MTM4MTI4XX0=
+eyJoaXN0b3J5IjpbNjQwNTA2NjU0LDc5ODA3MDY5OCwtMjAwMj
+A0NTI1OSwxODY2MzQzMDE1LC0yMDAyMDQ1MjU5LC0yMDAyMDQ1
+MjU5LDU0ODExNDI1NCwtODg0MDQxMDY2LC0yMDkyODg4NzY4LC
+05NDkxNTEwOTMsLTE2NzA3NDAyNzIsNzY3OTY4Nzk2LC0yMjky
+ODIwMDAsMzE4MDEzNjI2LC0zMTA3NDQ3NDcsLTExMTc5MzU3Nj
+gsLTIxMjk1MzQ0Myw0NDgwMzAxNzcsNzI5NTk1MjI4LC05MDkx
+OTg3MzhdfQ==
 -->
