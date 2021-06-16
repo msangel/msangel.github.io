@@ -17,7 +17,7 @@ Before diving into the docker world, lets clarify basics about what Docker is:
 A very simple answer to the question of why we need it is: it allows us to run our applications in the same way and in the same environment whenever we have either this is Windows PC, Linux laptop, dedicated server or virtual hosting.  It's a common problem when developers create their software on their computer and so it can be run only on their computer. Docker creates an isolated environment that is the same everywhere.
 There exists a known "Matrix of hell" that show a wide variety of different systems and their different behavior on different hardware:
 
-![Matrix of hell](https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/the_matrix_of_hell.png "Matrix of hell")
+![Matrix of hell](https://github.com/msangel/msangel.github.io/raw/master/resources/docker/the_matrix_of_hell.png "Matrix of hell")
 
 Also, there exists another problem: developers want to use edge technologies like Node.js, Rust, Go, Microservices, Cassandra, Hadoop, etc.
 But server operations want to use the same tooling as they used yesterday, what they used last year because it is proven, it works!
@@ -27,7 +27,7 @@ And docker allows to combine wishes of both sides, it's like an interaction cont
 Operations have to care about only one thing. They have to support deploying containers. So they are satisfied. Developers are happy too. They can develop with whatever the fad of the day is and then just stick it into a container and throw it over the wall to operations.
 
 So docker allows to solve this matrix in a very straightforward way:
-![Matrix solved](https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/the_matrix_of_hell_solved.png "Matrix solved")This is really cool approach. But technologies came to it not from the beginning. Hosting have long and complex history of that have the impact on the docker, and I pretty sure we must overview some basics of hosting history for understanding what requirements and problem exist prior docker.
+![Matrix solved](https://github.com/msangel/msangel.github.io/raw/master/resources/docker/the_matrix_of_hell_solved.png "Matrix solved")This is really cool approach. But technologies came to it not from the beginning. Hosting have long and complex history of that have the impact on the docker, and I pretty sure we must overview some basics of hosting history for understanding what requirements and problem exist prior docker.
 
 ## Hosting history
 
@@ -48,7 +48,7 @@ The root place in virtual servers took hypervisor.
 ### Hypervisor
 The hypervisor, also referred to as Virtual Machine Manager (VMM), is what enables virtualization (running several operating systems on one physical computer). It allows the host computer to share its resources between VMs([link](https://www.vmware.com/topics/glossary/content/hypervisor)).
 There exists two types of hypervisor: native(or bare metal) and hosted.
-![Hypervisor types](https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/hypervisor.png "Hypervisor types")
+![Hypervisor types](https://github.com/msangel/msangel.github.io/raw/master/resources/docker/hypervisor.png "Hypervisor types")
 
 #### Native hypervisor
 Native hypervisor is installed right on top of the underlying machine’s hardware (so, in this case, there is no host OS, there are only guest OS’s). This is usually installed on a machine on which the whole purpose was to run many virtual machines. The hypervisor here have its own device drivers and interact with hardware directly. Such hypervisors are faster, simpler and hence more stable.
@@ -79,10 +79,10 @@ Cons:
 ## Containerization
 Containerization is a lightweight alternative to full machine virtualization that involves encapsulating an application in a container with its own operating environment. For easy understanding we can say, that container is just a native process that running in own environment, so its execution is not affecting host environment in any way.
 
-![VM vs Container](https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/vm_vs_container.png "VM vs Container")
+![VM vs Container](https://github.com/msangel/msangel.github.io/raw/master/resources/docker/vm_vs_container.png "VM vs Container")
 
 ### Chroot - first attempts in processes isolation.
-![chroot](https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/chroot.png "Chroot")
+![chroot](https://github.com/msangel/msangel.github.io/raw/master/resources/docker/chroot.png "Chroot")
 A chroot on Unix operating systems is an operation 
 that changes the apparent root directory for the current 
 running process and its children. A program that is 
