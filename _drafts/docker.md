@@ -38,13 +38,13 @@ After, the DNS-providers starts providing additional service for hosting, as add
 Quite fast the specialization took the place and so appears entire data centers with dedicated computers (dedicated servers). Still, the prices for that were not flexible and because of usually low utilization of the server per user, the same computers start to sell to many people, of course with some isolation level between user's data. These isolation requirements cause appearing and evolution of virtual server software.
 
 ## About virtual servers
-The virtual servers are software that allow to run another virtual emulated computer as any regular application. And as far as that computer is emulated, its environment also emulated, so running any programs in it will not harm you primary operation system(if you have one, as steping a bit forward, I can said that there exists virtual servers applications that run directly on hardware and don't requires OS to be installed).
+The virtual servers are software that allows running another virtual emulated computer as any regular application. And as far as that computer is emulated, its environment also emulated, so running any programs in it will not harm your primary operation system(if you have one, as stepping a bit forward, I can say that there exist virtual servers that run directly on hardware and don't require OS to be installed).
 The advantages of vitrual servers are:
 1. managed environment (including choice of operating system)
 2. the required amount of resources (cheaper where possible)
 3. easy creation of backups and restoration from them
-easy launch of new instances (for providers)
-4. better use of resources (for providers) incl. electricity
+4. easy launch of new instances (for providers)
+5. better use of resources (for providers) incl. electricity
 The root place in virtual servers took hypervisor.
 
 ### Hypervisor
@@ -141,11 +141,11 @@ The mentined above "Union File sysytem" built on top of   "Copy-On-Write" princi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzE0MjUzMDAsOTU3MzI2MDU4LC0xOT
-MyMTMzMzUyLDUwMzAyNDQyMSwtMzIyMDQ4ODI4LC0xODc5MTkw
-MzcwLDE3MTM4ODkwODQsLTEyNDg5OTQ4NzgsLTEzMzQ3NjA5OD
-gsNzkwMDM4MTEyLC05ODIxNDc3MjUsLTg5NDMyNzI3NSwtMjE0
-MjU0MzI0NSw2NDA1MDY2NTQsLTIwMDIwNDUyNTksMTg2NjM0Mz
-AxNSwtMjAwMjA0NTI1OSwtMjAwMjA0NTI1OSw1NDgxMTQyNTQs
-LTg4NDA0MTA2Nl19
+eyJoaXN0b3J5IjpbLTgyNjQ5ODA1MCw5NTczMjYwNTgsLTE5Mz
+IxMzMzNTIsNTAzMDI0NDIxLC0zMjIwNDg4MjgsLTE4NzkxOTAz
+NzAsMTcxMzg4OTA4NCwtMTI0ODk5NDg3OCwtMTMzNDc2MDk4OC
+w3OTAwMzgxMTIsLTk4MjE0NzcyNSwtODk0MzI3Mjc1LC0yMTQy
+NTQzMjQ1LDY0MDUwNjY1NCwtMjAwMjA0NTI1OSwxODY2MzQzMD
+E1LC0yMDAyMDQ1MjU5LC0yMDAyMDQ1MjU5LDU0ODExNDI1NCwt
+ODg0MDQxMDY2XX0=
 -->
