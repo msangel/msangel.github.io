@@ -108,9 +108,9 @@ Docker allows isolating a process at multiple levels through namespaces and util
 Using this capabilities same time, docker provide these  advantages:
 - **Flexible**: Even the most complex applications can be containerized. Tread your container as a separated environment(actually it is), that runs natively on your hardware. Do what you want there. Install any software of any versions, organize your files your way there, and many more.
 - **Lightweight**: besides of own environment, processes in the container as the same native processes that run on the host kernel directly.
-- **Interchangeable**: you can deploy updates and upgrades on-the-fly. turning container off is simple the same as shoulting down all its processes. You can work with container's file suystem even if the container stopped. After applying changes you can start them beck, start from saved image or even simply start new verion instead.
-- **Portable**: You can build locally, deploy to the cloud, and run anywhere.
-- **Scalable**: You can increase and automatically distribute container replicas.
+- **Interchangeable**: you can deploy updates and upgrades on the fly. turning the container off is simple the same as shutting down all its processes. You can work with the container's file system even if the container stopped. After applying changes you can start them back, start from a saved image or even simply start a new version instead.
+- **Portable**: anything you build locally can run anywhere, for example, to be deployed to the cloud.
+- **Scalable**: you can increase and automatically distribute container replicas.
 - **Stackable**: You can stack services vertically and on-the-fly.
 Still there exists some disadvatages.
 First is **security**. Containers share the same hooks into the kernel, and that’s a problem because if there are any vulnerabilities in the kernel, then someone can get into other containers. Containers have not yet demonstrated that they can deliver the same secure boundaries that a VM still has.
@@ -137,11 +137,11 @@ The mentined above "Union File sysytem" built on top of   "Copy-On-Write" princi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwMjU2Mzc2MSwtMTU0ODkwNzE3LDk1Nz
-MyNjA1OCwtMTkzMjEzMzM1Miw1MDMwMjQ0MjEsLTMyMjA0ODgy
-OCwtMTg3OTE5MDM3MCwxNzEzODg5MDg0LC0xMjQ4OTk0ODc4LC
-0xMzM0NzYwOTg4LDc5MDAzODExMiwtOTgyMTQ3NzI1LC04OTQz
-MjcyNzUsLTIxNDI1NDMyNDUsNjQwNTA2NjU0LC0yMDAyMDQ1Mj
-U5LDE4NjYzNDMwMTUsLTIwMDIwNDUyNTksLTIwMDIwNDUyNTks
-NTQ4MTE0MjU0XX0=
+eyJoaXN0b3J5IjpbNzg1MjUyNTcsLTE1NDg5MDcxNyw5NTczMj
+YwNTgsLTE5MzIxMzMzNTIsNTAzMDI0NDIxLC0zMjIwNDg4Mjgs
+LTE4NzkxOTAzNzAsMTcxMzg4OTA4NCwtMTI0ODk5NDg3OCwtMT
+MzNDc2MDk4OCw3OTAwMzgxMTIsLTk4MjE0NzcyNSwtODk0MzI3
+Mjc1LC0yMTQyNTQzMjQ1LDY0MDUwNjY1NCwtMjAwMjA0NTI1OS
+wxODY2MzQzMDE1LC0yMDAyMDQ1MjU5LC0yMDAyMDQ1MjU5LDU0
+ODExNDI1NF19
 -->
