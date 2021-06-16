@@ -106,7 +106,7 @@ Docker allows isolating a process at multiple levels through namespaces and util
 - **Union File Systems** allows representing the result of multiple layers of filesystems as a single filesystem, where usually only the latest layer is for writing. 
 
 Using this capabilities same time, docker provide these  advantages:
-- **Flexible**: Even the most complex applications can be containerized. Tread your container as separated envirounment()
+- **Flexible**: Even the most complex applications can be containerized. Tread your container as separated envirounment(ac)
 - **Lightweight**: Containers leverage and share the host kernel.
 - **Interchangeable**: You can deploy updates and upgrades on-the-fly.
 - **Portable**: You can build locally, deploy to the cloud, and run anywhere.
@@ -137,11 +137,11 @@ The mentined above "Union File sysytem" built on top of   "Copy-On-Write" princi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5Mzg2MDYxMyw5NTczMjYwNTgsLTE5Mz
-IxMzMzNTIsNTAzMDI0NDIxLC0zMjIwNDg4MjgsLTE4NzkxOTAz
-NzAsMTcxMzg4OTA4NCwtMTI0ODk5NDg3OCwtMTMzNDc2MDk4OC
-w3OTAwMzgxMTIsLTk4MjE0NzcyNSwtODk0MzI3Mjc1LC0yMTQy
-NTQzMjQ1LDY0MDUwNjY1NCwtMjAwMjA0NTI1OSwxODY2MzQzMD
-E1LC0yMDAyMDQ1MjU5LC0yMDAyMDQ1MjU5LDU0ODExNDI1NCwt
-ODg0MDQxMDY2XX0=
+eyJoaXN0b3J5IjpbLTE1NDg5MDcxNywxNzkzODYwNjEzLDk1Nz
+MyNjA1OCwtMTkzMjEzMzM1Miw1MDMwMjQ0MjEsLTMyMjA0ODgy
+OCwtMTg3OTE5MDM3MCwxNzEzODg5MDg0LC0xMjQ4OTk0ODc4LC
+0xMzM0NzYwOTg4LDc5MDAzODExMiwtOTgyMTQ3NzI1LC04OTQz
+MjcyNzUsLTIxNDI1NDMyNDUsNjQwNTA2NjU0LC0yMDAyMDQ1Mj
+U5LDE4NjYzNDMwMTUsLTIwMDIwNDUyNTksLTIwMDIwNDUyNTks
+NTQ4MTE0MjU0XX0=
 -->
