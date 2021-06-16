@@ -29,7 +29,7 @@ And so docker allows to combine wishes of both sides, it's like an interaction c
 Server operations have to care about only one thing. They have to support deploying containers. So they are satisfied. Developers are happy too. They can develop with whatever the fad of the day is and then just stick it into a container and throw it over the wall to operations.
 
 So docker allows to solve this matrix in a very straightforward way:
-![Matrix solved](https://github.com/msangel/msangel.github.io/raw/master/resources/docker/the_matrix_of_hell_solved.png "Matrix solved")This is really cool approach. But technologies were like that not from the beginning. Hosting has a long and very complex history. And that has an impact on the docker. I'm pretty sure we must overview some basics of hosting history for understanding what requirements and problems exist prior to docker.
+![Matrix solved](https://k.co.ua/resources/docker/the_matrix_of_hell_solved.png "Matrix solved")This is really cool approach. But technologies were like that not from the beginning. Hosting has a long and very complex history. And that has an impact on the docker. I'm pretty sure we must overview some basics of hosting history for understanding what requirements and problems exist prior to docker.
 
 ## Hosting history
 
@@ -50,7 +50,7 @@ The root place in virtual servers took hypervisor.
 ### Hypervisor
 The hypervisor, also referred to as Virtual Machine Manager (VMM), is what enables virtualization (running several operating systems on one physical computer). It allows the host computer to share its resources between VMs([link](https://www.vmware.com/topics/glossary/content/hypervisor)).
 There exists two types of hypervisor: native(or bare metal) and hosted.
-![Hypervisor types](https://github.com/msangel/msangel.github.io/raw/master/resources/docker/hypervisor.png "Hypervisor types")
+![Hypervisor types](https://k.co.ua/resources/docker/hypervisor.png "Hypervisor types")
 
 #### Native hypervisor
 The native hypervisor is installed right on top of the underlying machine’s hardware (so, in this case, there is no host OS, there are only guest OS’s). This is usually installed on a machine on which the whole purpose was to run many virtual machines. The hypervisor here has its own device drivers and interact with hardware directly. Such hypervisors are faster, simpler, and hence more stable.
@@ -81,10 +81,10 @@ Cons:
 ## Containerization
 Containerization is a lightweight alternative to full machine virtualization that involves encapsulating an application in a container with its own operating environment. For easy understanding we can say, that container is just a native process that running in own environment, so its execution is not affecting host environment in any way.
 
-![VM vs Container](https://github.com/msangel/msangel.github.io/raw/master/resources/docker/vm_vs_container.png "VM vs Container")
+![VM vs Container](https://k.co.ua/resources/docker/vm_vs_container.png "VM vs Container")
 
 ### Chroot - first attempts in processes isolation.
-![chroot](https://github.com/msangel/msangel.github.io/raw/master/resources/docker/chroot.png "Chroot")
+![chroot](https://k.co.ua/resources/docker/chroot.png "Chroot")
 A chroot on Unix operating systems is an operation that changes the apparent root directory for the current running process and its children. A program that is 
 run in such a modified environment cannot name (and therefore normally cannot access) files outside the designated directory tree.
 The chroot system call was introduced during development of Version 7 Unix in 1979, and added to BSD by Bill Joy on 18 March 1982 – in order to test installation and build system of 4.2BSD. An early use of the term "jail" as applied to chroot comes from Bill Cheswick creating a honeypot to monitor a cracker in 1991.
@@ -130,20 +130,20 @@ Terminology:
 -   **registry** — a repository of images. It's a service that enables users to push images to it, make them public or private, and pull different images, all using the docker client CLI. Docker hub is a docker image registry provided by Docker, Inc itself. Alternatively, you can host your own docker registry.    
 -   **volume** — storage outside the container.
 -   **Dockerfile** — a script for creating images.
-![Docker use](https://github.com/msangel/msangel.github.io/raw/master/resources/docker/docker_use.png "Docker use")
+![Docker use](https://k.co.ua/resources/docker/docker_use.png "Docker use")
 
 The mentined above "Union File sysytem" built on top of   "Copy-On-Write" principle and allows hight reuse of file systems.
-![Union File System](https://github.com/msangel/msangel.github.io/raw/master/resources/docker/copy_on_write_fs.png "Union File System")For example: if you build most of your applications as PHP site driven by Apache Http Server, the single layer with Apache server will be shared between all of your applications. 
+![Union File System](https://k.co.ua/resources/docker/copy_on_write_fs.png "Union File System")For example: if you build most of your applications as PHP site driven by Apache Http Server, the single layer with Apache server will be shared between all of your applications. 
 
 ## Conclusion
 The docker is powerfull tool that is created to solve many common developer's problems and tasks. 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjYxOTE4NzkwLC05MzU0NjY1NTcsMTUzMz
-U4MTU4MCwtMTU0ODkwNzE3LDk1NzMyNjA1OCwtMTkzMjEzMzM1
-Miw1MDMwMjQ0MjEsLTMyMjA0ODgyOCwtMTg3OTE5MDM3MCwxNz
-EzODg5MDg0LC0xMjQ4OTk0ODc4LC0xMzM0NzYwOTg4LDc5MDAz
-ODExMiwtOTgyMTQ3NzI1LC04OTQzMjcyNzUsLTIxNDI1NDMyND
-UsNjQwNTA2NjU0LC0yMDAyMDQ1MjU5LDE4NjYzNDMwMTUsLTIw
-MDIwNDUyNTldfQ==
+eyJoaXN0b3J5IjpbMTAzNDEzMzE3NCwtOTM1NDY2NTU3LDE1Mz
+M1ODE1ODAsLTE1NDg5MDcxNyw5NTczMjYwNTgsLTE5MzIxMzMz
+NTIsNTAzMDI0NDIxLC0zMjIwNDg4MjgsLTE4NzkxOTAzNzAsMT
+cxMzg4OTA4NCwtMTI0ODk5NDg3OCwtMTMzNDc2MDk4OCw3OTAw
+MzgxMTIsLTk4MjE0NzcyNSwtODk0MzI3Mjc1LC0yMTQyNTQzMj
+Q1LDY0MDUwNjY1NCwtMjAwMjA0NTI1OSwxODY2MzQzMDE1LC0y
+MDAyMDQ1MjU5XX0=
 -->
