@@ -53,7 +53,7 @@ There exists two types of hypervisor: native(or bare metal) and hosted.
 ![Hypervisor types](https://github.com/msangel/msangel.github.io/raw/master/resources/docker/hypervisor.png "Hypervisor types")
 
 #### Native hypervisor
-Native hypervisor is installed right on top of the underlying machine’s hardware (so, in this case, there is no host OS, there are only guest OS’s). This is usually installed on a machine on which the whole purpose was to run many virtual machines. The hypervisor here have its own device drivers and interact with hardware directly. Such hypervisors are faster, simpler and hence more stable.
+The native hypervisor is installed right on top of the underlying machine’s hardware (so, in this case, there is no host OS, there are only guest OS’s). This is usually installed on a machine on which the whole purpose was to run many virtual machines. The hypervisor here has its own device drivers and interact with hardware directly. Such hypervisors are faster, simpler, and hence more stable.
 
 Examples:
 [antsleOS](https://antsle.com/all/os-used-in-antsle/), [Xen](https://xenproject.org/), [XCP-ng](https://xcp-ng.org/), [Oracle VM Server](https://www.oracle.com/virtualization/vm-server-for-x86/), [Microsoft Hyper-V](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/hyper-v-technology-overview), [Xbox One system software](https://direct.playstation.com/en-us/ps5), [VMware ESX/ESXi](https://www.vmware.com/products/esxi-and-esx.html) and many more
@@ -141,11 +141,11 @@ The mentined above "Union File sysytem" built on top of   "Copy-On-Write" princi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyNjQ5ODA1MCw5NTczMjYwNTgsLTE5Mz
-IxMzMzNTIsNTAzMDI0NDIxLC0zMjIwNDg4MjgsLTE4NzkxOTAz
-NzAsMTcxMzg4OTA4NCwtMTI0ODk5NDg3OCwtMTMzNDc2MDk4OC
-w3OTAwMzgxMTIsLTk4MjE0NzcyNSwtODk0MzI3Mjc1LC0yMTQy
-NTQzMjQ1LDY0MDUwNjY1NCwtMjAwMjA0NTI1OSwxODY2MzQzMD
-E1LC0yMDAyMDQ1MjU5LC0yMDAyMDQ1MjU5LDU0ODExNDI1NCwt
-ODg0MDQxMDY2XX0=
+eyJoaXN0b3J5IjpbNTQ1NjA4NzIzLDk1NzMyNjA1OCwtMTkzMj
+EzMzM1Miw1MDMwMjQ0MjEsLTMyMjA0ODgyOCwtMTg3OTE5MDM3
+MCwxNzEzODg5MDg0LC0xMjQ4OTk0ODc4LC0xMzM0NzYwOTg4LD
+c5MDAzODExMiwtOTgyMTQ3NzI1LC04OTQzMjcyNzUsLTIxNDI1
+NDMyNDUsNjQwNTA2NjU0LC0yMDAyMDQ1MjU5LDE4NjYzNDMwMT
+UsLTIwMDIwNDUyNTksLTIwMDIwNDUyNTksNTQ4MTE0MjU0LC04
+ODQwNDEwNjZdfQ==
 -->
