@@ -48,11 +48,6 @@ The root place in virtual servers took hypervisor.
 ### Hypervisor
 The hypervisor, also referred to as Virtual Machine Manager (VMM), is what enables virtualization (running several operating systems on one physical computer). It allows the host computer to share its resources between VMs([link](https://www.vmware.com/topics/glossary/content/hypervisor)).
 There exists two types of hypervisor: native(or bare metal) and hosted.
-<style>
-img {
-	background-color: white;
-}
-</style>
 ![Hypervisor types](https://github.com/msangel/msangel.github.io/raw/master/_drafts/docker/hypervisor.png "Hypervisor types")
 
 #### Native hypervisor
@@ -116,11 +111,11 @@ The docker have
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzE5NTgxODUzLC0yMDAyMDQ1MjU5LDU0OD
-ExNDI1NCwtODg0MDQxMDY2LC0yMDkyODg4NzY4LC05NDkxNTEw
-OTMsLTE2NzA3NDAyNzIsNzY3OTY4Nzk2LC0yMjkyODIwMDAsMz
-E4MDEzNjI2LC0zMTA3NDQ3NDcsLTExMTc5MzU3NjgsLTIxMjk1
-MzQ0Myw0NDgwMzAxNzcsNzI5NTk1MjI4LC05MDkxOTg3MzgsLT
-g2OTEzODEyOCwtMjExMzc3OTc5NiwtNzk2NjY4MjQzLDEzNzcy
-MTAxODZdfQ==
+eyJoaXN0b3J5IjpbLTIwMDIwNDUyNTksLTIwMDIwNDUyNTksNT
+Q4MTE0MjU0LC04ODQwNDEwNjYsLTIwOTI4ODg3NjgsLTk0OTE1
+MTA5MywtMTY3MDc0MDI3Miw3Njc5Njg3OTYsLTIyOTI4MjAwMC
+wzMTgwMTM2MjYsLTMxMDc0NDc0NywtMTExNzkzNTc2OCwtMjEy
+OTUzNDQzLDQ0ODAzMDE3Nyw3Mjk1OTUyMjgsLTkwOTE5ODczOC
+wtODY5MTM4MTI4LC0yMTEzNzc5Nzk2LC03OTY2NjgyNDMsMTM3
+NzIxMDE4Nl19
 -->
