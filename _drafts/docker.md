@@ -103,19 +103,19 @@ Docker allows isolating a process at multiple levels through namespaces and util
 - **uts** provides dedicated hostname per process tree (bootstrap from system values)
 - **ipc** (inter-process communication)provides dedicated shared memory
 - **seccomp** (secure computing mode with instructions checkings)
-- **selinux**/**apparmor** (Security-Enhanced Linux / "Application Armor") - linux kernel security modules
+- **selinux**/**apparmor** (Security-Enhanced Linux / "Application Armor") — linux kernel security modules
 - **ulimits** (number of open file descriptors per process)
-- **Union File Systems** allows to represent result of multiple leyered filesystem with single filesystem 
+- **Union File Systems** allows to represent result of multiple layers of filesystems as a single filesystem, where usually only latest layer is for writting. 
 
 The docker have 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQwNTA2NjU0LDc5ODA3MDY5OCwtMjAwMj
-A0NTI1OSwxODY2MzQzMDE1LC0yMDAyMDQ1MjU5LC0yMDAyMDQ1
-MjU5LDU0ODExNDI1NCwtODg0MDQxMDY2LC0yMDkyODg4NzY4LC
-05NDkxNTEwOTMsLTE2NzA3NDAyNzIsNzY3OTY4Nzk2LC0yMjky
-ODIwMDAsMzE4MDEzNjI2LC0zMTA3NDQ3NDcsLTExMTc5MzU3Nj
-gsLTIxMjk1MzQ0Myw0NDgwMzAxNzcsNzI5NTk1MjI4LC05MDkx
-OTg3MzhdfQ==
+eyJoaXN0b3J5IjpbLTIxNDI1NDMyNDUsNjQwNTA2NjU0LC0yMD
+AyMDQ1MjU5LDE4NjYzNDMwMTUsLTIwMDIwNDUyNTksLTIwMDIw
+NDUyNTksNTQ4MTE0MjU0LC04ODQwNDEwNjYsLTIwOTI4ODg3Nj
+gsLTk0OTE1MTA5MywtMTY3MDc0MDI3Miw3Njc5Njg3OTYsLTIy
+OTI4MjAwMCwzMTgwMTM2MjYsLTMxMDc0NDc0NywtMTExNzkzNT
+c2OCwtMjEyOTUzNDQzLDQ0ODAzMDE3Nyw3Mjk1OTUyMjgsLTkw
+OTE5ODczOF19
 -->
