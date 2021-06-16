@@ -29,16 +29,16 @@ And so docker allows to combine wishes of both sides, it's like an interaction c
 Server operations have to care about only one thing. They have to support deploying containers. So they are satisfied. Developers are happy too. They can develop with whatever the fad of the day is and then just stick it into a container and throw it over the wall to operations.
 
 So docker allows to solve this matrix in a very straightforward way:
-![Matrix solved](https://github.com/msangel/msangel.github.io/raw/master/resources/docker/the_matrix_of_hell_solved.png "Matrix solved")This is really cool approach. But technologies were like that not from the beginning. Hosting have long and very complex history. And that have the impact on the docker. I pretty sure we must overview some basics of hosting history for understanding what requirements and problem exist prior docker.
+![Matrix solved](https://github.com/msangel/msangel.github.io/raw/master/resources/docker/the_matrix_of_hell_solved.png "Matrix solved")This is really cool approach. But technologies were like that not from the beginning. Hosting has a long and very complex history. And that has an impact on the docker. I'm pretty sure we must overview some basics of hosting history for understanding what requirements and problems exist prior to docker.
 
 ## Hosting history
 
 First sites and services were hosted on office computers. Well, you can even imagine how many problems there were with this approach. Staring from "I accidentally turned it off" to real power supply stability issues.
-After, the dns-providers starts providing additional service for hosting, as add-on service. And it's a good point, as dns-servers anyway must work 24/7 with extreme stability, so the companies running that knew well how to achieve this stability for sites and services of their users.
+After, the DNS-providers starts providing additional service for hosting, as add-on service. And it's a good point, as DNS-servers anyway must work 24/7 with extreme stability, so the companies running that knew well how to achieve this stability for sites and services of their users.
 Quite fast the specialization took the place and so appears entire data centers with dedicated computers (dedicated servers). Still, the prices for that were not flexible and because of usually low utilization of the server per user, the same computers start to sell to many people, of course with some isolation level between user's data. These isolation requirements cause appearing and evolution of virtual server software.
 
 ## About virtual servers
-The virtual servers are software that allow to run another virtual emulated computer as any regular application. And as far as that cumputer is emulated, its environment also emulated, so running any programs in it will not harm you primary operation system(if you have one, as steping a bit forward, I can said that there exists virtual servers applications that run directly on hardware and don't requires OS to be installed).
+The virtual servers are software that allow to run another virtual emulated computer as any regular application. And as far as that computer is emulated, its environment also emulated, so running any programs in it will not harm you primary operation system(if you have one, as steping a bit forward, I can said that there exists virtual servers applications that run directly on hardware and don't requires OS to be installed).
 The advantages of vitrual servers are:
 1. managed environment (including choice of operating system)
 2. the required amount of resources (cheaper where possible)
@@ -141,11 +141,11 @@ The mentined above "Union File sysytem" built on top of   "Copy-On-Write" princi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTgwODAzNyw5NTczMjYwNTgsLTE5Mz
-IxMzMzNTIsNTAzMDI0NDIxLC0zMjIwNDg4MjgsLTE4NzkxOTAz
-NzAsMTcxMzg4OTA4NCwtMTI0ODk5NDg3OCwtMTMzNDc2MDk4OC
-w3OTAwMzgxMTIsLTk4MjE0NzcyNSwtODk0MzI3Mjc1LC0yMTQy
-NTQzMjQ1LDY0MDUwNjY1NCwtMjAwMjA0NTI1OSwxODY2MzQzMD
-E1LC0yMDAyMDQ1MjU5LC0yMDAyMDQ1MjU5LDU0ODExNDI1NCwt
-ODg0MDQxMDY2XX0=
+eyJoaXN0b3J5IjpbLTE4NzE0MjUzMDAsOTU3MzI2MDU4LC0xOT
+MyMTMzMzUyLDUwMzAyNDQyMSwtMzIyMDQ4ODI4LC0xODc5MTkw
+MzcwLDE3MTM4ODkwODQsLTEyNDg5OTQ4NzgsLTEzMzQ3NjA5OD
+gsNzkwMDM4MTEyLC05ODIxNDc3MjUsLTg5NDMyNzI3NSwtMjE0
+MjU0MzI0NSw2NDA1MDY2NTQsLTIwMDIwNDUyNTksMTg2NjM0Mz
+AxNSwtMjAwMjA0NTI1OSwtMjAwMjA0NTI1OSw1NDgxMTQyNTQs
+LTg4NDA0MTA2Nl19
 -->
