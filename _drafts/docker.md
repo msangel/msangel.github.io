@@ -133,18 +133,18 @@ Terminology:
 ![Docker use](https://k.co.ua/resources/docker/docker_use.png "Docker use")
 
 The mentined above "Union File sysytem" built on top of   "Copy-On-Write" principle and allows hight reuse of file systems.
-![Union File System](https://k.co.ua/resources/docker/copy_on_write_fs.png "Union File System")For example: if you build most of your applications as PHP site driven by Apache Http Server, the single layer with Apache server will be shared between all of your applications. And the files of each of that application everytime will be putted on top of that base at runtime time.
+![Union File System](https://k.co.ua/resources/docker/copy_on_write_fs.png "Union File System")For example: if you build most of your applications as PHP site driven by Apache Http Server, the single layer with Apache server will be shared between all of your applications. And the files of each of those applications every time will be put on top of that base at runtime time.
 
 ## Conclusion
 A docker is a powerful tool that is created to solve many common developer's problems and tasks. But before using it, nice to have some insights on how we came to it and how it is working inside, actually, this article about that.
 You may also want to look at the more practical part of using docker in my docker cookbook.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQzNDA5NjQsOTE1OTAwNjA0LC05MzU0Nj
-Y1NTcsMTUzMzU4MTU4MCwtMTU0ODkwNzE3LDk1NzMyNjA1OCwt
-MTkzMjEzMzM1Miw1MDMwMjQ0MjEsLTMyMjA0ODgyOCwtMTg3OT
-E5MDM3MCwxNzEzODg5MDg0LC0xMjQ4OTk0ODc4LC0xMzM0NzYw
-OTg4LDc5MDAzODExMiwtOTgyMTQ3NzI1LC04OTQzMjcyNzUsLT
-IxNDI1NDMyNDUsNjQwNTA2NjU0LC0yMDAyMDQ1MjU5LDE4NjYz
-NDMwMTVdfQ==
+eyJoaXN0b3J5IjpbMjAyNzEwMDk0MCw5MTU5MDA2MDQsLTkzNT
+Q2NjU1NywxNTMzNTgxNTgwLC0xNTQ4OTA3MTcsOTU3MzI2MDU4
+LC0xOTMyMTMzMzUyLDUwMzAyNDQyMSwtMzIyMDQ4ODI4LC0xOD
+c5MTkwMzcwLDE3MTM4ODkwODQsLTEyNDg5OTQ4NzgsLTEzMzQ3
+NjA5ODgsNzkwMDM4MTEyLC05ODIxNDc3MjUsLTg5NDMyNzI3NS
+wtMjE0MjU0MzI0NSw2NDA1MDY2NTQsLTIwMDIwNDUyNTksMTg2
+NjM0MzAxNV19
 -->
