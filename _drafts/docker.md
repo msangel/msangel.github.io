@@ -114,12 +114,14 @@ Using this capabilities same time, docker provide these  advantages:
 - **Portable**: You can build locally, deploy to the cloud, and run anywhere.
 - **Scalable**: You can increase and automatically distribute container replicas.
 - **Stackable**: You can stack services vertically and on-the-fly.
-Still there exists some disadvatages: 
+Still there exists some disadvatages.
+First is security. Containers share the same hooks into the kernel, and that’s a problem because if there are any vulnerabilities in the kernel, then someone can get into other containers. Containers have not yet demonstrated that they can deliver the same secure boundaries that a VM still has.
+The next one is flexibility in OS choosing. There is no way to use windows apps under linux and visa versa. Also there even no way to use another kernel, rather than existed one. 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2Nzg3NTE3MCwtODk0MzI3Mjc1LC0yMT
+eyJoaXN0b3J5IjpbLTc4NjY2ODg5OSwtODk0MzI3Mjc1LC0yMT
 QyNTQzMjQ1LDY0MDUwNjY1NCwtMjAwMjA0NTI1OSwxODY2MzQz
 MDE1LC0yMDAyMDQ1MjU5LC0yMDAyMDQ1MjU5LDU0ODExNDI1NC
 wtODg0MDQxMDY2LC0yMDkyODg4NzY4LC05NDkxNTEwOTMsLTE2
