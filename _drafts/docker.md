@@ -119,13 +119,43 @@ First is **security**. Containers share the same hooks into the kernel, and that
 The next one is **flexibility in OS choosing**. There is no way to use windows apps under linux and visa versa. Also there even no way to use another kernel, rather than existed one. Yes, we can install an emulator of desired system in a container(like [wine](https://www.winehq.org/) in linux and [wsl](https://docs.microsoft.com/en-us/windows/wsl/) in windows), but that's will be another intermediate layer of abstraction. 
 
 ## Docker architecture
+Docker is implemented as a client-server system.
+
+Client is usually CLI app. Daemon is accessible via socket connection(TCP or UNIX) and simply provide controlling API. The client may, but does not have to, be on the same machine as the daemon.  
+
+Terminology:
+-   Host(also docker server) - the machine that is running the containers.
+    
+-   Image - a hierarchy of files, with  
+    meta-data for how to run a container.  
+    They are read-only. This give:
+    
+
+-   many instances of the same
+    
+-   you don't afraid of crashes
+    
+
+-   Container - a contained running process,  
+    started from an image.
+    
+-   Registry - a repository of images. It's a service that  
+    enables users to push images to it, make them public or  
+    private, and pull different images, all using the  
+    docker client CLI. Docker hub is a docker image registry  
+    provided by Docker, Inc itself. Alternatively, you can  
+    host your own docker registry.
+    
+-   Volume - storage outside the container.
+    
+-   Dockerfile - a script for creating images.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzkwMDM4MTEyLC05ODIxNDc3MjUsLTg5ND
-MyNzI3NSwtMjE0MjU0MzI0NSw2NDA1MDY2NTQsLTIwMDIwNDUy
-NTksMTg2NjM0MzAxNSwtMjAwMjA0NTI1OSwtMjAwMjA0NTI1OS
-w1NDgxMTQyNTQsLTg4NDA0MTA2NiwtMjA5Mjg4ODc2OCwtOTQ5
-MTUxMDkzLC0xNjcwNzQwMjcyLDc2Nzk2ODc5NiwtMjI5MjgyMD
-AwLDMxODAxMzYyNiwtMzEwNzQ0NzQ3LC0xMTE3OTM1NzY4LC0y
-MTI5NTM0NDNdfQ==
+eyJoaXN0b3J5IjpbLTIxNDk4MTY2MCw3OTAwMzgxMTIsLTk4Mj
+E0NzcyNSwtODk0MzI3Mjc1LC0yMTQyNTQzMjQ1LDY0MDUwNjY1
+NCwtMjAwMjA0NTI1OSwxODY2MzQzMDE1LC0yMDAyMDQ1MjU5LC
+0yMDAyMDQ1MjU5LDU0ODExNDI1NCwtODg0MDQxMDY2LC0yMDky
+ODg4NzY4LC05NDkxNTEwOTMsLTE2NzA3NDAyNzIsNzY3OTY4Nz
+k2LC0yMjkyODIwMDAsMzE4MDEzNjI2LC0zMTA3NDQ3NDcsLTEx
+MTc5MzU3NjhdfQ==
 -->
