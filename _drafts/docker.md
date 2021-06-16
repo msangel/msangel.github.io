@@ -137,14 +137,14 @@ The mentined above "Union File sysytem" built on top of   "Copy-On-Write" princi
 
 ## Conclusion
 The docker is powerfull tool that is created to solve many common developer's problems and tasks. But before using it, nice to have some insights on how we came to it and how it is working inside.
-You may also want to look on more practical part o
+You may also want to look on more practical part of using docker in my docker coockbook.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTE1OTAwNjA0LC0zMDA2MTYwMjEsLTkzNT
-Q2NjU1NywxNTMzNTgxNTgwLC0xNTQ4OTA3MTcsOTU3MzI2MDU4
-LC0xOTMyMTMzMzUyLDUwMzAyNDQyMSwtMzIyMDQ4ODI4LC0xOD
-c5MTkwMzcwLDE3MTM4ODkwODQsLTEyNDg5OTQ4NzgsLTEzMzQ3
-NjA5ODgsNzkwMDM4MTEyLC05ODIxNDc3MjUsLTg5NDMyNzI3NS
-wtMjE0MjU0MzI0NSw2NDA1MDY2NTQsLTIwMDIwNDUyNTksMTg2
-NjM0MzAxNV19
+eyJoaXN0b3J5IjpbMjQ0MTI0MjkzLDkxNTkwMDYwNCwtOTM1ND
+Y2NTU3LDE1MzM1ODE1ODAsLTE1NDg5MDcxNyw5NTczMjYwNTgs
+LTE5MzIxMzMzNTIsNTAzMDI0NDIxLC0zMjIwNDg4MjgsLTE4Nz
+kxOTAzNzAsMTcxMzg4OTA4NCwtMTI0ODk5NDg3OCwtMTMzNDc2
+MDk4OCw3OTAwMzgxMTIsLTk4MjE0NzcyNSwtODk0MzI3Mjc1LC
+0yMTQyNTQzMjQ1LDY0MDUwNjY1NCwtMjAwMjA0NTI1OSwxODY2
+MzQzMDE1XX0=
 -->
