@@ -487,10 +487,14 @@ body {
 }
 
 .blogpost .title {
-    margin-top: 60px;
-    margin-bottom: 25px;
-    color: #333333;
-    font-size: xxx-large;
+    color: #222;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 38px;
+    padding-bottom: 10px;
+    text-rendering: optimizelegibility;
+    text-decoration: none
 }
 
 .blogpost .date {
@@ -500,6 +504,13 @@ body {
 
 .blogpost h1 {
     color: rgb(98,99,95);
+}
+
+.blogpost h2 {
+    color: #222;
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 28px;
 }
 
 .blogpost a, .blogpost li:before {
