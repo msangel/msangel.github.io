@@ -179,33 +179,9 @@ body {
     }
 }
 
-.about .greeting {
-    font: normal normal normal 24px 'Open Sans',sans-serif;
-    color: #89BC23;
-}
-
-.about .greeting-col{
-    padding-bottom: 40px;
-}
-
-.about .greeting span.hello {
-    font: normal normal normal 75px 'Open Sans',sans-serif;
-    color: #89BC23;
-    text-transform: uppercase;
-    font-weight: bold;
-    position: relative;
-    left: -8px;
-}
-
-
 .about .maintext{
     padding-top: 35px;
     padding-bottom: 30px;
-}
-
-.about .maintext .greeting{
-    position: relative;
-    top: -25px;
 }
 
 .about .maintext p{
@@ -228,7 +204,7 @@ body {
     position: relative;
     padding: 0;
     min-height: 26px;
-    margin-top: 25px;
+    margin-top: 15px;
     border-radius: 0;
     font-size: 20px;
     text-transform: uppercase;
