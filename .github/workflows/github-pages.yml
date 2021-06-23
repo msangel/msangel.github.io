@@ -27,7 +27,7 @@ jobs:
           target_branch: 'gh-pages'
       - name: Copy CNAME
         run: |
-         git clone https://.:${{ secrets.GITHUB_TOKEN }}@github.com/msangel.github.io --depth 1 target
+         git clone https://.:${{ secrets.GITHUB_TOKEN }}@github.com/msangel/msangel.github.io --depth 1 target
          cp target/CNAME CNAME
          cd target
          git checkout gh-pages
