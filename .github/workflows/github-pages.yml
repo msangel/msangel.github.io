@@ -1,3 +1,5 @@
+# take a look here: https://github.com/jekyll/github-metadata/blob/8906f2b9c890f0aafef96423c7cd7e5047f7dae4/lib/jekyll-github-metadata/client.rb#L96-L97
+
 name: Build and deploy Jekyll site to GitHub Pages
 
 on:
