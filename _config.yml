@@ -20,4 +20,5 @@ kramdown:
 theme: jekyll-theme-primer
 google_analytics: UA-194224445-1
 repository: msangel/msangel.github.io
-github: [metadata]
+github:
+- metadata
