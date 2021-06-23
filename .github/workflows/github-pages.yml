@@ -25,8 +25,14 @@ jobs:
         with:
           token: ${{ secrets.JEKYLL_GITHUB_TOKEN }}
           target_branch: 'gh-pages'
-      - uses: planetoftheweb/copy-to-branches@v1
-        env:
-          key: master
-          branches: gh-pages
-          files: CNAME
+      - name: Copy CNAME
+        run: |
+         git clone https://.:${{ secrets.GITHUB_TOKEN }}@github.com/msangel.github.io --depth 1 target
+         cp target/CNAME CNAME
+         cd target
+         git checkout gh-pages
+         cp ./../CNAME CNAME
+         git add CNAME
+         git commit -m "restore CNAME"
+         git push
+        shell: bash
