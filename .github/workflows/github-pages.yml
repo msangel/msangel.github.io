@@ -25,3 +25,7 @@ jobs:
         with:
           token: ${{ secrets.JEKYLL_GITHUB_TOKEN }}
           target_branch: 'gh-pages'
+      - uses: planetoftheweb/copy-to-branches@v1
+        env:
+          branches: gh-pages
+          files: CNAME
