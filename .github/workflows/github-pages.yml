@@ -30,9 +30,10 @@ jobs:
          git clone https://.:${{ secrets.GITHUB_TOKEN }}@github.com/msangel/msangel.github.io --depth 1 target
          cp target/CNAME CNAME
          cd target
+         git fetch --depth 1 origin gh-pages:gh-pages
          git checkout gh-pages
          cp ./../CNAME CNAME
          git add CNAME
          git commit -m "restore CNAME"
-         git push
+         git push --set-upstream origin gh-pages
         shell: bash
