@@ -1,0 +1,41 @@
+# take a look here: https://github.com/jekyll/github-metadata/blob/8906f2b9c890f0aafef96423c7cd7e5047f7dae4/lib/jekyll-github-metadata/client.rb#L96-L97
+# and here: https://jekyllrb.com/docs/continuous-integration/github-actions/
+
+name: Build and deploy Jekyll site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  github-pages:
+    runs-on: ubuntu-latest
+    steps:
+    # https://github.com/marketplace/actions/jekyll-actions
+      - uses: actions/checkout@v2
+      # Use GitHub Actions' cache to shorten build times and decrease load on servers
+      - uses: actions/cache@v2
+        with:
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
+          restore-keys: |
+            ${{ runner.os }}-gems-
+      - uses: helaili/jekyll-action@v2
+        with:
+          token: ${{ secrets.JEKYLL_GITHUB_TOKEN }}
+          target_branch: 'gh-pages'
+      - name: Copy CNAME
+        run: |
+         git clone https://.:${{ secrets.GITHUB_TOKEN }}@github.com/msangel/msangel.github.io --depth 1 target
+         git config --global user.email "h6.msangel+site-builder@gmail.com"
+         git config --global user.name "Vasyl's script"
+         cp target/CNAME CNAME
+         cd target
+         git fetch --depth 1 origin gh-pages:gh-pages
+         git checkout gh-pages
+         cp ./../CNAME CNAME
+         git add CNAME
+         git commit -m "restore CNAME"
+         git push --set-upstream origin gh-pages
+        shell: bash
