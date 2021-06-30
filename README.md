@@ -19,9 +19,13 @@ Acoarding to [this instruction](https://docs.github.com/en/pages/setting-up-a-gi
 where `214` is a a version of `github-pages` from https://pages.github.com/versions/
   
  2. run `bundle install` for installing all dependencies of `github-pages`
- 3. run locally with: `bundle exec jekyll serve`
- 4. http://localhost:4000/ is your friend
+ 3. eventually! run `bundle update github-pages` for updating dependencies
+ 4. run locally with: `bundle exec jekyll serve`
+ 45. http://localhost:4000/ is your friend
 
 ## dev help
 * bootstrap docs: https://getbootstrap.com/docs/3.3/css/#grid
 * footer magic: https://matthewjamestaylor.com/bottom-footer
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNDAxODIzMjg1XX0=
+-->
