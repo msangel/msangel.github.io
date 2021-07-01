@@ -339,12 +339,13 @@ https://www.mojohaus.org/exec-maven-plugin/usage.html
 https://stackoverflow.com/questions/3491937/i-want-to-execute-shell-commands-from-mavens-pom-xml
 
 
-w
+where to use (docker hosting):
+
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzgyMjE5MSw4NDUzNDgwODYsMTc4NT
-k1MzMzOCwyMDYwMjQxNTcsLTIwNDU4MTMwODAsMTE5NjU2MDk5
-MSw4NjQ0NjAxODQsMzgzNDQ4MDgsLTM2MDk0MTk3OSwtNDUyMz
-kyOTMwLC0xODQ1MDU4NTU0LDc1MTcyNzQwMywtMTY0NDEwMzcw
-MF19
+eyJoaXN0b3J5IjpbLTEyNDM4OTg4NDQsODQ1MzQ4MDg2LDE3OD
+U5NTMzMzgsMjA2MDI0MTU3LC0yMDQ1ODEzMDgwLDExOTY1NjA5
+OTEsODY0NDYwMTg0LDM4MzQ0ODA4LC0zNjA5NDE5NzksLTQ1Mj
+M5MjkzMCwtMTg0NTA1ODU1NCw3NTE3Mjc0MDMsLTE2NDQxMDM3
+MDBdfQ==
 -->
