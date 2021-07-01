@@ -175,7 +175,7 @@ $ docker rmi     # removes an image.
 $ docker history # list changes of an image.
 
 Running containers
-
+When a container is started, the process gets a new writable layer in the union file system where it can execute.
 docker run -it --rm ubuntu
 --interactive (-i) – send stdin to the process.
 -tty (-t) – tell the process that a terminal(TeleTYpe) is present. This affects how the process outputs data and how it treats signals such as (Ctrl-C).
@@ -313,8 +313,8 @@ https://stackoverflow.com/questions/3491937/i-want-to-execute-shell-commands-fro
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4NTk1MzMzOCwyMDYwMjQxNTcsLTIwND
-U4MTMwODAsMTE5NjU2MDk5MSw4NjQ0NjAxODQsMzgzNDQ4MDgs
-LTM2MDk0MTk3OSwtNDUyMzkyOTMwLC0xODQ1MDU4NTU0LDc1MT
-cyNzQwMywtMTY0NDEwMzcwMF19
+eyJoaXN0b3J5IjpbMjAwOTcxMDk1MywxNzg1OTUzMzM4LDIwNj
+AyNDE1NywtMjA0NTgxMzA4MCwxMTk2NTYwOTkxLDg2NDQ2MDE4
+NCwzODM0NDgwOCwtMzYwOTQxOTc5LC00NTIzOTI5MzAsLTE4ND
+UwNTg1NTQsNzUxNzI3NDAzLC0xNjQ0MTAzNzAwXX0=
 -->
