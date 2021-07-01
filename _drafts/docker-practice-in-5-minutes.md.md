@@ -267,10 +267,17 @@ https://github.com/jwilder/dockerize
 https://www.kevinkuszyk.com/2016/11/28/connect-your-docker-client-to-a-remote-docker-host/
 https://www.freecodecamp.org/news/a-beginners-guide-to-docker-how-to-create-your-first-docker-application-cc03de9b639f/
 https://spring.io/guides/gs/spring-boot-docker/
+https://github.com/spring-guides/gs-spring-boot-docker/blob/main/complete/pom.xml
 https://hostadvice.com/how-to/how-to-limit-a-docker-containers-resources-on-ubuntu-18-04/
+https://docs.docker.com/config/daemon/
+https://www.surevine.com/building-docker-images-with-maven/
+https://gitlab.com/msangel/webhook/-/blob/brbrbr/Dockerfile
+https://codefresh.io/howtos/using-docker-maven-maven-docker/
+https://www.mojohaus.org/exec-maven-plugin/usage.html
+https://stackoverflow.com/questions/3491937/i-want-to-execute-shell-commands-from-mavens-pom-xml
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3NjE5OTE3NSwtMTg0NTA1ODU1NCw3NT
+eyJoaXN0b3J5IjpbLTQ1MjM5MjkzMCwtMTg0NTA1ODU1NCw3NT
 E3Mjc0MDMsLTE2NDQxMDM3MDBdfQ==
 -->
