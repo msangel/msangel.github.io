@@ -20,7 +20,7 @@ Before diving into the docker world, lets clarify basics about what Docker is:
 
 ## What it is, and why we need this
 
-Best description what is docker is: its lightweight virtual machine.
+Best description what is docker is: lightweight virtual machine.
 And we need it because allows us to run our applications in the same way and in the same environment whenever we have. Either this is Windows PC, Linux laptop, dedicated server or virtual hosting.  It's a common problem when developers create their software on their computer and so it can be run only on their computer. Docker creates an isolated environment that is the same everywhere.
 There exists a known "Matrix of hell" that show a wide variety of different systems and their different behavior on different hardware:
 
@@ -191,11 +191,11 @@ A docker is a powerful tool that is created to solve many common developer's pro
 You may also want to look at the more practical part of using docker in my docker cookbook.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxMTQyOTI2Nyw1Mzk1ODg5OTEsLTMwMj
-QxNzEwMiwyMDI3MTAwOTQwLDkxNTkwMDYwNCwtOTM1NDY2NTU3
-LDE1MzM1ODE1ODAsLTE1NDg5MDcxNyw5NTczMjYwNTgsLTE5Mz
-IxMzMzNTIsNTAzMDI0NDIxLC0zMjIwNDg4MjgsLTE4NzkxOTAz
-NzAsMTcxMzg4OTA4NCwtMTI0ODk5NDg3OCwtMTMzNDc2MDk4OC
-w3OTAwMzgxMTIsLTk4MjE0NzcyNSwtODk0MzI3Mjc1LC0yMTQy
-NTQzMjQ1XX0=
+eyJoaXN0b3J5IjpbLTIxMjM5ODQwMjcsNTM5NTg4OTkxLC0zMD
+I0MTcxMDIsMjAyNzEwMDk0MCw5MTU5MDA2MDQsLTkzNTQ2NjU1
+NywxNTMzNTgxNTgwLC0xNTQ4OTA3MTcsOTU3MzI2MDU4LC0xOT
+MyMTMzMzUyLDUwMzAyNDQyMSwtMzIyMDQ4ODI4LC0xODc5MTkw
+MzcwLDE3MTM4ODkwODQsLTEyNDg5OTQ4NzgsLTEzMzQ3NjA5OD
+gsNzkwMDM4MTEyLC05ODIxNDc3MjUsLTg5NDMyNzI3NSwtMjE0
+MjU0MzI0NV19
 -->
