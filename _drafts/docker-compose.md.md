@@ -1,3 +1,8 @@
+---
+title: Docker Compose.md
+date: 2021-07-01 22:27:26.223000000 Z
+---
+
 
 Getting started with docker-compose
 ## Orchestration
