@@ -222,6 +222,18 @@ Use trusted images from your private repositories.
 Don't run containers as root, if possible.
 Treat root in a container as root outside a container
 
+sec on user sample for alpine
+https://wiki.alpinelinux.org/wiki/Setting_up_a_new_user
+```Dockerfile
+RUN addgroup -S app && adduser -S app -G app
+RUN mkdir -p /var/opt/app/logs
+RUN mkdir -p /opt/app
+RUN chown app:app -R /opt/app
+RUN chown app:app -R /var/opt/app/logs
+USER app:app
+WORKDIR /opt/app
+```
+
 
 
 Getting started with docker-machine
@@ -278,6 +290,6 @@ https://stackoverflow.com/questions/3491937/i-want-to-execute-shell-commands-fro
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1MjM5MjkzMCwtMTg0NTA1ODU1NCw3NT
-E3Mjc0MDMsLTE2NDQxMDM3MDBdfQ==
+eyJoaXN0b3J5IjpbLTM2MDk0MTk3OSwtNDUyMzkyOTMwLC0xOD
+Q1MDU4NTU0LDc1MTcyNzQwMywtMTY0NDEwMzcwMF19
 -->
