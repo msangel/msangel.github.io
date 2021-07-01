@@ -63,6 +63,91 @@ Registry commands:
   logout      Log out from a Docker registry
   pull        Pull an image or a repository from a registry
   push        Push an image or a repository to a registry
+  
+commonly used images:
+scratch – this is the ultimate base image and it has 0 files and 0 size.
+busybox – a minimal Unix weighing in at 2.5 MB.
+debian:stretch -  the latest Debian is at 101MB
+ubuntu:latest - latest LTS (19.04 disco)
+
+
+
+By commit changes
+$ docker run -i -t debian:jessie bash
+root@e6c7d21960:/# apt-get update
+root@e6c7d21960:/# apt-get install postgresql
+root@e6c7d21960:/# apt-get install node
+root@e6c7d21960:/# node --version
+root@e6c7d21960:/# curl https://iojs.org/dist/v1.2.0/iojs-v1.2.0-
+linux-x64.tar.gz -o iojs.tgz
+root@e6c7d21960:/# tar xzf iojs.tgz
+root@e6c7d21960:/# ls
+root@e6c7d21960:/# cd iojs-v1.2.0-linux-x64/
+root@e6c7d21960:/# ls
+root@e6c7d21960:/# cp -r * /usr/local/
+root@e6c7d21960:/# iojs --version
+1.2.0
+root@e6c7d21960:/# exit
+$ docker ps -l -q
+e6c7d21960
+$ docker commit e6c7d21960 postgres-iojs
+daeb0b76283eac2e0c7f7504bdde2d49c721a1b03a50f750ea9982464cfccb1e
+
+By writing script
+
+Create a special text file with name Dockerfile and 
+docker build <path of the folder with Dockerfile in it>.
+
+FROM openjdk:8-jdk-alpine
+WORKDIR /app # define current working directory (user.dir env for java)
+ADD . /app # add local content as new layer
+RUN some-script.sh # defaults to /bin/sh
+EXPOSE # ports, documentary instruction
+CMD # run this in the container on its creating, the container bound to this process
+
+
+By docjerfile
+FROM debian:jessie
+# Dockerfile for postgres-iojs
+
+RUN apt-get update
+RUN apt-get install -y postgresql
+RUN curl https://iojs.org/dist/iojs-v1.2.0.tgz -o iojs.tgz
+RUN tar xzf iojs.tgz
+RUN cp -r iojs-v1.2.0-linux-x64/* /usr/local
+
+build it:
+docker build -tag postgres-iojs .
+
+
+BUILD Commands:
+FROM – The image the new image will be based on.
+MAINTAINER – Name and email of the maintainer of this image.
+COPY – Copy a file or a directory into the image.
+ADD – Same as COPY, but handle URL:s and unpack tarballs automatically.
+RUN – Run a command inside the container, such as apt-get install.
+ONBUILD – Run commands when building an inherited Dockerfile.
+.dockerignore – Not a command, but it controls what files are added to the
+build context. Should include .git and other files not needed when building
+the image.
+
+RUN Commands
+CMD – Default command to run when running the container. Can be overridden
+with command line parameters.
+ENV – Set environment variable in the container.
+EXPOSE – Expose ports from the container. Must be explicitly exposed by the
+run command to the Host with -p or -P.
+VOLUME – Specify that a directory should be stored outside the union file
+system. If is not set with docker run -v it will be created in
+/var/lib/docker/volumes
+ENTRYPOINT – Specify a command that is not overridden by giving a new
+command with docker run image cmd. It is mostly used to give a default
+executable and use commands as parameters to it.
+Both BUILD and RUN Commands
+USER – Set the user for RUN, CMD and ENTRYPOINT.
+WORKDIR – Sets the working directory for RUN, CMD, ENTRYPOINT, ADD and
+COPY.
+
 
 
 Getting started with docker-machine
@@ -84,6 +169,6 @@ Docker swarm is another orchestration tool aimed to manage a cluster of docker h
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5MDYzNzg1MSw3NTE3Mjc0MDMsLTE2ND
-QxMDM3MDBdfQ==
+eyJoaXN0b3J5IjpbLTMwOTU0MTgsNzUxNzI3NDAzLC0xNjQ0MT
+AzNzAwXX0=
 -->
