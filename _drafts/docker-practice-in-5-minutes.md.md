@@ -69,7 +69,7 @@ Registry commands:
 commonly used images:
 scratch – this is the ultimate base image and it has 0 files and 0 size.
 busybox – a minimal Unix weighing in at 2.5 MB.
-debian:stretch -  the latest Debian is at 101MB
+debian:buster -  the latest Debian is at 101MB
 ubuntu:latest - latest LTS (19.04 disco)
 alpinelinux: https://alpinelinux.org/
 
@@ -298,7 +298,7 @@ https://stackoverflow.com/questions/3491937/i-want-to-execute-shell-commands-fro
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzgzNDQ4MDgsLTM2MDk0MTk3OSwtNDUyMz
-kyOTMwLC0xODQ1MDU4NTU0LDc1MTcyNzQwMywtMTY0NDEwMzcw
-MF19
+eyJoaXN0b3J5IjpbODY0NDYwMTg0LDM4MzQ0ODA4LC0zNjA5ND
+E5NzksLTQ1MjM5MjkzMCwtMTg0NTA1ODU1NCw3NTE3Mjc0MDMs
+LTE2NDQxMDM3MDBdfQ==
 -->
