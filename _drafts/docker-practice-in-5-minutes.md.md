@@ -212,7 +212,7 @@ $ docker run -v /var/lib/postgresql/data --name mydb postgres
 Start a backup container with the volumes taken from the mydb container
 $ docker run --volumes-from mydb backup
 
-Docker registry
+Docker registry (add image here)
 
 
 
@@ -236,6 +236,6 @@ Docker swarm is another orchestration tool aimed to manage a cluster of docker h
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1OTMyNTE3OSw3NTE3Mjc0MDMsLTE2ND
-QxMDM3MDBdfQ==
+eyJoaXN0b3J5IjpbLTEzMTM1ODY3NTAsNzUxNzI3NDAzLC0xNj
+Q0MTAzNzAwXX0=
 -->
