@@ -24,6 +24,7 @@ info commands
 ps          List containers
 ps -a
 // too long to list
+http://blog.jayway.com/wp-content/uploads/2015/03/docker-image.png
 
 manage containers
   attach      Attach local standard input, output, and error streams to a running container
@@ -326,8 +327,9 @@ https://stackoverflow.com/questions/3491937/i-want-to-execute-shell-commands-fro
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQ1MzQ4MDg2LDE3ODU5NTMzMzgsMjA2MD
-I0MTU3LC0yMDQ1ODEzMDgwLDExOTY1NjA5OTEsODY0NDYwMTg0
-LDM4MzQ0ODA4LC0zNjA5NDE5NzksLTQ1MjM5MjkzMCwtMTg0NT
-A1ODU1NCw3NTE3Mjc0MDMsLTE2NDQxMDM3MDBdfQ==
+eyJoaXN0b3J5IjpbMjc4MTQwODQyLDg0NTM0ODA4NiwxNzg1OT
+UzMzM4LDIwNjAyNDE1NywtMjA0NTgxMzA4MCwxMTk2NTYwOTkx
+LDg2NDQ2MDE4NCwzODM0NDgwOCwtMzYwOTQxOTc5LC00NTIzOT
+I5MzAsLTE4NDUwNTg1NTQsNzUxNzI3NDAzLC0xNjQ0MTAzNzAw
+XX0=
 -->
