@@ -71,6 +71,7 @@ scratch – this is the ultimate base image and it has 0 files and 0 size.
 busybox – a minimal Unix weighing in at 2.5 MB.
 debian:stretch -  the latest Debian is at 101MB
 ubuntu:latest - latest LTS (19.04 disco)
+alpinelinux: https://alpinelinux.org/
 
 
 
@@ -262,6 +263,6 @@ Docker swarm is another orchestration tool aimed to manage a cluster of docker h
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5NTMxMTk2OCw3NTE3Mjc0MDMsLTE2ND
-QxMDM3MDBdfQ==
+eyJoaXN0b3J5IjpbLTE4NDUwNTg1NTQsNzUxNzI3NDAzLC0xNj
+Q0MTAzNzAwXX0=
 -->
