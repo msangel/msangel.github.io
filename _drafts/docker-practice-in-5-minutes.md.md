@@ -151,6 +151,14 @@ USER – Set the user for RUN, CMD and ENTRYPOINT.
 WORKDIR – Sets the working directory for RUN, CMD, ENTRYPOINT, ADD and
 COPY.
 
+Commands for interacting with images
+$ docker images  # shows all images.
+$ docker import  # creates an image from a tarball.
+$ docker build   # creates image from Dockerfile.
+$ docker commit  # creates image from a container.
+$ docker rmi     # removes an image.
+$ docker history # list changes of an image.
+
 Running containers
 
 docker run -it --rm ubuntu
@@ -290,6 +298,7 @@ https://stackoverflow.com/questions/3491937/i-want-to-execute-shell-commands-fro
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2MDk0MTk3OSwtNDUyMzkyOTMwLC0xOD
-Q1MDU4NTU0LDc1MTcyNzQwMywtMTY0NDEwMzcwMF19
+eyJoaXN0b3J5IjpbMzgzNDQ4MDgsLTM2MDk0MTk3OSwtNDUyMz
+kyOTMwLC0xODQ1MDU4NTU0LDc1MTcyNzQwMywtMTY0NDEwMzcw
+MF19
 -->
