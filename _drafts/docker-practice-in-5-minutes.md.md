@@ -175,7 +175,20 @@ $ docker rmi     # removes an image.
 $ docker history # list changes of an image.
 
 Running containers
-When a container is started, the process gets a new writable layer in the union file system where it can execute.
+
+When a container is started, the process gets a new writable layer in the union file system where it can execute. It is also possible to make this layer read-only, forcing us to use volumes for all file output such as logging, and temp-files.
+Commands for interacting with containers
+$ docker create  # creates a container but does not start it.
+$ docker run     # creates and starts a container.
+$ docker stop    # stops it.
+$ docker start   # will start it again.
+$ docker restart # restarts a container.
+$ docker rm      # deletes a container.
+$ docker kill    # sends a SIGKILL to a container.
+$ docker attach  # will connect to a running container.
+$ docker wait    # blocks until container stops.
+$ docker exec    # executes a command in a running container.
+
 docker run -it --rm ubuntu
 --interactive (-i) – send stdin to the process.
 -tty (-t) – tell the process that a terminal(TeleTYpe) is present. This affects how the process outputs data and how it treats signals such as (Ctrl-C).
@@ -313,8 +326,8 @@ https://stackoverflow.com/questions/3491937/i-want-to-execute-shell-commands-fro
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwOTcxMDk1MywxNzg1OTUzMzM4LDIwNj
-AyNDE1NywtMjA0NTgxMzA4MCwxMTk2NTYwOTkxLDg2NDQ2MDE4
-NCwzODM0NDgwOCwtMzYwOTQxOTc5LC00NTIzOTI5MzAsLTE4ND
-UwNTg1NTQsNzUxNzI3NDAzLC0xNjQ0MTAzNzAwXX0=
+eyJoaXN0b3J5IjpbODQ1MzQ4MDg2LDE3ODU5NTMzMzgsMjA2MD
+I0MTU3LC0yMDQ1ODEzMDgwLDExOTY1NjA5OTEsODY0NDYwMTg0
+LDM4MzQ0ODA4LC0zNjA5NDE5NzksLTQ1MjM5MjkzMCwtMTg0NT
+A1ODU1NCw3NTE3Mjc0MDMsLTE2NDQxMDM3MDBdfQ==
 -->
