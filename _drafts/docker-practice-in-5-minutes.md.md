@@ -341,11 +341,10 @@ https://stackoverflow.com/questions/3491937/i-want-to-execute-shell-commands-fro
 
 where to use (docker hosting):
 
-> Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDM4OTg4NDQsODQ1MzQ4MDg2LDE3OD
-U5NTMzMzgsMjA2MDI0MTU3LC0yMDQ1ODEzMDgwLDExOTY1NjA5
-OTEsODY0NDYwMTg0LDM4MzQ0ODA4LC0zNjA5NDE5NzksLTQ1Mj
-M5MjkzMCwtMTg0NTA1ODU1NCw3NTE3Mjc0MDMsLTE2NDQxMDM3
-MDBdfQ==
+eyJoaXN0b3J5IjpbMjEyMTM0OTkyOCwtMTI0Mzg5ODg0NCw4ND
+UzNDgwODYsMTc4NTk1MzMzOCwyMDYwMjQxNTcsLTIwNDU4MTMw
+ODAsMTE5NjU2MDk5MSw4NjQ0NjAxODQsMzgzNDQ4MDgsLTM2MD
+k0MTk3OSwtNDUyMzkyOTMwLC0xODQ1MDU4NTU0LDc1MTcyNzQw
+MywtMTY0NDEwMzcwMF19
 -->
