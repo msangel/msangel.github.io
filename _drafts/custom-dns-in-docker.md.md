@@ -1,6 +1,6 @@
 ---
 title: Custom Dns In Docker.md
-date: 2021-07-01 11:18:21.582000000 Z
+date: 2021-07-01 11:18:21 Z
 ---
 
 Kubernetes solution:
