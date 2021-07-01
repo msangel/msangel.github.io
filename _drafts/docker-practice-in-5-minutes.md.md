@@ -3,7 +3,7 @@ title: Docker Practice In 5 Minutes.md
 date: 2021-07-01 11:01:04 Z
 ---
 
-todo: revrite fully:
+todo: revrite fully: https://sites.google.com/site/modernskyangel/in-progress/docker-in-review
 
 docker version
 
@@ -354,10 +354,10 @@ It fixes dependency hell.
 Containers are fast!
 Cluster solutions exists, but don't expect them to be seamless, yet!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4Nzk3NDA1OCw1MjIwNjUyNjMsMTI2OT
-Q1ODUyMywyMTIxMzQ5OTI4LC0xMjQzODk4ODQ0LDg0NTM0ODA4
-NiwxNzg1OTUzMzM4LDIwNjAyNDE1NywtMjA0NTgxMzA4MCwxMT
-k2NTYwOTkxLDg2NDQ2MDE4NCwzODM0NDgwOCwtMzYwOTQxOTc5
-LC00NTIzOTI5MzAsLTE4NDUwNTg1NTQsNzUxNzI3NDAzLC0xNj
-Q0MTAzNzAwXX0=
+eyJoaXN0b3J5IjpbNjYyNzEwMDUxLDExODc5NzQwNTgsNTIyMD
+Y1MjYzLDEyNjk0NTg1MjMsMjEyMTM0OTkyOCwtMTI0Mzg5ODg0
+NCw4NDUzNDgwODYsMTc4NTk1MzMzOCwyMDYwMjQxNTcsLTIwND
+U4MTMwODAsMTE5NjU2MDk5MSw4NjQ0NjAxODQsMzgzNDQ4MDgs
+LTM2MDk0MTk3OSwtNDUyMzkyOTMwLC0xODQ1MDU4NTU0LDc1MT
+cyNzQwMywtMTY0NDEwMzcwMF19
 -->
