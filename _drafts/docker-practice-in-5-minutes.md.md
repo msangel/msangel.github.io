@@ -234,7 +234,19 @@ EXPOSE 80 443
 
 limits:
 It is also possible to limit how much access the container has to the Host's resources.
-docker run --cpus=1.5 -cpuset-cpus=0,1 --cpu-shares 512 -m 256m -u=www nginx
+```
+# Limit the amount of memory
+$ docker run -m 256m yourapp
+
+# Limit the number of shares of the CPU this process uses (out of 1024)
+$ docker run --cpu-shares 512 mypp
+
+# Change the user for the process to www instead of root (good for security)
+$ docker run -u=www nginx
+```
+
+It is also possible to limit how much access the container has to the Host's resources.
+
  Run a shell inside the container with id 6f2c42c0
 $ docker exec -it 6f2c42c0 sh
 Networking in docker
@@ -336,10 +348,10 @@ It fixes dependency hell.
 Containers are fast!
 Cluster solutions exists, but don't expect them to be seamless, yet!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxOTUzMDUyNiw1MjIwNjUyNjMsMTI2OT
-Q1ODUyMywyMTIxMzQ5OTI4LC0xMjQzODk4ODQ0LDg0NTM0ODA4
-NiwxNzg1OTUzMzM4LDIwNjAyNDE1NywtMjA0NTgxMzA4MCwxMT
-k2NTYwOTkxLDg2NDQ2MDE4NCwzODM0NDgwOCwtMzYwOTQxOTc5
-LC00NTIzOTI5MzAsLTE4NDUwNTg1NTQsNzUxNzI3NDAzLC0xNj
-Q0MTAzNzAwXX0=
+eyJoaXN0b3J5IjpbODk0MTk3ODM2LDUyMjA2NTI2MywxMjY5ND
+U4NTIzLDIxMjEzNDk5MjgsLTEyNDM4OTg4NDQsODQ1MzQ4MDg2
+LDE3ODU5NTMzMzgsMjA2MDI0MTU3LC0yMDQ1ODEzMDgwLDExOT
+Y1NjA5OTEsODY0NDYwMTg0LDM4MzQ0ODA4LC0zNjA5NDE5Nzks
+LTQ1MjM5MjkzMCwtMTg0NTA1ODU1NCw3NTE3Mjc0MDMsLTE2ND
+QxMDM3MDBdfQ==
 -->
