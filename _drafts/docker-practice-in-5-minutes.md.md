@@ -209,7 +209,8 @@ $ docker run \
   -e MYSQL_PASSWORD=secret \
   --env-file ./mysql.env \
   mysql
- ```
+```
+
 publish port:
 Publish container port 80 on a random port on the Host
 $ docker run -p 80 nginx
@@ -258,6 +259,7 @@ $ docker run --volumes-from mydb backup
 Docker registry (add image here)
 
 security:
+
 Use trusted images from your private repositories.
 Don't run containers as root, if possible.
 Treat root in a container as root outside a container
@@ -313,6 +315,9 @@ Getting started with swarm mode
 https://docs.docker.com/engine/swarm/
 Docker swarm is another orchestration tool aimed to manage a cluster of docker hosts. While docker-compose managers multiple Docker containers within one docker host, docker swarm manages multiple docker hosts managing multiple Docker containers. Unlike docker-compose and docker-machine, docker swarm is not a standalone orchestration software. Swarm mode is built in docker engine and is managed through Docker client.
 
+resources:
+https://blog.jayway.com/2015/03/21/a-not-very-short-introduction-to-docker/
+___
 
 https://engineering.bitnami.com/articles/best-practices-writing-a-dockerfile.html
 https://github.com/jwilder/dockerize
@@ -330,9 +335,9 @@ https://stackoverflow.com/questions/3491937/i-want-to-execute-shell-commands-fro
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTUwNTIyNTcyLDg0NTM0ODA4NiwxNzg1OT
-UzMzM4LDIwNjAyNDE1NywtMjA0NTgxMzA4MCwxMTk2NTYwOTkx
-LDg2NDQ2MDE4NCwzODM0NDgwOCwtMzYwOTQxOTc5LC00NTIzOT
-I5MzAsLTE4NDUwNTg1NTQsNzUxNzI3NDAzLC0xNjQ0MTAzNzAw
-XX0=
+eyJoaXN0b3J5IjpbLTE3NjM5NjU2MDMsODQ1MzQ4MDg2LDE3OD
+U5NTMzMzgsMjA2MDI0MTU3LC0yMDQ1ODEzMDgwLDExOTY1NjA5
+OTEsODY0NDYwMTg0LDM4MzQ0ODA4LC0zNjA5NDE5NzksLTQ1Mj
+M5MjkzMCwtMTg0NTA1ODU1NCw3NTE3Mjc0MDMsLTE2NDQxMDM3
+MDBdfQ==
 -->
