@@ -125,7 +125,7 @@ build it:
 docker build -tag postgres-iojs .
 
 Since every command in the Dockerfile creates a new layer it is often better to run similar commands together. Group the commands with and and split them over several lines for readability.
-
+```
 FROM debian:jessie
 # Dockerfile for postgres-iojs
 
@@ -134,7 +134,7 @@ RUN apt-get update && \
   curl https://iojs.org/dist/iojs-v1.2.0.tgz -o iojs.tgz && \
   tar xzf iojs.tgz && \
   cp -r iojs-v1.2.0-linux-x64/* /usr/local
-
+```
 The ordering of the lines in the Dockerfile is important as Docker caches the intermediate images, in order to speed up image building. Order your Dockerfile by putting the lines that change more often at the bottom of the file.
 
 The Dockerfile supports 13 commands. Some of the commands are used when you build the image and some are used when you run a container from the image. Here is a list of the commands and when they are used.
@@ -178,6 +178,8 @@ $ docker history # list changes of an image.
 Running containers
 
 When a container is started, the process gets a new writable layer in the union file system where it can execute. It is also possible to make this layer read-only, forcing us to use volumes for all file output such as logging, and temp-files.
+
+
 Commands for interacting with containers
 $ docker create  # creates a container but does not start it.
 $ docker run     # creates and starts a container.
@@ -199,14 +201,15 @@ docker run -d hadoop
 --detached (-d) – Run in detached mode, you can attach again with docker
 attach
 
-Run a named container and pass it some environment variables
+Run a named container and pass it some environment variables with –env
+```
 $ docker run \
   --name mydb \
   --env MYSQL_USER=db-user \
   -e MYSQL_PASSWORD=secret \
   --env-file ./mysql.env \
   mysql
-
+ ```
 publish port:
 Publish container port 80 on a random port on the Host
 $ docker run -p 80 nginx
@@ -327,7 +330,7 @@ https://stackoverflow.com/questions/3491937/i-want-to-execute-shell-commands-fro
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjc4MTQwODQyLDg0NTM0ODA4NiwxNzg1OT
+eyJoaXN0b3J5IjpbOTUwNTIyNTcyLDg0NTM0ODA4NiwxNzg1OT
 UzMzM4LDIwNjAyNDE1NywtMjA0NTgxMzA4MCwxMTk2NTYwOTkx
 LDg2NDQ2MDE4NCwzODM0NDgwOCwtMzYwOTQxOTc5LC00NTIzOT
 I5MzAsLTE4NDUwNTg1NTQsNzUxNzI3NDAzLC0xNjQ0MTAzNzAw
