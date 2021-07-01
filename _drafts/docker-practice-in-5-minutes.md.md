@@ -223,6 +223,14 @@ $ docker run -p 127.0.0.1:8080:80 nginx
  
 Publish all EXPOSEd ports from the container on random ports on the Host
 $ docker run -P nginx
+The nginx image, for example, exposes port 80 and 443.
+
+```Dockerfile
+FROM debian:wheezy
+MAINTAINER NGINX "docker-maint@nginx.com"
+EXPOSE 80 443
+```
+
 
 limits:
 docker run --cpus=1.5 -cpuset-cpus=0,1 --cpu-shares 512 -m 256m -u=www nginx
@@ -323,9 +331,10 @@ It fixes dependency hell.
 Containers are fast!
 Cluster solutions exists, but don't expect them to be seamless, yet!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTIyMDY1MjYzLDEyNjk0NTg1MjMsMjEyMT
-M0OTkyOCwtMTI0Mzg5ODg0NCw4NDUzNDgwODYsMTc4NTk1MzMz
-OCwyMDYwMjQxNTcsLTIwNDU4MTMwODAsMTE5NjU2MDk5MSw4Nj
-Q0NjAxODQsMzgzNDQ4MDgsLTM2MDk0MTk3OSwtNDUyMzkyOTMw
-LC0xODQ1MDU4NTU0LDc1MTcyNzQwMywtMTY0NDEwMzcwMF19
+eyJoaXN0b3J5IjpbODQzNjAxNyw1MjIwNjUyNjMsMTI2OTQ1OD
+UyMywyMTIxMzQ5OTI4LC0xMjQzODk4ODQ0LDg0NTM0ODA4Niwx
+Nzg1OTUzMzM4LDIwNjAyNDE1NywtMjA0NTgxMzA4MCwxMTk2NT
+YwOTkxLDg2NDQ2MDE4NCwzODM0NDgwOCwtMzYwOTQxOTc5LC00
+NTIzOTI5MzAsLTE4NDUwNTg1NTQsNzUxNzI3NDAzLC0xNjQ0MT
+AzNzAwXX0=
 -->
