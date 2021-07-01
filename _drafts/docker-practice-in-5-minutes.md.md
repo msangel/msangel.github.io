@@ -214,6 +214,10 @@ $ docker run --volumes-from mydb backup
 
 Docker registry (add image here)
 
+security:
+Use trusted images from your private repositories.
+Don't run containers as root, if possible.
+Treat root in a container as root outside a container
 
 
 
@@ -229,6 +233,24 @@ just clone the repository and run:
 ```shell
 docker-compose up
 ```
+docker-compose
+docker-compose.yml
+web:
+  build: .
+  command: python app.py
+  ports:
+    - "5000:5000"
+  volumes:
+    - .:/code
+  links:
+    - redis
+redis:
+  image: redis
+
+>docker-compose up
+>docker-compose up -d
+>docker-compose ps
+>docker-compose scale
 
 Getting started with swarm mode
 https://docs.docker.com/engine/swarm/
@@ -236,6 +258,6 @@ Docker swarm is another orchestration tool aimed to manage a cluster of docker h
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTM1ODY3NTAsNzUxNzI3NDAzLC0xNj
+eyJoaXN0b3J5IjpbLTIwMjA0OTc1OTAsNzUxNzI3NDAzLC0xNj
 Q0MTAzNzAwXX0=
 -->
