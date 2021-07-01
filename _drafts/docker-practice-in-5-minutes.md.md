@@ -1,6 +1,6 @@
 ---
 title: Docker Practice In 5 Minutes.md
-date: 2021-07-01 11:01:04.148000000 Z
+date: 2021-07-01 11:01:04 Z
 ---
 
 todo: revrite fully:
