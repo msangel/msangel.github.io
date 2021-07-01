@@ -233,6 +233,7 @@ EXPOSE 80 443
 
 
 limits:
+It is also possible to limit how much access the container has to the Host's resources.
 docker run --cpus=1.5 -cpuset-cpus=0,1 --cpu-shares 512 -m 256m -u=www nginx
  Run a shell inside the container with id 6f2c42c0
 $ docker exec -it 6f2c42c0 sh
@@ -250,7 +251,11 @@ $ docker run --name mydb postgres
 
 Link mydb as db into myqpp
 $ docker run --link mydb:db myapp
+Linking a container sets up networking from the linking container into the linked container. It does two things:
 
+It updates the /etc/hosts with the link name given to the container, db in the example above. Making it possible to access the container by the name db. This is very good.
+It creates environment variables for the EXPOSEd ports. This is practically useless since I can access the same port by using a hostname:port combination anyway.
+The linked networking is not constrained by the ports EXPOSEd by the image. All ports are available to the linking container.
 
 
 Keeping state. Volumes.
@@ -331,10 +336,10 @@ It fixes dependency hell.
 Containers are fast!
 Cluster solutions exists, but don't expect them to be seamless, yet!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQzNjAxNyw1MjIwNjUyNjMsMTI2OTQ1OD
-UyMywyMTIxMzQ5OTI4LC0xMjQzODk4ODQ0LDg0NTM0ODA4Niwx
-Nzg1OTUzMzM4LDIwNjAyNDE1NywtMjA0NTgxMzA4MCwxMTk2NT
-YwOTkxLDg2NDQ2MDE4NCwzODM0NDgwOCwtMzYwOTQxOTc5LC00
-NTIzOTI5MzAsLTE4NDUwNTg1NTQsNzUxNzI3NDAzLC0xNjQ0MT
-AzNzAwXX0=
+eyJoaXN0b3J5IjpbLTUxOTUzMDUyNiw1MjIwNjUyNjMsMTI2OT
+Q1ODUyMywyMTIxMzQ5OTI4LC0xMjQzODk4ODQ0LDg0NTM0ODA4
+NiwxNzg1OTUzMzM4LDIwNjAyNDE1NywtMjA0NTgxMzA4MCwxMT
+k2NTYwOTkxLDg2NDQ2MDE4NCwzODM0NDgwOCwtMzYwOTQxOTc5
+LC00NTIzOTI5MzAsLTE4NDUwNTg1NTQsNzUxNzI3NDAzLC0xNj
+Q0MTAzNzAwXX0=
 -->
