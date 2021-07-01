@@ -109,6 +109,7 @@ EXPOSE # ports, documentary instruction
 CMD # run this in the container on its creating, the container bound to this process
 
 
+
 By docjerfile
 FROM debian:jessie
 Dockerfile for postgres-iojs
@@ -121,6 +122,7 @@ RUN cp -r iojs-v1.2.0-linux-x64/* /usr/local
 
 build it:
 docker build -tag postgres-iojs .
+
 
 
 BUILD Commands:
@@ -298,7 +300,7 @@ https://stackoverflow.com/questions/3491937/i-want-to-execute-shell-commands-fro
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5NjU2MDk5MSw4NjQ0NjAxODQsMzgzND
-Q4MDgsLTM2MDk0MTk3OSwtNDUyMzkyOTMwLC0xODQ1MDU4NTU0
-LDc1MTcyNzQwMywtMTY0NDEwMzcwMF19
+eyJoaXN0b3J5IjpbLTQzNjgxNjM4MSwxMTk2NTYwOTkxLDg2ND
+Q2MDE4NCwzODM0NDgwOCwtMzYwOTQxOTc5LC00NTIzOTI5MzAs
+LTE4NDUwNTg1NTQsNzUxNzI3NDAzLC0xNjQ0MTAzNzAwXX0=
 -->
