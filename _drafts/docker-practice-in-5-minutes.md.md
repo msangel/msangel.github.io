@@ -259,7 +259,11 @@ $ docker run --volumes-from mydb backup
 Docker registry (add image here)
 
 security:
-
+Since docker is complex software with many coponents, the security issues are appears there eventually, but they got fixed.
+known issues:
+-   Image signatures are not properly verified.
+- 
+Advices:
 Use trusted images from your private repositories.
 Don't run containers as root, if possible.
 Treat root in a container as root outside a container
@@ -335,7 +339,7 @@ https://stackoverflow.com/questions/3491937/i-want-to-execute-shell-commands-fro
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjM5NjU2MDMsODQ1MzQ4MDg2LDE3OD
+eyJoaXN0b3J5IjpbLTExOTQwODcyMzksODQ1MzQ4MDg2LDE3OD
 U5NTMzMzgsMjA2MDI0MTU3LC0yMDQ1ODEzMDgwLDExOTY1NjA5
 OTEsODY0NDYwMTg0LDM4MzQ0ODA4LC0zNjA5NDE5NzksLTQ1Mj
 M5MjkzMCwtMTg0NTA1ODU1NCw3NTE3Mjc0MDMsLTE2NDQxMDM3
