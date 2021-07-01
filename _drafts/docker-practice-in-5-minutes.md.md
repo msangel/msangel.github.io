@@ -247,8 +247,14 @@ $ docker run -u=www nginx
 
 It is also possible to limit how much access the container has to the Host's resources.
 
- Run a shell inside the container with id 6f2c42c0
+docker exec allows us to run commands inside already running containers. This is very good for debugging among other things.
+
+```
+# Run a shell inside the container with id 6f2c42c0
 $ docker exec -it 6f2c42c0 sh
+```
+
+
 Networking in docker
 create:
 docker network create <some name>
@@ -348,10 +354,10 @@ It fixes dependency hell.
 Containers are fast!
 Cluster solutions exists, but don't expect them to be seamless, yet!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODk0MTk3ODM2LDUyMjA2NTI2MywxMjY5ND
-U4NTIzLDIxMjEzNDk5MjgsLTEyNDM4OTg4NDQsODQ1MzQ4MDg2
-LDE3ODU5NTMzMzgsMjA2MDI0MTU3LC0yMDQ1ODEzMDgwLDExOT
-Y1NjA5OTEsODY0NDYwMTg0LDM4MzQ0ODA4LC0zNjA5NDE5Nzks
-LTQ1MjM5MjkzMCwtMTg0NTA1ODU1NCw3NTE3Mjc0MDMsLTE2ND
-QxMDM3MDBdfQ==
+eyJoaXN0b3J5IjpbMTE4Nzk3NDA1OCw1MjIwNjUyNjMsMTI2OT
+Q1ODUyMywyMTIxMzQ5OTI4LC0xMjQzODk4ODQ0LDg0NTM0ODA4
+NiwxNzg1OTUzMzM4LDIwNjAyNDE1NywtMjA0NTgxMzA4MCwxMT
+k2NTYwOTkxLDg2NDQ2MDE4NCwzODM0NDgwOCwtMzYwOTQxOTc5
+LC00NTIzOTI5MzAsLTE4NDUwNTg1NTQsNzUxNzI3NDAzLC0xNj
+Q0MTAzNzAwXX0=
 -->
