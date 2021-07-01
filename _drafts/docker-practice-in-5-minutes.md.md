@@ -136,7 +136,7 @@ RUN apt-get update && \
 
 The ordering of the lines in the Dockerfile is important as Docker caches the intermediate images, in order to speed up image building. Order your Dockerfile by putting the lines that change more often at the bottom of the file.
 
-
+The Dockerfile supports 13 commands
 BUILD Commands:
 FROM – The image the new image will be based on.
 MAINTAINER – Name and email of the maintainer of this image.
@@ -312,7 +312,8 @@ https://stackoverflow.com/questions/3491937/i-want-to-execute-shell-commands-fro
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDU4MTMwODAsMTE5NjU2MDk5MSw4Nj
-Q0NjAxODQsMzgzNDQ4MDgsLTM2MDk0MTk3OSwtNDUyMzkyOTMw
-LC0xODQ1MDU4NTU0LDc1MTcyNzQwMywtMTY0NDEwMzcwMF19
+eyJoaXN0b3J5IjpbMjA2MDI0MTU3LC0yMDQ1ODEzMDgwLDExOT
+Y1NjA5OTEsODY0NDYwMTg0LDM4MzQ0ODA4LC0zNjA5NDE5Nzks
+LTQ1MjM5MjkzMCwtMTg0NTA1ODU1NCw3NTE3Mjc0MDMsLTE2ND
+QxMDM3MDBdfQ==
 -->
