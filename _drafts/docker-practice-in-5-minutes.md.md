@@ -261,8 +261,26 @@ Getting started with swarm mode
 https://docs.docker.com/engine/swarm/
 Docker swarm is another orchestration tool aimed to manage a cluster of docker hosts. While docker-compose managers multiple Docker containers within one docker host, docker swarm manages multiple docker hosts managing multiple Docker containers. Unlike docker-compose and docker-machine, docker swarm is not a standalone orchestration software. Swarm mode is built in docker engine and is managed through Docker client.
 
+
+Bitnami Engineering: Best practices writing a Dockerfile
+https://github.com/jwilder/dockerize
+https://www.kevinkuszyk.com/2016/11/28/connect-your-docker-client-to-a-remote-docker-host/
+https://medium.com/the-code-review/top-10-docker-run-command-options-you-cant-live-without-a-reference-d256834e86c1
+https://medium.com/the-code-review/top-10-docker-commands-you-cant-live-without-54fb6377f481
+Docker’s detached mode for beginners – freeCodeCamp.org
+Getting Started · Spring Boot with Docker
+How to limit a docker container’s resources on ubuntu 18.04 | HostAdvice
+Configure and troubleshoot the Docker daemon | Docker Documentation
+Building Docker images with Maven – Surevine
+Integrations · Settings · msangel / webhook · GitLab
+gs-spring-boot-docker/pom.xml at master · spring-guides/gs-spring-boot-docker
+https://codefresh.io/howtos/using-docker-maven-maven-docker/
+Exec Maven Plugin – Usage
+https://stackoverflow.com/questions/3491937/i-want-to-execute-shell-commands-from-mavens-pom-xml
+https://github.com/Azure-Samples/multicontainerwordpress
+
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDUwNTg1NTQsNzUxNzI3NDAzLC0xNj
-Q0MTAzNzAwXX0=
+eyJoaXN0b3J5IjpbLTM0MTcyMzQ4MiwtMTg0NTA1ODU1NCw3NT
+E3Mjc0MDMsLTE2NDQxMDM3MDBdfQ==
 -->
