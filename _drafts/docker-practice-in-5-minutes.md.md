@@ -108,7 +108,7 @@ CMD # run this in the container on its creating, the container bound to this pro
 
 By docjerfile
 FROM debian:jessie
-# Dockerfile for postgres-iojs
+Dockerfile for postgres-iojs
 
 RUN apt-get update
 RUN apt-get install -y postgresql
@@ -148,6 +148,73 @@ USER – Set the user for RUN, CMD and ENTRYPOINT.
 WORKDIR – Sets the working directory for RUN, CMD, ENTRYPOINT, ADD and
 COPY.
 
+Running containers
+
+docker run -it --rm ubuntu
+--interactive (-i) – send stdin to the process.
+-tty (-t) – tell the process that a terminal(TeleTYpe) is present. This affects how the process outputs data and how it treats signals such as (Ctrl-C).
+--rm – remove the container on exit.
+
+docker run -d hadoop
+--detached (-d) – Run in detached mode, you can attach again with docker
+attach
+
+Run a named container and pass it some environment variables
+$ docker run \
+  --name mydb \
+  --env MYSQL_USER=db-user \
+  -e MYSQL_PASSWORD=secret \
+  --env-file ./mysql.env \
+  mysql
+
+publish port:
+Publish container port 80 on a random port on the Host
+$ docker run -p 80 nginx
+ 
+Publish container port 80 on port 8080 on the Host
+$ docker run -p 8080:80 nginx
+ 
+Publish container port 80 on port 8080 on the localhost interface on the Host
+$ docker run -p 127.0.0.1:8080:80 nginx
+ 
+Publish all EXPOSEd ports from the container on random ports on the Host
+$ docker run -P nginx
+
+limits:
+docker run --cpus=1.5 -cpuset-cpus=0,1 --cpu-shares 512 -m 256m -u=www nginx
+ Run a shell inside the container with id 6f2c42c0
+$ docker exec -it 6f2c42c0 sh
+Networking in docker
+create:
+docker network create <some name>
+list:
+docker network list
+run container with a network:
+docker run -d --net <networkName>
+
+linking:
+Start a postgres container, named mydb
+$ docker run --name mydb postgres
+
+Link mydb as db into myqpp
+$ docker run --link mydb:db myapp
+
+
+
+Keeping state. Volumes.
+map folders:
+docker run -d -v /folder-on-host-machine/data/db:/data/db — net=myTestNetwork mongo
+
+mount volumes from another container
+Start a db container
+$ docker run -v /var/lib/postgresql/data --name mydb postgres
+
+Start a backup container with the volumes taken from the mydb container
+$ docker run --volumes-from mydb backup
+
+Docker registry
+
+
 
 
 Getting started with docker-machine
@@ -169,6 +236,6 @@ Docker swarm is another orchestration tool aimed to manage a cluster of docker h
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwOTU0MTgsNzUxNzI3NDAzLC0xNjQ0MT
-AzNzAwXX0=
+eyJoaXN0b3J5IjpbLTU1OTMyNTE3OSw3NTE3Mjc0MDMsLTE2ND
+QxMDM3MDBdfQ==
 -->
