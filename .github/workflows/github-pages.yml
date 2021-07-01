@@ -41,7 +41,7 @@ jobs:
            cp ./../CNAME CNAME
            git add CNAME
            git commit -m "restore CNAME"
-           git push --set-upstream origin gh-pages
+           git push --set-upstream origin gh-pages || echo "error is fine"
           shell: bash
           timeout_seconds: 15
           max_attempts: 3
