@@ -5,6 +5,64 @@ date: 2021-07-01 11:01:04.148000000 Z
 
 todo: revrite fully:
 
+Getting started with docker
+https://docs.docker.com/engine/reference/commandline/docker/
+>docker
+
+docker <Management Command> <Sub-Command <Opts/Args>
+
+Management Commands:
+docker container # manage containers
+docker image # manage images
+docker network # manage network
+docker system # misc system info and commands
+
+
+info commands
+ps          List containers
+ps -a
+// too long to list
+
+manage containers
+  attach      Attach local standard input, output, and error streams to a running container
+  exec        Run a command in a running container
+  create      Create a new container
+  kill        Kill one or more running containers
+  rm          Remove one or more containers
+  rename      Rename a container
+  start       Start one or more stopped containers
+  stop        Stop one or more running containers
+  restart     Restart one or more containers
+  pause       Pause all processes within one or more containers
+  unpause     Unpause all processes within one or more containers
+  run         Run a command in a new container
+  wait        Block until one or more containers stop, then print their exit codes
+
+
+fs commands
+  cp          Copy files/folders between a container and the local filesystem
+  export      Export a container's filesystem as a tar archive
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  diff        Inspect changes to files or directories on a container's filesystem
+  import      Import the contents from a tarball to create a filesystem image 
+
+
+Commands for interacting with images
+$ docker images  # shows all images.
+$ docker import  # creates an image from a tarball.
+$ docker build   # creates image from Dockerfile.
+$ docker commit  # creates image from a container.
+$ docker rmi     # removes an image.
+$ docker history # list changes of an image.
+$ docker load # load an image from a tar archive or STDIN
+
+
+Registry commands:
+  login       Log in to a Docker registry
+  search      Search the Docker Hub for images
+  logout      Log out from a Docker registry
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
 
 
 Getting started with docker-machine
@@ -26,6 +84,6 @@ Docker swarm is another orchestration tool aimed to manage a cluster of docker h
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzQ3NjE5MTAsNzUxNzI3NDAzLC0xNj
-Q0MTAzNzAwXX0=
+eyJoaXN0b3J5IjpbLTI5MDYzNzg1MSw3NTE3Mjc0MDMsLTE2ND
+QxMDM3MDBdfQ==
 -->
