@@ -123,6 +123,18 @@ RUN cp -r iojs-v1.2.0-linux-x64/* /usr/local
 build it:
 docker build -tag postgres-iojs .
 
+Since every command in the Dockerfile creates a new layer it is often better to run similar commands together. Group the commands with and and split them over several lines for readability.
+
+FROM debian:jessie
+# Dockerfile for postgres-iojs
+
+RUN apt-get update && \
+  apt-get install postgresql && \
+  curl https://iojs.org/dist/iojs-v1.2.0.tgz -o iojs.tgz && \
+  tar xzf iojs.tgz && \
+  cp -r iojs-v1.2.0-linux-x64/* /usr/local
+
+The ordering of the lines in the Dockerfile is important as Docker caches the intermediate images, in order to speed up image building. Order your Dockerfile by putting the lines that change more often at the bottom of the file.
 
 
 BUILD Commands:
@@ -300,7 +312,7 @@ https://stackoverflow.com/questions/3491937/i-want-to-execute-shell-commands-fro
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzNjgxNjM4MSwxMTk2NTYwOTkxLDg2ND
-Q2MDE4NCwzODM0NDgwOCwtMzYwOTQxOTc5LC00NTIzOTI5MzAs
-LTE4NDUwNTg1NTQsNzUxNzI3NDAzLC0xNjQ0MTAzNzAwXX0=
+eyJoaXN0b3J5IjpbLTIwNDU4MTMwODAsMTE5NjU2MDk5MSw4Nj
+Q0NjAxODQsMzgzNDQ4MDgsLTM2MDk0MTk3OSwtNDUyMzkyOTMw
+LC0xODQ1MDU4NTU0LDc1MTcyNzQwMywtMTY0NDEwMzcwMF19
 -->
