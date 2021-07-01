@@ -44,6 +44,7 @@ This is really cool approach. But technologies were like that not from the begin
 First sites and services were hosted on office computers. Well, you can even imagine how many problems there were with this approach. Staring from "I accidentally turned it off" to real power supply stability issues.
 After, the DNS-providers starts providing additional service for hosting, as add-on service. And it's a good point, as DNS-servers anyway must work 24/7 with extreme stability, so the companies running that knew well how to achieve this stability for sites and services of their users.
 Quite fast the specialization took the place and so appears entire data centers with dedicated computers (dedicated servers). Still, the prices for that were not flexible and because of usually low utilization of the server per user, the same computers start to sell to many people, of course with some isolation level between user's data. These isolation requirements cause appearing and evolution of virtual server software.
+Another possible scenario thise days was to buy phisical server for own usage and put it to data-center. But that was way to expensive, and wats worst, general utilic
 
 ## About virtual servers
 The virtual servers are software that allows running another virtual emulated computer as any regular application. And as far as that computer is emulated, its environment also emulated, so running any programs in it will not harm your primary operation system(if you have one, as stepping a bit forward, I can say that there exist virtual servers that run directly on hardware and don't require OS to be installed).
@@ -191,11 +192,11 @@ A docker is a powerful tool that is created to solve many common developer's pro
 You may also want to look at the more practical part of using docker in my docker cookbook.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjM5ODQwMjcsNTM5NTg4OTkxLC0zMD
-I0MTcxMDIsMjAyNzEwMDk0MCw5MTU5MDA2MDQsLTkzNTQ2NjU1
-NywxNTMzNTgxNTgwLC0xNTQ4OTA3MTcsOTU3MzI2MDU4LC0xOT
-MyMTMzMzUyLDUwMzAyNDQyMSwtMzIyMDQ4ODI4LC0xODc5MTkw
-MzcwLDE3MTM4ODkwODQsLTEyNDg5OTQ4NzgsLTEzMzQ3NjA5OD
-gsNzkwMDM4MTEyLC05ODIxNDc3MjUsLTg5NDMyNzI3NSwtMjE0
-MjU0MzI0NV19
+eyJoaXN0b3J5IjpbMTk2NTQ5MDA3MiwtMjEyMzk4NDAyNyw1Mz
+k1ODg5OTEsLTMwMjQxNzEwMiwyMDI3MTAwOTQwLDkxNTkwMDYw
+NCwtOTM1NDY2NTU3LDE1MzM1ODE1ODAsLTE1NDg5MDcxNyw5NT
+czMjYwNTgsLTE5MzIxMzMzNTIsNTAzMDI0NDIxLC0zMjIwNDg4
+MjgsLTE4NzkxOTAzNzAsMTcxMzg4OTA4NCwtMTI0ODk5NDg3OC
+wtMTMzNDc2MDk4OCw3OTAwMzgxMTIsLTk4MjE0NzcyNSwtODk0
+MzI3Mjc1XX0=
 -->
