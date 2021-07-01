@@ -5,6 +5,8 @@ date: 2021-07-01 11:01:04 Z
 
 todo: revrite fully:
 
+docker version
+
 Getting started with docker
 https://docs.docker.com/engine/reference/commandline/docker/
 >docker
@@ -224,6 +226,8 @@ Treat root in a container as root outside a container
 Getting started with docker-machine
 https://docs.docker.com/machine/reference/
 Docker machine is an orchestration tool that allows you to manage multiple docker hosts. It lets you provision multiple virtual docker hosts locally, or on the cloud, and manage them with docker-machine commands. You can start, restart, and inspect managed hosts. You can point docker client to one of the hosts and then manage daemon on that host directly
+`docker-machine ip`
+`docker-machine env msangel-host`
 
 Getting started with docker-compose
 https://docs.docker.com/compose/reference/overview/
@@ -258,6 +262,6 @@ Docker swarm is another orchestration tool aimed to manage a cluster of docker h
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjA0OTc1OTAsNzUxNzI3NDAzLC0xNj
-Q0MTAzNzAwXX0=
+eyJoaXN0b3J5IjpbLTc5NTMxMTk2OCw3NTE3Mjc0MDMsLTE2ND
+QxMDM3MDBdfQ==
 -->
