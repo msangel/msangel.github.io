@@ -107,7 +107,6 @@ On the Host running the Docker Engine all the processes running are visible. _Th
 
 Running processes on Host for a Docker Engine
 $ pstree docker
-
 -+= /docker
 |--= /bin/sh
 |--= node server.js
@@ -192,11 +191,11 @@ A docker is a powerful tool that is created to solve many common developer's pro
 You may also want to look at the more practical part of using docker in my docker cookbook.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTM5NTg4OTkxLC0zMDI0MTcxMDIsMjAyNz
-EwMDk0MCw5MTU5MDA2MDQsLTkzNTQ2NjU1NywxNTMzNTgxNTgw
-LC0xNTQ4OTA3MTcsOTU3MzI2MDU4LC0xOTMyMTMzMzUyLDUwMz
-AyNDQyMSwtMzIyMDQ4ODI4LC0xODc5MTkwMzcwLDE3MTM4ODkw
-ODQsLTEyNDg5OTQ4NzgsLTEzMzQ3NjA5ODgsNzkwMDM4MTEyLC
-05ODIxNDc3MjUsLTg5NDMyNzI3NSwtMjE0MjU0MzI0NSw2NDA1
-MDY2NTRdfQ==
+eyJoaXN0b3J5IjpbLTgxMTQyOTI2Nyw1Mzk1ODg5OTEsLTMwMj
+QxNzEwMiwyMDI3MTAwOTQwLDkxNTkwMDYwNCwtOTM1NDY2NTU3
+LDE1MzM1ODE1ODAsLTE1NDg5MDcxNyw5NTczMjYwNTgsLTE5Mz
+IxMzMzNTIsNTAzMDI0NDIxLC0zMjIwNDg4MjgsLTE4NzkxOTAz
+NzAsMTcxMzg4OTA4NCwtMTI0ODk5NDg3OCwtMTMzNDc2MDk4OC
+w3OTAwMzgxMTIsLTk4MjE0NzcyNSwtODk0MzI3Mjc1LC0yMTQy
+NTQzMjQ1XX0=
 -->
