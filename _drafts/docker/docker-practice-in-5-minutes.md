@@ -400,8 +400,8 @@ ___
 to review: 
  - https://github.com/jwilder/dockerize
 
+___
 
-https://www.freecodecamp.org/news/a-beginners-guide-to-docker-how-to-create-your-first-docker-application-cc03de9b639f/
 https://spring.io/guides/gs/spring-boot-docker/
 https://github.com/spring-guides/gs-spring-boot-docker/blob/main/complete/pom.xml
 https://hostadvice.com/how-to/how-to-limit-a-docker-containers-resources-on-ubuntu-18-04/
@@ -422,11 +422,11 @@ It fixes dependency hell.
 Containers are fast!
 Cluster solutions exists, but don't expect them to be seamless, yet!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwMDM1NTM2OSw2NjAzMjcyMDAsLTI5OD
-UwMTY2NCw2NjI3MTAwNTEsMTE4Nzk3NDA1OCw1MjIwNjUyNjMs
-MTI2OTQ1ODUyMywyMTIxMzQ5OTI4LC0xMjQzODk4ODQ0LDg0NT
-M0ODA4NiwxNzg1OTUzMzM4LDIwNjAyNDE1NywtMjA0NTgxMzA4
-MCwxMTk2NTYwOTkxLDg2NDQ2MDE4NCwzODM0NDgwOCwtMzYwOT
-QxOTc5LC00NTIzOTI5MzAsLTE4NDUwNTg1NTQsNzUxNzI3NDAz
-XX0=
+eyJoaXN0b3J5IjpbLTE3ODYwMTgzNzgsNjYwMzI3MjAwLC0yOT
+g1MDE2NjQsNjYyNzEwMDUxLDExODc5NzQwNTgsNTIyMDY1MjYz
+LDEyNjk0NTg1MjMsMjEyMTM0OTkyOCwtMTI0Mzg5ODg0NCw4ND
+UzNDgwODYsMTc4NTk1MzMzOCwyMDYwMjQxNTcsLTIwNDU4MTMw
+ODAsMTE5NjU2MDk5MSw4NjQ0NjAxODQsMzgzNDQ4MDgsLTM2MD
+k0MTk3OSwtNDUyMzkyOTMwLC0xODQ1MDU4NTU0LDc1MTcyNzQw
+M119
 -->
