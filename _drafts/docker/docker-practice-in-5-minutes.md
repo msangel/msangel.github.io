@@ -13,6 +13,9 @@ complex sample with volume, enviroupment values, args, redefined entrypoint and 
 Concepts
 
 Create image
+
+base: alpine/ubuntu flavours
+
 by commiting chages
 why its bad
 
@@ -440,11 +443,11 @@ It fixes dependency hell.
 Containers are fast!
 Cluster solutions exists, but don't expect them to be seamless, yet!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3NTg3ODIxNSwtNzcyOTI4OTQzLC0xNT
-E1NjA0OTIxLC0xNzg2MDE4Mzc4LDY2MDMyNzIwMCwtMjk4NTAx
-NjY0LDY2MjcxMDA1MSwxMTg3OTc0MDU4LDUyMjA2NTI2MywxMj
-Y5NDU4NTIzLDIxMjEzNDk5MjgsLTEyNDM4OTg4NDQsODQ1MzQ4
-MDg2LDE3ODU5NTMzMzgsMjA2MDI0MTU3LC0yMDQ1ODEzMDgwLD
-ExOTY1NjA5OTEsODY0NDYwMTg0LDM4MzQ0ODA4LC0zNjA5NDE5
-NzldfQ==
+eyJoaXN0b3J5IjpbLTE4NjA1MDQwODMsLTc3MjkyODk0MywtMT
+UxNTYwNDkyMSwtMTc4NjAxODM3OCw2NjAzMjcyMDAsLTI5ODUw
+MTY2NCw2NjI3MTAwNTEsMTE4Nzk3NDA1OCw1MjIwNjUyNjMsMT
+I2OTQ1ODUyMywyMTIxMzQ5OTI4LC0xMjQzODk4ODQ0LDg0NTM0
+ODA4NiwxNzg1OTUzMzM4LDIwNjAyNDE1NywtMjA0NTgxMzA4MC
+wxMTk2NTYwOTkxLDg2NDQ2MDE4NCwzODM0NDgwOCwtMzYwOTQx
+OTc5XX0=
 -->
