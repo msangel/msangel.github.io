@@ -397,8 +397,10 @@ resources:
  - https://engineering.bitnami.com/articles/best-practices-writing-a-dockerfile.html
 
 ___
+to review: 
+ - https://github.com/jwilder/dockerize
 
-https://github.com/jwilder/dockerize
+
 https://www.kevinkuszyk.com/2016/11/28/connect-your-docker-client-to-a-remote-docker-host/
 https://www.freecodecamp.org/news/a-beginners-guide-to-docker-how-to-create-your-first-docker-application-cc03de9b639f/
 https://spring.io/guides/gs/spring-boot-docker/
@@ -421,11 +423,11 @@ It fixes dependency hell.
 Containers are fast!
 Cluster solutions exists, but don't expect them to be seamless, yet!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjYwMzI3MjAwLC0yOTg1MDE2NjQsNjYyNz
-EwMDUxLDExODc5NzQwNTgsNTIyMDY1MjYzLDEyNjk0NTg1MjMs
-MjEyMTM0OTkyOCwtMTI0Mzg5ODg0NCw4NDUzNDgwODYsMTc4NT
-k1MzMzOCwyMDYwMjQxNTcsLTIwNDU4MTMwODAsMTE5NjU2MDk5
-MSw4NjQ0NjAxODQsMzgzNDQ4MDgsLTM2MDk0MTk3OSwtNDUyMz
-kyOTMwLC0xODQ1MDU4NTU0LDc1MTcyNzQwMywtMTY0NDEwMzcw
-MF19
+eyJoaXN0b3J5IjpbMTc2MDA2MjcwNCw2NjAzMjcyMDAsLTI5OD
+UwMTY2NCw2NjI3MTAwNTEsMTE4Nzk3NDA1OCw1MjIwNjUyNjMs
+MTI2OTQ1ODUyMywyMTIxMzQ5OTI4LC0xMjQzODk4ODQ0LDg0NT
+M0ODA4NiwxNzg1OTUzMzM4LDIwNjAyNDE1NywtMjA0NTgxMzA4
+MCwxMTk2NTYwOTkxLDg2NDQ2MDE4NCwzODM0NDgwOCwtMzYwOT
+QxOTc5LC00NTIzOTI5MzAsLTE4NDUwNTg1NTQsNzUxNzI3NDAz
+XX0=
 -->
