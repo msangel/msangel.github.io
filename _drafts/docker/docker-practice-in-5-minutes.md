@@ -393,6 +393,7 @@ Docker swarm is another orchestration tool aimed to manage a cluster of docker h
 
 resources:
 https://blog.jayway.com/2015/03/21/a-not-very-short-introduction-to-docker/
+https://engineering.bitnami.com/articles/best-practices-writing-a-dockerfile.html
 
 ___
 
@@ -420,10 +421,11 @@ It fixes dependency hell.
 Containers are fast!
 Cluster solutions exists, but don't expect them to be seamless, yet!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5ODUwMTY2NCw2NjI3MTAwNTEsMTE4Nz
-k3NDA1OCw1MjIwNjUyNjMsMTI2OTQ1ODUyMywyMTIxMzQ5OTI4
-LC0xMjQzODk4ODQ0LDg0NTM0ODA4NiwxNzg1OTUzMzM4LDIwNj
-AyNDE1NywtMjA0NTgxMzA4MCwxMTk2NTYwOTkxLDg2NDQ2MDE4
-NCwzODM0NDgwOCwtMzYwOTQxOTc5LC00NTIzOTI5MzAsLTE4ND
-UwNTg1NTQsNzUxNzI3NDAzLC0xNjQ0MTAzNzAwXX0=
+eyJoaXN0b3J5IjpbMTg4NTYxMDYwMiwtMjk4NTAxNjY0LDY2Mj
+cxMDA1MSwxMTg3OTc0MDU4LDUyMjA2NTI2MywxMjY5NDU4NTIz
+LDIxMjEzNDk5MjgsLTEyNDM4OTg4NDQsODQ1MzQ4MDg2LDE3OD
+U5NTMzMzgsMjA2MDI0MTU3LC0yMDQ1ODEzMDgwLDExOTY1NjA5
+OTEsODY0NDYwMTg0LDM4MzQ0ODA4LC0zNjA5NDE5NzksLTQ1Mj
+M5MjkzMCwtMTg0NTA1ODU1NCw3NTE3Mjc0MDMsLTE2NDQxMDM3
+MDBdfQ==
 -->
