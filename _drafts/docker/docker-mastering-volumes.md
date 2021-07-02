@@ -1,7 +1,7 @@
 add image here
 Volumes provide persistent storage outside the container. That means the data will not be saved if you commit the new image.
 
-# Start a new nginx container with /var/log as a volume
+Start a new nginx container with /var/log as a volume
 $ docker run  -v /var/log nginx
 
 Since the directory of the host is not given, the volume is created in
@@ -23,5 +23,5 @@ $ docker run --volumes-from mydb backup
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyMDY0OTk1Nl19
+eyJoaXN0b3J5IjpbOTI4NjA5OTkxXX0=
 -->
