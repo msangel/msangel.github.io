@@ -9,7 +9,7 @@ Since the directory of the host is not given, the volume is created in
 
 The exact name of the directory can be found by running docker inspect container-id.
 
-# Start a new nginx container with /var/log as a volume mapped to /tmp on Host
+Start a new nginx container with /var/log as a volume mapped to /tmp on Host
 $ docker run -v /tmp:/var/log nginx
 
 It is also possible to mount volumes from another container with --volumes-from.
@@ -23,5 +23,5 @@ $ docker run --volumes-from mydb backup
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTI4NjA5OTkxXX0=
+eyJoaXN0b3J5IjpbLTM2NDQ0NDc5Nl19
 -->
