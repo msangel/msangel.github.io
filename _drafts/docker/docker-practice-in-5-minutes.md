@@ -403,7 +403,7 @@ to review:
 
 ___
 
-https://spring.io/guides/gs/spring-boot-docker/
+
 https://github.com/spring-guides/gs-spring-boot-docker/blob/main/complete/pom.xml
 https://hostadvice.com/how-to/how-to-limit-a-docker-containers-resources-on-ubuntu-18-04/
 https://docs.docker.com/config/daemon/
@@ -423,11 +423,11 @@ It fixes dependency hell.
 Containers are fast!
 Cluster solutions exists, but don't expect them to be seamless, yet!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTU2MDQ5MjEsLTE3ODYwMTgzNzgsNj
-YwMzI3MjAwLC0yOTg1MDE2NjQsNjYyNzEwMDUxLDExODc5NzQw
-NTgsNTIyMDY1MjYzLDEyNjk0NTg1MjMsMjEyMTM0OTkyOCwtMT
-I0Mzg5ODg0NCw4NDUzNDgwODYsMTc4NTk1MzMzOCwyMDYwMjQx
-NTcsLTIwNDU4MTMwODAsMTE5NjU2MDk5MSw4NjQ0NjAxODQsMz
-gzNDQ4MDgsLTM2MDk0MTk3OSwtNDUyMzkyOTMwLC0xODQ1MDU4
-NTU0XX0=
+eyJoaXN0b3J5IjpbLTMxOTEwMTUsLTE1MTU2MDQ5MjEsLTE3OD
+YwMTgzNzgsNjYwMzI3MjAwLC0yOTg1MDE2NjQsNjYyNzEwMDUx
+LDExODc5NzQwNTgsNTIyMDY1MjYzLDEyNjk0NTg1MjMsMjEyMT
+M0OTkyOCwtMTI0Mzg5ODg0NCw4NDUzNDgwODYsMTc4NTk1MzMz
+OCwyMDYwMjQxNTcsLTIwNDU4MTMwODAsMTE5NjU2MDk5MSw4Nj
+Q0NjAxODQsMzgzNDQ4MDgsLTM2MDk0MTk3OSwtNDUyMzkyOTMw
+XX0=
 -->
