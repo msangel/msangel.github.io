@@ -260,6 +260,7 @@ $ docker exec -it 6f2c42c0 sh
 Docker registry (add image here)
 
 security(hacker photo here):
+todo: default docker user?
 Since docker is complex software with many coponents, the security issues are appears there eventually, but they got fixed.
 known issues:
 -   Image signatures are not properly verified.
@@ -422,11 +423,11 @@ It fixes dependency hell.
 Containers are fast!
 Cluster solutions exists, but don't expect them to be seamless, yet!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODYwMTgzNzgsNjYwMzI3MjAwLC0yOT
-g1MDE2NjQsNjYyNzEwMDUxLDExODc5NzQwNTgsNTIyMDY1MjYz
-LDEyNjk0NTg1MjMsMjEyMTM0OTkyOCwtMTI0Mzg5ODg0NCw4ND
-UzNDgwODYsMTc4NTk1MzMzOCwyMDYwMjQxNTcsLTIwNDU4MTMw
-ODAsMTE5NjU2MDk5MSw4NjQ0NjAxODQsMzgzNDQ4MDgsLTM2MD
-k0MTk3OSwtNDUyMzkyOTMwLC0xODQ1MDU4NTU0LDc1MTcyNzQw
-M119
+eyJoaXN0b3J5IjpbLTE1MTU2MDQ5MjEsLTE3ODYwMTgzNzgsNj
+YwMzI3MjAwLC0yOTg1MDE2NjQsNjYyNzEwMDUxLDExODc5NzQw
+NTgsNTIyMDY1MjYzLDEyNjk0NTg1MjMsMjEyMTM0OTkyOCwtMT
+I0Mzg5ODg0NCw4NDUzNDgwODYsMTc4NTk1MzMzOCwyMDYwMjQx
+NTcsLTIwNDU4MTMwODAsMTE5NjU2MDk5MSw4NjQ0NjAxODQsMz
+gzNDQ4MDgsLTM2MDk0MTk3OSwtNDUyMzkyOTMwLC0xODQ1MDU4
+NTU0XX0=
 -->
