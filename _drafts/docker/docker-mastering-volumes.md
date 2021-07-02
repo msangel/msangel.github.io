@@ -21,7 +21,18 @@ Start a backup container with the volumes taken from the mydb container
 $ docker run --volumes-from mydb backup
 
 
+
+Keeping state. Volumes.
+map folders:
+docker run -d -v /folder-on-host-machine/data/db:/data/db — net=myTestNetwork mongo
+
+mount volumes from another container
+Start a db container
+$ docker run -v /var/lib/postgresql/data --name mydb postgres
+
+Start a backup container with the volumes taken from the mydb container
+$ docker run --volumes-from mydb backup
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2NDQ0NDc5Nl19
+eyJoaXN0b3J5IjpbMzA1NTczMzczXX0=
 -->
