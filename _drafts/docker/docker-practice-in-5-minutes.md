@@ -255,26 +255,6 @@ $ docker exec -it 6f2c42c0 sh
 ```
 
 
-Networking in docker
-create:
-docker network create <some name>
-list:
-docker network list
-run container with a network:
-docker run -d --net <networkName>
-
-linking:
-Start a postgres container, named mydb
-$ docker run --name mydb postgres
-
-Link mydb as db into myqpp
-$ docker run --link mydb:db myapp
-Linking a container sets up networking from the linking container into the linked container. It does two things:
-
-It updates the /etc/hosts with the link name given to the container, db in the example above. Making it possible to access the container by the name db. This is very good.
-It creates environment variables for the EXPOSEd ports. This is practically useless since I can access the same port by using a hostname:port combination anyway.
-The linked networking is not constrained by the ports EXPOSEd by the image. All ports are available to the linking container.
-
 
 
 Docker registry (add image here)
@@ -439,7 +419,7 @@ It fixes dependency hell.
 Containers are fast!
 Cluster solutions exists, but don't expect them to be seamless, yet!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzODM2MzYzNzksNjYyNzEwMDUxLDExOD
+eyJoaXN0b3J5IjpbLTE1NDc0NDA3NTQsNjYyNzEwMDUxLDExOD
 c5NzQwNTgsNTIyMDY1MjYzLDEyNjk0NTg1MjMsMjEyMTM0OTky
 OCwtMTI0Mzg5ODg0NCw4NDUzNDgwODYsMTc4NTk1MzMzOCwyMD
 YwMjQxNTcsLTIwNDU4MTMwODAsMTE5NjU2MDk5MSw4NjQ0NjAx
