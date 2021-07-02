@@ -6,7 +6,9 @@ date: 2021-07-01 11:01:04 Z
 Installing
 
 First run
-Second run, complex sample with volume, enviroupment values, args, redefined en
+
+Second run
+complex sample with volume, enviroupment values, args, redefined entrypoint and expotred ports 
 
 Concepts
 
@@ -438,7 +440,7 @@ It fixes dependency hell.
 Containers are fast!
 Cluster solutions exists, but don't expect them to be seamless, yet!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyMzU0Mjc1MCwtNzcyOTI4OTQzLC0xNT
+eyJoaXN0b3J5IjpbLTU3NTg3ODIxNSwtNzcyOTI4OTQzLC0xNT
 E1NjA0OTIxLC0xNzg2MDE4Mzc4LDY2MDMyNzIwMCwtMjk4NTAx
 NjY0LDY2MjcxMDA1MSwxMTg3OTc0MDU4LDUyMjA2NTI2MywxMj
 Y5NDU4NTIzLDIxMjEzNDk5MjgsLTEyNDM4OTg4NDQsODQ1MzQ4
