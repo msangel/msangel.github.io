@@ -276,16 +276,6 @@ It creates environment variables for the EXPOSEd ports. This is practically usel
 The linked networking is not constrained by the ports EXPOSEd by the image. All ports are available to the linking container.
 
 
-Keeping state. Volumes.
-map folders:
-docker run -d -v /folder-on-host-machine/data/db:/data/db — net=myTestNetwork mongo
-
-mount volumes from another container
-Start a db container
-$ docker run -v /var/lib/postgresql/data --name mydb postgres
-
-Start a backup container with the volumes taken from the mydb container
-$ docker run --volumes-from mydb backup
 
 Docker registry (add image here)
 
@@ -354,10 +344,10 @@ It fixes dependency hell.
 Containers are fast!
 Cluster solutions exists, but don't expect them to be seamless, yet!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjYyNzEwMDUxLDExODc5NzQwNTgsNTIyMD
-Y1MjYzLDEyNjk0NTg1MjMsMjEyMTM0OTkyOCwtMTI0Mzg5ODg0
-NCw4NDUzNDgwODYsMTc4NTk1MzMzOCwyMDYwMjQxNTcsLTIwND
-U4MTMwODAsMTE5NjU2MDk5MSw4NjQ0NjAxODQsMzgzNDQ4MDgs
-LTM2MDk0MTk3OSwtNDUyMzkyOTMwLC0xODQ1MDU4NTU0LDc1MT
-cyNzQwMywtMTY0NDEwMzcwMF19
+eyJoaXN0b3J5IjpbLTEzMzI3ODA1OTIsNjYyNzEwMDUxLDExOD
+c5NzQwNTgsNTIyMDY1MjYzLDEyNjk0NTg1MjMsMjEyMTM0OTky
+OCwtMTI0Mzg5ODg0NCw4NDUzNDgwODYsMTc4NTk1MzMzOCwyMD
+YwMjQxNTcsLTIwNDU4MTMwODAsMTE5NjU2MDk5MSw4NjQ0NjAx
+ODQsMzgzNDQ4MDgsLTM2MDk0MTk3OSwtNDUyMzkyOTMwLC0xOD
+Q1MDU4NTU0LDc1MTcyNzQwMywtMTY0NDEwMzcwMF19
 -->
