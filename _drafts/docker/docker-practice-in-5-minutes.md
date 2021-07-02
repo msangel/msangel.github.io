@@ -395,7 +395,7 @@ Docker swarm is another orchestration tool aimed to manage a cluster of docker h
 Aditional reading:
  - limiting your docker container resources is [builtin](https://docs.docker.com/config/containers/resource_constraints/), see [sample](https://hostadvice.com/how-to/how-to-limit-a-docker-containers-resources-on-ubuntu-18-04/)
  - Automate building your images by:
-	 - maven([sample](https://www.surevine.com/building-docker-images-with-maven/))
+	 - maven with spoti([sample](https://www.surevine.com/building-docker-images-with-maven/))
 	 - [spring-boot:build-image](https://spring.io/blog/2020/01/27/creating-docker-images-with-spring-boot-2-3-0-m1)
 
 resources:
@@ -427,11 +427,11 @@ It fixes dependency hell.
 Containers are fast!
 Cluster solutions exists, but don't expect them to be seamless, yet!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3MjkyODk0MywtMTUxNTYwNDkyMSwtMT
-c4NjAxODM3OCw2NjAzMjcyMDAsLTI5ODUwMTY2NCw2NjI3MTAw
-NTEsMTE4Nzk3NDA1OCw1MjIwNjUyNjMsMTI2OTQ1ODUyMywyMT
-IxMzQ5OTI4LC0xMjQzODk4ODQ0LDg0NTM0ODA4NiwxNzg1OTUz
-MzM4LDIwNjAyNDE1NywtMjA0NTgxMzA4MCwxMTk2NTYwOTkxLD
-g2NDQ2MDE4NCwzODM0NDgwOCwtMzYwOTQxOTc5LC00NTIzOTI5
-MzBdfQ==
+eyJoaXN0b3J5IjpbLTEyMjY3MDI3NTYsLTc3MjkyODk0MywtMT
+UxNTYwNDkyMSwtMTc4NjAxODM3OCw2NjAzMjcyMDAsLTI5ODUw
+MTY2NCw2NjI3MTAwNTEsMTE4Nzk3NDA1OCw1MjIwNjUyNjMsMT
+I2OTQ1ODUyMywyMTIxMzQ5OTI4LC0xMjQzODk4ODQ0LDg0NTM0
+ODA4NiwxNzg1OTUzMzM4LDIwNjAyNDE1NywtMjA0NTgxMzA4MC
+wxMTk2NTYwOTkxLDg2NDQ2MDE4NCwzODM0NDgwOCwtMzYwOTQx
+OTc5XX0=
 -->
