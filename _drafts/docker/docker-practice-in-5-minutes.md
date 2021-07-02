@@ -27,6 +27,8 @@ Managing containers
 
 
 Security?
+sample for debian-based
+sample for alpine
 _____
 
 
@@ -407,7 +409,7 @@ Aditional reading:
 	 - maven with fabric8 plugin([website](https://dmp.fabric8.io/))
 	 - maven [exec plugin](https://www.mojohaus.org/exec-maven-plugin/usage.html)
 	 - [spring-boot:build-image](https://spring.io/blog/2020/01/27/creating-docker-images-with-spring-boot-2-3-0-m1)
- - Manage remote docker with docker-machine
+ - Manage remote docker with [docker-machine](https://docs.docker.com/machine/)
 
 resources:
 
@@ -435,11 +437,11 @@ It fixes dependency hell.
 Containers are fast!
 Cluster solutions exists, but don't expect them to be seamless, yet!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTc2Nzc0MzcxLC03NzI5Mjg5NDMsLTE1MT
-U2MDQ5MjEsLTE3ODYwMTgzNzgsNjYwMzI3MjAwLC0yOTg1MDE2
-NjQsNjYyNzEwMDUxLDExODc5NzQwNTgsNTIyMDY1MjYzLDEyNj
-k0NTg1MjMsMjEyMTM0OTkyOCwtMTI0Mzg5ODg0NCw4NDUzNDgw
-ODYsMTc4NTk1MzMzOCwyMDYwMjQxNTcsLTIwNDU4MTMwODAsMT
-E5NjU2MDk5MSw4NjQ0NjAxODQsMzgzNDQ4MDgsLTM2MDk0MTk3
-OV19
+eyJoaXN0b3J5IjpbNjEzNDYyMDk4LDk3Njc3NDM3MSwtNzcyOT
+I4OTQzLC0xNTE1NjA0OTIxLC0xNzg2MDE4Mzc4LDY2MDMyNzIw
+MCwtMjk4NTAxNjY0LDY2MjcxMDA1MSwxMTg3OTc0MDU4LDUyMj
+A2NTI2MywxMjY5NDU4NTIzLDIxMjEzNDk5MjgsLTEyNDM4OTg4
+NDQsODQ1MzQ4MDg2LDE3ODU5NTMzMzgsMjA2MDI0MTU3LC0yMD
+Q1ODEzMDgwLDExOTY1NjA5OTEsODY0NDYwMTg0LDM4MzQ0ODA4
+XX0=
 -->
