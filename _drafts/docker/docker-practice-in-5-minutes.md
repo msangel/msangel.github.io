@@ -25,6 +25,8 @@ Managing images
 Run and run options
 Managing containers
 
+Volumes
+
 
 Security?
 sample for debian-based
@@ -436,12 +438,50 @@ Docker is here to stay.
 It fixes dependency hell.
 Containers are fast!
 Cluster solutions exists, but don't expect them to be seamless, yet!
+
+
+volumes:
+add image here
+Volumes provide persistent storage outside the container. That means the data will not be saved if you commit the new image.
+
+Start a new nginx container with /var/log as a volume
+$ docker run  -v /var/log nginx
+
+Since the directory of the host is not given, the volume is created in
+/var/lib/docker/volumes/ec3c543bc..535.
+
+The exact name of the directory can be found by running docker inspect container-id.
+
+Start a new nginx container with /var/log as a volume mapped to /tmp on Host
+$ docker run -v /tmp:/var/log nginx
+
+It is also possible to mount volumes from another container with --volumes-from.
+
+Start a db container
+$ docker run -v /var/lib/postgresql/data --name mydb postgres
+
+Start a backup container with the volumes taken from the mydb container
+$ docker run --volumes-from mydb backup
+
+
+
+Keeping state. Volumes.
+map folders:
+docker run -d -v /folder-on-host-machine/data/db:/data/db — net=myTestNetwork mongo
+
+mount volumes from another container
+Start a db container
+$ docker run -v /var/lib/postgresql/data --name mydb postgres
+
+Start a backup container with the volumes taken from the mydb container
+$ docker run --volumes-from mydb backup
+> Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjEzNDYyMDk4LDk3Njc3NDM3MSwtNzcyOT
-I4OTQzLC0xNTE1NjA0OTIxLC0xNzg2MDE4Mzc4LDY2MDMyNzIw
-MCwtMjk4NTAxNjY0LDY2MjcxMDA1MSwxMTg3OTc0MDU4LDUyMj
-A2NTI2MywxMjY5NDU4NTIzLDIxMjEzNDk5MjgsLTEyNDM4OTg4
-NDQsODQ1MzQ4MDg2LDE3ODU5NTMzMzgsMjA2MDI0MTU3LC0yMD
-Q1ODEzMDgwLDExOTY1NjA5OTEsODY0NDYwMTg0LDM4MzQ0ODA4
-XX0=
+eyJoaXN0b3J5IjpbLTMwNTUxMjQxNyw5NzY3NzQzNzEsLTc3Mj
+kyODk0MywtMTUxNTYwNDkyMSwtMTc4NjAxODM3OCw2NjAzMjcy
+MDAsLTI5ODUwMTY2NCw2NjI3MTAwNTEsMTE4Nzk3NDA1OCw1Mj
+IwNjUyNjMsMTI2OTQ1ODUyMywyMTIxMzQ5OTI4LC0xMjQzODk4
+ODQ0LDg0NTM0ODA4NiwxNzg1OTUzMzM4LDIwNjAyNDE1NywtMj
+A0NTgxMzA4MCwxMTk2NTYwOTkxLDg2NDQ2MDE4NCwzODM0NDgw
+OF19
 -->
