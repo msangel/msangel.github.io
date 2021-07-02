@@ -401,7 +401,6 @@ to review:
  - https://github.com/jwilder/dockerize
 
 
-https://www.kevinkuszyk.com/2016/11/28/connect-your-docker-client-to-a-remote-docker-host/
 https://www.freecodecamp.org/news/a-beginners-guide-to-docker-how-to-create-your-first-docker-application-cc03de9b639f/
 https://spring.io/guides/gs/spring-boot-docker/
 https://github.com/spring-guides/gs-spring-boot-docker/blob/main/complete/pom.xml
@@ -423,7 +422,7 @@ It fixes dependency hell.
 Containers are fast!
 Cluster solutions exists, but don't expect them to be seamless, yet!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2MDA2MjcwNCw2NjAzMjcyMDAsLTI5OD
+eyJoaXN0b3J5IjpbLTYwMDM1NTM2OSw2NjAzMjcyMDAsLTI5OD
 UwMTY2NCw2NjI3MTAwNTEsMTE4Nzk3NDA1OCw1MjIwNjUyNjMs
 MTI2OTQ1ODUyMywyMTIxMzQ5OTI4LC0xMjQzODk4ODQ0LDg0NT
 M0ODA4NiwxNzg1OTUzMzM4LDIwNjAyNDE1NywtMjA0NTgxMzA4
