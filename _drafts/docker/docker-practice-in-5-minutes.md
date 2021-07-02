@@ -394,12 +394,6 @@ To avoid the rebuild, build the image once and then mount the local directory wh
 $ docker run -it --rm -v $(PWD):/srv/app myapp
 
 
-Getting started with docker-machine
-https://docs.docker.com/machine/reference/
-Docker machine is an orchestration tool that allows you to manage multiple docker hosts. It lets you provision multiple virtual docker hosts locally, or on the cloud, and manage them with docker-machine commands. You can start, restart, and inspect managed hosts. You can point docker client to one of the hosts and then manage daemon on that host directly
-`docker-machine ip`
-`docker-machine env msangel-host`
-
 
 
 Getting started with swarm mode
@@ -413,6 +407,7 @@ Aditional reading:
 	 - maven with fabric8 plugin([website](https://dmp.fabric8.io/))
 	 - maven [exec plugin](https://www.mojohaus.org/exec-maven-plugin/usage.html)
 	 - [spring-boot:build-image](https://spring.io/blog/2020/01/27/creating-docker-images-with-spring-boot-2-3-0-m1)
+ - Manage remote docker with docker-machine
 
 resources:
 
@@ -440,11 +435,11 @@ It fixes dependency hell.
 Containers are fast!
 Cluster solutions exists, but don't expect them to be seamless, yet!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzA0MTg4OTUsLTc3MjkyODk0MywtMT
-UxNTYwNDkyMSwtMTc4NjAxODM3OCw2NjAzMjcyMDAsLTI5ODUw
-MTY2NCw2NjI3MTAwNTEsMTE4Nzk3NDA1OCw1MjIwNjUyNjMsMT
-I2OTQ1ODUyMywyMTIxMzQ5OTI4LC0xMjQzODk4ODQ0LDg0NTM0
-ODA4NiwxNzg1OTUzMzM4LDIwNjAyNDE1NywtMjA0NTgxMzA4MC
-wxMTk2NTYwOTkxLDg2NDQ2MDE4NCwzODM0NDgwOCwtMzYwOTQx
-OTc5XX0=
+eyJoaXN0b3J5IjpbOTc2Nzc0MzcxLC03NzI5Mjg5NDMsLTE1MT
+U2MDQ5MjEsLTE3ODYwMTgzNzgsNjYwMzI3MjAwLC0yOTg1MDE2
+NjQsNjYyNzEwMDUxLDExODc5NzQwNTgsNTIyMDY1MjYzLDEyNj
+k0NTg1MjMsMjEyMTM0OTkyOCwtMTI0Mzg5ODg0NCw4NDUzNDgw
+ODYsMTc4NTk1MzMzOCwyMDYwMjQxNTcsLTIwNDU4MTMwODAsMT
+E5NjU2MDk5MSw4NjQ0NjAxODQsMzgzNDQ4MDgsLTM2MDk0MTk3
+OV19
 -->
