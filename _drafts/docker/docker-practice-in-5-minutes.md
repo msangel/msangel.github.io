@@ -393,7 +393,7 @@ https://docs.docker.com/engine/swarm/
 Docker swarm is another orchestration tool aimed to manage a cluster of docker hosts. While docker-compose managers multiple Docker containers within one docker host, docker swarm manages multiple docker hosts managing multiple Docker containers. Unlike docker-compose and docker-machine, docker swarm is not a standalone orchestration software. Swarm mode is built in docker engine and is managed through Docker client.
 
 Aditional reading:
- - limiting your docker containerresources is builtin: https://docs.docker.com/config/containers/resource_constraints/
+ - limiting your docker container resources is [builtin](https://docs.docker.com/config/containers/resource_constraints/), see [sample](https://hostadvice.com/how-to/how-to-limit-a-docker-containers-resources-on-ubuntu-18-04/)
 
 resources:
 
@@ -407,7 +407,7 @@ to review:
 ___
 
 
-https://docs.docker.com/config/daemon/
+
 https://www.surevine.com/building-docker-images-with-maven/
 https://gitlab.com/msangel/webhook/-/blob/brbrbr/Dockerfile
 https://codefresh.io/howtos/using-docker-maven-maven-docker/
@@ -424,7 +424,7 @@ It fixes dependency hell.
 Containers are fast!
 Cluster solutions exists, but don't expect them to be seamless, yet!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0NDkzNzQ3MCwtMTUxNTYwNDkyMSwtMT
+eyJoaXN0b3J5IjpbMTg4NzU5NDI3MSwtMTUxNTYwNDkyMSwtMT
 c4NjAxODM3OCw2NjAzMjcyMDAsLTI5ODUwMTY2NCw2NjI3MTAw
 NTEsMTE4Nzk3NDA1OCw1MjIwNjUyNjMsMTI2OTQ1ODUyMywyMT
 IxMzQ5OTI4LC0xMjQzODk4ODQ0LDg0NTM0ODA4NiwxNzg1OTUz
