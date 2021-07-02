@@ -302,6 +302,101 @@ USER app:app
 WORKDIR /opt/app
 ```
 
+##   
+Inspecting Containers
+
+A lot of commands are available for inspecting containers:
+
+$ docker ps      # shows running containers.
+$ docker inspect # info on a container (incl. IP address).
+$ docker logs    # gets logs from container.
+$ docker events  # gets events from container.
+$ docker port    # shows public facing port of container.
+$ docker top     # shows running processes in container.
+$ docker diff    # shows changed files in container's FS.
+$ docker stats   # shows metrics, memory, cpu, filsystem
+
+I will only elaborate on `docker ps` and `docker inspect` since they are the most important ones.
+
+List all containers, (--all means including stopped)
+$ docker ps --all
+CONTAINER ID   IMAGE            COMMAND    NAMES
+9923ad197b65   busybox:latest   "sh"       romantic_fermat
+fe7f682cf546   debian:jessie    "bash"     silly_bartik
+09c707e2ec07   scratch:latest   "ls"       suspicious_perlman
+b15c5c553202   mongo:2.6.7      "/entrypo  some-mongo
+fbe1f24d7df8   busybox:latest   "true"     db_data
+
+
+Inspect the container named silly_bartik
+Output is shortened for brevity.
+$ docker inspect silly_bartik
+    1 [{
+    2     "Args": [
+    3         "-c",
+    4         "/usr/local/bin/confd-watch.sh"
+    5     ],
+    6     "Config": {
+   10         "Hostname": "3c012df7bab9",
+   11         "Image": "andersjanmyr/nginx-confd:development",
+   12     },
+   13     "Id": "3c012df7bab977a194199f1",
+   14     "Image": "d3bd1f07cae1bd624e2e",
+   15     "NetworkSettings": {
+   16         "IPAddress": "",
+   18         "Ports": null
+   19     },
+   20     "Volumes": {},
+   22 }]
+
+Tips and Tricks
+
+To get the id of a container is useful for scripting.
+
+Get the id (-q) of the last (-l) run container
+$ docker ps -l -q
+c8044ab1a3d0
+
+`docker inspect` can take a format string, a Go template, and it allows you to be more specific about what data you are interested in. Again, useful for scripting.
+
+$ docker inspect -f '{{ .NetworkSettings.IPAddress }}' 6f2c42c05500
+
+172.17.0.11
+
+Use `docker exec` to interact with a running container.
+
+Get the environment variables of a running container.
+$ docker exec -it 6f2c42c05500 env
+
+PATH=/usr/local/sbin:/usr...
+HOSTNAME=6f2c42c05500
+REDIS_1_PORT=tcp://172.17.0.9:6379
+REDIS_1_PORT_6379_TCP=tcp://172.17.0.9:6379
+...
+
+Use volumes to avoid having to rebuild an image every time you run it. Every time the below Dockerfile is built it copies the current directory into the container.
+
+  1 FROM dockerfile/nodejs:latest
+  2
+  3 MAINTAINER Anders Janmyr "anders@janmyr.com"
+  4 RUN apt-get update && \
+  5   apt-get install zlib1g-dev && \
+  6   npm install -g pm2 && \
+  7   mkdir -p /srv/app
+  8
+  9 WORKDIR /srv/app
+ 10 COPY . /srv/app
+ 11
+ 12 CMD pm2 start app.js -x -i 1 && pm2 logs
+ 13
+
+Build and run the image
+$ docker build -t myapp .
+$ docker run -it --rm myapp
+
+To avoid the rebuild, build the image once and then mount the local directory when you run it.
+
+$ docker run -it --rm -v $(PWD):/srv/app myapp
 
 
 Getting started with docker-machine
@@ -344,7 +439,7 @@ It fixes dependency hell.
 Containers are fast!
 Cluster solutions exists, but don't expect them to be seamless, yet!
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzI3ODA1OTIsNjYyNzEwMDUxLDExOD
+eyJoaXN0b3J5IjpbLTEzODM2MzYzNzksNjYyNzEwMDUxLDExOD
 c5NzQwNTgsNTIyMDY1MjYzLDEyNjk0NTg1MjMsMjEyMTM0OTky
 OCwtMTI0Mzg5ODg0NCw4NDUzNDgwODYsMTc4NTk1MzMzOCwyMD
 YwMjQxNTcsLTIwNDU4MTMwODAsMTE5NjU2MDk5MSw4NjQ0NjAx
