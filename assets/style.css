@@ -570,27 +570,6 @@ body {
     margin-bottom: 15px;
 }
 
-.blogpost pre .str {
-    color: rgb(226,157,19);
-}
-.blogpost pre .pun {
-    color: rgb(98,99,95);
-}    /* punctuation */
-
-.blogpost pre .pln,
-.blogpost code:not([class^='language-']):not([class*=' language-']) {
-    color: #262725;
-}    /* plaintext, others non-formatter code blocks */
-
-.blogpost pre .com {
-    color: #89bc23;
-} /* comment */
-
-.blogpost pre {
-    background-color: #eeeeee;
-    border-style: none;
-}
-
 .blogpost .col-lg-9 .tags {
     margin-bottom: 50px;
 }

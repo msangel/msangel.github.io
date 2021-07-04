@@ -18,6 +18,13 @@ Prerequirements:
 ## dev help
 * bootstrap docs: https://getbootstrap.com/docs/3.3/css/#grid
 * footer magic: https://matthewjamestaylor.com/bottom-footer
+* rouge:
+  * available gouge styles: `rougify help style`
+  * see them online:
+    * default: https://spsarolkar.github.io/rouge-theme-preview/
+    * compatible with pygments: https://stylishthemes.github.io/Syntax-Themes/pygments/
+  * install style: `rougify style monokai > assets/rouge.css`
+
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbNDAxODIzMjg1XX0=
 -->
