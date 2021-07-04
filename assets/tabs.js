@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", function(){
-    document.getElementById("default").click();
+    var element = document.getElementById("default");
+    if (element) {
+        element.click();
+    }
 });
 
 function showTab(evt, tabId) {
