@@ -10,15 +10,8 @@ Prerequirements:
 * [ruby](https://rvm.io/)
 * [Bundler](https://bundler.io/) 
 
-Acoarding to [this instruction](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll): 
- 1. Create `Gemfile` with this content:
-  ```Gemfile
-  source 'https://rubygems.org'
-  gem "github-pages", "~> 214", group: :jekyll_plugins
-  ```
-where `214` is a a version of `github-pages` from https://pages.github.com/versions/
-  
- 2. run `bundle install` for installing all dependencies of `github-pages`
+ 1. Create `Gemfile`.
+ 2. run `bundle install` for installing all dependencies
  3. run locally with: `bundle exec jekyll serve`
  4. http://localhost:4000/ is your friend
 
