@@ -5,6 +5,7 @@ date: 2019-06-08 03:06:00 Z
 
 # {{ page.title }}
 {: .title }
+https://sites.google.com/site/modernskyangel/in-progress/docker-in-review
 
 <!-- excerpt-start -->This article is about docker and the technologies it is built on. Mostly theory here.<!-- excerpt-start -->
 For more practical things read that.
@@ -19,7 +20,8 @@ Before diving into the docker world, lets clarify basics about what Docker is:
 
 ## What it is, and why we need this
 
-A very simple answer to the question of why we need it is: it allows us to run our applications in the same way and in the same environment whenever we have. Either this is Windows PC, Linux laptop, dedicated server or virtual hosting.  It's a common problem when developers create their software on their computer and so it can be run only on their computer. Docker creates an isolated environment that is the same everywhere.
+Best description what is docker is: lightweight virtual machine.
+And we need it because allows us to run our applications in the same way and in the same environment whenever we have. Either this is Windows PC, Linux laptop, dedicated server or virtual hosting.  It's a common problem when developers create their software on their computer and so it can be run only on their computer. Docker creates an isolated environment that is the same everywhere.
 There exists a known "Matrix of hell" that show a wide variety of different systems and their different behavior on different hardware:
 
 ![Matrix of hell](https://k.co.ua/resources/docker/the_matrix_of_hell.png "Matrix of hell"){: pretty}
@@ -42,6 +44,7 @@ This is really cool approach. But technologies were like that not from the begin
 First sites and services were hosted on office computers. Well, you can even imagine how many problems there were with this approach. Staring from "I accidentally turned it off" to real power supply stability issues.
 After, the DNS-providers starts providing additional service for hosting, as add-on service. And it's a good point, as DNS-servers anyway must work 24/7 with extreme stability, so the companies running that knew well how to achieve this stability for sites and services of their users.
 Quite fast the specialization took the place and so appears entire data centers with dedicated computers (dedicated servers). Still, the prices for that were not flexible and because of usually low utilization of the server per user, the same computers start to sell to many people, of course with some isolation level between user's data. These isolation requirements cause appearing and evolution of virtual server software.
+Another possible scenario thise days was to buy phisical server for own usage and put it to data-center. But that was way to expensive.
 
 ## About virtual servers
 The virtual servers are software that allows running another virtual emulated computer as any regular application. And as far as that computer is emulated, its environment also emulated, so running any programs in it will not harm your primary operation system(if you have one, as stepping a bit forward, I can say that there exist virtual servers that run directly on hardware and don't require OS to be installed).
@@ -89,6 +92,38 @@ Cons:
 Containerization is a lightweight alternative to full machine virtualization that involves encapsulating an application in a container with its own operating environment. For easy understanding we can say, that container is just a native process that running in own environment, so its execution is not affecting host environment in any way.
 
 ![VM vs Container](https://k.co.ua/resources/docker/vm_vs_container.png "VM vs Container"){: pretty}
+The image describes the difference between a VM and Docker. Instead of a _hypervisor_ with Guest OSes on top, Docker uses a _Docker engine_ and containers on top. Does this really tell us anything? What is the difference between a "hypervisor" and the "Docker engine"? A nice way of illustrating this difference is through listing the running processes on the Host.
+
+The following simplified process trees illustrates the difference.
+
+On the Host running the VM there is only _one_ process running on the Host even though there are many processes running in the VM.
+
+Running processes on Host for a VM
+$ pstree VM
+
+-+= /VirtualBox.app
+|--= coreos-vagrant
+
+On the Host running the Docker Engine all the processes running are visible. _The contained processes are running on the Host!_ They can be inspected and manipulated with normal commands like, `ps`, and `kill`.
+
+Running processes on Host for a Docker Engine
+$ pstree docker
+-+= /docker
+|--= /bin/sh
+|--= node server.js
+|--= go run app
+|--= ruby server.rb
+...
+|--= /bin/bash
+
+The size of a small virtual machine image with Core OS is about 1.2 GB. The size of a small container with busybox is 2.5 MB.
+
+The startup time of a fast virtual machine is measured in minutes. The startup time of a container is often less than a second.
+
+Integrating virtual machines running on the same host must be done by setting up the networking properly. Integrating containers is supported by Docker out of the box.
+
+So, containers are lightweight, fast and easily integrated, but that is not all.
+
 
 ### Chroot - first attempts in processes isolation
 <div class="row" markdown="1">
@@ -128,9 +163,11 @@ First is **security**. Containers share the same hooks into the kernel, and that
 The next one is **flexibility in OS choosing**. There is no way to use windows apps under linux and visa versa. Also there even no way to use another kernel, rather than existed one. Yes, we can install an emulator of desired system in a container(like [wine](https://www.winehq.org/) in linux and [wsl](https://docs.microsoft.com/en-us/windows/wsl/) in windows), but that's will be another intermediate layer of abstraction.
 
 ## Docker architecture
-Docker is implemented as a client-server system.
+Docker is implemented as a client-server system.  Docker software consists of 2 separate programs, that is docker engine, also known as docker daemon (because it is, in fact, a daemon, running in the background ) and docker client.
 
-Client is usually CLI app. Daemon is accessible via socket connection(TCP or UNIX) and simply provide controlling API. The client may, but does not have to, be on the same machine as the daemon.
+Docker engine is responsible for running processes in isolated environments. For each process, it generates a new Linux container, allocates a new filesystem for it, allocates a network interface, sets an IP for it, sets NAT for it and then runs processes inside of it. It also manages such things as creating, removing images, fetching images from the registry of choice, creating, restarting, removing containers and many other things. Docker engine exposes the rest API which can be used to control the daemon.
+
+Docker client is usually CLI app. Daemon is accessible via socket connection(TCP or UNIX) and simply provide controlling API. The client may, but does not have to, be on the same machine as the daemon.
 
 Terminology:
 -   **host**(also **docker server**) — the machine that is running the containers.
@@ -155,11 +192,11 @@ A docker is a powerful tool that is created to solve many common developer's pro
 You may also want to look at the more practical part of using docker in my docker cookbook.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyNzEwMDk0MCw5MTU5MDA2MDQsLTkzNT
-Q2NjU1NywxNTMzNTgxNTgwLC0xNTQ4OTA3MTcsOTU3MzI2MDU4
-LC0xOTMyMTMzMzUyLDUwMzAyNDQyMSwtMzIyMDQ4ODI4LC0xOD
-c5MTkwMzcwLDE3MTM4ODkwODQsLTEyNDg5OTQ4NzgsLTEzMzQ3
-NjA5ODgsNzkwMDM4MTEyLC05ODIxNDc3MjUsLTg5NDMyNzI3NS
-wtMjE0MjU0MzI0NSw2NDA1MDY2NTQsLTIwMDIwNDUyNTksMTg2
-NjM0MzAxNV19
+eyJoaXN0b3J5IjpbMTAzMDk3NTQ2MSwtMjEyMzk4NDAyNyw1Mz
+k1ODg5OTEsLTMwMjQxNzEwMiwyMDI3MTAwOTQwLDkxNTkwMDYw
+NCwtOTM1NDY2NTU3LDE1MzM1ODE1ODAsLTE1NDg5MDcxNyw5NT
+czMjYwNTgsLTE5MzIxMzMzNTIsNTAzMDI0NDIxLC0zMjIwNDg4
+MjgsLTE4NzkxOTAzNzAsMTcxMzg4OTA4NCwtMTI0ODk5NDg3OC
+wtMTMzNDc2MDk4OCw3OTAwMzgxMTIsLTk4MjE0NzcyNSwtODk0
+MzI3Mjc1XX0=
 -->

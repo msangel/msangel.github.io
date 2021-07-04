@@ -25,20 +25,24 @@ jobs:
         with:
           token: ${{ secrets.JEKYLL_GITHUB_TOKEN }}
           target_branch: 'gh-pages'
-      - name: Copy CNAME
-        run: |
-         git clone https://.:${{ secrets.GITHUB_TOKEN }}@github.com/msangel/msangel.github.io --depth 1 target
-         git config --global user.email "h6.msangel+site-builder@gmail.com"
-         git config --global user.name "Vasyl's script"
-         cp target/CNAME CNAME
-         cd target
-         git fetch --depth 1 origin gh-pages:gh-pages
-         git checkout gh-pages
-         if [ -f CNAME ]; then
-            exit 0
-         fi
-         cp ./../CNAME CNAME
-         git add CNAME
-         git commit -m "restore CNAME"
-         git push --set-upstream origin gh-pages
-        shell: bash
+      - uses: nick-invision/retry@v2
+        with: 
+          command: |
+           git clone https://.:${{ secrets.GITHUB_TOKEN }}@github.com/msangel/msangel.github.io --depth 1 target
+           git config --global user.email "h6.msangel+site-builder@gmail.com"
+           git config --global user.name "Vasyl's script"
+           cp target/CNAME CNAME
+           cd target
+           git fetch --depth 1 origin gh-pages:gh-pages
+           git checkout gh-pages
+           if [ -f CNAME ]; then
+              exit 0
+           fi
+           cp ./../CNAME CNAME
+           git add CNAME
+           git commit -m "restore CNAME"
+           git push --set-upstream origin gh-pages || echo "error is fine"
+          shell: bash
+          timeout_seconds: 15
+          max_attempts: 3
+          retry_on: error

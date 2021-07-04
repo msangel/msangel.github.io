@@ -18,3 +18,6 @@ Prerequirements:
 ## dev help
 * bootstrap docs: https://getbootstrap.com/docs/3.3/css/#grid
 * footer magic: https://matthewjamestaylor.com/bottom-footer
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNDAxODIzMjg1XX0=
+-->
