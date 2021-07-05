@@ -3,7 +3,8 @@ title: Docker Practice In 5 Minutes.md
 date: 2021-07-01 11:01:04 Z
 ---
 
-Installing
+## Installing
+
 
 First run
 
@@ -477,11 +478,11 @@ Start a backup container with the volumes taken from the mydb container
 $ docker run --volumes-from mydb backup
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwNTUxMjQxNyw5NzY3NzQzNzEsLTc3Mj
-kyODk0MywtMTUxNTYwNDkyMSwtMTc4NjAxODM3OCw2NjAzMjcy
-MDAsLTI5ODUwMTY2NCw2NjI3MTAwNTEsMTE4Nzk3NDA1OCw1Mj
-IwNjUyNjMsMTI2OTQ1ODUyMywyMTIxMzQ5OTI4LC0xMjQzODk4
-ODQ0LDg0NTM0ODA4NiwxNzg1OTUzMzM4LDIwNjAyNDE1NywtMj
-A0NTgxMzA4MCwxMTk2NTYwOTkxLDg2NDQ2MDE4NCwzODM0NDgw
-OF19
+eyJoaXN0b3J5IjpbMTI5Mjc5OTAzOSwtMzA1NTEyNDE3LDk3Nj
+c3NDM3MSwtNzcyOTI4OTQzLC0xNTE1NjA0OTIxLC0xNzg2MDE4
+Mzc4LDY2MDMyNzIwMCwtMjk4NTAxNjY0LDY2MjcxMDA1MSwxMT
+g3OTc0MDU4LDUyMjA2NTI2MywxMjY5NDU4NTIzLDIxMjEzNDk5
+MjgsLTEyNDM4OTg4NDQsODQ1MzQ4MDg2LDE3ODU5NTMzMzgsMj
+A2MDI0MTU3LC0yMDQ1ODEzMDgwLDExOTY1NjA5OTEsODY0NDYw
+MTg0XX0=
 -->
