@@ -1,7 +1,6 @@
 ---
 title: взлом страницы вконтакте
 date: 2014-03-14 01:32:00 Z
-
 ---
 
 Все зна&shy;ют об по&shy;пу&shy;ляр&shy;ной в ру&shy;не&shy;те со&shy;ци&shy;аль&shy;ной се&shy;ти Вкон&shy;так&shy;те. Не смот&shy;ря на свои раз&shy;ме&shy;ры и по&shy;пу&shy;ляр&shy;ность - сайт се&shy;ти име&shy;ет очень мно&shy;го ба&shy;гов. Баг - это ошиб&shy;ка в сай&shy;те, ис&shy;поль&shy;зую ка&shy;кую, мож&shy;но сде&shy;лать на сай&shy;те то, что в обыч&shy;ных усло&shy;ви&shy;ях не&shy;льзя сде&shy;лать(на&shy;при&shy;мер по&shy;смот&shy;реть гос&shy;тей стра&shy;ни&shy;цы). Прак&shy;ти&shy;чес&shy;ки раз в па&shy;ру ме&shy;ся&shy;цев раз&shy;ра&shy;бот&shy;чи&shy;ки за&shy;кры&shy;ва&shy;ют эти са&shy;мые  ба&shy;ги. А ведь они су&shy;щест&shy;ву&shy;ют с дня от&shy;кры&shy;тия сай&shy;та. Еще очень мно&shy;го ба&shy;гов на сай&shy;те есть и они ра&shy;бо&shy;та&shy;ют по&shy;то&shy;му, что раз&shy;ра&shy;бот&shy;чи&shy;ки сай&shy;та не за&shy;ме&shy;ти&shy;ли их. Или по&shy;то&shy;му, что вред от ис&shy;поль&shy;зо&shy;ва&shy;ния ба&shy;гов ма&shy;лый.
@@ -30,5 +29,5 @@ date: 2014-03-14 01:32:00 Z
 
 <font color="#ffffff" style="background-color:rgb(255,255,255)">Текст со&shy;здан с не&shy;боль&shy;шой  раз&shy;вле&shy;ка&shy;тель&shy;ной целью -  про&shy;ве&shy;рить ко&shy;ли&shy;чест&shy;во ви&shy;зи&shy;тов на стра&shy;ни&shy;цу с по&shy;ис&shy;ко&shy;вых сис&shy;тем. Я ду&shy;маю, что за&shy;прос "взлом стра&shy;ни&shy;цы вкон&shy;так&shy;те" поль&shy;зу&shy;ет&shy;ся не&shy;ко&shy;то&shy;рой по&shy;пу&shy;ляр&shy;ностью.  Са&shy;ма статья - бред в чис&shy;том ви&shy;де. Я ста&shy;рал&shy;ся пи&shy;сать мень&shy;ше иди&shy;о&shy;тиз&shy;ма, но для по&shy;ка&shy;за&shy;ния "прос&shy;то&shy;ты взло&shy;ма" при&shy;шлось мес&shy;та&shy;ми об&shy;ма&shy;нуть ло&shy;ги&shy;ку. Це&shy;ле&shy;вая ауди&shy;то&shy;рия статьи(те кто не смог&shy;ли про&shy;чи&shy;тать этот текст пред&shy;по&shy;ло&shy;жи&shy;тель&shy;но) не долж&shy;на уви&shy;деть про&shy;ти&shy;во&shy;ре&shy;чий. Да и всем без&shy;раз&shy;лич&shy;но. Ме&shy;ня ин&shy;те&shy;ре&shy;су&shy;ет толь&shy;ко от&shy;чет от гугл ана&shy;ли&shy;тикс. Вот.</font>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyNDU1MjUwMl19
+eyJoaXN0b3J5IjpbLTE1MzQ0NTE4NjhdfQ==
 -->
