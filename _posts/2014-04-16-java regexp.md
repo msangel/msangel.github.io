@@ -1,13 +1,8 @@
 ---
 title: Regexp in java
 date: 2014-04-16 01:57:00 Z
+toc: true
 ---
-
-{:.no_toc}
-## {{ page.title }}
-
-* TOC
-{:toc}
 
 ### Theory and history.
 <!-- excerpt-start -->

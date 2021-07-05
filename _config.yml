@@ -27,4 +27,5 @@ github:
 - metadata
 plugins:
   - jekyll-code-tabs
+  - jekyll-toc
 highlighter: rouge

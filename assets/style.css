@@ -570,6 +570,9 @@ body {
 /*    margin-bottom: 15px;*/
 /*}*/
 
+.blogpost .section-nav li {
+    list-style-type: square;
+}
 .blogpost .record ul > li > p {
     text-align: start;
 }
