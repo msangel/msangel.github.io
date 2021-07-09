@@ -3,8 +3,13 @@
 пс2.: помню с ключами ssh тоже долго вникал в логику работы, щас с закрытыми глазами выдаю публичный ключ в консоль одной рукой, а другой вношу его в `.ssh/authorized_keys`, поэтому и с этим разберусь
 пс3: в докере и с фейковыми данными, а то и так уже имею два ключа на мое имя
 
+#### Создадим тестовую среду
+Пропустить этот шаг если уверен в своих силах.
+
+
+
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTcyNTU3MjE4LDEwMzE2MzExOTBdfQ==
+eyJoaXN0b3J5IjpbLTE4ODMyOTc1NCwxMDMxNjMxMTkwXX0=
 -->
