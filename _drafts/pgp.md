@@ -5,11 +5,14 @@
 
 #### Создадим тестовую среду
 Пропустить этот шаг если уверен в своих силах.
+Контейнер:
+> docker run -it --rm ubuntu
+
 
 
 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODMyOTc1NCwxMDMxNjMxMTkwXX0=
+eyJoaXN0b3J5IjpbLTY5MzEyMTE4NCwxMDMxNjMxMTkwXX0=
 -->
