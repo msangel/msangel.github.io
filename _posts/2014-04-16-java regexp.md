@@ -2,11 +2,7 @@
 title: Regexp in java
 date: 2014-04-16 01:57:00 Z
 toc: true
-------
-
-{:.no_toc}
-## {{ page.title }}
-
+---
 * TOC
 {:toc}
 
@@ -417,5 +413,5 @@ Official tutorial: http://docs.oracle.com/javase/tutorial/essential/regex/
 Testing online:
 http://myregexp.com/
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwMjM4OTM5OF19
+eyJoaXN0b3J5IjpbMTE0ODI2NjA4NCwyMDAyMzg5Mzk4XX0=
 -->
