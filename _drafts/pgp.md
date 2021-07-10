@@ -15,11 +15,12 @@
 ```bash
 sudo apt-get install gpa
 ```
-Она полноценна на столько, что я пожалуй сделаю отдельно обзор на неё. Ну а пока буде
+Она полноценна на столько, что я пожалуй сделаю отдельно обзор на неё. Ну а пока будем довольствоваться малым, которое работает в консоле.
+
 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwNTM5NTUyMCwyMTExNjkxMjcwLC02OT
-MxMjExODQsMTAzMTYzMTE5MF19
+eyJoaXN0b3J5IjpbLTg3NDgxMTgzLDIxMTE2OTEyNzAsLTY5Mz
+EyMTE4NCwxMDMxNjMxMTkwXX0=
 -->
