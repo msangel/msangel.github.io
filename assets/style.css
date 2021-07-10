@@ -4,6 +4,20 @@ body {
     padding:0;
     height:100%;
 }
+
+summary {
+    cursor: pointer;
+}
+summary {
+    display: list-item;
+}
+details {
+    background: #fffad7;
+}
+details summary{
+    background: white;
+}
+
 #body{
     position: relative;
     min-height:100%;

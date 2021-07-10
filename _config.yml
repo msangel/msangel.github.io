@@ -18,6 +18,7 @@ defaults:
 markdown: kramdown
 kramdown:
   entity_output: :as_input
+  parse_block_html: true
 theme: jekyll-theme-primer
 google_analytics: UA-194224445-1
 repository: msangel/msangel.github.io
