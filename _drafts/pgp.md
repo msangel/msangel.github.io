@@ -8,11 +8,14 @@
 Контейнер:
 > docker run -it --rm ubuntu
 
+Установим необходимые библиотеки:
 
+Так же есть очень удобная для работы GUI-тулза 
 
 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5MzEyMTE4NCwxMDMxNjMxMTkwXX0=
+eyJoaXN0b3J5IjpbMjExMTY5MTI3MCwtNjkzMTIxMTg0LDEwMz
+E2MzExOTBdfQ==
 -->
