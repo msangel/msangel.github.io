@@ -19,7 +19,8 @@ sudo apt-get install gpa
 
 <details>
   <summary>Разница между gnupg и gnupg2</summary>
- Первая версия этой программы хоть и совместима с второй на уровне протокола(т.е. с точки зрения использования они взаимозаменяемые), но по факту переписана с нуля. Первая версия в современных дистрибутивах помечена как `deprecated` , хотя её можно поставить паралельно с второй и пользоваться(но зачем?). Сама же команда `gpg` в современных дистрибутивах это просто синоним для `gpg2`.
+  
+ Первая версия этой программы хоть и совместима с второй на уровне протокола(т.е. с точки зрения использования они взаимозаменяемые), но по факту переписана с нуля. Первая версия в современных дистрибутивах помечена как `deprecated` , хотя её можно поставить паралельно с второй и пользоваться(но зачем?). Сама же команда `gpg` в современных дистрибутивах это просто синоним для `gpg2`, с добавлением некоторой магии совместимости.
 Больше об этом:
 
  - https://superuser.com/questions/655246/are-gnupg-1-and-gnupg-2-compatible-with-each-other
@@ -29,6 +30,7 @@ sudo apt-get install gpa
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExMjcyNTI4LDExMzQxMzc4NTMsMjExMT
-Y5MTI3MCwtNjkzMTIxMTg0LDEwMzE2MzExOTBdfQ==
+eyJoaXN0b3J5IjpbNTMyMjE0MjAwLDIxMTI3MjUyOCwxMTM0MT
+M3ODUzLDIxMTE2OTEyNzAsLTY5MzEyMTE4NCwxMDMxNjMxMTkw
+XX0=
 -->
