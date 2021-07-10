@@ -1,6 +1,6 @@
 ---
 title: Основы работы с GnuPG
-date: 2021-03-14 01:32:00 Z
+date: 2021-07-10 09:41:00 Z
 ---
 
 пс.: я конечно заебался с этим но надо разобраться до конца
@@ -36,7 +36,7 @@ sudo apt-get install gnupg2 -y
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzY4OTg5MDc1LDM4MzkxMzk4OSwyMTEyNz
-I1MjgsMTEzNDEzNzg1MywyMTExNjkxMjcwLC02OTMxMjExODQs
-MTAzMTYzMTE5MF19
+eyJoaXN0b3J5IjpbMTgzODA2ODQyMSwzODM5MTM5ODksMjExMj
+cyNTI4LDExMzQxMzc4NTMsMjExMTY5MTI3MCwtNjkzMTIxMTg0
+LDEwMzE2MzExOTBdfQ==
 -->
