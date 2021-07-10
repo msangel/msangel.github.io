@@ -1,3 +1,7 @@
+---
+title: Основы работы с GnuPG
+date: 2021-03-14 01:32:00 Z
+---
 
 пс.: я конечно заебался с этим но надо разобраться до конца
 пс2.: помню с ключами ssh тоже долго вникал в логику работы, щас с закрытыми глазами выдаю публичный ключ в консоль одной рукой, а другой вношу его в `.ssh/authorized_keys`, поэтому и с этим разберусь
@@ -32,7 +36,7 @@ sudo apt-get install gnupg2 -y
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTk4NjM1NTcsMzgzOTEzOTg5LDIxMT
-I3MjUyOCwxMTM0MTM3ODUzLDIxMTE2OTEyNzAsLTY5MzEyMTE4
-NCwxMDMxNjMxMTkwXX0=
+eyJoaXN0b3J5IjpbMzY4OTg5MDc1LDM4MzkxMzk4OSwyMTEyNz
+I1MjgsMTEzNDEzNzg1MywyMTExNjkxMjcwLC02OTMxMjExODQs
+MTAzMTYzMTE5MF19
 -->
