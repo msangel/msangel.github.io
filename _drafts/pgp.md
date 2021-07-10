@@ -10,12 +10,16 @@
 
 Установим необходимые библиотеки:
 
-Так же есть очень удобная для работы GUI-тулза 
-
+Так же есть очень удобная для работы GUI-тулза: gpa
+Установить её можно так:
+```bash
+sudo apt-get install gpa
+```
+Она полноценна
 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExMTY5MTI3MCwtNjkzMTIxMTg0LDEwMz
-E2MzExOTBdfQ==
+eyJoaXN0b3J5IjpbLTgzOTEwMjgzOSwyMTExNjkxMjcwLC02OT
+MxMjExODQsMTAzMTYzMTE5MF19
 -->
