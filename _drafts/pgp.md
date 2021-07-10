@@ -16,7 +16,9 @@
 sudo apt-get install gpa
 ```
 Она полноценна на столько, что я пожалуй сделаю отдельно обзор на неё. Ну а пока будем довольствоваться малым, которое работает в консоле. Минимум программа с которой будем работать: `gnupg2`.
-
+```bash
+sudo apt-get install gnupg2 -y
+```
 <details>
   <summary>Разница между gnupg и gnupg2</summary>
   
@@ -30,7 +32,7 @@ sudo apt-get install gpa
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTMyMjE0MjAwLDIxMTI3MjUyOCwxMTM0MT
+eyJoaXN0b3J5IjpbMzgzOTEzOTg5LDIxMTI3MjUyOCwxMTM0MT
 M3ODUzLDIxMTE2OTEyNzAsLTY5MzEyMTE4NCwxMDMxNjMxMTkw
 XX0=
 -->
