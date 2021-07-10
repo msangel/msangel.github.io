@@ -15,11 +15,11 @@
 ```bash
 sudo apt-get install gpa
 ```
-Она полноценна
+Она полноценна на столько, что я пожалуй сделаю отдельно обзор на не
 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgzOTEwMjgzOSwyMTExNjkxMjcwLC02OT
+eyJoaXN0b3J5IjpbMTE1NDMyMTAwNSwyMTExNjkxMjcwLC02OT
 MxMjExODQsMTAzMTYzMTE5MF19
 -->
