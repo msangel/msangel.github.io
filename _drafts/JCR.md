@@ -1,6 +1,8 @@
 Content Repository API for Java (JCR) - API for accessing repositories for CMS(content management system) and EMS(enterprise content management).
+Standarts:
 
-
+ - JSR-170
+ - JSR-283
 
 Resources:
 
@@ -9,5 +11,5 @@ Resources:
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0MzM3ODIxMl19
+eyJoaXN0b3J5IjpbLTMwNDEwNTMwN119
 -->
