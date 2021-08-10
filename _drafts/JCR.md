@@ -22,7 +22,7 @@ https://jackrabbit.apache.org/jcr/index.html
 https://modeshape.jboss.org/
 Oracle Beehive 
 old versions of nuxeo, but no longer: [here's why](https://www.nuxeo.com/blog/why-nuxeo-dropped-jcr/)
-https://www.exoplatform.com/blog/2016/06/02/why-are-we-moving-away-from-jcr/
+old versions of exoplatform, but no longer: [here's why](https://www.exoplatform.com/blog/2016/06/02/why-are-we-moving-away-from-jcr/)
 
 
 Resources:
@@ -32,7 +32,7 @@ Resources:
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2MTk3ODQwNiwtMTI3MTcxOTE0MiwxNz
+eyJoaXN0b3J5IjpbMTUwOTM1OTAxNCwtMTI3MTcxOTE0MiwxNz
 UzMTgyMjAsLTE4MDY1NzM2MDMsLTIwODUxMzU3NTgsMTU4NTgy
 NzE0MCw2MzI1MzQ1NDUsLTEzNjc1NTcxNjksMTU4OTUyMDI2MC
 wyMTEyNTIyMzksLTMwNDEwNTMwN119
