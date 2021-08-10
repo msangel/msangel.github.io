@@ -4,6 +4,9 @@ Standarts:
  - JSR-170 (https://download.oracle.com/otndocs/jcp/contentrepository-1.0-fr-oth-JSpec/)
  - JSR-283
 
+Implementatyions:
+https://jackrabbit.apache.org/jcr/index.html
+
 Resources:
 
  - [ecm vs cms](https://www.aodocs.com/blog/ecm-vs-cms-difference)
@@ -11,5 +14,6 @@ Resources:
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExMjUyMjM5LC0zMDQxMDUzMDddfQ==
+eyJoaXN0b3J5IjpbLTE2NjgwNzIxNDcsMjExMjUyMjM5LC0zMD
+QxMDUzMDddfQ==
 -->
