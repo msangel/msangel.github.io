@@ -15,7 +15,7 @@ Use cases:
  - CMS(Magnolia, Jahia and Hippo)
  - data structures, orginazed as tries
  - implementation-agnostic storage intermediate(works with abstract stores without relying on it's implementations)
-- 
+- as back-end for some data web-servers, nice example: https://sling.apache.org/
 
 Implementations:
 https://jackrabbit.apache.org/jcr/index.html
@@ -30,7 +30,7 @@ Resources:
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDY1NzM2MDMsLTIwODUxMzU3NTgsMT
-U4NTgyNzE0MCw2MzI1MzQ1NDUsLTEzNjc1NTcxNjksMTU4OTUy
-MDI2MCwyMTEyNTIyMzksLTMwNDEwNTMwN119
+eyJoaXN0b3J5IjpbNjA4NDM5MDQsLTE4MDY1NzM2MDMsLTIwOD
+UxMzU3NTgsMTU4NTgyNzE0MCw2MzI1MzQ1NDUsLTEzNjc1NTcx
+NjksMTU4OTUyMDI2MCwyMTEyNTIyMzksLTMwNDEwNTMwN119
 -->
