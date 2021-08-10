@@ -26,12 +26,12 @@ old versions of nuxeo, but no longer: [here's why](https://www.nuxeo.com/blog/wh
 Resources:
 
  - [ecm vs cms](https://www.aodocs.com/blog/ecm-vs-cms-difference)
- - [Is jcr dead ](https://www.cmswire.com/cms/web-cms/is-jcr-dead-009676.php)
+ - [Is jcr dead?](https://www.cmswire.com/cms/web-cms/is-jcr-dead-009676.php)
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwNDIyMzgyNywtMTgwNjU3MzYwMywtMj
-A4NTEzNTc1OCwxNTg1ODI3MTQwLDYzMjUzNDU0NSwtMTM2NzU1
-NzE2OSwxNTg5NTIwMjYwLDIxMTI1MjIzOSwtMzA0MTA1MzA3XX
-0=
+eyJoaXN0b3J5IjpbMTc1MzE4MjIwLC0xODA2NTczNjAzLC0yMD
+g1MTM1NzU4LDE1ODU4MjcxNDAsNjMyNTM0NTQ1LC0xMzY3NTU3
+MTY5LDE1ODk1MjAyNjAsMjExMjUyMjM5LC0zMDQxMDUzMDddfQ
+==
 -->
