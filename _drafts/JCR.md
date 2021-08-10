@@ -23,7 +23,7 @@ https://modeshape.jboss.org/
 Oracle Beehive 
 old versions of nuxeo, but no longer: [here's why](https://www.nuxeo.com/blog/why-nuxeo-dropped-jcr/)
 old versions of exoplatform, but no longer: [here's why](https://www.exoplatform.com/blog/2016/06/02/why-are-we-moving-away-from-jcr/)
-some PHP: https://typo3.org/, 
+some PHP: https://typo3.org/, others: http://phpcr.github.io/implementations/
 
 
 Resources:
@@ -33,7 +33,7 @@ Resources:
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxMjY2OTc1MSwtMTI3MTcxOTE0MiwxNz
+eyJoaXN0b3J5IjpbMTE5MzUxNTgwOSwtMTI3MTcxOTE0MiwxNz
 UzMTgyMjAsLTE4MDY1NzM2MDMsLTIwODUxMzU3NTgsMTU4NTgy
 NzE0MCw2MzI1MzQ1NDUsLTEzNjc1NTcxNjksMTU4OTUyMDI2MC
 wyMTEyNTIyMzksLTMwNDEwNTMwN119
