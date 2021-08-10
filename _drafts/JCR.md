@@ -20,6 +20,7 @@ Use cases:
 Implementations:
 https://jackrabbit.apache.org/jcr/index.html
 https://modeshape.jboss.org/
+Oracle Beehive 
 old versions of nuxeo, but no longer: [here's why](https://www.nuxeo.com/blog/why-nuxeo-dropped-jcr/)
 
 
@@ -30,8 +31,8 @@ Resources:
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1MzE4MjIwLC0xODA2NTczNjAzLC0yMD
-g1MTM1NzU4LDE1ODU4MjcxNDAsNjMyNTM0NTQ1LC0xMzY3NTU3
-MTY5LDE1ODk1MjAyNjAsMjExMjUyMjM5LC0zMDQxMDUzMDddfQ
-==
+eyJoaXN0b3J5IjpbLTEyNzE3MTkxNDIsMTc1MzE4MjIwLC0xOD
+A2NTczNjAzLC0yMDg1MTM1NzU4LDE1ODU4MjcxNDAsNjMyNTM0
+NTQ1LC0xMzY3NTU3MTY5LDE1ODk1MjAyNjAsMjExMjUyMjM5LC
+0zMDQxMDUzMDddfQ==
 -->
