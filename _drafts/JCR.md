@@ -12,7 +12,7 @@ As of JSR-170 document intro:
     Customers will also benefit by being able to exchange their underlying repositories without touching any of the applications built on top of them.
 
 Use cases:
- - CMS
+ - CMS(Magnolia, Jahia and Hippo)
  - data structures, orginazed as tries
  - implementation-agnostic storage intermediate(works with abstract stores without relying on it's implementations)
 - 
@@ -30,7 +30,7 @@ Resources:
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODUxMzU3NTgsMTU4NTgyNzE0MCw2Mz
-I1MzQ1NDUsLTEzNjc1NTcxNjksMTU4OTUyMDI2MCwyMTEyNTIy
-MzksLTMwNDEwNTMwN119
+eyJoaXN0b3J5IjpbLTE4MDY1NzM2MDMsLTIwODUxMzU3NTgsMT
+U4NTgyNzE0MCw2MzI1MzQ1NDUsLTEzNjc1NTcxNjksMTU4OTUy
+MDI2MCwyMTEyNTIyMzksLTMwNDEwNTMwN119
 -->
