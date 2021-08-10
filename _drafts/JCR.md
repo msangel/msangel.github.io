@@ -20,6 +20,8 @@ Use cases:
 Implementations:
 https://jackrabbit.apache.org/jcr/index.html
 https://modeshape.jboss.org/
+old versions of nuxeo, but no longer: [here's why](https://www.nuxeo.com/blog/why-nuxeo-dropped-jcr/)
+
 
 Resources:
 
@@ -28,7 +30,7 @@ Resources:
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4NTgyNzE0MCw2MzI1MzQ1NDUsLTEzNj
-c1NTcxNjksMTU4OTUyMDI2MCwyMTEyNTIyMzksLTMwNDEwNTMw
-N119
+eyJoaXN0b3J5IjpbLTIwODUxMzU3NTgsMTU4NTgyNzE0MCw2Mz
+I1MzQ1NDUsLTEzNjc1NTcxNjksMTU4OTUyMDI2MCwyMTEyNTIy
+MzksLTMwNDEwNTMwN119
 -->
