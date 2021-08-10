@@ -12,11 +12,9 @@ As of JSR-170 document intro:
     Customers will also benefit by being able to exchange their underlying repositories without touching any of the applications built on top of them.
 
 Use cases:
-
-
-
-
-
+ - CMS
+ - data structures, orginazed as tries
+ - implementation-agnostic storage inter
 Implementations:
 https://jackrabbit.apache.org/jcr/index.html
 
@@ -27,6 +25,6 @@ Resources:
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjc1NTcxNjksMTU4OTUyMDI2MCwyMT
-EyNTIyMzksLTMwNDEwNTMwN119
+eyJoaXN0b3J5IjpbMTg4MTQyODU3OSwtMTM2NzU1NzE2OSwxNT
+g5NTIwMjYwLDIxMTI1MjIzOSwtMzA0MTA1MzA3XX0=
 -->
