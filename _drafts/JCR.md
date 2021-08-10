@@ -14,7 +14,9 @@ As of JSR-170 document intro:
 Use cases:
  - CMS
  - data structures, orginazed as tries
- - implementation-agnostic storage inter
+ - implementation-agnostic storage intermediate(works with abstract stores without relying on it's implementations)
+- 
+
 Implementations:
 https://jackrabbit.apache.org/jcr/index.html
 
@@ -25,6 +27,6 @@ Resources:
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4MTQyODU3OSwtMTM2NzU1NzE2OSwxNT
-g5NTIwMjYwLDIxMTI1MjIzOSwtMzA0MTA1MzA3XX0=
+eyJoaXN0b3J5IjpbNjMyNTM0NTQ1LC0xMzY3NTU3MTY5LDE1OD
+k1MjAyNjAsMjExMjUyMjM5LC0zMDQxMDUzMDddfQ==
 -->
