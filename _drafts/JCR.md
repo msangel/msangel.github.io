@@ -2,7 +2,11 @@ Content Repository API for Java (JCR) - API for accessing repositories for CMS(c
 
 
 
+Resources:
+
+ - [ecm-vs-cms](https://www.aodocs.com/blog/ecm-vs-cms-difference)
+
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0ODg5Nzk1Ml19
+eyJoaXN0b3J5IjpbLTE3MjMyNjUxNDldfQ==
 -->
