@@ -19,6 +19,7 @@ Use cases:
 
 Implementations:
 https://jackrabbit.apache.org/jcr/index.html
+https://modeshape.jboss.org/
 
 Resources:
 
@@ -27,6 +28,7 @@ Resources:
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjMyNTM0NTQ1LC0xMzY3NTU3MTY5LDE1OD
-k1MjAyNjAsMjExMjUyMjM5LC0zMDQxMDUzMDddfQ==
+eyJoaXN0b3J5IjpbMTU4NTgyNzE0MCw2MzI1MzQ1NDUsLTEzNj
+c1NTcxNjksMTU4OTUyMDI2MCwyMTEyNTIyMzksLTMwNDEwNTMw
+N119
 -->
