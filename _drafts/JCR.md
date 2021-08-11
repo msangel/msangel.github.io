@@ -16,6 +16,7 @@ Use cases:
  - data structures, orginazed as tries
  - implementation-agnostic storage intermediate(works with abstract stores without relying on it's implementations)
 - as back-end for some data web-servers, nice example: https://sling.apache.org/
+	- [slides](http://events17.linuxfoundation.org/sites/events/files/slides/ApacheConNA-ApacheSling.pdf)
 
 Implementations:
 https://jackrabbit.apache.org/jcr/index.html
@@ -33,8 +34,8 @@ Resources:
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5MzUxNTgwOSwtMTI3MTcxOTE0MiwxNz
-UzMTgyMjAsLTE4MDY1NzM2MDMsLTIwODUxMzU3NTgsMTU4NTgy
-NzE0MCw2MzI1MzQ1NDUsLTEzNjc1NTcxNjksMTU4OTUyMDI2MC
-wyMTEyNTIyMzksLTMwNDEwNTMwN119
+eyJoaXN0b3J5IjpbLTEzNjQ4Nzk5NDMsMTE5MzUxNTgwOSwtMT
+I3MTcxOTE0MiwxNzUzMTgyMjAsLTE4MDY1NzM2MDMsLTIwODUx
+MzU3NTgsMTU4NTgyNzE0MCw2MzI1MzQ1NDUsLTEzNjc1NTcxNj
+ksMTU4OTUyMDI2MCwyMTEyNTIyMzksLTMwNDEwNTMwN119
 -->
