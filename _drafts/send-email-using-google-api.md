@@ -35,12 +35,12 @@ https://developers.google.com/identity/protocols/oauth2
 
 ### oauth2
 Описание процедуры.
-Есть несколько режимов(access type): online и offline. В кратце - при offline режиме приложение кроме access_token получает и refresh_token(а детальней описано [тут](https://stackoverflow.com/questions/30637984/what-does-offline-access-in-oauth-mean/30638344)).
-Полученный access_token используется для подписи запросов. Этот токен сессийный и работает пока пользователь в системе.
-Полученный(если) refresh_token используется для создания новых access_token-ов.
-По умолчанию для веб-приложений используется online режим, т.е. оно имеет доступ к даннім пользователя пока он работает с системой. 
-По умолчанию в локальных приложениях используется offline режим, т.е. они имеют доступ к данным пользователя даже когда его нет на месте.
-Есть [пример получения access_token из refresh_token.](https://github.com/heliosnarcissus/java-gmail-api/blob/main/src/main/java/com/gmailapijava/main/GmailAPIJavaMain.java#L110)) но он ненужный потому что если в обьекте типа `Credential` есть refresh_token, то можно просто вызвать метод `Credential#refreshToken`.
+
+Тут уточнить что результатом авторизации является код CODE, который нужно обменять на refresh_token и access_token ([тут пример](https://developers.google.com/android-publisher/authorization)).
+
+Есть несколько режимов(access type): online и offline. В кратце - при offline режиме приложение кроме access_token получает и refresh_token(а детальней описано [тут](https://stackoverflow.com/questions/30637984/what-does-offline-access-in-oauth-mean/30638344)). Полученный access_token используется для подписи запросов. Этот токен сессийный и работает пока пользователь в системе. Полученный(если) refresh_token используется для создания новых access_token-ов. 
+
+По умолчанию для веб-приложений используется online режим, т.е. оно имеет доступ к даннім пользователя пока он работает с системой. По умолчанию в локальных приложениях используется offline режим, т.е. они имеют доступ к данным пользователя даже когда его нет на месте. Есть [пример получения access_token из refresh_token.](https://github.com/heliosnarcissus/java-gmail-api/blob/main/src/main/java/com/gmailapijava/main/GmailAPIJavaMain.java#L110)) но он ненужный потому что если в обьекте типа `Credential` есть refresh_token, то можно просто вызвать метод `Credential#refreshToken`.
 
 Сама подпись запросов производится заголовком: `Authorization: Bearer ${OAUTH2_ACCESS_TOKEN}`. 
  
