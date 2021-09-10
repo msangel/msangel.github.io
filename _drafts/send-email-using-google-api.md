@@ -16,33 +16,34 @@
 Это особые аккаунты, которые нужны для межсерверного взаимодействия. Создание и управление ими находится в разделе "IAM & Admin > Service accounts". Некоторые апи доступны только конечному пользователю, а не сервесному аккауннту. Какие - хз. Например интересующие нас "Gmail API" доступны _только_ пользователю, ибо невозможно отправлять личную почту с аккаунта для межсерверного взаимодействия. Однако. Сервисному аккаунту можно делегировать полномочия пользователя. Потому что можно. 
 
 ### Авторизация и автентификация
-Авторизация реализована с помощью oauth2
+Авторизация реализована с помощью oauth2, она нам и нужна. О ней можно почитать здесь:
+https://developers.google.com/identity/protocols/oauth2
+
+Просто для ясности, существует еще и механизм автентификации openid которая работает на базе oauth2, она описана в другом документе:
+https://developers.google.com/identity/protocols/oauth2
+Но в данном случае она не нужна. 
 
 ## Что есть авторизацией?
 Много непонятных слов:
 * refresh_token
 * client_id
 * client_secret
-* access_token([пример получения](https://github.com/heliosnarcissus/java-gmail-api/blob/main/src/main/java/com/gmailapijava/main/GmailAPIJavaMain.java#L110))
-* access type(online/offline)
+* 
+*
 * VerificationCodeReceiver ([my explanation](https://stackoverflow.com/a/69124583/449553))
 * 
 
-Способы авторизации:
-* authorization with oauth2, Официальная дока по вопросу там: https://developers.google.com/identity/protocols/oauth2
-
-Есть еще процедура автентификации openidб которая работает на базе oauth2, она описана в другом документе : https://developers.google.com/identity/protocols/oauth2/openid-connect
-
 ### oauth2
 Описание процедуры.
-Есть несколько режимов(access type): online и offline. В кратце - при offline режиме приложение кроме access_token получает и refresh_token.
+Есть несколько режимов(access type): online и offline. В кратце - при offline режиме приложение кроме access_token получает и refresh_token(а детальней описано [тут](https://stackoverflow.com/questions/30637984/what-does-offline-access-in-oauth-mean/30638344)).
 Полученный access_token используется для подписи запросов. Этот токен сессийный и работает пока пользователь в системе.
 Полученный(если) refresh_token используется для создания новых access_token-ов.
-По умолчанию для веб-приложений используется online режим, т.е. 
-.
+По умолчанию для веб-приложений используется online режим, т.е. оно имеет доступ к даннім пользователя пока он работает с системой. 
+По умолчанию в локальных приложениях используется offline режим, т.е. они имеют доступ к данным пользователя даже когда его нет на месте.
+[Пример получения access_token из reresh_token.](https://github.com/heliosnarcissus/java-gmail-api/blob/main/src/main/java/com/gmailapijava/main/GmailAPIJavaMain.java#L110)).
  
 
-https://stackoverflow.com/questions/30637984/what-does-offline-access-in-oauth-mean/30638344
+
 
 ## Примеры
 todo: перенести важнные участки кода сюда
