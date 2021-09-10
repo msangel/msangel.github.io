@@ -46,6 +46,36 @@ https://developers.google.com/identity/protocols/oauth2
 [Пример получения access_token из reresh_token.](https://github.com/heliosnarcissus/java-gmail-api/blob/main/src/main/java/com/gmailapijava/main/GmailAPIJavaMain.java#L110)).
  
 
+## Что по самому АПИ
+Есть нормальная инструкция по настройке(там еще есть страницы) апи вообще: https://developers.google.com/api-client-library/java/google-api-java-client/setup
+
+Установка с мавеном:
+```xml
+<dependency>
+      <groupId>com.google.apis</groupId>
+      <artifactId>google-api-services-gmail</artifactId>
+      <version>v1-rev110-1.25.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.oauth-client</groupId>
+      <artifactId>google-oauth-client-jetty</artifactId>
+      <version>1.32.1</version>
+    </dependency>
+    <dependency>
+      <groupId>com.sun.mail</groupId>
+      <artifactId>jakarta.mail</artifactId>
+      <version>1.6.7</version>
+    </dependency>
+```
+Там же примеры использования общих апи(todo: исследовать):
+https://developers.google.com/api-client-library/java/google-api-java-client/oauth2
+
+Есть туториал и по самому АПИ: 
+* общее https://developers.google.com/gmail/api/quickstart/java?hl=en
+* конкретно отправка https://developers.google.com/gmail/api/guides/sending
+* и даже плейграунт(очень бесполезный) https://developers.google.com/gmail/api/reference/rest/v1/users.messages/send
+
+Бесполезность плейграунда в том, что апи одновременно очень прjстое но и вместе с тем сложное. Необходимым является только поле `raw` и в него нужно записать base64 закодированное тело письма в соответствии с [rfc822](https://datatracker.ietf.org/doc/html/rfc822)(August 13, 1982). Да-да. Туда записывается та текстовая каша, которая на самом деле является письмом в сыром виде. С одной стороны - просто и понятно и нет вопросов ни по особых полях ни по аттачментах, и сбиблиотеки для генерирования этой каши буквально встроены в все языки программирования, с другой стороны ты ту кашу не софрматируешь "с руки".
 
 
 ## Примеры
