@@ -31,10 +31,7 @@ https://developers.google.com/identity/protocols/oauth2
 * refresh_token
 * client_id
 * client_secret
-* 
-*
-* VerificationCodeReceiver ([my explanation](https://stackoverflow.com/a/69124583/449553))
-* 
+* VerificationCodeReceiver ([my explanation](https://stackoverflow.com/a/69124583/449553)) 
 
 ### oauth2
 Описание процедуры.
@@ -44,6 +41,8 @@ https://developers.google.com/identity/protocols/oauth2
 По умолчанию для веб-приложений используется online режим, т.е. оно имеет доступ к даннім пользователя пока он работает с системой. 
 По умолчанию в локальных приложениях используется offline режим, т.е. они имеют доступ к данным пользователя даже когда его нет на месте.
 Есть [пример получения access_token из refresh_token.](https://github.com/heliosnarcissus/java-gmail-api/blob/main/src/main/java/com/gmailapijava/main/GmailAPIJavaMain.java#L110)) но он ненужный потому что если в обьекте типа `Credential` есть refresh_token, то можно просто вызвать метод `Credential#refreshToken`.
+
+Сама подпись запросов производится заголовком: `Authorization: Bearer ${OAUTH2_ACCESS_TOKEN}`. 
  
 
 ## Что по самому АПИ
