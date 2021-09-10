@@ -18,6 +18,7 @@
 ### Авторизация и автентификация
 Авторизация реализована с помощью oauth2, она нам и нужна. О ней можно почитать здесь:
 https://developers.google.com/identity/protocols/oauth2
+Так же существует авторизация с помощью API key. Как его использовать непонятно.
 
 Просто для ясности, существует еще и механизм автентификации openid которая работает на базе oauth2, она описана в другом документе:
 https://developers.google.com/identity/protocols/oauth2
@@ -68,4 +69,7 @@ https://github.com/search?l=Java&p=9&q=%22service.users%28%29.messages%28%29.sen
  * Вчера был валидный а сегодня уже нет. Нужно проверять exirity и обновлять завременно(чтоб быть уверенным что на следующие 60 секунд его хватит)ю ОЧЕНЬ ВАЖНО иметь refresh token: https://github.com/1559913323/jstock/blob/master/src/org/yccheok/jstock/google/Utils.java
  *  
 
+Ссылки:
+* Примерно то же самое что и эта статья: https://mailtrap.io/blog/send-emails-with-gmail-api/
+* else
 
