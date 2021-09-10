@@ -43,7 +43,7 @@ https://developers.google.com/identity/protocols/oauth2
 Полученный(если) refresh_token используется для создания новых access_token-ов.
 По умолчанию для веб-приложений используется online режим, т.е. оно имеет доступ к даннім пользователя пока он работает с системой. 
 По умолчанию в локальных приложениях используется offline режим, т.е. они имеют доступ к данным пользователя даже когда его нет на месте.
-[Пример получения access_token из reresh_token.](https://github.com/heliosnarcissus/java-gmail-api/blob/main/src/main/java/com/gmailapijava/main/GmailAPIJavaMain.java#L110)).
+Есть [пример получения access_token из refresh_token.](https://github.com/heliosnarcissus/java-gmail-api/blob/main/src/main/java/com/gmailapijava/main/GmailAPIJavaMain.java#L110)) но он ненужный потому что если в обьекте типа `Credential` есть refresh_token, то можно просто вызвать метод `Credential#refreshToken`.
  
 
 ## Что по самому АПИ
