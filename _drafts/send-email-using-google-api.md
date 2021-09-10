@@ -18,7 +18,8 @@
 ### Авторизация и автентификация
 Авторизация реализована с помощью oauth2, она нам и нужна. О ней можно почитать здесь:
 https://developers.google.com/identity/protocols/oauth2
-Так же существует авторизация с помощью API key. Как его использовать непонятно.
+
+Так же существует авторизация с помощью API key. Как его использовать непонятно, и хотя гугл [делает попытку обьяснить](https://cloud.google.com/endpoints/docs/openapi/when-why-api-key) и [даже не раз](https://cloud.google.com/docs/authentication/api-keys), но очено неуспешно, потому что всеравно неочевидно какие вещи могут вызывать пользователи а какие приложениея и где грань. [Это](https://stackoverflow.com/questions/45128453/google-youtube-data-api-apikey-vs-oauth) и [это](https://stackoverflow.com/a/38054317/449553) и [это](https://stackoverflow.com/questions/39181501/whats-the-difference-between-api-key-client-id-and-service-account) обьяснения более понятны, но всеравно очень абстрактное. Хотелось бы конкретный список вещей, которых нельзя сделать с помощью API key. 
 
 Просто для ясности, существует еще и механизм автентификации openid которая работает на базе oauth2, она описана в другом документе:
 https://developers.google.com/identity/protocols/oauth2
