@@ -76,6 +76,8 @@ https://developers.google.com/api-client-library/java/google-api-java-client/oau
 
 Бесполезность плейграунда в том, что апи одновременно очень прjстое но и вместе с тем сложное. Необходимым является только поле `raw` и в него нужно записать base64 закодированное тело письма в соответствии с [rfc822](https://datatracker.ietf.org/doc/html/rfc822)(August 13, 1982). Да-да. Туда записывается та текстовая каша, которая на самом деле является письмом в сыром виде. С одной стороны - просто и понятно и нет вопросов ни по особых полях ни по аттачментах, и сбиблиотеки для генерирования этой каши буквально встроены в все языки программирования, с другой стороны ты ту кашу не софрматируешь "с руки".
 
+Очень важное замечание: [You cannot use a service account to impersonate a free gmail account](https://stackoverflow.com/questions/33233694/gmail-api-can-i-send-email-using-the-service-account)
+Однако все еще можно получить рефреш-токен для манипуляций(однако надо быть готовым что он может перестать работать в любой момент): https://stackoverflow.com/questions/19766912/how-do-i-authorise-an-app-web-or-installed-without-user-intervention
 
 ## Примеры
 todo: перенести важнные участки кода сюда
