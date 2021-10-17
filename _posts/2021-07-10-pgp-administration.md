@@ -99,7 +99,7 @@ gpg: /home/msangel/.gnupg/trustdb.gpg: trustdb created
 ```bash
 > kbxutil --stats ~/.gnupg/pubring.kbx
 ```
-`trustdb.gpg` - файл базы доверия. Не понятно.
+`trustdb.gpg` - файл базы доверия. Хранит информацию об уровне доверия к наличным ключам.
 
 ### О ключах
 Ключи сохраняются либо в виде пар(приватный-публичный) либо только публичные. 
