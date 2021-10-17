@@ -503,6 +503,11 @@ body {
     line-height: 28px;
 }
 
+.blogpost h5, .blogpost h6 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
 .blogpost a, .blogpost li:before {
     color: #337ab7;
 }
