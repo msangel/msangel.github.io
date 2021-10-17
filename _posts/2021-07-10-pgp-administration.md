@@ -387,4 +387,3 @@ TBD
 - [https://www.gnupg.org/gph/en/manual.html](https://www.gnupg.org/gph/en/manual.html)
 - [https://davesteele.github.io/gpg/2014/09/20/anatomy-of-a-gpg-key/](https://davesteele.github.io/gpg/2014/09/20/anatomy-of-a-gpg-key/)
 - [https://hashrocket.com/blog/posts/encryption-with-gpg-a-story-really-a-tutorial](https://hashrocket.com/blog/posts/encryption-with-gpg-a-story-really-a-tutorial)
-- 
