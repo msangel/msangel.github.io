@@ -374,8 +374,51 @@ gpg --keyserver hkps://keyserver.ubuntu.com --search-keys F0FB65DD715EB503E228D0
 ```
 Однако для генерации такого сертификата нужно указать пароль, которым защищен приватный ключ ну и нужен сам приватный ключ. Пароль можно забыть, файл приватного ключа можно потерять. Потому при генерации каждой пары ключей pgp так же создает сразу ключ для отзыва. Для того чтоб им воспользоваться, достаточно его импортировать и отправить на сервер:
 ```bash
-TBD
+# наш ключ отзыва
+> ls `~/.gnupg/openpgp-revocs.d/
+F0FB65DD715EB503E228D077A0FECC5008F47665.rev`
+# отключаем предохранитель в виде ":" в начале ключа, удаляем один символ
+sed -i -e 's/:-----BEGIN PGP/-----BEGIN PGP/g' ~/.gnupg/openpgp-revocs.d/
+F0FB65DD715EB503E228D077A0FECC5008F47665.rev
+
+# импортируем ключ, это обозначает данный ключ как отозванный в локальной связке.
+> gpg --import ~/.gnupg/openpgp-revocs.d/F0FB65DD715EB503E228D077A0FECC5008F47665.rev 
+gpg: key A0FECC5008F47665: "Artem Ivanov <ivanov@mail.com>" revocation certificate imported
+gpg: Total number processed: 1
+gpg:    new key revocations: 1
+gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+gpg: depth: 0  valid:   1  signed:   0  trust: 0-, 0q, 0n, 0m, 0f, 1u
+# Теперь отправляем отозванный сертификат на кей-сервер
+> gpg --keyserver hkps://keyserver.ubuntu.com --send-keys F0FB65DD715EB503E228D077A0FECC5008F47665
+gpg: sending key A0FECC5008F47665 to hkps://keyserver.ubuntu.com
+# проверяем статус
+> gpg --list-secret-keys  --with-subkey-fingerprints --keyid-format=long
+/home/msangel/.gnupg/pubring.kbx
+--------------------------------
+sec   rsa4096/A0FECC5008F47665 2021-10-17 [SC] [revoked: 2021-10-17]
+      F0FB65DD715EB503E228D077A0FECC5008F47665
+uid                 [ revoked] Artem Ivanov <ivanov@mail.com>
 ```
+Для чистоты эксперимента создадим еще одную тестовую среду и попробуем импортировать там ключ из кей-сервера. Обновление на сервере заняло около 5 минут.
+```bash
+> gpg  --keyserver hkps://keyserver.ubuntu.com --search-keys F0FB65DD715EB503E228D077A0FECC5008F47665
+gpg: data source: https://162.213.33.9:443
+(1)	Artem Ivanov <ivanov@mail.com>
+	  4096 bit RSA key A0FECC5008F47665, created: 2021-10-17
+Keys 1-1 of 1 for "F0FB65DD715EB503E228D077A0FECC5008F47665".  Enter number(s), N)ext, or Q)uit > 1
+gpg: key A0FECC5008F47665: "Artem Ivanov <ivanov@mail.com>" revocation certificate added
+gpg: key A0FECC5008F47665: "Artem Ivanov <ivanov@mail.com>" 1 new signature
+gpg: Total number processed: 1
+gpg:         new signatures: 1
+> gpg --list-keys  --with-subkey-fingerprints --keyid-format=long
+/home/msangel/.gnupg/pubring.kbx
+--------------------------------
+pub   rsa4096/A0FECC5008F47665 2021-10-17 [SC] [revoked: 2021-10-17]
+      F0FB65DD715EB503E228D077A0FECC5008F47665
+uid                 [ revoked] Artem Ivanov <ivanov@mail.com>
+
+```
+
 ### Бекап и восстановление
 Хотя для этого нужно всего лишь экспортировать свои пары ключей и сохранить их в надежном месте, а рецепты для этого написаны выше, но не стоит игнорировать это. Компьютеры приходят и уходят, а цифровая идентичность остается навсегда. 
 
