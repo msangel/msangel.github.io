@@ -124,8 +124,11 @@ sec => 'SECret key'
 ssb => 'Secret SuBkey'
 pub => 'PUBlic key'
 sub => 'public SUBkey'
-uid => 'User ID'
+uid => 'User ID, this is the user information associated with the secret key'
+ssb> => '>' after ssb means that your subkeys are not the machine. Instead they are on a smartcard.
+sec# => ''#' after sec means that your secret key is missing from the machine. But it has a reference to the secret key.
 ```
+И много [других](https://github.com/gpg/gnupg/blob/master/doc/DETAILS#field-1---type-of-record).
 
 Так же есть выбор в выборе алгоритмов для ключей. Разные алгоритмы для разных задач. [RSA](https://uk.wikipedia.org/wiki/RSA) является вроде как универсальным. У меня длина ключа 2048 bit, хотя уже сейчас рекомендуется создавать новые ключи длиной 4096 bit. 
 
@@ -419,8 +422,29 @@ uid                 [ revoked] Artem Ivanov <ivanov@mail.com>
 
 ```
 
+### Субключи
+TBD
+Как сертифицировать. 
+Как публиковать. 
+Как проверить сертификацию. 
+Как обновить срок жизни. 
+Как опубликовать изменения. 
+Как скачать изменения.
+
 ### Бекап и восстановление
-Хотя для этого нужно всего лишь экспортировать свои пары ключей и сохранить их в надежном месте, а рецепты для этого написаны выше, но не стоит игнорировать это. Компьютеры приходят и уходят, а цифровая идентичность остается навсегда. 
+Хотя для этого нужно всего лишь экспортировать свои пары ключей и сохранить их в надежном месте, а рецепты для этого написаны выше, но не стоит игнорировать это. Компьютеры приходят и уходят, а цифровая идентичность остается навсегда. Пожалуй что мне действительно понравилось - это идея хранить ключи в [печатном виде](https://www.saminiir.com/paper-storage-and-recovery-of-gpg-keys/). Я бы распечатал ключ для отзыва.
+
+### Другие возможности
+1. В один ключ можно добавить несколько идентификаторов(например домашнюю и рабочую адреса почт) и обновить ключ на сервере. 
+2. Так же идентификаторы можно удалить (если вы отправили ключ в реестр, то его можно
+только отозвать). 
+3. Можно создать субключ только с возможностью аутентификации и использовать его в качестве ssh ключа.
+4. Можно установить [опции](https://www.gnupg.org/documentation/manuals/gnupg/GPG-Configuration-Options.html) работы с системой внеся пожелания в `~/.gnupg/gpg.conf` файл. 
+5. Система задумывалась как "распределенная сеть доверия", где я могу, например, верить какому-то ключу "с большей вероятностью", если его подписало, например "больше трех проверенных мной человек". [Так-то](https://www.gnupg.org/gph/en/manual/x334.html).
+6. К публичному ключу можно присоединить фото. Это не должно уверять вас в правильности ключа. Поэтому я бы не стал. Но возможность [есть](
+https://help.gnome.org/users/seahorse/stable/pgp-photoid.html.en).
+7. Кроме fingerprints есть и [другие возможности](https://security.stackexchange.com/questions/231295/what-is-the-difference-between-the-many-identifiers-in-gnupg) идентифицировать ключи. Например, имя файла приватного ключа формируется на основе keygrip (--with-keygrip) но это внутрении детали. Fingerprints достаточно.
+
 
 ### Заключение
 В целом консольная программа удобна и понятна, однако если нет желания играться в консоль, существует много GUI-инструментов. При желании их можно найти и сравнить. Сам же я предпочитаю пользоваться программой `GPA` которая поставляется в комплекте с всем пакетом.
@@ -430,3 +454,16 @@ uid                 [ revoked] Artem Ivanov <ivanov@mail.com>
 - [https://www.gnupg.org/gph/en/manual.html](https://www.gnupg.org/gph/en/manual.html)
 - [https://davesteele.github.io/gpg/2014/09/20/anatomy-of-a-gpg-key/](https://davesteele.github.io/gpg/2014/09/20/anatomy-of-a-gpg-key/)
 - [https://hashrocket.com/blog/posts/encryption-with-gpg-a-story-really-a-tutorial](https://hashrocket.com/blog/posts/encryption-with-gpg-a-story-really-a-tutorial)
+- [https://github.com/gpg/gnupg/blob/master/doc/DETAILS#field-1---type-of-record](https://github.com/gpg/gnupg/blob/master/doc/DETAILS#field-1---type-of-record)
+
+### Хорошие статьи по теме
+Мне очень понравился цикл статей от [Jan Mosig](https://blogs.itemis.com/en/author/jan-mosig) об безопасности вокруг pgp. Не уверен, что их нужно читать, но вот ознакомиться точно не помешает:
+ 1. https://blogs.itemis.com/en/openpgp-on-the-job-part-1-what-is-it
+ 2. https://blogs.itemis.com/en/openpgp-on-the-job-part-2-before-we-start
+ 3. https://blogs.itemis.com/en/openpgp-on-the-job-part-3-install-and-configure
+ 4. https://blogs.itemis.com/en/openpgp-on-the-job-part-4-generating-keys
+ 5. https://blogs.itemis.com/en/openpgp-on-the-job-part-5-thunderbird-enigmail
+ 6. https://blogs.itemis.com/en/openpgp-on-the-job-part-6-e-mail-encryption-on-android-with-k-9-mail-openkeychain
+ 7. https://blogs.itemis.com/en/openpgp-on-the-job-part-7-improved-security-with-yubikey
+ 8. https://blogs.itemis.com/en/openpgp-on-the-job-part-8-ssh-with-openpgp-and-yubikey
+
