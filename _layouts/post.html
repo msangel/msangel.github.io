@@ -16,7 +16,9 @@ layout: default
       </p>
 {% toc %}
 {{ content }}
-      <h1 style="margin-top: 50px;">Comments</h1>
+      {% if page.comments %}
+        <h1 style="margin-top: 50px;">Comments</h1>
+      {% endif %}
     </div>
     <div id="disqus_thread"></div>
   </div>
