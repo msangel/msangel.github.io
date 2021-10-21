@@ -608,6 +608,20 @@ body {
 .blogpost .record .page-date {
     margin-bottom: 40px; margin-top: 5px
 }
+.blogpost .record {
+    overflow-wrap: break-word;
+}
+
+.blogpost .record h1,
+.blogpost .record h2,
+.blogpost .record h3,
+.blogpost .record h4,
+.blogpost .record h5,
+.blogpost .record h6
+{
+    text-align: left;
+}
+
 
 .blogpost .col-lg-9 .tags {
     margin-bottom: 50px;
