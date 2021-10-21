@@ -24,6 +24,7 @@ Prerequirements:
     * default: https://spsarolkar.github.io/rouge-theme-preview/
     * compatible with pygments: https://stylishthemes.github.io/Syntax-Themes/pygments/
   * install style: `rougify style monokai > assets/rouge.css`
+* https://kramdown.gettalong.org/quickref.html
 
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbNDAxODIzMjg1XX0=

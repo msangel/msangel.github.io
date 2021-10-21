@@ -458,12 +458,12 @@ https://help.gnome.org/users/seahorse/stable/pgp-photoid.html.en).
 
 ### Хорошие статьи по теме
 Мне очень понравился цикл статей от [Jan Mosig](https://blogs.itemis.com/en/author/jan-mosig) об безопасности вокруг pgp. Не уверен, что их нужно читать, но вот ознакомиться точно не помешает:
- 1. https://blogs.itemis.com/en/openpgp-on-the-job-part-1-what-is-it
- 2. https://blogs.itemis.com/en/openpgp-on-the-job-part-2-before-we-start
- 3. https://blogs.itemis.com/en/openpgp-on-the-job-part-3-install-and-configure
- 4. https://blogs.itemis.com/en/openpgp-on-the-job-part-4-generating-keys
- 5. https://blogs.itemis.com/en/openpgp-on-the-job-part-5-thunderbird-enigmail
- 6. https://blogs.itemis.com/en/openpgp-on-the-job-part-6-e-mail-encryption-on-android-with-k-9-mail-openkeychain
- 7. https://blogs.itemis.com/en/openpgp-on-the-job-part-7-improved-security-with-yubikey
- 8. https://blogs.itemis.com/en/openpgp-on-the-job-part-8-ssh-with-openpgp-and-yubikey
+ 1. [https://blogs.itemis.com/en/openpgp-on-the-job-part-1-what-is-it](https://blogs.itemis.com/en/openpgp-on-the-job-part-1-what-is-it)
+ 2. [https://blogs.itemis.com/en/openpgp-on-the-job-part-2-before-we-start](https://blogs.itemis.com/en/openpgp-on-the-job-part-2-before-we-start)
+ 3. [https://blogs.itemis.com/en/openpgp-on-the-job-part-3-install-and-configure](https://blogs.itemis.com/en/openpgp-on-the-job-part-3-install-and-configure)
+ 4. [https://blogs.itemis.com/en/openpgp-on-the-job-part-4-generating-keys](https://blogs.itemis.com/en/openpgp-on-the-job-part-4-generating-keys)
+ 5. [https://blogs.itemis.com/en/openpgp-on-the-job-part-5-thunderbird-enigmail](https://blogs.itemis.com/en/openpgp-on-the-job-part-5-thunderbird-enigmail)
+ 6. [https://blogs.itemis.com/en/openpgp-on-the-job-part-6-e-mail-encryption-on-android-with-k-9-mail-openkeychain](https://blogs.itemis.com/en/openpgp-on-the-job-part-6-e-mail-encryption-on-android-with-k-9-mail-openkeychain)
+ 7. [https://blogs.itemis.com/en/openpgp-on-the-job-part-7-improved-security-with-yubikey](https://blogs.itemis.com/en/openpgp-on-the-job-part-7-improved-security-with-yubikey)
+ 8. [https://blogs.itemis.com/en/openpgp-on-the-job-part-8-ssh-with-openpgp-and-yubikey](https://blogs.itemis.com/en/openpgp-on-the-job-part-8-ssh-with-openpgp-and-yubikey)
 

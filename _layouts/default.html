@@ -63,6 +63,57 @@
     </div>
   </nav>
   {{ content }}
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <script>
+      jQuery(document).ready(function() {
+          var offset = 300;
+          var duration = 500;
+          jQuery(window).scroll(function() {
+              if (jQuery(this).scrollTop() > offset) {
+                  jQuery('.backtotop').fadeIn(duration);
+              } else {
+                  jQuery('.backtotop').fadeOut(duration);
+              }
+          });
+
+          jQuery('.backtotop').click(function(event) {
+              event.preventDefault();
+              jQuery('html, body').animate({scrollTop: 0}, duration);
+              return false;
+          })
+      });
+  </script>
+  <style>
+      .backtotop {
+          display: none;
+      }
+      @media only screen and (min-width:1140px){
+          .backtotop,
+          .backtotop:hover,
+          .backtotop:active,
+          .backtotop:visited,
+          .backtotop:focus {
+              display: none;
+              position: fixed;
+              top: 182px;
+              left: 50px;
+              z-index: 10000;
+              text-align: center;
+              color: black;
+              text-decoration: none;
+              padding: 4px 10px;
+              border-radius: 3px;
+          }
+          .backtotop:hover {
+              background-color: rgba(59, 59, 59, 0.10);
+          }
+      }
+      
+      
+  </style>
+
+  <a href="#" class="backtotop"><img src="/assets/noun_Arrow_22173.svg"/><br/>UP</a>
   <div class="footer">
     <div class="row">
       <div class="container">
