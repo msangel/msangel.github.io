@@ -18,10 +18,9 @@ docker run -it --rm ubuntu
 ```
 Для тестового образа нужно распаковать и установить документацию(еще пригодится), минимальный набор инструментов и создадим пользователя для максимальной реалистичности(но не забудем привязать к пользователю девайс клавиатуры иначе генерация ключей вылетит с ошибкой) :
 ```bash
-unminimize
-apt update
+yes | unminimize
 apt install man sudo curl -y
-adduser msangel
+adduser msangel --gecos ""
 adduser msangel sudo
 su - msangel
 sudo chown msangel /dev/pts/0
