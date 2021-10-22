@@ -5,6 +5,13 @@ body {
     height:100%;
 }
 
+p {
+    hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+}
+
 summary {
     cursor: pointer;
 }
@@ -200,9 +207,6 @@ body {
 
 .about .maintext p{
     text-align: justify;
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    hyphens: auto;
 }
 
 @media only screen and (min-width:768px){

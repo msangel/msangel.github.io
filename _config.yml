@@ -15,6 +15,7 @@ defaults:
   values:
     permalink: blog/:year/:month/:day/:title.html
     layout: post
+    comments: true
 markdown: kramdown
 kramdown:
   entity_output: :as_input
