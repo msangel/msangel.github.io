@@ -12,6 +12,8 @@ Prerequirements:
 
  1. Create `Gemfile`.
  2. run `bundle install` for installing all dependencies
+ 3 1. Create `Gemfile`.
+ 2. run `bundle install` for installing all dependencies
  3. run locally with: `bundle exec jekyll serve`
  4. http://localhost:4000/ is your friend
 
@@ -27,5 +29,5 @@ Prerequirements:
 * https://kramdown.gettalong.org/quickref.html
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDAxODIzMjg1XX0=
+eyJoaXN0b3J5IjpbMTE5NTQzOTQ2NCw0MDE4MjMyODVdfQ==
 -->
