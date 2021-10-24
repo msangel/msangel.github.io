@@ -1,4 +1,4 @@
-<html lang="en" class="mysite">
+<html lang="{{ page.lang | default: 'en' }}" class="mysite">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -65,7 +65,8 @@
         <div class="row">
           <div class="col-xs-12">
             <div class="copyright">
-              <p>пребывая на этом сайте вы соглашаетесь с тем, что вы лалка <a href="https://github.com/msangel/msangel.github.io" target="_self">©</a> 2014-{{ 'now' | date: "%Y" }} by Vasyl Khrystiuk</p>
+              <p><a href="https://github.com/msangel/msangel.github.io" target="_self">© 2014-{{ 'now' | date: "%Y" }} by Vasyl Khrystiuk</a>, powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>, crafted by
+                <a href="https://github.com/msangel/msangel.github.io/blob/master/.github/workflows/github-pages.yml" target="_blank">GitHub Actions</a></p>
             </div>
           </div>
         </div>

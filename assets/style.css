@@ -505,9 +505,11 @@ body {
     font-size: 23px;
     font-weight: 700;
     line-height: 28px;
+    margin-top: 30px;
 }
 .blogpost h4 {
     font-weight: 700;
+    margin-top: 20px;
 }
 
 .blogpost h5, .blogpost h6 {

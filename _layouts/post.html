@@ -17,7 +17,7 @@ layout: default
 {% toc %}
 {{ content }}
       {% if page.comments %}
-        <h1 style="margin-top: 50px;">Comments</h1>
+        <h1 style="margin-top: 50px;">{% case page.lang %}{% when "ru" %}Комментарии{% else %}Comments{% endcase %}</h1>
       {% endif %}
     </div>
     <div id="disqus_thread"></div>
