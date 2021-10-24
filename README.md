@@ -12,8 +12,6 @@ Prerequirements:
 
  1. Create `Gemfile`.
  2. run `bundle install` for installing all dependencies
- 3 1. Create `Gemfile`.
- 2. run `bundle install` for installing all dependencies
  3. run locally with: `bundle exec jekyll serve`
  4. http://localhost:4000/ is your friend
 
