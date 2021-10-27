@@ -19,7 +19,7 @@ layout: default
           {% else %}
               {% assign excerpt = post.excerpt | truncatewords: 50 %}
           {% endif %}
-          <p>{{ excerpt }}... <a class="hidden-xs hidden-sm" href="{{ post.url }}">See more</a></p>
+          <p>{{ excerpt | strip_html }}... <a class="hidden-xs hidden-sm" href="{{ post.url }}">See more</a></p>
           <p class="visible-xs visible-sm"><a href="{{ post.url }}">See more</a></p>
         </div>
         {% endfor %}
