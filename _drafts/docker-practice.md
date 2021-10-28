@@ -57,27 +57,27 @@ ps -a
 http://blog.jayway.com/wp-content/uploads/2015/03/docker-image.png
 
 manage containers
-  attach      Attach local standard input, output, and error streams to a running container
-  exec        Run a command in a running container
-  create      Create a new container
-  kill        Kill one or more running containers
-  rm          Remove one or more containers
-  rename      Rename a container
-  start       Start one or more stopped containers
-  stop        Stop one or more running containers
-  restart     Restart one or more containers
-  pause       Pause all processes within one or more containers
-  unpause     Unpause all processes within one or more containers
-  run         Run a command in a new container
-  wait        Block until one or more containers stop, then print their exit codes
+attach      Attach local standard input, output, and error streams to a running container
+exec        Run a command in a running container
+create      Create a new container
+kill        Kill one or more running containers
+rm          Remove one or more containers
+rename      Rename a container
+start       Start one or more stopped containers
+stop        Stop one or more running containers
+restart     Restart one or more containers
+pause       Pause all processes within one or more containers
+unpause     Unpause all processes within one or more containers
+run         Run a command in a new container
+wait        Block until one or more containers stop, then print their exit codes
 
 
 fs commands
-  cp          Copy files/folders between a container and the local filesystem
-  export      Export a container's filesystem as a tar archive
-  save        Save one or more images to a tar archive (streamed to STDOUT by default)
-  diff        Inspect changes to files or directories on a container's filesystem
-  import      Import the contents from a tarball to create a filesystem image 
+cp          Copy files/folders between a container and the local filesystem
+export      Export a container's filesystem as a tar archive
+save        Save one or more images to a tar archive (streamed to STDOUT by default)
+diff        Inspect changes to files or directories on a container's filesystem
+import      Import the contents from a tarball to create a filesystem image
 
 
 Commands for interacting with images
@@ -91,12 +91,12 @@ $ docker load # load an image from a tar archive or STDIN
 
 
 Registry commands:
-  login       Log in to a Docker registry
-  search      Search the Docker Hub for images
-  logout      Log out from a Docker registry
-  pull        Pull an image or a repository from a registry
-  push        Push an image or a repository to a registry
-  
+login       Log in to a Docker registry
+search      Search the Docker Hub for images
+logout      Log out from a Docker registry
+pull        Pull an image or a repository from a registry
+push        Push an image or a repository to a registry
+
 commonly used images:
 scratch – this is the ultimate base image and it has 0 files and 0 size.
 busybox – a minimal Unix weighing in at 2.5 MB.
@@ -129,7 +129,7 @@ daeb0b76283eac2e0c7f7504bdde2d49c721a1b03a50f750ea9982464cfccb1e
 
 By writing script
 
-Create a special text file with name Dockerfile and 
+Create a special text file with name Dockerfile and
 docker build <path of the folder with Dockerfile in it>.
 
 FROM openjdk:8-jdk-alpine
@@ -244,13 +244,13 @@ $ docker run \
 publish port:
 Publish container port 80 on a random port on the Host
 $ docker run -p 80 nginx
- 
+
 Publish container port 80 on port 8080 on the Host
 $ docker run -p 8080:80 nginx
- 
+
 Publish container port 80 on port 8080 on the localhost interface on the Host
 $ docker run -p 127.0.0.1:8080:80 nginx
- 
+
 Publish all EXPOSEd ports from the container on random ports on the Host
 $ docker run -P nginx
 The nginx image, for example, exposes port 80 and 443.
@@ -331,23 +331,23 @@ fbe1f24d7df8   busybox:latest   "true"     db_data
 Inspect the container named silly_bartik
 Output is shortened for brevity.
 $ docker inspect silly_bartik
-    1 [{
-    2     "Args": [
-    3         "-c",
-    4         "/usr/local/bin/confd-watch.sh"
-    5     ],
-    6     "Config": {
-   10         "Hostname": "3c012df7bab9",
-   11         "Image": "andersjanmyr/nginx-confd:development",
-   12     },
-   13     "Id": "3c012df7bab977a194199f1",
-   14     "Image": "d3bd1f07cae1bd624e2e",
-   15     "NetworkSettings": {
-   16         "IPAddress": "",
-   18         "Ports": null
-   19     },
-   20     "Volumes": {},
-   22 }]
+1 [{
+2     "Args": [
+3         "-c",
+4         "/usr/local/bin/confd-watch.sh"
+5     ],
+6     "Config": {
+10         "Hostname": "3c012df7bab9",
+11         "Image": "andersjanmyr/nginx-confd:development",
+12     },
+13     "Id": "3c012df7bab977a194199f1",
+14     "Image": "d3bd1f07cae1bd624e2e",
+15     "NetworkSettings": {
+16         "IPAddress": "",
+18         "Ports": null
+19     },
+20     "Volumes": {},
+22 }]
 
 Tips and Tricks
 
@@ -376,19 +376,19 @@ REDIS_1_PORT_6379_TCP=tcp://172.17.0.9:6379
 
 Use volumes to avoid having to rebuild an image every time you run it. Every time the below Dockerfile is built it copies the current directory into the container.
 
-  1 FROM dockerfile/nodejs:latest
-  2
-  3 MAINTAINER Anders Janmyr "anders@janmyr.com"
-  4 RUN apt-get update && \
-  5   apt-get install zlib1g-dev && \
-  6   npm install -g pm2 && \
-  7   mkdir -p /srv/app
-  8
-  9 WORKDIR /srv/app
- 10 COPY . /srv/app
- 11
- 12 CMD pm2 start app.js -x -i 1 && pm2 logs
- 13
+1 FROM dockerfile/nodejs:latest
+2
+3 MAINTAINER Anders Janmyr "anders@janmyr.com"
+4 RUN apt-get update && \
+5   apt-get install zlib1g-dev && \
+6   npm install -g pm2 && \
+7   mkdir -p /srv/app
+8
+9 WORKDIR /srv/app
+10 COPY . /srv/app
+11
+12 CMD pm2 start app.js -x -i 1 && pm2 logs
+13
 
 Build and run the image
 $ docker build -t myapp .
@@ -406,22 +406,22 @@ https://docs.docker.com/engine/swarm/
 Docker swarm is another orchestration tool aimed to manage a cluster of docker hosts. While docker-compose managers multiple Docker containers within one docker host, docker swarm manages multiple docker hosts managing multiple Docker containers. Unlike docker-compose and docker-machine, docker swarm is not a standalone orchestration software. Swarm mode is built in docker engine and is managed through Docker client.
 
 Aditional reading:
- - limiting your docker container resources is [builtin](https://docs.docker.com/config/containers/resource_constraints/), see [sample](https://hostadvice.com/how-to/how-to-limit-a-docker-containers-resources-on-ubuntu-18-04/)
- - Automate building your images by:
-	 - maven with spotify plugin([sample](https://www.surevine.com/building-docker-images-with-maven/))
-	 - maven with fabric8 plugin([website](https://dmp.fabric8.io/))
-	 - maven [exec plugin](https://www.mojohaus.org/exec-maven-plugin/usage.html)
-	 - [spring-boot:build-image](https://spring.io/blog/2020/01/27/creating-docker-images-with-spring-boot-2-3-0-m1)
- - Manage remote docker with [docker-machine](https://docs.docker.com/machine/)
+- limiting your docker container resources is [builtin](https://docs.docker.com/config/containers/resource_constraints/), see [sample](https://hostadvice.com/how-to/how-to-limit-a-docker-containers-resources-on-ubuntu-18-04/)
+- Automate building your images by:
+    - maven with spotify plugin([sample](https://www.surevine.com/building-docker-images-with-maven/))
+    - maven with fabric8 plugin([website](https://dmp.fabric8.io/))
+    - maven [exec plugin](https://www.mojohaus.org/exec-maven-plugin/usage.html)
+    - [spring-boot:build-image](https://spring.io/blog/2020/01/27/creating-docker-images-with-spring-boot-2-3-0-m1)
+- Manage remote docker with [docker-machine](https://docs.docker.com/machine/)
 
 resources:
 
- - https://blog.jayway.com/2015/03/21/a-not-very-short-introduction-to-docker/
- - https://engineering.bitnami.com/articles/best-practices-writing-a-dockerfile.html
+- https://blog.jayway.com/2015/03/21/a-not-very-short-introduction-to-docker/
+- https://engineering.bitnami.com/articles/best-practices-writing-a-dockerfile.html
 
 ___
-to review: 
- - https://github.com/jwilder/dockerize
+to review:
+- https://github.com/jwilder/dockerize
 
 ___
 
@@ -486,3 +486,63 @@ MjgsLTEyNDM4OTg4NDQsODQ1MzQ4MDg2LDE3ODU5NTMzMzgsMj
 A2MDI0MTU3LC0yMDQ1ODEzMDgwLDExOTY1NjA5OTEsODY0NDYw
 MTg0XX0=
 -->
+
+
+Docker Registries
+
+Docker Hub is the official repository for images. It supports public (free) and private (fee) repositories. Repositories can be tagged as _official_ and this means that they are curated by the maintainers of the project (or someone connected with it).
+
+Docker Hub also supports automatic builds of projects hosted on Github and Bitbucket. If automatic build is enabled an image will automatically be built every time you push to your source code repository.
+
+If you don't want to use automatic builds, you can also `docker push` directly to Docker Hub. `docker pull` will pull images. `docker run` with an image that does not exist locally will automatically initiate a `docker pull`.
+
+It is also possible to host your images elsewhere. Docker maintains code for [docker-registry](https://github.com/docker/docker-registry) on Github. But, I have found it to be slow and buggy.
+
+Quay, Tutum, and Google also provides hosting of private docker images.
+
+
+
+Custom Dns In Docker.md
+
+Networking in docker
+create:
+docker network create <some name>
+list:
+docker network list
+run container with a network:
+docker run -d --net <networkName>
+
+linking:
+Start a postgres container, named mydb
+$ docker run --name mydb postgres
+
+Link mydb as db into myqpp
+$ docker run --link mydb:db myapp
+Linking a container sets up networking from the linking container into the linked container. It does two things:
+
+It updates the /etc/hosts with the link name given to the container, db in the example above. Making it possible to access the container by the name db. This is very good.
+It creates environment variables for the EXPOSEd ports. This is practically useless since I can access the same port by using a hostname:port combination anyway.
+The linked networking is not constrained by the ports EXPOSEd by the image. All ports are available to the linking container.
+
+Kubernetes solution:
+
+
+
+Host alias config:
+
+doc:
+
+[https://kubernetes.io/docs/concepts/services-networking/add-entries-to-pod-etc-hosts-with-host-aliases/](https://kubernetes.io/docs/concepts/services-networking/add-entries-to-pod-etc-hosts-with-host-aliases/)
+
+
+
+[https://stackoverflow.com/questions/56390226/how-to-add-extra-hosts-entries-in-helm-charts](https://stackoverflow.com/questions/56390226/how-to-add-extra-hosts-entries-in-helm-charts)
+
+
+
+Docker solution:
+
+google: docker host file records
+
+-   setting custom domains inside dockerfile: [https://stackoverflow.com/questions/38302867/how-to-update-etc-hosts-file-in-docker-image-during-docker-build](https://stackoverflow.com/questions/38302867/how-to-update-etc-hosts-file-in-docker-image-during-docker-build)
+-   setting dns for container when running docker: [https://forums.docker.com/t/dns-resolution-not-working-in-containers/36246](https://forums.docker.com/t/dns-resolution-not-working-in-containers/36246)

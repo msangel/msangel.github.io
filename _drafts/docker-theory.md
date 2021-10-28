@@ -3,8 +3,6 @@ title: Docker basis
 date: 2019-06-08 03:06:00 Z
 ---
 
-# {{ page.title }}
-{: .title }
 https://sites.google.com/site/modernskyangel/in-progress/docker-in-review
 
 <!-- excerpt-start -->This article is about docker and the technologies it is built on. Mostly theory here.<!-- excerpt-start -->
@@ -191,12 +189,3 @@ For example: if you build most of your applications as PHP site driven by Apache
 A docker is a powerful tool that is created to solve many common developer's problems and tasks. But before using it, nice to have some insights on how we came to it and how it is working inside, actually, this article about that.
 You may also want to look at the more practical part of using docker in my docker cookbook.
 
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzMDk3NTQ2MSwtMjEyMzk4NDAyNyw1Mz
-k1ODg5OTEsLTMwMjQxNzEwMiwyMDI3MTAwOTQwLDkxNTkwMDYw
-NCwtOTM1NDY2NTU3LDE1MzM1ODE1ODAsLTE1NDg5MDcxNyw5NT
-czMjYwNTgsLTE5MzIxMzMzNTIsNTAzMDI0NDIxLC0zMjIwNDg4
-MjgsLTE4NzkxOTAzNzAsMTcxMzg4OTA4NCwtMTI0ODk5NDg3OC
-wtMTMzNDc2MDk4OCw3OTAwMzgxMTIsLTk4MjE0NzcyNSwtODk0
-MzI3Mjc1XX0=
--->
