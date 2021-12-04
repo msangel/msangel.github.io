@@ -103,6 +103,7 @@ busybox – a minimal Unix weighing in at 2.5 MB.
 debian:buster -  the latest Debian is at 108MB
 ubuntu:latest - latest LTS (19.04 disco)
 alpinelinux: https://alpinelinux.org/
+https://pkgs.alpinelinux.org/packages
 
 
 
@@ -546,3 +547,14 @@ google: docker host file records
 
 -   setting custom domains inside dockerfile: [https://stackoverflow.com/questions/38302867/how-to-update-etc-hosts-file-in-docker-image-during-docker-build](https://stackoverflow.com/questions/38302867/how-to-update-etc-hosts-file-in-docker-image-during-docker-build)
 -   setting dns for container when running docker: [https://forums.docker.com/t/dns-resolution-not-working-in-containers/36246](https://forums.docker.com/t/dns-resolution-not-working-in-containers/36246)
+__________
+CMD vs entrypoint:
+https://habr.com/ru/company/southbridge/blog/329138/
+https://stackoverflow.com/questions/21553353/what-is-the-difference-between-cmd-and-entrypoint-in-a-dockerfile
+
+Practice:
+https://gitlab.com/msangel/webhook/-/blob/master/Dockerfile
+
+FS Security:
+https://www.berthon.eu/2018/containers-volumes-and-file-permissions/
+https://dille.name/blog/2018/07/16/handling-file-permissions-when-writing-to-volumes-from-docker-containers/
