@@ -1,5 +1,5 @@
 ---
-title: Docker basis
+title: Docker theory
 date: 2019-06-08 03:06:00 Z
 ---
 
