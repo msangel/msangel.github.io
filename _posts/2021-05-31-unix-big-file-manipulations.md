@@ -94,3 +94,8 @@ sed -i '10d' sample.txt
 # delete first line
 sed -i '1d' sample.txt
 ```
+### Archiving with progress bar
+example:
+```bash
+tar cf - bigfile.csv | pv -s $(du -b bigfile.csv | awk '{print $1}')  | gzip > bigfile.csv.tar.gz
+```
