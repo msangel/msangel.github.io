@@ -62,14 +62,14 @@ Lets edit my default by adding out Lightsail node:
 ```
 1.2.3.4 ansible_ssh_user=ubuntu
 ```
-where `1.2.3.4` is public IP i got from aws
+where `1.2.3.4` is public IP i got from aws. And some extra parameter -  in my case target node username was differ from local username, so I have to define that explisitly.   
 
 
 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4NjMzMzU3MywxNzM2OTQwNjA2LC0yMD
+eyJoaXN0b3J5IjpbMTc2NDU1NDQ0NywxNzM2OTQwNjA2LC0yMD
 c1NjI4ODY4LDI2Nzg0NjIzMCwtNTI2NTgyMDI5LDE2NTI0MjA4
 NjMsLTEyMDQyNjU5MTksLTIwNjAzODk0MTYsLTE3MTg1NTU5OT
 YsLTE3NDI3MTMyNTgsLTU4OTMwMjQ3MCwtMTYxMDA0NzI4NSwt
