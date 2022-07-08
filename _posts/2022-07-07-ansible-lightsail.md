@@ -74,18 +74,20 @@ It's show time!
     "ping": "pong"
 }
 ```
-where 
--i ~/hosts : Specify inventory host path. You can setup shell variable and skip the -i option. For e.g.: export ANSIBLE_HOSTS=~/hosts
+where:
+ - -m shell : Module name to execute such as shell, apt, yum and so on
+ -  as
+
 -m shell : Module name to execute such as shell, apt, yum and so on
 -a 'uptime' : Module arguments. For example, shell module will accept Unix/Linux command names. The apt module will accept options to update remote boxes using apt-get/apt command and so on.
 all : The all means “all hosts.” You can speificy group name such as devservers (ansible -i hosts -m shell -a 'uptime' dbservers) or host names too.
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjMxMzI3MzcsOTY1MjEzNjg1LDE3Mz
-Y5NDA2MDYsLTIwNzU2Mjg4NjgsMjY3ODQ2MjMwLC01MjY1ODIw
-MjksMTY1MjQyMDg2MywtMTIwNDI2NTkxOSwtMjA2MDM4OTQxNi
-wtMTcxODU1NTk5NiwtMTc0MjcxMzI1OCwtNTg5MzAyNDcwLC0x
-NjEwMDQ3Mjg1LC0xNDgyMTIwNzM3LDUxNjYyMDQ3NywxODU1OT
-EzNDgwXX0=
+eyJoaXN0b3J5IjpbLTE2NDY2MjYwNjUsLTEzNjMxMzI3MzcsOT
+Y1MjEzNjg1LDE3MzY5NDA2MDYsLTIwNzU2Mjg4NjgsMjY3ODQ2
+MjMwLC01MjY1ODIwMjksMTY1MjQyMDg2MywtMTIwNDI2NTkxOS
+wtMjA2MDM4OTQxNiwtMTcxODU1NTk5NiwtMTc0MjcxMzI1OCwt
+NTg5MzAyNDcwLC0xNjEwMDQ3Mjg1LC0xNDgyMTIwNzM3LDUxNj
+YyMDQ3NywxODU1OTEzNDgwXX0=
 -->
