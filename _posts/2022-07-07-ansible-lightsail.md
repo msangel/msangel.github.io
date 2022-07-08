@@ -54,7 +54,6 @@ ansible [core 2.12.7]
   python version = 3.8.10 (default, Mar 15 2022, 12:22:08) [GCC 9.4.0]
   jinja version = 3.1.2
   libyaml = True
-
 ```
 ### Test run
 Having a node and installed software, we can try how it actually works. As first step   here Ansible need to know his node location and how to access that. This is done by [INI-like config file](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html). There is a default one(`/etc/ansible/hosts`). Or per command you can feed own crafted config file. This way Ansible configuration is portable. 
@@ -79,10 +78,10 @@ It's show time!
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzE3MjAwMzEsOTY1MjEzNjg1LDE3Mz
-Y5NDA2MDYsLTIwNzU2Mjg4NjgsMjY3ODQ2MjMwLC01MjY1ODIw
-MjksMTY1MjQyMDg2MywtMTIwNDI2NTkxOSwtMjA2MDM4OTQxNi
-wtMTcxODU1NTk5NiwtMTc0MjcxMzI1OCwtNTg5MzAyNDcwLC0x
-NjEwMDQ3Mjg1LC0xNDgyMTIwNzM3LDUxNjYyMDQ3NywxODU1OT
-EzNDgwXX0=
+eyJoaXN0b3J5IjpbMzEwNDgwMzA3LDk2NTIxMzY4NSwxNzM2OT
+QwNjA2LC0yMDc1NjI4ODY4LDI2Nzg0NjIzMCwtNTI2NTgyMDI5
+LDE2NTI0MjA4NjMsLTEyMDQyNjU5MTksLTIwNjAzODk0MTYsLT
+E3MTg1NTU5OTYsLTE3NDI3MTMyNTgsLTU4OTMwMjQ3MCwtMTYx
+MDA0NzI4NSwtMTQ4MjEyMDczNyw1MTY2MjA0NzcsMTg1NTkxMz
+Q4MF19
 -->
