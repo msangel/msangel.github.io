@@ -36,13 +36,20 @@ Formal documentation on above: [https://lightsail.aws.amazon.com/ls/docs/en_us/a
 ## Install Ansible
 There are many ways to do that. In [documentation](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#selecting-an-ansible-package-and-version-to-install) it suggest install it as python3 module as this will be the fresher version. Still, if you are not about dealing with python libraries, you can install in more sifisticated way some stable version. Instructions on that also in [documentation](https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.html).
 In my case it as simple as:
+```bash
+> sudo apt update
+> sudo apt install software-properties-common
+> sudo add-apt-repository --yes --update ppa:ansible/ansible
+> sudo apt install ansible
+```
+
 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4MjgwMDE2MSwtMjA3NTYyODg2OCwyNj
-c4NDYyMzAsLTUyNjU4MjAyOSwxNjUyNDIwODYzLC0xMjA0MjY1
-OTE5LC0yMDYwMzg5NDE2LC0xNzE4NTU1OTk2LC0xNzQyNzEzMj
-U4LC01ODkzMDI0NzAsLTE2MTAwNDcyODUsLTE0ODIxMjA3Mzcs
-NTE2NjIwNDc3LDE4NTU5MTM0ODBdfQ==
+eyJoaXN0b3J5IjpbLTExNzMxNDQxMjQsLTIwNzU2Mjg4NjgsMj
+Y3ODQ2MjMwLC01MjY1ODIwMjksMTY1MjQyMDg2MywtMTIwNDI2
+NTkxOSwtMjA2MDM4OTQxNiwtMTcxODU1NTk5NiwtMTc0MjcxMz
+I1OCwtNTg5MzAyNDcwLC0xNjEwMDQ3Mjg1LC0xNDgyMTIwNzM3
+LDUxNjYyMDQ3NywxODU1OTEzNDgwXX0=
 -->
