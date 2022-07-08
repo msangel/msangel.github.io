@@ -28,12 +28,12 @@ sudo apt install openssh-client
 ```
 
 ### IP address of your node.
-By default 
+By default fresh Lightsail instance doesnt have 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1NjMxMDczNiwtMjA2MDM4OTQxNiwtMT
-cxODU1NTk5NiwtMTc0MjcxMzI1OCwtNTg5MzAyNDcwLC0xNjEw
-MDQ3Mjg1LC0xNDgyMTIwNzM3LDUxNjYyMDQ3NywxODU1OTEzND
-gwXX0=
+eyJoaXN0b3J5IjpbLTEyMDQyNjU5MTksLTIwNjAzODk0MTYsLT
+E3MTg1NTU5OTYsLTE3NDI3MTMyNTgsLTU4OTMwMjQ3MCwtMTYx
+MDA0NzI4NSwtMTQ4MjEyMDczNyw1MTY2MjA0NzcsMTg1NTkxMz
+Q4MF19
 -->
