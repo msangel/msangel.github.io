@@ -12,7 +12,6 @@ gem 'jekyll-theme-primer'
 gem 'kramdown-parser-gfm'
 gem 'rouge'
 group :jekyll_plugins do
-  gem 'jekyll-code-tabs', :git => 'https://github.com/vladyio/jekyll-code-tabs.git'
   gem 'jekyll-last-modified-at'
   gem 'jekyll-toc'
 end
