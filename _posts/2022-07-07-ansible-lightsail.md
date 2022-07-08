@@ -75,8 +75,8 @@ It's show time!
 }
 ```
 where:
- - -m shell : Module name to execute such as shell, apt, yum and so on
- -  as
+ - -m ping : Module name to execute such as ping, shell, apt, yum and so on
+ -  all : The all means "all hosts." You can speificy group name such as 'devservers' or host names too.
 
 -m shell : Module name to execute such as shell, apt, yum and so on
 -a 'uptime' : Module arguments. For example, shell module will accept Unix/Linux command names. The apt module will accept options to update remote boxes using apt-get/apt command and so on.
@@ -84,10 +84,10 @@ all : The all means “all hosts.” You can speificy group name such as devserv
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDY2MjYwNjUsLTEzNjMxMzI3MzcsOT
-Y1MjEzNjg1LDE3MzY5NDA2MDYsLTIwNzU2Mjg4NjgsMjY3ODQ2
-MjMwLC01MjY1ODIwMjksMTY1MjQyMDg2MywtMTIwNDI2NTkxOS
-wtMjA2MDM4OTQxNiwtMTcxODU1NTk5NiwtMTc0MjcxMzI1OCwt
-NTg5MzAyNDcwLC0xNjEwMDQ3Mjg1LC0xNDgyMTIwNzM3LDUxNj
-YyMDQ3NywxODU1OTEzNDgwXX0=
+eyJoaXN0b3J5IjpbMjAxOTEwMTk5MCwtMTM2MzEzMjczNyw5Nj
+UyMTM2ODUsMTczNjk0MDYwNiwtMjA3NTYyODg2OCwyNjc4NDYy
+MzAsLTUyNjU4MjAyOSwxNjUyNDIwODYzLC0xMjA0MjY1OTE5LC
+0yMDYwMzg5NDE2LC0xNzE4NTU1OTk2LC0xNzQyNzEzMjU4LC01
+ODkzMDI0NzAsLTE2MTAwNDcyODUsLTE0ODIxMjA3MzcsNTE2Nj
+IwNDc3LDE4NTU5MTM0ODBdfQ==
 -->
