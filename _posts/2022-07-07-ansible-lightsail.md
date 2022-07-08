@@ -6,10 +6,11 @@ lang: en
 Ansible is a tool for managing a cluster of computers. It's idea is simple - working on top of remote ssh, it execute the same command on each registered node. In opposite to classical orchestration tools, where the controller shoult be accessible(online) to dependent nodes, Ansible just requires nodes to be accessible to controller. In simple and popular case, controller is your computer. Even if it has a [lot of additional features](https://www.redhat.com/en/technologies/management/ansible/what-is-ansible), in this sample it will be used for automation of deployment java-application to remote host, in this case to Amazon Lightsail node. It is easy, straightforward, and right for that tool. No need to worry about manually connection to the server, uploading artifacts, restart service, etc. Also it is secure, as does't expose anything except already axposed ssh(22 tcp port).
 
 ## Acquiring Lightsail node
-Just go there: https://lightsail.aws.amazon.com/, register and create a node. During node creation you will have a choice - either create new, either use existing ssh key. As this was my first run, I create new and the `my-key.pem` file was downloaded on my computer. `ssh` can use that to connect, just put key in safe location and grant propriate permissions to the file, like:
+Just go there: https://lightsail.aws.amazon.com/, register and create a node. During node creation you will have a choice - either create new, either use existing ssh key. As this was my first run, I create new and the `my-key.pem` file was downloaded on my computer. `ssh` can use that to connect, just put key in safe location and grant propriate permissions to the file, like only user readable:
 ```bash
-chmod 400 lightsail-msangel.pem
+chmod 400 my-key.pem
 ```
+after you ca
 ```bash
 > ssh-add my-key.pem
 Identity added: my-key.pem (my-key.pem)
@@ -18,7 +19,7 @@ Identity added: my-key.pem (my-key.pem)
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2MTE3MTI1OSwtMTc0MjcxMzI1OCwtNT
-g5MzAyNDcwLC0xNjEwMDQ3Mjg1LC0xNDgyMTIwNzM3LDUxNjYy
-MDQ3NywxODU1OTEzNDgwXX0=
+eyJoaXN0b3J5IjpbLTE3MTg1NTU5OTYsLTE3NDI3MTMyNTgsLT
+U4OTMwMjQ3MCwtMTYxMDA0NzI4NSwtMTQ4MjEyMDczNyw1MTY2
+MjA0NzcsMTg1NTkxMzQ4MF19
 -->
