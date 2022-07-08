@@ -5,10 +5,10 @@ lang: en
 ---
 Ansible is a tool for managing a cluster of computers. It's idea is simple - working on top of remote ssh, it execute the same command on each registered node. In opposite to classical orchestration tools, where the controller shoult be accessible(online) to dependent nodes, Ansible just requires nodes to be accessible to controller. In simple and popular case, controller is your computer. Even if it has a [lot of additional features](https://www.redhat.com/en/technologies/management/ansible/what-is-ansible), in this sample it will be used for automation of deployment java-application to remote host, in this case to Amazon Lightsail node. It is easy, straightforward, and right for that tool. No need to worry about manually connection to the server, uploading artifacts, restart service, etc. Also it is secure, as does't expose anything except already axposed ssh(22 tcp port).
 
-## Acquiring Lightsail node
+### Acquiring Lightsail node
 Just go there: [https://lightsail.aws.amazon.com/](https://lightsail.aws.amazon.com/), register and create a node. 
 
-###  ssh keys
+####  ssh keys
 During node creation you will have a choice - either create new, either use existing ssh key. As this was my first run, I create new and the `my-key.pem` file was downloaded on my computer. `ssh` can use that to connect, just put key in safe location and grant propriate permissions to the file, like only user readable:
 ```bash
 chmod 400 my-key.pem
@@ -27,13 +27,13 @@ ssh-copy-id -i $HOME/.ssh/id_rsa.pub ubuntu@1.2.3.4
 sudo apt install openssh-client
 ```
 
-### IP address of your node.
+#### IP address of your node.
 By default fresh Lightsail instance doesnt have public IP, only private one (in aws network). But that can be changed, aws provide free IP for each node that is in use. Just go to Lightsail's "network" tab and create one association. Like this:
 ![lightsail_ip](https://k.co.ua/resources/lightsail/lightsail_ip.png){: pretty}
 
 Formal documentation on above: [https://lightsail.aws.amazon.com/ls/docs/en_us/articles/lightsail-create-static-ip](https://lightsail.aws.amazon.com/ls/docs/en_us/articles/lightsail-create-static-ip)
 
-## Install Ansible
+### Install Ansible
 There are many ways to do that. In [documentation](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#selecting-an-ansible-package-and-version-to-install) it suggest install it as python3 module as this will be the fresher version. Still, if you are not about dealing with python libraries, you can install in more sifisticated way some stable version. Instructions on that also in [documentation](https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.html).
 In my case it as simple as:
 ```bash
@@ -43,13 +43,16 @@ In my case it as simple as:
 > sudo apt install ansible
 ```
 
+### Test run
+Having a node and installed software, we can try how it 
+
 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczNjk0MDYwNiwtMjA3NTYyODg2OCwyNj
-c4NDYyMzAsLTUyNjU4MjAyOSwxNjUyNDIwODYzLC0xMjA0MjY1
-OTE5LC0yMDYwMzg5NDE2LC0xNzE4NTU1OTk2LC0xNzQyNzEzMj
-U4LC01ODkzMDI0NzAsLTE2MTAwNDcyODUsLTE0ODIxMjA3Mzcs
-NTE2NjIwNDc3LDE4NTU5MTM0ODBdfQ==
+eyJoaXN0b3J5IjpbLTE4OTU5MDc1NCwxNzM2OTQwNjA2LC0yMD
+c1NjI4ODY4LDI2Nzg0NjIzMCwtNTI2NTgyMDI5LDE2NTI0MjA4
+NjMsLTEyMDQyNjU5MTksLTIwNjAzODk0MTYsLTE3MTg1NTU5OT
+YsLTE3NDI3MTMyNTgsLTU4OTMwMjQ3MCwtMTYxMDA0NzI4NSwt
+MTQ4MjEyMDczNyw1MTY2MjA0NzcsMTg1NTkxMzQ4MF19
 -->
