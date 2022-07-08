@@ -56,7 +56,7 @@ ansible [core 2.12.7]
   libyaml = True
 ```
 ### Test run
-Having a node and installed software, we can try how it actually works. As first step   here Ansible need to know his node location and how to access that. This is done by [INI-like config file](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html). There is a default one(`/etc/ansible/hosts`). Or per command you can feed own crafted config file(by passing `-i <path>` parameter). Or by This way Ansible configuration is portable. 
+Having a node and installed software, we can try how it actually works. As first step   here Ansible need to know his node location and how to access that. This is done by [INI-like config file](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html). There is a default one(`/etc/ansible/hosts`). Or per command you can feed own crafted config file(by passing `-i <path>` parameter). Or by enviroupment variable: `export ANSIBLE_HOSTS=~/hosts`. This way Ansible configuration is portable. 
 Lets edit my default by adding out Lightsail node:
 ```
 1.2.3.4 ansible_ssh_user=ubuntu
@@ -82,10 +82,10 @@ all : The all means “all hosts.” You can speificy group name such as devserv
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ5ODQ2MTc2NCw5NjUyMTM2ODUsMTczNj
-k0MDYwNiwtMjA3NTYyODg2OCwyNjc4NDYyMzAsLTUyNjU4MjAy
-OSwxNjUyNDIwODYzLC0xMjA0MjY1OTE5LC0yMDYwMzg5NDE2LC
-0xNzE4NTU1OTk2LC0xNzQyNzEzMjU4LC01ODkzMDI0NzAsLTE2
-MTAwNDcyODUsLTE0ODIxMjA3MzcsNTE2NjIwNDc3LDE4NTU5MT
-M0ODBdfQ==
+eyJoaXN0b3J5IjpbLTEzNjMxMzI3MzcsOTY1MjEzNjg1LDE3Mz
+Y5NDA2MDYsLTIwNzU2Mjg4NjgsMjY3ODQ2MjMwLC01MjY1ODIw
+MjksMTY1MjQyMDg2MywtMTIwNDI2NTkxOSwtMjA2MDM4OTQxNi
+wtMTcxODU1NTk5NiwtMTc0MjcxMzI1OCwtNTg5MzAyNDcwLC0x
+NjEwMDQ3Mjg1LC0xNDgyMTIwNzM3LDUxNjYyMDQ3NywxODU1OT
+EzNDgwXX0=
 -->
