@@ -18,7 +18,7 @@ after you can import that file
 > ssh-add my-key.pem
 Identity added: my-key.pem (my-key.pem)
 ```
-Well, this will allow your ssh client to connect to target node. But Ansible by default itself uses traditional, public-key auth. The default can be changed by simply defining `my-key.pem` in Ansible settings, example. Or just use default, export your public key to target host using `scp` or `ssh-copy-id`:
+Well, this will allow your ssh client to connect to target node. But Ansible by default itself uses traditional, public-key auth. The default can be changed by simply defining `my-key.pem` in Ansible settings, example 1 and 2. Or just use default, export your public key to target host using `scp` or `ssh-copy-id`:
 ```bash
 ssh-copy-id -i $HOME/.ssh/id_rsa.pub ubuntu@1.2.3.4
 ```
@@ -32,8 +32,8 @@ By default fresh Lightsail instance doesnt have public IP, only private one (in 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1MjQyMDg2MywtMTIwNDI2NTkxOSwtMj
-A2MDM4OTQxNiwtMTcxODU1NTk5NiwtMTc0MjcxMzI1OCwtNTg5
-MzAyNDcwLC0xNjEwMDQ3Mjg1LC0xNDgyMTIwNzM3LDUxNjYyMD
-Q3NywxODU1OTEzNDgwXX0=
+eyJoaXN0b3J5IjpbLTE3MTEyNjI3NDcsMTY1MjQyMDg2MywtMT
+IwNDI2NTkxOSwtMjA2MDM4OTQxNiwtMTcxODU1NTk5NiwtMTc0
+MjcxMzI1OCwtNTg5MzAyNDcwLC0xNjEwMDQ3Mjg1LC0xNDgyMT
+IwNzM3LDUxNjYyMDQ3NywxODU1OTEzNDgwXX0=
 -->
