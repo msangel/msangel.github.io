@@ -6,7 +6,9 @@ lang: en
 Ansible is a tool for managing a cluster of computers. It's idea is simple - working on top of remote ssh, it execute the same command on each registered node. In opposite to classical orchestration tools, where the controller shoult be accessible(online) to dependent nodes, Ansible just requires nodes to be accessible to controller. In simple and popular case, controller is your computer. Even if it has a [lot of additional features](https://www.redhat.com/en/technologies/management/ansible/what-is-ansible), in this sample it will be used for automation of deployment java-application to remote host, in this case to Amazon Lightsail node. It is easy, straightforward, and right for that tool. No need to worry about manually connection to the server, uploading artifacts, restart service, etc. Also it is secure, as does't expose anything except already axposed ssh(22 tcp port).
 
 ## Acquiring Lightsail node
-Just go there: https://lightsail.aws.amazon.com/, register and create a node. During node creation you will have a choice - either create new, either use existing ssh key. As this was my first run, I create new and the `my-key.pem` file was downloaded on my computer. `ssh` can use that to connect, just put key in safe location and grant propriate permissions to the file, like only user readable:
+Just go there: https://lightsail.aws.amazon.com/, register and create a node. 
+###  ssh keys
+During node creation you will have a choice - either create new, either use existing ssh key. As this was my first run, I create new and the `my-key.pem` file was downloaded on my computer. `ssh` can use that to connect, just put key in safe location and grant propriate permissions to the file, like only user readable:
 ```bash
 chmod 400 my-key.pem
 ```
@@ -18,12 +20,15 @@ Identity added: my-key.pem (my-key.pem)
 Well, this will allow your ssh client to connect to target node. But Ansible by default itself uses traditional, public-key auth. The default can be changed by simply defining `my-key.pem` in Ansible settings. Or just use default, export your public key to target host:
 ```bash
 ssh-copy-id -i $HOME/.ssh/id_rsa.pub ubuntu@1.2.3.4
-```  
+```
+ssh-copy-id is from 
+### IP address of your node.
+By default 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3NzA1MDA3OSwtMjA2MDM4OTQxNiwtMT
-cxODU1NTk5NiwtMTc0MjcxMzI1OCwtNTg5MzAyNDcwLC0xNjEw
-MDQ3Mjg1LC0xNDgyMTIwNzM3LDUxNjYyMDQ3NywxODU1OTEzND
-gwXX0=
+eyJoaXN0b3J5IjpbNzA5NTA1ODgwLC0yMDYwMzg5NDE2LC0xNz
+E4NTU1OTk2LC0xNzQyNzEzMjU4LC01ODkzMDI0NzAsLTE2MTAw
+NDcyODUsLTE0ODIxMjA3MzcsNTE2NjIwNDc3LDE4NTU5MTM0OD
+BdfQ==
 -->
