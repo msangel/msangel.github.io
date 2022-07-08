@@ -62,18 +62,27 @@ Lets edit my default by adding out Lightsail node:
 ```
 1.2.3.4 ansible_ssh_user=ubuntu
 ```
-where `1.2.3.4` is public IP i got from aws. And some extra parameter -  in my case target node username was differ from local username, so I have to define that explisitly. 
+where `1.2.3.4` is public IP i got from aws. And some extra parameter -  in my case target node username was differ from local username, so I have to define that explisitly.
 
 It's show time!
-
+```bash
+> ansible -m ping all
+1.2.3.4 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python3"
+    },
+    "changed": false,
+    "ping": "pong"
+}
+```
 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5MDE0MDE3MCw5NjUyMTM2ODUsMTczNj
-k0MDYwNiwtMjA3NTYyODg2OCwyNjc4NDYyMzAsLTUyNjU4MjAy
-OSwxNjUyNDIwODYzLC0xMjA0MjY1OTE5LC0yMDYwMzg5NDE2LC
-0xNzE4NTU1OTk2LC0xNzQyNzEzMjU4LC01ODkzMDI0NzAsLTE2
-MTAwNDcyODUsLTE0ODIxMjA3MzcsNTE2NjIwNDc3LDE4NTU5MT
-M0ODBdfQ==
+eyJoaXN0b3J5IjpbLTEyMzE3MjAwMzEsOTY1MjEzNjg1LDE3Mz
+Y5NDA2MDYsLTIwNzU2Mjg4NjgsMjY3ODQ2MjMwLC01MjY1ODIw
+MjksMTY1MjQyMDg2MywtMTIwNDI2NTkxOSwtMjA2MDM4OTQxNi
+wtMTcxODU1NTk5NiwtMTc0MjcxMzI1OCwtNTg5MzAyNDcwLC0x
+NjEwMDQ3Mjg1LC0xNDgyMTIwNzM3LDUxNjYyMDQ3NywxODU1OT
+EzNDgwXX0=
 -->
