@@ -7,6 +7,7 @@ Ansible is a tool for managing a cluster of computers. It's idea is simple - wor
 
 ## Acquiring Lightsail node
 Just go there: https://lightsail.aws.amazon.com/, register and create a node. 
+
 ###  ssh keys
 During node creation you will have a choice - either create new, either use existing ssh key. As this was my first run, I create new and the `my-key.pem` file was downloaded on my computer. `ssh` can use that to connect, just put key in safe location and grant propriate permissions to the file, like only user readable:
 ```bash
@@ -17,18 +18,21 @@ after you can import that file
 > ssh-add my-key.pem
 Identity added: my-key.pem (my-key.pem)
 ```
-Well, this will allow your ssh client to connect to target node. But Ansible by default itself uses traditional, public-key auth. The default can be changed by simply defining `my-key.pem` in Ansible settings. Or just use default, export your public key to target host using `scp` or ``:
+Well, this will allow your ssh client to connect to target node. But Ansible by default itself uses traditional, public-key auth. The default can be changed by simply defining `my-key.pem` in Ansible settings. Or just use default, export your public key to target host using `scp` or `ssh-copy-id`:
 ```bash
 ssh-copy-id -i $HOME/.ssh/id_rsa.pub ubuntu@1.2.3.4
 ```
-ssh-copy-id is from openssh-client package, if you dont have it, just install it :
-`sudo apt install openssh-client`
+`ssh-copy-id` is from openssh-client package, if you dont have it, just install it :
+```bash
+sudo apt install openssh-client
+```
+
 ### IP address of your node.
 By default 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MjA3NjEyNiwtMjA2MDM4OTQxNiwtMT
+eyJoaXN0b3J5IjpbLTI1NjMxMDczNiwtMjA2MDM4OTQxNiwtMT
 cxODU1NTk5NiwtMTc0MjcxMzI1OCwtNTg5MzAyNDcwLC0xNjEw
 MDQ3Mjg1LC0xNDgyMTIwNzM3LDUxNjYyMDQ3NywxODU1OTEzND
 gwXX0=
