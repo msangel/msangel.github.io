@@ -10,16 +10,16 @@ Just go there: https://lightsail.aws.amazon.com/, register and create a node. Du
 ```bash
 chmod 400 my-key.pem
 ```
-after you ca
+after you can import that file
 ```bash
 > ssh-add my-key.pem
 Identity added: my-key.pem (my-key.pem)
 ```
-
+Well, this will allow your ssh client to connect to target 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTg1NTU5OTYsLTE3NDI3MTMyNTgsLT
-U4OTMwMjQ3MCwtMTYxMDA0NzI4NSwtMTQ4MjEyMDczNyw1MTY2
-MjA0NzcsMTg1NTkxMzQ4MF19
+eyJoaXN0b3J5IjpbLTcyMzY3OTE5MiwtMTcxODU1NTk5NiwtMT
+c0MjcxMzI1OCwtNTg5MzAyNDcwLC0xNjEwMDQ3Mjg1LC0xNDgy
+MTIwNzM3LDUxNjYyMDQ3NywxODU1OTEzNDgwXX0=
 -->
