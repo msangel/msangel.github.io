@@ -29,7 +29,7 @@ sudo apt install openssh-client
 
 ### IP address of your node.
 By default fresh Lightsail instance doesnt have public IP, only private one (in aws network). But that can be changed, aws provide free IP for each node that is in use. Just go to Lightsail's "network" tab and create one association. Like this:
-![lightsail_ip](https://k.co.ua/resources/lightsail/lightsail_ip.png)
+![lightsail_ip](https://k.co.ua/resources/lightsail/lightsail_ip.png){: pretty}
 
 Formal documentation on above: [https://lightsail.aws.amazon.com/ls/docs/en_us/articles/lightsail-create-static-ip](https://lightsail.aws.amazon.com/ls/docs/en_us/articles/lightsail-create-static-ip)
 
@@ -47,9 +47,9 @@ In my case it as simple as:
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzMxNDQxMjQsLTIwNzU2Mjg4NjgsMj
-Y3ODQ2MjMwLC01MjY1ODIwMjksMTY1MjQyMDg2MywtMTIwNDI2
-NTkxOSwtMjA2MDM4OTQxNiwtMTcxODU1NTk5NiwtMTc0MjcxMz
-I1OCwtNTg5MzAyNDcwLC0xNjEwMDQ3Mjg1LC0xNDgyMTIwNzM3
-LDUxNjYyMDQ3NywxODU1OTEzNDgwXX0=
+eyJoaXN0b3J5IjpbMTczNjk0MDYwNiwtMjA3NTYyODg2OCwyNj
+c4NDYyMzAsLTUyNjU4MjAyOSwxNjUyNDIwODYzLC0xMjA0MjY1
+OTE5LC0yMDYwMzg5NDE2LC0xNzE4NTU1OTk2LC0xNzQyNzEzMj
+U4LC01ODkzMDI0NzAsLTE2MTAwNDcyODUsLTE0ODIxMjA3Mzcs
+NTE2NjIwNDc3LDE4NTU5MTM0ODBdfQ==
 -->
