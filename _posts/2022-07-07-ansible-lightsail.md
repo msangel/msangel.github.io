@@ -34,11 +34,11 @@ By default fresh Lightsail instance doesnt have public IP, only private one (in 
 Formal documentation on above: [https://lightsail.aws.amazon.com/ls/docs/en_us/articles/lightsail-create-static-ip](https://lightsail.aws.amazon.com/ls/docs/en_us/articles/lightsail-create-static-ip)
 
 ## Install Ansible
-There are many ways to do that. In documentation it suggest install it as python3 module. 
+There are many ways to do that. In [documentation](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#selecting-an-ansible-package-and-version-to-install) it suggest install it as python3 module as this will be the fresher version. S
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NzAzMzU1NjYsLTIwNzU2Mjg4NjgsMj
+eyJoaXN0b3J5IjpbLTE5MjE2OTUwMDIsLTIwNzU2Mjg4NjgsMj
 Y3ODQ2MjMwLC01MjY1ODIwMjksMTY1MjQyMDg2MywtMTIwNDI2
 NTkxOSwtMjA2MDM4OTQxNiwtMTcxODU1NTk5NiwtMTc0MjcxMz
 I1OCwtNTg5MzAyNDcwLC0xNjEwMDQ3Mjg1LC0xNDgyMTIwNzM3
