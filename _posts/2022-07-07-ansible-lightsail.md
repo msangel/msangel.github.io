@@ -8,12 +8,17 @@ Ansible is a tool for managing a cluster of computers. It's idea is simple - wor
 ## Acquiring Lightsail node
 Just go there: https://lightsail.aws.amazon.com/, register and create a node. During node creation you will have a choice - either create new, either use existing ssh key. As this was my first run, I create new and the `my-key.pem` file was downloaded on my computer. `ssh` can use that to connect, just put key in safe location and grant propriate permissions to the file, like:
 ```bash
-ssh-add my-key.pem
+chmod 400 lightsail-msangel.pem
 ```
+```bash
+> ssh-add my-key.pem
+Identity added: my-key.pem (my-key.pem)
+```
+
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTY4MDE5MTgsLTE3NDI3MTMyNTgsLT
-U4OTMwMjQ3MCwtMTYxMDA0NzI4NSwtMTQ4MjEyMDczNyw1MTY2
-MjA0NzcsMTg1NTkxMzQ4MF19
+eyJoaXN0b3J5IjpbMjA2MTE3MTI1OSwtMTc0MjcxMzI1OCwtNT
+g5MzAyNDcwLC0xNjEwMDQ3Mjg1LC0xNDgyMTIwNzM3LDUxNjYy
+MDQ3NywxODU1OTEzNDgwXX0=
 -->
