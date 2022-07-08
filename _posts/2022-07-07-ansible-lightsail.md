@@ -78,13 +78,10 @@ where:
  - -m ping : Module name to execute such as ping, shell, apt, yum and so on
  -  all : The all means "all hosts." You can speificy group name such as 'devservers' or host names too.
 
--m shell : Module name to execute such as shell, apt, yum and so on
--a 'uptime' : Module arguments. For example, shell module will accept Unix/Linux command names. The apt module will accept options to update remote boxes using apt-get/apt command and so on.
-all : The all means “all hosts.” You can speificy group name such as devservers (ansible -i hosts -m shell -a 'uptime' dbservers) or host names too.
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxOTEwMTk5MCwtMTM2MzEzMjczNyw5Nj
+eyJoaXN0b3J5IjpbLTk4Njk2Mzc1MywtMTM2MzEzMjczNyw5Nj
 UyMTM2ODUsMTczNjk0MDYwNiwtMjA3NTYyODg2OCwyNjc4NDYy
 MzAsLTUyNjU4MjAyOSwxNjUyNDIwODYzLC0xMjA0MjY1OTE5LC
 0yMDYwMzg5NDE2LC0xNzE4NTU1OTk2LC0xNzQyNzEzMjU4LC01
