@@ -56,7 +56,7 @@ ansible [core 2.12.7]
   libyaml = True
 ```
 ### Test run
-Having a node and installed software, we can try how it actually works. As first step   here Ansible need to know his node location and how to access that. This is done by [INI-like config file](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html). There is a default one(`/etc/ansible/hosts`). Or per command you can feed own crafted config file. This way Ansible configuration is portable. 
+Having a node and installed software, we can try how it actually works. As first step   here Ansible need to know his node location and how to access that. This is done by [INI-like config file](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html). There is a default one(`/etc/ansible/hosts`). Or per command you can feed own crafted config file(by passing `-i <path>` parameter). Or by This way Ansible configuration is portable. 
 Lets edit my default by adding out Lightsail node:
 ```
 1.2.3.4 ansible_ssh_user=ubuntu
@@ -74,11 +74,15 @@ It's show time!
     "ping": "pong"
 }
 ```
-Where 
+where 
+-i ~/hosts : Specify inventory host path. You can setup shell variable and skip the -i option. For e.g.: export ANSIBLE_HOSTS=~/hosts
+-m shell : Module name to execute such as shell, apt, yum and so on
+-a 'uptime' : Module arguments. For example, shell module will accept Unix/Linux command names. The apt module will accept options to update remote boxes using apt-get/apt command and so on.
+all : The all means “all hosts.” You can speificy group name such as devservers (ansible -i hosts -m shell -a 'uptime' dbservers) or host names too.
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4OTUzMzU0Miw5NjUyMTM2ODUsMTczNj
+eyJoaXN0b3J5IjpbMTQ5ODQ2MTc2NCw5NjUyMTM2ODUsMTczNj
 k0MDYwNiwtMjA3NTYyODg2OCwyNjc4NDYyMzAsLTUyNjU4MjAy
 OSwxNjUyNDIwODYzLC0xMjA0MjY1OTE5LC0yMDYwMzg5NDE2LC
 0xNzE4NTU1OTk2LC0xNzQyNzEzMjU4LC01ODkzMDI0NzAsLTE2
