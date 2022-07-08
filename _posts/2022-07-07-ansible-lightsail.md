@@ -57,21 +57,23 @@ ansible [core 2.12.7]
 
 ```
 ### Test run
-Having a node and installed software, we can try how it actually works. As first step   here Ansible need to know his node location and how to access that. This is done by INI-like config file. There is a default one(`/etc/ansible/hosts`). Or per command you can feed own crafted config file. This way Ansible configuration is portable. 
+Having a node and installed software, we can try how it actually works. As first step   here Ansible need to know his node location and how to access that. This is done by [INI-like config file](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html). There is a default one(`/etc/ansible/hosts`). Or per command you can feed own crafted config file. This way Ansible configuration is portable. 
 Lets edit my default by adding out Lightsail node:
 ```
 1.2.3.4 ansible_ssh_user=ubuntu
 ```
-where `1.2.3.4` is public IP i got from aws. And some extra parameter -  in my case target node username was differ from local username, so I have to define that explisitly.   
+where `1.2.3.4` is public IP i got from aws. And some extra parameter -  in my case target node username was differ from local username, so I have to define that explisitly. 
 
+It's show time!
 
 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTY1MjEzNjg1LDE3MzY5NDA2MDYsLTIwNz
-U2Mjg4NjgsMjY3ODQ2MjMwLC01MjY1ODIwMjksMTY1MjQyMDg2
-MywtMTIwNDI2NTkxOSwtMjA2MDM4OTQxNiwtMTcxODU1NTk5Ni
-wtMTc0MjcxMzI1OCwtNTg5MzAyNDcwLC0xNjEwMDQ3Mjg1LC0x
-NDgyMTIwNzM3LDUxNjYyMDQ3NywxODU1OTEzNDgwXX0=
+eyJoaXN0b3J5IjpbMTY5MDE0MDE3MCw5NjUyMTM2ODUsMTczNj
+k0MDYwNiwtMjA3NTYyODg2OCwyNjc4NDYyMzAsLTUyNjU4MjAy
+OSwxNjUyNDIwODYzLC0xMjA0MjY1OTE5LC0yMDYwMzg5NDE2LC
+0xNzE4NTU1OTk2LC0xNzQyNzEzMjU4LC01ODkzMDI0NzAsLTE2
+MTAwNDcyODUsLTE0ODIxMjA3MzcsNTE2NjIwNDc3LDE4NTU5MT
+M0ODBdfQ==
 -->
