@@ -57,7 +57,7 @@ ansible [core 2.12.7]
 
 ```
 ### Test run
-Having a node and installed software, we can try how it actually works. As first step   here Ansible need to know his node location and how to access that. This is done by config file. There is a default one (and its location is shown in `--version` info). Or per command you can feed own crafted config file. This way Ansible configuration is portable. 
+Having a node and installed software, we can try how it actually works. As first step   here Ansible need to know his node location and how to access that. This is done by config file. There is a default one(`/etc/ansible/hosts`). Or per command you can feed own crafted config file. This way Ansible configuration is portable. 
 My config file lives here: `/etc/ansible/ansible.cfg`.
 Lets edit it by adding out Lightsail node:
 ```
@@ -69,7 +69,7 @@ Lets edit it by adding out Lightsail node:
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTcwODQwNjMsMTczNjk0MDYwNiwtMj
+eyJoaXN0b3J5IjpbLTEzMjA3NjU1MDMsMTczNjk0MDYwNiwtMj
 A3NTYyODg2OCwyNjc4NDYyMzAsLTUyNjU4MjAyOSwxNjUyNDIw
 ODYzLC0xMjA0MjY1OTE5LC0yMDYwMzg5NDE2LC0xNzE4NTU1OT
 k2LC0xNzQyNzEzMjU4LC01ODkzMDI0NzAsLTE2MTAwNDcyODUs
