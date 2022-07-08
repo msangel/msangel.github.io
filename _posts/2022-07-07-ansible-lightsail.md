@@ -44,15 +44,26 @@ In my case it as simple as:
 ```
 After that you can test your Ansible version:
 ```bash
+> ansible --version
+ansible [core 2.12.7]
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = ['/home/msangel/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3/dist-packages/ansible
+  ansible collection location = /home/msangel/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/bin/ansible
+  python version = 3.8.10 (default, Mar 15 2022, 12:22:08) [GCC 9.4.0]
+  jinja version = 3.1.2
+  libyaml = True
+
 ```
 ### Test run
-Having a node and installed software, we can try how it actually works.
+Having a node and installed software, we can try how it actually works. As first step  ansible need to know his node location and how to access that. 
 
 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDQ4OTU2ODQsMTczNjk0MDYwNiwtMj
+eyJoaXN0b3J5IjpbLTE4NTUzMTc1ODIsMTczNjk0MDYwNiwtMj
 A3NTYyODg2OCwyNjc4NDYyMzAsLTUyNjU4MjAyOSwxNjUyNDIw
 ODYzLC0xMjA0MjY1OTE5LC0yMDYwMzg5NDE2LC0xNzE4NTU1OT
 k2LC0xNzQyNzEzMjU4LC01ODkzMDI0NzAsLTE2MTAwNDcyODUs
