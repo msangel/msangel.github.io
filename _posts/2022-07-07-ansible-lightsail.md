@@ -42,17 +42,19 @@ In my case it as simple as:
 > sudo add-apt-repository --yes --update ppa:ansible/ansible
 > sudo apt install ansible
 ```
-
+After that you can test your Ansible version:
+```bash
+```
 ### Test run
-Having a node and installed software, we can try how it 
+Having a node and installed software, we can try how it actually works.
 
 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTU5MDc1NCwxNzM2OTQwNjA2LC0yMD
-c1NjI4ODY4LDI2Nzg0NjIzMCwtNTI2NTgyMDI5LDE2NTI0MjA4
-NjMsLTEyMDQyNjU5MTksLTIwNjAzODk0MTYsLTE3MTg1NTU5OT
-YsLTE3NDI3MTMyNTgsLTU4OTMwMjQ3MCwtMTYxMDA0NzI4NSwt
-MTQ4MjEyMDczNyw1MTY2MjA0NzcsMTg1NTkxMzQ4MF19
+eyJoaXN0b3J5IjpbLTE0MDQ4OTU2ODQsMTczNjk0MDYwNiwtMj
+A3NTYyODg2OCwyNjc4NDYyMzAsLTUyNjU4MjAyOSwxNjUyNDIw
+ODYzLC0xMjA0MjY1OTE5LC0yMDYwMzg5NDE2LC0xNzE4NTU1OT
+k2LC0xNzQyNzEzMjU4LC01ODkzMDI0NzAsLTE2MTAwNDcyODUs
+LTE0ODIxMjA3MzcsNTE2NjIwNDc3LDE4NTU5MTM0ODBdfQ==
 -->
