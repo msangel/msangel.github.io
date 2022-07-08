@@ -28,7 +28,6 @@ keep_files:
 github:
 - metadata
 plugins:
-  - jekyll-code-tabs
   - jekyll-toc
 highlighter: rouge
 includes_dir: _layouts
