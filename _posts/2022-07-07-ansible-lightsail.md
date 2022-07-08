@@ -17,18 +17,19 @@ after you can import that file
 > ssh-add my-key.pem
 Identity added: my-key.pem (my-key.pem)
 ```
-Well, this will allow your ssh client to connect to target node. But Ansible by default itself uses traditional, public-key auth. The default can be changed by simply defining `my-key.pem` in Ansible settings. Or just use default, export your public key to target host:
+Well, this will allow your ssh client to connect to target node. But Ansible by default itself uses traditional, public-key auth. The default can be changed by simply defining `my-key.pem` in Ansible settings. Or just use default, export your public key to target host using `scp` or ``:
 ```bash
 ssh-copy-id -i $HOME/.ssh/id_rsa.pub ubuntu@1.2.3.4
 ```
-ssh-copy-id is from 
+ssh-copy-id is from openssh-client package, if you dont have it, just install it :
+`sudo apt install openssh-client`
 ### IP address of your node.
 By default 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA5NTA1ODgwLC0yMDYwMzg5NDE2LC0xNz
-E4NTU1OTk2LC0xNzQyNzEzMjU4LC01ODkzMDI0NzAsLTE2MTAw
-NDcyODUsLTE0ODIxMjA3MzcsNTE2NjIwNDc3LDE4NTU5MTM0OD
-BdfQ==
+eyJoaXN0b3J5IjpbLTE0MjA3NjEyNiwtMjA2MDM4OTQxNiwtMT
+cxODU1NTk5NiwtMTc0MjcxMzI1OCwtNTg5MzAyNDcwLC0xNjEw
+MDQ3Mjg1LC0xNDgyMTIwNzM3LDUxNjYyMDQ3NywxODU1OTEzND
+gwXX0=
 -->
