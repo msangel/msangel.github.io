@@ -56,7 +56,7 @@ ansible [core 2.12.7]
   libyaml = True
 ```
 ### Test run
-Having a node and installed software, we can try how it actually works. Ansible is just an executable and it is driven by config files. Main one called `ansible.cfg`. If un curre As first step   here Ansible need to know his node location and how to access that. This is done by [INI-like config file](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html). There is a default one(`/etc/ansible/hosts`). Or per command you can feed own crafted config file(by passing `-i <path>` parameter). Or by enviroupment variable: `export ANSIBLE_HOSTS=~/hosts`. This way Ansible configuration is portable. 
+Having a node and installed software, we can try how it actually works. Ansible is just an executable and it is driven by config files. Main one called `ansible.cfg`. If in a current working directory there is none such, then the global(or parent folder?) is used.  As first step   here Ansible need to know his node location and how to access that. This is done by [INI-like config file](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html). There is a default one(`/etc/ansible/hosts`). Or per command you can feed own crafted config file(by passing `-i <path>` parameter). Or by enviroupment variable: `export ANSIBLE_HOSTS=~/hosts`. This way Ansible configuration is portable. 
 Lets edit my default by adding out Lightsail node:
 ```
 1.2.3.4 ansible_ssh_user=ubuntu
@@ -81,10 +81,10 @@ where:
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzA2MjM2ODksLTk4Njk2Mzc1MywtMT
-M2MzEzMjczNyw5NjUyMTM2ODUsMTczNjk0MDYwNiwtMjA3NTYy
-ODg2OCwyNjc4NDYyMzAsLTUyNjU4MjAyOSwxNjUyNDIwODYzLC
-0xMjA0MjY1OTE5LC0yMDYwMzg5NDE2LC0xNzE4NTU1OTk2LC0x
-NzQyNzEzMjU4LC01ODkzMDI0NzAsLTE2MTAwNDcyODUsLTE0OD
-IxMjA3MzcsNTE2NjIwNDc3LDE4NTU5MTM0ODBdfQ==
+eyJoaXN0b3J5IjpbMTA2MjgxNzU4MiwtOTg2OTYzNzUzLC0xMz
+YzMTMyNzM3LDk2NTIxMzY4NSwxNzM2OTQwNjA2LC0yMDc1NjI4
+ODY4LDI2Nzg0NjIzMCwtNTI2NTgyMDI5LDE2NTI0MjA4NjMsLT
+EyMDQyNjU5MTksLTIwNjAzODk0MTYsLTE3MTg1NTU5OTYsLTE3
+NDI3MTMyNTgsLTU4OTMwMjQ3MCwtMTYxMDA0NzI4NSwtMTQ4Mj
+EyMDczNyw1MTY2MjA0NzcsMTg1NTkxMzQ4MF19
 -->
