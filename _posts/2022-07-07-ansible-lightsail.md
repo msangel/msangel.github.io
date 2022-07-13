@@ -47,7 +47,10 @@ After that you can test your Ansible version:
 > ansible --version
 ```
 ### Ansible configuration
-Ansible is just an executable and it is driven by config files. Main one called `ansible.cfg`. If in a current working directory there is none such, then the global(or parent folder?) is used.  As first step   here Ansible need to know his node location and how to access that. This is done by [INI-like config file](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html). There is a default one(`/etc/ansible/hosts`). Or per command you can feed own crafted config file(by passing `-i <path>` parameter). Or by enviroupment variable: `export ANSIBLE_HOSTS=~/hosts`. This way Ansible configuration is portable. 
+Ansible is just an executable and it is driven by config files. Main one called `ansible.cfg`. If in a current working directory there is none such, then the global(or parent folder?) is used.  
+Important part of the setting is `inventory` key, that is usually point to [INI-like config file](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html).
+
+As first step   here Ansible need to know his node location and how to access that. This is done by [INI-like config file](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html). There is a default one(`/etc/ansible/hosts`). Or per command you can feed own crafted config file(by passing `-i <path>` parameter). Or by enviroupment variable: `export ANSIBLE_HOSTS=~/hosts`. This way Ansible configuration is portable. 
 Lets edit my default by adding out Lightsail node:
 ```
 1.2.3.4 ansible_ssh_user=ubuntu
@@ -76,11 +79,11 @@ where:
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODY4NTMzMjcsMTA2MjgxNzU4MiwtOT
-g2OTYzNzUzLC0xMzYzMTMyNzM3LDk2NTIxMzY4NSwxNzM2OTQw
-NjA2LC0yMDc1NjI4ODY4LDI2Nzg0NjIzMCwtNTI2NTgyMDI5LD
-E2NTI0MjA4NjMsLTEyMDQyNjU5MTksLTIwNjAzODk0MTYsLTE3
-MTg1NTU5OTYsLTE3NDI3MTMyNTgsLTU4OTMwMjQ3MCwtMTYxMD
-A0NzI4NSwtMTQ4MjEyMDczNyw1MTY2MjA0NzcsMTg1NTkxMzQ4
-MF19
+eyJoaXN0b3J5IjpbMTc1OTAxODQ3NywtMTQ4Njg1MzMyNywxMD
+YyODE3NTgyLC05ODY5NjM3NTMsLTEzNjMxMzI3MzcsOTY1MjEz
+Njg1LDE3MzY5NDA2MDYsLTIwNzU2Mjg4NjgsMjY3ODQ2MjMwLC
+01MjY1ODIwMjksMTY1MjQyMDg2MywtMTIwNDI2NTkxOSwtMjA2
+MDM4OTQxNiwtMTcxODU1NTk5NiwtMTc0MjcxMzI1OCwtNTg5Mz
+AyNDcwLC0xNjEwMDQ3Mjg1LC0xNDgyMTIwNzM3LDUxNjYyMDQ3
+NywxODU1OTEzNDgwXX0=
 -->
