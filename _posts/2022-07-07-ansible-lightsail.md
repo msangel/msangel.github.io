@@ -83,6 +83,7 @@ In our case application deployment will consists of these steps:
  - restart service
 ### Build application locally
 
+
 ### Final Playbook
 build application
 	[using command or shell module](https://stackoverflow.com/questions/53190538/running-mvn-clean-install-maven-command-using-ansible-module), [command docs](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/command_module.html), [shell docs](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/shell_module.html). Difference? Idk.
@@ -95,11 +96,11 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3MjgwNjk4OSwtMTQ5NjQwMjMzMSwtMj
-AyODc1Mjg0MywtMjA2NDMxNjE1MywxMjA5NTY4MDI4LC0xOTg3
-MjAyNDA2LDU5MTM4MzI3MywxNzU5MDE4NDc3LC0xNDg2ODUzMz
-I3LDEwNjI4MTc1ODIsLTk4Njk2Mzc1MywtMTM2MzEzMjczNyw5
-NjUyMTM2ODUsMTczNjk0MDYwNiwtMjA3NTYyODg2OCwyNjc4ND
-YyMzAsLTUyNjU4MjAyOSwxNjUyNDIwODYzLC0xMjA0MjY1OTE5
-LC0yMDYwMzg5NDE2XX0=
+eyJoaXN0b3J5IjpbMjA1ODM3ODI5OSwxNzcyODA2OTg5LC0xND
+k2NDAyMzMxLC0yMDI4NzUyODQzLC0yMDY0MzE2MTUzLDEyMDk1
+NjgwMjgsLTE5ODcyMDI0MDYsNTkxMzgzMjczLDE3NTkwMTg0Nz
+csLTE0ODY4NTMzMjcsMTA2MjgxNzU4MiwtOTg2OTYzNzUzLC0x
+MzYzMTMyNzM3LDk2NTIxMzY4NSwxNzM2OTQwNjA2LC0yMDc1Nj
+I4ODY4LDI2Nzg0NjIzMCwtNTI2NTgyMDI5LDE2NTI0MjA4NjMs
+LTEyMDQyNjU5MTldfQ==
 -->
