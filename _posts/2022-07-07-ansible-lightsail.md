@@ -76,14 +76,16 @@ where:
  - -m ping : Module name to execute such as ping, shell, apt, yum and so on
  -  all : The all means "all hosts." You can speificy group name such as 'devservers' or host names too.
 
-
+### More power with Ansible lightsail module
+If fact, A 
+ 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1OTAxODQ3NywtMTQ4Njg1MzMyNywxMD
-YyODE3NTgyLC05ODY5NjM3NTMsLTEzNjMxMzI3MzcsOTY1MjEz
-Njg1LDE3MzY5NDA2MDYsLTIwNzU2Mjg4NjgsMjY3ODQ2MjMwLC
-01MjY1ODIwMjksMTY1MjQyMDg2MywtMTIwNDI2NTkxOSwtMjA2
-MDM4OTQxNiwtMTcxODU1NTk5NiwtMTc0MjcxMzI1OCwtNTg5Mz
-AyNDcwLC0xNjEwMDQ3Mjg1LC0xNDgyMTIwNzM3LDUxNjYyMDQ3
-NywxODU1OTEzNDgwXX0=
+eyJoaXN0b3J5IjpbLTEzNzExNjExMSwxNzU5MDE4NDc3LC0xND
+g2ODUzMzI3LDEwNjI4MTc1ODIsLTk4Njk2Mzc1MywtMTM2MzEz
+MjczNyw5NjUyMTM2ODUsMTczNjk0MDYwNiwtMjA3NTYyODg2OC
+wyNjc4NDYyMzAsLTUyNjU4MjAyOSwxNjUyNDIwODYzLC0xMjA0
+MjY1OTE5LC0yMDYwMzg5NDE2LC0xNzE4NTU1OTk2LC0xNzQyNz
+EzMjU4LC01ODkzMDI0NzAsLTE2MTAwNDcyODUsLTE0ODIxMjA3
+MzcsNTE2NjIwNDc3XX0=
 -->
