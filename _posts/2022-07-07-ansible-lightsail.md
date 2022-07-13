@@ -78,11 +78,11 @@ where:
 
 ### More power with Ansible lightsail module
 If fact, Ansible can manage lightsail for its own - it can create instances, delete them, assign IP/loadbalansers. Take a look on the module:
- 
+https://docs.ansible.com/ansible/latest/collections/community/aws/lightsail_module.html 
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTcyMTA1NjEzLDE3NTkwMTg0NzcsLTE0OD
+eyJoaXN0b3J5IjpbNTkxMzgzMjczLDE3NTkwMTg0NzcsLTE0OD
 Y4NTMzMjcsMTA2MjgxNzU4MiwtOTg2OTYzNzUzLC0xMzYzMTMy
 NzM3LDk2NTIxMzY4NSwxNzM2OTQwNjA2LC0yMDc1NjI4ODY4LD
 I2Nzg0NjIzMCwtNTI2NTgyMDI5LDE2NTI0MjA4NjMsLTEyMDQy
