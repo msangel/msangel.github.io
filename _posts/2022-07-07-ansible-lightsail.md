@@ -82,6 +82,7 @@ In our case application deployment will consists of these steps:
  - upload artifact to node
  - restart service
 ### Build application locally
+Ansible is designed to execute commands on remote nodes, but it also can execute ones on local machine.
 
 
 ### Final Playbook
@@ -96,7 +97,7 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1ODM3ODI5OSwxNzcyODA2OTg5LC0xND
+eyJoaXN0b3J5IjpbLTQ4OTQ5MjQyNCwxNzcyODA2OTg5LC0xND
 k2NDAyMzMxLC0yMDI4NzUyODQzLC0yMDY0MzE2MTUzLDEyMDk1
 NjgwMjgsLTE5ODcyMDI0MDYsNTkxMzgzMjczLDE3NTkwMTg0Nz
 csLTE0ODY4NTMzMjcsMTA2MjgxNzU4MiwtOTg2OTYzNzUzLC0x
