@@ -77,7 +77,7 @@ where:
  -  all : The all means "all hosts." You can speificy group name such as 'devservers' or host names too.
 ### Playbook
 build application
-	[using command or shell module](https://stackoverflow.com/questions/53190538/running-mvn-clean-install-maven-command-using-ansible-module), [command docs](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/command_module.html), [shell docs](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/shell_module.html)
+	[using command or shell module](https://stackoverflow.com/questions/53190538/running-mvn-clean-install-maven-command-using-ansible-module), [command docs](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/command_module.html), [shell docs](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/shell_module.html). Difference? Idk.
 upload application
 start/restart service
 
@@ -87,11 +87,11 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjQzMTYxNTMsMTIwOTU2ODAyOCwtMT
-k4NzIwMjQwNiw1OTEzODMyNzMsMTc1OTAxODQ3NywtMTQ4Njg1
-MzMyNywxMDYyODE3NTgyLC05ODY5NjM3NTMsLTEzNjMxMzI3Mz
-csOTY1MjEzNjg1LDE3MzY5NDA2MDYsLTIwNzU2Mjg4NjgsMjY3
-ODQ2MjMwLC01MjY1ODIwMjksMTY1MjQyMDg2MywtMTIwNDI2NT
-kxOSwtMjA2MDM4OTQxNiwtMTcxODU1NTk5NiwtMTc0MjcxMzI1
-OCwtNTg5MzAyNDcwXX0=
+eyJoaXN0b3J5IjpbLTIwMjg3NTI4NDMsLTIwNjQzMTYxNTMsMT
+IwOTU2ODAyOCwtMTk4NzIwMjQwNiw1OTEzODMyNzMsMTc1OTAx
+ODQ3NywtMTQ4Njg1MzMyNywxMDYyODE3NTgyLC05ODY5NjM3NT
+MsLTEzNjMxMzI3MzcsOTY1MjEzNjg1LDE3MzY5NDA2MDYsLTIw
+NzU2Mjg4NjgsMjY3ODQ2MjMwLC01MjY1ODIwMjksMTY1MjQyMD
+g2MywtMTIwNDI2NTkxOSwtMjA2MDM4OTQxNiwtMTcxODU1NTk5
+NiwtMTc0MjcxMzI1OF19
 -->
