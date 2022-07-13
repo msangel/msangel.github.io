@@ -75,6 +75,9 @@ where:
  -  all : The all means "all hosts." You can speificy group name such as 'devservers' or host names too.
  
 ### Playbook
+Playbook is just a scenario to be run, written is `yaml`-file.
+In our case application deployment will consists of these steps:
+
 #### Playbook concept
 
 ### Final Playbook
@@ -89,7 +92,7 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTA5NDk5ODAsLTIwMjg3NTI4NDMsLT
+eyJoaXN0b3J5IjpbLTE0OTY0MDIzMzEsLTIwMjg3NTI4NDMsLT
 IwNjQzMTYxNTMsMTIwOTU2ODAyOCwtMTk4NzIwMjQwNiw1OTEz
 ODMyNzMsMTc1OTAxODQ3NywtMTQ4Njg1MzMyNywxMDYyODE3NT
 gyLC05ODY5NjM3NTMsLTEzNjMxMzI3MzcsOTY1MjEzNjg1LDE3
