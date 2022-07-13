@@ -83,8 +83,10 @@ In our case application deployment will consists of these steps:
  - restart service
 ### Build application locally
 Ansible is designed to execute commands on remote nodes, but it also can execute ones on local machine.
-sample: 
+some docs: 
 - https://stackoverflow.com/questions/56048959/ansible-local-action-example-how-does-it-work
+- https://docs.ansible.com/ansible/latest/user_guide/playbooks_delegation.html
+- https://coderwall.com/p/xlbxkq/run-a-local-script-before-after-a-play
 
 ### Final Playbook
 build application
@@ -98,11 +100,11 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODY0MzI5MzUwLC00ODk0OTI0MjQsMTc3Mj
-gwNjk4OSwtMTQ5NjQwMjMzMSwtMjAyODc1Mjg0MywtMjA2NDMx
-NjE1MywxMjA5NTY4MDI4LC0xOTg3MjAyNDA2LDU5MTM4MzI3My
-wxNzU5MDE4NDc3LC0xNDg2ODUzMzI3LDEwNjI4MTc1ODIsLTk4
-Njk2Mzc1MywtMTM2MzEzMjczNyw5NjUyMTM2ODUsMTczNjk0MD
-YwNiwtMjA3NTYyODg2OCwyNjc4NDYyMzAsLTUyNjU4MjAyOSwx
-NjUyNDIwODYzXX0=
+eyJoaXN0b3J5IjpbLTg0OTQ2NDgyMiwtNDg5NDkyNDI0LDE3Nz
+I4MDY5ODksLTE0OTY0MDIzMzEsLTIwMjg3NTI4NDMsLTIwNjQz
+MTYxNTMsMTIwOTU2ODAyOCwtMTk4NzIwMjQwNiw1OTEzODMyNz
+MsMTc1OTAxODQ3NywtMTQ4Njg1MzMyNywxMDYyODE3NTgyLC05
+ODY5NjM3NTMsLTEzNjMxMzI3MzcsOTY1MjEzNjg1LDE3MzY5ND
+A2MDYsLTIwNzU2Mjg4NjgsMjY3ODQ2MjMwLC01MjY1ODIwMjks
+MTY1MjQyMDg2M119
 -->
