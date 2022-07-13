@@ -87,11 +87,13 @@ some docs:
 - https://stackoverflow.com/questions/56048959/ansible-local-action-example-how-does-it-work
 - https://docs.ansible.com/ansible/latest/user_guide/playbooks_delegation.html
 - https://coderwall.com/p/xlbxkq/run-a-local-script-before-after-a-play
+- https://stackoverflow.com/questions/53190538/running-mvn-clean-install-maven-command-using-ansible-module
 
 Command we run:
 ```bash
 > mvn clean install
 ```
+
 
 ### Final Playbook
 build application
@@ -105,11 +107,11 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTc1MjA1MjEsLTQ4OTQ5MjQyNCwxNz
-cyODA2OTg5LC0xNDk2NDAyMzMxLC0yMDI4NzUyODQzLC0yMDY0
-MzE2MTUzLDEyMDk1NjgwMjgsLTE5ODcyMDI0MDYsNTkxMzgzMj
-czLDE3NTkwMTg0NzcsLTE0ODY4NTMzMjcsMTA2MjgxNzU4Miwt
-OTg2OTYzNzUzLC0xMzYzMTMyNzM3LDk2NTIxMzY4NSwxNzM2OT
-QwNjA2LC0yMDc1NjI4ODY4LDI2Nzg0NjIzMCwtNTI2NTgyMDI5
-LDE2NTI0MjA4NjNdfQ==
+eyJoaXN0b3J5IjpbMzkwNjU4NDI4LC00ODk0OTI0MjQsMTc3Mj
+gwNjk4OSwtMTQ5NjQwMjMzMSwtMjAyODc1Mjg0MywtMjA2NDMx
+NjE1MywxMjA5NTY4MDI4LC0xOTg3MjAyNDA2LDU5MTM4MzI3My
+wxNzU5MDE4NDc3LC0xNDg2ODUzMzI3LDEwNjI4MTc1ODIsLTk4
+Njk2Mzc1MywtMTM2MzEzMjczNyw5NjUyMTM2ODUsMTczNjk0MD
+YwNiwtMjA3NTYyODg2OCwyNjc4NDYyMzAsLTUyNjU4MjAyOSwx
+NjUyNDIwODYzXX0=
 -->
