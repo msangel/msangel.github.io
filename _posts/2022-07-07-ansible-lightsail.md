@@ -88,18 +88,22 @@ some docs:
 - https://docs.ansible.com/ansible/latest/user_guide/playbooks_delegation.html
 - https://coderwall.com/p/xlbxkq/run-a-local-script-before-after-a-play
 - https://stackoverflow.com/questions/53190538/running-mvn-clean-install-maven-command-using-ansible-module
+- https://stackoverflow.com/questions/53190538/running-mvn-clean-install-maven-command-using-ansible-module
+- https://docs.ansible.com/ansible/latest/collections/ansible/builtin/command_module.html
+- https://docs.ansible.com/ansible/latest/collections/ansible/builtin/shell_module.html
 
 Command we run:
 ```bash
 > mvn clean install
 ```
+### Upload artifact
 
-
+### Start/restart service
+https://docs.ansible.com/ansible/latest/collections/ansible/builtin/service_module.html
+or 
 ### Final Playbook
-build application
-	[using command or shell module](https://stackoverflow.com/questions/53190538/running-mvn-clean-install-maven-command-using-ansible-module), [command docs](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/command_module.html), [shell docs](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/shell_module.html). Difference? Idk.
-upload application
-start/restart service
+
+
 
 ### More power with Ansible lightsail module
 If fact, Ansible can manage lightsail for its own - it can create instances, delete them, etc. Take a look on the module:
@@ -107,11 +111,11 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzkwNjU4NDI4LC00ODk0OTI0MjQsMTc3Mj
-gwNjk4OSwtMTQ5NjQwMjMzMSwtMjAyODc1Mjg0MywtMjA2NDMx
-NjE1MywxMjA5NTY4MDI4LC0xOTg3MjAyNDA2LDU5MTM4MzI3My
-wxNzU5MDE4NDc3LC0xNDg2ODUzMzI3LDEwNjI4MTc1ODIsLTk4
-Njk2Mzc1MywtMTM2MzEzMjczNyw5NjUyMTM2ODUsMTczNjk0MD
-YwNiwtMjA3NTYyODg2OCwyNjc4NDYyMzAsLTUyNjU4MjAyOSwx
-NjUyNDIwODYzXX0=
+eyJoaXN0b3J5IjpbLTE1NzAzMjMzMTksMzkwNjU4NDI4LC00OD
+k0OTI0MjQsMTc3MjgwNjk4OSwtMTQ5NjQwMjMzMSwtMjAyODc1
+Mjg0MywtMjA2NDMxNjE1MywxMjA5NTY4MDI4LC0xOTg3MjAyND
+A2LDU5MTM4MzI3MywxNzU5MDE4NDc3LC0xNDg2ODUzMzI3LDEw
+NjI4MTc1ODIsLTk4Njk2Mzc1MywtMTM2MzEzMjczNyw5NjUyMT
+M2ODUsMTczNjk0MDYwNiwtMjA3NTYyODg2OCwyNjc4NDYyMzAs
+LTUyNjU4MjAyOV19
 -->
