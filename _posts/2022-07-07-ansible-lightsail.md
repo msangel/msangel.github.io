@@ -45,23 +45,18 @@ In my case it as simple as:
 After that you can test your Ansible version:
 ```bash
 > ansible --version
-ansible [core 2.12.7]
-  config file = /etc/ansible/ansible.cfg
-  configured module search path = ['/home/msangel/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
-  ansible python module location = /usr/lib/python3/dist-packages/ansible
-  ansible collection location = /home/msangel/.ansible/collections:/usr/share/ansible/collections
-  executable location = /usr/bin/ansible
-  python version = 3.8.10 (default, Mar 15 2022, 12:22:08) [GCC 9.4.0]
-  jinja version = 3.1.2
-  libyaml = True
 ```
-### Test run
-Having a node and installed software, we can try how it actually works. Ansible is just an executable and it is driven by config files. Main one called `ansible.cfg`. If in a current working directory there is none such, then the global(or parent folder?) is used.  As first step   here Ansible need to know his node location and how to access that. This is done by [INI-like config file](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html). There is a default one(`/etc/ansible/hosts`). Or per command you can feed own crafted config file(by passing `-i <path>` parameter). Or by enviroupment variable: `export ANSIBLE_HOSTS=~/hosts`. This way Ansible configuration is portable. 
+### Ansible configuration
+Ansible is just an executable and it is driven by config files. Main one called `ansible.cfg`. If in a current working directory there is none such, then the global(or parent folder?) is used.  As first step   here Ansible need to know his node location and how to access that. This is done by [INI-like config file](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html). There is a default one(`/etc/ansible/hosts`). Or per command you can feed own crafted config file(by passing `-i <path>` parameter). Or by enviroupment variable: `export ANSIBLE_HOSTS=~/hosts`. This way Ansible configuration is portable. 
 Lets edit my default by adding out Lightsail node:
 ```
 1.2.3.4 ansible_ssh_user=ubuntu
 ```
 where `1.2.3.4` is public IP i got from aws. And some extra parameter -  in my case target node username was differ from local username, so I have to define that explisitly.
+
+### Test run
+Having a node and installed software, we can try how it actually works. 
+
 
 It's show time!
 ```bash
@@ -81,10 +76,11 @@ where:
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2MjgxNzU4MiwtOTg2OTYzNzUzLC0xMz
-YzMTMyNzM3LDk2NTIxMzY4NSwxNzM2OTQwNjA2LC0yMDc1NjI4
-ODY4LDI2Nzg0NjIzMCwtNTI2NTgyMDI5LDE2NTI0MjA4NjMsLT
-EyMDQyNjU5MTksLTIwNjAzODk0MTYsLTE3MTg1NTU5OTYsLTE3
-NDI3MTMyNTgsLTU4OTMwMjQ3MCwtMTYxMDA0NzI4NSwtMTQ4Mj
-EyMDczNyw1MTY2MjA0NzcsMTg1NTkxMzQ4MF19
+eyJoaXN0b3J5IjpbLTE0ODY4NTMzMjcsMTA2MjgxNzU4MiwtOT
+g2OTYzNzUzLC0xMzYzMTMyNzM3LDk2NTIxMzY4NSwxNzM2OTQw
+NjA2LC0yMDc1NjI4ODY4LDI2Nzg0NjIzMCwtNTI2NTgyMDI5LD
+E2NTI0MjA4NjMsLTEyMDQyNjU5MTksLTIwNjAzODk0MTYsLTE3
+MTg1NTU5OTYsLTE3NDI3MTMyNTgsLTU4OTMwMjQ3MCwtMTYxMD
+A0NzI4NSwtMTQ4MjEyMDczNyw1MTY2MjA0NzcsMTg1NTkxMzQ4
+MF19
 -->
