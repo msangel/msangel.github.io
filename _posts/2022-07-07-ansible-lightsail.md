@@ -59,8 +59,6 @@ where `1.2.3.4` is public IP i got from aws. And some extra parameter -  in my c
 
 ### Test run
 Having a node and installed software, we can try how it actually works. 
-
-
 It's show time!
 ```bash
 > ansible -m ping all
@@ -75,7 +73,11 @@ It's show time!
 where:
  - -m ping : Module name to execute such as ping, shell, apt, yum and so on
  -  all : The all means "all hosts." You can speificy group name such as 'devservers' or host names too.
+ 
 ### Playbook
+#### Playbook concept
+
+### Final Playbook
 build application
 	[using command or shell module](https://stackoverflow.com/questions/53190538/running-mvn-clean-install-maven-command-using-ansible-module), [command docs](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/command_module.html), [shell docs](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/shell_module.html). Difference? Idk.
 upload application
@@ -87,11 +89,11 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjg3NTI4NDMsLTIwNjQzMTYxNTMsMT
-IwOTU2ODAyOCwtMTk4NzIwMjQwNiw1OTEzODMyNzMsMTc1OTAx
-ODQ3NywtMTQ4Njg1MzMyNywxMDYyODE3NTgyLC05ODY5NjM3NT
-MsLTEzNjMxMzI3MzcsOTY1MjEzNjg1LDE3MzY5NDA2MDYsLTIw
-NzU2Mjg4NjgsMjY3ODQ2MjMwLC01MjY1ODIwMjksMTY1MjQyMD
-g2MywtMTIwNDI2NTkxOSwtMjA2MDM4OTQxNiwtMTcxODU1NTk5
-NiwtMTc0MjcxMzI1OF19
+eyJoaXN0b3J5IjpbLTEzOTA5NDk5ODAsLTIwMjg3NTI4NDMsLT
+IwNjQzMTYxNTMsMTIwOTU2ODAyOCwtMTk4NzIwMjQwNiw1OTEz
+ODMyNzMsMTc1OTAxODQ3NywtMTQ4Njg1MzMyNywxMDYyODE3NT
+gyLC05ODY5NjM3NTMsLTEzNjMxMzI3MzcsOTY1MjEzNjg1LDE3
+MzY5NDA2MDYsLTIwNzU2Mjg4NjgsMjY3ODQ2MjMwLC01MjY1OD
+IwMjksMTY1MjQyMDg2MywtMTIwNDI2NTkxOSwtMjA2MDM4OTQx
+NiwtMTcxODU1NTk5Nl19
 -->
