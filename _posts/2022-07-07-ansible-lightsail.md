@@ -76,8 +76,11 @@ where:
  
 ### Playbook
 Playbook is just a scenario to be run, written is `yaml`-file.
+Ypu can 
 In our case application deployment will consists of these steps:
-
+ - build application locally from sources using maven
+ - upload artifact to node
+ - restart service
 #### Playbook concept
 
 ### Final Playbook
@@ -92,11 +95,11 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0OTY0MDIzMzEsLTIwMjg3NTI4NDMsLT
-IwNjQzMTYxNTMsMTIwOTU2ODAyOCwtMTk4NzIwMjQwNiw1OTEz
-ODMyNzMsMTc1OTAxODQ3NywtMTQ4Njg1MzMyNywxMDYyODE3NT
-gyLC05ODY5NjM3NTMsLTEzNjMxMzI3MzcsOTY1MjEzNjg1LDE3
-MzY5NDA2MDYsLTIwNzU2Mjg4NjgsMjY3ODQ2MjMwLC01MjY1OD
-IwMjksMTY1MjQyMDg2MywtMTIwNDI2NTkxOSwtMjA2MDM4OTQx
-NiwtMTcxODU1NTk5Nl19
+eyJoaXN0b3J5IjpbLTY4MDUzMDQ0MywtMTQ5NjQwMjMzMSwtMj
+AyODc1Mjg0MywtMjA2NDMxNjE1MywxMjA5NTY4MDI4LC0xOTg3
+MjAyNDA2LDU5MTM4MzI3MywxNzU5MDE4NDc3LC0xNDg2ODUzMz
+I3LDEwNjI4MTc1ODIsLTk4Njk2Mzc1MywtMTM2MzEzMjczNyw5
+NjUyMTM2ODUsMTczNjk0MDYwNiwtMjA3NTYyODg2OCwyNjc4ND
+YyMzAsLTUyNjU4MjAyOSwxNjUyNDIwODYzLC0xMjA0MjY1OTE5
+LC0yMDYwMzg5NDE2XX0=
 -->
