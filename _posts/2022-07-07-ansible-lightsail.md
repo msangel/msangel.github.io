@@ -100,7 +100,9 @@ Command we run:
 
 ### Start/restart service
 https://docs.ansible.com/ansible/latest/collections/ansible/builtin/service_module.html
-or 
+or PID in file
+https://www.google.com/search?q=ansible+start+and+stop+process&oq=ansible+stop+process+&aqs=chrome.5.69i57j0i19j0i19i22i30l4.9031j0j1&sourceid=chrome&ie=UTF-8
+
 ### Final Playbook
 
 
@@ -111,11 +113,11 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzAzMjMzMTksMzkwNjU4NDI4LC00OD
-k0OTI0MjQsMTc3MjgwNjk4OSwtMTQ5NjQwMjMzMSwtMjAyODc1
-Mjg0MywtMjA2NDMxNjE1MywxMjA5NTY4MDI4LC0xOTg3MjAyND
-A2LDU5MTM4MzI3MywxNzU5MDE4NDc3LC0xNDg2ODUzMzI3LDEw
-NjI4MTc1ODIsLTk4Njk2Mzc1MywtMTM2MzEzMjczNyw5NjUyMT
-M2ODUsMTczNjk0MDYwNiwtMjA3NTYyODg2OCwyNjc4NDYyMzAs
-LTUyNjU4MjAyOV19
+eyJoaXN0b3J5IjpbMTQ1NDMzODM5MiwzOTA2NTg0MjgsLTQ4OT
+Q5MjQyNCwxNzcyODA2OTg5LC0xNDk2NDAyMzMxLC0yMDI4NzUy
+ODQzLC0yMDY0MzE2MTUzLDEyMDk1NjgwMjgsLTE5ODcyMDI0MD
+YsNTkxMzgzMjczLDE3NTkwMTg0NzcsLTE0ODY4NTMzMjcsMTA2
+MjgxNzU4MiwtOTg2OTYzNzUzLC0xMzYzMTMyNzM3LDk2NTIxMz
+Y4NSwxNzM2OTQwNjA2LC0yMDc1NjI4ODY4LDI2Nzg0NjIzMCwt
+NTI2NTgyMDI5XX0=
 -->
