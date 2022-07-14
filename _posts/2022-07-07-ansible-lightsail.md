@@ -68,9 +68,10 @@ There are also a default global config file. Depending on instalation type in ca
 And logically there exists global hostfile. In my case it was there: `/etc/ansible/hosts`.
 
 #### Parameterized configuration
-Also possible to override both local/global config.cfg and hostfile location by in two ways:
-
- 1. sdf sdf
+Also possible to override both local/global config.cfg and hostfile location in two ways.
+##### 
+ 1. by explisit passing special parameters to `ansible` executable:
+ 3. by providing enviroupment variable
 
 (`/etc/ansible/hosts`). Or per command you can feed own crafted config file(by passing `-i <path>` parameter). Or by enviroupment variable: `export ANSIBLE_HOSTS=~/hosts`. This way Ansible configuration is portable. 
 Lets edit my default by adding out Lightsail node:
@@ -135,11 +136,11 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTcxMjg2NTQsMTUwMzExMzY5NiwxND
-U0MzM4MzkyLDM5MDY1ODQyOCwtNDg5NDkyNDI0LDE3NzI4MDY5
-ODksLTE0OTY0MDIzMzEsLTIwMjg3NTI4NDMsLTIwNjQzMTYxNT
-MsMTIwOTU2ODAyOCwtMTk4NzIwMjQwNiw1OTEzODMyNzMsMTc1
-OTAxODQ3NywtMTQ4Njg1MzMyNywxMDYyODE3NTgyLC05ODY5Nj
-M3NTMsLTEzNjMxMzI3MzcsOTY1MjEzNjg1LDE3MzY5NDA2MDYs
-LTIwNzU2Mjg4NjhdfQ==
+eyJoaXN0b3J5IjpbNTY1NzQ0MjIyLDE1MDMxMTM2OTYsMTQ1ND
+MzODM5MiwzOTA2NTg0MjgsLTQ4OTQ5MjQyNCwxNzcyODA2OTg5
+LC0xNDk2NDAyMzMxLC0yMDI4NzUyODQzLC0yMDY0MzE2MTUzLD
+EyMDk1NjgwMjgsLTE5ODcyMDI0MDYsNTkxMzgzMjczLDE3NTkw
+MTg0NzcsLTE0ODY4NTMzMjcsMTA2MjgxNzU4MiwtOTg2OTYzNz
+UzLC0xMzYzMTMyNzM3LDk2NTIxMzY4NSwxNzM2OTQwNjA2LC0y
+MDc1NjI4ODY4XX0=
 -->
