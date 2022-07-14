@@ -95,7 +95,7 @@ In our case application deployment will consists of these steps:
  - upload artifact to node
  - restart service
 
-Lets create basic playbook:
+Lets create basic playbook(`java_deploy.yml`):
 ```yaml
 
 ```
@@ -131,11 +131,11 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzUwMDQ5ODQ3LDM3NjI1OTgzLC0xOTk1MD
-Y0MDQ5LC0xODU1OTA4MTkzLDQwODA4NjMwMCwxNzkyOTE4OTI4
-LDcwMjM0NDYzOCwxNTAzMTEzNjk2LDE0NTQzMzgzOTIsMzkwNj
-U4NDI4LC00ODk0OTI0MjQsMTc3MjgwNjk4OSwtMTQ5NjQwMjMz
-MSwtMjAyODc1Mjg0MywtMjA2NDMxNjE1MywxMjA5NTY4MDI4LC
-0xOTg3MjAyNDA2LDU5MTM4MzI3MywxNzU5MDE4NDc3LC0xNDg2
-ODUzMzI3XX0=
+eyJoaXN0b3J5IjpbMTc3MzE1NTU2OCwzNzYyNTk4MywtMTk5NT
+A2NDA0OSwtMTg1NTkwODE5Myw0MDgwODYzMDAsMTc5MjkxODky
+OCw3MDIzNDQ2MzgsMTUwMzExMzY5NiwxNDU0MzM4MzkyLDM5MD
+Y1ODQyOCwtNDg5NDkyNDI0LDE3NzI4MDY5ODksLTE0OTY0MDIz
+MzEsLTIwMjg3NTI4NDMsLTIwNjQzMTYxNTMsMTIwOTU2ODAyOC
+wtMTk4NzIwMjQwNiw1OTEzODMyNzMsMTc1OTAxODQ3NywtMTQ4
+Njg1MzMyN119
 -->
