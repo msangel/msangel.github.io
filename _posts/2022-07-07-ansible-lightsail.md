@@ -67,8 +67,9 @@ Lest put there our Lightsail node information:
 1.2.3.4 ansible_ssh_user=ubuntu
 ```
 where `1.2.3.4` is public IP i got from aws. And some extra parameter -  in my case target node username was differ from local username, so I have to define that explisitly.
-If none `hostfile` is set in config, default one, located at 
-Inventory setting also can be overriden by:
+If none `hostfile` is set in config, default one, located at `/etc/ansible/hosts` will be used. Also possible to override `hostfile` location by:
+- passing `-i <path>` parameter to ansible executable
+- setting `ANSIBLE_HOSTS` environment variable(li)
 
 
 #### Global configuration
@@ -147,11 +148,11 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4MTUxMTQ5Niw0MDgwODYzMDAsMTc5Mj
-kxODkyOCw3MDIzNDQ2MzgsMTUwMzExMzY5NiwxNDU0MzM4Mzky
-LDM5MDY1ODQyOCwtNDg5NDkyNDI0LDE3NzI4MDY5ODksLTE0OT
-Y0MDIzMzEsLTIwMjg3NTI4NDMsLTIwNjQzMTYxNTMsMTIwOTU2
-ODAyOCwtMTk4NzIwMjQwNiw1OTEzODMyNzMsMTc1OTAxODQ3Ny
-wtMTQ4Njg1MzMyNywxMDYyODE3NTgyLC05ODY5NjM3NTMsLTEz
-NjMxMzI3MzddfQ==
+eyJoaXN0b3J5IjpbMjkzNzExMzExLDQwODA4NjMwMCwxNzkyOT
+E4OTI4LDcwMjM0NDYzOCwxNTAzMTEzNjk2LDE0NTQzMzgzOTIs
+MzkwNjU4NDI4LC00ODk0OTI0MjQsMTc3MjgwNjk4OSwtMTQ5Nj
+QwMjMzMSwtMjAyODc1Mjg0MywtMjA2NDMxNjE1MywxMjA5NTY4
+MDI4LC0xOTg3MjAyNDA2LDU5MTM4MzI3MywxNzU5MDE4NDc3LC
+0xNDg2ODUzMzI3LDEwNjI4MTc1ODIsLTk4Njk2Mzc1MywtMTM2
+MzEzMjczN119
 -->
