@@ -54,9 +54,9 @@ Sample `ansible.cfg`:
 [defaults]
 hostfile = hosts.ini
 ```
+In that `hosts.ini` file are listed all the nodes ansible need to operate on. 
 
-
-As first step   here Ansible need to know his node location and how to access that. This is done by [INI-like config file](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html). There is a default one(`/etc/ansible/hosts`). Or per command you can feed own crafted config file(by passing `-i <path>` parameter). Or by enviroupment variable: `export ANSIBLE_HOSTS=~/hosts`. This way Ansible configuration is portable. 
+There is a default one(`/etc/ansible/hosts`). Or per command you can feed own crafted config file(by passing `-i <path>` parameter). Or by enviroupment variable: `export ANSIBLE_HOSTS=~/hosts`. This way Ansible configuration is portable. 
 Lets edit my default by adding out Lightsail node:
 ```
 1.2.3.4 ansible_ssh_user=ubuntu
@@ -119,11 +119,11 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwMzExMzY5NiwxNDU0MzM4MzkyLDM5MD
-Y1ODQyOCwtNDg5NDkyNDI0LDE3NzI4MDY5ODksLTE0OTY0MDIz
-MzEsLTIwMjg3NTI4NDMsLTIwNjQzMTYxNTMsMTIwOTU2ODAyOC
-wtMTk4NzIwMjQwNiw1OTEzODMyNzMsMTc1OTAxODQ3NywtMTQ4
-Njg1MzMyNywxMDYyODE3NTgyLC05ODY5NjM3NTMsLTEzNjMxMz
-I3MzcsOTY1MjEzNjg1LDE3MzY5NDA2MDYsLTIwNzU2Mjg4Njgs
-MjY3ODQ2MjMwXX0=
+eyJoaXN0b3J5IjpbLTExMzAwMDU4OTksMTUwMzExMzY5NiwxND
+U0MzM4MzkyLDM5MDY1ODQyOCwtNDg5NDkyNDI0LDE3NzI4MDY5
+ODksLTE0OTY0MDIzMzEsLTIwMjg3NTI4NDMsLTIwNjQzMTYxNT
+MsMTIwOTU2ODAyOCwtMTk4NzIwMjQwNiw1OTEzODMyNzMsMTc1
+OTAxODQ3NywtMTQ4Njg1MzMyNywxMDYyODE3NTgyLC05ODY5Nj
+M3NTMsLTEzNjMxMzI3MzcsOTY1MjEzNjg1LDE3MzY5NDA2MDYs
+LTIwNzU2Mjg4NjhdfQ==
 -->
