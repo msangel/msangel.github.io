@@ -67,6 +67,9 @@ Lest put there our Lightsail node information:
 1.2.3.4 ansible_ssh_user=ubuntu
 ```
 where `1.2.3.4` is public IP i got from aws. And some extra parameter -  in my case target node username was differ from local username, so I have to define that explisitly.
+If none `hostfile` is set in config, default one, located at 
+Inventory setting also can be overriden by:
+
 
 #### Global configuration
 There are also a default global config file. Depending on instalation type in can be in different places, like at python libraries location, user home directory or in global location. In my case it is global location at  `/etc/ansible/ansible.cfg`.
@@ -144,7 +147,7 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxOTg3Mjg4Nyw0MDgwODYzMDAsMTc5Mj
+eyJoaXN0b3J5IjpbLTg4MTUxMTQ5Niw0MDgwODYzMDAsMTc5Mj
 kxODkyOCw3MDIzNDQ2MzgsMTUwMzExMzY5NiwxNDU0MzM4Mzky
 LDM5MDY1ODQyOCwtNDg5NDkyNDI0LDE3NzI4MDY5ODksLTE0OT
 Y0MDIzMzEsLTIwMjg3NTI4NDMsLTIwNjQzMTYxNTMsMTIwOTU2
