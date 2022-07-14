@@ -47,7 +47,11 @@ After that you can test your Ansible version:
 > ansible --version
 ```
 ### Ansible configuration
-Ansible is just an executable and it is driven by config files. Main one called `ansible.cfg`. 
+Ansible is just an executable and it is driven by config files. Main one called `ansible.cfg`. configuration file which will be searched for in the following order Search strategy for this file looking is:
+ANSIBLE_CONFIG (environment variable if set)
+ansible.cfg (in the current directory)
+~/.ansible.cfg (in the home directory)
+/etc/ansible/ansible.cfg
 
 #### Local configuration 
 If in a current working directory there is none such, then the global(or parent folder?) is used.  
@@ -140,11 +144,11 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5MjkxODkyOCw3MDIzNDQ2MzgsMTUwMz
-ExMzY5NiwxNDU0MzM4MzkyLDM5MDY1ODQyOCwtNDg5NDkyNDI0
-LDE3NzI4MDY5ODksLTE0OTY0MDIzMzEsLTIwMjg3NTI4NDMsLT
-IwNjQzMTYxNTMsMTIwOTU2ODAyOCwtMTk4NzIwMjQwNiw1OTEz
-ODMyNzMsMTc1OTAxODQ3NywtMTQ4Njg1MzMyNywxMDYyODE3NT
-gyLC05ODY5NjM3NTMsLTEzNjMxMzI3MzcsOTY1MjEzNjg1LDE3
-MzY5NDA2MDZdfQ==
+eyJoaXN0b3J5IjpbMTkxNjEzMTMwNiwxNzkyOTE4OTI4LDcwMj
+M0NDYzOCwxNTAzMTEzNjk2LDE0NTQzMzgzOTIsMzkwNjU4NDI4
+LC00ODk0OTI0MjQsMTc3MjgwNjk4OSwtMTQ5NjQwMjMzMSwtMj
+AyODc1Mjg0MywtMjA2NDMxNjE1MywxMjA5NTY4MDI4LC0xOTg3
+MjAyNDA2LDU5MTM4MzI3MywxNzU5MDE4NDc3LC0xNDg2ODUzMz
+I3LDEwNjI4MTc1ODIsLTk4Njk2Mzc1MywtMTM2MzEzMjczNyw5
+NjUyMTM2ODVdfQ==
 -->
