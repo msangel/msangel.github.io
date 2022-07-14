@@ -48,6 +48,7 @@ After that you can test your Ansible version:
 ```
 ### Ansible configuration
 Ansible is just an executable and it is driven by config files. Main one called `ansible.cfg`. 
+
 #### Local configuration 
 If in a current working directory there is none such, then the global(or parent folder?) is used.  
 Important part of the setting is `inventory` key, that is usually point to another [INI-like config file](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html).
@@ -139,11 +140,11 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzAyMzQ0NjM4LDE1MDMxMTM2OTYsMTQ1ND
-MzODM5MiwzOTA2NTg0MjgsLTQ4OTQ5MjQyNCwxNzcyODA2OTg5
-LC0xNDk2NDAyMzMxLC0yMDI4NzUyODQzLC0yMDY0MzE2MTUzLD
-EyMDk1NjgwMjgsLTE5ODcyMDI0MDYsNTkxMzgzMjczLDE3NTkw
-MTg0NzcsLTE0ODY4NTMzMjcsMTA2MjgxNzU4MiwtOTg2OTYzNz
-UzLC0xMzYzMTMyNzM3LDk2NTIxMzY4NSwxNzM2OTQwNjA2LC0y
-MDc1NjI4ODY4XX0=
+eyJoaXN0b3J5IjpbMTc5MjkxODkyOCw3MDIzNDQ2MzgsMTUwMz
+ExMzY5NiwxNDU0MzM4MzkyLDM5MDY1ODQyOCwtNDg5NDkyNDI0
+LDE3NzI4MDY5ODksLTE0OTY0MDIzMzEsLTIwMjg3NTI4NDMsLT
+IwNjQzMTYxNTMsMTIwOTU2ODAyOCwtMTk4NzIwMjQwNiw1OTEz
+ODMyNzMsMTc1OTAxODQ3NywtMTQ4Njg1MzMyNywxMDYyODE3NT
+gyLC05ODY5NjM3NTMsLTEzNjMxMzI3MzcsOTY1MjEzNjg1LDE3
+MzY5NDA2MDZdfQ==
 -->
