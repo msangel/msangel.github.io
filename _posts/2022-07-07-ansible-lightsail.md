@@ -61,7 +61,7 @@ Lest put there our Lightsail node information:
 ```
 where `1.2.3.4` is public IP i got from aws. And some extra parameter -  in my case target node username was differ from local username, so I have to define that explisitly.
 
-There are also a default global config file, located at  `/etc/ansible/ansible.cfg`
+There are also a default global config file. and depemding on instalation type in can be in different places(like python libraries location or in user home directory or in global location). located at  `/etc/ansible/ansible.cfg`
 
 (`/etc/ansible/hosts`). Or per command you can feed own crafted config file(by passing `-i <path>` parameter). Or by enviroupment variable: `export ANSIBLE_HOSTS=~/hosts`. This way Ansible configuration is portable. 
 Lets edit my default by adding out Lightsail node:
@@ -126,11 +126,11 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjE3MTU5MjQ5LDE1MDMxMTM2OTYsMTQ1ND
-MzODM5MiwzOTA2NTg0MjgsLTQ4OTQ5MjQyNCwxNzcyODA2OTg5
-LC0xNDk2NDAyMzMxLC0yMDI4NzUyODQzLC0yMDY0MzE2MTUzLD
-EyMDk1NjgwMjgsLTE5ODcyMDI0MDYsNTkxMzgzMjczLDE3NTkw
-MTg0NzcsLTE0ODY4NTMzMjcsMTA2MjgxNzU4MiwtOTg2OTYzNz
-UzLC0xMzYzMTMyNzM3LDk2NTIxMzY4NSwxNzM2OTQwNjA2LC0y
-MDc1NjI4ODY4XX0=
+eyJoaXN0b3J5IjpbLTIwMzEzMjQxOTcsMTUwMzExMzY5NiwxND
+U0MzM4MzkyLDM5MDY1ODQyOCwtNDg5NDkyNDI0LDE3NzI4MDY5
+ODksLTE0OTY0MDIzMzEsLTIwMjg3NTI4NDMsLTIwNjQzMTYxNT
+MsMTIwOTU2ODAyOCwtMTk4NzIwMjQwNiw1OTEzODMyNzMsMTc1
+OTAxODQ3NywtMTQ4Njg1MzMyNywxMDYyODE3NTgyLC05ODY5Nj
+M3NTMsLTEzNjMxMzI3MzcsOTY1MjEzNjg1LDE3MzY5NDA2MDYs
+LTIwNzU2Mjg4NjhdfQ==
 -->
