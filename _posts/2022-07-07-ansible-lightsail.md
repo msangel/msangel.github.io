@@ -62,7 +62,7 @@ Sample `ansible.cfg`:
 hostfile = hosts.ini
 ```
 In that `hosts.ini` file are listed all the nodes ansible need to operate on. 
-Lest put there our Lightsail node information:
+Sample hostfile:
 ```ini
 1.2.3.4 ansible_ssh_user=ubuntu
 ```
@@ -126,11 +126,11 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxMzg5NzI5OSwtMTk5NTA2NDA0OSwtMT
-g1NTkwODE5Myw0MDgwODYzMDAsMTc5MjkxODkyOCw3MDIzNDQ2
-MzgsMTUwMzExMzY5NiwxNDU0MzM4MzkyLDM5MDY1ODQyOCwtND
-g5NDkyNDI0LDE3NzI4MDY5ODksLTE0OTY0MDIzMzEsLTIwMjg3
-NTI4NDMsLTIwNjQzMTYxNTMsMTIwOTU2ODAyOCwtMTk4NzIwMj
-QwNiw1OTEzODMyNzMsMTc1OTAxODQ3NywtMTQ4Njg1MzMyNywx
-MDYyODE3NTgyXX0=
+eyJoaXN0b3J5IjpbMzc2MjU5ODMsLTE5OTUwNjQwNDksLTE4NT
+U5MDgxOTMsNDA4MDg2MzAwLDE3OTI5MTg5MjgsNzAyMzQ0NjM4
+LDE1MDMxMTM2OTYsMTQ1NDMzODM5MiwzOTA2NTg0MjgsLTQ4OT
+Q5MjQyNCwxNzcyODA2OTg5LC0xNDk2NDAyMzMxLC0yMDI4NzUy
+ODQzLC0yMDY0MzE2MTUzLDEyMDk1NjgwMjgsLTE5ODcyMDI0MD
+YsNTkxMzgzMjczLDE3NTkwMTg0NzcsLTE0ODY4NTMzMjcsMTA2
+MjgxNzU4Ml19
 -->
