@@ -69,32 +69,11 @@ Lest put there our Lightsail node information:
 where `1.2.3.4` is public IP i got from aws. And some extra parameter -  in my case target node username was differ from local username, so I have to define that explisitly.
 If none `hostfile` is set in config, default one, located at `/etc/ansible/hosts` will be used. Also possible to override `hostfile` location by:
 - passing `-i <path>` parameter to ansible executable
-- setting `ANSIBLE_HOSTS` environment variable(li)
+- setting `ANSIBLE_HOSTS` environment variable: `export ANSIBLE_HOSTS=~/hosts`
 
-
-#### Global configuration
-There are also a default global config file. Depending on instalation type in can be in different places, like at python libraries location, user home directory or in global location. In my case it is global location at  `/etc/ansible/ansible.cfg`.
-And logically there exists global hostfile. In my case it was there: `/etc/ansible/hosts`.
-
-#### Parameterized configuration
-Also possible to override both local/global config.cfg and hostfile location in two ways: via executable arguments and via enviroupment variables:
-##### Executable arguments
-```bash
-
-```
-##### Enviroupment variables
- 2. by providing enviroupment variable
-
-(`/etc/ansible/hosts`). Or per command you can feed own crafted config file(by passing `-i <path>` parameter). Or by enviroupment variable: `export ANSIBLE_HOSTS=~/hosts`. This way Ansible configuration is portable. 
-Lets edit my default by adding out Lightsail node:
-```
-1.2.3.4 ansible_ssh_user=ubuntu
-```
-where `1.2.3.4` is public IP i got from aws. And some extra parameter -  in my case target node username was differ from local username, so I have to define that explisitly.
 
 ### Test run
-Having a node and installed software, we can try how it actually works. 
-It's show time!
+Having a node, installed software and basic configuration, we can try how it actually works. 
 ```bash
 > ansible -m ping all
 1.2.3.4 | SUCCESS => {
@@ -148,11 +127,11 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjkzNzExMzExLDQwODA4NjMwMCwxNzkyOT
-E4OTI4LDcwMjM0NDYzOCwxNTAzMTEzNjk2LDE0NTQzMzgzOTIs
-MzkwNjU4NDI4LC00ODk0OTI0MjQsMTc3MjgwNjk4OSwtMTQ5Nj
-QwMjMzMSwtMjAyODc1Mjg0MywtMjA2NDMxNjE1MywxMjA5NTY4
-MDI4LC0xOTg3MjAyNDA2LDU5MTM4MzI3MywxNzU5MDE4NDc3LC
-0xNDg2ODUzMzI3LDEwNjI4MTc1ODIsLTk4Njk2Mzc1MywtMTM2
-MzEzMjczN119
+eyJoaXN0b3J5IjpbLTE4NTU5MDgxOTMsNDA4MDg2MzAwLDE3OT
+I5MTg5MjgsNzAyMzQ0NjM4LDE1MDMxMTM2OTYsMTQ1NDMzODM5
+MiwzOTA2NTg0MjgsLTQ4OTQ5MjQyNCwxNzcyODA2OTg5LC0xND
+k2NDAyMzMxLC0yMDI4NzUyODQzLC0yMDY0MzE2MTUzLDEyMDk1
+NjgwMjgsLTE5ODcyMDI0MDYsNTkxMzgzMjczLDE3NTkwMTg0Nz
+csLTE0ODY4NTMzMjcsMTA2MjgxNzU4MiwtOTg2OTYzNzUzLC0x
+MzYzMTMyNzM3XX0=
 -->
