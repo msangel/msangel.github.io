@@ -47,7 +47,9 @@ After that you can test your Ansible version:
 > ansible --version
 ```
 ### Ansible configuration
-Ansible is just an executable and it is driven by config files. Main one called `ansible.cfg`. If in a current working directory there is none such, then the global(or parent folder?) is used.  
+Ansible is just an executable and it is driven by config files. Main one called `ansible.cfg`. 
+#### Local configuration 
+If in a current working directory there is none such, then the global(or parent folder?) is used.  
 Important part of the setting is `inventory` key, that is usually point to another [INI-like config file](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html).
 Sample `ansible.cfg`:
 ```ini
@@ -61,8 +63,11 @@ Lest put there our Lightsail node information:
 ```
 where `1.2.3.4` is public IP i got from aws. And some extra parameter -  in my case target node username was differ from local username, so I have to define that explisitly.
 
+#### Global configuration
 There are also a default global config file. Depending on instalation type in can be in different places, like python libraries location, user home directory or in global location. In my case it is global location at  `/etc/ansible/ansible.cfg`.
-And logicall
+And logically there exists global hostfile. In my case it was there: `/etc/ansible/hosts`.
+
+#### Parametrized 
 
 
 (`/etc/ansible/hosts`). Or per command you can feed own crafted config file(by passing `-i <path>` parameter). Or by enviroupment variable: `export ANSIBLE_HOSTS=~/hosts`. This way Ansible configuration is portable. 
@@ -128,7 +133,7 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwOTM2ODYxNSwxNTAzMTEzNjk2LDE0NT
+eyJoaXN0b3J5IjpbLTQyMjc5NTk4MCwxNTAzMTEzNjk2LDE0NT
 QzMzgzOTIsMzkwNjU4NDI4LC00ODk0OTI0MjQsMTc3MjgwNjk4
 OSwtMTQ5NjQwMjMzMSwtMjAyODc1Mjg0MywtMjA2NDMxNjE1My
 wxMjA5NTY4MDI4LC0xOTg3MjAyNDA2LDU5MTM4MzI3MywxNzU5
