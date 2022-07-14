@@ -48,7 +48,7 @@ After that you can test your Ansible version:
 ```
 ### Ansible configuration
 Ansible is just an executable and it is driven by config files. Main one called `ansible.cfg`. If in a current working directory there is none such, then the global(or parent folder?) is used.  
-Important part of the setting is `inventory` key, that is usually point to [INI-like config file](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html).
+Important part of the setting is `inventory` key, that is usually point to another [INI-like config file](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html).
 Sample `ansible.cfg`:
 ```ini
 [defaults]
@@ -61,7 +61,9 @@ Lest put there our Lightsail node information:
 ```
 where `1.2.3.4` is public IP i got from aws. And some extra parameter -  in my case target node username was differ from local username, so I have to define that explisitly.
 
-There are also a default global config file. and depemding on instalation type in can be in different places(like python libraries location or in user home directory or in global location). located at  `/etc/ansible/ansible.cfg`
+There are also a default global config file. Depending on instalation type in can be in different places, like python libraries location, user home directory or in global location. In my case it is global location at  `/etc/ansible/ansible.cfg`.
+And logicall
+
 
 (`/etc/ansible/hosts`). Or per command you can feed own crafted config file(by passing `-i <path>` parameter). Or by enviroupment variable: `export ANSIBLE_HOSTS=~/hosts`. This way Ansible configuration is portable. 
 Lets edit my default by adding out Lightsail node:
@@ -126,11 +128,11 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzEzMjQxOTcsMTUwMzExMzY5NiwxND
-U0MzM4MzkyLDM5MDY1ODQyOCwtNDg5NDkyNDI0LDE3NzI4MDY5
-ODksLTE0OTY0MDIzMzEsLTIwMjg3NTI4NDMsLTIwNjQzMTYxNT
-MsMTIwOTU2ODAyOCwtMTk4NzIwMjQwNiw1OTEzODMyNzMsMTc1
-OTAxODQ3NywtMTQ4Njg1MzMyNywxMDYyODE3NTgyLC05ODY5Nj
-M3NTMsLTEzNjMxMzI3MzcsOTY1MjEzNjg1LDE3MzY5NDA2MDYs
-LTIwNzU2Mjg4NjhdfQ==
+eyJoaXN0b3J5IjpbLTcwOTM2ODYxNSwxNTAzMTEzNjk2LDE0NT
+QzMzgzOTIsMzkwNjU4NDI4LC00ODk0OTI0MjQsMTc3MjgwNjk4
+OSwtMTQ5NjQwMjMzMSwtMjAyODc1Mjg0MywtMjA2NDMxNjE1My
+wxMjA5NTY4MDI4LC0xOTg3MjAyNDA2LDU5MTM4MzI3MywxNzU5
+MDE4NDc3LC0xNDg2ODUzMzI3LDEwNjI4MTc1ODIsLTk4Njk2Mz
+c1MywtMTM2MzEzMjczNyw5NjUyMTM2ODUsMTczNjk0MDYwNiwt
+MjA3NTYyODg2OF19
 -->
