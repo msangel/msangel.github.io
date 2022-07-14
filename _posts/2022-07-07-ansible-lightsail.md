@@ -61,7 +61,7 @@ Sample `ansible.cfg`:
 [defaults]
 hostfile = hosts.ini
 ```
-In that `hosts.ini` file are listed all the nodes ansible need to operate on
+In that `hosts.ini` file are listed all the nodes ansible need to operate on. 
 Lest put there our Lightsail node information:
 ```ini
 1.2.3.4 ansible_ssh_user=ubuntu
@@ -72,7 +72,7 @@ If none `hostfile` is set in config, default one, located at `/etc/ansible/hosts
 - setting `ANSIBLE_HOSTS` environment variable: `export ANSIBLE_HOSTS=~/hosts`
 
 ### Test run
-Having a node, installed software and basic configuration, we can try how it actually works. 
+Having a node, installed software and basic configuration(I used global one), we can try how it actually works. 
 ```bash
 > ansible -m ping all
 1.2.3.4 | SUCCESS => {
@@ -126,7 +126,7 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTE4MjE3OSwtMTk5NTA2NDA0OSwtMT
+eyJoaXN0b3J5IjpbMTYxMzg5NzI5OSwtMTk5NTA2NDA0OSwtMT
 g1NTkwODE5Myw0MDgwODYzMDAsMTc5MjkxODkyOCw3MDIzNDQ2
 MzgsMTUwMzExMzY5NiwxNDU0MzM4MzkyLDM5MDY1ODQyOCwtND
 g5NDkyNDI0LDE3NzI4MDY5ODksLTE0OTY0MDIzMzEsLTIwMjg3
