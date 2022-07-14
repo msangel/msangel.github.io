@@ -71,7 +71,6 @@ If none `hostfile` is set in config, default one, located at `/etc/ansible/hosts
 - passing `-i <path>` parameter to ansible executable
 - setting `ANSIBLE_HOSTS` environment variable: `export ANSIBLE_HOSTS=~/hosts`
 
-
 ### Test run
 Having a node, installed software and basic configuration, we can try how it actually works. 
 ```bash
@@ -127,11 +126,11 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyMDYzODE0MSwtMTg1NTkwODE5Myw0MD
-gwODYzMDAsMTc5MjkxODkyOCw3MDIzNDQ2MzgsMTUwMzExMzY5
-NiwxNDU0MzM4MzkyLDM5MDY1ODQyOCwtNDg5NDkyNDI0LDE3Nz
-I4MDY5ODksLTE0OTY0MDIzMzEsLTIwMjg3NTI4NDMsLTIwNjQz
-MTYxNTMsMTIwOTU2ODAyOCwtMTk4NzIwMjQwNiw1OTEzODMyNz
-MsMTc1OTAxODQ3NywtMTQ4Njg1MzMyNywxMDYyODE3NTgyLC05
-ODY5NjM3NTNdfQ==
+eyJoaXN0b3J5IjpbLTE5OTUwNjQwNDksLTE4NTU5MDgxOTMsND
+A4MDg2MzAwLDE3OTI5MTg5MjgsNzAyMzQ0NjM4LDE1MDMxMTM2
+OTYsMTQ1NDMzODM5MiwzOTA2NTg0MjgsLTQ4OTQ5MjQyNCwxNz
+cyODA2OTg5LC0xNDk2NDAyMzMxLC0yMDI4NzUyODQzLC0yMDY0
+MzE2MTUzLDEyMDk1NjgwMjgsLTE5ODcyMDI0MDYsNTkxMzgzMj
+czLDE3NTkwMTg0NzcsLTE0ODY4NTMzMjcsMTA2MjgxNzU4Miwt
+OTg2OTYzNzUzXX0=
 -->
