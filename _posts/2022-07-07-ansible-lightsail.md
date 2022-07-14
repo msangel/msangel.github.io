@@ -128,14 +128,23 @@ https://www.google.com/search?q=ansible+start+and+stop+process&oq=ansible+stop+p
 ### More power with Ansible lightsail module
 If fact, Ansible can manage lightsail for its own - it can create instances, delete them, etc. Take a look on the module:
 [community.aws.lightsail module – Manage instances in AWS Lightsail](https://docs.ansible.com/ansible/latest/collections/community/aws/lightsail_module.html) 
+
+### Extra
+ssh connection can be tuned:
+```ini
+[ssh_connection]
+ssh_args = -o ServerAliveInterval=30 -o ControlMaster=auto -o ControlPersist=60s
+```
+
+Save and close the file. We are reusing SSH connection to speed up remote login process using multiplexing by setting up ssh_args option. OpenSSH server connection drops out after few minutes of inactivity hence we are setting ServerAliveInterval to 30. We also used ControlPersist in conjunction with ControlMaster, specifies that the master connection should remain open in the background (waiting for future client connections) after the initial client connection has been closed.
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3MzE1NTU2OCwzNzYyNTk4MywtMTk5NT
-A2NDA0OSwtMTg1NTkwODE5Myw0MDgwODYzMDAsMTc5MjkxODky
-OCw3MDIzNDQ2MzgsMTUwMzExMzY5NiwxNDU0MzM4MzkyLDM5MD
-Y1ODQyOCwtNDg5NDkyNDI0LDE3NzI4MDY5ODksLTE0OTY0MDIz
-MzEsLTIwMjg3NTI4NDMsLTIwNjQzMTYxNTMsMTIwOTU2ODAyOC
-wtMTk4NzIwMjQwNiw1OTEzODMyNzMsMTc1OTAxODQ3NywtMTQ4
-Njg1MzMyN119
+eyJoaXN0b3J5IjpbLTIxNDY5NzY2NDUsMTc3MzE1NTU2OCwzNz
+YyNTk4MywtMTk5NTA2NDA0OSwtMTg1NTkwODE5Myw0MDgwODYz
+MDAsMTc5MjkxODkyOCw3MDIzNDQ2MzgsMTUwMzExMzY5NiwxND
+U0MzM4MzkyLDM5MDY1ODQyOCwtNDg5NDkyNDI0LDE3NzI4MDY5
+ODksLTE0OTY0MDIzMzEsLTIwMjg3NTI4NDMsLTIwNjQzMTYxNT
+MsMTIwOTU2ODAyOCwtMTk4NzIwMjQwNiw1OTEzODMyNzMsMTc1
+OTAxODQ3N119
 -->
