@@ -50,7 +50,10 @@ After that you can test your Ansible version:
 Ansible is just an executable and it is driven by config files. Main one called `ansible.cfg`. If in a current working directory there is none such, then the global(or parent folder?) is used.  
 Important part of the setting is `inventory` key, that is usually point to [INI-like config file](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html).
 Sample `ansible.cfg`:
-
+```ini
+[defaults]
+hostfile = hosts.ini
+```
 
 
 As first step   here Ansible need to know his node location and how to access that. This is done by [INI-like config file](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html). There is a default one(`/etc/ansible/hosts`). Or per command you can feed own crafted config file(by passing `-i <path>` parameter). Or by enviroupment variable: `export ANSIBLE_HOSTS=~/hosts`. This way Ansible configuration is portable. 
@@ -116,7 +119,7 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwMTkxMzMxMCwxNDU0MzM4MzkyLDM5MD
+eyJoaXN0b3J5IjpbMTUwMzExMzY5NiwxNDU0MzM4MzkyLDM5MD
 Y1ODQyOCwtNDg5NDkyNDI0LDE3NzI4MDY5ODksLTE0OTY0MDIz
 MzEsLTIwMjg3NTI4NDMsLTIwNjQzMTYxNTMsMTIwOTU2ODAyOC
 wtMTk4NzIwMjQwNiw1OTEzODMyNzMsMTc1OTAxODQ3NywtMTQ4
