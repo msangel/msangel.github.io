@@ -53,7 +53,7 @@ Ansible is just an executable and it is driven by config files. Main one called 
  - ~/.ansible.cfg (in the home directory)
  - /etc/ansible/ansible.cfg
 Ansible will process the above list and use the first file found, all others are ignored.
-This way, depending on needs the configuration can be: per command, per folder, per user and per machine. 
+This way, depending on needs the configuration can be: per command, per folder, per user and per machine. There ar
  
 Important part of the `ansible.cfg` is `inventory` key, that is usually point to another [INI-like config file](https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html).
 Sample `ansible.cfg`:
@@ -127,11 +127,11 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTU5MDgxOTMsNDA4MDg2MzAwLDE3OT
-I5MTg5MjgsNzAyMzQ0NjM4LDE1MDMxMTM2OTYsMTQ1NDMzODM5
-MiwzOTA2NTg0MjgsLTQ4OTQ5MjQyNCwxNzcyODA2OTg5LC0xND
-k2NDAyMzMxLC0yMDI4NzUyODQzLC0yMDY0MzE2MTUzLDEyMDk1
-NjgwMjgsLTE5ODcyMDI0MDYsNTkxMzgzMjczLDE3NTkwMTg0Nz
-csLTE0ODY4NTMzMjcsMTA2MjgxNzU4MiwtOTg2OTYzNzUzLC0x
-MzYzMTMyNzM3XX0=
+eyJoaXN0b3J5IjpbLTc3MzYzMDkyLC0xODU1OTA4MTkzLDQwOD
+A4NjMwMCwxNzkyOTE4OTI4LDcwMjM0NDYzOCwxNTAzMTEzNjk2
+LDE0NTQzMzgzOTIsMzkwNjU4NDI4LC00ODk0OTI0MjQsMTc3Mj
+gwNjk4OSwtMTQ5NjQwMjMzMSwtMjAyODc1Mjg0MywtMjA2NDMx
+NjE1MywxMjA5NTY4MDI4LC0xOTg3MjAyNDA2LDU5MTM4MzI3My
+wxNzU5MDE4NDc3LC0xNDg2ODUzMzI3LDEwNjI4MTc1ODIsLTk4
+Njk2Mzc1M119
 -->
