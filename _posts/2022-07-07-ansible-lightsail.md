@@ -162,14 +162,19 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
 
 ### Extra
 
+### Used resources
+
+ - [Deploying a service using ansible and
+   systemd](https://dev.to/kkentzo/deploying-a-service-using-ansible-and-systemd-4n11)
+
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjYzMjUxOTIsMTM0OTc1NDgwNCwtMT
-U4NzY2OTI0NywxNzczMTU1NTY4LDM3NjI1OTgzLC0xOTk1MDY0
-MDQ5LC0xODU1OTA4MTkzLDQwODA4NjMwMCwxNzkyOTE4OTI4LD
-cwMjM0NDYzOCwxNTAzMTEzNjk2LDE0NTQzMzgzOTIsMzkwNjU4
-NDI4LC00ODk0OTI0MjQsMTc3MjgwNjk4OSwtMTQ5NjQwMjMzMS
-wtMjAyODc1Mjg0MywtMjA2NDMxNjE1MywxMjA5NTY4MDI4LC0x
-OTg3MjAyNDA2XX0=
+eyJoaXN0b3J5IjpbLTczMjQ5NTgxOSwtMjAyNjMyNTE5MiwxMz
+Q5NzU0ODA0LC0xNTg3NjY5MjQ3LDE3NzMxNTU1NjgsMzc2MjU5
+ODMsLTE5OTUwNjQwNDksLTE4NTU5MDgxOTMsNDA4MDg2MzAwLD
+E3OTI5MTg5MjgsNzAyMzQ0NjM4LDE1MDMxMTM2OTYsMTQ1NDMz
+ODM5MiwzOTA2NTg0MjgsLTQ4OTQ5MjQyNCwxNzcyODA2OTg5LC
+0xNDk2NDAyMzMxLC0yMDI4NzUyODQzLC0yMDY0MzE2MTUzLDEy
+MDk1NjgwMjhdfQ==
 -->
