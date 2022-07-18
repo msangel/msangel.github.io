@@ -245,16 +245,20 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
    systemd](https://dev.to/kkentzo/deploying-a-service-using-ansible-and-systemd-4n11)
 
 Short usefull explanations:
-[local_action vs delegate_to](https://stackoverflow.com/a/56050507/449553)
-system_d WantedBy explanation
+
+ - [local_action vs
+   delegate_to](https://stackoverflow.com/a/56050507/449553)
+ - [system_d
+   WantedBy explanation](https://unix.stackexchange.com/q/506347/207351)
+
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4NjE1NTAyMCwxODkwNzg2NjQzLC0yMD
-I2MzI1MTkyLDEzNDk3NTQ4MDQsLTE1ODc2NjkyNDcsMTc3MzE1
-NTU2OCwzNzYyNTk4MywtMTk5NTA2NDA0OSwtMTg1NTkwODE5My
-w0MDgwODYzMDAsMTc5MjkxODkyOCw3MDIzNDQ2MzgsMTUwMzEx
-MzY5NiwxNDU0MzM4MzkyLDM5MDY1ODQyOCwtNDg5NDkyNDI0LD
-E3NzI4MDY5ODksLTE0OTY0MDIzMzEsLTIwMjg3NTI4NDMsLTIw
-NjQzMTYxNTNdfQ==
+eyJoaXN0b3J5IjpbNDIzMDQ5MzU3LDE4OTA3ODY2NDMsLTIwMj
+YzMjUxOTIsMTM0OTc1NDgwNCwtMTU4NzY2OTI0NywxNzczMTU1
+NTY4LDM3NjI1OTgzLC0xOTk1MDY0MDQ5LC0xODU1OTA4MTkzLD
+QwODA4NjMwMCwxNzkyOTE4OTI4LDcwMjM0NDYzOCwxNTAzMTEz
+Njk2LDE0NTQzMzgzOTIsMzkwNjU4NDI4LC00ODk0OTI0MjQsMT
+c3MjgwNjk4OSwtMTQ5NjQwMjMzMSwtMjAyODc1Mjg0MywtMjA2
+NDMxNjE1M119
 -->
