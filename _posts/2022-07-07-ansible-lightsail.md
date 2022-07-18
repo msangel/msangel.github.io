@@ -120,7 +120,7 @@ Here we will have two scenarios:
         apply:  
           become: true
 ```
- 
+#### Install dependencies
 In our case application deployment will consists of these steps:
  - build application locally from sources using maven
  - upload artifact to node
@@ -170,11 +170,11 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczMjQ5NTgxOSwtMjAyNjMyNTE5MiwxMz
-Q5NzU0ODA0LC0xNTg3NjY5MjQ3LDE3NzMxNTU1NjgsMzc2MjU5
-ODMsLTE5OTUwNjQwNDksLTE4NTU5MDgxOTMsNDA4MDg2MzAwLD
-E3OTI5MTg5MjgsNzAyMzQ0NjM4LDE1MDMxMTM2OTYsMTQ1NDMz
-ODM5MiwzOTA2NTg0MjgsLTQ4OTQ5MjQyNCwxNzcyODA2OTg5LC
-0xNDk2NDAyMzMxLC0yMDI4NzUyODQzLC0yMDY0MzE2MTUzLDEy
-MDk1NjgwMjhdfQ==
+eyJoaXN0b3J5IjpbMTkxMDUxNzgzLC0yMDI2MzI1MTkyLDEzND
+k3NTQ4MDQsLTE1ODc2NjkyNDcsMTc3MzE1NTU2OCwzNzYyNTk4
+MywtMTk5NTA2NDA0OSwtMTg1NTkwODE5Myw0MDgwODYzMDAsMT
+c5MjkxODkyOCw3MDIzNDQ2MzgsMTUwMzExMzY5NiwxNDU0MzM4
+MzkyLDM5MDY1ODQyOCwtNDg5NDkyNDI0LDE3NzI4MDY5ODksLT
+E0OTY0MDIzMzEsLTIwMjg3NTI4NDMsLTIwNjQzMTYxNTMsMTIw
+OTU2ODAyOF19
 -->
