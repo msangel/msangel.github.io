@@ -84,13 +84,18 @@ Having a node, installed software and basic configuration(I used global one), we
 }
 ```
 where:
- - -m ping : Module name to execute such as ping, shell, apt, yum and so on
- -  all : The all means "all hosts." You can speificy group name such as 'devservers' or host names too.
+ 1. -m ping : Module name to execute such as ping, shell, apt, yum and so on
+ 2.  all : The all means "all hosts." You can speificy group name such as 'devservers' or host names too.
  
 ### Playbook
 Playbook is just a scenario to be run, written is `yaml`-file.
 You can run that using `ansible` executable directly.
+Here we will have two scenarios: 
+ 1. install required system libraries 
+ 2. and java   reploy and
+    start/restart our application
 
+ 
 In our case application deployment will consists of these steps:
  - build application locally from sources using maven
  - upload artifact to node
@@ -135,11 +140,11 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0OTc1NDgwNCwtMTU4NzY2OTI0NywxNz
-czMTU1NTY4LDM3NjI1OTgzLC0xOTk1MDY0MDQ5LC0xODU1OTA4
-MTkzLDQwODA4NjMwMCwxNzkyOTE4OTI4LDcwMjM0NDYzOCwxNT
-AzMTEzNjk2LDE0NTQzMzgzOTIsMzkwNjU4NDI4LC00ODk0OTI0
-MjQsMTc3MjgwNjk4OSwtMTQ5NjQwMjMzMSwtMjAyODc1Mjg0My
-wtMjA2NDMxNjE1MywxMjA5NTY4MDI4LC0xOTg3MjAyNDA2LDU5
-MTM4MzI3M119
+eyJoaXN0b3J5IjpbLTEwNjkzMDkzMCwxMzQ5NzU0ODA0LC0xNT
+g3NjY5MjQ3LDE3NzMxNTU1NjgsMzc2MjU5ODMsLTE5OTUwNjQw
+NDksLTE4NTU5MDgxOTMsNDA4MDg2MzAwLDE3OTI5MTg5MjgsNz
+AyMzQ0NjM4LDE1MDMxMTM2OTYsMTQ1NDMzODM5MiwzOTA2NTg0
+MjgsLTQ4OTQ5MjQyNCwxNzcyODA2OTg5LC0xNDk2NDAyMzMxLC
+0yMDI4NzUyODQzLC0yMDY0MzE2MTUzLDEyMDk1NjgwMjgsLTE5
+ODcyMDI0MDZdfQ==
 -->
