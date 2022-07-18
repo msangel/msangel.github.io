@@ -155,8 +155,8 @@ Here we will have two scenarios:
       #      cmd: mvn clean package
       # Read more there:
       # https://stackoverflow.com/a/56050507/449553
-      # https://docs.ansible.com/ansible/latest/collections/ansible/builtin/shell_module.html
-    - name: Deploy artifact  
+      # 
+    - name: Deploy artifact
       copy:  
         src: "{{ item }}"  
   dest: ~/app.jar  
@@ -244,10 +244,13 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
  - [Deploying a service using ansible and
    systemd](https://dev.to/kkentzo/deploying-a-service-using-ansible-and-systemd-4n11)
 
+Short usefull explanations:
+local_action vs delegate_to
+
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDI4MzU0NDAyLDE4OTA3ODY2NDMsLTIwMj
+eyJoaXN0b3J5IjpbOTU1NTE1MzEwLDE4OTA3ODY2NDMsLTIwMj
 YzMjUxOTIsMTM0OTc1NDgwNCwtMTU4NzY2OTI0NywxNzczMTU1
 NTY4LDM3NjI1OTgzLC0xOTk1MDY0MDQ5LC0xODU1OTA4MTkzLD
 QwODA4NjMwMCwxNzkyOTE4OTI4LDcwMjM0NDYzOCwxNTAzMTEz
