@@ -212,7 +212,7 @@ Here we will have two scenarios:
 some docs: 
 - 
 - 
-- https://coderwall.com/p/xlbxkq/run-a-local-script-before-after-a-play
+- 
 - https://stackoverflow.com/questions/53190538/running-mvn-clean-install-maven-command-using-ansible-module
 - https://stackoverflow.com/questions/53190538/running-mvn-clean-install-maven-command-using-ansible-module
 - https://docs.ansible.com/ansible/latest/collections/ansible/builtin/command_module.html
@@ -255,11 +255,11 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODAxMTk1MTQwLDE0NTMxNjYyNTQsNDIzMD
-Q5MzU3LDE4OTA3ODY2NDMsLTIwMjYzMjUxOTIsMTM0OTc1NDgw
-NCwtMTU4NzY2OTI0NywxNzczMTU1NTY4LDM3NjI1OTgzLC0xOT
-k1MDY0MDQ5LC0xODU1OTA4MTkzLDQwODA4NjMwMCwxNzkyOTE4
-OTI4LDcwMjM0NDYzOCwxNTAzMTEzNjk2LDE0NTQzMzgzOTIsMz
-kwNjU4NDI4LC00ODk0OTI0MjQsMTc3MjgwNjk4OSwtMTQ5NjQw
-MjMzMV19
+eyJoaXN0b3J5IjpbLTUxMTk4MzI3NywxNDUzMTY2MjU0LDQyMz
+A0OTM1NywxODkwNzg2NjQzLC0yMDI2MzI1MTkyLDEzNDk3NTQ4
+MDQsLTE1ODc2NjkyNDcsMTc3MzE1NTU2OCwzNzYyNTk4MywtMT
+k5NTA2NDA0OSwtMTg1NTkwODE5Myw0MDgwODYzMDAsMTc5Mjkx
+ODkyOCw3MDIzNDQ2MzgsMTUwMzExMzY5NiwxNDU0MzM4MzkyLD
+M5MDY1ODQyOCwtNDg5NDkyNDI0LDE3NzI4MDY5ODksLTE0OTY0
+MDIzMzFdfQ==
 -->
