@@ -97,8 +97,7 @@ Here we will have two scenarios:
 ```yaml
 ---  
 - hosts: all  
-  become: no  
-  gather_facts: true # default  
+  become: no
     
   tasks:  
     - name: Install java role from Ansible Galaxy  
@@ -166,11 +165,11 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzYzNDAyMDkxLDEzNDk3NTQ4MDQsLTE1OD
-c2NjkyNDcsMTc3MzE1NTU2OCwzNzYyNTk4MywtMTk5NTA2NDA0
-OSwtMTg1NTkwODE5Myw0MDgwODYzMDAsMTc5MjkxODkyOCw3MD
-IzNDQ2MzgsMTUwMzExMzY5NiwxNDU0MzM4MzkyLDM5MDY1ODQy
-OCwtNDg5NDkyNDI0LDE3NzI4MDY5ODksLTE0OTY0MDIzMzEsLT
-IwMjg3NTI4NDMsLTIwNjQzMTYxNTMsMTIwOTU2ODAyOCwtMTk4
-NzIwMjQwNl19
+eyJoaXN0b3J5IjpbLTIwMjYzMjUxOTIsMTM0OTc1NDgwNCwtMT
+U4NzY2OTI0NywxNzczMTU1NTY4LDM3NjI1OTgzLC0xOTk1MDY0
+MDQ5LC0xODU1OTA4MTkzLDQwODA4NjMwMCwxNzkyOTE4OTI4LD
+cwMjM0NDYzOCwxNTAzMTEzNjk2LDE0NTQzMzgzOTIsMzkwNjU4
+NDI4LC00ODk0OTI0MjQsMTc3MjgwNjk4OSwtMTQ5NjQwMjMzMS
+wtMjAyODc1Mjg0MywtMjA2NDMxNjE1MywxMjA5NTY4MDI4LC0x
+OTg3MjAyNDA2XX0=
 -->
