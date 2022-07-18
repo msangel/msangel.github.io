@@ -211,7 +211,7 @@ Here we will have two scenarios:
 .
 some docs: 
 - 
-- https://docs.ansible.com/ansible/latest/user_guide/playbooks_delegation.html
+- 
 - https://coderwall.com/p/xlbxkq/run-a-local-script-before-after-a-play
 - https://stackoverflow.com/questions/53190538/running-mvn-clean-install-maven-command-using-ansible-module
 - https://stackoverflow.com/questions/53190538/running-mvn-clean-install-maven-command-using-ansible-module
@@ -255,11 +255,11 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1MzE2NjI1NCw0MjMwNDkzNTcsMTg5MD
-c4NjY0MywtMjAyNjMyNTE5MiwxMzQ5NzU0ODA0LC0xNTg3NjY5
-MjQ3LDE3NzMxNTU1NjgsMzc2MjU5ODMsLTE5OTUwNjQwNDksLT
-E4NTU5MDgxOTMsNDA4MDg2MzAwLDE3OTI5MTg5MjgsNzAyMzQ0
-NjM4LDE1MDMxMTM2OTYsMTQ1NDMzODM5MiwzOTA2NTg0MjgsLT
-Q4OTQ5MjQyNCwxNzcyODA2OTg5LC0xNDk2NDAyMzMxLC0yMDI4
-NzUyODQzXX0=
+eyJoaXN0b3J5IjpbODAxMTk1MTQwLDE0NTMxNjYyNTQsNDIzMD
+Q5MzU3LDE4OTA3ODY2NDMsLTIwMjYzMjUxOTIsMTM0OTc1NDgw
+NCwtMTU4NzY2OTI0NywxNzczMTU1NTY4LDM3NjI1OTgzLC0xOT
+k1MDY0MDQ5LC0xODU1OTA4MTkzLDQwODA4NjMwMCwxNzkyOTE4
+OTI4LDcwMjM0NDYzOCwxNTAzMTEzNjk2LDE0NTQzMzgzOTIsMz
+kwNjU4NDI4LC00ODk0OTI0MjQsMTc3MjgwNjk4OSwtMTQ5NjQw
+MjMzMV19
 -->
