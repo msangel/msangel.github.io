@@ -120,18 +120,83 @@ Here we will have two scenarios:
         apply:  
           become: true
 ```
-#### Install dependencies
-In our case application deployment will consists of these steps:
- - build application locally from sources using maven
- - upload artifact to node
- - restart service
-
-Lets create basic playbook(`java_deploy.yml`):
+#### Deploy application
 ```yaml
-
+---  
+- hosts: all  
+  become: no  
+  gather_facts: true # default  
+  strategy: linear # default, change this on how tasks must run on hosts: sequential or serialized  
+  vars:  
+    systemd_service_file: |  
+      [Unit]  
+      Description=App service  
+        
+      [Service]  
+      User=root  
+      Group=root  
+      ExecStart=/usr/bin/java -jar /home/ubuntu/app.jar  
+      # default stdout at: `sudo journalctl -u app_service`  
+        
+      [Install]  
+      WantedBy=multi-user.target  
+  
+  tasks:  
+    - name: Build maven artifact locally  
+      local_action: shell mvn clean package  
+    - name: Deploy artifact  
+      copy:  
+        src: "{{ item }}"  
+  dest: ~/app.jar  
+        mode: u=rwx,g=rx,o=rx  
+      with_fileglob:  
+        - "target/*.jar"  
+  - name: Systemd file exists  
+      become: yes  
+      stat:  
+        path: /etc/systemd/system/app_service.service  
+        checksum_algorithm: md5  
+      register: app_service_stat  
+    - name: Setting facts  
+      become: no  
+      set_fact:  
+        # since missing file has no checksum, use "false" value instead  
+  remote_file_sum: "{{ app_service_stat.stat.checksum | default(false) }}"  
+  # anything: "{{ as.as.as.as.as | default('not as') }}" <- works!  
+ # or that: # remote_file_sum: "{{ app_service_stat.stat.exists | ternary(app_service_stat.stat.checksum, false) }}"  local_file_sum: "{{ systemd_service_file | hash('md5') }}"  
+  cacheable: no # 'no' is default, if yes, will be cached on remote host/sequential playbook run  
+  - name: Systemd file debug integrity  
+      vars:  
+        msg: |-  
+          Remote systemd file exists: {{ app_service_stat.stat.exists }}  
+          Remote systemd file checksum: {{ remote_file_sum }}  
+          Valid systemd file checksum: {{ local_file_sum }}  
+      debug:  
+        # instead of printing message directly here  
+ # I use task variable defined above # and print that with skipping empty line (last one as a result of split) # these all are just because "msg" print JSON, so \n will be "\n" # but if print content as array of lines, it looks nicer  msg: "{{ msg.split('\n') | reject('match', '^$') }}"  
+  - name: Creating systemd service file if changed   
+      when: remote_file_sum != local_file_sum  
+      become: yes  
+      copy:  
+        dest: "/etc/systemd/system/app_service.service"  
+  mode: u=rwx,g=rx,o=rx  
+        owner: root  
+        group: root  
+        content: "{{systemd_service_file}}"  
+  - name: Start app service  
+      become: yes  
+      systemd:  
+        name: app_service  
+        enabled: yes  
+        state: restarted  
+        daemon_reload: yes  
+    # `name` attribute is optional btw  
+  - wait_for:  
+        port: 80
 ```
+
 ### Build application locally
-Ansible is designed to execute commands on remote nodes, but it also can execute ones on local machine.
+.
 some docs: 
 - https://stackoverflow.com/questions/56048959/ansible-local-action-example-how-does-it-work
 - https://docs.ansible.com/ansible/latest/user_guide/playbooks_delegation.html
@@ -170,7 +235,7 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxMDUxNzgzLC0yMDI2MzI1MTkyLDEzND
+eyJoaXN0b3J5IjpbOTUxMzg4NzIyLC0yMDI2MzI1MTkyLDEzND
 k3NTQ4MDQsLTE1ODc2NjkyNDcsMTc3MzE1NTU2OCwzNzYyNTk4
 MywtMTk5NTA2NDA0OSwtMTg1NTkwODE5Myw0MDgwODYzMDAsMT
 c5MjkxODkyOCw3MDIzNDQ2MzgsMTUwMzExMzY5NiwxNDU0MzM4
