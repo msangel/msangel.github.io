@@ -94,6 +94,7 @@ Here we will have two scenarios:
  1. install required system libraries and java
  2. deploy and start/restart our application
 #### Install dependencies
+
 ```yaml
 ---  
 - hosts: all  
@@ -250,11 +251,11 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTQ0OTg2NSwtNTExOTgzMjc3LDE0NT
-MxNjYyNTQsNDIzMDQ5MzU3LDE4OTA3ODY2NDMsLTIwMjYzMjUx
-OTIsMTM0OTc1NDgwNCwtMTU4NzY2OTI0NywxNzczMTU1NTY4LD
-M3NjI1OTgzLC0xOTk1MDY0MDQ5LC0xODU1OTA4MTkzLDQwODA4
-NjMwMCwxNzkyOTE4OTI4LDcwMjM0NDYzOCwxNTAzMTEzNjk2LD
-E0NTQzMzgzOTIsMzkwNjU4NDI4LC00ODk0OTI0MjQsMTc3Mjgw
-Njk4OV19
+eyJoaXN0b3J5IjpbMjM3ODMxNDEsLTUxMTk4MzI3NywxNDUzMT
+Y2MjU0LDQyMzA0OTM1NywxODkwNzg2NjQzLC0yMDI2MzI1MTky
+LDEzNDk3NTQ4MDQsLTE1ODc2NjkyNDcsMTc3MzE1NTU2OCwzNz
+YyNTk4MywtMTk5NTA2NDA0OSwtMTg1NTkwODE5Myw0MDgwODYz
+MDAsMTc5MjkxODkyOCw3MDIzNDQ2MzgsMTUwMzExMzY5NiwxND
+U0MzM4MzkyLDM5MDY1ODQyOCwtNDg5NDkyNDI0LDE3NzI4MDY5
+ODldfQ==
 -->
