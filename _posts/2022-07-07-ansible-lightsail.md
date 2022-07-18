@@ -91,10 +91,36 @@ where:
 Playbook is just a scenario to be run, written is `yaml`-file.
 You can run that using `ansible` executable directly.
 Here we will have two scenarios: 
- 1. install required system libraries 
- 2. and java   reploy and
-    start/restart our application
-
+ 1. install required system libraries and java
+ 2. deploy and start/restart our application
+#### Install dependencies
+```yaml
+---  
+- hosts: all  
+  become: no  
+  gather_facts: true # default  
+    
+  tasks:  
+    - name: Install java role from Ansible Galaxy  
+      local_action: command ansible-galaxy install geerlingguy.java  
+    - name: installing repo for Java 8 in Ubuntu  
+      become: yes  
+      apt_repository:  
+        repo: ppa:openjdk-r/ppa  
+    - name: apt update  
+      become: yes  
+      apt:  
+        update_cache: yes  
+    - name: Install Java  
+      when: "ansible_os_family == 'Debian'"  
+  vars:  
+        java_packages:  
+          - openjdk-8-jdk  
+      include_role:  
+        name: geerlingguy.java  
+        apply:  
+          become: true
+```
  
 In our case application deployment will consists of these steps:
  - build application locally from sources using maven
@@ -140,11 +166,11 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjkzMDkzMCwxMzQ5NzU0ODA0LC0xNT
-g3NjY5MjQ3LDE3NzMxNTU1NjgsMzc2MjU5ODMsLTE5OTUwNjQw
-NDksLTE4NTU5MDgxOTMsNDA4MDg2MzAwLDE3OTI5MTg5MjgsNz
-AyMzQ0NjM4LDE1MDMxMTM2OTYsMTQ1NDMzODM5MiwzOTA2NTg0
-MjgsLTQ4OTQ5MjQyNCwxNzcyODA2OTg5LC0xNDk2NDAyMzMxLC
-0yMDI4NzUyODQzLC0yMDY0MzE2MTUzLDEyMDk1NjgwMjgsLTE5
-ODcyMDI0MDZdfQ==
+eyJoaXN0b3J5IjpbNzYzNDAyMDkxLDEzNDk3NTQ4MDQsLTE1OD
+c2NjkyNDcsMTc3MzE1NTU2OCwzNzYyNTk4MywtMTk5NTA2NDA0
+OSwtMTg1NTkwODE5Myw0MDgwODYzMDAsMTc5MjkxODkyOCw3MD
+IzNDQ2MzgsMTUwMzExMzY5NiwxNDU0MzM4MzkyLDM5MDY1ODQy
+OCwtNDg5NDkyNDI0LDE3NzI4MDY5ODksLTE0OTY0MDIzMzEsLT
+IwMjg3NTI4NDMsLTIwNjQzMTYxNTMsMTIwOTU2ODAyOCwtMTk4
+NzIwMjQwNl19
 -->
