@@ -152,6 +152,7 @@ Here we will have two scenarios:
       # But also alternative full one:
       # local_action: 
       #      module: shell
+      #      cmd: mvn clean package
     src: myfile
     dest: /path/to/myfile
     - name: Deploy artifact  
@@ -208,7 +209,7 @@ Here we will have two scenarios:
 ### Build application locally
 .
 some docs: 
-- https://stackoverflow.com/questions/56048959/ansible-local-action-example-how-does-it-work
+- 
 - https://docs.ansible.com/ansible/latest/user_guide/playbooks_delegation.html
 - https://coderwall.com/p/xlbxkq/run-a-local-script-before-after-a-play
 - https://stackoverflow.com/questions/53190538/running-mvn-clean-install-maven-command-using-ansible-module
@@ -245,11 +246,11 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5MDc4NjY0MywtMjAyNjMyNTE5MiwxMz
-Q5NzU0ODA0LC0xNTg3NjY5MjQ3LDE3NzMxNTU1NjgsMzc2MjU5
-ODMsLTE5OTUwNjQwNDksLTE4NTU5MDgxOTMsNDA4MDg2MzAwLD
-E3OTI5MTg5MjgsNzAyMzQ0NjM4LDE1MDMxMTM2OTYsMTQ1NDMz
-ODM5MiwzOTA2NTg0MjgsLTQ4OTQ5MjQyNCwxNzcyODA2OTg5LC
-0xNDk2NDAyMzMxLC0yMDI4NzUyODQzLC0yMDY0MzE2MTUzLDEy
-MDk1NjgwMjhdfQ==
+eyJoaXN0b3J5IjpbMTIwNjMyNjM4NywxODkwNzg2NjQzLC0yMD
+I2MzI1MTkyLDEzNDk3NTQ4MDQsLTE1ODc2NjkyNDcsMTc3MzE1
+NTU2OCwzNzYyNTk4MywtMTk5NTA2NDA0OSwtMTg1NTkwODE5My
+w0MDgwODYzMDAsMTc5MjkxODkyOCw3MDIzNDQ2MzgsMTUwMzEx
+MzY5NiwxNDU0MzM4MzkyLDM5MDY1ODQyOCwtNDg5NDkyNDI0LD
+E3NzI4MDY5ODksLTE0OTY0MDIzMzEsLTIwMjg3NTI4NDMsLTIw
+NjQzMTYxNTNdfQ==
 -->
