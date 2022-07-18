@@ -213,15 +213,10 @@ some docs:
 - 
 - 
 - 
-- https://stackoverflow.com/questions/53190538/running-mvn-clean-install-maven-command-using-ansible-module
-- https://stackoverflow.com/questions/53190538/running-mvn-clean-install-maven-command-using-ansible-module
-- https://docs.ansible.com/ansible/latest/collections/ansible/builtin/command_module.html
-- https://docs.ansible.com/ansible/latest/collections/ansible/builtin/shell_module.html
-
-Command we run:
-```bash
-> mvn clean install
-```
+- 
+- 
+- 
+- 
 ### Upload artifact
 
 ### Start/restart service
@@ -255,11 +250,11 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxMTk4MzI3NywxNDUzMTY2MjU0LDQyMz
-A0OTM1NywxODkwNzg2NjQzLC0yMDI2MzI1MTkyLDEzNDk3NTQ4
-MDQsLTE1ODc2NjkyNDcsMTc3MzE1NTU2OCwzNzYyNTk4MywtMT
-k5NTA2NDA0OSwtMTg1NTkwODE5Myw0MDgwODYzMDAsMTc5Mjkx
-ODkyOCw3MDIzNDQ2MzgsMTUwMzExMzY5NiwxNDU0MzM4MzkyLD
-M5MDY1ODQyOCwtNDg5NDkyNDI0LDE3NzI4MDY5ODksLTE0OTY0
-MDIzMzFdfQ==
+eyJoaXN0b3J5IjpbLTE5OTQ0OTg2NSwtNTExOTgzMjc3LDE0NT
+MxNjYyNTQsNDIzMDQ5MzU3LDE4OTA3ODY2NDMsLTIwMjYzMjUx
+OTIsMTM0OTc1NDgwNCwtMTU4NzY2OTI0NywxNzczMTU1NTY4LD
+M3NjI1OTgzLC0xOTk1MDY0MDQ5LC0xODU1OTA4MTkzLDQwODA4
+NjMwMCwxNzkyOTE4OTI4LDcwMjM0NDYzOCwxNTAzMTEzNjk2LD
+E0NTQzMzgzOTIsMzkwNjU4NDI4LC00ODk0OTI0MjQsMTc3Mjgw
+Njk4OV19
 -->
