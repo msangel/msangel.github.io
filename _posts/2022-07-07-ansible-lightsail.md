@@ -156,9 +156,6 @@ Here we will have two scenarios:
       # Read more there:
       # https://stackoverflow.com/a/56050507/449553
       # https://docs.ansible.com/ansible/latest/collections/ansible/builtin/shell_module.html
-      # 
-    src: myfile
-    dest: /path/to/myfile
     - name: Deploy artifact  
       copy:  
         src: "{{ item }}"  
@@ -250,11 +247,11 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTcwNTYzNjAsMTg5MDc4NjY0MywtMj
-AyNjMyNTE5MiwxMzQ5NzU0ODA0LC0xNTg3NjY5MjQ3LDE3NzMx
-NTU1NjgsMzc2MjU5ODMsLTE5OTUwNjQwNDksLTE4NTU5MDgxOT
-MsNDA4MDg2MzAwLDE3OTI5MTg5MjgsNzAyMzQ0NjM4LDE1MDMx
-MTM2OTYsMTQ1NDMzODM5MiwzOTA2NTg0MjgsLTQ4OTQ5MjQyNC
-wxNzcyODA2OTg5LC0xNDk2NDAyMzMxLC0yMDI4NzUyODQzLC0y
-MDY0MzE2MTUzXX0=
+eyJoaXN0b3J5IjpbNDI4MzU0NDAyLDE4OTA3ODY2NDMsLTIwMj
+YzMjUxOTIsMTM0OTc1NDgwNCwtMTU4NzY2OTI0NywxNzczMTU1
+NTY4LDM3NjI1OTgzLC0xOTk1MDY0MDQ5LC0xODU1OTA4MTkzLD
+QwODA4NjMwMCwxNzkyOTE4OTI4LDcwMjM0NDYzOCwxNTAzMTEz
+Njk2LDE0NTQzMzgzOTIsMzkwNjU4NDI4LC00ODk0OTI0MjQsMT
+c3MjgwNjk4OSwtMTQ5NjQwMjMzMSwtMjAyODc1Mjg0MywtMjA2
+NDMxNjE1M119
 -->
