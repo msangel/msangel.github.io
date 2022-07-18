@@ -208,24 +208,12 @@ Here we will have two scenarios:
         port: 80
 ```
 
-### Build application locally
-.
-some docs: 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-### Upload artifact
-
 ### Start/restart service
 https://docs.ansible.com/ansible/latest/collections/ansible/builtin/service_module.html
 or PID in file
 https://www.google.com/search?q=ansible+start+and+stop+process&oq=ansible+stop+process+&aqs=chrome.5.69i57j0i19j0i19i22i30l4.9031j0j1&sourceid=chrome&ie=UTF-8
 
-### Final Playbook
+### Final Playbooks
 
 
 
@@ -251,11 +239,11 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjM3ODMxNDEsLTUxMTk4MzI3NywxNDUzMT
-Y2MjU0LDQyMzA0OTM1NywxODkwNzg2NjQzLC0yMDI2MzI1MTky
-LDEzNDk3NTQ4MDQsLTE1ODc2NjkyNDcsMTc3MzE1NTU2OCwzNz
-YyNTk4MywtMTk5NTA2NDA0OSwtMTg1NTkwODE5Myw0MDgwODYz
-MDAsMTc5MjkxODkyOCw3MDIzNDQ2MzgsMTUwMzExMzY5NiwxND
-U0MzM4MzkyLDM5MDY1ODQyOCwtNDg5NDkyNDI0LDE3NzI4MDY5
-ODldfQ==
+eyJoaXN0b3J5IjpbMjY4MTI1ODcsMjM3ODMxNDEsLTUxMTk4Mz
+I3NywxNDUzMTY2MjU0LDQyMzA0OTM1NywxODkwNzg2NjQzLC0y
+MDI2MzI1MTkyLDEzNDk3NTQ4MDQsLTE1ODc2NjkyNDcsMTc3Mz
+E1NTU2OCwzNzYyNTk4MywtMTk5NTA2NDA0OSwtMTg1NTkwODE5
+Myw0MDgwODYzMDAsMTc5MjkxODkyOCw3MDIzNDQ2MzgsMTUwMz
+ExMzY5NiwxNDU0MzM4MzkyLDM5MDY1ODQyOCwtNDg5NDkyNDI0
+XX0=
 -->
