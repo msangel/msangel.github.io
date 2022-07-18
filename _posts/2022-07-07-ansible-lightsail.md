@@ -142,10 +142,11 @@ Here we will have two scenarios:
       WantedBy=multi-user.target  
   
   tasks:  
-  # Ansible is designed to execute commands on remote nodes
-  # but it also can execute ones on local machine
-  # Eventually in different scenarios is needed to either call some utility, move a file, interact services, etc.
-    - name: Build maven artifact locally  
+    - name: Build maven artifact locally
+      # Ansible is designed to execute commands on remote nodes
+      # but it also can execute ones on local machine.
+      # Eventually in different scenarios is needed to either 
+      # call some utility, move a file, interact services, etc.
       local_action: shell mvn clean package  
     - name: Deploy artifact  
       copy:  
@@ -238,7 +239,7 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzUyMjc1ODEsLTIwMjYzMjUxOTIsMT
+eyJoaXN0b3J5IjpbLTExNjk5ODA2NzAsLTIwMjYzMjUxOTIsMT
 M0OTc1NDgwNCwtMTU4NzY2OTI0NywxNzczMTU1NTY4LDM3NjI1
 OTgzLC0xOTk1MDY0MDQ5LC0xODU1OTA4MTkzLDQwODA4NjMwMC
 wxNzkyOTE4OTI4LDcwMjM0NDYzOCwxNTAzMTEzNjk2LDE0NTQz
