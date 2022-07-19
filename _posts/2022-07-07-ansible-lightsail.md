@@ -102,7 +102,7 @@ Here we will have two scenarios:
     
   tasks:  
     - name: Install java role from Ansible Galaxy  
-      local_action: command ansible-galaxy install geerlingguy.java  
+      local_action: comman d ansible-galaxy install geerlingguy.java  
     - name: installing repo for Java 8 in Ubuntu  
       become: yes  
       apt_repository:  
@@ -239,11 +239,11 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjY4MTI1ODcsMjM3ODMxNDEsLTUxMTk4Mz
-I3NywxNDUzMTY2MjU0LDQyMzA0OTM1NywxODkwNzg2NjQzLC0y
-MDI2MzI1MTkyLDEzNDk3NTQ4MDQsLTE1ODc2NjkyNDcsMTc3Mz
-E1NTU2OCwzNzYyNTk4MywtMTk5NTA2NDA0OSwtMTg1NTkwODE5
-Myw0MDgwODYzMDAsMTc5MjkxODkyOCw3MDIzNDQ2MzgsMTUwMz
-ExMzY5NiwxNDU0MzM4MzkyLDM5MDY1ODQyOCwtNDg5NDkyNDI0
+eyJoaXN0b3J5IjpbLTc1ODU4MTc2NSwyNjgxMjU4NywyMzc4Mz
+E0MSwtNTExOTgzMjc3LDE0NTMxNjYyNTQsNDIzMDQ5MzU3LDE4
+OTA3ODY2NDMsLTIwMjYzMjUxOTIsMTM0OTc1NDgwNCwtMTU4Nz
+Y2OTI0NywxNzczMTU1NTY4LDM3NjI1OTgzLC0xOTk1MDY0MDQ5
+LC0xODU1OTA4MTkzLDQwODA4NjMwMCwxNzkyOTE4OTI4LDcwMj
+M0NDYzOCwxNTAzMTEzNjk2LDE0NTQzMzgzOTIsMzkwNjU4NDI4
 XX0=
 -->
