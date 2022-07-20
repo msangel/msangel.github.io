@@ -95,9 +95,11 @@ In our case we will have two scenarios:
  2. deploy and start/restart our application
 
 #### Install dependencies
-
+Scenario with comments below
 ```yaml
 ---  
+# define name of gropus or particular hosts from inventory file
+
 - hosts: all  
   become: no
     
@@ -122,8 +124,7 @@ In our case we will have two scenarios:
         apply:  
           become: true
 ```
-Some notes:
-1. 
+
 #### Deploy application
 ```yaml
 ---  
@@ -242,11 +243,11 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDcxODYwODg2LC03NTg1ODE3NjUsMjY4MT
-I1ODcsMjM3ODMxNDEsLTUxMTk4MzI3NywxNDUzMTY2MjU0LDQy
-MzA0OTM1NywxODkwNzg2NjQzLC0yMDI2MzI1MTkyLDEzNDk3NT
-Q4MDQsLTE1ODc2NjkyNDcsMTc3MzE1NTU2OCwzNzYyNTk4Mywt
-MTk5NTA2NDA0OSwtMTg1NTkwODE5Myw0MDgwODYzMDAsMTc5Mj
-kxODkyOCw3MDIzNDQ2MzgsMTUwMzExMzY5NiwxNDU0MzM4Mzky
-XX0=
+eyJoaXN0b3J5IjpbNzY5MzgwMzUyLDQ3MTg2MDg4NiwtNzU4NT
+gxNzY1LDI2ODEyNTg3LDIzNzgzMTQxLC01MTE5ODMyNzcsMTQ1
+MzE2NjI1NCw0MjMwNDkzNTcsMTg5MDc4NjY0MywtMjAyNjMyNT
+E5MiwxMzQ5NzU0ODA0LC0xNTg3NjY5MjQ3LDE3NzMxNTU1Njgs
+Mzc2MjU5ODMsLTE5OTUwNjQwNDksLTE4NTU5MDgxOTMsNDA4MD
+g2MzAwLDE3OTI5MTg5MjgsNzAyMzQ0NjM4LDE1MDMxMTM2OTZd
+fQ==
 -->
