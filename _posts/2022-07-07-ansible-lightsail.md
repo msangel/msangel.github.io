@@ -88,11 +88,12 @@ where:
  2.  all : The all means "all hosts." You can speificy group name such as 'devservers' or host names too.
  
 ### Playbook
-Playbook is just a scenario to be run, written is `yaml`-file.
+Playbook is just a scenario to be run, written is yaml-file.
 You can run that using `ansible` executable directly.
-Here we will have two scenarios: 
+In our case we will have two scenarios: 
  1. install required system libraries and java
  2. deploy and start/restart our application
+
 #### Install dependencies
 
 ```yaml
@@ -239,11 +240,11 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1ODU4MTc2NSwyNjgxMjU4NywyMzc4Mz
-E0MSwtNTExOTgzMjc3LDE0NTMxNjYyNTQsNDIzMDQ5MzU3LDE4
-OTA3ODY2NDMsLTIwMjYzMjUxOTIsMTM0OTc1NDgwNCwtMTU4Nz
-Y2OTI0NywxNzczMTU1NTY4LDM3NjI1OTgzLC0xOTk1MDY0MDQ5
-LC0xODU1OTA4MTkzLDQwODA4NjMwMCwxNzkyOTE4OTI4LDcwMj
-M0NDYzOCwxNTAzMTEzNjk2LDE0NTQzMzgzOTIsMzkwNjU4NDI4
-XX0=
+eyJoaXN0b3J5IjpbOTk1NDA3NjgsLTc1ODU4MTc2NSwyNjgxMj
+U4NywyMzc4MzE0MSwtNTExOTgzMjc3LDE0NTMxNjYyNTQsNDIz
+MDQ5MzU3LDE4OTA3ODY2NDMsLTIwMjYzMjUxOTIsMTM0OTc1ND
+gwNCwtMTU4NzY2OTI0NywxNzczMTU1NTY4LDM3NjI1OTgzLC0x
+OTk1MDY0MDQ5LC0xODU1OTA4MTkzLDQwODA4NjMwMCwxNzkyOT
+E4OTI4LDcwMjM0NDYzOCwxNTAzMTEzNjk2LDE0NTQzMzgzOTJd
+fQ==
 -->
