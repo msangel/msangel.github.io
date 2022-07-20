@@ -142,7 +142,9 @@ Scenario with comments below
       # but this task allows to run role as a regular step  
       include_role:  
         name: geerlingguy.java  
-        # a
+        # and this relo requires to be run as sudo
+        # but the script is not sudo 
+        # so we apply sudo for entire role as it required
         apply:  
           become: true
 ```
@@ -265,7 +267,7 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1NzY1NDA4NiwxMjQ5NzU3MjIzLC01MD
+eyJoaXN0b3J5IjpbMTEzMzgwNTQ0NiwxMjQ5NzU3MjIzLC01MD
 E3NjgyMjgsLTE2NTc1NTM1NDYsOTQ2Mzk4MzA4LC0xNjMzMDY3
 MDEzLDQ3MTg2MDg4NiwtNzU4NTgxNzY1LDI2ODEyNTg3LDIzNz
 gzMTQxLC01MTE5ODMyNzcsMTQ1MzE2NjI1NCw0MjMwNDkzNTcs
