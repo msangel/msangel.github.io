@@ -118,6 +118,7 @@ Scenario with comments below
       # `ansible-galaxy install geerlingguy.java`
       # `ansible-galaxy` is executable that came with ansible
       # it's kind of package manager for community-crafted recepies
+      # and in this case we do install locally `geerlingguy.java` community package that is intended to install java 
       local_action: command ansible-galaxy install geerlingguy.java  
     - name: installing repo for Java 8 in Ubuntu  
       become: yes  
@@ -256,11 +257,11 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzA1NjI4MzAsLTE2NTc1NTM1NDYsOT
-Q2Mzk4MzA4LC0xNjMzMDY3MDEzLDQ3MTg2MDg4NiwtNzU4NTgx
-NzY1LDI2ODEyNTg3LDIzNzgzMTQxLC01MTE5ODMyNzcsMTQ1Mz
-E2NjI1NCw0MjMwNDkzNTcsMTg5MDc4NjY0MywtMjAyNjMyNTE5
-MiwxMzQ5NzU0ODA0LC0xNTg3NjY5MjQ3LDE3NzMxNTU1NjgsMz
-c2MjU5ODMsLTE5OTUwNjQwNDksLTE4NTU5MDgxOTMsNDA4MDg2
-MzAwXX0=
+eyJoaXN0b3J5IjpbLTUwMTc2ODIyOCwtMTY1NzU1MzU0Niw5ND
+YzOTgzMDgsLTE2MzMwNjcwMTMsNDcxODYwODg2LC03NTg1ODE3
+NjUsMjY4MTI1ODcsMjM3ODMxNDEsLTUxMTk4MzI3NywxNDUzMT
+Y2MjU0LDQyMzA0OTM1NywxODkwNzg2NjQzLC0yMDI2MzI1MTky
+LDEzNDk3NTQ4MDQsLTE1ODc2NjkyNDcsMTc3MzE1NTU2OCwzNz
+YyNTk4MywtMTk5NTA2NDA0OSwtMTg1NTkwODE5Myw0MDgwODYz
+MDBdfQ==
 -->
