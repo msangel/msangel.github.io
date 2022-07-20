@@ -116,7 +116,8 @@ Scenario with comments below
       # in this case local action is a task of `command` type
       # and a command in this case is: 
       # `ansible-galaxy install geerlingguy.java`
-      # `ansible-galaxy` is executable that came with 
+      # `ansible-galaxy` is executable that came with ansible
+      # it's kind of package manager for community-crafted recepies
       local_action: command ansible-galaxy install geerlingguy.java  
     - name: installing repo for Java 8 in Ubuntu  
       become: yes  
@@ -255,11 +256,11 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTc1NTM1NDYsOTQ2Mzk4MzA4LC0xNj
-MzMDY3MDEzLDQ3MTg2MDg4NiwtNzU4NTgxNzY1LDI2ODEyNTg3
-LDIzNzgzMTQxLC01MTE5ODMyNzcsMTQ1MzE2NjI1NCw0MjMwND
-kzNTcsMTg5MDc4NjY0MywtMjAyNjMyNTE5MiwxMzQ5NzU0ODA0
-LC0xNTg3NjY5MjQ3LDE3NzMxNTU1NjgsMzc2MjU5ODMsLTE5OT
-UwNjQwNDksLTE4NTU5MDgxOTMsNDA4MDg2MzAwLDE3OTI5MTg5
-MjhdfQ==
+eyJoaXN0b3J5IjpbLTE3MzA1NjI4MzAsLTE2NTc1NTM1NDYsOT
+Q2Mzk4MzA4LC0xNjMzMDY3MDEzLDQ3MTg2MDg4NiwtNzU4NTgx
+NzY1LDI2ODEyNTg3LDIzNzgzMTQxLC01MTE5ODMyNzcsMTQ1Mz
+E2NjI1NCw0MjMwNDkzNTcsMTg5MDc4NjY0MywtMjAyNjMyNTE5
+MiwxMzQ5NzU0ODA0LC0xNTg3NjY5MjQ3LDE3NzMxNTU1NjgsMz
+c2MjU5ODMsLTE5OTUwNjQwNDksLTE4NTU5MDgxOTMsNDA4MDg2
+MzAwXX0=
 -->
