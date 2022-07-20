@@ -113,7 +113,10 @@ Scenario with comments below
       # usually tasks executed to remotes nodes
       # but there are some task kinds that do execued on local machine
       # and `local_action` is kind of generic for those
-      
+      # in this case local action is a task of `command` type
+      # and a command in this case is: 
+      # `ansible-galaxy install geerlingguy.java`
+      # `ansible-galaxy` is executable that came with 
       local_action: command ansible-galaxy install geerlingguy.java  
     - name: installing repo for Java 8 in Ubuntu  
       become: yes  
@@ -252,11 +255,11 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwMTAwMTc5MCw5NDYzOTgzMDgsLTE2Mz
-MwNjcwMTMsNDcxODYwODg2LC03NTg1ODE3NjUsMjY4MTI1ODcs
-MjM3ODMxNDEsLTUxMTk4MzI3NywxNDUzMTY2MjU0LDQyMzA0OT
-M1NywxODkwNzg2NjQzLC0yMDI2MzI1MTkyLDEzNDk3NTQ4MDQs
-LTE1ODc2NjkyNDcsMTc3MzE1NTU2OCwzNzYyNTk4MywtMTk5NT
-A2NDA0OSwtMTg1NTkwODE5Myw0MDgwODYzMDAsMTc5MjkxODky
-OF19
+eyJoaXN0b3J5IjpbLTE2NTc1NTM1NDYsOTQ2Mzk4MzA4LC0xNj
+MzMDY3MDEzLDQ3MTg2MDg4NiwtNzU4NTgxNzY1LDI2ODEyNTg3
+LDIzNzgzMTQxLC01MTE5ODMyNzcsMTQ1MzE2NjI1NCw0MjMwND
+kzNTcsMTg5MDc4NjY0MywtMjAyNjMyNTE5MiwxMzQ5NzU0ODA0
+LC0xNTg3NjY5MjQ3LDE3NzMxNTU1NjgsMzc2MjU5ODMsLTE5OT
+UwNjQwNDksLTE4NTU5MDgxOTMsNDA4MDg2MzAwLDE3OTI5MTg5
+MjhdfQ==
 -->
