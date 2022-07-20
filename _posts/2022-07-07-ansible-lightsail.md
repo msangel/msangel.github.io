@@ -114,7 +114,7 @@ In our case we will have two scenarios:
         update_cache: yes  
     - name: Install Java  
       when: "ansible_os_family == 'Debian'"  
-  vars:  
+	  vars:  
         java_packages:  
           - openjdk-8-jdk  
       include_role:  
@@ -240,11 +240,11 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTk1NDA3NjgsLTc1ODU4MTc2NSwyNjgxMj
-U4NywyMzc4MzE0MSwtNTExOTgzMjc3LDE0NTMxNjYyNTQsNDIz
-MDQ5MzU3LDE4OTA3ODY2NDMsLTIwMjYzMjUxOTIsMTM0OTc1ND
-gwNCwtMTU4NzY2OTI0NywxNzczMTU1NTY4LDM3NjI1OTgzLC0x
-OTk1MDY0MDQ5LC0xODU1OTA4MTkzLDQwODA4NjMwMCwxNzkyOT
-E4OTI4LDcwMjM0NDYzOCwxNTAzMTEzNjk2LDE0NTQzMzgzOTJd
-fQ==
+eyJoaXN0b3J5IjpbMTYyNDY0Nzk5MiwtNzU4NTgxNzY1LDI2OD
+EyNTg3LDIzNzgzMTQxLC01MTE5ODMyNzcsMTQ1MzE2NjI1NCw0
+MjMwNDkzNTcsMTg5MDc4NjY0MywtMjAyNjMyNTE5MiwxMzQ5Nz
+U0ODA0LC0xNTg3NjY5MjQ3LDE3NzMxNTU1NjgsMzc2MjU5ODMs
+LTE5OTUwNjQwNDksLTE4NTU5MDgxOTMsNDA4MDg2MzAwLDE3OT
+I5MTg5MjgsNzAyMzQ0NjM4LDE1MDMxMTM2OTYsMTQ1NDMzODM5
+Ml19
 -->
