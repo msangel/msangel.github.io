@@ -162,6 +162,7 @@ Scenario with comments below
   gather_facts: true # default
   # change this on how tasks must run on hosts: sequential or serialized or another strategy
   strategy: linear # default
+  # tasks
   vars:  
     systemd_service_file: |  
       [Unit]  
@@ -273,11 +274,11 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5NDU4MDg4OSwtMTM5NjUyMTM0MywxMj
-Q5NzU3MjIzLC01MDE3NjgyMjgsLTE2NTc1NTM1NDYsOTQ2Mzk4
-MzA4LC0xNjMzMDY3MDEzLDQ3MTg2MDg4NiwtNzU4NTgxNzY1LD
-I2ODEyNTg3LDIzNzgzMTQxLC01MTE5ODMyNzcsMTQ1MzE2NjI1
-NCw0MjMwNDkzNTcsMTg5MDc4NjY0MywtMjAyNjMyNTE5MiwxMz
-Q5NzU0ODA0LC0xNTg3NjY5MjQ3LDE3NzMxNTU1NjgsMzc2MjU5
-ODNdfQ==
+eyJoaXN0b3J5IjpbLTExNzUxMDExNDAsMTc5NDU4MDg4OSwtMT
+M5NjUyMTM0MywxMjQ5NzU3MjIzLC01MDE3NjgyMjgsLTE2NTc1
+NTM1NDYsOTQ2Mzk4MzA4LC0xNjMzMDY3MDEzLDQ3MTg2MDg4Ni
+wtNzU4NTgxNzY1LDI2ODEyNTg3LDIzNzgzMTQxLC01MTE5ODMy
+NzcsMTQ1MzE2NjI1NCw0MjMwNDkzNTcsMTg5MDc4NjY0MywtMj
+AyNjMyNTE5MiwxMzQ5NzU0ODA0LC0xNTg3NjY5MjQ3LDE3NzMx
+NTU1NjhdfQ==
 -->
