@@ -150,10 +150,12 @@ Scenario with comments below
 ```
 
 #### Deploy application
+Scenario with comments below
 ```yaml
 ---  
 - hosts: all  
   become: no  
+  # eventually some tasks need to know some information about target 
   gather_facts: true # default  
   strategy: linear # default, change this on how tasks must run on hosts: sequential or serialized  
   vars:  
@@ -267,7 +269,7 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzMzgwNTQ0NiwxMjQ5NzU3MjIzLC01MD
+eyJoaXN0b3J5IjpbMTE3NDE5NTcyMSwxMjQ5NzU3MjIzLC01MD
 E3NjgyMjgsLTE2NTc1NTM1NDYsOTQ2Mzk4MzA4LC0xNjMzMDY3
 MDEzLDQ3MTg2MDg4NiwtNzU4NTgxNzY1LDI2ODEyNTg3LDIzNz
 gzMTQxLC01MTE5ODMyNzcsMTQ1MzE2NjI1NCw0MjMwNDkzNTcs
