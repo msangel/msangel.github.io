@@ -163,7 +163,7 @@ Scenario with comments below
   # change this on how tasks must run on hosts: sequential or serialized or another strategy
   strategy: linear # default
   # even if this file is declarative definition
-  # the complex scenarios 
+  # it still
   vars:  
     systemd_service_file: |  
       [Unit]  
@@ -275,11 +275,11 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTQ2MTY1NjEsLTExNzUxMDExNDAsMT
-c5NDU4MDg4OSwtMTM5NjUyMTM0MywxMjQ5NzU3MjIzLC01MDE3
-NjgyMjgsLTE2NTc1NTM1NDYsOTQ2Mzk4MzA4LC0xNjMzMDY3MD
-EzLDQ3MTg2MDg4NiwtNzU4NTgxNzY1LDI2ODEyNTg3LDIzNzgz
-MTQxLC01MTE5ODMyNzcsMTQ1MzE2NjI1NCw0MjMwNDkzNTcsMT
-g5MDc4NjY0MywtMjAyNjMyNTE5MiwxMzQ5NzU0ODA0LC0xNTg3
-NjY5MjQ3XX0=
+eyJoaXN0b3J5IjpbOTU5MzYxNDk2LC0xMTc1MTAxMTQwLDE3OT
+Q1ODA4ODksLTEzOTY1MjEzNDMsMTI0OTc1NzIyMywtNTAxNzY4
+MjI4LC0xNjU3NTUzNTQ2LDk0NjM5ODMwOCwtMTYzMzA2NzAxMy
+w0NzE4NjA4ODYsLTc1ODU4MTc2NSwyNjgxMjU4NywyMzc4MzE0
+MSwtNTExOTgzMjc3LDE0NTMxNjYyNTQsNDIzMDQ5MzU3LDE4OT
+A3ODY2NDMsLTIwMjYzMjUxOTIsMTM0OTc1NDgwNCwtMTU4NzY2
+OTI0N119
 -->
