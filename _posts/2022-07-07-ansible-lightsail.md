@@ -101,6 +101,8 @@ Scenario with comments below
 # define name of gropus or particular hosts from inventory file
 # magic constants: 
 # `all` is aboul all known hosts from inventory
+# `localhost` fol local host (see cdocumentation for more setting)
+
 
 - hosts: all  
   become: no
@@ -245,11 +247,11 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MzMwNjcwMTMsNDcxODYwODg2LC03NT
-g1ODE3NjUsMjY4MTI1ODcsMjM3ODMxNDEsLTUxMTk4MzI3Nywx
-NDUzMTY2MjU0LDQyMzA0OTM1NywxODkwNzg2NjQzLC0yMDI2Mz
-I1MTkyLDEzNDk3NTQ4MDQsLTE1ODc2NjkyNDcsMTc3MzE1NTU2
-OCwzNzYyNTk4MywtMTk5NTA2NDA0OSwtMTg1NTkwODE5Myw0MD
-gwODYzMDAsMTc5MjkxODkyOCw3MDIzNDQ2MzgsMTUwMzExMzY5
-Nl19
+eyJoaXN0b3J5IjpbLTEzODg0NzYyOCwtMTYzMzA2NzAxMyw0Nz
+E4NjA4ODYsLTc1ODU4MTc2NSwyNjgxMjU4NywyMzc4MzE0MSwt
+NTExOTgzMjc3LDE0NTMxNjYyNTQsNDIzMDQ5MzU3LDE4OTA3OD
+Y2NDMsLTIwMjYzMjUxOTIsMTM0OTc1NDgwNCwtMTU4NzY2OTI0
+NywxNzczMTU1NTY4LDM3NjI1OTgzLC0xOTk1MDY0MDQ5LC0xOD
+U1OTA4MTkzLDQwODA4NjMwMCwxNzkyOTE4OTI4LDcwMjM0NDYz
+OF19
 -->
