@@ -106,9 +106,12 @@ Scenario with comments below
 # `become` is about become someone as. usually about become sudo(or su) 
 # in this case the scenario defaults for tasks will be current user
   become: no
-    
+  
+# root node for defining list of tasks
   tasks:  
     - name: Install java role from Ansible Galaxy  
+      # usually tasks executed to remotes nodes
+      # but there are some task kinds that do 
       local_action: comman d ansible-galaxy install geerlingguy.java  
     - name: installing repo for Java 8 in Ubuntu  
       become: yes  
@@ -247,11 +250,11 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODE4ODUwMTMsLTE2MzMwNjcwMTMsND
-cxODYwODg2LC03NTg1ODE3NjUsMjY4MTI1ODcsMjM3ODMxNDEs
-LTUxMTk4MzI3NywxNDUzMTY2MjU0LDQyMzA0OTM1NywxODkwNz
-g2NjQzLC0yMDI2MzI1MTkyLDEzNDk3NTQ4MDQsLTE1ODc2Njky
-NDcsMTc3MzE1NTU2OCwzNzYyNTk4MywtMTk5NTA2NDA0OSwtMT
-g1NTkwODE5Myw0MDgwODYzMDAsMTc5MjkxODkyOCw3MDIzNDQ2
-MzhdfQ==
+eyJoaXN0b3J5IjpbOTQ2Mzk4MzA4LC0xNjMzMDY3MDEzLDQ3MT
+g2MDg4NiwtNzU4NTgxNzY1LDI2ODEyNTg3LDIzNzgzMTQxLC01
+MTE5ODMyNzcsMTQ1MzE2NjI1NCw0MjMwNDkzNTcsMTg5MDc4Nj
+Y0MywtMjAyNjMyNTE5MiwxMzQ5NzU0ODA0LC0xNTg3NjY5MjQ3
+LDE3NzMxNTU1NjgsMzc2MjU5ODMsLTE5OTUwNjQwNDksLTE4NT
+U5MDgxOTMsNDA4MDg2MzAwLDE3OTI5MTg5MjgsNzAyMzQ0NjM4
+XX0=
 -->
