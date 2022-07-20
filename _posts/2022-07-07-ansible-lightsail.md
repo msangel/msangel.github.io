@@ -122,6 +122,8 @@ In our case we will have two scenarios:
         apply:  
           become: true
 ```
+Some notes:
+1. 
 #### Deploy application
 ```yaml
 ---  
@@ -240,11 +242,11 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyNDY0Nzk5MiwtNzU4NTgxNzY1LDI2OD
-EyNTg3LDIzNzgzMTQxLC01MTE5ODMyNzcsMTQ1MzE2NjI1NCw0
-MjMwNDkzNTcsMTg5MDc4NjY0MywtMjAyNjMyNTE5MiwxMzQ5Nz
-U0ODA0LC0xNTg3NjY5MjQ3LDE3NzMxNTU1NjgsMzc2MjU5ODMs
-LTE5OTUwNjQwNDksLTE4NTU5MDgxOTMsNDA4MDg2MzAwLDE3OT
-I5MTg5MjgsNzAyMzQ0NjM4LDE1MDMxMTM2OTYsMTQ1NDMzODM5
-Ml19
+eyJoaXN0b3J5IjpbNDcxODYwODg2LC03NTg1ODE3NjUsMjY4MT
+I1ODcsMjM3ODMxNDEsLTUxMTk4MzI3NywxNDUzMTY2MjU0LDQy
+MzA0OTM1NywxODkwNzg2NjQzLC0yMDI2MzI1MTkyLDEzNDk3NT
+Q4MDQsLTE1ODc2NjkyNDcsMTc3MzE1NTU2OCwzNzYyNTk4Mywt
+MTk5NTA2NDA0OSwtMTg1NTkwODE5Myw0MDgwODYzMDAsMTc5Mj
+kxODkyOCw3MDIzNDQ2MzgsMTUwMzExMzY5NiwxNDU0MzM4Mzky
+XX0=
 -->
