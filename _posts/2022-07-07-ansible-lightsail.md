@@ -122,6 +122,7 @@ Scenario with comments below
       local_action: command ansible-galaxy install geerlingguy.java  
     - name: installing repo for Java 8 in Ubuntu
       # quite simple task that simply add apt repository
+      
       become: yes  
       apt_repository:  
         repo: ppa:openjdk-r/ppa  
@@ -258,11 +259,11 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0OTc1NzIyMywtNTAxNzY4MjI4LC0xNj
-U3NTUzNTQ2LDk0NjM5ODMwOCwtMTYzMzA2NzAxMyw0NzE4NjA4
-ODYsLTc1ODU4MTc2NSwyNjgxMjU4NywyMzc4MzE0MSwtNTExOT
-gzMjc3LDE0NTMxNjYyNTQsNDIzMDQ5MzU3LDE4OTA3ODY2NDMs
-LTIwMjYzMjUxOTIsMTM0OTc1NDgwNCwtMTU4NzY2OTI0NywxNz
-czMTU1NTY4LDM3NjI1OTgzLC0xOTk1MDY0MDQ5LC0xODU1OTA4
-MTkzXX0=
+eyJoaXN0b3J5IjpbLTIwMDg2OTEzOTksMTI0OTc1NzIyMywtNT
+AxNzY4MjI4LC0xNjU3NTUzNTQ2LDk0NjM5ODMwOCwtMTYzMzA2
+NzAxMyw0NzE4NjA4ODYsLTc1ODU4MTc2NSwyNjgxMjU4NywyMz
+c4MzE0MSwtNTExOTgzMjc3LDE0NTMxNjYyNTQsNDIzMDQ5MzU3
+LDE4OTA3ODY2NDMsLTIwMjYzMjUxOTIsMTM0OTc1NDgwNCwtMT
+U4NzY2OTI0NywxNzczMTU1NTY4LDM3NjI1OTgzLC0xOTk1MDY0
+MDQ5XX0=
 -->
