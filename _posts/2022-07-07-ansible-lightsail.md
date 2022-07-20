@@ -167,7 +167,9 @@ Scenario with comments below
   # like variables with different scopes, 
   # tasks results into variables writes
   # and conditions on tasks
-  # in this case we simply 
+  # in this case we simply put the file we need content as a variable
+  # later on we will compare this with actual file content and 
+  # perform actions depends on diference
   vars:  
     systemd_service_file: |  
       [Unit]  
@@ -279,7 +281,7 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExOTg0MDY4MCwtMTE3NTEwMTE0MCwxNz
+eyJoaXN0b3J5IjpbMTQ2ODQ0MTA0MSwtMTE3NTEwMTE0MCwxNz
 k0NTgwODg5LC0xMzk2NTIxMzQzLDEyNDk3NTcyMjMsLTUwMTc2
 ODIyOCwtMTY1NzU1MzU0Niw5NDYzOTgzMDgsLTE2MzMwNjcwMT
 MsNDcxODYwODg2LC03NTg1ODE3NjUsMjY4MTI1ODcsMjM3ODMx
