@@ -155,7 +155,10 @@ Scenario with comments below
 ---  
 - hosts: all  
   become: no  
-  # eventually some tasks need to know some information about target 
+  # eventually some tasks need to know some information about target node
+  # like OS installed or disk space left
+  # and those information are collected on each playbook run
+  # it took some time so there are options to boost that by caching unchanged facts
   gather_facts: true # default  
   strategy: linear # default, change this on how tasks must run on hosts: sequential or serialized  
   vars:  
@@ -269,11 +272,11 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3NDE5NTcyMSwxMjQ5NzU3MjIzLC01MD
-E3NjgyMjgsLTE2NTc1NTM1NDYsOTQ2Mzk4MzA4LC0xNjMzMDY3
-MDEzLDQ3MTg2MDg4NiwtNzU4NTgxNzY1LDI2ODEyNTg3LDIzNz
-gzMTQxLC01MTE5ODMyNzcsMTQ1MzE2NjI1NCw0MjMwNDkzNTcs
-MTg5MDc4NjY0MywtMjAyNjMyNTE5MiwxMzQ5NzU0ODA0LC0xNT
-g3NjY5MjQ3LDE3NzMxNTU1NjgsMzc2MjU5ODMsLTE5OTUwNjQw
-NDldfQ==
+eyJoaXN0b3J5IjpbLTEzOTY1MjEzNDMsMTI0OTc1NzIyMywtNT
+AxNzY4MjI4LC0xNjU3NTUzNTQ2LDk0NjM5ODMwOCwtMTYzMzA2
+NzAxMyw0NzE4NjA4ODYsLTc1ODU4MTc2NSwyNjgxMjU4NywyMz
+c4MzE0MSwtNTExOTgzMjc3LDE0NTMxNjYyNTQsNDIzMDQ5MzU3
+LDE4OTA3ODY2NDMsLTIwMjYzMjUxOTIsMTM0OTc1NDgwNCwtMT
+U4NzY2OTI0NywxNzczMTU1NTY4LDM3NjI1OTgzLC0xOTk1MDY0
+MDQ5XX0=
 -->
