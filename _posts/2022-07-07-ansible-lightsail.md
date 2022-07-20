@@ -102,9 +102,9 @@ Scenario with comments below
 # magic constants: 
 # `all` is aboul all known hosts from inventory
 # `localhost` fol local host (see cdocumentation for more setting)
-
-
-- hosts: all  
+- hosts: all
+# `become` is about become someone as. usually about become sudo(or su) 
+# in this case the scenario defaults for tasks will be current user
   become: no
     
   tasks:  
@@ -247,11 +247,11 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzODg0NzYyOCwtMTYzMzA2NzAxMyw0Nz
-E4NjA4ODYsLTc1ODU4MTc2NSwyNjgxMjU4NywyMzc4MzE0MSwt
-NTExOTgzMjc3LDE0NTMxNjYyNTQsNDIzMDQ5MzU3LDE4OTA3OD
-Y2NDMsLTIwMjYzMjUxOTIsMTM0OTc1NDgwNCwtMTU4NzY2OTI0
-NywxNzczMTU1NTY4LDM3NjI1OTgzLC0xOTk1MDY0MDQ5LC0xOD
-U1OTA4MTkzLDQwODA4NjMwMCwxNzkyOTE4OTI4LDcwMjM0NDYz
-OF19
+eyJoaXN0b3J5IjpbLTIwODE4ODUwMTMsLTE2MzMwNjcwMTMsND
+cxODYwODg2LC03NTg1ODE3NjUsMjY4MTI1ODcsMjM3ODMxNDEs
+LTUxMTk4MzI3NywxNDUzMTY2MjU0LDQyMzA0OTM1NywxODkwNz
+g2NjQzLC0yMDI2MzI1MTkyLDEzNDk3NTQ4MDQsLTE1ODc2Njky
+NDcsMTc3MzE1NTU2OCwzNzYyNTk4MywtMTk5NTA2NDA0OSwtMT
+g1NTkwODE5Myw0MDgwODYzMDAsMTc5MjkxODkyOCw3MDIzNDQ2
+MzhdfQ==
 -->
