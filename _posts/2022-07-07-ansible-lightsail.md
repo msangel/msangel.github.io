@@ -120,7 +120,8 @@ Scenario with comments below
       # it's kind of package manager for community-crafted recepies
       # and in this case we do install locally `geerlingguy.java` community package that is intended to install java 
       local_action: command ansible-galaxy install geerlingguy.java  
-    - name: installing repo for Java 8 in Ubuntu  
+    - name: installing repo for Java 8 in Ubuntu
+      # quite simple task that simply add apt repository
       become: yes  
       apt_repository:  
         repo: ppa:openjdk-r/ppa  
@@ -257,11 +258,11 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwMTc2ODIyOCwtMTY1NzU1MzU0Niw5ND
-YzOTgzMDgsLTE2MzMwNjcwMTMsNDcxODYwODg2LC03NTg1ODE3
-NjUsMjY4MTI1ODcsMjM3ODMxNDEsLTUxMTk4MzI3NywxNDUzMT
-Y2MjU0LDQyMzA0OTM1NywxODkwNzg2NjQzLC0yMDI2MzI1MTky
-LDEzNDk3NTQ4MDQsLTE1ODc2NjkyNDcsMTc3MzE1NTU2OCwzNz
-YyNTk4MywtMTk5NTA2NDA0OSwtMTg1NTkwODE5Myw0MDgwODYz
-MDBdfQ==
+eyJoaXN0b3J5IjpbMTI0OTc1NzIyMywtNTAxNzY4MjI4LC0xNj
+U3NTUzNTQ2LDk0NjM5ODMwOCwtMTYzMzA2NzAxMyw0NzE4NjA4
+ODYsLTc1ODU4MTc2NSwyNjgxMjU4NywyMzc4MzE0MSwtNTExOT
+gzMjc3LDE0NTMxNjYyNTQsNDIzMDQ5MzU3LDE4OTA3ODY2NDMs
+LTIwMjYzMjUxOTIsMTM0OTc1NDgwNCwtMTU4NzY2OTI0NywxNz
+czMTU1NTY4LDM3NjI1OTgzLC0xOTk1MDY0MDQ5LC0xODU1OTA4
+MTkzXX0=
 -->
