@@ -132,14 +132,17 @@ Scenario with comments below
       apt:  
         update_cache: yes  
     - name: Install Java
-      # this is a task that run ansible role as a ansible role
-      # ansible roles as addons from 
       when: "ansible_os_family == 'Debian'"  
 	  vars:  
         java_packages:  
           - openjdk-8-jdk  
+      # this is a task that run ansible role as a ansible role
+      # ansible roles as addons from ansible galaxy
+      # these addons usually run before and/or after all tasks
+      # but this task allows to run role as a regular step  
       include_role:  
         name: geerlingguy.java  
+        # a
         apply:  
           become: true
 ```
@@ -262,7 +265,7 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxMjM0NjI5OCwxMjQ5NzU3MjIzLC01MD
+eyJoaXN0b3J5IjpbMjA1NzY1NDA4NiwxMjQ5NzU3MjIzLC01MD
 E3NjgyMjgsLTE2NTc1NTM1NDYsOTQ2Mzk4MzA4LC0xNjMzMDY3
 MDEzLDQ3MTg2MDg4NiwtNzU4NTgxNzY1LDI2ODEyNTg3LDIzNz
 gzMTQxLC01MTE5ODMyNzcsMTQ1MzE2NjI1NCw0MjMwNDkzNTcs
