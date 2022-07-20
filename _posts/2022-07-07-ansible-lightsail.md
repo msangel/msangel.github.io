@@ -111,8 +111,10 @@ Scenario with comments below
   tasks:  
     - name: Install java role from Ansible Galaxy  
       # usually tasks executed to remotes nodes
-      # but there are some task kinds that do 
-      local_action: comman d ansible-galaxy install geerlingguy.java  
+      # but there are some task kinds that do execued on local machine
+      # and `local_action` is kind of generic for those
+      
+      local_action: command ansible-galaxy install geerlingguy.java  
     - name: installing repo for Java 8 in Ubuntu  
       become: yes  
       apt_repository:  
@@ -250,11 +252,11 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQ2Mzk4MzA4LC0xNjMzMDY3MDEzLDQ3MT
-g2MDg4NiwtNzU4NTgxNzY1LDI2ODEyNTg3LDIzNzgzMTQxLC01
-MTE5ODMyNzcsMTQ1MzE2NjI1NCw0MjMwNDkzNTcsMTg5MDc4Nj
-Y0MywtMjAyNjMyNTE5MiwxMzQ5NzU0ODA0LC0xNTg3NjY5MjQ3
-LDE3NzMxNTU1NjgsMzc2MjU5ODMsLTE5OTUwNjQwNDksLTE4NT
-U5MDgxOTMsNDA4MDg2MzAwLDE3OTI5MTg5MjgsNzAyMzQ0NjM4
-XX0=
+eyJoaXN0b3J5IjpbMTMwMTAwMTc5MCw5NDYzOTgzMDgsLTE2Mz
+MwNjcwMTMsNDcxODYwODg2LC03NTg1ODE3NjUsMjY4MTI1ODcs
+MjM3ODMxNDEsLTUxMTk4MzI3NywxNDUzMTY2MjU0LDQyMzA0OT
+M1NywxODkwNzg2NjQzLC0yMDI2MzI1MTkyLDEzNDk3NTQ4MDQs
+LTE1ODc2NjkyNDcsMTc3MzE1NTU2OCwzNzYyNTk4MywtMTk5NT
+A2NDA0OSwtMTg1NTkwODE5Myw0MDgwODYzMDAsMTc5MjkxODky
+OF19
 -->
