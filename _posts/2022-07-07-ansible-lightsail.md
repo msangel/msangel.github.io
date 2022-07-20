@@ -163,7 +163,11 @@ Scenario with comments below
   # change this on how tasks must run on hosts: sequential or serialized or another strategy
   strategy: linear # default
   # even if this file is declarative definition
-  # it still
+  # it still have all the things the regular programing language have
+  # like variables with different scopes, 
+  # tasks results into variables writes
+  # and conditions on tasks
+  # in this case we simply 
   vars:  
     systemd_service_file: |  
       [Unit]  
@@ -275,11 +279,11 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU5MzYxNDk2LC0xMTc1MTAxMTQwLDE3OT
-Q1ODA4ODksLTEzOTY1MjEzNDMsMTI0OTc1NzIyMywtNTAxNzY4
-MjI4LC0xNjU3NTUzNTQ2LDk0NjM5ODMwOCwtMTYzMzA2NzAxMy
-w0NzE4NjA4ODYsLTc1ODU4MTc2NSwyNjgxMjU4NywyMzc4MzE0
-MSwtNTExOTgzMjc3LDE0NTMxNjYyNTQsNDIzMDQ5MzU3LDE4OT
-A3ODY2NDMsLTIwMjYzMjUxOTIsMTM0OTc1NDgwNCwtMTU4NzY2
-OTI0N119
+eyJoaXN0b3J5IjpbMjExOTg0MDY4MCwtMTE3NTEwMTE0MCwxNz
+k0NTgwODg5LC0xMzk2NTIxMzQzLDEyNDk3NTcyMjMsLTUwMTc2
+ODIyOCwtMTY1NzU1MzU0Niw5NDYzOTgzMDgsLTE2MzMwNjcwMT
+MsNDcxODYwODg2LC03NTg1ODE3NjUsMjY4MTI1ODcsMjM3ODMx
+NDEsLTUxMTk4MzI3NywxNDUzMTY2MjU0LDQyMzA0OTM1NywxOD
+kwNzg2NjQzLC0yMDI2MzI1MTkyLDEzNDk3NTQ4MDQsLTE1ODc2
+NjkyNDddfQ==
 -->
