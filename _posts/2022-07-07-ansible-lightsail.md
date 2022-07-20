@@ -122,7 +122,8 @@ Scenario with comments below
       local_action: command ansible-galaxy install geerlingguy.java  
     - name: installing repo for Java 8 in Ubuntu
       # quite simple task that simply add apt repository
-      
+      # but it also interesting because of 
+      # set sudo privilegies for this task
       become: yes  
       apt_repository:  
         repo: ppa:openjdk-r/ppa  
@@ -130,7 +131,9 @@ Scenario with comments below
       become: yes  
       apt:  
         update_cache: yes  
-    - name: Install Java  
+    - name: Install Java
+      # this is a task that run ansible role as a ansible role
+      # ansible roles as addons from 
       when: "ansible_os_family == 'Debian'"  
 	  vars:  
         java_packages:  
@@ -259,11 +262,11 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDg2OTEzOTksMTI0OTc1NzIyMywtNT
-AxNzY4MjI4LC0xNjU3NTUzNTQ2LDk0NjM5ODMwOCwtMTYzMzA2
-NzAxMyw0NzE4NjA4ODYsLTc1ODU4MTc2NSwyNjgxMjU4NywyMz
-c4MzE0MSwtNTExOTgzMjc3LDE0NTMxNjYyNTQsNDIzMDQ5MzU3
-LDE4OTA3ODY2NDMsLTIwMjYzMjUxOTIsMTM0OTc1NDgwNCwtMT
-U4NzY2OTI0NywxNzczMTU1NTY4LDM3NjI1OTgzLC0xOTk1MDY0
-MDQ5XX0=
+eyJoaXN0b3J5IjpbMTMxMjM0NjI5OCwxMjQ5NzU3MjIzLC01MD
+E3NjgyMjgsLTE2NTc1NTM1NDYsOTQ2Mzk4MzA4LC0xNjMzMDY3
+MDEzLDQ3MTg2MDg4NiwtNzU4NTgxNzY1LDI2ODEyNTg3LDIzNz
+gzMTQxLC01MTE5ODMyNzcsMTQ1MzE2NjI1NCw0MjMwNDkzNTcs
+MTg5MDc4NjY0MywtMjAyNjMyNTE5MiwxMzQ5NzU0ODA0LC0xNT
+g3NjY5MjQ3LDE3NzMxNTU1NjgsMzc2MjU5ODMsLTE5OTUwNjQw
+NDldfQ==
 -->
