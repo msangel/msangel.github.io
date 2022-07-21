@@ -207,11 +207,11 @@ Scenario with comments below
       with_fileglob:
         - "target/*.jar"  
   - name: Systemd file exists  
-      become: yes  
-      stat:  
-        path: /etc/systemd/system/app_service.service  
-        checksum_algorithm: md5  
-      register: app_service_stat  
+    become: yes  
+    stat:  
+      path: /etc/systemd/system/app_service.service  
+      checksum_algorithm: md5  
+    register: app_service_stat  
   - name: Setting facts  
     become: no  
     set_fact:  
@@ -284,11 +284,11 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzUzNjc0MzMsMTQ2ODQ0MTA0MSwtMT
-E3NTEwMTE0MCwxNzk0NTgwODg5LC0xMzk2NTIxMzQzLDEyNDk3
-NTcyMjMsLTUwMTc2ODIyOCwtMTY1NzU1MzU0Niw5NDYzOTgzMD
-gsLTE2MzMwNjcwMTMsNDcxODYwODg2LC03NTg1ODE3NjUsMjY4
-MTI1ODcsMjM3ODMxNDEsLTUxMTk4MzI3NywxNDUzMTY2MjU0LD
-QyMzA0OTM1NywxODkwNzg2NjQzLC0yMDI2MzI1MTkyLDEzNDk3
-NTQ4MDRdfQ==
+eyJoaXN0b3J5IjpbLTEwOTYyMTQ0OSwtMTgzNTM2NzQzMywxND
+Y4NDQxMDQxLC0xMTc1MTAxMTQwLDE3OTQ1ODA4ODksLTEzOTY1
+MjEzNDMsMTI0OTc1NzIyMywtNTAxNzY4MjI4LC0xNjU3NTUzNT
+Q2LDk0NjM5ODMwOCwtMTYzMzA2NzAxMyw0NzE4NjA4ODYsLTc1
+ODU4MTc2NSwyNjgxMjU4NywyMzc4MzE0MSwtNTExOTgzMjc3LD
+E0NTMxNjYyNTQsNDIzMDQ5MzU3LDE4OTA3ODY2NDMsLTIwMjYz
+MjUxOTJdfQ==
 -->
