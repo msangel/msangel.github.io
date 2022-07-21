@@ -233,24 +233,24 @@ Scenario with comments below
         # these all are just because "msg" print JSON, so \n will be "\n" 
         # but if print content as array of lines, it looks nicer  msg: "{{ msg.split('\n') | reject('match', '^$') }}"  
   - name: Creating systemd service file if changed   
-      when: remote_file_sum != local_file_sum  
-      become: yes  
-      copy:  
-        dest: "/etc/systemd/system/app_service.service"  
-  mode: u=rwx,g=rx,o=rx  
-        owner: root  
-        group: root  
-        content: "{{systemd_service_file}}"  
+    when: remote_file_sum != local_file_sum  
+    become: yes  
+    copy:  
+      dest: "/etc/systemd/system/app_service.service"  
+      mode: u=rwx,g=rx,o=rx  
+      owner: root  
+      group: root  
+      content: "{{systemd_service_file}}"  
   - name: Start app service  
-      become: yes  
-      systemd:  
-        name: app_service  
-        enabled: yes  
-        state: restarted  
-        daemon_reload: yes  
-    # `name` attribute is optional btw  
+    become: yes  
+    systemd:  
+      name: app_service  
+      enabled: yes  
+      state: restarted  
+      daemon_reload: yes  
+  # `name` attribute is optional btw  
   - wait_for:  
-        port: 80
+      port: 80
 ```
 
 ### Start/restart service
@@ -284,11 +284,11 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTk5NDQ0MTUxLDE0Njg0NDEwNDEsLTExNz
-UxMDExNDAsMTc5NDU4MDg4OSwtMTM5NjUyMTM0MywxMjQ5NzU3
-MjIzLC01MDE3NjgyMjgsLTE2NTc1NTM1NDYsOTQ2Mzk4MzA4LC
-0xNjMzMDY3MDEzLDQ3MTg2MDg4NiwtNzU4NTgxNzY1LDI2ODEy
-NTg3LDIzNzgzMTQxLC01MTE5ODMyNzcsMTQ1MzE2NjI1NCw0Mj
-MwNDkzNTcsMTg5MDc4NjY0MywtMjAyNjMyNTE5MiwxMzQ5NzU0
-ODA0XX0=
+eyJoaXN0b3J5IjpbLTE4MzUzNjc0MzMsMTQ2ODQ0MTA0MSwtMT
+E3NTEwMTE0MCwxNzk0NTgwODg5LC0xMzk2NTIxMzQzLDEyNDk3
+NTcyMjMsLTUwMTc2ODIyOCwtMTY1NzU1MzU0Niw5NDYzOTgzMD
+gsLTE2MzMwNjcwMTMsNDcxODYwODg2LC03NTg1ODE3NjUsMjY4
+MTI1ODcsMjM3ODMxNDEsLTUxMTk4MzI3NywxNDUzMTY2MjU0LD
+QyMzA0OTM1NywxODkwNzg2NjQzLC0yMDI2MzI1MTkyLDEzNDk3
+NTQ4MDRdfQ==
 -->
