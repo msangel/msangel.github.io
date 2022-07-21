@@ -212,23 +212,26 @@ Scenario with comments below
         path: /etc/systemd/system/app_service.service  
         checksum_algorithm: md5  
       register: app_service_stat  
-    - name: Setting facts  
-      become: no  
-      set_fact:  
-        # since missing file has no checksum, use "false" value instead  
-  remote_file_sum: "{{ app_service_stat.stat.checksum | default(false) }}"  
-  # anything: "{{ as.as.as.as.as | default('not as') }}" <- works!  
- # or that: # remote_file_sum: "{{ app_service_stat.stat.exists | ternary(app_service_stat.stat.checksum, false) }}"  local_file_sum: "{{ systemd_service_file | hash('md5') }}"  
-  cacheable: no # 'no' is default, if yes, will be cached on remote host/sequential playbook run  
+  - name: Setting facts  
+    become: no  
+    set_fact:  
+      # since missing file has no checksum, use "false" value instead  
+      remote_file_sum: "{{ app_service_stat.stat.checksum | default(false) }}"  
+      # anything: "{{ as.as.as.as.as | default('not as') }}" <- works!  
+      # or that: # remote_file_sum: "{{ app_service_stat.stat.exists | ternary(app_service_stat.stat.checksum, false) }}"  local_file_sum: "{{ systemd_service_file | hash('md5') }}"  
+      cacheable: no # 'no' is default, if yes, will be cached on remote host/sequential playbook run  
   - name: Systemd file debug integrity  
-      vars:  
-        msg: |-  
+    vars:  
+      msg: |-  
           Remote systemd file exists: {{ app_service_stat.stat.exists }}  
           Remote systemd file checksum: {{ remote_file_sum }}  
           Valid systemd file checksum: {{ local_file_sum }}  
       debug:  
         # instead of printing message directly here  
- # I use task variable defined above # and print that with skipping empty line (last one as a result of split) # these all are just because "msg" print JSON, so \n will be "\n" # but if print content as array of lines, it looks nicer  msg: "{{ msg.split('\n') | reject('match', '^$') }}"  
+        # I use task variable defined above 
+        # and print that with skipping empty line (last one as a result of split) 
+        # these all are just because "msg" print JSON, so \n will be "\n" 
+        # but if print content as array of lines, it looks nicer  msg: "{{ msg.split('\n') | reject('match', '^$') }}"  
   - name: Creating systemd service file if changed   
       when: remote_file_sum != local_file_sum  
       become: yes  
@@ -281,7 +284,7 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjc2Njk3MDAxLDE0Njg0NDEwNDEsLTExNz
+eyJoaXN0b3J5IjpbOTk5NDQ0MTUxLDE0Njg0NDEwNDEsLTExNz
 UxMDExNDAsMTc5NDU4MDg4OSwtMTM5NjUyMTM0MywxMjQ5NzU3
 MjIzLC01MDE3NjgyMjgsLTE2NTc1NTM1NDYsOTQ2Mzk4MzA4LC
 0xNjMzMDY3MDEzLDQ3MTg2MDg4NiwtNzU4NTgxNzY1LDI2ODEy
