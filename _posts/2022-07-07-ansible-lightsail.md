@@ -202,9 +202,9 @@ Scenario with comments below
     - name: Deploy artifact
       copy:  
         src: "{{ item }}"  
-  dest: ~/app.jar  
+        dest: ~/app.jar  
         mode: u=rwx,g=rx,o=rx  
-      with_fileglob:  
+      with_fileglob:
         - "target/*.jar"  
   - name: Systemd file exists  
       become: yes  
@@ -281,11 +281,11 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1NTM3NDQyMywxNDY4NDQxMDQxLC0xMT
-c1MTAxMTQwLDE3OTQ1ODA4ODksLTEzOTY1MjEzNDMsMTI0OTc1
-NzIyMywtNTAxNzY4MjI4LC0xNjU3NTUzNTQ2LDk0NjM5ODMwOC
-wtMTYzMzA2NzAxMyw0NzE4NjA4ODYsLTc1ODU4MTc2NSwyNjgx
-MjU4NywyMzc4MzE0MSwtNTExOTgzMjc3LDE0NTMxNjYyNTQsND
-IzMDQ5MzU3LDE4OTA3ODY2NDMsLTIwMjYzMjUxOTIsMTM0OTc1
-NDgwNF19
+eyJoaXN0b3J5IjpbNjc2Njk3MDAxLDE0Njg0NDEwNDEsLTExNz
+UxMDExNDAsMTc5NDU4MDg4OSwtMTM5NjUyMTM0MywxMjQ5NzU3
+MjIzLC01MDE3NjgyMjgsLTE2NTc1NTM1NDYsOTQ2Mzk4MzA4LC
+0xNjMzMDY3MDEzLDQ3MTg2MDg4NiwtNzU4NTgxNzY1LDI2ODEy
+NTg3LDIzNzgzMTQxLC01MTE5ODMyNzcsMTQ1MzE2NjI1NCw0Mj
+MwNDkzNTcsMTg5MDc4NjY0MywtMjAyNjMyNTE5MiwxMzQ5NzU0
+ODA0XX0=
 -->
