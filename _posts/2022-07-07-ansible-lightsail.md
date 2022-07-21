@@ -133,7 +133,7 @@ Scenario with comments below
         update_cache: yes  
     - name: Install Java
       when: "ansible_os_family == 'Debian'"  
-	  vars:  
+      vars:  
         java_packages:  
           - openjdk-8-jdk  
       # this is a task that run ansible role as a ansible role
@@ -281,11 +281,11 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2ODQ0MTA0MSwtMTE3NTEwMTE0MCwxNz
-k0NTgwODg5LC0xMzk2NTIxMzQzLDEyNDk3NTcyMjMsLTUwMTc2
-ODIyOCwtMTY1NzU1MzU0Niw5NDYzOTgzMDgsLTE2MzMwNjcwMT
-MsNDcxODYwODg2LC03NTg1ODE3NjUsMjY4MTI1ODcsMjM3ODMx
-NDEsLTUxMTk4MzI3NywxNDUzMTY2MjU0LDQyMzA0OTM1NywxOD
-kwNzg2NjQzLC0yMDI2MzI1MTkyLDEzNDk3NTQ4MDQsLTE1ODc2
-NjkyNDddfQ==
+eyJoaXN0b3J5IjpbLTM1NTM3NDQyMywxNDY4NDQxMDQxLC0xMT
+c1MTAxMTQwLDE3OTQ1ODA4ODksLTEzOTY1MjEzNDMsMTI0OTc1
+NzIyMywtNTAxNzY4MjI4LC0xNjU3NTUzNTQ2LDk0NjM5ODMwOC
+wtMTYzMzA2NzAxMyw0NzE4NjA4ODYsLTc1ODU4MTc2NSwyNjgx
+MjU4NywyMzc4MzE0MSwtNTExOTgzMjc3LDE0NTMxNjYyNTQsND
+IzMDQ5MzU3LDE4OTA3ODY2NDMsLTIwMjYzMjUxOTIsMTM0OTc1
+NDgwNF19
 -->
