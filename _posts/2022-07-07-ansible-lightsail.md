@@ -101,7 +101,7 @@ Scenario with comments below
 # define name of gropus or particular hosts from inventory file
 # magic constants: 
 # `all` is aboul all known hosts from inventory
-# `localhost` fol local host (see cdocumentation for more setting)
+# `localhost` for local host (see cdocumentation for more setting)
 - hosts: all
 # `become` is about become someone as. usually about become sudo(or su) 
 # in this case the scenario defaults for tasks will be current user
@@ -284,11 +284,11 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTYyMTQ0OSwtMTgzNTM2NzQzMywxND
-Y4NDQxMDQxLC0xMTc1MTAxMTQwLDE3OTQ1ODA4ODksLTEzOTY1
-MjEzNDMsMTI0OTc1NzIyMywtNTAxNzY4MjI4LC0xNjU3NTUzNT
-Q2LDk0NjM5ODMwOCwtMTYzMzA2NzAxMyw0NzE4NjA4ODYsLTc1
-ODU4MTc2NSwyNjgxMjU4NywyMzc4MzE0MSwtNTExOTgzMjc3LD
-E0NTMxNjYyNTQsNDIzMDQ5MzU3LDE4OTA3ODY2NDMsLTIwMjYz
-MjUxOTJdfQ==
+eyJoaXN0b3J5IjpbLTExNjUyOTMxMjMsLTEwOTYyMTQ0OSwtMT
+gzNTM2NzQzMywxNDY4NDQxMDQxLC0xMTc1MTAxMTQwLDE3OTQ1
+ODA4ODksLTEzOTY1MjEzNDMsMTI0OTc1NzIyMywtNTAxNzY4Mj
+I4LC0xNjU3NTUzNTQ2LDk0NjM5ODMwOCwtMTYzMzA2NzAxMyw0
+NzE4NjA4ODYsLTc1ODU4MTc2NSwyNjgxMjU4NywyMzc4MzE0MS
+wtNTExOTgzMjc3LDE0NTMxNjYyNTQsNDIzMDQ5MzU3LDE4OTA3
+ODY2NDNdfQ==
 -->
