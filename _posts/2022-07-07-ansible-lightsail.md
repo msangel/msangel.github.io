@@ -253,20 +253,10 @@ Scenario with comments below
       port: 80
 ```
 
-### Start/restart service
-https://docs.ansible.com/ansible/latest/collections/ansible/builtin/service_module.html
-or PID in file
-https://www.google.com/search?q=ansible+start+and+stop+process&oq=ansible+stop+process+&aqs=chrome.5.69i57j0i19j0i19i22i30l4.9031j0j1&sourceid=chrome&ie=UTF-8
-
-### Final Playbooks
-
-
 
 ### More power with Ansible lightsail module
 If fact, Ansible can manage lightsail for its own - it can create instances, delete them, etc. Take a look on the module:
 [community.aws.lightsail module – Manage instances in AWS Lightsail](https://docs.ansible.com/ansible/latest/collections/community/aws/lightsail_module.html) 
-
-### Extra
 
 ### Used resources
 
@@ -284,11 +274,11 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjUyOTMxMjMsLTEwOTYyMTQ0OSwtMT
-gzNTM2NzQzMywxNDY4NDQxMDQxLC0xMTc1MTAxMTQwLDE3OTQ1
-ODA4ODksLTEzOTY1MjEzNDMsMTI0OTc1NzIyMywtNTAxNzY4Mj
-I4LC0xNjU3NTUzNTQ2LDk0NjM5ODMwOCwtMTYzMzA2NzAxMyw0
-NzE4NjA4ODYsLTc1ODU4MTc2NSwyNjgxMjU4NywyMzc4MzE0MS
-wtNTExOTgzMjc3LDE0NTMxNjYyNTQsNDIzMDQ5MzU3LDE4OTA3
-ODY2NDNdfQ==
+eyJoaXN0b3J5IjpbLTQ4NjMyNDAyMCwtMTE2NTI5MzEyMywtMT
+A5NjIxNDQ5LC0xODM1MzY3NDMzLDE0Njg0NDEwNDEsLTExNzUx
+MDExNDAsMTc5NDU4MDg4OSwtMTM5NjUyMTM0MywxMjQ5NzU3Mj
+IzLC01MDE3NjgyMjgsLTE2NTc1NTM1NDYsOTQ2Mzk4MzA4LC0x
+NjMzMDY3MDEzLDQ3MTg2MDg4NiwtNzU4NTgxNzY1LDI2ODEyNT
+g3LDIzNzgzMTQxLC01MTE5ODMyNzcsMTQ1MzE2NjI1NCw0MjMw
+NDkzNTddfQ==
 -->
