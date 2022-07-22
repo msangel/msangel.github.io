@@ -263,6 +263,7 @@ If fact, Ansible can manage lightsail for its own - it can create instances, del
  - [Deploying a service using ansible and
    systemd](https://dev.to/kkentzo/deploying-a-service-using-ansible-and-systemd-4n11)
  - [How To Deploy a Basic PHP Application Using Ansible on Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-basic-php-application-using-ansible-on-ubuntu-14-04) 
+ - [How to Install and Configure latest version of Ansible on Ubuntu Linux](https://www.cyberciti.biz/faq/how-to-install-and-configure-latest-version-of-ansible-on-ubuntu-linux/)
 
 Short usefull explanations:
 
@@ -274,7 +275,7 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5NzA1MTE4OCwtNDg2MzI0MDIwLC0xMT
+eyJoaXN0b3J5IjpbMTUxNTgyMjE2NywtNDg2MzI0MDIwLC0xMT
 Y1MjkzMTIzLC0xMDk2MjE0NDksLTE4MzUzNjc0MzMsMTQ2ODQ0
 MTA0MSwtMTE3NTEwMTE0MCwxNzk0NTgwODg5LC0xMzk2NTIxMz
 QzLDEyNDk3NTcyMjMsLTUwMTc2ODIyOCwtMTY1NzU1MzU0Niw5
