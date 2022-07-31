@@ -15,6 +15,7 @@ https://logging.apache.org/log4j/log4j-2.3.1/manual/configuration.html
 https://logging.apache.org/log4j/2.x/log4j-core/apidocs/org/apache/logging/log4j/core/selector/JndiContextSelector.html
 https://logging.apache.org/log4j/2.x/manual/configuration.html#PropertySubstitution
 https://logging.apache.org/log4j/2.x/manual/lookups.html
+https://www.google.com/search?q=log4j2.enableSysLookup
 
 
 
@@ -25,5 +26,5 @@ https://logging.apache.org/log4j/2.x/manual/lookups.html
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTA0NTM5MTUsLTQ5NzU1MDYyXX0=
+eyJoaXN0b3J5IjpbNjI0OTA0NzM1LC00OTc1NTA2Ml19
 -->
