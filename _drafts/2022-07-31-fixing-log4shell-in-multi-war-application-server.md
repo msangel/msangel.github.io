@@ -1,7 +1,7 @@
 About log4j
 spreading of log4j
-key feature
-architecture of common application server with shared log4j
+key feature(of interest)
+architecture of common application server with shared log4j, package problem
 sample
 log4shell
 fixing log4shell
@@ -26,5 +26,5 @@ https://www.google.com/search?q=log4j2.enableSysLookup
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjI0OTA0NzM1XX0=
+eyJoaXN0b3J5IjpbLTEwOTc5Mjg4ODgsNjI0OTA0NzM1XX0=
 -->
