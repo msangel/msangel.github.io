@@ -148,6 +148,10 @@ Scenario with comments below
         apply:  
           become: true
 ```
+Save this file as `prepare_box.yml` and run with 
+```bash
+> 
+```
 
 #### Deploy application
 Scenario with comments below
@@ -252,7 +256,10 @@ Scenario with comments below
   - wait_for:  
       port: 80
 ```
-Run 
+### Run playbook
+```bash
+> ansible-playbook install_app.yml
+```
 
 ### More power with Ansible lightsail module
 If fact, Ansible can manage lightsail for its own - it can create instances, delete them, etc. Take a look on the module:
@@ -275,11 +282,11 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTI4Mjk4MTQ2LDE1MTU4MjIxNjcsLTQ4Nj
-MyNDAyMCwtMTE2NTI5MzEyMywtMTA5NjIxNDQ5LC0xODM1MzY3
-NDMzLDE0Njg0NDEwNDEsLTExNzUxMDExNDAsMTc5NDU4MDg4OS
-wtMTM5NjUyMTM0MywxMjQ5NzU3MjIzLC01MDE3NjgyMjgsLTE2
-NTc1NTM1NDYsOTQ2Mzk4MzA4LC0xNjMzMDY3MDEzLDQ3MTg2MD
-g4NiwtNzU4NTgxNzY1LDI2ODEyNTg3LDIzNzgzMTQxLC01MTE5
-ODMyNzddfQ==
+eyJoaXN0b3J5IjpbLTE1MDI2MDg1OSwxNTE1ODIyMTY3LC00OD
+YzMjQwMjAsLTExNjUyOTMxMjMsLTEwOTYyMTQ0OSwtMTgzNTM2
+NzQzMywxNDY4NDQxMDQxLC0xMTc1MTAxMTQwLDE3OTQ1ODA4OD
+ksLTEzOTY1MjEzNDMsMTI0OTc1NzIyMywtNTAxNzY4MjI4LC0x
+NjU3NTUzNTQ2LDk0NjM5ODMwOCwtMTYzMzA2NzAxMyw0NzE4Nj
+A4ODYsLTc1ODU4MTc2NSwyNjgxMjU4NywyMzc4MzE0MSwtNTEx
+OTgzMjc3XX0=
 -->
