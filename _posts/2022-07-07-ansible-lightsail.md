@@ -150,7 +150,7 @@ Scenario with comments below
 ```
 Save this file as `prepare_box.yml` and run with 
 ```bash
-> 
+> ansible-playbook prepare_box.yml
 ```
 
 #### Deploy application
@@ -256,7 +256,7 @@ Scenario with comments below
   - wait_for:  
       port: 80
 ```
-### Run playbook
+Save this file as `install_app.yml` and run with 
 ```bash
 > ansible-playbook install_app.yml
 ```
@@ -282,7 +282,7 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDI2MDg1OSwxNTE1ODIyMTY3LC00OD
+eyJoaXN0b3J5IjpbMTIxMzUzODkxMSwxNTE1ODIyMTY3LC00OD
 YzMjQwMjAsLTExNjUyOTMxMjMsLTEwOTYyMTQ0OSwtMTgzNTM2
 NzQzMywxNDY4NDQxMDQxLC0xMTc1MTAxMTQwLDE3OTQ1ODA4OD
 ksLTEzOTY1MjEzNDMsMTI0OTc1NzIyMywtNTAxNzY4MjI4LC0x
