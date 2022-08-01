@@ -252,7 +252,7 @@ Scenario with comments below
   - wait_for:  
       port: 80
 ```
-
+Run 
 
 ### More power with Ansible lightsail module
 If fact, Ansible can manage lightsail for its own - it can create instances, delete them, etc. Take a look on the module:
@@ -275,11 +275,11 @@ Short usefull explanations:
  
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxNTgyMjE2NywtNDg2MzI0MDIwLC0xMT
-Y1MjkzMTIzLC0xMDk2MjE0NDksLTE4MzUzNjc0MzMsMTQ2ODQ0
-MTA0MSwtMTE3NTEwMTE0MCwxNzk0NTgwODg5LC0xMzk2NTIxMz
-QzLDEyNDk3NTcyMjMsLTUwMTc2ODIyOCwtMTY1NzU1MzU0Niw5
-NDYzOTgzMDgsLTE2MzMwNjcwMTMsNDcxODYwODg2LC03NTg1OD
-E3NjUsMjY4MTI1ODcsMjM3ODMxNDEsLTUxMTk4MzI3NywxNDUz
-MTY2MjU0XX0=
+eyJoaXN0b3J5IjpbNTI4Mjk4MTQ2LDE1MTU4MjIxNjcsLTQ4Nj
+MyNDAyMCwtMTE2NTI5MzEyMywtMTA5NjIxNDQ5LC0xODM1MzY3
+NDMzLDE0Njg0NDEwNDEsLTExNzUxMDExNDAsMTc5NDU4MDg4OS
+wtMTM5NjUyMTM0MywxMjQ5NzU3MjIzLC01MDE3NjgyMjgsLTE2
+NTc1NTM1NDYsOTQ2Mzk4MzA4LC0xNjMzMDY3MDEzLDQ3MTg2MD
+g4NiwtNzU4NTgxNzY1LDI2ODEyNTg3LDIzNzgzMTQxLC01MTE5
+ODMyNzddfQ==
 -->
