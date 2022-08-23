@@ -6,6 +6,7 @@ sample
 log4shell
 fixing log4shell
 
+
 notes:
 https://logging.apache.org/log4j/2.x/security.html
 https://stackoverflow.com/questions/26025727/separate-log4j2-files-for-web-applications-in-single-weblogic-container
