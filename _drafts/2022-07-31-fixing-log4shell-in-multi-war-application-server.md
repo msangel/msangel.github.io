@@ -4,8 +4,7 @@ Also, the production and development log configuration is different. So more spe
  - Commons-logging (wrapper around Log4j and JUL)
  - Logback(successor of Log4j v1)
  - SLF4J(wrapper around Logback, Commons-logging, Log4j and JUL).
-
-
+Have 
 
  https://habr.com/ru/search/?q=java%20logging&target_type=posts&order=relevance
 
@@ -39,6 +38,6 @@ https://www.google.com/search?q=log4j2.enableSysLookup
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTA1MzM2MDg3LC04ODAwMjcwOTcsMTY3OT
+eyJoaXN0b3J5IjpbOTg0NjE2MTcxLC04ODAwMjcwOTcsMTY3OT
 IyNTkwNywtMTA5NzkyODg4OCw2MjQ5MDQ3MzVdfQ==
 -->
