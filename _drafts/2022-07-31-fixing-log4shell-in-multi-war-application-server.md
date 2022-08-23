@@ -1,9 +1,10 @@
 Logging in java got some excessive complexity. This is caused by way of its development. Well, all of us can print all debug information to the system output using plain `System.out.println`. The number of such logs can become huge. This will cause problem in navigating across them and tracking reqired information. 
-Also, the production and development log configuration is different. So more specialized tool is needed. The standard java library [does have](https://docs.oracle.com/javase/10/core/java-logging-overview.htm) log implementation inside it - the "java.util.logging" package (or "JUL"). Initially it was very poor, but now its somehow better. And because of this people need better tools. And so many opensource alternatives appear:
-Log4j(now the v2 is supported)
-Commons-logging (wrapper around Log4j and JUL)
-Logback(successor of Log4j v1)
-SLF4J(wrapper around Logback, Commons-logging, Log4j and JUL)
+Also, the production and development log configuration is different. So more specialized tool is needed. The standard java library [does have](https://docs.oracle.com/javase/10/core/java-logging-overview.htm) log implementation inside it - the "java.util.logging" package (or "JUL"). Initially it was very poor, but now its somehow better. And because of this people need better tools. And so many opensource alternatives appear(top list):
+ - Log4j(now the v2 is supported)
+ - Commons-logging (wrapper around Log4j and JUL)
+ - Logback(successor of Log4j v1)
+ - SLF4J(wrapper around Logback, Commons-logging, Log4j and JUL).
+
 
 
  https://habr.com/ru/search/?q=java%20logging&target_type=posts&order=relevance
@@ -38,6 +39,6 @@ https://www.google.com/search?q=log4j2.enableSysLookup
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4MDM5ODM4NSwtODgwMDI3MDk3LDE2Nz
-kyMjU5MDcsLTEwOTc5Mjg4ODgsNjI0OTA0NzM1XX0=
+eyJoaXN0b3J5IjpbNTA1MzM2MDg3LC04ODAwMjcwOTcsMTY3OT
+IyNTkwNywtMTA5NzkyODg4OCw2MjQ5MDQ3MzVdfQ==
 -->
