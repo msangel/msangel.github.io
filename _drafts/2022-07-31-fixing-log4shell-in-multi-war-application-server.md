@@ -1,3 +1,6 @@
+Logging in java for no reason got over
+
+
 About log4j
 spreading of log4j
 key feature(of interest)
@@ -27,5 +30,6 @@ https://www.google.com/search?q=log4j2.enableSysLookup
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTc5Mjg4ODgsNjI0OTA0NzM1XX0=
+eyJoaXN0b3J5IjpbLTE3OTYwOTQ3NTIsLTEwOTc5Mjg4ODgsNj
+I0OTA0NzM1XX0=
 -->
