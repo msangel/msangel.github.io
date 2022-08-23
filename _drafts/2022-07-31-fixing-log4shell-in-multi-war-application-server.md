@@ -1,4 +1,4 @@
-Logging in java for no reason got over
+Logging in java got some excessive complexity. This caused by the way of it's development. Well, all of use can simply print all information to 
 
 
 About log4j
@@ -30,6 +30,6 @@ https://www.google.com/search?q=log4j2.enableSysLookup
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTYwOTQ3NTIsLTEwOTc5Mjg4ODgsNj
+eyJoaXN0b3J5IjpbLTE2NDg3NTc3NDIsLTEwOTc5Mjg4ODgsNj
 I0OTA0NzM1XX0=
 -->
