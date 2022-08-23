@@ -1,4 +1,4 @@
-Logging in java got some excessive complexity. This is caused by way of its development. Well, all of us can print all debug information to the system output using plain `System.out.println`. The number of such logs can become huge. This will cause problem in navigating across them and tracking reqired information
+Logging in java got some excessive complexity. This is caused by way of its development. Well, all of us can print all debug information to the system output using plain `System.out.println`. The number of such logs can become huge. This will cause problem in navigating across them and tracking reqired information. Also, production and development log configuation is different. 
 
 
 About log4j
@@ -30,6 +30,6 @@ https://www.google.com/search?q=log4j2.enableSysLookup
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTgxNzU3NzQsLTEwOTc5Mjg4ODgsNj
-I0OTA0NzM1XX0=
+eyJoaXN0b3J5IjpbMTY3OTIyNTkwNywtMTA5NzkyODg4OCw2Mj
+Q5MDQ3MzVdfQ==
 -->
