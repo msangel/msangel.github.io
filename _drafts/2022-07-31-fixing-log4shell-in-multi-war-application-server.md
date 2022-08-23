@@ -6,11 +6,13 @@ Also, the production and development log configuration is different. So more spe
  - SLF4J(wrapper around Logback, Commons-logging, Log4j and JUL).
 As for now there is no usage statistic, but from my personal expirience all of them are in wide use. And Log4j is one of them.
 
+### Log4j features
+
+
  https://habr.com/ru/search/?q=java%20logging&target_type=posts&order=relevance
 
 
 About log4j
-spreading of log4j
 key feature(of interest)
 architecture of common application server with shared log4j, package problem
 sample
@@ -38,6 +40,6 @@ https://www.google.com/search?q=log4j2.enableSysLookup
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3OTI0MDE0MiwtODgwMDI3MDk3LDE2Nz
+eyJoaXN0b3J5IjpbMTE2OTY3MDM1MiwtODgwMDI3MDk3LDE2Nz
 kyMjU5MDcsLTEwOTc5Mjg4ODgsNjI0OTA0NzM1XX0=
 -->
