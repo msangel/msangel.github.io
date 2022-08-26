@@ -12,7 +12,7 @@ First of all, the standard java library [does have](https://docs.oracle.com/java
  - Commons-logging (wrapper around Log4j and JUL)
  - Logback(successor of Log4j v1)
  - SLF4J(wrapper around Logback, Commons-logging, Log4j and JUL).
-As for now there is no usage statistic, but from my personal expirience all of them are in wide use. If java ran two billions of devices, then each of these libraries are used in millions of such.
+As for now there is no usage statistic, but from my personal expirience all of them are in wide use. If [java ran dosens of billions devices](https://www.oracle.com/java/moved-by-java/timeline/), its mean all of the li.
 
 ### Log4j features
 
@@ -48,8 +48,8 @@ https://www.google.com/search?q=log4j2.enableSysLookup
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzNDI4ODkwLC0yMDQxOTQ0MzEsMTAyMD
-g5ODc4NSwxMDY5ODM3NzQsMTMzNzM5NTA5NiwxMTY5NjcwMzUy
-LC04ODAwMjcwOTcsMTY3OTIyNTkwNywtMTA5NzkyODg4OCw2Mj
-Q5MDQ3MzVdfQ==
+eyJoaXN0b3J5IjpbLTc3MTg5OTE2NCwxOTM0Mjg4OTAsLTIwND
+E5NDQzMSwxMDIwODk4Nzg1LDEwNjk4Mzc3NCwxMzM3Mzk1MDk2
+LDExNjk2NzAzNTIsLTg4MDAyNzA5NywxNjc5MjI1OTA3LC0xMD
+k3OTI4ODg4LDYyNDkwNDczNV19
 -->
