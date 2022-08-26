@@ -6,7 +6,7 @@ So, more specialized tools are needed with the required capabilities. In general
 
 ### Logging libraries in java
 Java have a list of logging solutions. 
-First of all, the standard java library [does have](https://docs.oracle.com/javase/10/core/java-logging-overview.htm) log implementation inside it - the "java.util.logging" package (or "JUL"). Initially it was very poor. And because of this people needed better tools. And therefore many opensource alternatives appears, like:
+First of all, the standard java library [does have](https://docs.oracle.com/javase/10/core/java-logging-overview.htm) log implementation inside it - the `java.util.logging` package (or "JUL"). Initially it was very poor. And because of this people needed better tools. And therefore many opensource alternatives appears, like:
  - log4j(now the v2 is supported)
  - Commons-logging (wrapper around Log4j and JUL)
  - Logback(successor of Log4j v1)
@@ -47,7 +47,7 @@ https://www.google.com/search?q=log4j2.enableSysLookup
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0ODU5MzMxNiwxOTM0Mjg4OTAsLTIwND
+eyJoaXN0b3J5IjpbMTAwNTIwMzQ1OCwxOTM0Mjg4OTAsLTIwND
 E5NDQzMSwxMDIwODk4Nzg1LDEwNjk4Mzc3NCwxMzM3Mzk1MDk2
 LDExNjk2NzAzNTIsLTg4MDAyNzA5NywxNjc5MjI1OTA3LC0xMD
 k3OTI4ODg4LDYyNDkwNDczNV19
