@@ -15,7 +15,10 @@ As for now, there is no usage statistic, but from my personal experience, all of
 
 ### log4j features
 Log4j have these important features:
-
+- thread-safe
+- control of logging levels in hierarchical way
+- multiple output targets (appenders)
+- 
 
  https://habr.com/ru/search/?q=java%20logging&target_type=posts&order=relevance
 
@@ -48,8 +51,8 @@ https://www.google.com/search?q=log4j2.enableSysLookup
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5NDQ2OTAwMCwxOTM0Mjg4OTAsLTIwND
-E5NDQzMSwxMDIwODk4Nzg1LDEwNjk4Mzc3NCwxMzM3Mzk1MDk2
-LDExNjk2NzAzNTIsLTg4MDAyNzA5NywxNjc5MjI1OTA3LC0xMD
-k3OTI4ODg4LDYyNDkwNDczNV19
+eyJoaXN0b3J5IjpbLTE2OTMzMzI1NTEsMTkzNDI4ODkwLC0yMD
+QxOTQ0MzEsMTAyMDg5ODc4NSwxMDY5ODM3NzQsMTMzNzM5NTA5
+NiwxMTY5NjcwMzUyLC04ODAwMjcwOTcsMTY3OTIyNTkwNywtMT
+A5NzkyODg4OCw2MjQ5MDQ3MzVdfQ==
 -->
