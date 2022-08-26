@@ -24,6 +24,8 @@ Log4j have a lot of features, like:
 
 All seems good and useful. But developers pay a lot of development effort on things that are used rarely but can be a source of vulnerabilities. Let's explore the last listed feature, as it was actually a source of probably the biggest java 0-day exploit in history so far.
 
+### log4shell
+
 
 
   
@@ -59,8 +61,8 @@ https://www.google.com/search?q=log4j2.enableSysLookup
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTUzNzI2MzM5LDE5MzQyODg5MCwtMjA0MT
-k0NDMxLDEwMjA4OTg3ODUsMTA2OTgzNzc0LDEzMzczOTUwOTYs
-MTE2OTY3MDM1MiwtODgwMDI3MDk3LDE2NzkyMjU5MDcsLTEwOT
-c5Mjg4ODgsNjI0OTA0NzM1XX0=
+eyJoaXN0b3J5IjpbLTUwNzY0MzkwOCwxOTM0Mjg4OTAsLTIwND
+E5NDQzMSwxMDIwODk4Nzg1LDEwNjk4Mzc3NCwxMzM3Mzk1MDk2
+LDExNjk2NzAzNTIsLTg4MDAyNzA5NywxNjc5MjI1OTA3LC0xMD
+k3OTI4ODg4LDYyNDkwNDczNV19
 -->
