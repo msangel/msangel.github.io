@@ -14,15 +14,15 @@ First of all, the standard java library [does have](https://docs.oracle.com/java
 As for now, there is no usage statistic, but from my personal experience, all of them are in wide use. If [java ran dozens of billions of devices](https://www.oracle.com/java/moved-by-java/timeline/), it means all of the libraries in the list above are used at least on hundreds of millions of ones. That's a lot!
 
 ### log4j features
-Log4j have these important features:
-- thread-safe
-- control of logging levels in hierarchical way
-- multiple output targets (appenders)
+Log4j have a lot of features, like:
+- is thread-safe
+- have control of logging levels in hierarchical way
+- can configure multiple output targets (appenders)
 - logging configuration can be applied at runtime
 - configurable output message format (layouts)
 - injecting contextual information into log messages
 
-All seems good and useful. But developers pay a lot of development effort on things that are used rarely, but can be a source of vulnerabilities. Lets explore  
+All seems good and useful. But developers pay a lot of development effort on things that are used rarely, but can be a source of vulnerabilities. Lets explore last listed feature, as it was a source of one of biggest java 0-day exploit 
 
  https://habr.com/ru/search/?q=java%20logging&target_type=posts&order=relevance
 
@@ -55,7 +55,7 @@ https://www.google.com/search?q=log4j2.enableSysLookup
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3NTAzNjgxNiwxOTM0Mjg4OTAsLTIwND
+eyJoaXN0b3J5IjpbLTEzODU4OTA0NywxOTM0Mjg4OTAsLTIwND
 E5NDQzMSwxMDIwODk4Nzg1LDEwNjk4Mzc3NCwxMzM3Mzk1MDk2
 LDExNjk2NzAzNTIsLTg4MDAyNzA5NywxNjc5MjI1OTA3LC0xMD
 k3OTI4ODg4LDYyNDkwNDczNV19
