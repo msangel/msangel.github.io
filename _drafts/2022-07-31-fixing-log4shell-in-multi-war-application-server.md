@@ -22,7 +22,7 @@ Log4j have these important features:
 - configurable output message format (layouts)
 - injecting contextual information into log messages
 
-All seems good and useful. But developers pay a lot of development effort on things that are used rarely, but  
+All seems good and useful. But developers pay a lot of development effort on things that are used rarely, but can be a source of vulnerabilities. Lets explore  
 
  https://habr.com/ru/search/?q=java%20logging&target_type=posts&order=relevance
 
@@ -55,7 +55,7 @@ https://www.google.com/search?q=log4j2.enableSysLookup
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2MjM0NDkzNSwxOTM0Mjg4OTAsLTIwND
+eyJoaXN0b3J5IjpbMTY3NTAzNjgxNiwxOTM0Mjg4OTAsLTIwND
 E5NDQzMSwxMDIwODk4Nzg1LDEwNjk4Mzc3NCwxMzM3Mzk1MDk2
 LDExNjk2NzAzNTIsLTg4MDAyNzA5NywxNjc5MjI1OTA3LC0xMD
 k3OTI4ODg4LDYyNDkwNDczNV19
