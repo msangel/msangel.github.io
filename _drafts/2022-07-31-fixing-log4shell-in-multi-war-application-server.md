@@ -18,6 +18,8 @@ Log4j have these important features:
 - thread-safe
 - control of logging levels in hierarchical way
 - multiple output targets (appenders)
+- logging configuration can be applied at runtime
+- configurable output message format (layouts)
 - 
 
  https://habr.com/ru/search/?q=java%20logging&target_type=posts&order=relevance
@@ -51,7 +53,7 @@ https://www.google.com/search?q=log4j2.enableSysLookup
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTMzMzI1NTEsMTkzNDI4ODkwLC0yMD
+eyJoaXN0b3J5IjpbLTExMTE1NjU2OTUsMTkzNDI4ODkwLC0yMD
 QxOTQ0MzEsMTAyMDg5ODc4NSwxMDY5ODM3NzQsMTMzNzM5NTA5
 NiwxMTY5NjcwMzUyLC04ODAwMjcwOTcsMTY3OTIyNTkwNywtMT
 A5NzkyODg4OCw2MjQ5MDQ3MzVdfQ==
