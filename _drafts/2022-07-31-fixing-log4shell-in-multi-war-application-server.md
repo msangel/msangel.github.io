@@ -1,4 +1,4 @@
-Applications are silent till their developers will not provide them a way "to say" something. Usually developers have no resources and even needs to show nicely all what's happaned behind the scene of any application to final users. But still for tracking the processes and recording errors during the development, there a need somehow in cheap and fast way to track the application states. In era of GUI application the standart application streams are not in use. So good and easy idea is to leave GUI for user and use stdout and stderr for developer for logging application behavior. 
+Applications are silent till their developers will not provide them a way "to say" something. Usually developers have no resources and even needs to show nicely all what's happaned behind the scene of any application to final users. But still for tracking the processes and recording errors during the development, there a need somehow in cheap and fast way to track the application states. In era of GUI/WEB applications the standart application streams are not in use. So good and easy idea is to leave GUI/network socket for user and use `stdout` and `stderr` to developers for logging application behavior. 
 Well, all of us can print all debug information to the system output using plain `System.out.println` and errors using `System.err.println`. But with time the number of such logs can become huge. This will cause problem in navigating across them and tracking reqired information. 
 Also, the production and development log configuration is different. So more specialized tool is needed. The standard java library [does have](https://docs.oracle.com/javase/10/core/java-logging-overview.htm) log implementation inside it - the "java.util.logging" package (or "JUL"). Initially it was very poor, but now its somehow better. And because of this people need better tools. And so many opensource alternatives appear(top list):
  - Log4j(now the v2 is supported)
@@ -41,7 +41,7 @@ https://www.google.com/search?q=log4j2.enableSysLookup
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyMDg5ODc4NSwxMDY5ODM3NzQsMTMzNz
-M5NTA5NiwxMTY5NjcwMzUyLC04ODAwMjcwOTcsMTY3OTIyNTkw
-NywtMTA5NzkyODg4OCw2MjQ5MDQ3MzVdfQ==
+eyJoaXN0b3J5IjpbMjA1NjQ5NTQ4NCwxMDIwODk4Nzg1LDEwNj
+k4Mzc3NCwxMzM3Mzk1MDk2LDExNjk2NzAzNTIsLTg4MDAyNzA5
+NywxNjc5MjI1OTA3LC0xMDk3OTI4ODg4LDYyNDkwNDczNV19
 -->
