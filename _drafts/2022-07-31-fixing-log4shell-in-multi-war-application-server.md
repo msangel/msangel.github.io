@@ -1,5 +1,5 @@
 ### What is logging library?
-Applications are silent till their developers will not provide them a way "to say" something. Usually, developers have no time and even needs to show all that's happened behind the scene of any application to final users. But still, for tracking the processes and recording errors during the development, there is a need somehow in a cheap and fast way to track the application states. In the era of GUI/WEB applications the [standard application streams](https://en.wikipedia.org/wiki/Standard_streams) are no longer in use. So good and easy idea is to leave GUI/network sockets for users and use `stdout`/`stderr` to developers for logging application behavior. That seems an easy win.
+Applications are silent till their developers will not provide them a way "to say" something. Usually, developers have no time and even needs to show all that's happened behind the scene of any application to final users. But still, for tracking the processes and recording errors during the development, there is a need somehow in a cheap and fast way to track the  application states. In the era of GUI/WEB applications the [standard application streams](https://en.wikipedia.org/wiki/Standard_streams) are no longer in use. So good and easy idea is to leave GUI/network sockets for users and use `stdout`/`stderr` to developers for logging application behavior. That seems an easy win.
 
 With the time of application running, amount of processing and granularity of recording(logging) everything to `stdout`/`stderr`  the size of output may grow dramatically. This will cause problems in navigating across them and tracking required information. The options what to log and what not should be moved out of the application to some settings, so for changing logging properties will be no need to rebuild the application - changes will be applied on restart or even immediately, Also, the production and development tracking configuration may be different (in most cases it is). Even more, each application may wanted to have a few more independent logging channels(file output streams) in addition(or instead) to those from `stdout`/`stderr`.
 So, more specialized tools are needed with the required capabilities. In general, the group of libraries for configurable logging of application states are called... logging libraries. 
@@ -62,8 +62,9 @@ https://www.google.com/search?q=log4j2.enableSysLookup
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjgyOTc1NzYsLTc0NDY0NzEyMiwxOT
-M0Mjg4OTAsLTIwNDE5NDQzMSwxMDIwODk4Nzg1LDEwNjk4Mzc3
-NCwxMzM3Mzk1MDk2LDExNjk2NzAzNTIsLTg4MDAyNzA5NywxNj
-c5MjI1OTA3LC0xMDk3OTI4ODg4LDYyNDkwNDczNV19
+eyJoaXN0b3J5IjpbMTY5MTkwOTIwNCwtMTYyODI5NzU3NiwtNz
+Q0NjQ3MTIyLDE5MzQyODg5MCwtMjA0MTk0NDMxLDEwMjA4OTg3
+ODUsMTA2OTgzNzc0LDEzMzczOTUwOTYsMTE2OTY3MDM1MiwtOD
+gwMDI3MDk3LDE2NzkyMjU5MDcsLTEwOTc5Mjg4ODgsNjI0OTA0
+NzM1XX0=
 -->
