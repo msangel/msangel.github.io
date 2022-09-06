@@ -3,6 +3,10 @@ title: Regexp in java
 date: 2022-09-06 13:44:00 Z
 ---
 This document is just a roadmap for sample documentation.
+Also resources:
+https://github.com/jamiebuilds/documentation-handbook
+https://gist.github.com/PurpleBooth/109311bb0361f32d87a2
+https://www.writethedocs.org/guide/writing/beginners-guide-to-docs/
 
 ---
 
@@ -71,6 +75,6 @@ etc
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNjcxMTcwOCwtMzIxNDcwNDQwLC05Mz
-U0NDkwNjYsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbLTIwNjc0MjM4NzIsLTMyMTQ3MDQ0MCwtOT
+M1NDQ5MDY2LDczMDk5ODExNl19
 -->
