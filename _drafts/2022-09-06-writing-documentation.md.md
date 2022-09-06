@@ -2,12 +2,11 @@
 title: Regexp in java
 date: 2022-09-06 13:44:00 Z
 ---
-This document is just a roadmap for sample documentation.
+This document is just a roadmap for sample documentation take
 
 Also resources:
 
 - [Documentation handbook](https://github.com/jamiebuilds/documentation-handbook)
-- [README-Template.md](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
 - [A beginner’s guide to writing documentation](https://www.writethedocs.org/guide/writing/beginners-guide-to-docs/) and [Documentation Guide](https://www.writethedocs.org/guide/)
 - [Art of readme](https://github.com/noffle/art-of-readme)
 
@@ -80,6 +79,6 @@ etc
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5NTA1NDE5LC0zMjE0NzA0NDAsLTkzNT
-Q0OTA2Niw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTc1MzYwMzM2MCwtMzIxNDcwNDQwLC05Mz
+U0NDkwNjYsNzMwOTk4MTE2XX0=
 -->
