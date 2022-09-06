@@ -4,9 +4,10 @@ date: 2022-09-06 13:44:00 Z
 ---
 This document is just a roadmap for sample documentation.
 Also resources:
-https://github.com/jamiebuilds/documentation-handbook
-https://gist.github.com/PurpleBooth/109311bb0361f32d87a2
-https://www.writethedocs.org/guide/writing/beginners-guide-to-docs/
+
+[Documentation handbook](https://github.com/jamiebuilds/documentation-handbook)
+[README-Template.md](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
+[A beginner’s guide to writing documentation](https://www.writethedocs.org/guide/writing/beginners-guide-to-docs/)
 
 ---
 
@@ -75,6 +76,6 @@ etc
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjc0MjM4NzIsLTMyMTQ3MDQ0MCwtOT
-M1NDQ5MDY2LDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbMjAwNjEwNTA4NywtMzIxNDcwNDQwLC05Mz
+U0NDkwNjYsNzMwOTk4MTE2XX0=
 -->
