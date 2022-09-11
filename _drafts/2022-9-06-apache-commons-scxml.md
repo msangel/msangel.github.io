@@ -1,6 +1,6 @@
 ### Definitions
 State machine -  is a mathematical model of computation ([wiki](https://en.wikipedia.org/wiki/Finite-state_machine))
-Pushdown automaton - a kind of state machine with stacked memory, when automate operate with memory of it's stack, but also can exit stack le Is a basis 
+Pushdown automaton - a kind of state machine with stacked memory, when automate operate with memory of it's stack, but also can exit stack level, or enter into new. Computional model of computer languages interpretters and VM(and also physical) execut  
 business rules engine
 workflow engine
 scxml
@@ -58,7 +58,7 @@ https://www.businessprocessincubator.com/content/business-rules-engine-and-workf
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4NDk0Njg5MCwtMTI3MjMyNjY5MiwxMT
-gxMTQ0MzEwLDIwOTgxMjU5MywtMTkzODk0NDkzMCwtMjc3NzE0
-MDQwLDE3NzQ3MDYzNTRdfQ==
+eyJoaXN0b3J5IjpbNzgyMjg2MzY5LC0xMjcyMzI2NjkyLDExOD
+ExNDQzMTAsMjA5ODEyNTkzLC0xOTM4OTQ0OTMwLC0yNzc3MTQw
+NDAsMTc3NDcwNjM1NF19
 -->
