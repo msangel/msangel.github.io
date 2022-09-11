@@ -7,8 +7,11 @@ options are:
  - good enought: https://github.com/carlos-verdes/scxml-java/blob/master/scxml-complete.xsd
  - some unclear: https://github.com/diamondq/dq-common-java/tree/master/utils/common-utils.scxml/src/main/resources
 
-engine
+engines
 this engine
+Homepage: https://commons.apache.org/proper/commons-scxml/
+Sources: https://github.com/apache/commons-scxml
+
 samples
 https://github.com/woonsan/commons-scxml-examples
 https://alexzhornyak.github.io/SCXML-tutorial/
@@ -42,6 +45,6 @@ https://www.businessprocessincubator.com/content/business-rules-engine-and-workf
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTYyNzIyOTM5LC0xOTM4OTQ0OTMwLC0yNz
-c3MTQwNDAsMTc3NDcwNjM1NF19
+eyJoaXN0b3J5IjpbLTM2OTExNTc4MSwtMTkzODk0NDkzMCwtMj
+c3NzE0MDQwLDE3NzQ3MDYzNTRdfQ==
 -->
