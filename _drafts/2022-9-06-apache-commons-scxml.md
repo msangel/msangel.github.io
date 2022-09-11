@@ -5,6 +5,9 @@ BUT there no standart "dtd" or "xsd" schema file.
 options are:
 
  - some unfinished draft: https://www.w3.org/2011/04/SCXML/
+ - good enought: 
+ - some unclear: https://github.com/diamondq/dq-common-java/tree/master/utils/common-utils.scxml/src/main/resources
+ -  
 
 engine
 this engine
@@ -41,6 +44,6 @@ https://www.businessprocessincubator.com/content/business-rules-engine-and-workf
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1Nzg3Mzg0OTksLTI3NzcxNDA0MCwxNz
-c0NzA2MzU0XX0=
+eyJoaXN0b3J5IjpbMTgzMDExNzY1MSwtMjc3NzE0MDQwLDE3Nz
+Q3MDYzNTRdfQ==
 -->
