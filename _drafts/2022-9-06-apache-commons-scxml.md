@@ -1,5 +1,5 @@
 ### Definitions
-state machine - 
+state machine -  is a mathematical model of computation ([wiki](https://en.wikipedia.org/wiki/Finite-state_machine))
 business rules engine
 workflow engine
 scxml
@@ -57,7 +57,7 @@ https://www.businessprocessincubator.com/content/business-rules-engine-and-workf
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTQxODU5MzIsMTE4MTE0NDMxMCwyMD
+eyJoaXN0b3J5IjpbLTEyNzIzMjY2OTIsMTE4MTE0NDMxMCwyMD
 k4MTI1OTMsLTE5Mzg5NDQ5MzAsLTI3NzcxNDA0MCwxNzc0NzA2
 MzU0XX0=
 -->
