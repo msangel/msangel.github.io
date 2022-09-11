@@ -9,6 +9,7 @@ Options are:
 ### Engines options
 scxml based:
 https://commons.apache.org/proper/commons-scxml/ - hero of this post
+https://github.com/carlos-verdes/scxml-java - another java implementation
 https://github.com/moraispgsi/fsm-engine - node.js
 
 
@@ -48,6 +49,6 @@ https://www.businessprocessincubator.com/content/business-rules-engine-and-workf
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwNzU1ODE3LDIwOTgxMjU5MywtMTkzOD
-k0NDkzMCwtMjc3NzE0MDQwLDE3NzQ3MDYzNTRdfQ==
+eyJoaXN0b3J5IjpbMTE4MTE0NDMxMCwyMDk4MTI1OTMsLTE5Mz
+g5NDQ5MzAsLTI3NzcxNDA0MCwxNzc0NzA2MzU0XX0=
 -->
