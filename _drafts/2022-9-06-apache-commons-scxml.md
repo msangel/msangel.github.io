@@ -1,10 +1,16 @@
 plan:
 specs
 spec defined there: https://www.w3.org/TR/scxml/
-BUT there no standart "dtd" or "" 
+BUT there no standart "dtd" or "xsd" schema file.
+options are:
+
+ - some unfinished draft: https://www.w3.org/2011/04/SCXML/
+
 engine
 this engine
 sample
+https://github.com/woonsan/commons-scxml-examples
+
 complex sample
 
 other engines
@@ -34,6 +40,6 @@ https://www.businessprocessincubator.com/content/business-rules-engine-and-workf
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2MDYzODg5MiwtMjc3NzE0MDQwLDE3Nz
+eyJoaXN0b3J5IjpbMjAxMjIxMDYxMCwtMjc3NzE0MDQwLDE3Nz
 Q3MDYzNTRdfQ==
 -->
