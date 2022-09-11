@@ -3,12 +3,9 @@ specs
 spec defined there: https://www.w3.org/TR/scxml/
 BUT there no standart "dtd" or "xsd" schema file.
 options are:
-
- - some unfinished draft: https://www.w3.org/2011/04/SCXML/
+ - unfinished draft: https://www.w3.org/2011/04/SCXML/
  - good enought: https://github.com/carlos-verdes/scxml-java/blob/master/scxml-complete.xsd
  - some unclear: https://github.com/diamondq/dq-common-java/tree/master/utils/common-utils.scxml/src/main/resources
- - 
- -  
 
 engine
 this engine
@@ -45,6 +42,6 @@ https://www.businessprocessincubator.com/content/business-rules-engine-and-workf
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3MTc4OTE4OSwtMTkzODk0NDkzMCwtMj
-c3NzE0MDQwLDE3NzQ3MDYzNTRdfQ==
+eyJoaXN0b3J5IjpbNTYyNzIyOTM5LC0xOTM4OTQ0OTMwLC0yNz
+c3MTQwNDAsMTc3NDcwNjM1NF19
 -->
