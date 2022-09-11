@@ -8,8 +8,9 @@ options are:
 
 engine
 this engine
-sample
+samples
 https://github.com/woonsan/commons-scxml-examples
+https://alexzhornyak.github.io/SCXML-tutorial/
 
 complex sample
 
@@ -40,6 +41,6 @@ https://www.businessprocessincubator.com/content/business-rules-engine-and-workf
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxMjIxMDYxMCwtMjc3NzE0MDQwLDE3Nz
-Q3MDYzNTRdfQ==
+eyJoaXN0b3J5IjpbLTE1Nzg3Mzg0OTksLTI3NzcxNDA0MCwxNz
+c0NzA2MzU0XX0=
 -->
