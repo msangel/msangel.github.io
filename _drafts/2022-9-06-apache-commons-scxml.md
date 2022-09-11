@@ -1,7 +1,7 @@
 ### Definitions
-state machine
-workflow engine
+state machine - 
 business rules engine
+workflow engine
 scxml
 
 ### Specs
@@ -50,12 +50,14 @@ https://commons.apache.org/proper/commons-scxml/
 https://xmdocumentation.bloomreach.com/library/concepts/workflow/document-workflow.html
 
 https://www.google.com/search?q=workflow+vs+rule+engine
+https://www.google.com/search?q=business+rules+engine+vs+state+machine
+
 https://www.businessprocessincubator.com/content/business-rules-engine-and-workflow-engine-difference/
 
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDgxNTA1NjQwLDExODExNDQzMTAsMjA5OD
-EyNTkzLC0xOTM4OTQ0OTMwLC0yNzc3MTQwNDAsMTc3NDcwNjM1
-NF19
+eyJoaXN0b3J5IjpbLTEwMTQxODU5MzIsMTE4MTE0NDMxMCwyMD
+k4MTI1OTMsLTE5Mzg5NDQ5MzAsLTI3NzcxNDA0MCwxNzc0NzA2
+MzU0XX0=
 -->
