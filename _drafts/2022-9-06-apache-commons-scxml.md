@@ -1,26 +1,25 @@
-plan:
-specs
-spec defined there: https://www.w3.org/TR/scxml/
+### Specs
+Spec defined there: https://www.w3.org/TR/scxml/
 BUT there no standart "dtd" or "xsd" schema file.
-options are:
+Options are:
  - unfinished draft: https://www.w3.org/2011/04/SCXML/
  - good enought: https://github.com/carlos-verdes/scxml-java/blob/master/scxml-complete.xsd
  - some unclear: https://github.com/diamondq/dq-common-java/tree/master/utils/common-utils.scxml/src/main/resources
 
-engines
-this engine
+### Engines options
+
+### This engine
 Homepage: https://commons.apache.org/proper/commons-scxml/
 Sources: https://github.com/apache/commons-scxml
 
-samples
+### Samples
 https://github.com/woonsan/commons-scxml-examples
 https://alexzhornyak.github.io/SCXML-tutorial/
 
-complex sample
+### Complex sample
 
-other engines
 
-resources:
+### Resources:
 https://github.com/okayrunner/piper
 https://spring.io/blog/2015/03/08/getting-started-with-activiti-and-spring-boot
 https://github.com/meirwah/awesome-workflow-engines
@@ -45,6 +44,6 @@ https://www.businessprocessincubator.com/content/business-rules-engine-and-workf
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2OTExNTc4MSwtMTkzODk0NDkzMCwtMj
-c3NzE0MDQwLDE3NzQ3MDYzNTRdfQ==
+eyJoaXN0b3J5IjpbMjA5ODEyNTkzLC0xOTM4OTQ0OTMwLC0yNz
+c3MTQwNDAsMTc3NDcwNjM1NF19
 -->
