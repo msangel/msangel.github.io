@@ -1,3 +1,9 @@
+### Definitions
+state machine
+workflow engine
+business rules engine
+scxml
+
 ### Specs
 Spec defined there: https://www.w3.org/TR/scxml/
 BUT there no standart "dtd" or "xsd" schema file.
@@ -49,6 +55,7 @@ https://www.businessprocessincubator.com/content/business-rules-engine-and-workf
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4MTE0NDMxMCwyMDk4MTI1OTMsLTE5Mz
-g5NDQ5MzAsLTI3NzcxNDA0MCwxNzc0NzA2MzU0XX0=
+eyJoaXN0b3J5IjpbNDgxNTA1NjQwLDExODExNDQzMTAsMjA5OD
+EyNTkzLC0xOTM4OTQ0OTMwLC0yNzc3MTQwNDAsMTc3NDcwNjM1
+NF19
 -->
