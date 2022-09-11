@@ -1,5 +1,7 @@
 plan:
-protocol
+specs
+spec defined there: https://www.w3.org/TR/scxml/
+BUT there no standart "dtd" or "" 
 engine
 this engine
 sample
@@ -32,5 +34,6 @@ https://www.businessprocessincubator.com/content/business-rules-engine-and-workf
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3NzcxNDA0MCwxNzc0NzA2MzU0XX0=
+eyJoaXN0b3J5IjpbMTU2MDYzODg5MiwtMjc3NzE0MDQwLDE3Nz
+Q3MDYzNTRdfQ==
 -->
