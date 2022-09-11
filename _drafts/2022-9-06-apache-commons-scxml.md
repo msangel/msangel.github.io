@@ -8,7 +8,9 @@ Options are:
 
 ### Engines options
 scxml based:
-https://github.com/moraispgsi/fsm-engine (node,)
+https://commons.apache.org/proper/commons-scxml/ - hero of this post
+https://github.com/moraispgsi/fsm-engine - node.js
+
 
 ### This engine
 Homepage: https://commons.apache.org/proper/commons-scxml/
@@ -46,6 +48,6 @@ https://www.businessprocessincubator.com/content/business-rules-engine-and-workf
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTc2MzAwNDg4LDIwOTgxMjU5MywtMTkzOD
+eyJoaXN0b3J5IjpbMjAwNzU1ODE3LDIwOTgxMjU5MywtMTkzOD
 k0NDkzMCwtMjc3NzE0MDQwLDE3NzQ3MDYzNTRdfQ==
 -->
