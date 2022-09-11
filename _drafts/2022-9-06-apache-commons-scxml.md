@@ -7,6 +7,8 @@ Options are:
  - some unclear: https://github.com/diamondq/dq-common-java/tree/master/utils/common-utils.scxml/src/main/resources
 
 ### Engines options
+scxml based:
+https://github.com/moraispgsi/fsm-engine (node,)
 
 ### This engine
 Homepage: https://commons.apache.org/proper/commons-scxml/
@@ -44,6 +46,6 @@ https://www.businessprocessincubator.com/content/business-rules-engine-and-workf
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5ODEyNTkzLC0xOTM4OTQ0OTMwLC0yNz
-c3MTQwNDAsMTc3NDcwNjM1NF19
+eyJoaXN0b3J5IjpbOTc2MzAwNDg4LDIwOTgxMjU5MywtMTkzOD
+k0NDkzMCwtMjc3NzE0MDQwLDE3NzQ3MDYzNTRdfQ==
 -->
