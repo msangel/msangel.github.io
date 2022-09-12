@@ -34,7 +34,8 @@ https://alexzhornyak.github.io/SCXML-tutorial/
 ### Resources
 
 ### Workflow engines
-When designing system it is very important what you need - state machine, rule engine or workflow 
+When designing system it is very important what you need - state machine, rule engine or workflow engine. Difference eventually is leaking
+Anyway, here's 
 https://github.com/okayrunner/piper
 https://spring.io/blog/2015/03/08/getting-started-with-activiti-and-spring-boot
 https://github.com/meirwah/awesome-workflow-engines
@@ -61,7 +62,7 @@ https://www.businessprocessincubator.com/content/business-rules-engine-and-workf
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyMTMyMjk0NCwtNDY1NjYzNDY3LC0xMj
+eyJoaXN0b3J5IjpbMTYxNDkxNTMxMiwtNDY1NjYzNDY3LC0xMj
 cyMzI2NjkyLDExODExNDQzMTAsMjA5ODEyNTkzLC0xOTM4OTQ0
 OTMwLC0yNzc3MTQwNDAsMTc3NDcwNjM1NF19
 -->
