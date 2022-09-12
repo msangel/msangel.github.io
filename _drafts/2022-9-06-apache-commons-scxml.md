@@ -36,6 +36,8 @@ https://alexzhornyak.github.io/SCXML-tutorial/
 ### Resources
 
 ### Workflow engines
+todo: here https://github.com/meirwah/awesome-workflow-engines
+
 When designing system it is very important what you need - state machine, rule engine or workflow engine. Depending on the implementation, the difference may disappears.
 Anyway, here's a list of workflow engines: 
  - [Camunda](https://github.com/camunda/camunda-bpm-platform)  - BPMN-based workflow engine that can be embedded as java library (e.g. Spring Boot) or used standalone, including a graphical modeler and operations tooling.
@@ -71,7 +73,7 @@ https://www.businessprocessincubator.com/content/business-rules-engine-and-workf
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjg0NDY2MzMsLTQ2NTY2MzQ2NywtMT
-I3MjMyNjY5MiwxMTgxMTQ0MzEwLDIwOTgxMjU5MywtMTkzODk0
-NDkzMCwtMjc3NzE0MDQwLDE3NzQ3MDYzNTRdfQ==
+eyJoaXN0b3J5IjpbMTQyODA1Njc1MCwtNDY1NjYzNDY3LC0xMj
+cyMzI2NjkyLDExODExNDQzMTAsMjA5ODEyNTkzLC0xOTM4OTQ0
+OTMwLC0yNzc3MTQwNDAsMTc3NDcwNjM1NF19
 -->
