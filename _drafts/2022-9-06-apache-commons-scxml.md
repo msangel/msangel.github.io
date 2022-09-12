@@ -3,6 +3,7 @@
 **Pushdown automaton** - a kind of state machine with stacked memory, when automate operates with the memory of its stack, but also can exit stack level, or enter into new. A computational model of computers, programming languages and VM is based on this. Not a subject of this post, just for general knowledge. ([wiki](https://en.wikipedia.org/wiki/Pushdown_automaton))  
 Business rules engine ([wiki](https://en.wikipedia.org/wiki/Business_rules_engine))
 workflow engine
+Business Process Management (BPM) Suite
 scxml
 
 ### Specs
@@ -69,7 +70,7 @@ https://www.businessprocessincubator.com/content/business-rules-engine-and-workf
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4MTg2OTc1MSwtNDY1NjYzNDY3LC0xMj
-cyMzI2NjkyLDExODExNDQzMTAsMjA5ODEyNTkzLC0xOTM4OTQ0
-OTMwLC0yNzc3MTQwNDAsMTc3NDcwNjM1NF19
+eyJoaXN0b3J5IjpbLTE5Mjg2NzUwNTUsLTQ2NTY2MzQ2NywtMT
+I3MjMyNjY5MiwxMTgxMTQ0MzEwLDIwOTgxMjU5MywtMTkzODk0
+NDkzMCwtMjc3NzE0MDQwLDE3NzQ3MDYzNTRdfQ==
 -->
