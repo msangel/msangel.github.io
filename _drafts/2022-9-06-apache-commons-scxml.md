@@ -31,7 +31,10 @@ https://alexzhornyak.github.io/SCXML-tutorial/
 ### Complex sample
 
 
-### Resources:
+### Resources
+
+### Workflow engines
+When designing system it is very important what you need - state machine, rule engine or workflow 
 https://github.com/okayrunner/piper
 https://spring.io/blog/2015/03/08/getting-started-with-activiti-and-spring-boot
 https://github.com/meirwah/awesome-workflow-engines
@@ -58,7 +61,7 @@ https://www.businessprocessincubator.com/content/business-rules-engine-and-workf
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2NTY2MzQ2NywtMTI3MjMyNjY5MiwxMT
-gxMTQ0MzEwLDIwOTgxMjU5MywtMTkzODk0NDkzMCwtMjc3NzE0
-MDQwLDE3NzQ3MDYzNTRdfQ==
+eyJoaXN0b3J5IjpbLTUyMTMyMjk0NCwtNDY1NjYzNDY3LC0xMj
+cyMzI2NjkyLDExODExNDQzMTAsMjA5ODEyNTkzLC0xOTM4OTQ0
+OTMwLC0yNzc3MTQwNDAsMTc3NDcwNjM1NF19
 -->
