@@ -41,6 +41,7 @@ Anyway, here's a list of workflow engines:
  - [Camunda](https://github.com/camunda/camunda-bpm-platform)  - BPMN-based workflow engine that can be embedded as java library (e.g. Spring Boot) or used standalone, including a graphical modeler and operations tooling.
  - [Copper](https://github.com/copper-engine/copper-engine)  - A high performance Java workflow engine.
  - -   [easy-rules](https://github.com/j-easy/easy-rules) - The simple, stupid rules engine for Java.
+ -  - -   [Piper](https://github.com/creactiviti/piper)  - A distributed Java workflow engine designed to be dead simple.
 
 https://spring.io/blog/2015/03/08/getting-started-with-activiti-and-spring-boot
 https://github.com/meirwah/awesome-workflow-engines
@@ -67,7 +68,7 @@ https://www.businessprocessincubator.com/content/business-rules-engine-and-workf
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwMDcxODg0MSwtNDY1NjYzNDY3LC0xMj
+eyJoaXN0b3J5IjpbLTI2NzM4ODU3OCwtNDY1NjYzNDY3LC0xMj
 cyMzI2NjkyLDExODExNDQzMTAsMjA5ODEyNTkzLC0xOTM4OTQ0
 OTMwLC0yNzc3MTQwNDAsMTc3NDcwNjM1NF19
 -->
