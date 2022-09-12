@@ -4,7 +4,8 @@
 Business rules engine ([wiki](https://en.wikipedia.org/wiki/Business_rules_engine))
 workflow engine
 Business Process Management (BPM) Suite
-scxml
+State Chart XML (scxml)
+Business Process Model and Notation (BPMN)
 
 ### Specs
 Spec defined there: https://www.w3.org/TR/scxml/
@@ -70,7 +71,7 @@ https://www.businessprocessincubator.com/content/business-rules-engine-and-workf
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5Mjg2NzUwNTUsLTQ2NTY2MzQ2NywtMT
+eyJoaXN0b3J5IjpbLTEzNjg0NDY2MzMsLTQ2NTY2MzQ2NywtMT
 I3MjMyNjY5MiwxMTgxMTQ0MzEwLDIwOTgxMjU5MywtMTkzODk0
 NDkzMCwtMjc3NzE0MDQwLDE3NzQ3MDYzNTRdfQ==
 -->
