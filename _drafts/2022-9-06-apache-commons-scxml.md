@@ -1,6 +1,6 @@
 ### Definitions
 **State machine** -  is a mathematical model of computation ([wiki](https://en.wikipedia.org/wiki/Finite-state_machine))
-**Pushdown automaton** - a kind of state machine with stacked memory, when automate operates with the memory of its stack, but also can exit stack level, or enter into new. A computational model of computers, programming languages and VM is based on this. Not a subject of this post, just for general knowledge. ([wiki](https://en.wikipedia.org/wiki/Pushdown_automaton))  
+**Pushdown automaton** - a kind of state machine with stacked memory, when automate operates with the memory of it's stack, but also can exit stack level, or enter into new. A computational model of computers, programming languages and VM is based on this. Not a subject of this post, just for general knowledge. ([wiki](https://en.wikipedia.org/wiki/Pushdown_automaton))  
 Business rules engine ([wiki](https://en.wikipedia.org/wiki/Business_rules_engine))
 workflow engine
 Business Process Management (BPM) Suite
@@ -73,7 +73,8 @@ https://www.businessprocessincubator.com/content/business-rules-engine-and-workf
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyODA1Njc1MCwtNDY1NjYzNDY3LC0xMj
-cyMzI2NjkyLDExODExNDQzMTAsMjA5ODEyNTkzLC0xOTM4OTQ0
-OTMwLC0yNzc3MTQwNDAsMTc3NDcwNjM1NF19
+eyJoaXN0b3J5IjpbMTA1MDExODE0MywxNDI4MDU2NzUwLC00Nj
+U2NjM0NjcsLTEyNzIzMjY2OTIsMTE4MTE0NDMxMCwyMDk4MTI1
+OTMsLTE5Mzg5NDQ5MzAsLTI3NzcxNDA0MCwxNzc0NzA2MzU0XX
+0=
 -->
