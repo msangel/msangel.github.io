@@ -32,6 +32,8 @@ https://alexzhornyak.github.io/SCXML-tutorial/
 
 ### Complex sample
 Here we will recreate basic document workflow from hippo cms 
+http://svn.onehippo.org/viewvc/hippo-cms7/repository/trunk/workflow/src/main/resources/?pathrev=52557
+
 
 
 ### Resources
@@ -74,8 +76,8 @@ https://www.businessprocessincubator.com/content/business-rules-engine-and-workf
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5ODMzMDY0MywxMDUwMTE4MTQzLDE0Mj
-gwNTY3NTAsLTQ2NTY2MzQ2NywtMTI3MjMyNjY5MiwxMTgxMTQ0
-MzEwLDIwOTgxMjU5MywtMTkzODk0NDkzMCwtMjc3NzE0MDQwLD
-E3NzQ3MDYzNTRdfQ==
+eyJoaXN0b3J5IjpbMTA0NTgzNzU3MywtNTk4MzMwNjQzLDEwNT
+AxMTgxNDMsMTQyODA1Njc1MCwtNDY1NjYzNDY3LC0xMjcyMzI2
+NjkyLDExODExNDQzMTAsMjA5ODEyNTkzLC0xOTM4OTQ0OTMwLC
+0yNzc3MTQwNDAsMTc3NDcwNjM1NF19
 -->
