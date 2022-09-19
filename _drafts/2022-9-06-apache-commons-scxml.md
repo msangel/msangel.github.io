@@ -25,9 +25,10 @@ https://github.com/moraispgsi/fsm-engine - node.js
 ### This engine
 Homepage: https://commons.apache.org/proper/commons-scxml/
 Sources: https://github.com/apache/commons-scxml
-XSD schema seems not exists , but you can reffer [SCXMLReader](https://github.com/apache/commons-scxml/blob/master/src/main/java/org/apache/commons/scxml2/io/SCXMLReader.java) class from sources to see capabilities. 
+XSD schema seems not exists, but you can reffer [SCXMLReader](https://github.com/apache/commons-scxml/blob/master/src/main/java/org/apache/commons/scxml2/io/SCXMLReader.java) class from sources.
 
 ### Samples
+https://github.com/apache/commons-scxml/tree/master/src/test/java/org/apache/commons/scxml2
 https://github.com/woonsan/commons-scxml-examples
 https://alexzhornyak.github.io/SCXML-tutorial/
 
@@ -77,9 +78,9 @@ https://www.businessprocessincubator.com/content/business-rules-engine-and-workf
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODY3NDAyNDQzLC0xNTQ1NTgyMTc3LDEwND
-U4Mzc1NzMsLTU5ODMzMDY0MywxMDUwMTE4MTQzLDE0MjgwNTY3
-NTAsLTQ2NTY2MzQ2NywtMTI3MjMyNjY5MiwxMTgxMTQ0MzEwLD
-IwOTgxMjU5MywtMTkzODk0NDkzMCwtMjc3NzE0MDQwLDE3NzQ3
-MDYzNTRdfQ==
+eyJoaXN0b3J5IjpbLTEzODA1NDcxMCw4Njc0MDI0NDMsLTE1ND
+U1ODIxNzcsMTA0NTgzNzU3MywtNTk4MzMwNjQzLDEwNTAxMTgx
+NDMsMTQyODA1Njc1MCwtNDY1NjYzNDY3LC0xMjcyMzI2NjkyLD
+ExODExNDQzMTAsMjA5ODEyNTkzLC0xOTM4OTQ0OTMwLC0yNzc3
+MTQwNDAsMTc3NDcwNjM1NF19
 -->
