@@ -50,7 +50,7 @@ So. The diagramm.
 
 ### Resources
 
-### Workflow engines
+### Other workflow engines
 todo: here https://github.com/meirwah/awesome-workflow-engines
 
 When designing system it is very important what you need - state machine, rule engine or workflow engine. Depending on the implementation, the difference may disappears.
@@ -88,11 +88,11 @@ https://www.businessprocessincubator.com/content/business-rules-engine-and-workf
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxODM3NzIzMywxMjM1ODQ5Njg2LDczOD
-gxMDcyNiwtMTk4MTQzNjc5OCwtMTI1NTIyOTUyMSw5MjY3Nzk5
-NTIsLTEzOTg0NDYzMDMsLTEzODA1NDcxMCw4Njc0MDI0NDMsLT
-E1NDU1ODIxNzcsMTA0NTgzNzU3MywtNTk4MzMwNjQzLDEwNTAx
-MTgxNDMsMTQyODA1Njc1MCwtNDY1NjYzNDY3LC0xMjcyMzI2Nj
-kyLDExODExNDQzMTAsMjA5ODEyNTkzLC0xOTM4OTQ0OTMwLC0y
-Nzc3MTQwNDBdfQ==
+eyJoaXN0b3J5IjpbLTEyOTc1MTM2NjMsMTIzNTg0OTY4Niw3Mz
+g4MTA3MjYsLTE5ODE0MzY3OTgsLTEyNTUyMjk1MjEsOTI2Nzc5
+OTUyLC0xMzk4NDQ2MzAzLC0xMzgwNTQ3MTAsODY3NDAyNDQzLC
+0xNTQ1NTgyMTc3LDEwNDU4Mzc1NzMsLTU5ODMzMDY0MywxMDUw
+MTE4MTQzLDE0MjgwNTY3NTAsLTQ2NTY2MzQ2NywtMTI3MjMyNj
+Y5MiwxMTgxMTQ0MzEwLDIwOTgxMjU5MywtMTkzODk0NDkzMCwt
+Mjc3NzE0MDQwXX0=
 -->
