@@ -37,6 +37,9 @@ Here we will recreate basic document workflow from hippo cms
 http://svn.onehippo.org/viewvc/hippo-cms7/repository/trunk/workflow/src/main/resources/?pathrev=52557
 It's implementation build on top of  commons-scxml2, but also contains custom actions from own library [hippo-repository-workflow](https://maven.onehippo.com/maven2/org/onehippo/cms7/hippo-repository-workflow/15.1.0/). In our sample we will mimic actions from there, but is simple straighforward way and so without that dependency.
 
+Documentation on above can be found there:
+https://xmdocumentation.bloomreach.com/library/concepts/workflow/workflow.html
+
 
 
 
@@ -80,10 +83,10 @@ https://www.businessprocessincubator.com/content/business-rules-engine-and-workf
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTI2Nzc5OTUyLC0xMzk4NDQ2MzAzLC0xMz
-gwNTQ3MTAsODY3NDAyNDQzLC0xNTQ1NTgyMTc3LDEwNDU4Mzc1
-NzMsLTU5ODMzMDY0MywxMDUwMTE4MTQzLDE0MjgwNTY3NTAsLT
-Q2NTY2MzQ2NywtMTI3MjMyNjY5MiwxMTgxMTQ0MzEwLDIwOTgx
-MjU5MywtMTkzODk0NDkzMCwtMjc3NzE0MDQwLDE3NzQ3MDYzNT
-RdfQ==
+eyJoaXN0b3J5IjpbLTEyNTUyMjk1MjEsOTI2Nzc5OTUyLC0xMz
+k4NDQ2MzAzLC0xMzgwNTQ3MTAsODY3NDAyNDQzLC0xNTQ1NTgy
+MTc3LDEwNDU4Mzc1NzMsLTU5ODMzMDY0MywxMDUwMTE4MTQzLD
+E0MjgwNTY3NTAsLTQ2NTY2MzQ2NywtMTI3MjMyNjY5MiwxMTgx
+MTQ0MzEwLDIwOTgxMjU5MywtMTkzODk0NDkzMCwtMjc3NzE0MD
+QwLDE3NzQ3MDYzNTRdfQ==
 -->
