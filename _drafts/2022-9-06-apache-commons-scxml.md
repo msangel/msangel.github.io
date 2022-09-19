@@ -35,6 +35,7 @@ https://alexzhornyak.github.io/SCXML-tutorial/
 ### Complex sample
 Here we will recreate basic document workflow from hippo cms 
 http://svn.onehippo.org/viewvc/hippo-cms7/repository/trunk/workflow/src/main/resources/?pathrev=52557
+It's implementation build on top of  commons-scxml2, but also contains custom actions from own library [hippo-repository-workflow](https://maven.onehippo.com/maven2/org/onehippo/cms7/hippo-repository-workflow/15.1.0/)
 
 
 
@@ -78,9 +79,9 @@ https://www.businessprocessincubator.com/content/business-rules-engine-and-workf
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzODA1NDcxMCw4Njc0MDI0NDMsLTE1ND
-U1ODIxNzcsMTA0NTgzNzU3MywtNTk4MzMwNjQzLDEwNTAxMTgx
-NDMsMTQyODA1Njc1MCwtNDY1NjYzNDY3LC0xMjcyMzI2NjkyLD
-ExODExNDQzMTAsMjA5ODEyNTkzLC0xOTM4OTQ0OTMwLC0yNzc3
-MTQwNDAsMTc3NDcwNjM1NF19
+eyJoaXN0b3J5IjpbLTEzOTg0NDYzMDMsLTEzODA1NDcxMCw4Nj
+c0MDI0NDMsLTE1NDU1ODIxNzcsMTA0NTgzNzU3MywtNTk4MzMw
+NjQzLDEwNTAxMTgxNDMsMTQyODA1Njc1MCwtNDY1NjYzNDY3LC
+0xMjcyMzI2NjkyLDExODExNDQzMTAsMjA5ODEyNTkzLC0xOTM4
+OTQ0OTMwLC0yNzc3MTQwNDAsMTc3NDcwNjM1NF19
 -->
