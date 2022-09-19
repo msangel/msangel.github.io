@@ -44,6 +44,7 @@ https://xmdocumentation.bloomreach.com/library/concepts/workflow/workflow.html
 Also, application-wide FSM event listener(service bus): https://xmdocumentation.bloomreach.com/library/concepts/services/event-bus.html for reacting on workflow events.
 
 So. The diagramm.
+<div style="width: 640px; height: 480px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="https://lucid.app/documents/embedded/a599b825-f33e-42f8-8ad6-a393f9d6227e" id="BtGS6rOs8mYj"></iframe></div>
 
 
 
@@ -87,11 +88,11 @@ https://www.businessprocessincubator.com/content/business-rules-engine-and-workf
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzM4ODEwNzI2LC0xOTgxNDM2Nzk4LC0xMj
-U1MjI5NTIxLDkyNjc3OTk1MiwtMTM5ODQ0NjMwMywtMTM4MDU0
-NzEwLDg2NzQwMjQ0MywtMTU0NTU4MjE3NywxMDQ1ODM3NTczLC
-01OTgzMzA2NDMsMTA1MDExODE0MywxNDI4MDU2NzUwLC00NjU2
-NjM0NjcsLTEyNzIzMjY2OTIsMTE4MTE0NDMxMCwyMDk4MTI1OT
-MsLTE5Mzg5NDQ5MzAsLTI3NzcxNDA0MCwxNzc0NzA2MzU0XX0=
-
+eyJoaXN0b3J5IjpbMTIzNTg0OTY4Niw3Mzg4MTA3MjYsLTE5OD
+E0MzY3OTgsLTEyNTUyMjk1MjEsOTI2Nzc5OTUyLC0xMzk4NDQ2
+MzAzLC0xMzgwNTQ3MTAsODY3NDAyNDQzLC0xNTQ1NTgyMTc3LD
+EwNDU4Mzc1NzMsLTU5ODMzMDY0MywxMDUwMTE4MTQzLDE0Mjgw
+NTY3NTAsLTQ2NTY2MzQ2NywtMTI3MjMyNjY5MiwxMTgxMTQ0Mz
+EwLDIwOTgxMjU5MywtMTkzODk0NDkzMCwtMjc3NzE0MDQwLDE3
+NzQ3MDYzNTRdfQ==
 -->
