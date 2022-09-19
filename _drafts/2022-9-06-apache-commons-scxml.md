@@ -32,7 +32,9 @@ https://github.com/apache/commons-scxml/tree/master/src/test/java/org/apache/com
 https://github.com/woonsan/commons-scxml-examples
 https://alexzhornyak.github.io/SCXML-tutorial/
 
-### Complex sample
+### Sample app
+
+### Complex sample app
 Here we will recreate basic document workflow from hippo cms 
 http://svn.onehippo.org/viewvc/hippo-cms7/repository/trunk/workflow/src/main/resources/?pathrev=52557
 It's implementation build on top of  commons-scxml2, but also contains custom actions from own library [hippo-repository-workflow](https://maven.onehippo.com/maven2/org/onehippo/cms7/hippo-repository-workflow/15.1.0/). In our sample we will mimic actions from there, but is simple straighforward way and so without that dependency.
@@ -41,6 +43,7 @@ Documentation on above can be found there:
 https://xmdocumentation.bloomreach.com/library/concepts/workflow/workflow.html
 Also, application-wide FSM event listener(service bus): https://xmdocumentation.bloomreach.com/library/concepts/services/event-bus.html for reacting on workflow events.
 
+So. The diagramm.
 
 
 
@@ -84,10 +87,11 @@ https://www.businessprocessincubator.com/content/business-rules-engine-and-workf
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODE0MzY3OTgsLTEyNTUyMjk1MjEsOT
-I2Nzc5OTUyLC0xMzk4NDQ2MzAzLC0xMzgwNTQ3MTAsODY3NDAy
-NDQzLC0xNTQ1NTgyMTc3LDEwNDU4Mzc1NzMsLTU5ODMzMDY0My
-wxMDUwMTE4MTQzLDE0MjgwNTY3NTAsLTQ2NTY2MzQ2NywtMTI3
-MjMyNjY5MiwxMTgxMTQ0MzEwLDIwOTgxMjU5MywtMTkzODk0ND
-kzMCwtMjc3NzE0MDQwLDE3NzQ3MDYzNTRdfQ==
+eyJoaXN0b3J5IjpbNzM4ODEwNzI2LC0xOTgxNDM2Nzk4LC0xMj
+U1MjI5NTIxLDkyNjc3OTk1MiwtMTM5ODQ0NjMwMywtMTM4MDU0
+NzEwLDg2NzQwMjQ0MywtMTU0NTU4MjE3NywxMDQ1ODM3NTczLC
+01OTgzMzA2NDMsMTA1MDExODE0MywxNDI4MDU2NzUwLC00NjU2
+NjM0NjcsLTEyNzIzMjY2OTIsMTE4MTE0NDMxMCwyMDk4MTI1OT
+MsLTE5Mzg5NDQ5MzAsLTI3NzcxNDA0MCwxNzc0NzA2MzU0XX0=
+
 -->
