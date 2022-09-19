@@ -39,6 +39,7 @@ It's implementation build on top of  commons-scxml2, but also contains custom ac
 
 Documentation on above can be found there:
 https://xmdocumentation.bloomreach.com/library/concepts/workflow/workflow.html
+Also, application-wide FSM event listener(service bus): https://xmdocumentation.bloomreach.com/library/concepts/services/event-bus.html for reacting on workflow events.
 
 
 
@@ -83,10 +84,10 @@ https://www.businessprocessincubator.com/content/business-rules-engine-and-workf
 
 > Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTUyMjk1MjEsOTI2Nzc5OTUyLC0xMz
-k4NDQ2MzAzLC0xMzgwNTQ3MTAsODY3NDAyNDQzLC0xNTQ1NTgy
-MTc3LDEwNDU4Mzc1NzMsLTU5ODMzMDY0MywxMDUwMTE4MTQzLD
-E0MjgwNTY3NTAsLTQ2NTY2MzQ2NywtMTI3MjMyNjY5MiwxMTgx
-MTQ0MzEwLDIwOTgxMjU5MywtMTkzODk0NDkzMCwtMjc3NzE0MD
-QwLDE3NzQ3MDYzNTRdfQ==
+eyJoaXN0b3J5IjpbLTE5ODE0MzY3OTgsLTEyNTUyMjk1MjEsOT
+I2Nzc5OTUyLC0xMzk4NDQ2MzAzLC0xMzgwNTQ3MTAsODY3NDAy
+NDQzLC0xNTQ1NTgyMTc3LDEwNDU4Mzc1NzMsLTU5ODMzMDY0My
+wxMDUwMTE4MTQzLDE0MjgwNTY3NTAsLTQ2NTY2MzQ2NywtMTI3
+MjMyNjY5MiwxMTgxMTQ0MzEwLDIwOTgxMjU5MywtMTkzODk0ND
+kzMCwtMjc3NzE0MDQwLDE3NzQ3MDYzNTRdfQ==
 -->
