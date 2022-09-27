@@ -7,8 +7,17 @@ Default there defined [here](https://github.com/github/pages-gem/blob/master/lib
 
 ## running locally with the same env
 Prerequirements:
-* [ruby](https://rvm.io/)
-* [Bundler](https://bundler.io/) 
+* [ruby](https://rvm.io/) v3:
+  * install rvm: `curl -sSL https://get.rvm.io | bash -s stable`
+  * install compatible ruby as ubuntu22.04 have only opensslv3: `rvm pkg install openssl`
+  * install selected ruby: `rvm install 3.0.0 --with-openssl-dir=$HOME/.rvm/usr`
+  * use it as default: `rvm use 3.0.0 --default`
+* [Bundler](https://bundler.io/) :
+  * `gem install bundler`
+  * made available: 
+    should be already there, but in case: `echo "export PATH=\"\$PATH:\$HOME/.rvm/bin\"" >> ~/.bashrc`
+    * `echo "export PATH=\"\$PATH:\$HOME/.rvm/gems/default/bin\"" >> ~/.bashrc`
+    * `echo "export PATH=\"\$PATH:\$HOME/.rvm/rubies/default/bin\"" >> ~/.bashrc`
 
  1. Create `Gemfile`.
  2. run `bundle install` for installing all dependencies
