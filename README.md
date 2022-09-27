@@ -21,8 +21,9 @@ Prerequirements:
 
  1. Create `Gemfile`.
  2. run `bundle install` for installing all dependencies
- 3. run locally with: `bundle exec jekyll serve --drafts`
- 4. http://localhost:4000/ is your friend
+ 3. ruby v3 dependency: `bundle add webrick`
+ 4. run locally with: `bundle exec jekyll serve --drafts`
+ 5. http://localhost:4000/ is your friend
 
 ## dev help
 * bootstrap docs: https://getbootstrap.com/docs/3.3/css/#grid
