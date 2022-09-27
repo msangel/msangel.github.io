@@ -18,12 +18,13 @@ Prerequirements:
     should be already there, but in case: `echo "export PATH=\"\$PATH:\$HOME/.rvm/bin\"" >> ~/.bashrc`
     * `echo "export PATH=\"\$PATH:\$HOME/.rvm/gems/default/bin\"" >> ~/.bashrc`
     * `echo "export PATH=\"\$PATH:\$HOME/.rvm/rubies/default/bin\"" >> ~/.bashrc`
+* [Bundler](https://bundler.io/) 
 
  1. Create `Gemfile`.
  2. run `bundle install` for installing all dependencies
  3. ruby v3 dependency: `bundle add webrick`
  4. run locally with: `bundle exec jekyll serve --drafts`
- 5. http://localhost:4000/ is your friend
+ 54. http://localhost:4000/ is your friend
 
 ## dev help
 * bootstrap docs: https://getbootstrap.com/docs/3.3/css/#grid
@@ -37,5 +38,6 @@ Prerequirements:
 * https://kramdown.gettalong.org/quickref.html
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5NTQzOTQ2NCw0MDE4MjMyODVdfQ==
+eyJoaXN0b3J5IjpbMTQ0MDc1Mjc5MCwxMTk1NDM5NDY0LDQwMT
+gyMzI4NV19
 -->
