@@ -1,4 +1,13 @@
 ### Definitions
+
+Тут все складно.
+По перше імплементація - очевидно(?) шо вся обчислювальна машина побудована на послідовній(serialized) циклічній обробці повідомлень(event і відповідно event loop) таким чином гарантуючи: 1. визначеність стану; 2. цілісність даних(integrity).
+Але як воно насправді? Ну і питання про:
+* [Недетерминированный конечный автомат](https://ru.wikipedia.org/wiki/%D0%9D%D0%B5%D0%B4%D0%B5%D1%82%D0%B5%D1%80%D0%BC%D0%B8%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BE%D0%BD%D0%B5%D1%87%D0%BD%D1%8B%D0%B9_%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82)
+* [Детерминированный конечный автомат](https://ru.wikipedia.org/wiki/%D0%94%D0%B5%D1%82%D0%B5%D1%80%D0%BC%D0%B8%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BE%D0%BD%D0%B5%D1%87%D0%BD%D1%8B%D0%B9_%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82)
+
+явно ходиять рядом
+
 **State machine** -  is a mathematical model of computation ([wiki](https://en.wikipedia.org/wiki/Finite-state_machine))
 **Pushdown automaton** - a kind of state machine with stacked memory, when automate operates with the memory of it's stack, but also can exit stack level, or enter into new. A computational model of computers, programming languages and VM is based on this. Not a subject of this post, just for general knowledge. ([wiki](https://en.wikipedia.org/wiki/Pushdown_automaton))  
 Business rules engine ([wiki](https://en.wikipedia.org/wiki/Business_rules_engine))
