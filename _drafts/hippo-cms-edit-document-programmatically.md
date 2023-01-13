@@ -37,3 +37,83 @@ https://bloomreach-forge.github.io/jcr-pojo-binding/examples-bindings.html
 Some on versioning:
 https://xmdocumentation.bloomreach.com/library/concepts/content-repository/configure-document-versioning.html
 
+```java
+ //noinspection unchecked
+            InputStream inputStream = FileConverters.get("array2ccsv").convert(data);
+            if (inputStream == null) {
+                log.info("Associate reward, but no data as stream");
+                return null;
+            }
+
+            session.refresh(true);
+            session.save();
+
+            WorkflowManager manager = ((HippoSession)session).getWorkspace().getWorkflowManager();
+
+            FolderWorkflow folderWorkflow = (FolderWorkflow) manager.getWorkflow("embedded", node);
+
+            String documentVariantPath = folderWorkflow.add("new-document", "hippo:resource", "staplesconnect:rewardsFile");
+            Node resourceNode = session.getNode(documentVariantPath);
+
+            DocumentWorkflow workflow = (DocumentWorkflow) manager.getWorkflow("default", node.getParent());
+            Document document = workflow.obtainEditableInstance();
+            Node editableNode = document.getNode(session);
+
+            DefaultJcrContentNodeMapper mapper = new DefaultJcrContentNodeMapper();
+            ContentNode editableContent = mapper.map(editableNode);
+//
+//            ContentNode resourceNode;
+//            if (editableContent.hasNode("staplesconnect:rewardsFile")) {
+//                resourceNode = editableContent.getNode("staplesconnect:rewardsFile");
+//            } else {
+//                resourceNode = new ContentNode("staplesconnect:rewardsFile", "hippo:resource");
+//                editableContent.addNode(resourceNode);
+//            }
+            resourceNode.setProperty("jcr:data", IOUtils.toString(inputStream, StandardCharsets.UTF_8));
+            resourceNode.setProperty("jcr:mimeType", "text/csv");
+            resourceNode.setProperty("jcr:encoding", "UTF-8");
+            resourceNode.setProperty("hippo:filename", "associate.csv");
+            resourceNode.setProperty("jcr:lastModified", Calendar.getInstance());
+//            resourceNode.setProperty("jcr:lastModified", ContentPropertyType.DATE, ZonedDateTime.now().format(DateTimeFormatter.ISO_OFFSET_DATE_TIME));
+
+            DefaultJcrContentNodeBinder binder = new DefaultJcrContentNodeBinder();
+            binder.bind(editableNode, editableContent);
+            workflow.commitEditableInstance();
+            workflow.publish();
+
+            session.refresh(false);
+
+//
+//            Node fileNode;
+//            if (editableNode.hasNode("staplesconnect:rewardsFile")) {
+//                fileNode = editableNode.getNode("staplesconnect:rewardsFile");
+//            } else {
+//                fileNode = editableNode.addNode("staplesconnect:rewardsFile", "hippo:resource");
+//            }
+//            Binary binary = node.getSession().getValueFactory().createBinary(inputStream);
+//            try {
+//                fileNode.setProperty("jcr:data", binary);
+//                fileNode.setProperty("jcr:mimeType", "text/csv");
+//                fileNode.setProperty("jcr:encoding", "UTF-8");
+//                fileNode.setProperty("hippo:filename", "associate.csv");
+//                fileNode.setProperty("jcr:lastModified", Calendar.getInstance());
+//            } finally {
+//                binary.dispose();
+//            }
+//            workflow.commitEditableInstance();
+//            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+//            IOUtils.copy(inputStream, baos);
+//
+//            Node handle = node.getParent();
+//            Node rewardsFile;
+//            if (handle.hasNode("rewardsFile")) {
+//                rewardsFile = handle.getNode("rewardsFile");
+//            } else {
+//                rewardsFile = handle.addNode("rewardsFile");
+//            }
+//
+//            attachRewardsToNode(handle, new ByteArrayInputStream(baos.toByteArray()));
+//            session.save();
+        }
+```
+
