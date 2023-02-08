@@ -31,3 +31,4 @@ plugins:
   - jekyll-toc
 highlighter: rouge
 includes_dir: _layouts
+include: [CNAME]
