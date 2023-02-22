@@ -77,6 +77,32 @@ Running this will print:
 id=1, username=admin, firstName=null, secondName=null
 ```
 Source code together for above here: [sqlite-console](https://github.com/msangel/msangel.github.io/tree/master/samples/sqlite/sqlite-console)
+## Connection properties
+In general case the connection properties are set by standard sql `PRAGMA` keyword. Even if we can use that via standard jdbc queries mechanism, there also other options available:
+- set properties as connection string query parameters
+- set programmatically properties of `org.sqlite.SQLiteConfig` object
+
+https://stackoverflow.com/questions/9958382/sqlite-jdbc-pragma-setting
+https://stackoverflow.com/questions/24513576/opening-database-connection-with-the-sqlite-open-nomutex-flag-in-java/24536144#24536144
+https://github.com/search?l=Java&p=3&q=execute+pragma&type=Code
+https://stackoverflow.com/questions/9774923/how-do-you-enforce-foreign-key-constraints-in-sqlite-through-java
+
+## Connection pooling
+
 ## SQLite as Spring Boot datasource
+https://www.google.com/search?q=spring+boot+sqlite+&sxsrf=AJOqlzXzcn7A1K-wxkxbbiixRGdbndozIg%3A1677071690147&ei=ShX2Y9PPCI78qwG7i7S4Bw&ved=0ahUKEwjTnOrymqn9AhUO_ioKHbsFDXcQ4dUDCA8&uact=5&oq=spring+boot+sqlite+&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIECCMQJzIECCMQJ0oECEEYAFAAWABgqgloAHABeACAAXyIAXySAQMwLjGYAQCgAQHAAQE&sclient=gws-wiz-serp
+https://www.baeldung.com/spring-boot-sqlite
+
+### Autoconfiguration
+
+### Connection pool
+https://stackoverflow.com/questions/26490967/how-do-i-configure-hikaricp-in-my-spring-boot-app-in-my-application-properties-f
+https://stackoverflow.com/questions/9958382/sqlite-jdbc-pragma-setting
+
+
+### Connection properties passing
+
 
 ## JPA with SQLite in spring-boot
+https://stackoverflow.com/questions/67456579/org-sqlite-sqliteexception-sqlite-error-sql-error-or-missing-database-near
+https://github.com/bharat0126/springboot-sqlite-app
