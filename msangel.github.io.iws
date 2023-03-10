@@ -4,21 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6fb24a7b-b67b-439f-8f3c-e66e1d080c89" name="Changes" comment="switch to legacy jekyll action (test)">
-      <change afterPath="$PROJECT_DIR$/samples/sqlite/sqlite-spring-boot/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/sqlite/sqlite-spring-boot/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/sqlite/sqlite-spring-boot/src/main/java/com/example/sqlite/SqliteSpringBootApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/sqlite/sqlite-spring-boot/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/sqlite/sqlite-spring-boot/src/main/resources/templates/hello.mustache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/sqlite/sqlite-spring-boot/src/test/java/com/example/sqlite/SqliteSpringBootApplicationTests.java" afterDir="false" />
+    <list default="true" id="6fb24a7b-b67b-439f-8f3c-e66e1d080c89" name="Changes" comment="WIP">
+      <change afterPath="$PROJECT_DIR$/samples/sqlite/sqlite-concurrent-tester/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/samples/sqlite/sqlite-concurrent-tester/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/samples/sqlite/sqlite-concurrent-tester/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/samples/sqlite/sqlite-concurrent-tester/src/main/java/org/example/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/samples/sqlite/sqlite-concurrent-tester/src/test/java/org/example/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/samples/sqlite/sqlite-console/src/main/java/ua/k/co/ConnectionPropsViaPragma.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/samples/sqlite/sqlite-console/src/main/java/ua/k/co/ConnectionPropsViaProps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/samples/sqlite/sqlite-console/src/main/java/ua/k/co/DataSourcePropsViaProps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sqlite-concurrent-tester.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_drafts/sqlite-for-java.md" beforeDir="false" afterPath="$PROJECT_DIR$/_drafts/sqlite-for-java.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2022-07-07-ansible-lightsail.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2022-07-07-ansible-lightsail.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/msangel.github.io.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/msangel.github.io.ipr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msangel.github.io.iws" beforeDir="false" afterPath="$PROJECT_DIR$/msangel.github.io.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/sqlite/sqlite-console/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/samples/sqlite/sqlite-console/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/samples/sqlite/sqlite-console/src/main/java/ua/k/co/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/sqlite/sqlite-console/src/main/java/ua/k/co/SampleUsage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sqlite-console.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sqlite-console.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -33,6 +47,11 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="jdkForImporter" value="adopt-1.8" />
@@ -47,35 +66,91 @@
     <option name="showLibraryContents" value="true" />
     <option name="showModules" value="false" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "adopt-1.8",
-    "last_opened_file_path": "/home/msangel/.rvm/bin/rvm",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "ruby.rails.projectView.checked": "true",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
-    "spring.configuration.checksum": "890936c6e080741d2241b88ce5454bdd",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;adopt-1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/msangel/.rvm/bin/rvm&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;890936c6e080741d2241b88ce5454bdd&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JSON&quot;
+    ]
   }
-}]]></component>
-  <component name="RunManager" selected="Spring Boot.SqliteSpringBootApplication">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ua.k.co.Main" />
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ua.k.co" />
+    </key>
+  </component>
+  <component name="RubyModuleManagerSettings">
+    <option name="blackListedRootsPaths">
+      <list>
+        <option value="$PROJECT_DIR$/samples/sqlite/sqlite-concurrent-tester" />
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.App" />
+      <module name="sqlite-concurrent-tester" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConnectionPropsViaPragma" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ua.k.co.ConnectionPropsViaPragma" />
+      <module name="sqlite-console" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ua.k.co.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConnectionPropsViaProps" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ua.k.co.ConnectionPropsViaProps" />
+      <module name="sqlite-console" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ua.k.co.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DataSourcePropsViaProps" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ua.k.co.DataSourcePropsViaProps" />
       <module name="sqlite-console" />
       <extension name="coverage">
         <pattern>
@@ -123,10 +198,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.App" />
+      <item itemvalue="Application.ConnectionPropsViaPragma" />
+      <item itemvalue="Application.ConnectionPropsViaProps" />
+      <item itemvalue="Application.DataSourcePropsViaProps" />
+      <item itemvalue="Spring Boot.SqliteSpringBootApplication" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
+        <item itemvalue="Application.DataSourcePropsViaProps" />
+        <item itemvalue="Application.ConnectionPropsViaProps" />
+        <item itemvalue="Application.ConnectionPropsViaPragma" />
         <item itemvalue="Spring Boot.SqliteSpringBootApplication" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -144,7 +229,15 @@
       <workItem from="1675888399656" duration="6308000" />
       <workItem from="1676296668706" duration="110000" />
       <workItem from="1676979880205" duration="6944000" />
-      <workItem from="1677068938515" duration="5647000" />
+      <workItem from="1677068938515" duration="5891000" />
+      <workItem from="1677336166225" duration="798000" />
+      <workItem from="1677337272195" duration="887000" />
+      <workItem from="1677338186314" duration="8961000" />
+      <workItem from="1677507401894" duration="1824000" />
+      <workItem from="1677574354738" duration="612000" />
+      <workItem from="1677595095800" duration="1329000" />
+      <workItem from="1677689945850" duration="892000" />
+      <workItem from="1678403638847" duration="11568000" />
     </task>
     <task id="LOCAL-00001" summary="sqlite part 1">
       <created>1675898140358</created>
@@ -160,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675898705003</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="WIP">
+      <created>1677078146416</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1677078146416</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,7 +271,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="sqlite part 1" />
     <MESSAGE value="switch to legacy jekyll action (test)" />
-    <option name="LAST_COMMIT_MESSAGE" value="switch to legacy jekyll action (test)" />
+    <MESSAGE value="WIP" />
+    <option name="LAST_COMMIT_MESSAGE" value="WIP" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -183,5 +284,9 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

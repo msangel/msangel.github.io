@@ -2,7 +2,7 @@ package ua.k.co;
 
 import java.sql.*;
 
-public class Main {
+public class SampleUsage {
     public static void main(String[] args) throws Exception {
         // load driver
         Class.forName("org.sqlite.JDBC");

@@ -156,6 +156,7 @@ Save this file as `prepare_box.yml` and run with
 #### Deploy application
 Scenario with comments below
 ```yaml
+{% raw %}
 ---  
 - hosts: all  
   become: no  
@@ -255,6 +256,7 @@ Scenario with comments below
   # `name` attribute is optional btw  
   - wait_for:  
       port: 80
+{% endraw %}
 ```
 Save this file as `install_app.yml` and run with 
 ```bash
