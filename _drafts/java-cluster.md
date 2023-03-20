@@ -9,3 +9,5 @@ There alos a need to orchestrate jobs acros cluster and the quartz is a good sol
 
 Regarding clustering readind/updating properties there a good solution [spring-cloud-config](https://docs.spring.io/spring-cloud-config/docs/current/reference/html/), that does support easy integarion with diferent tadasources (git repository as default) and also automatical config reloading(so yes, those configs are reloadable).
 Alternative to that is [Spring Cloud Bus](https://cloud.spring.io/spring-cloud-bus/reference/html/).
+
+Read more: https://cloud.spring.io/spring-cloud-static/spring-cloud.html
