@@ -14,11 +14,19 @@ InputStream is = InputStreamMapper.ofLineMapping(InputStream is, Function<String
 ```
 2 physical implenetation:
 * based on common large buffer using ByteArrayOutputStream and ByteArrayInputStream
+ * org.apache.commons.io.output.ByteArrayOutputStream?
 * based on pipe(small buffer with blocking) using PipedOutputStream and PipedInputStream with filling in dedicated thread (parametrized of built-in `CompletableFuture.supplyAsync` executor )
 * more?
 
 Also requirements to row mapper:
-allow rows to be added to stream based on stream content in the beginning/middle/in the end
-allow rows to be removed from stream based on stream content in the beginning/middle/in the end
+* allow rows to be added to stream based on stream content in the beginning/middle/in the end
+* allow rows to be removed from stream based on stream content in the beginning/middle/in the end
+
+Links:
+https://stackoverflow.com/questions/55709937/how-to-obtain-inputstream-from-java-8-streams
+https://stackoverflow.com/questions/54398003/process-next-character-full-unicode-code-point-streaming-from-java-input-strea
+https://stackoverflow.com/questions/30336257/convert-inputstream-into-streamstring-given-a-charset
 
 
+java.io.FilterInputStream and org.apache.commons.io.input.ProxyInputStream
+org.apache.commons.io.input.TeeInputStream
