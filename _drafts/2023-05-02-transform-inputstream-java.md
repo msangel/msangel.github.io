@@ -1,5 +1,5 @@
 Here's a trick:
-InputStream operates with byte stream. And we woant to alter character in it. Firts - converting a bytes to char are something the JDK does itself. Second - char is not a codepoint. Third - one symbol may be crafted from multiple codepoints (my hero here is Wales flag emoji which is one symbol but 7 codepoints and so 14 chars: "🏴󠁧󠁢󠁷󠁬󠁳󠁿"󠁢󠁷󠁬󠁳󠁿 ). So before changing something you need to know WHAT you are about to change.
+InputStream operates with byte stream. And we want to alter character in it. Firts - converting a bytes to char are something the JDK does itself. Second - char is not a codepoint. Third - one symbol may be crafted from multiple codepoints (my hero here is Wales flag emoji which is one symbol but 7 codepoints and so 14 chars: "🏴󠁧󠁢󠁷󠁬󠁳󠁿"󠁢󠁷󠁬󠁳󠁿 ). So before changing something you need to know WHAT you are about to change.
 
 
 ```groovy
