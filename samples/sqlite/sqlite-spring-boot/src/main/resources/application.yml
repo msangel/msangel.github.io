@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driver-class-name: org.sqlite.JDBC
+    url: "jdbc:sqlite::memory:"
+    username: SA
+    password:
+    hikari:
+      data-source-properties:
+        encoding: 'UTF-8'
+#        foreign_keys: on
+
+
+application:
+  create-table: |-
+    create table if not exists todos(
+    id integer primary key autoincrement,
+    message varchar(30) not null
+    );
+spring.main.allow-bean-definition-overriding: true
+server.tomcat.additional-tld-skip-patterns: xercesImpl.jar,xml-apis.jar,serializer.jar,xml-apis.jar,mchange-commons-java*.jar,liquibase-*.jar,jaxb-api.jar,activation.jar,jsr*api.jar,jaxb*-impl.jar,derbyLocale_*.jar,oraclepki.jar
