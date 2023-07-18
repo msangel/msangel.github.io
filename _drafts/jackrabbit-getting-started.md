@@ -18,3 +18,4 @@ https://github.com/apache/jackrabbit/tree/trunk/jackrabbit-core/src/main/resourc
 ### Resources
 - https://jackrabbit.apache.org/jcr/articles.html
 - https://docs.oracle.com/cd/E19316-01/820-7054/gifgn/index.html
+- https://www.youtube.com/playlist?list=PLUbY_L_9E-b_YuK-IWjUWYxcpcKccSX1N
