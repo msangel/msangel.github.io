@@ -117,3 +117,4 @@ https://xmdocumentation.bloomreach.com/library/concepts/content-repository/confi
         }
 ```
 
+About versioning: https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/version/VersionManager.html
