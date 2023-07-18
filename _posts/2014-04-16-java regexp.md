@@ -406,7 +406,7 @@ Quick references:
 
 * working with streams: http://jexp.ru/index.php/Java/Regular_Expressions/Serialization
 
-Official tutorial: http://docs.oracle.com/javase/tutorial/essential/regex/
+Official tutorial: https://docs.oracle.com/javase/tutorial/essential/regex/
 
 Testing online:
 http://myregexp.com/
