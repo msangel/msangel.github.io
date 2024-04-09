@@ -23,7 +23,7 @@ class Kramdown::Converter::Html
     str.nil? || !str.respond_to?(:to_str) || str.include?(/[^[:space:]]/)
   end
 
-  def convert_table(el, indent)
+  def convert_tbody(el, indent)
     el.attr['class'] = "#{el.attr['class']} table table-bordered table-striped".lstrip
     super(el, indent)
   end
