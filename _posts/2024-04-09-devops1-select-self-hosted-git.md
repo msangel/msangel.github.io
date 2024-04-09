@@ -1,6 +1,11 @@
-### Selecting self-hosted git service
+---
+title:  Selecting self-hosted git service
+date: 2024-04-07 20:21:00 Z
+lang: en
+---
+###
  
-#### Purpose
+### Purpose
 In the world of open-source software, it's not a problem to find free-to-use git server for own work and so made this work available to everyone. Most popular are: github, gitlab, bitbucket. There are plenty of them. Most of them do provide paid features. Most do have a private repositories. But not all of them you can own. 
 
 You can access to some servers and do some work on them, but physically your work on someone's computer. 
@@ -9,7 +14,7 @@ And this is not always an option for private software. Either you don't trust th
 
 So here I will list some popular git server software you can run on your own computer. As an option, I also will discuss some cloud services for that, which are something in the middle - you're still on someone's computer but run inside ov virtual VM you bought.
 
-#### Options
+### Options
 There a lot of them, but here I picked ones I found popular.
 
 Self-hosted git services:
@@ -54,16 +59,15 @@ The table:
 | Perforce Helix TeamHub | [no](https://www.perforce.com/products/helix-teamhub/pricing)                          | no                                                                                                                                     | yes         | yes                                                                    | no             |
 | Azure DevOps Server    | [no](https://azure.microsoft.com/en-gb/pricing/details/devops/azure-devops-services/)  | [yes](https://learn.microsoft.com/en-us/azure/devops/pipelines/architectures/devops-pipelines-baseline-architecture?view=azure-devops) | yes         | yes                                                                    | yes            |
 | Gitea cloud            | [no](https://about.gitea.com/pricing/)                                                 | yes                                                                                                                                    | yes         | yes                                                                    | no             |
-| Assembla Enterprise    | [no](https://get.assembla.com/pricing/)                                                | no                                                                                                                                     | no          | yes                                                                    | no             |
+| Assembla Enterprise    | [no](https://get.assembla.com/pricing/)                                                | no                                                                                                                                     | no          | yes                                                                    | no             |{:class="table table-bordered"}
 
-##### Summary
+#### Summary
 For new projects, I would rather pick Gitea or GitLab if the target is self-hosted and fully controlled environment. Because they are free, feature-rich and under active development. Bitbucket is a good product too, but is not in this list just because it is too pricey(starting from $2,300 per year).  
 
 If the new project had to be developed in Azure infrastructure, I would pick Azure DevOps Server, because it is still feature-rich and because of integration.  
 
 When the target is speed and easiness, I would pick paid Gitea cloud. Prices are not that high, but you are getting maganed Gitea instance in a few clicks.   
 
-#### Useful links
+### Useful links
 - [Services comparison by gitea](https://docs.gitea.com/next/installation/comparison)
-- 
 
