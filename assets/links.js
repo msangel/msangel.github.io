@@ -25,3 +25,38 @@ function pdf_new_window ()
 } 
 pdf_new_window();
 external_new_window();
+
+
+document.addEventListener("DOMContentLoaded", function(){
+    let xPathResult = document.evaluate(
+        "//td[contains(., 'yes')]",
+        document,
+        null,
+        XPathResult.ANY_TYPE,
+        null,
+    )
+
+    let nodes = [];
+    let node = xPathResult.iterateNext();
+    while (node) {
+        nodes.push(node);
+        node = xPathResult.iterateNext();
+    }
+
+    nodes.forEach(el => {el.style.backgroundColor = '#baeda6'})
+
+    xPathResult = document.evaluate(
+        "//td[contains(., 'no')]",
+        document,
+        null,
+        XPathResult.ANY_TYPE,
+        null,
+    )
+    nodes = [];
+    node = xPathResult.iterateNext();
+    while (node) {
+        nodes.push(node);
+        node = xPathResult.iterateNext();
+    }
+    nodes.forEach(el => {el.style.backgroundColor = '#eda6a6'})
+});
