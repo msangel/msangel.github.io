@@ -3,8 +3,7 @@ title:  Selecting self-hosted git service
 date: 2024-04-09 16:55:00 Z
 lang: en
 ---
-###
- 
+
 ### Purpose
 In the world of open-source software, it's not a problem to find free-to-use git server for own work and so made this work available to everyone. Most popular are: github, gitlab, bitbucket. There are plenty of them. Most of them do provide paid features. Most do have a private repositories. But not all of them you can own. 
 
