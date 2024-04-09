@@ -25,6 +25,6 @@ class Kramdown::Converter::Html
 
   def convert_table(el, indent)
     el.attr['class'] = "#{el.attr['class']} table table-bordered table-striped".lstrip
-    super
+    format_as_indented_block_html(el.type, el.attr, inner(el, indent), indent)
   end
 end
