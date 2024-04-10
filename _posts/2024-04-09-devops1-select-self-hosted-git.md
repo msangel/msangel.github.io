@@ -69,4 +69,5 @@ When the target is speed and easiness, I would pick paid Gitea cloud. Prices are
 
 ### Useful links
 - [Services comparison by gitea](https://docs.gitea.com/next/installation/comparison)
+- [Another article about the same thing, which I found after I wrote this one, with essentially the same conclusions.](https://blog.inedo.com/self-hosted/git-source-control-servers/)
 
