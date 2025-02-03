@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6fb24a7b-b67b-439f-8f3c-e66e1d080c89" name="Changes" comment="WIP">
       <change beforePath="$PROJECT_DIR$/_posts/2025-02-01-avro.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2025-02-01-avro.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/msangel.github.io.iws" beforeDir="false" afterPath="$PROJECT_DIR$/msangel.github.io.iws" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +228,7 @@
       <workItem from="1677689945850" duration="892000" />
       <workItem from="1678403638847" duration="11568000" />
       <workItem from="1738386337451" duration="4425000" />
-      <workItem from="1738450693384" duration="25951000" />
+      <workItem from="1738450693384" duration="26844000" />
     </task>
     <task id="LOCAL-00001" summary="sqlite part 1">
       <created>1675898140358</created>
@@ -274,7 +275,23 @@
       <option name="project" value="LOCAL" />
       <updated>1738550321587</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="WIP">
+      <option name="closed" value="true" />
+      <created>1738550427288</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1738550427288</updated>
+    </task>
+    <task id="LOCAL-00008" summary="WIP">
+      <option name="closed" value="true" />
+      <created>1738550489685</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1738550489685</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
