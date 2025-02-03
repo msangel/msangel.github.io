@@ -5,24 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6fb24a7b-b67b-439f-8f3c-e66e1d080c89" name="Changes" comment="WIP">
-      <change afterPath="$PROJECT_DIR$/_drafts/2025-02-01-avro.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/avro/avro/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/avro/avro/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/avro/avro/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/avro/avro/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/avro/avro/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/avro/avro/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/avro/avro/src/main/java/ua/co/k/avro/CustomUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/avro/avro/src/main/java/ua/co/k/avro/generated/Mail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/avro/avro/src/main/java/ua/co/k/avro/generated/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/avro/avro/src/main/java/ua/co/k/avro/generated/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/avro/avro/src/main/resources/avro/mail.avpr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/avro/avro/src/main/resources/avro/user.avsc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/avro/avro/src/test/java/ua/co/k/avro/AvroRPCTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/avro/avro/src/test/java/ua/co/k/avro/AvroSecuredRPCTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/avro/avro/src/test/java/ua/co/k/avro/AvroSerializationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msangel.github.io.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/msangel.github.io.ipr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/msangel.github.io.iws" beforeDir="false" afterPath="$PROJECT_DIR$/msangel.github.io.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2025-02-01-avro.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2025-02-01-avro.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +21,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="1b41540f-6734-4c1d-b310-31efad7c99c5" />
   </component>
   <component name="JpbToolWindowState">
     <option name="isToolWindowVisible" value="false" />
@@ -105,6 +91,10 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/_posts" />
+      <recent name="$PROJECT_DIR$/samples" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ua.k.co" />
     </key>
@@ -237,7 +227,7 @@
       <workItem from="1677689945850" duration="892000" />
       <workItem from="1678403638847" duration="11568000" />
       <workItem from="1738386337451" duration="4425000" />
-      <workItem from="1738450693384" duration="25231000" />
+      <workItem from="1738450693384" duration="25951000" />
     </task>
     <task id="LOCAL-00001" summary="sqlite part 1">
       <created>1675898140358</created>
@@ -260,7 +250,31 @@
       <option name="project" value="LOCAL" />
       <updated>1677078146416</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="WIP">
+      <option name="closed" value="true" />
+      <created>1738549806456</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1738549806456</updated>
+    </task>
+    <task id="LOCAL-00005" summary="WIP">
+      <option name="closed" value="true" />
+      <created>1738549836741</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1738549836741</updated>
+    </task>
+    <task id="LOCAL-00006" summary="WIP">
+      <option name="closed" value="true" />
+      <created>1738550321587</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1738550321587</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
