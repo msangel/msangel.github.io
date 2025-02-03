@@ -1,0 +1,320 @@
+<html lang="en" class="mysite">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Avro | Vasyl Khrystiuk</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Avro" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="What&#8217;s that?" />
+<meta property="og:description" content="What&#8217;s that?" />
+<link rel="canonical" href="https://github.com/pages/msangel/blog/2025/02/01/avro.html" />
+<meta property="og:url" content="https://github.com/pages/msangel/blog/2025/02/01/avro.html" />
+<meta property="og:site_name" content="Vasyl Khrystiuk" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-02-01T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Avro" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-02-03T03:21:25+00:00","datePublished":"2025-02-01T00:00:00+00:00","description":"What&#8217;s that?","headline":"Avro","mainEntityOfPage":{"@type":"WebPage","@id":"https://github.com/pages/msangel/blog/2025/02/01/avro.html"},"url":"https://github.com/pages/msangel/blog/2025/02/01/avro.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  
+  <link rel="stylesheet" href="/assets/components-font-awesome/css/fontawesome-all.min.css">
+
+  <link href='/assets/open-sans-all/css/open-sans.min.css' rel='stylesheet' type='text/css'>
+  
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+  <link href='//fonts.googleapis.com/css?family=Ubuntu&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Ubuntu+Mono&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  
+  <link rel="stylesheet" href="/assets/bootstrap/dist/css/bootstrap.min.css">
+  <script src="/assets/jquery/dist/jquery.min.js"></script>
+  <script src="/assets/bootstrap/dist/js/bootstrap.min.js"></script>
+  
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="shortcut icon" type="image/jpg" href="/assets/favicon.ico"/>
+  <link rel="stylesheet" href="/assets/tabs.css">
+  <script src="/assets/tabs.js"></script>
+  <link href="/assets/rouge.css" rel="stylesheet" >
+  <style>
+      .highlighter-rouge > .highlight > pre.highlight {
+          border-radius: unset;
+      }
+  </style>
+</head>
+
+<body>
+<div id="body">
+  <div class="jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 myname"><a href="/"><span>Vasyl </span>Khrystiuk</a></div>
+        <div class="col-xs-12 col-sm-12 subtitle"><a href="/"><span>full stack developer</span></a></div>
+      </div>
+
+    </div>
+  </div>
+
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <ul class="nav navbar-nav">
+        <!--class="active" -->
+        <li><a href="/">BLOG</a></li>
+        <li role="separator" class="divider-vertical"></li>
+        <li><a href="/about">ABOUT</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container central blogpost">
+  <div class="row">
+    <div class="col-lg-12 record">
+
+<h2 class="page-title">Avro</h2>
+      <p class="text-muted small page-date">Posted: February 01, 2025 - Updated: February 03, 2025</p>
+
+<h2 id="whats-that">What&#8217;s that?</h2>
+
+<p>Language-agnostic data serialisation system.
+Binary format for rich data structures.
+Note: playground for this note can be found <a href="https://github.com/msangel/msangel.github.io/tree/master/samples/avro">here</a></p>
+
+<h2 id="what-is-schema">What is schema</h2>
+
+<p>Schema is format definition for binary data.
+Schema is stored with avro data files, so each file can be easy be read.</p>
+
+<p>For transaction purpose schema can be sent once (on handshake) and then operate fast.</p>
+
+<p>Schema stored as JSON.</p>
+
+<h2 id="file-formats">File formats</h2>
+<ul>
+  <li>*.avsc - avro schema JSON file. Used for schema definition.</li>
+  <li>*.avpr - avro protocol JSON file. Used for RPC protocol definition.</li>
+  <li>*.avro - avro data file. Used for data storage.</li>
+  <li>*.avdl - avro IDL file. New format for both schema and protocol definitions.</li>
+</ul>
+
+<h2 id="usage">Usage</h2>
+<p>One of advantages is that Avro is language-agnostic.</p>
+
+<ul>
+  <li>Data transfer format</li>
+  <li>Data storage format</li>
+  <li>RPC engine (example with Netty: <code class="language-plaintext highlighter-rouge">org.apache.avro:avro-ipc-netty:+</code>)</li>
+  <li>message format for Kafka</li>
+  <li>Hadoop map-reduce as input/output format</li>
+</ul>
+
+<h2 id="schema-evolution">Schema evolution</h2>
+<p>Avro allows to evolve schema without breaking compatibility. For example add new field, remove field, change field type, rename field, change default value, etc.
+Note - evolution is not the same as versioning. In short - your new changes must be compatible with both old and possible new schemas (or not, but then you simply must follow correct ordering of upgrading consumers/producers). Very first advice here will be: defining default values is important(on addition older records will use default from schema, on removing older records will use default from data).</p>
+
+<h2 id="schema-registry">Schema registry</h2>
+<ol>
+  <li><a href="https://docs.spring.io/spring-cloud-stream/docs/current/reference/html/spring-cloud-stream-schema-registry.html#spring-cloud-stream-schema-registry-reference">Spring Cloud Schema Registry</a>
+Is a part of <a href="https://spring.io/projects/spring-cloud-stream">Spring Cloud Stream</a></li>
+  <li>Confluent Schema Registry 
+(<a href="https://docs.confluent.io/platform/current/schema-registry/index.html">https://docs.confluent.io/platform/current/schema-registry/index.html</a>)
+    <ul>
+      <li>Home: <a href="https://github.com/confluentinc/schema-registry">https://github.com/confluentinc/schema-registry</a></li>
+      <li>Usage: <a href="https://dzone.com/articles/kafka-avro-serialization-and-the-schema-registry">https://dzone.com/articles/kafka-avro-serialization-and-the-schema-registry</a></li>
+    </ul>
+  </li>
+  <li>Azure Schema Registry (https://docs.microsoft.com/en-us/azure/event-hubs/schema-registry-overview)
+Also <a href="https://learn.microsoft.com/en-us/java/api/overview/azure/data-schemaregistry-apacheavro-readme">client library</a> for Java.</li>
+  <li>IBM&#8217;s Event Streams: <a href="https://cloud.ibm.com/docs/EventStreams?topic=EventStreams-ES_schema_registry">https://cloud.ibm.com/docs/EventStreams?topic=EventStreams-ES_schema_registry</a></li>
+  <li>AWS Glue Schema registry: <a href="https://docs.aws.amazon.com/glue/latest/dg/schema-registry.html">https://docs.aws.amazon.com/glue/latest/dg/schema-registry.html</a></li>
+</ol>
+
+<h2 id="security">Security</h2>
+<ul>
+  <li>Include authorization record in RPC metadata (implement RPCPlugin)</li>
+  <li>Ssl certificates verification for netty server</li>
+  <li>firewall</li>
+  <li>SASL (<a href="https://avro.apache.org/docs/1.12.0/sasl-profile/">https://avro.apache.org/docs/1.12.0/sasl-profile/</a>)</li>
+</ul>
+
+<h2 id="alternatives">Alternatives</h2>
+<ul>
+  <li>Binary:
+    <ul>
+      <li><a href="https://github.com/google/protobuf">protobuf</a></li>
+      <li>bson</li>
+      <li>java serialization</li>
+      <li><a href="https://github.com/RuedigerMoeller/fast-serialization">fst</a></li>
+      <li><a href="https://github.com/apache/thrift">thrift</a></li>
+      <li><a href="https://parquet.apache.org/">parquet</a></li>
+      <li><a href="https://github.com/google/flatbuffers">flatbuffers</a></li>
+      <li><a href="https://github.com/EsotericSoftware/kryo">kryo</a></li>
+      <li><a href="https://github.com/capnproto/capnproto">cap&#8217;n proto</a></li>
+      <li><a href="https://github.com/msgpack/msgpack-java">msgpack</a></li>
+      <li><a href="https://orc.apache.org/">orc</a></li>
+      <li><a href="https://github.com/FasterXML/smile-format-specification">smile</a></li>
+      <li><a href="http://hessian.caucho.com/#Java">hessian</a></li>
+    </ul>
+  </li>
+  <li>Text:
+    <ul>
+      <li>json</li>
+      <li>yaml</li>
+      <li>xml (jaxb, soap, xstream)</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="more-topics-to-discover">More topics to discover</h2>
+<ul>
+  <li>Avro usage in: Kafka, Hadoop, RabbitMQ</li>
+  <li>Avro IDL cook book (hard to find one and even get full ist of avro IDL features, example the <code class="language-plaintext highlighter-rouge">@javaAnnotation</code> annotation supported but missing most of the tutorials)</li>
+</ul>
+
+<h2 id="resources">Resources</h2>
+<ul>
+  <li><a href="https://freedium.cfd/https://medium.com/@parinpatel094/technical-deep-dive-into-avro-architecture-schema-evolution-943689125e87">https://freedium.cfd/https://medium.com/@parinpatel094/technical-deep-dive-into-avro-architecture-schema-evolution-943689125e87</a></li>
+  <li><a href="https://avro.apache.org/docs/">https://avro.apache.org/docs/</a></li>
+  <li><a href="https://medium.com/expedia-group-tech/practical-schema-evolution-with-avro-c07af8ba1725">https://medium.com/expedia-group-tech/practical-schema-evolution-with-avro-c07af8ba1725</a></li>
+  <li><a href="https://medium.com/expedia-group-tech/handling-incompatible-schema-changes-with-avro-2bc147e26770">https://medium.com/expedia-group-tech/handling-incompatible-schema-changes-with-avro-2bc147e26770</a></li>
+  <li><a href="https://docs.confluent.io/platform/current/schema-registry/fundamentals/schema-evolution.html">https://docs.confluent.io/platform/current/schema-registry/fundamentals/schema-evolution.html</a></li>
+  <li><a href="https://www.innoq.com/en/blog/2023/11/schema-evolution-avro/">https://www.innoq.com/en/blog/2023/11/schema-evolution-avro/</a></li>
+</ul>
+
+<h2 id="more-examples">More examples</h2>
+<ul>
+  <li>Playground for this <a href="https://github.com/msangel/msangel.github.io/tree/master/samples/avro">https://github.com/msangel/msangel.github.io/tree/master/samples/avro</a></li>
+  <li><a href="https://github.com/phunt/avro-rpc-quickstart">https://github.com/phunt/avro-rpc-quickstart</a></li>
+  <li><a href="https://github.com/nielsbasjes/avro-schema-example/tree/main">https://github.com/nielsbasjes/avro-schema-example/tree/main</a></li>
+  <li><a href="https://github.com/viniciusccarvalho/schema-evolution-samples">https://github.com/viniciusccarvalho/schema-evolution-samples</a></li>
+</ul>
+
+      
+        <h1 style="margin-top: 50px;">Comments</h1>
+      
+    </div>
+    <div id="disqus_thread"></div>
+  </div>
+</div>
+  
+<script>
+    jQuery(document).ready(function() {
+        function debouncer( func , timeout ) {
+            var timeoutID , timeout = timeout || 1000;
+            return function () {
+                var scope = this , args = arguments;
+                clearTimeout( timeoutID );
+                timeoutID = setTimeout( function () {
+                    func.apply( scope , Array.prototype.slice.call( args ) );
+                } , timeout );
+            }
+        }
+        var offset = 300;
+        var duration = 500;
+        var fadeFunc = function () {
+            if (jQuery(window).width() < 1140) {
+                jQuery('.backtotop').fadeOut(0);
+                return;
+            }
+            if (jQuery(window).scrollTop() > offset) {
+                jQuery('.backtotop').fadeIn(duration);
+            } else {
+                jQuery('.backtotop').fadeOut(duration);
+            }
+        }
+        jQuery(window).scroll(debouncer(fadeFunc, 50));
+        jQuery(window).resize(debouncer(fadeFunc));
+
+        jQuery('.backtotop').click(function(event) {
+            event.preventDefault();
+            jQuery('html, body').animate({scrollTop: 0}, duration);
+            return false;
+        })
+    });
+</script>
+<style>
+    .backtotop {
+        display: none;
+    }
+    @media only screen and (min-width:1140px){
+        .backtotop,
+        .backtotop:hover,
+        .backtotop:active,
+        .backtotop:visited,
+        .backtotop:focus {
+            display: none;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            z-index: 10000;
+            text-align: center;
+            color: black;
+            text-decoration: none;
+            padding: 4px 10px;
+            border-radius: 3px;
+            width: 60px;
+            opacity: 0.4;
+        }
+        .backtotop:hover {
+            background-color: rgba(59, 59, 59, 0.10);
+            opacity: 1;
+            transition-property: opacity;
+            transition-duration: 500ms;
+        }
+    }
+
+
+</style>
+<a href="#" class="backtotop"><img src="/assets/noun_Arrow_22173.svg"/></a>
+  
+  <script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    var disqus_config = function () {
+        this.page.url = 'https://k.co.ua/';  // Replace PAGE_URL with your page's canonical URL variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://k-co.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  
+  <div class="footer">
+    <div class="row">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="copyright">
+              <p><a href="https://github.com/msangel/msangel.github.io" target="_self">© 2014-2025 by Vasyl Khrystiuk</a>, powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>, crafted by
+                <a href="https://github.com/msangel/msangel.github.io/blob/master/.github/workflows/github-pages.yml" target="_blank">GitHub Actions</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+<script>anchors.add();</script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-194224445-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+<script src="/assets/links.js"></script>
+<script id="dsq-count-scr" src="//k-co.disqus.com/count.js" async></script>
+</body>
+</html>

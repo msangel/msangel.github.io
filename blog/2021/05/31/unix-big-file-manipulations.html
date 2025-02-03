@@ -1,0 +1,310 @@
+<html lang="en" class="mysite">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Unix big file manipulations | Vasyl Khrystiuk</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Unix big file manipulations" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Small recipes for manipulation with BIG files using *nix (linux and macOS) tooling." />
+<meta property="og:description" content="Small recipes for manipulation with BIG files using *nix (linux and macOS) tooling." />
+<link rel="canonical" href="https://github.com/pages/msangel/blog/2021/05/31/unix-big-file-manipulations.html" />
+<meta property="og:url" content="https://github.com/pages/msangel/blog/2021/05/31/unix-big-file-manipulations.html" />
+<meta property="og:site_name" content="Vasyl Khrystiuk" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-05-31T11:51:14+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Unix big file manipulations" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-02-03T03:21:25+00:00","datePublished":"2021-05-31T11:51:14+00:00","description":"Small recipes for manipulation with BIG files using *nix (linux and macOS) tooling.","headline":"Unix big file manipulations","mainEntityOfPage":{"@type":"WebPage","@id":"https://github.com/pages/msangel/blog/2021/05/31/unix-big-file-manipulations.html"},"url":"https://github.com/pages/msangel/blog/2021/05/31/unix-big-file-manipulations.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  
+  <link rel="stylesheet" href="/assets/components-font-awesome/css/fontawesome-all.min.css">
+
+  <link href='/assets/open-sans-all/css/open-sans.min.css' rel='stylesheet' type='text/css'>
+  
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+  <link href='//fonts.googleapis.com/css?family=Ubuntu&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Ubuntu+Mono&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  
+  <link rel="stylesheet" href="/assets/bootstrap/dist/css/bootstrap.min.css">
+  <script src="/assets/jquery/dist/jquery.min.js"></script>
+  <script src="/assets/bootstrap/dist/js/bootstrap.min.js"></script>
+  
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="shortcut icon" type="image/jpg" href="/assets/favicon.ico"/>
+  <link rel="stylesheet" href="/assets/tabs.css">
+  <script src="/assets/tabs.js"></script>
+  <link href="/assets/rouge.css" rel="stylesheet" >
+  <style>
+      .highlighter-rouge > .highlight > pre.highlight {
+          border-radius: unset;
+      }
+  </style>
+</head>
+
+<body>
+<div id="body">
+  <div class="jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 myname"><a href="/"><span>Vasyl </span>Khrystiuk</a></div>
+        <div class="col-xs-12 col-sm-12 subtitle"><a href="/"><span>full stack developer</span></a></div>
+      </div>
+
+    </div>
+  </div>
+
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <ul class="nav navbar-nav">
+        <!--class="active" -->
+        <li><a href="/">BLOG</a></li>
+        <li role="separator" class="divider-vertical"></li>
+        <li><a href="/about">ABOUT</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container central blogpost">
+  <div class="row">
+    <div class="col-lg-12 record">
+
+<h2 class="page-title">Unix big file manipulations</h2>
+      <p class="text-muted small page-date">Posted: May 31, 2021 - Updated: February 03, 2025</p>
+
+<p>Small recipes for manipulation with BIG files using *nix (linux and macOS) tooling.</p>
+
+<p>Some of these tools may be installed on Windows using a lot of various ways, the most easy probably will be:</p>
+<ul>
+  <li><a href="https://www.msys2.org/">MSYS2</a> - just set of tools</li>
+  <li><a href="https://www.cygwin.com/">cygwin</a>  - just set of tools</li>
+  <li><a href="https://docs.microsoft.com/en-us/windows/wsl/install">wls</a> - entire linux subsystem bring to your Windows by Microsoft, because they know where the future is</li>
+</ul>
+
+<h3 id="count-lines-in-file">Count lines in file</h3>
+<p>Correct:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">grep</span> <span class="nt">-c</span> ^ file.txt
+</code></pre></div></div>
+<p>note: command <code class="language-plaintext highlighter-rouge">wc -l</code> that is first google result count new-line characters, and this is not working in this case:</p>
+<pre><code class="language-txt">1 This is the first line.\n
+2 This is the second line.
+</code></pre>
+
+<h3 id="show-lines-by-number">Show lines by number</h3>
+<h4 id="using-sed">Using sed</h4>
+<p>In this case we will use <code class="language-plaintext highlighter-rouge">sed</code> command. Logic behind this command is: it has two buffers. The first one is used for reading input file line by line, the second contains current line and the parametrized operation executed on that buffer. In default mode after each line the result of second buffer is printed to out before and after, but this can be disabled by <code class="language-plaintext highlighter-rouge">-n</code>(longer version <code class="language-plaintext highlighter-rouge">--quiet</code>), for example if we want to print only required lines.</p>
+
+<p>Command is optional parameter, it can contain ReqExp or line number for identifying lines of interest. For this task we need two commands:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">p</code> - print</li>
+  <li><code class="language-plaintext highlighter-rouge">q</code> - quit processing after that line</li>
+</ul>
+
+<p>before the command we need to provide lines addressing. General rules are:</p>
+<ul>
+  <li>number - for identifying line number where the command should be executed;</li>
+  <li>first~step - command will be executed for the fist line number and then for all with given step;</li>
+  <li>$ - last file line;</li>
+  <li>/regular_expression/ - any string that match by ReqExp. Can have own flags, like: <code class="language-plaintext highlighter-rouge">I</code> - case-insensitive and so on;</li>
+  <li>number, number - starting from string line no. 1 to string line no. 2;</li>
+  <li>number, /regular_expression/ - starting from string line no. 1 to string matching pattern</li>
+  <li>number, +amount -  amount of lines starting from string line no. 1</li>
+  <li>number, ~number, starting from string line no. 1 to string line number mod number 2</li>
+  <li>
+    <anything>! - invert selection(remain file except matching lines)
+
+</anything>
+  </li>
+</ul>
+<p>Examples:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Show lines by number:
+```bash
+sed -n '10000000,10000020p; 10000021q' filename
+sed -n '10000000,+20p'  filename
+</code></pre></div></div>
+
+<h4 id="using-tail-and-head">Using tail and head</h4>
+<p>There exists two very specialized tools in *nix the simply took either <code class="language-plaintext highlighter-rouge">head</code> or <code class="language-plaintext highlighter-rouge">tail</code> of the file. These works much faster then <code class="language-plaintext highlighter-rouge">sed</code> but the capabilities are more limited.
+<code class="language-plaintext highlighter-rouge">head</code> parameters:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">-n &lt;number&gt;</code> or <code class="language-plaintext highlighter-rouge">-&lt;number&gt;</code> took only given amount of <strong>first</strong> lines</li>
+  <li><code class="language-plaintext highlighter-rouge">--lines=-&lt;number&gt;</code> took all first lines of file except given amount of latest(because of minus)</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">tail</code> parameters:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">-n &lt;number&gt;</code> or <code class="language-plaintext highlighter-rouge">-&lt;number&gt;</code> took only given amount of <strong>last</strong> lines</li>
+  <li><code class="language-plaintext highlighter-rouge">-n +&lt;number&gt;</code> or <code class="language-plaintext highlighter-rouge">+&lt;number&gt;</code> took all last lines of file except given amount of first(because of plus)</li>
+</ul>
+
+<p>So, combining these, we can print lines of interest from file. Example:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># print 10 lines staring from 2nd:</span>
+<span class="nb">tail</span> +2 sample.txt | <span class="nb">head</span> <span class="nt">-10</span>
+<span class="c"># print lines 10-12:</span>
+<span class="nb">tail</span> +10 sample.txt | <span class="nb">head</span> <span class="nt">-2</span>
+<span class="c"># Copy from one file to another with skipping header</span>
+<span class="nb">cat </span><span class="k">in</span>.csv | <span class="nb">tail</span> <span class="nt">-n</span> +2  <span class="o">&gt;&gt;</span> out.csv
+</code></pre></div></div>
+
+<p>Speed comparison:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> <span class="nb">time tail</span> +50000000 bigfile.csv | <span class="nb">head</span> <span class="nt">-2</span>
+&lt; real	0m4,291s
+&lt; user	0m1,560s
+&lt; sys	0m2,700s
+<span class="o">&gt;</span> <span class="nb">time sed</span> <span class="nt">-n</span> <span class="s1">'50000000,+2p;50000001q'</span>  bigfile.csv
+<span class="o">&gt;</span> real	0m7,080s
+<span class="o">&gt;</span> user	0m4,468s
+<span class="o">&gt;</span> sys	0m2,608s
+</code></pre></div></div>
+<p>So, according to this tail and head combination is as twice as faster.</p>
+
+<h3 id="delete-lines-by-number">Delete lines by number</h3>
+<h4 id="using-sed-1">Using <code class="language-plaintext highlighter-rouge">sed</code></h4>
+<p>For <code class="language-plaintext highlighter-rouge">sed</code> there two important option for this:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">-i</code> parameter means inplace edition (otherwise instead of file edition this will print out without deleted line)</li>
+  <li><code class="language-plaintext highlighter-rouge">d</code> command means delete that line</li>
+</ul>
+
+<p>Examples:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># delete line number 10</span>
+<span class="nb">sed</span> <span class="nt">-i</span> <span class="s1">'10d'</span> sample.txt
+<span class="c"># delete first line</span>
+<span class="nb">sed</span> <span class="nt">-i</span> <span class="s1">'1d'</span> sample.txt
+</code></pre></div></div>
+<h3 id="archiving-with-progress-bar">Archiving with progress bar</h3>
+<p>example:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">tar </span>cf - bigfile.csv | pv <span class="nt">-s</span> <span class="si">$(</span><span class="nb">du</span> <span class="nt">-b</span> bigfile.csv | <span class="nb">awk</span> <span class="s1">'{print $1}'</span><span class="si">)</span>  | <span class="nb">gzip</span> <span class="o">&gt;</span> bigfile.csv.tar.gz
+</code></pre></div></div>
+
+      
+        <h1 style="margin-top: 50px;">Comments</h1>
+      
+    </div>
+    <div id="disqus_thread"></div>
+  </div>
+</div>
+  
+<script>
+    jQuery(document).ready(function() {
+        function debouncer( func , timeout ) {
+            var timeoutID , timeout = timeout || 1000;
+            return function () {
+                var scope = this , args = arguments;
+                clearTimeout( timeoutID );
+                timeoutID = setTimeout( function () {
+                    func.apply( scope , Array.prototype.slice.call( args ) );
+                } , timeout );
+            }
+        }
+        var offset = 300;
+        var duration = 500;
+        var fadeFunc = function () {
+            if (jQuery(window).width() < 1140) {
+                jQuery('.backtotop').fadeOut(0);
+                return;
+            }
+            if (jQuery(window).scrollTop() > offset) {
+                jQuery('.backtotop').fadeIn(duration);
+            } else {
+                jQuery('.backtotop').fadeOut(duration);
+            }
+        }
+        jQuery(window).scroll(debouncer(fadeFunc, 50));
+        jQuery(window).resize(debouncer(fadeFunc));
+
+        jQuery('.backtotop').click(function(event) {
+            event.preventDefault();
+            jQuery('html, body').animate({scrollTop: 0}, duration);
+            return false;
+        })
+    });
+</script>
+<style>
+    .backtotop {
+        display: none;
+    }
+    @media only screen and (min-width:1140px){
+        .backtotop,
+        .backtotop:hover,
+        .backtotop:active,
+        .backtotop:visited,
+        .backtotop:focus {
+            display: none;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            z-index: 10000;
+            text-align: center;
+            color: black;
+            text-decoration: none;
+            padding: 4px 10px;
+            border-radius: 3px;
+            width: 60px;
+            opacity: 0.4;
+        }
+        .backtotop:hover {
+            background-color: rgba(59, 59, 59, 0.10);
+            opacity: 1;
+            transition-property: opacity;
+            transition-duration: 500ms;
+        }
+    }
+
+
+</style>
+<a href="#" class="backtotop"><img src="/assets/noun_Arrow_22173.svg"/></a>
+  
+  <script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    var disqus_config = function () {
+        this.page.url = 'https://k.co.ua/';  // Replace PAGE_URL with your page's canonical URL variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://k-co.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  
+  <div class="footer">
+    <div class="row">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="copyright">
+              <p><a href="https://github.com/msangel/msangel.github.io" target="_self">© 2014-2025 by Vasyl Khrystiuk</a>, powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>, crafted by
+                <a href="https://github.com/msangel/msangel.github.io/blob/master/.github/workflows/github-pages.yml" target="_blank">GitHub Actions</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+<script>anchors.add();</script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-194224445-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+<script src="/assets/links.js"></script>
+<script id="dsq-count-scr" src="//k-co.disqus.com/count.js" async></script>
+</body>
+</html>

@@ -1,0 +1,403 @@
+<html lang="en" class="mysite">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Docker theory | Vasyl Khrystiuk</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Docker theory" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This article is about docker and the technologies it is built on. Mostly theory here. For more practical things read that." />
+<meta property="og:description" content="This article is about docker and the technologies it is built on. Mostly theory here. For more practical things read that." />
+<link rel="canonical" href="https://github.com/pages/msangel/blog/2019/06/08/docker-theory.html" />
+<meta property="og:url" content="https://github.com/pages/msangel/blog/2019/06/08/docker-theory.html" />
+<meta property="og:site_name" content="Vasyl Khrystiuk" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-06-08T03:06:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Docker theory" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-02-03T03:21:25+00:00","datePublished":"2019-06-08T03:06:00+00:00","description":"This article is about docker and the technologies it is built on. Mostly theory here. For more practical things read that.","headline":"Docker theory","mainEntityOfPage":{"@type":"WebPage","@id":"https://github.com/pages/msangel/blog/2019/06/08/docker-theory.html"},"url":"https://github.com/pages/msangel/blog/2019/06/08/docker-theory.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  
+  <link rel="stylesheet" href="/assets/components-font-awesome/css/fontawesome-all.min.css">
+
+  <link href='/assets/open-sans-all/css/open-sans.min.css' rel='stylesheet' type='text/css'>
+  
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+  <link href='//fonts.googleapis.com/css?family=Ubuntu&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Ubuntu+Mono&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  
+  <link rel="stylesheet" href="/assets/bootstrap/dist/css/bootstrap.min.css">
+  <script src="/assets/jquery/dist/jquery.min.js"></script>
+  <script src="/assets/bootstrap/dist/js/bootstrap.min.js"></script>
+  
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="shortcut icon" type="image/jpg" href="/assets/favicon.ico"/>
+  <link rel="stylesheet" href="/assets/tabs.css">
+  <script src="/assets/tabs.js"></script>
+  <link href="/assets/rouge.css" rel="stylesheet" >
+  <style>
+      .highlighter-rouge > .highlight > pre.highlight {
+          border-radius: unset;
+      }
+  </style>
+</head>
+
+<body>
+<div id="body">
+  <div class="jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 myname"><a href="/"><span>Vasyl </span>Khrystiuk</a></div>
+        <div class="col-xs-12 col-sm-12 subtitle"><a href="/"><span>full stack developer</span></a></div>
+      </div>
+
+    </div>
+  </div>
+
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <ul class="nav navbar-nav">
+        <!--class="active" -->
+        <li><a href="/">BLOG</a></li>
+        <li role="separator" class="divider-vertical"></li>
+        <li><a href="/about">ABOUT</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container central blogpost">
+  <div class="row">
+    <div class="col-lg-12 record">
+
+<h2 class="page-title">Docker theory</h2>
+      <p class="text-muted small page-date">Posted: June 08, 2019 - Updated: February 03, 2025</p>
+
+<!-- excerpt-start -->
+<p>This article is about docker and the technologies it is built on. Mostly theory here.<!-- excerpt-start -->
+For more practical things read that.</p>
+
+<h2 id="the-docker-keyword">The &#8220;Docker&#8221; keyword</h2>
+<p>Before diving into the docker world, lets clarify basics about what Docker is:</p>
+<ol>
+  <li>Docker is a company</li>
+  <li>Docker is a software. Actually two kind of it
+    <ol>
+      <li>Docker CE (community edition)</li>
+      <li>Docker EE (enterprise edition)
+The company develops the software and also build the infrastructure that people need around it.</li>
+    </ol>
+  </li>
+</ol>
+
+<h2 id="what-it-is-and-why-we-need-this">What it is, and why we need this</h2>
+
+<p>The best description of what docker is: <strong>lightweight virtual machine</strong>.</p>
+
+<p>It&#8217;s a common problem when developers create their software on their computer and so it can be run only on their computer. Years before some people uses fully-featured virtual machines to create isolated and clear environment for fighting that. Docker is about the same. Either host machine is a Windows PC, Linux laptop, dedicated server or virtual hosting, when the application run with docker, we can be sure the environment is the one we define.</p>
+
+<p>There also exists a known &#8220;Matrix of hell&#8221; that show a wide variety of different systems and their different behavior on different hardware:</p>
+
+<p><div class="row"><img src="https://k.co.ua/resources/docker/the_matrix_of_hell.png" alt="Matrix of hell" title="Matrix of hell" loading="lazy" class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2" /></div></p>
+
+<p>Also, there exists another problem: developers want to use the latest technologies like Haskel, Rust, Go, Microservices, Cassandra, Hadoop, etc.
+But server operations and security want to use the same tooling as they used before, something that is proven, works, and don&#8217;t require additional work to configure/secure.</p>
+
+<p>And so docker allows combining wishes of both sides, it&#8217;s like an interaction contract.</p>
+
+<p>Server operations have to care about only one thing. They have to support deploying containers. So they are satisfied. Developers are happy too. They can develop with whatever the fad of the day is and then just stick it into a container and throw it over the wall to operations.</p>
+
+<p>So docker allows to solve this matrix in a very straightforward way:</p>
+
+<p><div class="row"><img src="https://k.co.ua/resources/docker/the_matrix_of_hell_solved.png" alt="Matrix solved" title="Matrix solved" loading="lazy" class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2" /></div></p>
+
+<p>This is really cool approach we have nowadays. But before everything was different.  Hosting has a long and very complex history. And that has an impact on the docker. I&#8217;m pretty sure we must overview some basics of hosting history for understanding what requirements and problems exist prior to docker.</p>
+
+<h2 id="hosting-history">Hosting history</h2>
+
+<p>First sites and services were hosted on office computers. Well, you can even imagine how many problems there were with this approach. Staring from &#8220;I accidentally turned it off&#8221; to real power supply stability issues.
+After, the DNS-providers starts providing additional service for hosting, as add-on service. And it&#8217;s a good point, as DNS-servers anyway must work 24/7 with extreme stability, so the companies running that knew well how to achieve this stability for sites and services of their users.
+Quite fast the specialization took the place and so appears entire data centers with dedicated computers (dedicated servers). Still, the prices for that were not flexible and because of usually low utilization of the server per user, the same computers start to sell to many people, of course with some isolation level between user&#8217;s data. These isolation requirements cause appearing and evolution of virtual server software.
+Another possible scenario those days was to buy physical server for own usage and put it to data-center. But that was way too expensive.</p>
+
+<h2 id="about-virtual-servers">About virtual servers</h2>
+<p>The virtual servers are <strong>software</strong> that allows running another virtual/emulated computer as any regular application. And since computer is emulated, its environment is also emulated, and so running any programs in it will not harm your primary operating system(if you have one, as stepping a bit forward, I can say that there exists virtual servers that run directly on hardware and don&#8217;t require OS to be installed).</p>
+
+<h3 id="hypervisor">Hypervisor</h3>
+<p>The hypervisor, also referred to as Virtual Machine Manager (VMM), is what enables virtualization (running several operating systems on one physical computer). It allows the host computer to share its resources between VMs(<a href="https://www.vmware.com/topics/glossary/content/hypervisor">link</a>).
+There exists two types of hypervisor: native(or bare metal) and hosted.</p>
+
+<p><div class="row"><img src="https://k.co.ua/resources/docker/hypervisor.png" alt="Hypervisor types" title="Hypervisor types" loading="lazy" class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2" /></div></p>
+
+<h3 id="native-hypervisor">Native hypervisor</h3>
+<p>The native hypervisor is installed right on top of the underlying machine’s hardware (so, in this case, there is no host OS, there are only guest OS’s). This is usually installed on a machine on which the whole purpose was to run many virtual machines. The hypervisor here has its own device drivers and interact with hardware directly. Such hypervisors are faster, simpler, and hence more stable.</p>
+
+<p>Examples:
+<a href="https://antsle.com/all/os-used-in-antsle/">antsleOS</a>, <a href="https://xenproject.org/">Xen</a>, <a href="https://xcp-ng.org/">XCP-ng</a>, <a href="https://www.oracle.com/virtualization/vm-server-for-x86/">Oracle VM Server</a>, <a href="https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/hyper-v-technology-overview">Microsoft Hyper-V</a>, <a href="https://direct.playstation.com/en-us/ps5">Xbox One system software</a>, <a href="https://www.vmware.com/products/esxi-and-esx.html">VMware ESX/ESXi</a> and many more</p>
+
+<h3 id="hosted-hypervisor">Hosted hypervisor</h3>
+<p>This is a program(regular executable file) that is running on top of the operating system. This type of hypervisor is something like a “translator” that translates the guest operating system’s system calls into the host operating system’s system calls.</p>
+
+<p>Examples:
+<a href="https://www.virtualbox.org/">VirtualBox</a>, <a href="https://www.parallels.com/">Parallels Desktop for Mac</a>, <a href="https://www.qemu.org/">QEMU</a>, <a href="https://www.vmware.com/products/workstation">VMware Workstation</a>, <a href="https://www.vmware.com/products/player">VMware Player</a> and many more</p>
+
+<h3 id="pros-and-cons-of-virtual-servers">Pros and Cons of virtual servers</h3>
+<p>Pros:</p>
+
+<p>The advantages of virtual servers are:</p>
+<ol>
+  <li>Managed environment, including choice of operating system;</li>
+  <li>Resources on demand, as this is simply hypervisor&#8217;s option, that can be changed even without guests OS restart, and so cheaper where possible;</li>
+  <li>Easy backups and restoring, as each VM&#8217;s files are kept in one place. The drive storage of VM is often also emulated and persists as regular file;</li>
+  <li>Easy new instances start, just click a button;</li>
+  <li>Less electricity consumption, for providers, as allow to host many VM of one physical computer;</li>
+</ol>
+
+<p>Cons:</p>
+<ul>
+  <li>Low computational performance, as the calls to system are translated via intermediate layer;</li>
+  <li>Huge memory usage, as guests OSs tends to fill all available RAM (as any regular OS);</li>
+  <li>Problems with hardware (USB, printers, etc.), as the access to those devices is not direct;</li>
+  <li>Complex management;</li>
+</ul>
+
+<h2 id="containerization">Containerization</h2>
+<p>Containerization is about creating an isolated virtual environment for processes without needed of full VM.</p>
+
+<p>Containerization is a lightweight alternative to full machine virtualization that involves encapsulating an application in a container with its own operating environment. For easy understanding we can say, that container is just a native process that running in own environment, so its execution is not affecting host environment in any way.</p>
+
+<p>Docker is an example of containerization technology.</p>
+
+<p><div class="row"><img src="https://k.co.ua/resources/docker/vm_vs_container.png" alt="VM vs Container" title="VM vs Container" loading="lazy" class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2" /></div>
+The image describes the difference between a VM and Docker. Instead of a <em>hypervisor</em> with Guest OSes on top, Docker uses a <em>Docker engine</em> and containers on top.</p>
+
+<p>Let&#8217;s look more aspects:</p>
+<ul>
+  <li>
+    <p><strong>Processes</strong>. A nice way of illustrating this difference is through listing the running processes. On the host running the VM there is only <em>one</em> process running VM itself even though there are many processes running inside the VM(emulated inside of single process). On the host running the Docker all the processes running are visible as they natively executed directly on host OS. They can be inspected and manipulated with normal commands like, <code class="language-plaintext highlighter-rouge">ps</code>, and <code class="language-plaintext highlighter-rouge">kill</code>.</p>
+  </li>
+  <li>
+    <p><strong>Disk space</strong>. Also difference is in disk space usage. VM had to emulate full file system inside of VM and this usually took gigabytes of disk. And the size of a small container with busybox is just 2.5 MB.</p>
+  </li>
+  <li>
+    <p><strong>Startup time</strong>. The startup time of a fast virtual machine is measured in minutes. The startup time of a container is often less than a second.</p>
+  </li>
+</ul>
+
+<h3 id="chroot">Chroot</h3>
+<div class="row">
+  <p class="pull-left col-xs-12 col-md-6"><img src="https://k.co.ua/resources/docker/chroot.png" alt="chroot" title="Chroot" loading="lazy" /></p>
+
+  <p>Chroot - first attempts in processes isolation. A chroot is just a command of Unix OS that changes the apparent root directory for the current running process and its children. A program that is run in such a modified environment cannot name (and therefore normally cannot access) files outside the designated directory tree.</p>
+
+  <p>The chroot system call was introduced during development of Unix in 1979, and added to BSD in 1982. An early use of the term &#8220;jail&#8221; as applied to chroot comes from Bill Cheswick creating a honeypot to monitor a cracker in 1991.</p>
+
+  <p>First known breaking out of chroot jail was published in 1999.</p>
+</div>
+
+<h3 id="chroot-on-steroids">Chroot on steroids</h3>
+<p>Docker is a result of the evolution of the concepts behind chroot. All containers of Docker on a given host run under the same kernel, with other resources isolated per container. Docker allows isolating a process at multiple levels through namespaces and utilities:</p>
+<ul>
+  <li><strong>cgroups</strong> for cpu and memory limits, reduced capabilities, controlling what container can use;</li>
+  <li><strong>mnt</strong> namespace provides a root filesystem, this one can be compared to chroot</li>
+  <li><strong>pid</strong> namespace so the process only sees itself and its children</li>
+  <li><strong>network</strong> namespace which allows the container to have its dedicated network stack</li>
+  <li><strong>user</strong> namespace which allows a non-root user on a host to be mapped with the root user within the container</li>
+  <li><strong>uts</strong> provides dedicated hostname per process tree (bootstrap from system values)</li>
+  <li><strong>ipc</strong> (inter-process communication)provides dedicated shared memory</li>
+  <li><strong>seccomp</strong> (secure computing mode with instructions checkings)</li>
+  <li><strong>selinux</strong>/<strong>apparmor</strong> (Security-Enhanced Linux / &#8220;Application Armor&#8221;) — linux kernel security modules</li>
+  <li><strong>ulimits</strong> (number of open file descriptors per process)</li>
+  <li><strong>Union File Systems</strong> allows representing the result of multiple layers of filesystems as a single filesystem, where usually only the latest layer is for writing.</li>
+</ul>
+
+<h3 id="pros-and-cons-of-docker">Pros and Cons of Docker</h3>
+
+<p>Utilizing capabilities above, docker provides:</p>
+<ul>
+  <li><strong>Flexibility</strong>. Since container is a separated environment with full access to it(installing any software versions, managing files your way), even most complex applications can be containerized.</li>
+  <li><strong>Lightweight</strong>. Besides of own environment, processes in the container as the same native processes that run on the host kernel directly.</li>
+  <li><strong>Interchangeability</strong>. Possibility to deploy updates and upgrades on the fly. Turning the container off is simple the same as shutting down all its processes. There is access to container&#8217;s file system even if the container stopped. After applying required changes is possible to start them back, start from a saved image or even simply start a new version instead.</li>
+  <li><strong>Portability</strong>. Anything built locally can run anywhere, for example, to be deployed to the cloud.</li>
+  <li><strong>Scalability</strong>. It is possible to increase and automatically distribute container replicas.</li>
+</ul>
+
+<p>Still there exists some disadvantages.
+First is <strong>security</strong>. Containers share the same hooks into the kernel, and that’s a problem because if there are any vulnerabilities in the kernel, then someone can get into other containers. Containers have not yet demonstrated that they can deliver the same secure boundaries that a VM still has.
+The next one is <strong>flexibility in OS choosing</strong>. There is no way to use windows apps under linux and visa versa. Also there even no way to use another kernel, rather than existed one. Yes, we can install an emulator of desired system in a container(like <a href="https://www.winehq.org/">wine</a> in linux and <a href="https://docs.microsoft.com/en-us/windows/wsl/">wsl</a> in windows), but that&#8217;s will be another intermediate layer of abstraction.</p>
+
+<h2 id="docker-architecture">Docker architecture</h2>
+<p>Docker is implemented as a client-server system.  Docker software consists of 2 separate programs, that is docker engine, also known as docker daemon (because it is, in fact, a daemon, running in the background) and docker client.</p>
+
+<p>Docker engine is responsible for running processes in isolated environments. For each process, it generates a new Linux container, allocates a new filesystem for it, allocates a network interface, sets an IP for it, sets NAT for it and then runs processes inside it. It also manages such things as creating, removing images, fetching images from the registry of choice, creating, restarting, removing containers and many other things. Docker engine exposes the rest API which can be used to control the daemon.</p>
+
+<p>Docker client is usually CLI app. Daemon is accessible via socket connection(TCP or UNIX) and simply provide controlling API. The client may, but does not have to, be on the same machine as the daemon.</p>
+
+<p>Terminology:</p>
+<ul>
+  <li><strong>host</strong>(also <strong>docker server</strong>) — the machine that is running the containers.</li>
+  <li><strong>image</strong> — a hierarchy of files, with meta-data for how to run a container. They are read-only. This give:
+    <ul>
+      <li>many instances of the same</li>
+      <li>you&#8217;re not afraid of crashes</li>
+    </ul>
+  </li>
+  <li><strong>container</strong> — a contained running process, started from an image.</li>
+  <li><strong>registry</strong> — a repository of images. It&#8217;s a service that enables users to push images to it, make them public or private, and pull different images, all using the docker client CLI. Docker hub is a docker image registry provided by Docker, Inc itself. Alternatively, you can host your own docker registry.</li>
+  <li><strong>volume</strong> — storage outside the container.</li>
+  <li><strong>Dockerfile</strong> — a script for creating images.</li>
+</ul>
+
+<p><div class="row"><img src="https://k.co.ua/resources/docker/docker_use.png" alt="Docker use" title="Docker use" loading="lazy" class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2" /></div></p>
+
+<p>The mentioned above &#8220;Union File system&#8221; built on top of &#8220;Copy-On-Write&#8221; principle and allows high reuse of file systems.</p>
+
+<p><div class="row"><img src="https://k.co.ua/resources/docker/copy_on_write_fs.png" alt="Union File System" title="Union File System" loading="lazy" class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2" /></div></p>
+
+<p>For example: if you build most of your applications as PHP site driven by Apache Http Server, the single layer with Apache server will be shared between all of your applications. And the files of each of those applications every time will be put on top of that base at runtime time.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>A docker is a powerful tool that is created to solve many common developer&#8217;s problems and tasks. But before using it, nice to have some insights on how we came to it and how it is working inside, actually, this article about that.
+You may also want to look at the more practical part of using docker in my docker cookbook.</p>
+
+<h2 id="resources-used">Resources used</h2>
+<ul>
+  <li><a href="https://docs.docker.com/get-started/">Get started with docker</a></li>
+  <li><a href="https://internetplusweb.wordpress.com/2016/07/03/containerization-vitualization/">Containerization &amp; Vitualization</a></li>
+  <li><a href="https://blog.jayway.com/2015/03/21/a-not-very-short-introduction-to-docker/">A Not Very Short Introduction to Docker</a></li>
+  <li><a href="https://www.freecodecamp.org/news/comprehensive-introductory-guide-to-docker-vms-and-containers-4e42a13ee103/">A comprehensive introduction to Docker, Virtual Machines, and Containers</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Hypervisor">About Hypervisor on wiki</a></li>
+  <li><a href="https://medium.com/@paccattam/drooling-over-docker-2-understanding-union-file-systems-2e9bf204177c">Understanding Union File Systems</a></li>
+</ul>
+
+
+      
+        <h1 style="margin-top: 50px;">Comments</h1>
+      
+    </div>
+    <div id="disqus_thread"></div>
+  </div>
+</div>
+  
+<script>
+    jQuery(document).ready(function() {
+        function debouncer( func , timeout ) {
+            var timeoutID , timeout = timeout || 1000;
+            return function () {
+                var scope = this , args = arguments;
+                clearTimeout( timeoutID );
+                timeoutID = setTimeout( function () {
+                    func.apply( scope , Array.prototype.slice.call( args ) );
+                } , timeout );
+            }
+        }
+        var offset = 300;
+        var duration = 500;
+        var fadeFunc = function () {
+            if (jQuery(window).width() < 1140) {
+                jQuery('.backtotop').fadeOut(0);
+                return;
+            }
+            if (jQuery(window).scrollTop() > offset) {
+                jQuery('.backtotop').fadeIn(duration);
+            } else {
+                jQuery('.backtotop').fadeOut(duration);
+            }
+        }
+        jQuery(window).scroll(debouncer(fadeFunc, 50));
+        jQuery(window).resize(debouncer(fadeFunc));
+
+        jQuery('.backtotop').click(function(event) {
+            event.preventDefault();
+            jQuery('html, body').animate({scrollTop: 0}, duration);
+            return false;
+        })
+    });
+</script>
+<style>
+    .backtotop {
+        display: none;
+    }
+    @media only screen and (min-width:1140px){
+        .backtotop,
+        .backtotop:hover,
+        .backtotop:active,
+        .backtotop:visited,
+        .backtotop:focus {
+            display: none;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            z-index: 10000;
+            text-align: center;
+            color: black;
+            text-decoration: none;
+            padding: 4px 10px;
+            border-radius: 3px;
+            width: 60px;
+            opacity: 0.4;
+        }
+        .backtotop:hover {
+            background-color: rgba(59, 59, 59, 0.10);
+            opacity: 1;
+            transition-property: opacity;
+            transition-duration: 500ms;
+        }
+    }
+
+
+</style>
+<a href="#" class="backtotop"><img src="/assets/noun_Arrow_22173.svg"/></a>
+  
+  <script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    var disqus_config = function () {
+        this.page.url = 'https://k.co.ua/';  // Replace PAGE_URL with your page's canonical URL variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://k-co.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  
+  <div class="footer">
+    <div class="row">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="copyright">
+              <p><a href="https://github.com/msangel/msangel.github.io" target="_self">© 2014-2025 by Vasyl Khrystiuk</a>, powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>, crafted by
+                <a href="https://github.com/msangel/msangel.github.io/blob/master/.github/workflows/github-pages.yml" target="_blank">GitHub Actions</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+<script>anchors.add();</script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-194224445-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+<script src="/assets/links.js"></script>
+<script id="dsq-count-scr" src="//k-co.disqus.com/count.js" async></script>
+</body>
+</html>

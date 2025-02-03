@@ -1,0 +1,650 @@
+<html lang="en" class="mysite">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Regexp in java | Vasyl Khrystiuk</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Regexp in java" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Theory and history. Regular expressions (regexp) is a formal language for searching and manipulating with substrings in text. Regular expressions is based on usage if meta-symbols (wildcard characters). This is, actually, a string pattern, which formalizing a search rule (wiki) ." />
+<meta property="og:description" content="Theory and history. Regular expressions (regexp) is a formal language for searching and manipulating with substrings in text. Regular expressions is based on usage if meta-symbols (wildcard characters). This is, actually, a string pattern, which formalizing a search rule (wiki) ." />
+<link rel="canonical" href="https://github.com/pages/msangel/blog/2014/04/16/java-regexp.html" />
+<meta property="og:url" content="https://github.com/pages/msangel/blog/2014/04/16/java-regexp.html" />
+<meta property="og:site_name" content="Vasyl Khrystiuk" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2014-04-16T01:57:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Regexp in java" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-02-03T03:21:25+00:00","datePublished":"2014-04-16T01:57:00+00:00","description":"Theory and history. Regular expressions (regexp) is a formal language for searching and manipulating with substrings in text. Regular expressions is based on usage if meta-symbols (wildcard characters). This is, actually, a string pattern, which formalizing a search rule (wiki) .","headline":"Regexp in java","mainEntityOfPage":{"@type":"WebPage","@id":"https://github.com/pages/msangel/blog/2014/04/16/java-regexp.html"},"url":"https://github.com/pages/msangel/blog/2014/04/16/java-regexp.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  
+  <link rel="stylesheet" href="/assets/components-font-awesome/css/fontawesome-all.min.css">
+
+  <link href='/assets/open-sans-all/css/open-sans.min.css' rel='stylesheet' type='text/css'>
+  
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+  <link href='//fonts.googleapis.com/css?family=Ubuntu&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Ubuntu+Mono&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  
+  <link rel="stylesheet" href="/assets/bootstrap/dist/css/bootstrap.min.css">
+  <script src="/assets/jquery/dist/jquery.min.js"></script>
+  <script src="/assets/bootstrap/dist/js/bootstrap.min.js"></script>
+  
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="shortcut icon" type="image/jpg" href="/assets/favicon.ico"/>
+  <link rel="stylesheet" href="/assets/tabs.css">
+  <script src="/assets/tabs.js"></script>
+  <link href="/assets/rouge.css" rel="stylesheet" >
+  <style>
+      .highlighter-rouge > .highlight > pre.highlight {
+          border-radius: unset;
+      }
+  </style>
+</head>
+
+<body>
+<div id="body">
+  <div class="jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 myname"><a href="/"><span>Vasyl </span>Khrystiuk</a></div>
+        <div class="col-xs-12 col-sm-12 subtitle"><a href="/"><span>full stack developer</span></a></div>
+      </div>
+
+    </div>
+  </div>
+
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <ul class="nav navbar-nav">
+        <!--class="active" -->
+        <li><a href="/">BLOG</a></li>
+        <li role="separator" class="divider-vertical"></li>
+        <li><a href="/about">ABOUT</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container central blogpost">
+  <div class="row">
+    <div class="col-lg-12 record">
+
+<h2 class="page-title">Regexp in java</h2>
+      <p class="text-muted small page-date">Posted: April 16, 2014 - Updated: February 03, 2025</p>
+<ul id="toc" class="section-nav">
+<li class="toc-entry toc-h3"><a href="#theory-and-history">Theory and history.</a></li>
+<li class="toc-entry toc-h3"><a href="#regexp-in-java">RegExp in Java</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#test-string-for-pattern-matching">Test string for pattern matching</a></li>
+<li class="toc-entry toc-h4"><a href="#flags">Flags</a></li>
+<li class="toc-entry toc-h4"><a href="#split-string-with-delimiter">Split string with delimiter</a></li>
+<li class="toc-entry toc-h4"><a href="#check-prefixif-string-starting-with-another-string">Check prefix(if string starting with another string)</a></li>
+<li class="toc-entry toc-h4"><a href="#changing-patterndata-in-existing-matcher">Changing pattern/data in existing matcher</a></li>
+<li class="toc-entry toc-h4"><a href="#substring-search">Substring search</a></li>
+<li class="toc-entry toc-h4"><a href="#replace-by-pattern">Replace by pattern</a>
+<ul>
+<li class="toc-entry toc-h5"><a href="#method-1">Method 1</a></li>
+<li class="toc-entry toc-h5"><a href="#method-2">Method 2</a></li>
+<li class="toc-entry toc-h5"><a href="#method-3">Method 3</a></li>
+<li class="toc-entry toc-h5"><a href="#method-4">Method 4</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h4"><a href="#greedy-match">Greedy match</a></li>
+<li class="toc-entry toc-h4"><a href="#regions">Regions</a></li>
+<li class="toc-entry toc-h4"><a href="#regexp-escaping">Regexp escaping</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#tutorials-and-articles">Tutorials and articles</a></li>
+</ul>
+<h3 id="theory-and-history">Theory and history.</h3>
+<!-- excerpt-start -->
+<p>Regular expressions (regexp) is a formal language for searching and manipulating with substrings in text. Regular expressions is based on usage if meta-symbols (wildcard characters). This is, actually, a string pattern, which formalizing a search rule (<a href="https://en.wikipedia.org/wiki/Regular_expression">wiki</a>) .</p>
+
+<p>There exists two kinds of regular expressions:</p>
+
+<ul>
+  <li>
+    <p>POSIX (older one, basics)</p>
+  </li>
+  <li>
+    <p>PCRE (perl-compatible regular expressions, more extended)</p>
+  </li>
+</ul>
+
+<p>Regular expressions have a huge flexibility but are not guaranteed optimal, because they works based of exhaustive  search. So badly written regular expression can kill your program.  So far, there are techniques for optimizing them, for example build search pattern based on search input with <a href="https://en.wikipedia.org/wiki/Aho%E2%80%93Corasick_algorithm">Aho–Corasick algorithm</a> (keywords for more deep search: NFA and minimal DFA, prefix tree). Here is just example implementation: <a href="http://search.cpan.org/\~jhi/Regex-PreSuf-1.17/PreSuf.pm" target="_blank">PreSuf</a>.</p>
+
+<p>Also you need to understand, that there is no so easy to work with regexps on huge files due their nature. Also regular expressions are possible to use with streaming data, but that&#8217;s another hard moment that needs more research.</p>
+
+<h3 id="regexp-in-java">RegExp in Java</h3>
+
+<p>There are many regexp implementations in Java. Some a bit outdated list with performance comparisons you can find here: <a href="http://www.tusker.org/regex/regex_benchmark.html" target="_blank">http://www.tusker.org/regex/regex_benchmark.html</a>.</p>
+
+<p>In scope of this article we are going to review regular expressions implementation from Java standard library.  This implementation is represented by three classes:</p>
+
+<ul>
+  <li>
+    <p>PatternSyntaxException: Unchecked exception thrown to indicate a syntax error in a regular-expression pattern.</p>
+  </li>
+  <li>
+    <p>Matcher: object that keep processed string inside, remember processing state and used pattern.</p>
+  </li>
+  <li>
+    <p>Pattern - actually pattern object.</p>
+  </li>
+</ul>
+
+<p>What we can do with all of this?</p>
+
+<h4 id="test-string-for-pattern-matching">Test string for pattern matching</h4>
+
+<p>Method 1:</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Pattern</span><span class="o">.</span><span class="na">compile</span><span class="o">(</span><span class="s">"a*b"</span><span class="o">,</span><span class="nc">Pattern</span><span class="o">.</span><span class="na">CASE_INSENSITIVE</span><span class="o">).</span><span class="na">matcher</span><span class="o">(</span><span class="s">"aaab"</span><span class="o">).</span><span class="na">matches</span><span class="o">();</span><span class="c1">// true  </span>
+</code></pre></div></div>
+<p>ATTENTION: only full matching - from string beginning to its end, so the next example:</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Pattern</span><span class="o">.</span><span class="na">compile</span><span class="o">(</span><span class="s">"a*b"</span><span class="o">,</span><span class="nc">Pattern</span><span class="o">.</span><span class="na">CASE_INSENSITIVE</span> <span class="o">&amp;</span> <span class="nc">Pattern</span><span class="o">.</span><span class="na">MULTILINE</span><span class="o">).</span><span class="na">matcher</span><span class="o">(</span><span class="s">"aaabaaab"</span><span class="o">).</span><span class="na">matches</span><span class="o">();</span><span class="c1">// false  </span>
+</code></pre></div></div>
+<p>will return  false , as far as whole string is not match the pattern.
+The solution:</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Pattern</span><span class="o">.</span><span class="na">compile</span><span class="o">(</span><span class="s">".*a*b.*"</span><span class="o">,</span><span class="nc">Pattern</span><span class="o">.</span><span class="na">CASE_INSENSITIVE</span><span class="o">).</span><span class="na">matcher</span><span class="o">(</span><span class="s">"aaabaaab"</span><span class="o">).</span><span class="na">matches</span><span class="o">()</span> <span class="cm">/* full maching */</span><span class="o">:</span> <span class="kc">true</span>  
+</code></pre></div></div>
+<p>Method 2:</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">"dreedisgood"</span><span class="o">.</span><span class="na">matches</span><span class="o">(</span><span class="s">"(?i).\\*IS.\\*"</span><span class="o">);</span> <span class="c1">// where (?i) - flags  </span>
+</code></pre></div></div>
+<h4 id="flags">Flags</h4>
+
+<p>Flags are calculating as bit mask. List of them are in documentation about <a href="https://docs.oracle.com/javase/tutorial/essential/regex/pattern.html" target="_blank">Pattern</a> class.</p>
+
+<h4 id="split-string-with-delimiter">Split string with delimiter</h4>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span><span class="o">[]</span> <span class="n">strings</span> <span class="o">=</span> <span class="nc">Pattern</span><span class="o">.</span><span class="na">compile</span><span class="o">(</span><span class="s">"a"</span><span class="o">).</span><span class="na">split</span><span class="o">(</span><span class="s">"asdasdasd"</span><span class="o">);</span>
+<span class="k">for</span> <span class="o">(</span><span class="nc">String</span> <span class="n">word</span> <span class="o">:</span> <span class="n">strings</span><span class="o">)</span> <span class="o">{</span>  
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"splitted: "</span> <span class="o">+</span> <span class="n">word</span><span class="o">);</span>
+<span class="o">}</span>  
+</code></pre></div></div>
+<p>OUT:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>splitted:  
+splitted: sd  
+splitted: sd  
+splitted: sd  
+</code></pre></div></div>
+
+<p>If you look carefully, you can find that before the first &#8220;a&#8221; letter there is one empty line with 0 length.</p>
+
+<p>Another  example:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Pattern</span> <span class="n">p3</span> <span class="o">=</span> <span class="nc">Pattern</span><span class="o">.</span><span class="na">compile</span><span class="o">(</span><span class="s">"\\d+\\s?"</span><span class="o">);</span>  
+<span class="nc">String</span><span class="o">[]</span> <span class="n">words</span> <span class="o">=</span>  <span class="n">p3</span><span class="o">.</span><span class="na">split</span><span class="o">(</span><span class="s">"java5tiger 77 java6mustang"</span><span class="o">);</span>  
+<span class="k">for</span> <span class="o">(</span><span class="nc">String</span> <span class="n">word</span> <span class="o">:</span> <span class="n">words</span><span class="o">){</span>  
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"splitted: "</span><span class="o">+</span><span class="n">word</span><span class="o">);</span>
+<span class="o">}</span>  
+</code></pre></div></div>
+
+<p>OUT:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>splitted: java  
+splitted: tiger  
+splitted: java  
+splitted: mustang  
+</code></pre></div></div>
+
+<p>And one more sample, where we gonna split only into 2 groups: the first one and the rest:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">ssstr</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>  
+<span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="nc">String</span><span class="o">[]</span> <span class="n">strings</span> <span class="o">=</span> <span class="nc">Pattern</span><span class="o">.</span><span class="na">compile</span><span class="o">(</span><span class="s">"\\d"</span><span class="o">).</span><span class="na">split</span><span class="o">(</span><span class="s">"va1sda1sda3sd"</span><span class="o">,</span><span class="mi">2</span><span class="o">);</span>
+<span class="k">for</span> <span class="o">(</span><span class="nc">String</span> <span class="nl">s:</span> <span class="n">strings</span><span class="o">)</span> <span class="o">{</span>  
+    <span class="n">ssstr</span><span class="o">+=</span><span class="s">"s\["</span><span class="o">+(</span><span class="n">c</span><span class="o">++)+</span><span class="s">"\]:"</span><span class="o">+</span><span class="n">s</span><span class="o">+</span><span class="s">"  "</span><span class="o">;</span>
+<span class="o">}</span>  
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"split with arg: "</span><span class="o">+</span><span class="n">ssstr</span><span class="o">);</span> 
+</code></pre></div></div>
+
+<p>OUT:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>split with arg: s[0]:va  s[1]:sda1sda3sd  
+</code></pre></div></div>
+
+<h4 id="check-prefixif-string-starting-with-another-string">Check prefix(if string starting with another string)</h4>
+
+<p>This will return true</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Pattern</span><span class="o">.</span><span class="na">compile</span><span class="o">(</span><span class="s">"va.*b"</span><span class="o">).</span><span class="na">matcher</span><span class="o">(</span><span class="s">"va1sda1sda 3sbd"</span><span class="o">).</span><span class="na">lookingAt</span><span class="o">();</span> <span class="c1">//  true </span>
+</code></pre></div></div>
+
+<p>And this will return false</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Pattern</span><span class="o">.</span><span class="na">compile</span><span class="o">(</span><span class="s">"a.*b"</span><span class="o">).</span><span class="na">matcher</span><span class="o">(</span><span class="s">"va1sda1sda 3sbd"</span><span class="o">).</span><span class="na">lookingAt</span><span class="o">();</span> <span class="c1">//  false  </span>
+</code></pre></div></div>
+
+<h4 id="changing-patterndata-in-existing-matcher">Changing pattern/data in existing matcher</h4>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Pattern</span> <span class="n">p3</span> <span class="o">=</span> <span class="nc">Pattern</span><span class="o">.</span><span class="na">compile</span><span class="o">(</span><span class="s">"va.+?b"</span><span class="o">);</span> <span class="c1">// base pattern</span>
+<span class="nc">Matcher</span> <span class="n">m3</span> <span class="o">=</span> <span class="n">p3</span><span class="o">.</span><span class="na">matcher</span><span class="o">(</span><span class="s">"va1sda1bda 3sbd"</span><span class="o">);</span> <span class="c1">// base mather</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"find smth? "</span><span class="o">+</span><span class="n">m3</span><span class="o">.</span><span class="na">find</span><span class="o">());</span>  
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"what? "</span><span class="o">+</span><span class="n">m3</span><span class="o">.</span><span class="na">group</span><span class="o">());</span>  
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">m3</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span><span class="c1">//gives the information about used pattern and matcher's state  </span>
+<span class="n">m3</span><span class="o">.</span><span class="na">usePattern</span><span class="o">(</span><span class="nc">Pattern</span><span class="o">.</span><span class="na">compile</span><span class="o">(</span><span class="s">"\\d"</span><span class="o">));</span> <span class="c1">// set new pattern  </span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">m3</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span><span class="c1">// info after reset</span>
+<span class="n">m3</span><span class="o">.</span><span class="na">reset</span><span class="o">();</span> <span class="c1">// matcher reset state</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"can we search again?: "</span><span class="o">+</span> <span class="n">m3</span><span class="o">.</span><span class="na">find</span><span class="o">());</span>  
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Whats there? "</span><span class="o">+</span><span class="n">m3</span><span class="o">.</span><span class="na">group</span><span class="o">());</span> 
+</code></pre></div></div>
+
+<p>OUT:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find smth? true
+what? va1sda1b  
+java.util.regex.Matcher[pattern=va.+?b region=0,15 lastmatch=va1sda1b]  
+java.util.regex.Matcher[pattern=\d region=0,15 lastmatch=]  
+can we search again?: true
+Whats there? 1
+</code></pre></div></div>
+
+<p>If we will take this line from code above:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">m3</span><span class="o">.</span><span class="na">reset</span><span class="o">();</span> 
+</code></pre></div></div>
+
+<p>then the new pattern will continue to search from the last place and the last line would be</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Whats there? 3
+</code></pre></div></div>
+
+<p>Also the method <code class="language-plaintext highlighter-rouge">reset()</code> can be parameterized  with new string for matcher, so replacing <code class="language-plaintext highlighter-rouge">m3.reset()</code> for <code class="language-plaintext highlighter-rouge">m3.reset("5sdf")</code> in the code above will gives us:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Whats there? 5  
+</code></pre></div></div>
+
+<h4 id="substring-search">Substring search</h4>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Matcher</span> <span class="n">m3</span> <span class="o">=</span> <span class="nc">Pattern</span><span class="o">.</span><span class="na">compile</span><span class="o">(</span><span class="s">"\\d(.{1})"</span><span class="o">).</span><span class="na">matcher</span><span class="o">(</span><span class="s">"va1sda1dda 3jhbd"</span><span class="o">);</span>  
+<span class="k">while</span> <span class="o">(</span><span class="n">m3</span><span class="o">.</span><span class="na">find</span><span class="o">())</span> <span class="o">{</span>
+    <span class="c1">// group() is equal to group(0), where 0 mean the full found substring </span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"new group after find: "</span><span class="o">+</span> <span class="n">m3</span><span class="o">.</span><span class="na">group</span><span class="o">());</span> 
+    <span class="c1">// and here 1 mean the first selectet with parentheses group in substring</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"new subgroup in found: "</span><span class="o">+</span> <span class="n">m3</span><span class="o">.</span><span class="na">group</span><span class="o">(</span><span class="mi">1</span><span class="o">));</span>
+<span class="o">}</span>  
+</code></pre></div></div>
+
+<p>OUT:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>new group after find: 1s  
+new subgroup in found: s  
+new group after find: 1d  
+new subgroup in found: d  
+new group after find: 3j  
+new subgroup in found: j  
+</code></pre></div></div>
+
+<p>Also there is parameterized variant of the <code class="language-plaintext highlighter-rouge">find</code> method:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Matcher.find(int offset) 
+</code></pre></div></div>
+
+<p>which is looking by offset.</p>
+
+<p>Another example:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nc">String</span> <span class="n">regex</span> <span class="o">=</span> <span class="s">"(\\w+)@(\\w+\\.)(\\w+)(\\.\\w+)*"</span><span class="o">;</span>
+<span class="nc">String</span> <span class="n">s</span> <span class="o">=</span><span class="s">"emeil adresses:mymail@tut.by and rom@bsu.by"</span><span class="o">;</span>
+<span class="nc">Pattern</span> <span class="n">p2</span> <span class="o">=</span> <span class="nc">Pattern</span><span class="o">.</span><span class="na">compile</span><span class="o">(</span><span class="n">regex</span><span class="o">);</span>
+<span class="nc">Matcher</span> <span class="n">m2</span> <span class="o">=</span> <span class="n">p2</span><span class="o">.</span><span class="na">matcher</span><span class="o">(</span><span class="n">s</span><span class="o">);</span>
+<span class="k">if</span><span class="o">(</span><span class="n">m2</span><span class="o">.</span><span class="na">find</span><span class="o">())</span> <span class="o">{</span>
+    <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">m2</span><span class="o">.</span><span class="na">groupCount</span><span class="o">();</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span> 
+         <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"all groupes: "</span><span class="o">+</span><span class="n">m2</span><span class="o">.</span><span class="na">group</span><span class="o">(</span><span class="n">i</span><span class="o">));</span> 
+    <span class="o">}</span>
+<span class="o">}</span>
+<span class="n">m2</span><span class="o">.</span><span class="na">reset</span><span class="o">();</span>
+<span class="k">while</span> <span class="o">(</span><span class="n">m2</span><span class="o">.</span><span class="na">find</span><span class="o">())</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"e-mail: "</span><span class="o">+</span>  <span class="n">m2</span><span class="o">.</span><span class="na">group</span><span class="o">());</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>OUT:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>all groupes: mymail@tut.by  
+all groupes: mymail  
+all groupes: tut.  
+all groupes: by  
+e-mail: mymail@tut.by  
+e-mail: rom@bsu.by  
+</code></pre></div></div>
+
+<h4 id="replace-by-pattern">Replace by pattern</h4>
+
+<h5 id="method-1">Method 1</h5>
+
+<p>Simple replace letter &#8220;i&#8221; for &#8220;1&#8221;</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">CharSequence</span> <span class="n">inputStr</span> <span class="o">=</span>  <span class="s">"this is simple tex thaw i want to chancE "</span><span class="o">;</span>  
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">inputStr</span><span class="o">);</span>
+<span class="nc">String</span> <span class="n">patternStr</span> <span class="o">=</span> <span class="s">"i"</span><span class="o">;</span>
+<span class="nc">String</span> <span class="n">replacementStr</span> <span class="o">=</span> <span class="s">"1"</span><span class="o">;</span>
+<span class="nc">Pattern</span> <span class="n">pattern</span> <span class="o">=</span> <span class="nc">Pattern</span><span class="o">.</span><span class="na">compile</span><span class="o">(</span><span class="n">patternStr</span><span class="o">);</span>
+<span class="nc">Matcher</span> <span class="n">matcher</span> <span class="o">=</span> <span class="n">pattern</span><span class="o">.</span><span class="na">matcher</span><span class="o">(</span><span class="n">inputStr</span><span class="o">);</span>
+<span class="nc">String</span> <span class="n">output</span> <span class="o">=</span> <span class="n">matcher</span><span class="o">.</span><span class="na">replaceAll</span><span class="o">(</span><span class="n">replacementStr</span><span class="o">);</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">output</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>OUT:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>this is simple tex thaw i want to chancE  
+th1s 1s s1mple tex thaw 1 want to chancE  
+</code></pre></div></div>
+
+<h5 id="method-2">Method 2</h5>
+
+<p>This example of more complex replace with usage of groups. Access to groups are made via $x, where х - group number. This is replacing order of worlds with their spaces :</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="o">...</span>
+    <span class="nc">String</span> <span class="n">patternStr</span> <span class="o">=</span> <span class="s">"(\\s?is)(\\s?+simple)(\\s+tex)"</span><span class="o">;</span>
+    <span class="nc">String</span> <span class="n">replacementStr</span> <span class="o">=</span> <span class="s">"$3$1$2"</span><span class="o">;</span>
+    <span class="o">...</span>
+</code></pre></div></div>
+
+<p>OUT:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>this is simple tex thaw i want to chancE
+this tex is simple thaw i want to chancE
+</code></pre></div></div>
+
+<h5 id="method-3">Method 3</h5>
+
+<p>Next sample looking for world which starts with  letter and ends with digit. Found result is wrapping with text in the beginning and in the end:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">CharSequence</span> <span class="n">inputStr</span> <span class="o">=</span> <span class="s">"ab12 cd efg34 asdf 123"</span><span class="o">;</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">inputStr</span><span class="o">);</span>
+<span class="nc">String</span> <span class="n">patternStr</span> <span class="o">=</span> <span class="s">"([a-zA-Z]+[0-9]+)"</span><span class="o">;</span>  
+<span class="nc">Pattern</span> <span class="n">pattern</span> <span class="o">=</span> <span class="nc">Pattern</span><span class="o">.</span><span class="na">compile</span><span class="o">(</span><span class="n">patternStr</span><span class="o">);</span>
+<span class="nc">Matcher</span> <span class="n">matcher</span> <span class="o">=</span> <span class="n">pattern</span><span class="o">.</span><span class="na">matcher</span><span class="o">(</span><span class="n">inputStr</span><span class="o">);</span>  
+<span class="nc">StringBuffer</span> <span class="n">buf</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringBuffer</span><span class="o">();</span>
+<span class="k">while</span> <span class="o">(</span><span class="n">matcher</span><span class="o">.</span><span class="na">find</span><span class="o">())</span> <span class="o">{</span>
+    <span class="nc">String</span> <span class="n">replaceStr</span> <span class="o">=</span> <span class="n">matcher</span><span class="o">.</span><span class="na">group</span><span class="o">();</span>
+    <span class="n">matcher</span><span class="o">.</span><span class="na">appendReplacement</span><span class="o">(</span><span class="n">buf</span><span class="o">,</span> <span class="s">"found&lt;"</span> <span class="o">+</span> <span class="n">replaceStr</span> <span class="o">+</span> <span class="s">"&gt;"</span><span class="o">);</span>
+<span class="o">}</span>
+<span class="n">matcher</span><span class="o">.</span><span class="na">appendTail</span><span class="o">(</span><span class="n">buf</span><span class="o">);</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">buf</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+</code></pre></div></div>
+
+<p>OUT:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ab12 cd efg34 asdf 123  
+found&lt;ab12&gt; cd found&lt;efg34&gt; asdf 123  
+</code></pre></div></div>
+
+<h5 id="method-4">Method 4</h5>
+
+<p>One more good sample. Replacing values in string by key.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">Map</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;</span> <span class="n">props</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">,</span> <span class="nc">String</span><span class="o">&gt;();</span>  
+<span class="n">props</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"key1"</span><span class="o">,</span> <span class="s">"fox"</span><span class="o">);</span>
+<span class="n">props</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"key2"</span><span class="o">,</span> <span class="s">"dog"</span><span class="o">);</span>
+<span class="nc">String</span> <span class="n">input</span> <span class="o">=</span> <span class="s">"The quick brown ${key1} jumps over the lazy ${key2}."</span><span class="o">;</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">input</span><span class="o">);</span> 
+<span class="nc">Pattern</span> <span class="n">p</span> <span class="o">=</span> <span class="nc">Pattern</span><span class="o">.</span><span class="na">compile</span><span class="o">(</span><span class="s">"\\$\\{([^}]+)\\}"</span><span class="o">);</span>
+<span class="nc">Matcher</span> <span class="n">m</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="na">matcher</span><span class="o">(</span><span class="n">input</span><span class="o">);</span>
+<span class="nc">StringBuffer</span> <span class="n">sb</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringBuffer</span><span class="o">();</span>
+<span class="k">while</span> <span class="o">(</span><span class="n">m</span><span class="o">.</span><span class="na">find</span><span class="o">())</span> <span class="o">{</span> 
+    <span class="n">m</span><span class="o">.</span><span class="na">appendReplacement</span><span class="o">(</span><span class="n">sb</span><span class="o">,</span> <span class="s">""</span><span class="o">);</span>
+    <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">props</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">m</span><span class="o">.</span><span class="na">group</span><span class="o">(</span><span class="mi">1</span><span class="o">)));</span>
+<span class="o">}</span>
+<span class="n">m</span><span class="o">.</span><span class="na">appendTail</span><span class="o">(</span><span class="n">sb</span><span class="o">);</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">sb</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+</code></pre></div></div>
+
+<p>OUT:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The quick brown ${key1} jumps over the lazy ${key2}.  
+The quick brown fox jumps over the lazy dog.  
+</code></pre></div></div>
+
+<h4 id="greedy-match">Greedy match</h4>
+
+<p>First go to wikipedia, or to good answer on <a href="https://stackoverflow.com/questions/2301285/what-do-lazy-and-greedy-mean-in-the-context-of-regular-expressions" target="_blank">stackoverflow</a> for getting familiar with conception.
+By default the pattern took longest possible string. But this is changeable. Here&#8217;s samples with manipulation of these settings.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">input</span> <span class="o">=</span> <span class="s">"abdcxyz"</span><span class="o">;</span>
+
+<span class="c1">// in this case to the first group belongs all possible symbols, </span>
+<span class="c1">// but the minimal amoung for the second group is preserved</span>
+<span class="n">myMatches</span><span class="o">(</span><span class="s">"([a-z]*)([a-z]+)"</span><span class="o">,</span> <span class="n">input</span><span class="o">);</span>  <span class="c1">// 1st: abdcxy 2nd: z</span>
+
+<span class="c1">// this case the first group is greedy so the matching string </span>
+<span class="c1">// is shortest possible, all the rest goes to 2nd</span>
+<span class="n">myMatches</span><span class="o">(</span><span class="s">"([a-z]?)([a-z]+)"</span><span class="o">,</span> <span class="n">input</span><span class="o">);</span> <span class="c1">// 1st: a 2nd: bdcxyz</span>
+
+<span class="c1">// this case the 1st will took all string and </span>
+<span class="c1">// the 2nd will be empty as far as * mean zero or more</span>
+<span class="n">myMatches</span><span class="o">(</span><span class="s">"([a-z]+)([a-z]*)"</span><span class="o">,</span> <span class="n">input</span><span class="o">);</span> <span class="c1">// 1st: abdcxyz 2nd:</span>
+
+<span class="c1">// and this case we will not match the string as it looks </span>
+<span class="c1">// for minimal in both</span>
+<span class="n">myMatches</span><span class="o">(</span><span class="s">"([a-z]?)([a-z]?)"</span><span class="o">,</span> <span class="n">input</span><span class="o">);</span> <span class="c1">// nothing</span>
+
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">myMatches</span><span class="o">(</span><span class="nc">String</span> <span class="n">regex</span><span class="o">,</span> <span class="nc">String</span> <span class="n">input</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">Pattern</span> <span class="n">pattern</span> <span class="o">=</span> <span class="nc">Pattern</span><span class="o">.</span><span class="na">compile</span><span class="o">(</span><span class="n">regex</span><span class="o">);</span>
+    <span class="nc">Matcher</span> <span class="n">matcher</span> <span class="o">=</span> <span class="n">pattern</span><span class="o">.</span><span class="na">matcher</span><span class="o">(</span><span class="n">input</span><span class="o">);</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">matcher</span><span class="o">.</span><span class="na">matches</span><span class="o">())</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"1st: "</span><span class="o">+</span> <span class="n">matcher</span><span class="o">.</span><span class="na">group</span><span class="o">(</span><span class="mi">1</span><span class="o">)+</span><span class="s">"     "</span><span class="o">);</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"2nd: "</span><span class="o">+</span> <span class="n">matcher</span><span class="o">.</span><span class="na">group</span><span class="o">(</span><span class="mi">2</span><span class="o">));</span> 
+    <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+        <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"nothing"</span><span class="o">);</span>
+    <span class="o">}</span>  
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h4 id="regions">Regions</h4>
+
+<p>Quite simple conception - we can limit search area in string by creating &#8220;region&#8221; on it with defining start and end positions:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">text</span> <span class="o">=</span> <span class="s">"012 456 890 234"</span><span class="o">;</span>
+<span class="nc">Pattern</span> <span class="n">ddd</span> <span class="o">=</span> <span class="nc">Pattern</span><span class="o">.</span><span class="na">compile</span><span class="o">(</span><span class="s">"\\d{3}"</span><span class="o">);</span>
+<span class="nc">Matcher</span> <span class="n">m</span> <span class="o">=</span> <span class="n">ddd</span><span class="o">.</span><span class="na">matcher</span><span class="o">(</span><span class="n">text</span><span class="o">).</span><span class="na">region</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="mi">12</span><span class="o">);</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"region start here: "</span><span class="o">+</span><span class="n">m</span><span class="o">.</span><span class="na">regionStart</span><span class="o">());</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"region end here: "</span><span class="o">+</span><span class="n">m</span><span class="o">.</span><span class="na">regionEnd</span><span class="o">());</span>
+<span class="k">while</span> <span class="o">(</span><span class="n">m</span><span class="o">.</span><span class="na">find</span><span class="o">())</span> <span class="o">{</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"[%s] [%d,%d)%n"</span><span class="o">,</span> <span class="n">m</span><span class="o">.</span><span class="na">group</span><span class="o">(),</span> <span class="n">m</span><span class="o">.</span><span class="na">start</span><span class="o">(),</span> <span class="n">m</span><span class="o">.</span><span class="na">end</span><span class="o">());</span> 
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>OUT:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>region start here: 3  
+region end here: 12  
+[456] [4,7)  
+[890] [8,11)  
+</code></pre></div></div>
+
+<p>Creating of region affect special symbols of start and end of string in pattern(^ and $). But this also might be changed with command <code class="language-plaintext highlighter-rouge">Matcher#useAnchoringBounds(true)</code>.</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">text</span> <span class="o">=</span> <span class="s">"012 456 890 234"</span><span class="o">;</span>
+<span class="nc">Pattern</span> <span class="n">ddd</span> <span class="o">=</span> <span class="nc">Pattern</span><span class="o">.</span><span class="na">compile</span><span class="o">(</span><span class="s">"^.*$"</span><span class="o">);</span>
+<span class="nc">Matcher</span> <span class="n">m</span> <span class="o">=</span> <span class="n">ddd</span><span class="o">.</span><span class="na">matcher</span><span class="o">(</span><span class="n">text</span><span class="o">).</span><span class="na">region</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="mi">12</span><span class="o">);</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"region start here: "</span><span class="o">+</span><span class="n">m</span><span class="o">.</span><span class="na">regionStart</span><span class="o">());</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"region end here: "</span><span class="o">+</span><span class="n">m</span><span class="o">.</span><span class="na">regionEnd</span><span class="o">());</span>
+<span class="k">if</span><span class="o">(</span><span class="n">m</span><span class="o">.</span><span class="na">find</span><span class="o">()){</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"find matcher text with AnchoringBounds "</span><span class="o">+</span><span class="n">m</span><span class="o">.</span><span class="na">group</span><span class="o">());</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"check AnchoringBounds: "</span><span class="o">+</span> <span class="n">m</span><span class="o">.</span><span class="na">hasAnchoringBounds</span><span class="o">());</span>
+<span class="o">}</span>
+<span class="n">m</span><span class="o">.</span><span class="na">reset</span><span class="o">();</span>
+<span class="n">m</span><span class="o">.</span><span class="na">useAnchoringBounds</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
+<span class="k">if</span><span class="o">(</span><span class="n">m</span><span class="o">.</span><span class="na">find</span><span class="o">()){</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"find matcher text WITHOUT  AnchoringBounds "</span><span class="o">+</span><span class="n">m</span><span class="o">.</span><span class="na">group</span><span class="o">());</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"check AnchoringBounds: "</span><span class="o">+</span> <span class="n">m</span><span class="o">.</span><span class="na">hasAnchoringBounds</span><span class="o">());</span>
+<span class="o">}</span>
+<span class="n">m</span><span class="o">.</span><span class="na">reset</span><span class="o">();</span>  
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"region start here: "</span><span class="o">+</span><span class="n">m</span><span class="o">.</span><span class="na">regionStart</span><span class="o">());</span> <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"region end here: "</span><span class="o">+</span><span class="n">m</span><span class="o">.</span><span class="na">regionEnd</span><span class="o">());</span>
+
+</code></pre></div></div>
+<p>OUT:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>region start here: 3  
+region end here: 12  
+find matcher text with AnchoringBounds  456 890  
+check AnchoringBounds: true  
+find matcher text WITHOUT  AnchoringBounds 012 456 890 234  
+check AnchoringBounds: false  
+region start here: 0  
+region end here: 15  
+</code></pre></div></div>
+
+<h4 id="regexp-escaping">Regexp escaping</h4>
+
+<p>As we saw before - inside of string that we have passed for search or replacement there might be symbols with special meaning. For getting rid of this effect where its not needed these strings needs to be escaping in some way. I do not know how to do this, but that is not a problem - library developers have added this method into Pattern class:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="nc">String</span> <span class="nf">quote</span><span class="o">(</span><span class="nc">String</span> <span class="n">s</span><span class="o">);</span>
+</code></pre></div></div>
+
+<p>This one escape string, making it safe for use with regexp.</p>
+
+<h3 id="tutorials-and-articles">Tutorials and articles</h3>
+
+<p>Quick references:</p>
+
+<ul>
+  <li>
+    <p>10 most popular regexps: http://www.mkyong.com/regular-expressions/10-java-regular-expression-examples-you-should-know/</p>
+  </li>
+  <li>
+    <p>samples: http://www.java2s.com/Code/Java/Regular-Expressions/CatalogRegular-Expressions.htm</p>
+  </li>
+  <li>
+    <p>working with streams: http://jexp.ru/index.php/Java/Regular_Expressions/Serialization</p>
+  </li>
+</ul>
+
+<p>Official tutorial: https://docs.oracle.com/javase/tutorial/essential/regex/</p>
+
+<p>Testing online:
+http://myregexp.com/
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMjAwMjM4OTM5OF19
+--></p>
+
+      
+        <h1 style="margin-top: 50px;">Comments</h1>
+      
+    </div>
+    <div id="disqus_thread"></div>
+  </div>
+</div>
+  
+<script>
+    jQuery(document).ready(function() {
+        function debouncer( func , timeout ) {
+            var timeoutID , timeout = timeout || 1000;
+            return function () {
+                var scope = this , args = arguments;
+                clearTimeout( timeoutID );
+                timeoutID = setTimeout( function () {
+                    func.apply( scope , Array.prototype.slice.call( args ) );
+                } , timeout );
+            }
+        }
+        var offset = 300;
+        var duration = 500;
+        var fadeFunc = function () {
+            if (jQuery(window).width() < 1140) {
+                jQuery('.backtotop').fadeOut(0);
+                return;
+            }
+            if (jQuery(window).scrollTop() > offset) {
+                jQuery('.backtotop').fadeIn(duration);
+            } else {
+                jQuery('.backtotop').fadeOut(duration);
+            }
+        }
+        jQuery(window).scroll(debouncer(fadeFunc, 50));
+        jQuery(window).resize(debouncer(fadeFunc));
+
+        jQuery('.backtotop').click(function(event) {
+            event.preventDefault();
+            jQuery('html, body').animate({scrollTop: 0}, duration);
+            return false;
+        })
+    });
+</script>
+<style>
+    .backtotop {
+        display: none;
+    }
+    @media only screen and (min-width:1140px){
+        .backtotop,
+        .backtotop:hover,
+        .backtotop:active,
+        .backtotop:visited,
+        .backtotop:focus {
+            display: none;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            z-index: 10000;
+            text-align: center;
+            color: black;
+            text-decoration: none;
+            padding: 4px 10px;
+            border-radius: 3px;
+            width: 60px;
+            opacity: 0.4;
+        }
+        .backtotop:hover {
+            background-color: rgba(59, 59, 59, 0.10);
+            opacity: 1;
+            transition-property: opacity;
+            transition-duration: 500ms;
+        }
+    }
+
+
+</style>
+<a href="#" class="backtotop"><img src="/assets/noun_Arrow_22173.svg"/></a>
+  
+  <script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    var disqus_config = function () {
+        this.page.url = 'https://k.co.ua/';  // Replace PAGE_URL with your page's canonical URL variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://k-co.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  
+  <div class="footer">
+    <div class="row">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="copyright">
+              <p><a href="https://github.com/msangel/msangel.github.io" target="_self">© 2014-2025 by Vasyl Khrystiuk</a>, powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>, crafted by
+                <a href="https://github.com/msangel/msangel.github.io/blob/master/.github/workflows/github-pages.yml" target="_blank">GitHub Actions</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+<script>anchors.add();</script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-194224445-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+<script src="/assets/links.js"></script>
+<script id="dsq-count-scr" src="//k-co.disqus.com/count.js" async></script>
+</body>
+</html>

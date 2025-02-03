@@ -1,0 +1,354 @@
+<html lang="ru" class="mysite">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Публикация java-библиотеки в maven central | Vasyl Khrystiuk</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Публикация java-библиотеки в maven central" />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="TL;DR: пример тут" />
+<meta property="og:description" content="TL;DR: пример тут" />
+<link rel="canonical" href="https://github.com/pages/msangel/blog/2021/07/10/publish-java-lib-to-maven.html" />
+<meta property="og:url" content="https://github.com/pages/msangel/blog/2021/07/10/publish-java-lib-to-maven.html" />
+<meta property="og:site_name" content="Vasyl Khrystiuk" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-07-10T09:41:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Публикация java-библиотеки в maven central" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-02-03T03:21:25+00:00","datePublished":"2021-07-10T09:41:00+00:00","description":"TL;DR: пример тут","headline":"Публикация java-библиотеки в maven central","mainEntityOfPage":{"@type":"WebPage","@id":"https://github.com/pages/msangel/blog/2021/07/10/publish-java-lib-to-maven.html"},"url":"https://github.com/pages/msangel/blog/2021/07/10/publish-java-lib-to-maven.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  
+  <link rel="stylesheet" href="/assets/components-font-awesome/css/fontawesome-all.min.css">
+
+  <link href='/assets/open-sans-all/css/open-sans.min.css' rel='stylesheet' type='text/css'>
+  
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+  <link href='//fonts.googleapis.com/css?family=Ubuntu&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Ubuntu+Mono&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  
+  <link rel="stylesheet" href="/assets/bootstrap/dist/css/bootstrap.min.css">
+  <script src="/assets/jquery/dist/jquery.min.js"></script>
+  <script src="/assets/bootstrap/dist/js/bootstrap.min.js"></script>
+  
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="shortcut icon" type="image/jpg" href="/assets/favicon.ico"/>
+  <link rel="stylesheet" href="/assets/tabs.css">
+  <script src="/assets/tabs.js"></script>
+  <link href="/assets/rouge.css" rel="stylesheet" >
+  <style>
+      .highlighter-rouge > .highlight > pre.highlight {
+          border-radius: unset;
+      }
+  </style>
+</head>
+
+<body>
+<div id="body">
+  <div class="jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 myname"><a href="/"><span>Vasyl </span>Khrystiuk</a></div>
+        <div class="col-xs-12 col-sm-12 subtitle"><a href="/"><span>full stack developer</span></a></div>
+      </div>
+
+    </div>
+  </div>
+
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <ul class="nav navbar-nav">
+        <!--class="active" -->
+        <li><a href="/">BLOG</a></li>
+        <li role="separator" class="divider-vertical"></li>
+        <li><a href="/about">ABOUT</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container central blogpost">
+  <div class="row">
+    <div class="col-lg-12 record">
+
+<h2 class="page-title">Публикация java-библиотеки в maven central</h2>
+      <p class="text-muted small page-date">Posted: July 10, 2021 - Updated: February 03, 2025</p>
+
+<p>TL;DR: пример <a href="https://github.com/msangel/strftime4j/blob/master/pom.xml">тут</a></p>
+<hr />
+
+<!-- excerpt-start -->
+<p>Так как одной из функций <a href="https://k.co.ua/blog/2021/07/10/pgp-usage.html">gpg</a> является проверка аутентичности файлов, это нашло широкое использование в гарантировании, что то или иное приложение или библиотека была выпущена именно автором и по пути к пользователю не испытывало модификаций. Вопрос о том, использовать ли электронную подпись, если ты распространяешь бинарные файлы из своего сервера - это вопрос о том, волнует ли тебя безопасность твоих пользователей и твоё честное имя. Ведь если кто-то скачает вирус под видом твоей программы, то претензии, в том числе, будут и к тебе. И если на своем сайте у тебя есть выбор как выкладывать бинарники, то при использовании систем дистирибуции, таких как <a href="https://search.maven.org/">maven central</a> или <a href="https://www.npmjs.co">npm</a> выбора нет и вся дистрибуция идет обязательно с цифровой подписью. Вопрос только в том, кто именно будет создавать подпись. Например <code class="language-plaintext highlighter-rouge">npm</code> делает это само. Пользователи же <code class="language-plaintext highlighter-rouge">maven</code> должны позаботиться о создании подписи сами и загрузить её на сервер сами. О том, как это сделать, в том числе, и будет эта статья.
+<!-- excerpt-start --></p>
+
+<h2 id="инструменты">Инструменты</h2>
+<p>Все уже автоматизировано и в случае с maven для всего уже есть плагин. Так же публикация артефакта на сервер является встроенной функциональностью maven, поэтому множество настроек для этого тоже встроено. Однако для публикации на <a href="https://central.sonatype.org/publish/publish-maven/">maven central</a> рекомендуется использовать <code class="language-plaintext highlighter-rouge">release</code> плагин вместо <code class="language-plaintext highlighter-rouge">deploy</code>.  Рассмотрим пример использования <a href="https://github.com/msangel/strftime4j/blob/master/pom.xml">в реальном проекте</a>.</p>
+
+<h2 id="структура-файла">Структура файла</h2>
+<p>Вот эта секция отвечает за указание репозитория с исходниками. Как минимум, это необходимая настройка. А еще <code class="language-plaintext highlighter-rouge">release</code> плагин будет использовать это для создания тега в репозитории и установки новой версии внутри <code class="language-plaintext highlighter-rouge">pom.xml</code>.</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;scm&gt;</span>
+    <span class="nt">&lt;url&gt;</span>https://github.com/msangel/strftime4j<span class="nt">&lt;/url&gt;</span>
+    <span class="nt">&lt;connection&gt;</span>scm:git:git://github.com/msangel/strftime4j.git<span class="nt">&lt;/connection&gt;</span>
+    <span class="nt">&lt;developerConnection&gt;</span>scm:git:git@github.com:msangel/strftime4j.git<span class="nt">&lt;/developerConnection&gt;</span>
+    <span class="nt">&lt;tag&gt;</span>HEAD<span class="nt">&lt;/tag&gt;</span>
+<span class="nt">&lt;/scm&gt;</span>
+</code></pre></div></div>
+
+<p>Эта настройка указывает куда загружать артефакты. Значения тут из рекомендаций sonatype(компании которая поддерживает <code class="language-plaintext highlighter-rouge">maven central</code>):</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;distributionManagement&gt;</span>
+    <span class="nt">&lt;snapshotRepository&gt;</span>
+        <span class="nt">&lt;id&gt;</span>ossrh<span class="nt">&lt;/id&gt;</span>
+        <span class="nt">&lt;url&gt;</span>https://s01.oss.sonatype.org/content/repositories/snapshots<span class="nt">&lt;/url&gt;</span>
+    <span class="nt">&lt;/snapshotRepository&gt;</span>
+    <span class="nt">&lt;repository&gt;</span>
+        <span class="nt">&lt;id&gt;</span>ossrh<span class="nt">&lt;/id&gt;</span>
+        <span class="nt">&lt;url&gt;</span>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/<span class="nt">&lt;/url&gt;</span>
+    <span class="nt">&lt;/repository&gt;</span>
+<span class="nt">&lt;/distributionManagement&gt;</span>
+</code></pre></div></div>
+
+<p>Так как в моем случае я публиковал библиотеку, то и собирал я ее в формате <code class="language-plaintext highlighter-rouge">jar</code> с помощью <code class="language-plaintext highlighter-rouge">maven-jar-plugin</code>:</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;plugin&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>org.apache.maven.plugins<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>maven-jar-plugin<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>3.2.0<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;configuration&gt;</span>
+        <span class="nt">&lt;archive&gt;</span>
+            <span class="nt">&lt;manifest&gt;</span>
+                <span class="nt">&lt;addDefaultImplementationEntries&gt;</span>true<span class="nt">&lt;/addDefaultImplementationEntries&gt;</span>
+            <span class="nt">&lt;/manifest&gt;</span>
+            <span class="nt">&lt;manifestEntries&gt;</span>
+                <span class="nt">&lt;Automatic-Module-Name&gt;</span>strftime4j<span class="nt">&lt;/Automatic-Module-Name&gt;</span>
+            <span class="nt">&lt;/manifestEntries&gt;</span>
+        <span class="nt">&lt;/archive&gt;</span>
+    <span class="nt">&lt;/configuration&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span>
+</code></pre></div></div>
+<p>Ключ <code class="language-plaintext highlighter-rouge">addDefaultImplementationEntries</code> сгенерирует стандартный <code class="language-plaintext highlighter-rouge">META-INF/MANIFEST.MF</code> файл. Но так как у нас библиотека и нет точки входа, то и отключить её нужно с помощью пустого свойства <code class="language-plaintext highlighter-rouge">main.class</code>:</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;properties&gt;</span>
+    <span class="nt">&lt;project.build.sourceEncoding&gt;</span>UTF-8<span class="nt">&lt;/project.build.sourceEncoding&gt;</span>
+    <span class="nt">&lt;junit.version&gt;</span>4.13.1<span class="nt">&lt;/junit.version&gt;</span>
+    <span class="nt">&lt;main.class</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/properties&gt;</span>
+</code></pre></div></div>
+<p>А <code class="language-plaintext highlighter-rouge">Automatic-Module-Name</code> в <code class="language-plaintext highlighter-rouge">manifestEntries</code> сгенерируют необходимые для java9+ модульной системы поля.</p>
+
+<p>Теперь, когда мы будем запускать профиль отправки в <code class="language-plaintext highlighter-rouge">maven</code>, нужно настроить еще и другие необходимые мелочи.
+Создание <code class="language-plaintext highlighter-rouge">jar</code> с исходниками:</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;plugin&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>org.apache.maven.plugins<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>maven-source-plugin<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>3.2.1<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;executions&gt;</span>
+        <span class="nt">&lt;execution&gt;</span>
+            <span class="nt">&lt;id&gt;</span>attach-sources<span class="nt">&lt;/id&gt;</span>
+            <span class="nt">&lt;goals&gt;</span>
+                <span class="nt">&lt;goal&gt;</span>jar-no-fork<span class="nt">&lt;/goal&gt;</span>
+            <span class="nt">&lt;/goals&gt;</span>
+        <span class="nt">&lt;/execution&gt;</span>
+    <span class="nt">&lt;/executions&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span>
+</code></pre></div></div>
+<p>И документацией из javadoc:</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;plugin&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>org.apache.maven.plugins<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>maven-javadoc-plugin<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>3.2.0<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;configuration&gt;</span>
+        <span class="nt">&lt;doclint&gt;</span>none<span class="nt">&lt;/doclint&gt;</span>
+    <span class="nt">&lt;/configuration&gt;</span>
+    <span class="nt">&lt;executions&gt;</span>
+        <span class="nt">&lt;execution&gt;</span>
+            <span class="nt">&lt;id&gt;</span>attach-javadocs<span class="nt">&lt;/id&gt;</span>
+            <span class="nt">&lt;goals&gt;</span>
+                <span class="nt">&lt;goal&gt;</span>jar<span class="nt">&lt;/goal&gt;</span>
+            <span class="nt">&lt;/goals&gt;</span>
+        <span class="nt">&lt;/execution&gt;</span>
+    <span class="nt">&lt;/executions&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span>
+</code></pre></div></div>
+<p>И наконец-то создание подписей:</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;plugin&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>org.apache.maven.plugins<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>maven-gpg-plugin<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>1.6<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;executions&gt;</span>
+        <span class="nt">&lt;execution&gt;</span>
+            <span class="nt">&lt;id&gt;</span>sign-artifacts<span class="nt">&lt;/id&gt;</span>
+            <span class="nt">&lt;phase&gt;</span>verify<span class="nt">&lt;/phase&gt;</span>
+            <span class="nt">&lt;goals&gt;</span>
+                <span class="nt">&lt;goal&gt;</span>sign<span class="nt">&lt;/goal&gt;</span>
+            <span class="nt">&lt;/goals&gt;</span>
+        <span class="nt">&lt;/execution&gt;</span>
+    <span class="nt">&lt;/executions&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span>
+</code></pre></div></div>
+
+<p>Чего-то не хватает? Да. Не хватает авторизации на <code class="language-plaintext highlighter-rouge">maven central</code> и настроек для <code class="language-plaintext highlighter-rouge">gpg</code>, как минимум пароля к приватному ключу по умолчанию(хотя и выбор ключа было бы неплохо настроить). Но так как этим настройкам место не в самой репозитории и не в <code class="language-plaintext highlighter-rouge">pom.xml</code> отчасти, то они хранятся в <code class="language-plaintext highlighter-rouge">~/.m2/settings.xml</code></p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;settings&gt;</span>
+<span class="nt">&lt;servers&gt;</span>
+  <span class="nt">&lt;server&gt;</span>
+    <span class="nt">&lt;id&gt;</span>ossrh<span class="nt">&lt;/id&gt;</span>
+    <span class="nt">&lt;username&gt;</span>MY_OSSRH_USERNAME<span class="nt">&lt;/username&gt;</span>
+    <span class="nt">&lt;password&gt;</span>MY_OSSRH_PASSWORD<span class="nt">&lt;/password&gt;</span>
+  <span class="nt">&lt;/server&gt;</span>
+<span class="nt">&lt;/servers&gt;</span>
+  <span class="nt">&lt;profiles&gt;</span>
+    <span class="nt">&lt;profile&gt;</span>
+      <span class="nt">&lt;id&gt;</span>ossrh-release<span class="nt">&lt;/id&gt;</span>
+      <span class="nt">&lt;activation&gt;</span>
+        <span class="nt">&lt;activeByDefault&gt;</span>false<span class="nt">&lt;/activeByDefault&gt;</span>
+      <span class="nt">&lt;/activation&gt;</span>
+      <span class="nt">&lt;properties&gt;</span>
+        <span class="nt">&lt;gpg.executable&gt;</span>gpg2<span class="nt">&lt;/gpg.executable&gt;</span>
+        <span class="nt">&lt;gpg.passphrase&gt;</span>GPG_PRIVATE_KEY_PASSWORD<span class="nt">&lt;/gpg.passphrase&gt;</span>
+      <span class="nt">&lt;/properties&gt;</span>
+    <span class="nt">&lt;/profile&gt;</span>
+  <span class="nt">&lt;/profiles&gt;</span>
+<span class="nt">&lt;/settings&gt;</span>
+</code></pre></div></div>
+<p>Кстати, <code class="language-plaintext highlighter-rouge">maven</code> имеет <a href="https://maven.apache.org/guides/mini/guide-encryption.html">встроенный механизм</a> шифрования пароля.</p>
+
+<h2 id="запуск">Запуск</h2>
+<p>Когда все будет готово, просто выполнить эту команду и библиотека сбилдится и отправится в <code class="language-plaintext highlighter-rouge">maven central</code>:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mvn release:clean release:prepare release:perform <span class="nt">-P</span> ossrh
+</code></pre></div></div>
+
+<h2 id="ресурсы">Ресурсы</h2>
+<p>При написании сего использовались:</p>
+<ul>
+  <li><a href="https://central.sonatype.org/publish/publish-guide/">https://central.sonatype.org/publish/publish-guide/</a></li>
+  <li><a href="https://maven.apache.org/plugins/maven-gpg-plugin/examples/deploy-signed-artifacts.html">https://maven.apache.org/plugins/maven-gpg-plugin/examples/deploy-signed-artifacts.html</a></li>
+  <li><a href="https://dzone.com/articles/deploy-maven-central">https://dzone.com/articles/deploy-maven-central</a></li>
+  <li><a href="https://andresalmiray.com/publishing-to-maven-central-using-apache-maven/">https://andresalmiray.com/publishing-to-maven-central-using-apache-maven/</a></li>
+</ul>
+
+      
+        <h1 style="margin-top: 50px;">Комментарии</h1>
+      
+    </div>
+    <div id="disqus_thread"></div>
+  </div>
+</div>
+  
+<script>
+    jQuery(document).ready(function() {
+        function debouncer( func , timeout ) {
+            var timeoutID , timeout = timeout || 1000;
+            return function () {
+                var scope = this , args = arguments;
+                clearTimeout( timeoutID );
+                timeoutID = setTimeout( function () {
+                    func.apply( scope , Array.prototype.slice.call( args ) );
+                } , timeout );
+            }
+        }
+        var offset = 300;
+        var duration = 500;
+        var fadeFunc = function () {
+            if (jQuery(window).width() < 1140) {
+                jQuery('.backtotop').fadeOut(0);
+                return;
+            }
+            if (jQuery(window).scrollTop() > offset) {
+                jQuery('.backtotop').fadeIn(duration);
+            } else {
+                jQuery('.backtotop').fadeOut(duration);
+            }
+        }
+        jQuery(window).scroll(debouncer(fadeFunc, 50));
+        jQuery(window).resize(debouncer(fadeFunc));
+
+        jQuery('.backtotop').click(function(event) {
+            event.preventDefault();
+            jQuery('html, body').animate({scrollTop: 0}, duration);
+            return false;
+        })
+    });
+</script>
+<style>
+    .backtotop {
+        display: none;
+    }
+    @media only screen and (min-width:1140px){
+        .backtotop,
+        .backtotop:hover,
+        .backtotop:active,
+        .backtotop:visited,
+        .backtotop:focus {
+            display: none;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            z-index: 10000;
+            text-align: center;
+            color: black;
+            text-decoration: none;
+            padding: 4px 10px;
+            border-radius: 3px;
+            width: 60px;
+            opacity: 0.4;
+        }
+        .backtotop:hover {
+            background-color: rgba(59, 59, 59, 0.10);
+            opacity: 1;
+            transition-property: opacity;
+            transition-duration: 500ms;
+        }
+    }
+
+
+</style>
+<a href="#" class="backtotop"><img src="/assets/noun_Arrow_22173.svg"/></a>
+  
+  <script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    var disqus_config = function () {
+        this.page.url = 'https://k.co.ua/';  // Replace PAGE_URL with your page's canonical URL variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://k-co.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  
+  <div class="footer">
+    <div class="row">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="copyright">
+              <p><a href="https://github.com/msangel/msangel.github.io" target="_self">© 2014-2025 by Vasyl Khrystiuk</a>, powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>, crafted by
+                <a href="https://github.com/msangel/msangel.github.io/blob/master/.github/workflows/github-pages.yml" target="_blank">GitHub Actions</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+<script>anchors.add();</script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-194224445-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+<script src="/assets/links.js"></script>
+<script id="dsq-count-scr" src="//k-co.disqus.com/count.js" async></script>
+</body>
+</html>

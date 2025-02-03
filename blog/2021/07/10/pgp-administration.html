@@ -1,0 +1,650 @@
+<html lang="ru" class="mysite">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Основы работы с GnuPG, часть 1. Администрирование ключей | Vasyl Khrystiuk</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Основы работы с GnuPG, часть 1. Администрирование ключей" />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="Подробней о инструменте можно почитать на его сайте, но если вкратце, то это такой мультикомбайн в мире криптографии. Понимание происходящего упрощается в разы, если считать gpg просто как менеджер ключей. Проект GnuPG это реализация спецификации OpenPGP (так же rfc4880), поэтому существуют и альтернативные реализации и расширения. Помимо инфраструктуры управления ключами спецификация описывает использование симметричной криптографии и криптографии с открытым ключом, может применяться как для шифрования файлом, так и целых дисков." />
+<meta property="og:description" content="Подробней о инструменте можно почитать на его сайте, но если вкратце, то это такой мультикомбайн в мире криптографии. Понимание происходящего упрощается в разы, если считать gpg просто как менеджер ключей. Проект GnuPG это реализация спецификации OpenPGP (так же rfc4880), поэтому существуют и альтернативные реализации и расширения. Помимо инфраструктуры управления ключами спецификация описывает использование симметричной криптографии и криптографии с открытым ключом, может применяться как для шифрования файлом, так и целых дисков." />
+<link rel="canonical" href="https://github.com/pages/msangel/blog/2021/07/10/pgp-administration.html" />
+<meta property="og:url" content="https://github.com/pages/msangel/blog/2021/07/10/pgp-administration.html" />
+<meta property="og:site_name" content="Vasyl Khrystiuk" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-07-10T09:41:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Основы работы с GnuPG, часть 1. Администрирование ключей" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-02-03T03:21:25+00:00","datePublished":"2021-07-10T09:41:00+00:00","description":"Подробней о инструменте можно почитать на его сайте, но если вкратце, то это такой мультикомбайн в мире криптографии. Понимание происходящего упрощается в разы, если считать gpg просто как менеджер ключей. Проект GnuPG это реализация спецификации OpenPGP (так же rfc4880), поэтому существуют и альтернативные реализации и расширения. Помимо инфраструктуры управления ключами спецификация описывает использование симметричной криптографии и криптографии с открытым ключом, может применяться как для шифрования файлом, так и целых дисков.","headline":"Основы работы с GnuPG, часть 1. Администрирование ключей","mainEntityOfPage":{"@type":"WebPage","@id":"https://github.com/pages/msangel/blog/2021/07/10/pgp-administration.html"},"url":"https://github.com/pages/msangel/blog/2021/07/10/pgp-administration.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  
+  <link rel="stylesheet" href="/assets/components-font-awesome/css/fontawesome-all.min.css">
+
+  <link href='/assets/open-sans-all/css/open-sans.min.css' rel='stylesheet' type='text/css'>
+  
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+  <link href='//fonts.googleapis.com/css?family=Ubuntu&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Ubuntu+Mono&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  
+  <link rel="stylesheet" href="/assets/bootstrap/dist/css/bootstrap.min.css">
+  <script src="/assets/jquery/dist/jquery.min.js"></script>
+  <script src="/assets/bootstrap/dist/js/bootstrap.min.js"></script>
+  
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="shortcut icon" type="image/jpg" href="/assets/favicon.ico"/>
+  <link rel="stylesheet" href="/assets/tabs.css">
+  <script src="/assets/tabs.js"></script>
+  <link href="/assets/rouge.css" rel="stylesheet" >
+  <style>
+      .highlighter-rouge > .highlight > pre.highlight {
+          border-radius: unset;
+      }
+  </style>
+</head>
+
+<body>
+<div id="body">
+  <div class="jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 myname"><a href="/"><span>Vasyl </span>Khrystiuk</a></div>
+        <div class="col-xs-12 col-sm-12 subtitle"><a href="/"><span>full stack developer</span></a></div>
+      </div>
+
+    </div>
+  </div>
+
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <ul class="nav navbar-nav">
+        <!--class="active" -->
+        <li><a href="/">BLOG</a></li>
+        <li role="separator" class="divider-vertical"></li>
+        <li><a href="/about">ABOUT</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container central blogpost">
+  <div class="row">
+    <div class="col-lg-12 record">
+
+<h2 class="page-title">Основы работы с GnuPG, часть 1. Администрирование ключей</h2>
+      <p class="text-muted small page-date">Posted: July 10, 2021 - Updated: February 03, 2025</p>
+
+<p>Подробней о инструменте можно почитать на его <a href="https://www.gnupg.org/index.en.html">сайте</a>, но если вкратце, то это такой мультикомбайн в мире криптографии. <strong>Понимание происходящего упрощается в разы, если считать gpg просто как менеджер ключей.</strong> Проект GnuPG это реализация спецификации OpenPGP (так же <a href="https://www.ietf.org/rfc/rfc4880.txt">rfc4880</a>), поэтому существуют и альтернативные реализации и расширения.  Помимо инфраструктуры управления ключами спецификация описывает использование симметричной криптографии и криптографии с открытым ключом, может применяться как для шифрования файлом, так и целых дисков.</p>
+
+<p>Самым частым сценарием использования является <strong>гибридная криптография</strong>. В целом её суть такова:
+Для шифрования создается сеансовый ключ симметричного шифрования, им шифруются данные, потом открытым ключом шифруется сам сеансовый ключ и передается вместе с шифрованными данными
+Для расшифрования закрытым ключом расшифровывается сеансовый ключ, а потом ним расшифровывается само сообщение.
+Таким образом эта схема имеет удобство асимметричной криптографии на публичных ключах и скорость работы симметричной криптографии.</p>
+
+<h3 id="создадим-тестовую-среду">Создадим тестовую среду</h3>
+<p>Пропустить этот шаг если уверен в своих силах.
+Контейнер:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">-it</span> <span class="nt">--rm</span> ubuntu
+</code></pre></div></div>
+<p>Для тестового образа нужно распаковать и установить документацию(еще пригодится), минимальный набор инструментов и создадим пользователя для максимальной реалистичности(но не забудем привязать к пользователю девайс клавиатуры иначе генерация ключей вылетит с ошибкой) :</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">yes</span> | unminimize
+apt <span class="nb">install </span>man <span class="nb">sudo </span>curl <span class="nt">-y</span>
+adduser msangel <span class="nt">--gecos</span> <span class="s2">""</span>
+adduser msangel <span class="nb">sudo
+</span>su - msangel
+<span class="nb">sudo chown </span>msangel /dev/pts/0
+<span class="nb">export </span><span class="nv">GPG_TTY</span><span class="o">=</span><span class="si">$(</span><span class="nb">tty</span><span class="si">)</span>
+</code></pre></div></div>
+
+<h3 id="установка-инструментария">Установка инструментария</h3>
+<p>Теперь установим необходимые инструменты с которыми будем работать:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt update
+<span class="nb">sudo </span>apt <span class="nb">install </span>gnupg2 <span class="nt">-y</span>
+</code></pre></div></div>
+<details>
+  <summary>Разница между gnupg и gnupg2</summary>
+
+  <p>Вторая версия этой программы хоть и совместима с первой на уровне протокола(т.е. с точки зрения использования они взаимозаменяемые), но по факту она переписана с нуля. Также изменен подход к формату сохранения ключей, однако в целях совместимости вторая версия будет использовать старый формат, если в системе есть хотя бы один keyring в старом формате. Первая версия в современных дистрибутивах помечена как <code class="language-plaintext highlighter-rouge">deprecated</code>, и хотя её еще можно поставить параллельно с второй и пользоваться, но зачем? Сама же команда <code class="language-plaintext highlighter-rouge">gpg</code> в современных дистрибутивах это просто синоним для <code class="language-plaintext highlighter-rouge">gpg2</code>, с добавлением некоторой магии совместимости.
+Больше об этом:</p>
+
+  <ul>
+    <li>https://superuser.com/questions/655246/are-gnupg-1-and-gnupg-2-compatible-with-each-other</li>
+  </ul>
+
+</details>
+
+<h3 id="исследуем-файлы-и-возможности">Исследуем файлы и возможности</h3>
+<p>Для того, чтоб узнать достатучную иформация об установленой программе, её файлах и среде, достаточно выполнить эту команду:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> gpg <span class="nt">--version</span>
+</code></pre></div></div>
+<p>Пример ответа ниже:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gpg (GnuPG) 2.2.19
+libgcrypt 1.8.5
+Copyright (C) 2019 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later &lt;https://gnu.org/licenses/gpl.html&gt;
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Home: /home/msangel/.gnupg
+Supported algorithms:
+Pubkey: RSA, ELG, DSA, ECDH, ECDSA, EDDSA
+Cipher: IDEA, 3DES, CAST5, BLOWFISH, AES, AES192, AES256, TWOFISH,
+        CAMELLIA128, CAMELLIA192, CAMELLIA256
+Hash: SHA1, RIPEMD160, SHA256, SHA384, SHA512, SHA224
+Compression: Uncompressed, ZIP, ZLIB, BZIP2
+</code></pre></div></div>
+<p>Из ответа мы узнали о версии программы, поддерживаемых алгоритмах шифрования и компрессии и о месте, где все ключи будут храниться. К слову, это место можно изменить, установив переменную окружения(<code class="language-plaintext highlighter-rouge">export GNUPGHOME=/path/to/the/folder</code>)</p>
+
+<p>Что находится в папке home? Начнем с того, что пока мы не создали ни одного ключа, эта папка еще даже не существует:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> <span class="nb">ls</span> <span class="nt">-la</span> /home/msangel/.gnupg
+<span class="nb">ls</span>: cannot access <span class="s1">'/home/msangel/.gnupg'</span>: No such file or directory
+</code></pre></div></div>
+
+<p>Для того, чтоб получить справку по использовании программы, можно воспользоваться и стандартными для этого средствами(в наличии только в нормальных системах):</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>man gpg2
+</code></pre></div></div>
+
+<p><strong>Перечислить все публичные ключи</strong> можно командой</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> gpg <span class="nt">--list-keys</span>
+</code></pre></div></div>
+<p>Команда ничего не вернет, потому что пока что нет никаких ключей.</p>
+
+<p>Но зато будут созданы хранилища для них, так как их пока не было:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gpg: directory <span class="s1">'/home/msangel/.gnupg'</span> created
+gpg: keybox <span class="s1">'/home/msangel/.gnupg/pubring.kbx'</span> created
+gpg: /home/msangel/.gnupg/trustdb.gpg: trustdb created
+</code></pre></div></div>
+<p>Что это за файлы?</p>
+
+<p><code class="language-plaintext highlighter-rouge">pubring.kbx</code> - это хранилище для публичных ключей в специально формате (<a href="https://www.gnupg.org/documentation/manuals/gnupg/kbxutil.html">подробней</a>
+посмотреть внутрь можно командой:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> kbxutil <span class="nt">--stats</span> ~/.gnupg/pubring.kbx
+</code></pre></div></div>
+<p><code class="language-plaintext highlighter-rouge">pubring.gpg</code> - то же самое, но в другом формате.
+<code class="language-plaintext highlighter-rouge">trustdb.gpg</code> - файл базы доверия. Хранит информацию об уровне доверия к наличным ключам.
+<code class="language-plaintext highlighter-rouge">gpg.conf</code> - пользовательский файл(ты должен создать его сам) с любыми желаемыми опциями по умолчанию(можно без двух черточек и нельзя короткие формы). По строке на опцию.
+<code class="language-plaintext highlighter-rouge">openpgp-revocs.d/</code> - папка, в которой хранятся автоматически созданы сертификаты отзыва</p>
+
+<h3 id="о-ключах">О ключах</h3>
+<p>Ключи сохраняются либо в виде пар(приватный-публичный) либо только публичные. Да, приватный ключ внутри себя имеет не только приватную часть, но и общую экспоненту, публичный ключ и даже промежуточные в вычислениях константы(для оптимизации) в виде внутренних полей.</p>
+<h3 id="о-ключах-1">О ключах</h3>
+<p>Ключи сохраняются либо в виде пар(приватный-публичный) либо только публичные.</p>
+
+<ol>
+  <li>Публичные. Используются для шифзакодирования сообщений, которые в итоге могут быть прочитаны только владельцем соответственного приватного ключа и для проверки подписи, сделаной приватным ключем. Именно этими ключами из пары обмениваются в сети.</li>
+  <li>Приватные. Используются для расшифровкикодирования сообщений. Вопрос о том, можно ли имея <em>только</em> приватный ключ получить публичный <a href="https://stackoverflow.com/q/5244129/449553">открытый</a>. <a href="https://superuser.com/a/814421">Обычно</a> публичный ключ экспортируется вместе с приватным. Так же используются для создания сигнатуры, которая можут быть проверена только соответствующим публичным ключем. Этот ключ хранится дома и никому никуда никогда не оправляется.</li>
+</ol>
+
+<h3 id="о-ключах-2">О ключах</h3>
+<p>Помимо всего, у ключей бывает разное предназначение. В соответствии с систематикой pgp это:</p>
+<pre><code class="language-txt">[C]           (0x01)       Key (C)ertification (sign a key)
+[S]           (0x02)       (S)ign (sign some data ,like a file)
+[E]           (0x04, 0x08) (E)ncrypt Communications(0x04) and (E)ncrypt Storage(0x08)
+[&lt;no letter&gt;] (0x10)       Split key
+[A]           (0x20)       Authentication (authenticate yourself to a computer)
+[&lt;no letter&gt;] (0x80)       Held by more than one person
+</code></pre>
+
+<p>Теперь, об встречаемых далее аббревиатурах:</p>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sec =&gt; 'SECret key'
+ssb =&gt; 'Secret SuBkey'
+pub =&gt; 'PUBlic key'
+sub =&gt; 'public SUBkey'
+uid =&gt; 'User ID, this is the user information associated with the secret key'
+ssb&gt; =&gt; '&gt;' after ssb means that your subkeys are not the machine. Instead they are on a smartcard.
+sec# =&gt; ''#' after sec means that your secret key is missing from the machine. But it has a reference to the secret key.
+</code></pre></div></div>
+<p>И много <a href="https://github.com/gpg/gnupg/blob/master/doc/DETAILS#field-1---type-of-record">других</a>.</p>
+
+<p>Так же есть выбор в выборе алгоритмов для ключей. Разные алгоритмы для разных задач. <a href="https://uk.wikipedia.org/wiki/RSA">RSA</a> является вроде как универсальным. У меня длина ключа 2048 bit, хотя уже сейчас рекомендуется создавать новые ключи длиной 4096 bit.</p>
+
+<h3 id="импорт-публичного-ключа">Импорт публичного ключа</h3>
+<p>Вот пример публичного ключа(скачаный из интернета), который можно импортировать, просто сохранить как <code class="language-plaintext highlighter-rouge">chriserin.pub</code> и добавить такой контент:</p>
+<pre><code class="language-txt">-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v2
+
+mQENBFjceoMBCADDgOGwaQAVv53E+vT1RhYtUBdU7igdKb+K1cBb/0y7SV9A7zBi
+/N5z2GhsL6cU7vXoX2QoMpDhQ2MYP48nWCmVeff9izinqrjXA05ViSMnPhpEGuq0
+joiAy3QE1xzdiYdvmOcr4PR2rDuz7kIybJi41a+4TPA2fqkGtOsaXfwm6qH5KwhE
+oEu1QuZi8X7aiHA0A/tN2sKSos7JSf7G/Ps1XQlkCgF8hQ19jSy3uaZ3d69Rplqf
+UMMukPzlQYQCXltuAyqac86G/jVHJPMmL4ttAagC9vQMnHdQyOhzXhjERGSOCt6w
+MW+sv1JGUROB+rNIYBktF7sviQBwwDyxODX9ABEBAAG0OkNocmlzIEVyaW4gKEJl
+IEtpbmQgVG8gT3RoZXJzKSA8Y2hyaXMuZXJpbkBoYXNocm9ja2V0LmNvbT6JATkE
+EwEIACMFAljceoMCGwMHCwkIBwMCAQYVCAIJCgsEFgIDAQIeAQIXgAAKCRBaN+T0
+fHMfFK8cCACtkhMQ0AumUL9M3eDR8P5DPhGOH14SuobeL5fl/iLTaho2P9ie+R+f
+wFG6m1s0+HxNGMqHTqDdkRYejfwlovPh96aDWz7rwzlECw5zDoLKvxnbk7Lkcy8I
+Sl+9JwzAEra2wn+V2iTD9kBNBrzB6IqLny6Q/+i6xaLamANH3ZYgwVQbxt05nUPO
+anGiex5Gu0i5O9FfuHwUjiFdkdtpP5pHX1Lbq0rW8c4rt/6uTQ4DAISIKgphZDw5
+Bcg1QytVQ4jdB7Wjyf6uTtDc01pDj79v0VA2O4r/cA6Qk5UwdCmBbKYFARFEEUQT
+CdVKPP/TfOdmPbLjhbn4A3d5V8AsCi1TuQENBFjceoMBCACy7x3s5kprHmNiKpga
+8YP4BhZKG29UTd5TSiPi2M66pXTEz7HHFcW/sZH0i9o5UGS2ueh7m5tRQk8+REVp
+Cn7MCOOaaQuS3ISRbZxJIloojHwT7W1SV25KH2Xf2Hs/R//Evu9ajdX5ohfVsZ55
+DFyptEi7BX1dz445+htCMUwAFwjkWnUSG3D1ueFOG/bhZbytfthBiInqHgVh6gYQ
+e18ond4fcsFqzwj2FpfoXa7DYl/RiywfYRkZFjaddJ8+cqdU3Vrt57lRoLd206US
+s5ql77yam3pzWWif+nmiSnPJujj5PzLZWlcUSz3cQ8rAs6ZVFFoxULbBu97ZQ3T6
+/lOXABEBAAGJAR8EGAEIAAkFAljceoMCGwwACgkQWjfk9HxzHxRU/Af9HkN3dqAx
+KsIyXQRnPq33JHTw82urcpRlytAozDhym5PJzUeQsVZ8EZYrjHMa+YgjJ6OR2d4R
+aH7cAJUHgig7DZog7ilPJDv/JOtMlHkHBqY7O8SNicuNVr6SNRbO5FRhaXTi4pIE
+WMYl/Jni+0DL0GyIhnzIpxzJGYtY88EJ0obpqWENj829gqFUaHjPs7k0L/1uPTWY
+AT8jdSukbKLc4xtFTa9R/8G8QLW+DtQiDWk+cuVpnF4YiCOIKWCp/rVtdv55EytH
+g+4Xod7FGO4t8WQTPEXb08DLae6ikLMp7gMXDs0kXnk3P1w646nwbpBUi1z0AkZv
+SUlCJaGiY+Eclg==
+=qZVn
+-----END PGP PUBLIC KEY BLOCK-----
+</code></pre>
+<p>Собственно импорт можно сделать командой</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> gpg <span class="nt">--import</span> chriserin.pub
+gpg: key 5A37E4F47C731F14: public key <span class="s2">"Chris Erin (Be Kind To Others) &lt;chris.erin@hashrocket.com&gt;"</span> imported
+gpg: Total number processed: 1
+gpg:               imported: 1
+
+</code></pre></div></div>
+<p>После этого можно проверить свои ключи:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> gpg <span class="nt">--list-keys</span>
+/home/msangel/.gnupg/pubring.kbx
+<span class="nt">--------------------------------</span>
+pub   rsa2048 2017-03-30 <span class="o">[</span>SC]
+9D1CA7775CDE4532873128E05A37E4F47C731F14
+uid           <span class="o">[</span> unknown] Chris Erin <span class="o">(</span>Be Kind To Others<span class="o">)</span> &lt;chris.erin@hashrocket.com&gt;
+sub   rsa2048 2017-03-30 <span class="o">[</span>E]
+</code></pre></div></div>
+<p>Окей. Что мы здесь видим? На самом деле больше чем ожидалось. Можно даже <a href="https://davesteele.github.io/gpg/2014/09/20/anatomy-of-a-gpg-key/">подробно</a>:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> gpg <span class="nt">-a</span> <span class="nt">--export</span> <span class="s2">"Chris Erin"</span> | gpg <span class="nt">--list-packets</span> <span class="nt">--verbose</span> <span class="nt">--debug</span> 0x02
+</code></pre></div></div>
+<p>Так вот. Вместе с публичным ключем в бандл так же попал субключ, которым собственно и будет проводиться процедура шифзакодирования сообщений. Этот субключ был создан вместе с основным ключем еще на этапе генерации пары. Да. Сгенерировано было две пары. Причины на это <a href="https://serverfault.com/questions/397973/gpg-why-am-i-encrypting-with-subkey-instead-of-primary-key">есть</a>. Т.е. один основной ключ - используется только для подписания всего и еще один ключ используется для шифкодирования сообщений. Все в соответствии с флагами: [SC] и [E].
+Этот ключ (вместе с подключем) был сохранен в <code class="language-plaintext highlighter-rouge">pubring.kbx</code>:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> kbxutil <span class="nt">--stats</span> ~/.gnupg/pubring.kbx
+Total number of blobs:        2
+header:                       1
+empty:                        0
+openpgp:                      1
+x509:                         0
+non flagged:                  1
+secret flagged:               0
+ephemeral flagged:            0
+</code></pre></div></div>
+
+<h3 id="генерация-своего-приватного-ключа">Генерация своего приватного ключа</h3>
+<p>Варианты:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">gpg --quick-generate-key</code> - самый простой вариант, вызов в формате <code class="language-plaintext highlighter-rouge">--quick-generate-key USER-ID [ALGO [USAGE [EXPIRE]]]</code></li>
+  <li><code class="language-plaintext highlighter-rouge">gpg --generate-key</code> - простой диалог с основными вопросами. Так же сгенерирует ключ отзыва.</li>
+  <li><code class="language-plaintext highlighter-rouge">gpg --full-generate-key</code> - диалог со всеми опциями.</li>
+</ul>
+
+<p>Выбираем алгоритм: <code class="language-plaintext highlighter-rouge">(1) RSA and RSA</code>, выставляем нужное время истечения годности, вводим желаемое имя и email и желательно не заполняем поле <code class="language-plaintext highlighter-rouge">Comment</code> ничем ненужным, потому что этот текст будет всюду.
+После ввода всех данных программа выдаст что-то вроде этого:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gpg: key A0FECC5008F47665 marked as ultimately trusted
+gpg: revocation certificate stored as <span class="s1">'/home/msangel/.gnupg/openpgp-revocs.d/F0FB65DD715EB503E228D077A0FECC5008F47665.rev'</span>
+public and secret key created and signed.
+
+pub   rsa4096 2021-10-17 <span class="o">[</span>SC]
+      F0FB65DD715EB503E228D077A0FECC5008F47665
+uid                      Artem Ivanov &lt;ivanov@mail.com&gt;
+sub   rsa4096 2021-10-17 <span class="o">[</span>E]
+
+</code></pre></div></div>
+<p>Теперь у нас есть: пара приватного и публичного основного ключа и пара приватного и публичного суб-ключа.
+Публичные ключи можно проверить все так же:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> gpg <span class="nt">--list-keys</span> <span class="nt">--with-subkey-fingerprints</span>
+/home/msangel/.gnupg/pubring.kbx
+<span class="nt">--------------------------------</span>
+pub   rsa2048 2017-03-30 <span class="o">[</span>SC]
+      9D1CA7775CDE4532873128E05A37E4F47C731F14
+uid           <span class="o">[</span> unknown] Chris Erin <span class="o">(</span>Be Kind To Others<span class="o">)</span> &lt;chris.erin@hashrocket.com&gt;
+sub   rsa2048 2017-03-30 <span class="o">[</span>E]
+      6BD310F7401C9B6FAF72FFEEB083E3061CC31A83
+
+pub   rsa4096 2021-10-17 <span class="o">[</span>SC]
+      F0FB65DD715EB503E228D077A0FECC5008F47665
+uid           <span class="o">[</span>ultimate] Artem Ivanov &lt;ivanov@mail.com&gt;
+sub   rsa4096 2021-10-17 <span class="o">[</span>E]
+      80E5073750BCF6E01678DA0E493DE320BD233CA6
+
+</code></pre></div></div>
+
+<p>Для просмотра приватных ключей используется такая команда:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gpg <span class="nt">--list-secret-keys</span>  <span class="nt">--with-subkey-fingerprints</span> <span class="nt">--keyid-format</span><span class="o">=</span>long
+/home/msangel/.gnupg/pubring.kbx
+<span class="nt">--------------------------------</span>
+sec   rsa4096/A0FECC5008F47665 2021-10-17 <span class="o">[</span>SC]
+      F0FB65DD715EB503E228D077A0FECC5008F47665
+uid           <span class="o">[</span>ultimate] Artem Ivanov &lt;ivanov@mail.com&gt;
+ssb   rsa4096/493DE320BD233CA6 2021-10-17 <span class="o">[</span>E]
+      80E5073750BCF6E01678DA0E493DE320BD233CA6
+
+</code></pre></div></div>
+
+<p>Оригинальный приватный ключ: F0FB65DD715EB503E228D077A0FECC5008F47665
+И кже упоминаемый суб-ключ 80E5073750BCF6E01678DA0E493DE320BD233CA6 который был сгенерирован вместе с ним (маркирован [E], т.е. только для шифрования).
+Часто рекомендуется создать еще один суб-ключ для подписывания[S], чтоб не использовать мастер-ключ для этого.</p>
+
+<h3 id="экспортируем-ключи">Экспортируем ключи</h3>
+<h4 id="публичный">Публичный</h4>
+<p>В файл:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> gpg <span class="nt">--output</span> public.pgp  <span class="nt">--armor</span> <span class="nt">--export</span> <span class="s2">"ivanov@mail.com"</span>
+</code></pre></div></div>
+<p>или в консоль:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gpg <span class="nt">--armor</span> <span class="nt">--export</span> <span class="s2">"Artem Ivanov"</span>
+</code></pre></div></div>
+<p>где <code class="language-plaintext highlighter-rouge">--armor</code> указывает на текстовый вывод (по умолчанию бинарный).</p>
+
+<h4 id="приватный">Приватный</h4>
+<p>В файл:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gpg <span class="nt">--output</span> private.pgp <span class="nt">--armor</span> <span class="nt">--export-secret-key</span> <span class="s2">"ivanov@mail.com"</span>
+</code></pre></div></div>
+<p>или в консоль:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gpg <span class="nt">--armor</span> <span class="nt">--export-secret-key</span> <span class="s2">"Artem Ivanov"</span>
+</code></pre></div></div>
+<h3 id="импортируем-ключи">Импортируем ключи</h3>
+
+<h4 id="публичный-1">Публичный</h4>
+<p>Для примера возьмем ключ Киррила Раевского(кем бы он не был):</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> curl <span class="nt">-sSL</span> https://python273.pw/key.asc | gpg <span class="nt">--import</span> -
+gpg: key B8A168B3A02C01E3: public key <span class="s2">"python273 (python273.pw) &lt;iam@python273.pw&gt;"</span> imported
+gpg: Total number processed: 1
+gpg:               imported: 1
+</code></pre></div></div>
+<p>Ну и по умолчанию уровень доверия к ключам [ unknown], и это можно исправить:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> gpg <span class="nt">--edit-key</span> iam@python273.pw
+gpg&gt; trust
+</code></pre></div></div>
+
+<h4 id="приватный-1">Приватный</h4>
+<p>Та так же. По самому ключу понятно какой он:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gpg <span class="nt">--import</span>  my.key 
+gpg: key 41CB98F33B06146E: public key <span class="s2">"Vasyl Khrystiuk &lt;h6.msangel@gmail.com&gt;"</span> imported
+gpg: key 41CB98F33B06146E: secret key imported
+gpg: Total number processed: 1
+gpg:               imported: 1
+gpg:       secret keys <span class="nb">read</span>: 1
+gpg:   secret keys imported: 1
+</code></pre></div></div>
+
+<h3 id="удаление-ключей">Удаление ключей</h3>
+<p>Удаление самих ключей:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gpg <span class="nt">--delete-key</span> key-ID <span class="c"># публичные</span>
+gpg <span class="nt">--delete-secret-keys</span> key-ID <span class="c"># приватные</span>
+</code></pre></div></div>
+<p>Суб-ключи будут удалены вместе с основными.
+Так же можно удалять только суб-ключи:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> gpg <span class="nt">--edit-key</span> key-ID
+gpg&gt; list
+gpg&gt; key 0
+gpg&gt; delkey 
+</code></pre></div></div>
+
+<h3 id="о-серверах-ключей">О серверах ключей</h3>
+<p>Для публикации публичных ключей используются специальные публичные сервера (keyserver). Вот краткий список некоторых таких серверов:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">keyserver.ubuntu.com</code> (recommended, supported by maven central)</li>
+  <li><code class="language-plaintext highlighter-rouge">keys.openpgp.org</code> (supported by maven central)</li>
+  <li><code class="language-plaintext highlighter-rouge">pgp.mit.edu</code> (supported by maven central)</li>
+  <li><code class="language-plaintext highlighter-rouge">keyserver.pgp.com</code></li>
+</ul>
+
+<h4 id="пару-слов-о-протоколе-сервера-ключей">Пару слов о протоколе сервера ключей</h4>
+<p>В отличие от <code class="language-plaintext highlighter-rouge">HTTP</code> сервер ключей работает на собственном протоколе <code class="language-plaintext highlighter-rouge">HKP</code> (OpenPGP HTTP Keyserver Protocol) описанном в <a href="https://datatracker.ietf.org/doc/html/draft-shaw-openpgp-hkp-00">черновике</a>. Технически это текстовый протокол который использует TCP порт 11371 по умолчанию. Современная модификация этого протокола: hkps (HKP over TLS). Тем не менее, большинство современных реализаций кейсерверов имеют и HTTP/HTTPS интерфейсы. И как напоминание - наличие ключа на кейсервере это всего лишь фактор для доверия ему, но не достаточная причина.</p>
+
+<h4 id="работа-с-сервером-ключей">Работа с сервером ключей</h4>
+<h5 id="поиск-чужих-ключей-на-сервере">Поиск чужих ключей на сервере:</h5>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> gpg <span class="nt">--keyserver</span> keyserver.ubuntu.com <span class="nt">--search-keys</span> 50B670A8DE1F3CD89583895241CB98F33B06146E
+gpg: data <span class="nb">source</span>: http://162.213.33.9:11371
+<span class="o">(</span>1<span class="o">)</span>	Vasyl Khrystiuk &lt;h6.msangel@gmail.com&gt;
+	  2048 bit RSA key 41CB98F33B06146E, created: 2021-03-17
+Keys 1-1 of 1 <span class="k">for</span> <span class="s2">"50B670A8DE1F3CD89583895241CB98F33B06146E"</span><span class="nb">.</span>  Enter number<span class="o">(</span>s<span class="o">)</span>, N<span class="o">)</span>ext, or Q<span class="o">)</span>uit <span class="o">&gt;</span> Q
+</code></pre></div></div>
+
+<h5 id="отправка-ключа-на-сервер">Отправка ключа на сервер.</h5>
+<p>Отправка на дефолтный keys.openpgp.org выглядит так:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> gpg <span class="nt">--send-keys</span> F0FB65DD715EB503E228D077A0FECC5008F47665
+gpg: sending key A0FECC5008F47665 to hkps://keys.openpgp.org
+</code></pre></div></div>
+<p>Однако следует помнить, что keys.openpgp.org <a href="https://superuser.com/a/1485255">имеет систему подтверждения пользователей</a> которая доступна только через <a href="https://keys.openpgp.org/upload">веб-интерфейс</a>.</p>
+
+<p>Можно выбрать на какой сервер отправить ключ:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gpg <span class="nt">--keyserver</span> hkps://keyserver.ubuntu.com <span class="nt">--send-keys</span> F0FB65DD715EB503E228D077A0FECC5008F47665
+</code></pre></div></div>
+<p>Проверить что ключ там(и при желании импортировать):</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gpg <span class="nt">--keyserver</span> hkps://keyserver.ubuntu.com <span class="nt">--search-keys</span> F0FB65DD715EB503E228D077A0FECC5008F47665
+</code></pre></div></div>
+
+<h3 id="отзыв-ключей">Отзыв ключей</h3>
+<p>Если приватный ключ был дискредитирован, его нужно отозвать. Наивный способ это сделать - сгенерировать специальный сертификат и отправить на сервер с ключами. Это работает:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> <span class="c"># Revoke your key</span>
+<span class="o">&gt;</span> gpg <span class="nt">--output</span> revoke.asc <span class="nt">--gen-revoke</span> key-ID
+<span class="o">&gt;</span> <span class="c"># Import revocation certificate into your keyring</span>
+<span class="o">&gt;</span> gpg <span class="nt">--import</span> revoke.asc
+<span class="o">&gt;</span> <span class="c"># Search your key on the key-server</span>
+<span class="o">&gt;</span> gpg <span class="nt">--keyserver</span> pgp.mit.edu <span class="nt">--search-keys</span> key-ID
+<span class="o">&gt;</span> <span class="c"># Send the revoked public key to the key-server</span>
+<span class="o">&gt;</span> gpg <span class="nt">--keyserver</span> pgp.mit.edu <span class="nt">--send-keys</span> key-ID
+</code></pre></div></div>
+<p>Однако для генерации такого сертификата нужно указать пароль, которым защищен приватный ключ ну и нужен сам приватный ключ. Пароль можно забыть, файл приватного ключа можно потерять. Потому при генерации каждой пары ключей pgp так же создает сразу ключ для отзыва. Для того чтоб им воспользоваться, достаточно его импортировать и отправить на сервер:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># наш ключ отзыва</span>
+<span class="o">&gt;</span> <span class="nb">ls</span> <span class="sb">`</span>~/.gnupg/openpgp-revocs.d/
+F0FB65DD715EB503E228D077A0FECC5008F47665.rev<span class="sb">`</span>
+<span class="c"># отключаем предохранитель в виде ":" в начале ключа, удаляем один символ</span>
+<span class="nb">sed</span> <span class="nt">-i</span> <span class="nt">-e</span> <span class="s1">'s/:-----BEGIN PGP/-----BEGIN PGP/g'</span> ~/.gnupg/openpgp-revocs.d/
+F0FB65DD715EB503E228D077A0FECC5008F47665.rev
+
+<span class="c"># импортируем ключ, это обозначает данный ключ как отозванный в локальной связке.</span>
+<span class="o">&gt;</span> gpg <span class="nt">--import</span> ~/.gnupg/openpgp-revocs.d/F0FB65DD715EB503E228D077A0FECC5008F47665.rev 
+gpg: key A0FECC5008F47665: <span class="s2">"Artem Ivanov &lt;ivanov@mail.com&gt;"</span> revocation certificate imported
+gpg: Total number processed: 1
+gpg:    new key revocations: 1
+gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+gpg: depth: 0  valid:   1  signed:   0  trust: 0-, 0q, 0n, 0m, 0f, 1u
+<span class="c"># Теперь отправляем отозванный сертификат на кей-сервер</span>
+<span class="o">&gt;</span> gpg <span class="nt">--keyserver</span> hkps://keyserver.ubuntu.com <span class="nt">--send-keys</span> F0FB65DD715EB503E228D077A0FECC5008F47665
+gpg: sending key A0FECC5008F47665 to hkps://keyserver.ubuntu.com
+<span class="c"># проверяем статус</span>
+<span class="o">&gt;</span> gpg <span class="nt">--list-secret-keys</span>  <span class="nt">--with-subkey-fingerprints</span> <span class="nt">--keyid-format</span><span class="o">=</span>long
+/home/msangel/.gnupg/pubring.kbx
+<span class="nt">--------------------------------</span>
+sec   rsa4096/A0FECC5008F47665 2021-10-17 <span class="o">[</span>SC] <span class="o">[</span>revoked: 2021-10-17]
+      F0FB65DD715EB503E228D077A0FECC5008F47665
+uid                 <span class="o">[</span> revoked] Artem Ivanov &lt;ivanov@mail.com&gt;
+</code></pre></div></div>
+<p>Для чистоты эксперимента создадим еще одную тестовую среду и попробуем импортировать там ключ из кей-сервера. Обновление на сервере заняло около 5 минут.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> gpg  <span class="nt">--keyserver</span> hkps://keyserver.ubuntu.com <span class="nt">--search-keys</span> F0FB65DD715EB503E228D077A0FECC5008F47665
+gpg: data <span class="nb">source</span>: https://162.213.33.9:443
+<span class="o">(</span>1<span class="o">)</span>	Artem Ivanov &lt;ivanov@mail.com&gt;
+	  4096 bit RSA key A0FECC5008F47665, created: 2021-10-17
+Keys 1-1 of 1 <span class="k">for</span> <span class="s2">"F0FB65DD715EB503E228D077A0FECC5008F47665"</span><span class="nb">.</span>  Enter number<span class="o">(</span>s<span class="o">)</span>, N<span class="o">)</span>ext, or Q<span class="o">)</span>uit <span class="o">&gt;</span> 1
+gpg: key A0FECC5008F47665: <span class="s2">"Artem Ivanov &lt;ivanov@mail.com&gt;"</span> revocation certificate added
+gpg: key A0FECC5008F47665: <span class="s2">"Artem Ivanov &lt;ivanov@mail.com&gt;"</span> 1 new signature
+gpg: Total number processed: 1
+gpg:         new signatures: 1
+<span class="o">&gt;</span> gpg <span class="nt">--list-keys</span>  <span class="nt">--with-subkey-fingerprints</span> <span class="nt">--keyid-format</span><span class="o">=</span>long
+/home/msangel/.gnupg/pubring.kbx
+<span class="nt">--------------------------------</span>
+pub   rsa4096/A0FECC5008F47665 2021-10-17 <span class="o">[</span>SC] <span class="o">[</span>revoked: 2021-10-17]
+      F0FB65DD715EB503E228D077A0FECC5008F47665
+uid                 <span class="o">[</span> revoked] Artem Ivanov &lt;ivanov@mail.com&gt;
+
+</code></pre></div></div>
+
+<h3 id="субключи">Субключи</h3>
+<p>TBD
+Как сертифицировать. 
+Как публиковать. 
+Как проверить сертификацию. 
+Как обновить срок жизни. 
+Как опубликовать изменения. 
+Как скачать изменения.</p>
+
+<h3 id="бекап-и-восстановление">Бекап и восстановление</h3>
+<p>Хотя для этого нужно всего лишь экспортировать свои пары ключей и сохранить их в надежном месте, а рецепты для этого написаны выше, но не стоит игнорировать это. Компьютеры приходят и уходят, а цифровая идентичность остается навсегда. Пожалуй что мне действительно понравилось - это идея хранить ключи в <a href="https://www.saminiir.com/paper-storage-and-recovery-of-gpg-keys/">печатном виде</a>. Я бы распечатал ключ для отзыва.</p>
+
+<h3 id="другие-возможности">Другие возможности</h3>
+<ol>
+  <li>В один ключ можно добавить несколько идентификаторов(например домашнюю и рабочую адреса почт) и обновить ключ на сервере.</li>
+  <li>Так же идентификаторы можно удалить (если вы отправили ключ в реестр, то его можно
+только отозвать).</li>
+  <li>Можно создать субключ только с возможностью аутентификации и использовать его в качестве ssh ключа.</li>
+  <li>Можно установить <a href="https://www.gnupg.org/documentation/manuals/gnupg/GPG-Configuration-Options.html">опции</a> работы с системой внеся пожелания в <code class="language-plaintext highlighter-rouge">~/.gnupg/gpg.conf</code> файл.</li>
+  <li>Система задумывалась как &#8220;распределенная сеть доверия&#8221;, где я могу, например, верить какому-то ключу &#8220;с большей вероятностью&#8221;, если его подписало, например &#8220;больше трех проверенных мной человек&#8221;. <a href="https://www.gnupg.org/gph/en/manual/x334.html">Так-то</a>.</li>
+  <li>К публичному ключу можно присоединить фото. Это не должно уверять вас в правильности ключа. Поэтому я бы не стал. Но возможность <a href="https://help.gnome.org/users/seahorse/stable/pgp-photoid.html.en">есть</a>.</li>
+  <li>Кроме fingerprints есть и <a href="https://security.stackexchange.com/questions/231295/what-is-the-difference-between-the-many-identifiers-in-gnupg">другие возможности</a> идентифицировать ключи. Например, имя файла приватного ключа формируется на основе keygrip (&#8211;with-keygrip) но это внутрении детали. Fingerprints достаточно.</li>
+</ol>
+
+<h3 id="заключение">Заключение</h3>
+<p>В целом консольная программа удобна и понятна, однако если нет желания играться в консоль, существует много GUI-инструментов. При желании их можно найти и сравнить. Сам же я предпочитаю пользоваться программой <code class="language-plaintext highlighter-rouge">GPA</code> которая поставляется в комплекте с всем пакетом.
+<div class="row"><img src="https://k.co.ua/resources/pgp/Screenshot_2021-10-17_17-56-40.png" alt="GPA" loading="lazy" class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2" /></div></p>
+
+<h3 id="используемые-материалы">Используемые материалы</h3>
+<ul>
+  <li><a href="https://www.gnupg.org/gph/en/manual.html">https://www.gnupg.org/gph/en/manual.html</a></li>
+  <li><a href="https://davesteele.github.io/gpg/2014/09/20/anatomy-of-a-gpg-key/">https://davesteele.github.io/gpg/2014/09/20/anatomy-of-a-gpg-key/</a></li>
+  <li><a href="https://hashrocket.com/blog/posts/encryption-with-gpg-a-story-really-a-tutorial">https://hashrocket.com/blog/posts/encryption-with-gpg-a-story-really-a-tutorial</a></li>
+  <li><a href="https://github.com/gpg/gnupg/blob/master/doc/DETAILS#field-1---type-of-record">https://github.com/gpg/gnupg/blob/master/doc/DETAILS#field-1&#8212;type-of-record</a></li>
+</ul>
+
+<h3 id="хорошие-статьи-по-теме">Хорошие статьи по теме</h3>
+<p>Мне очень понравился цикл статей от <a href="https://blogs.itemis.com/en/author/jan-mosig">Jan Mosig</a> об безопасности вокруг pgp. Не уверен, что их нужно читать, но вот ознакомиться точно не помешает:</p>
+<ol>
+  <li><a href="https://blogs.itemis.com/en/openpgp-on-the-job-part-1-what-is-it">https://blogs.itemis.com/en/openpgp-on-the-job-part-1-what-is-it</a></li>
+  <li><a href="https://blogs.itemis.com/en/openpgp-on-the-job-part-2-before-we-start">https://blogs.itemis.com/en/openpgp-on-the-job-part-2-before-we-start</a></li>
+  <li><a href="https://blogs.itemis.com/en/openpgp-on-the-job-part-3-install-and-configure">https://blogs.itemis.com/en/openpgp-on-the-job-part-3-install-and-configure</a></li>
+  <li><a href="https://blogs.itemis.com/en/openpgp-on-the-job-part-4-generating-keys">https://blogs.itemis.com/en/openpgp-on-the-job-part-4-generating-keys</a></li>
+  <li><a href="https://blogs.itemis.com/en/openpgp-on-the-job-part-5-thunderbird-enigmail">https://blogs.itemis.com/en/openpgp-on-the-job-part-5-thunderbird-enigmail</a></li>
+  <li><a href="https://blogs.itemis.com/en/openpgp-on-the-job-part-6-e-mail-encryption-on-android-with-k-9-mail-openkeychain">https://blogs.itemis.com/en/openpgp-on-the-job-part-6-e-mail-encryption-on-android-with-k-9-mail-openkeychain</a></li>
+  <li><a href="https://blogs.itemis.com/en/openpgp-on-the-job-part-7-improved-security-with-yubikey">https://blogs.itemis.com/en/openpgp-on-the-job-part-7-improved-security-with-yubikey</a></li>
+  <li><a href="https://blogs.itemis.com/en/openpgp-on-the-job-part-8-ssh-with-openpgp-and-yubikey">https://blogs.itemis.com/en/openpgp-on-the-job-part-8-ssh-with-openpgp-and-yubikey</a></li>
+</ol>
+
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTEyMzg3MzA4M119
+-->
+
+      
+        <h1 style="margin-top: 50px;">Комментарии</h1>
+      
+    </div>
+    <div id="disqus_thread"></div>
+  </div>
+</div>
+  
+<script>
+    jQuery(document).ready(function() {
+        function debouncer( func , timeout ) {
+            var timeoutID , timeout = timeout || 1000;
+            return function () {
+                var scope = this , args = arguments;
+                clearTimeout( timeoutID );
+                timeoutID = setTimeout( function () {
+                    func.apply( scope , Array.prototype.slice.call( args ) );
+                } , timeout );
+            }
+        }
+        var offset = 300;
+        var duration = 500;
+        var fadeFunc = function () {
+            if (jQuery(window).width() < 1140) {
+                jQuery('.backtotop').fadeOut(0);
+                return;
+            }
+            if (jQuery(window).scrollTop() > offset) {
+                jQuery('.backtotop').fadeIn(duration);
+            } else {
+                jQuery('.backtotop').fadeOut(duration);
+            }
+        }
+        jQuery(window).scroll(debouncer(fadeFunc, 50));
+        jQuery(window).resize(debouncer(fadeFunc));
+
+        jQuery('.backtotop').click(function(event) {
+            event.preventDefault();
+            jQuery('html, body').animate({scrollTop: 0}, duration);
+            return false;
+        })
+    });
+</script>
+<style>
+    .backtotop {
+        display: none;
+    }
+    @media only screen and (min-width:1140px){
+        .backtotop,
+        .backtotop:hover,
+        .backtotop:active,
+        .backtotop:visited,
+        .backtotop:focus {
+            display: none;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            z-index: 10000;
+            text-align: center;
+            color: black;
+            text-decoration: none;
+            padding: 4px 10px;
+            border-radius: 3px;
+            width: 60px;
+            opacity: 0.4;
+        }
+        .backtotop:hover {
+            background-color: rgba(59, 59, 59, 0.10);
+            opacity: 1;
+            transition-property: opacity;
+            transition-duration: 500ms;
+        }
+    }
+
+
+</style>
+<a href="#" class="backtotop"><img src="/assets/noun_Arrow_22173.svg"/></a>
+  
+  <script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    var disqus_config = function () {
+        this.page.url = 'https://k.co.ua/';  // Replace PAGE_URL with your page's canonical URL variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://k-co.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  
+  <div class="footer">
+    <div class="row">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="copyright">
+              <p><a href="https://github.com/msangel/msangel.github.io" target="_self">© 2014-2025 by Vasyl Khrystiuk</a>, powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>, crafted by
+                <a href="https://github.com/msangel/msangel.github.io/blob/master/.github/workflows/github-pages.yml" target="_blank">GitHub Actions</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+<script>anchors.add();</script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-194224445-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+<script src="/assets/links.js"></script>
+<script id="dsq-count-scr" src="//k-co.disqus.com/count.js" async></script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<html lang="en" class="mysite">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Update timezone database in JVM | Vasyl Khrystiuk</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Update timezone database in JVM" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="Update timezone database for JVM in Linux" />
+<meta property="og:description" content="Update timezone database for JVM in Linux" />
+<link rel="canonical" href="https://github.com/pages/msangel/blog/2024/04/07/update-timezone-database-jvm.html" />
+<meta property="og:url" content="https://github.com/pages/msangel/blog/2024/04/07/update-timezone-database-jvm.html" />
+<meta property="og:site_name" content="Vasyl Khrystiuk" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-04-07T20:21:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Update timezone database in JVM" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-02-03T03:21:25+00:00","datePublished":"2024-04-07T20:21:00+00:00","description":"Update timezone database for JVM in Linux","headline":"Update timezone database in JVM","mainEntityOfPage":{"@type":"WebPage","@id":"https://github.com/pages/msangel/blog/2024/04/07/update-timezone-database-jvm.html"},"url":"https://github.com/pages/msangel/blog/2024/04/07/update-timezone-database-jvm.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  
+  <link rel="stylesheet" href="/assets/components-font-awesome/css/fontawesome-all.min.css">
+
+  <link href='/assets/open-sans-all/css/open-sans.min.css' rel='stylesheet' type='text/css'>
+  
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+  <link href='//fonts.googleapis.com/css?family=Ubuntu&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Ubuntu+Mono&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  
+  <link rel="stylesheet" href="/assets/bootstrap/dist/css/bootstrap.min.css">
+  <script src="/assets/jquery/dist/jquery.min.js"></script>
+  <script src="/assets/bootstrap/dist/js/bootstrap.min.js"></script>
+  
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="shortcut icon" type="image/jpg" href="/assets/favicon.ico"/>
+  <link rel="stylesheet" href="/assets/tabs.css">
+  <script src="/assets/tabs.js"></script>
+  <link href="/assets/rouge.css" rel="stylesheet" >
+  <style>
+      .highlighter-rouge > .highlight > pre.highlight {
+          border-radius: unset;
+      }
+  </style>
+</head>
+
+<body>
+<div id="body">
+  <div class="jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 myname"><a href="/"><span>Vasyl </span>Khrystiuk</a></div>
+        <div class="col-xs-12 col-sm-12 subtitle"><a href="/"><span>full stack developer</span></a></div>
+      </div>
+
+    </div>
+  </div>
+
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <ul class="nav navbar-nav">
+        <!--class="active" -->
+        <li><a href="/">BLOG</a></li>
+        <li role="separator" class="divider-vertical"></li>
+        <li><a href="/about">ABOUT</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container central blogpost">
+  <div class="row">
+    <div class="col-lg-12 record">
+
+<h2 class="page-title">Update timezone database in JVM</h2>
+      <p class="text-muted small page-date">Posted: April 07, 2024 - Updated: February 03, 2025</p>
+
+<h3 id="update-timezone-database-for-jvm-in-linux">Update timezone database for JVM in Linux</h3>
+
+<h4 id="problem">Problem</h4>
+<p>I live in <code class="language-plaintext highlighter-rouge">Europe\Kyiv</code> timezone. My computer knows it and shows the correct time in the clock widget on the desktop. As well as it shows the correct time via command line. And it properly detects that I am in a DST(daylight saving time) period now.</p>
+
+<p>BUT JVM doesn&#8217;t know about it. Just because it reads <code class="language-plaintext highlighter-rouge">Europe\Kyiv</code> from the system and doesn&#8217;t recognize it. As all it knows is <code class="language-plaintext highlighter-rouge">Europe\Kiev</code>. <a href="https://en.wikipedia.org/wiki/KyivNotKiev">K<strong>yi</strong>v is not K<strong>ie</strong>v.</a> So it reads further and somehow detects that original time offset for me is <code class="language-plaintext highlighter-rouge">+2</code> and so it uses it, but without DST rules. 
+This:</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">TimeZone</span> <span class="n">aDefault</span> <span class="o">=</span> <span class="nc">TimeZone</span><span class="o">.</span><span class="na">getDefault</span><span class="o">();</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"default timezone: "</span> <span class="o">+</span> <span class="n">aDefault</span><span class="o">);</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"new date: "</span> <span class="o">+</span> <span class="k">new</span> <span class="nc">Date</span><span class="o">());</span>
+</code></pre></div></div>
+<p>Print this:</p>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>default timezone: sun.util.calendar.ZoneInfo[id="GMT+02:00",offset=7200000,dstSavings=0,useDaylight=false,transitions=0,lastRule=null]
+new date: Sun Apr 07 22:44:10 GMT+02:00 2024
+</code></pre></div></div>
+<p>But in fact I am in <code class="language-plaintext highlighter-rouge">GMT+03:00</code> timezone and so the detected <code class="language-plaintext highlighter-rouge">now</code> should be <code class="language-plaintext highlighter-rouge">23:44:10</code> but not <code class="language-plaintext highlighter-rouge">22:44:10</code>.</p>
+
+<h3 id="solution">Solution</h3>
+<p>Java keeps information about all known timezones in its own internal storage. And that&#8217;s updatable. The storage format differs from version to version, but you don&#8217;t need to know it. As the Oracle provides a tool for updating timezone information in installed java. Its called <code class="language-plaintext highlighter-rouge">TZUpdater</code>.</p>
+
+<p>And I&#8217;m not going to use it since I found no easy readme, the download anything from Oracle website is a pain, and I have strong concerns it works with mine AdoptOpenJDK installed. You may <a href="https://www.oracle.com/java/technologies/javase/tzupdater-readme.html">try your luck with it</a>, but since there exists opensource alternative <a href="https://www.azul.com/products/components/ziupdater-time-zone-tool/">ZIUpdater</a>, I&#8217;m going to use it instead.</p>
+
+<p>Work with <code class="language-plaintext highlighter-rouge">ZIUpdater</code> is simple: download, extract, run. You can download it from the <a href="https://www.azul.com/products/components/ziupdater-time-zone-tool/">website</a>: <div class="row"><img src="/resources/jvm-tz-update/img.png" alt="img.png" loading="lazy" class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2" /></div>.</p>
+
+<p>For updating timezone information, you also need this information to get somewhere. IANA is a good and reliable source. Just download the latest file from there: https://data.iana.org/time-zones/tzdata-latest.tar.gz</p>
+
+<p>After run the tool with path to this file as parameter:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java <span class="nt">-jar</span> ziupdater-1.1.1.1.jar  <span class="nt">-l</span>  file:///home/msangel/Desktop/tzupdater/ziupdater1.1.1.1-jse8+7-any_jvm/tzdata-latest.tar.gz
+</code></pre></div></div>
+<p>That&#8217;s it!</p>
+
+<h3 id="checking">Checking</h3>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">TimeZone</span> <span class="n">aDefault</span> <span class="o">=</span> <span class="nc">TimeZone</span><span class="o">.</span><span class="na">getDefault</span><span class="o">();</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"default timezone: "</span> <span class="o">+</span> <span class="n">aDefault</span><span class="o">);</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"new date: "</span> <span class="o">+</span> <span class="k">new</span> <span class="nc">Date</span><span class="o">());</span>
+</code></pre></div></div>
+<p>Gives proper:</p>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>default timezone: sun.util.calendar.ZoneInfo[id="Europe/Kyiv",offset=7200000,dstSavings=3600000,useDaylight=true,transitions=121,lastRule=java.util.SimpleTimeZone[id=Europe/Kyiv,offset=7200000,dstSavings=3600000,useDaylight=true,startYear=0,startMode=2,startMonth=2,startDay=-1,startDayOfWeek=1,startTime=3600000,startTimeMode=2,endMode=2,endMonth=9,endDay=-1,endDayOfWeek=1,endTime=3600000,endTimeMode=2]]
+new date: Mon Apr 08 00:25:07 EEST 2024
+</code></pre></div></div>
+
+<p>Done.</p>
+
+      
+        <h1 style="margin-top: 50px;">Comments</h1>
+      
+    </div>
+    <div id="disqus_thread"></div>
+  </div>
+</div>
+  
+<script>
+    jQuery(document).ready(function() {
+        function debouncer( func , timeout ) {
+            var timeoutID , timeout = timeout || 1000;
+            return function () {
+                var scope = this , args = arguments;
+                clearTimeout( timeoutID );
+                timeoutID = setTimeout( function () {
+                    func.apply( scope , Array.prototype.slice.call( args ) );
+                } , timeout );
+            }
+        }
+        var offset = 300;
+        var duration = 500;
+        var fadeFunc = function () {
+            if (jQuery(window).width() < 1140) {
+                jQuery('.backtotop').fadeOut(0);
+                return;
+            }
+            if (jQuery(window).scrollTop() > offset) {
+                jQuery('.backtotop').fadeIn(duration);
+            } else {
+                jQuery('.backtotop').fadeOut(duration);
+            }
+        }
+        jQuery(window).scroll(debouncer(fadeFunc, 50));
+        jQuery(window).resize(debouncer(fadeFunc));
+
+        jQuery('.backtotop').click(function(event) {
+            event.preventDefault();
+            jQuery('html, body').animate({scrollTop: 0}, duration);
+            return false;
+        })
+    });
+</script>
+<style>
+    .backtotop {
+        display: none;
+    }
+    @media only screen and (min-width:1140px){
+        .backtotop,
+        .backtotop:hover,
+        .backtotop:active,
+        .backtotop:visited,
+        .backtotop:focus {
+            display: none;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            z-index: 10000;
+            text-align: center;
+            color: black;
+            text-decoration: none;
+            padding: 4px 10px;
+            border-radius: 3px;
+            width: 60px;
+            opacity: 0.4;
+        }
+        .backtotop:hover {
+            background-color: rgba(59, 59, 59, 0.10);
+            opacity: 1;
+            transition-property: opacity;
+            transition-duration: 500ms;
+        }
+    }
+
+
+</style>
+<a href="#" class="backtotop"><img src="/assets/noun_Arrow_22173.svg"/></a>
+  
+  <script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    var disqus_config = function () {
+        this.page.url = 'https://k.co.ua/';  // Replace PAGE_URL with your page's canonical URL variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://k-co.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  
+  <div class="footer">
+    <div class="row">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="copyright">
+              <p><a href="https://github.com/msangel/msangel.github.io" target="_self">© 2014-2025 by Vasyl Khrystiuk</a>, powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>, crafted by
+                <a href="https://github.com/msangel/msangel.github.io/blob/master/.github/workflows/github-pages.yml" target="_blank">GitHub Actions</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+<script>anchors.add();</script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-194224445-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+<script src="/assets/links.js"></script>
+<script id="dsq-count-scr" src="//k-co.disqus.com/count.js" async></script>
+</body>
+</html>

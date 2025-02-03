@@ -1,0 +1,495 @@
+<html lang="en" class="mysite">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Example of usage Ansible with Amazon Lightsail | Vasyl Khrystiuk</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Example of usage Ansible with Amazon Lightsail" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="Ansible is a tool for managing a cluster of computers. It&#8217;s idea is simple - working on top of remote ssh, it execute the same command on each registered node. In opposite to classical orchestration tools, where the controller shoult be accessible(online) to dependent nodes, Ansible just requires nodes to be accessible to controller. In simple and popular case, controller is your computer. Even if it has a lot of additional features, in this sample it will be used for automation of deployment java-application to remote host, in this case to Amazon Lightsail node. It is easy, straightforward, and right for that tool. No need to worry about manually connection to the server, uploading artifacts, restart service, etc. Also it is secure, as does&#8217;t expose anything except already axposed ssh(22 tcp port)." />
+<meta property="og:description" content="Ansible is a tool for managing a cluster of computers. It&#8217;s idea is simple - working on top of remote ssh, it execute the same command on each registered node. In opposite to classical orchestration tools, where the controller shoult be accessible(online) to dependent nodes, Ansible just requires nodes to be accessible to controller. In simple and popular case, controller is your computer. Even if it has a lot of additional features, in this sample it will be used for automation of deployment java-application to remote host, in this case to Amazon Lightsail node. It is easy, straightforward, and right for that tool. No need to worry about manually connection to the server, uploading artifacts, restart service, etc. Also it is secure, as does&#8217;t expose anything except already axposed ssh(22 tcp port)." />
+<link rel="canonical" href="https://github.com/pages/msangel/blog/2022/07/07/ansible-lightsail.html" />
+<meta property="og:url" content="https://github.com/pages/msangel/blog/2022/07/07/ansible-lightsail.html" />
+<meta property="og:site_name" content="Vasyl Khrystiuk" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-07-07T19:59:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Example of usage Ansible with Amazon Lightsail" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-02-03T03:21:25+00:00","datePublished":"2022-07-07T19:59:00+00:00","description":"Ansible is a tool for managing a cluster of computers. It&#8217;s idea is simple - working on top of remote ssh, it execute the same command on each registered node. In opposite to classical orchestration tools, where the controller shoult be accessible(online) to dependent nodes, Ansible just requires nodes to be accessible to controller. In simple and popular case, controller is your computer. Even if it has a lot of additional features, in this sample it will be used for automation of deployment java-application to remote host, in this case to Amazon Lightsail node. It is easy, straightforward, and right for that tool. No need to worry about manually connection to the server, uploading artifacts, restart service, etc. Also it is secure, as does&#8217;t expose anything except already axposed ssh(22 tcp port).","headline":"Example of usage Ansible with Amazon Lightsail","mainEntityOfPage":{"@type":"WebPage","@id":"https://github.com/pages/msangel/blog/2022/07/07/ansible-lightsail.html"},"url":"https://github.com/pages/msangel/blog/2022/07/07/ansible-lightsail.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  
+  <link rel="stylesheet" href="/assets/components-font-awesome/css/fontawesome-all.min.css">
+
+  <link href='/assets/open-sans-all/css/open-sans.min.css' rel='stylesheet' type='text/css'>
+  
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+  <link href='//fonts.googleapis.com/css?family=Ubuntu&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Ubuntu+Mono&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  
+  <link rel="stylesheet" href="/assets/bootstrap/dist/css/bootstrap.min.css">
+  <script src="/assets/jquery/dist/jquery.min.js"></script>
+  <script src="/assets/bootstrap/dist/js/bootstrap.min.js"></script>
+  
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="shortcut icon" type="image/jpg" href="/assets/favicon.ico"/>
+  <link rel="stylesheet" href="/assets/tabs.css">
+  <script src="/assets/tabs.js"></script>
+  <link href="/assets/rouge.css" rel="stylesheet" >
+  <style>
+      .highlighter-rouge > .highlight > pre.highlight {
+          border-radius: unset;
+      }
+  </style>
+</head>
+
+<body>
+<div id="body">
+  <div class="jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 myname"><a href="/"><span>Vasyl </span>Khrystiuk</a></div>
+        <div class="col-xs-12 col-sm-12 subtitle"><a href="/"><span>full stack developer</span></a></div>
+      </div>
+
+    </div>
+  </div>
+
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <ul class="nav navbar-nav">
+        <!--class="active" -->
+        <li><a href="/">BLOG</a></li>
+        <li role="separator" class="divider-vertical"></li>
+        <li><a href="/about">ABOUT</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container central blogpost">
+  <div class="row">
+    <div class="col-lg-12 record">
+
+<h2 class="page-title">Example of usage Ansible with Amazon Lightsail</h2>
+      <p class="text-muted small page-date">Posted: July 07, 2022 - Updated: February 03, 2025</p>
+
+<p>Ansible is a tool for managing a cluster of computers. It&#8217;s idea is simple - working on top of remote ssh, it execute the same command on each registered node. In opposite to classical orchestration tools, where the controller shoult be accessible(online) to dependent nodes, Ansible just requires nodes to be accessible to controller. In simple and popular case, controller is your computer. Even if it has a <a href="https://www.redhat.com/en/technologies/management/ansible/what-is-ansible">lot of additional features</a>, in this sample it will be used for automation of deployment java-application to remote host, in this case to Amazon Lightsail node. It is easy, straightforward, and right for that tool. No need to worry about manually connection to the server, uploading artifacts, restart service, etc. Also it is secure, as does&#8217;t expose anything except already axposed ssh(22 tcp port).</p>
+
+<h3 id="acquiring-lightsail-node">Acquiring Lightsail node</h3>
+<p>Just go there: <a href="https://lightsail.aws.amazon.com/">https://lightsail.aws.amazon.com/</a>, register and create a node.</p>
+
+<h4 id="ssh-keys">ssh keys</h4>
+<p>During node creation you will have a choice - either create new, either use existing ssh key. As this was my first run, I create new and the <code class="language-plaintext highlighter-rouge">my-key.pem</code> file was downloaded on my computer. <code class="language-plaintext highlighter-rouge">ssh</code> can use that to connect, just put key in safe location and grant propriate permissions to the file, like only user readable:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">chmod </span>400 my-key.pem
+</code></pre></div></div>
+<p>after you can import that file</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> ssh-add my-key.pem
+Identity added: my-key.pem <span class="o">(</span>my-key.pem<span class="o">)</span>
+</code></pre></div></div>
+<p>Well, this will allow your ssh client to connect to target node. But Ansible by default itself uses traditional, public-key auth. The default can be changed by simply defining <code class="language-plaintext highlighter-rouge">my-key.pem</code> in Ansible settings, <a href="https://www.cyberciti.biz/faq/define-ssh-key-per-host-using-ansible_ssh_private_key_file/">example</a>. Or just use default, export your public key to target host using <code class="language-plaintext highlighter-rouge">scp</code> or <code class="language-plaintext highlighter-rouge">ssh-copy-id</code>:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh-copy-id <span class="nt">-i</span> <span class="nv">$HOME</span>/.ssh/id_rsa.pub ubuntu@1.2.3.4
+</code></pre></div></div>
+<p><code class="language-plaintext highlighter-rouge">ssh-copy-id</code> is from openssh-client package, if you dont have it, just install it :</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>openssh-client
+</code></pre></div></div>
+
+<h4 id="ip-address-of-your-node">IP address of your node.</h4>
+<p>By default fresh Lightsail instance doesnt have public IP, only private one (in aws network). But that can be changed, aws provide free IP for each node that is in use. Just go to Lightsail&#8217;s &#8220;network&#8221; tab and create one association. Like this:
+<div class="row"><img src="https://k.co.ua/resources/lightsail/lightsail_ip.png" alt="lightsail_ip" loading="lazy" class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2" /></div></p>
+
+<p>Formal documentation on above: <a href="https://lightsail.aws.amazon.com/ls/docs/en_us/articles/lightsail-create-static-ip">https://lightsail.aws.amazon.com/ls/docs/en_us/articles/lightsail-create-static-ip</a></p>
+
+<h3 id="install-ansible">Install Ansible</h3>
+<p>There are many ways to do that. In <a href="https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#selecting-an-ansible-package-and-version-to-install">documentation</a> it suggest install it as python3 module as this will be the fresher version. Still, if you are not about dealing with python libraries, you can install in more sifisticated way some stable version. Instructions on that also in <a href="https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.html">documentation</a>.
+In my case it as simple as:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> <span class="nb">sudo </span>apt update
+<span class="o">&gt;</span> <span class="nb">sudo </span>apt <span class="nb">install </span>software-properties-common
+<span class="o">&gt;</span> <span class="nb">sudo </span>add-apt-repository <span class="nt">--yes</span> <span class="nt">--update</span> ppa:ansible/ansible
+<span class="o">&gt;</span> <span class="nb">sudo </span>apt <span class="nb">install </span>ansible
+</code></pre></div></div>
+<p>After that you can test your Ansible version:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> ansible <span class="nt">--version</span>
+</code></pre></div></div>
+<h3 id="ansible-configuration">Ansible configuration</h3>
+<p>Ansible is just an executable and it is driven by config files. Main one called <code class="language-plaintext highlighter-rouge">ansible.cfg</code>. Search for this file will be in the following order:</p>
+<ul>
+  <li>ANSIBLE_CONFIG (environment variable if set)</li>
+  <li>ansible.cfg (in the current directory)</li>
+  <li>~/.ansible.cfg (in the home directory)</li>
+  <li>/etc/ansible/ansible.cfg
+Ansible will process the above list and use the first file found, all others are ignored.
+This way, depending on needs the configuration can be: per command, per folder, per user and per machine. There are <code class="language-plaintext highlighter-rouge">ansible-config</code> commamd that allows to <code class="language-plaintext highlighter-rouge">{list,dump,view,init}</code> custom configs.</li>
+</ul>
+
+<p>Important part of the <code class="language-plaintext highlighter-rouge">ansible.cfg</code> is <code class="language-plaintext highlighter-rouge">inventory</code> key, that is usually point to another <a href="https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html">INI-like config file</a>.
+Sample <code class="language-plaintext highlighter-rouge">ansible.cfg</code>:</p>
+<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[defaults]</span>
+<span class="py">hostfile</span> <span class="p">=</span> <span class="s">hosts.ini</span>
+</code></pre></div></div>
+<p>In that <code class="language-plaintext highlighter-rouge">hosts.ini</code> file are listed all the nodes ansible need to operate on. 
+Sample hostfile:</p>
+<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">1.2.3.4</span> <span class="py">ansible_ssh_user</span><span class="p">=</span><span class="s">ubuntu</span>
+</code></pre></div></div>
+<p>where <code class="language-plaintext highlighter-rouge">1.2.3.4</code> is public IP i got from aws. And some extra parameter -  in my case target node username was differ from local username, so I have to define that explisitly.
+If none <code class="language-plaintext highlighter-rouge">hostfile</code> is set in config, default one, located at <code class="language-plaintext highlighter-rouge">/etc/ansible/hosts</code> will be used. Also possible to override <code class="language-plaintext highlighter-rouge">hostfile</code> location by:</p>
+<ul>
+  <li>passing <code class="language-plaintext highlighter-rouge">-i &lt;path&gt;</code> parameter to ansible executable</li>
+  <li>setting <code class="language-plaintext highlighter-rouge">ANSIBLE_HOSTS</code> environment variable: <code class="language-plaintext highlighter-rouge">export ANSIBLE_HOSTS=~/hosts</code></li>
+</ul>
+
+<h3 id="test-run">Test run</h3>
+<p>Having a node, installed software and basic configuration(I used global one), we can try how it actually works.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> ansible <span class="nt">-m</span> ping all
+1.2.3.4 | SUCCESS <span class="o">=&gt;</span> <span class="o">{</span>
+    <span class="s2">"ansible_facts"</span>: <span class="o">{</span>
+        <span class="s2">"discovered_interpreter_python"</span>: <span class="s2">"/usr/bin/python3"</span>
+    <span class="o">}</span>,
+    <span class="s2">"changed"</span>: <span class="nb">false</span>,
+    <span class="s2">"ping"</span>: <span class="s2">"pong"</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<p>where:</p>
+<ol>
+  <li>-m ping : Module name to execute such as ping, shell, apt, yum and so on</li>
+  <li>all : The all means &#8220;all hosts.&#8221; You can speificy group name such as &#8216;devservers&#8217; or host names too.</li>
+</ol>
+
+<h3 id="playbook">Playbook</h3>
+<p>Playbook is just a scenario to be run, written is yaml-file.
+You can run that using <code class="language-plaintext highlighter-rouge">ansible</code> executable directly.
+In our case we will have two scenarios:</p>
+<ol>
+  <li>install required system libraries and java</li>
+  <li>deploy and start/restart our application</li>
+</ol>
+
+<h4 id="install-dependencies">Install dependencies</h4>
+<p>Scenario with comments below</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>  
+<span class="c1"># define name of gropus or particular hosts from inventory file</span>
+<span class="c1"># magic constants: </span>
+<span class="c1"># `all` is aboul all known hosts from inventory</span>
+<span class="c1"># `localhost` for local host (see cdocumentation for more setting)</span>
+<span class="pi">-</span> <span class="na">hosts</span><span class="pi">:</span> <span class="s">all</span>
+<span class="c1"># `become` is about become someone as. usually about become sudo(or su) </span>
+<span class="c1"># in this case the scenario defaults for tasks will be current user</span>
+  <span class="na">become</span><span class="pi">:</span> <span class="s">no</span>
+  
+<span class="c1"># root node for defining list of tasks</span>
+  <span class="na">tasks</span><span class="pi">:</span>  
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Install java role from Ansible Galaxy</span>  
+      <span class="c1"># usually tasks executed to remotes nodes</span>
+      <span class="c1"># but there are some task kinds that do execued on local machine</span>
+      <span class="c1"># and `local_action` is kind of generic for those</span>
+      <span class="c1"># in this case local action is a task of `command` type</span>
+      <span class="c1"># and a command in this case is: </span>
+      <span class="c1"># `ansible-galaxy install geerlingguy.java`</span>
+      <span class="c1"># `ansible-galaxy` is executable that came with ansible</span>
+      <span class="c1"># it's kind of package manager for community-crafted recepies</span>
+      <span class="c1"># and in this case we do install locally `geerlingguy.java` community package that is intended to install java </span>
+      <span class="na">local_action</span><span class="pi">:</span> <span class="s">command ansible-galaxy install geerlingguy.java</span>  
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">installing repo for Java 8 in Ubuntu</span>
+      <span class="c1"># quite simple task that simply add apt repository</span>
+      <span class="c1"># but it also interesting because of </span>
+      <span class="c1"># set sudo privilegies for this task</span>
+      <span class="na">become</span><span class="pi">:</span> <span class="s">yes</span>  
+      <span class="na">apt_repository</span><span class="pi">:</span>  
+        <span class="na">repo</span><span class="pi">:</span> <span class="s">ppa:openjdk-r/ppa</span>  
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">apt update</span>  
+      <span class="na">become</span><span class="pi">:</span> <span class="s">yes</span>  
+      <span class="na">apt</span><span class="pi">:</span>  
+        <span class="na">update_cache</span><span class="pi">:</span> <span class="s">yes</span>  
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Install Java</span>
+      <span class="na">when</span><span class="pi">:</span> <span class="s2">"</span><span class="s">ansible_os_family</span><span class="nv"> </span><span class="s">==</span><span class="nv"> </span><span class="s">'Debian'"</span>  
+      <span class="na">vars</span><span class="pi">:</span>  
+        <span class="na">java_packages</span><span class="pi">:</span>  
+          <span class="pi">-</span> <span class="s">openjdk-8-jdk</span>  
+      <span class="c1"># this is a task that run ansible role as a ansible role</span>
+      <span class="c1"># ansible roles as addons from ansible galaxy</span>
+      <span class="c1"># these addons usually run before and/or after all tasks</span>
+      <span class="c1"># but this task allows to run role as a regular step  </span>
+      <span class="na">include_role</span><span class="pi">:</span>  
+        <span class="na">name</span><span class="pi">:</span> <span class="s">geerlingguy.java</span>  
+        <span class="c1"># and this relo requires to be run as sudo</span>
+        <span class="c1"># but the script is not sudo </span>
+        <span class="c1"># so we apply sudo for entire role as it required</span>
+        <span class="na">apply</span><span class="pi">:</span>  
+          <span class="na">become</span><span class="pi">:</span> <span class="no">true</span>
+</code></pre></div></div>
+<p>Save this file as <code class="language-plaintext highlighter-rouge">prepare_box.yml</code> and run with</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> ansible-playbook prepare_box.yml
+</code></pre></div></div>
+
+<h4 id="deploy-application">Deploy application</h4>
+<p>Scenario with comments below</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nn">---</span>  
+<span class="pi">-</span> <span class="na">hosts</span><span class="pi">:</span> <span class="s">all</span>  
+  <span class="na">become</span><span class="pi">:</span> <span class="s">no</span>  
+  <span class="c1"># eventually some tasks need to know some information about target node</span>
+  <span class="c1"># like OS installed or disk space left</span>
+  <span class="c1"># and those information are collected on each playbook run</span>
+  <span class="c1"># it took some time so there are options to boost that by caching unchanged facts</span>
+  <span class="na">gather_facts</span><span class="pi">:</span> <span class="no">true</span> <span class="c1"># default</span>
+  <span class="c1"># change this on how tasks must run on hosts: sequential or serialized or another strategy</span>
+  <span class="na">strategy</span><span class="pi">:</span> <span class="s">linear</span> <span class="c1"># default</span>
+  <span class="c1"># even if this file is declarative definition</span>
+  <span class="c1"># it still have all the things the regular programing language have</span>
+  <span class="c1"># like variables with different scopes, </span>
+  <span class="c1"># tasks results into variables writes</span>
+  <span class="c1"># and conditions on tasks</span>
+  <span class="c1"># in this case we simply put the file we need content as a variable</span>
+  <span class="c1"># later on we will compare this with actual file content and </span>
+  <span class="c1"># perform actions depends on diference</span>
+  <span class="na">vars</span><span class="pi">:</span>  
+    <span class="na">systemd_service_file</span><span class="pi">:</span> <span class="pi">|</span>  
+      <span class="s">[Unit]  </span>
+      <span class="s">Description=App service  </span>
+      <span class="no">  </span>
+      <span class="s">[Service]  </span>
+      <span class="s">User=root  </span>
+      <span class="s">Group=root  </span>
+      <span class="s">ExecStart=/usr/bin/java -jar /home/ubuntu/app.jar  </span>
+      <span class="s"># default stdout at: `sudo journalctl -u app_service`  </span>
+      <span class="no">  </span>
+      <span class="s">[Install]  </span>
+      <span class="s">WantedBy=multi-user.target  </span>
+  
+  <span class="na">tasks</span><span class="pi">:</span>  
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Build maven artifact locally</span>
+      <span class="c1"># Ansible is designed to execute commands on remote nodes</span>
+      <span class="c1"># but it also can execute ones on local machine.</span>
+      <span class="c1"># Eventually in different scenarios is needed to either </span>
+      <span class="c1"># call some utility, move a file, interact services, etc.</span>
+      <span class="c1"># Below is short syntax</span>
+      <span class="na">local_action</span><span class="pi">:</span> <span class="s">shell mvn clean package</span>
+      <span class="c1"># But also alternative full one:</span>
+      <span class="c1"># local_action: </span>
+      <span class="c1">#      module: shell</span>
+      <span class="c1">#      cmd: mvn clean package</span>
+      <span class="c1"># Read more there:</span>
+      <span class="c1"># https://stackoverflow.com/a/56050507/449553</span>
+      <span class="c1"># </span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Deploy artifact</span>
+      <span class="na">copy</span><span class="pi">:</span>  
+        <span class="na">src</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s">item</span><span class="nv"> </span><span class="s">}}"</span>  
+        <span class="na">dest</span><span class="pi">:</span> <span class="s">~/app.jar</span>  
+        <span class="na">mode</span><span class="pi">:</span> <span class="s">u=rwx,g=rx,o=rx</span>  
+      <span class="na">with_fileglob</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s2">"</span><span class="s">target/*.jar"</span>  
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Systemd file exists</span>  
+    <span class="na">become</span><span class="pi">:</span> <span class="s">yes</span>  
+    <span class="na">stat</span><span class="pi">:</span>  
+      <span class="na">path</span><span class="pi">:</span> <span class="s">/etc/systemd/system/app_service.service</span>  
+      <span class="na">checksum_algorithm</span><span class="pi">:</span> <span class="s">md5</span>  
+    <span class="na">register</span><span class="pi">:</span> <span class="s">app_service_stat</span>  
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Setting facts</span>  
+    <span class="na">become</span><span class="pi">:</span> <span class="s">no</span>  
+    <span class="na">set_fact</span><span class="pi">:</span>  
+      <span class="c1"># since missing file has no checksum, use "false" value instead  </span>
+      <span class="na">remote_file_sum</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s">app_service_stat.stat.checksum</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">default(false)</span><span class="nv"> </span><span class="s">}}"</span>  
+      <span class="c1"># anything: "{{ as.as.as.as.as | default('not as') }}" &lt;- works!  </span>
+      <span class="c1"># or that: # remote_file_sum: "{{ app_service_stat.stat.exists | ternary(app_service_stat.stat.checksum, false) }}"  local_file_sum: "{{ systemd_service_file | hash('md5') }}"  </span>
+      <span class="na">cacheable</span><span class="pi">:</span> <span class="s">no</span> <span class="c1"># 'no' is default, if yes, will be cached on remote host/sequential playbook run  </span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Systemd file debug integrity</span>  
+    <span class="na">vars</span><span class="pi">:</span>  
+      <span class="na">msg</span><span class="pi">:</span> <span class="pi">|-</span>  
+          <span class="s">Remote systemd file exists: {{ app_service_stat.stat.exists }}  </span>
+          <span class="s">Remote systemd file checksum: {{ remote_file_sum }}  </span>
+          <span class="s">Valid systemd file checksum: {{ local_file_sum }}  </span>
+      <span class="na">debug</span><span class="pi">:</span>  
+        <span class="c1"># instead of printing message directly here  </span>
+        <span class="c1"># I use task variable defined above </span>
+        <span class="c1"># and print that with skipping empty line (last one as a result of split) </span>
+        <span class="c1"># these all are just because "msg" print JSON, so \n will be "\n" </span>
+        <span class="c1"># but if print content as array of lines, it looks nicer  msg: "{{ msg.split('\n') | reject('match', '^$') }}"  </span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Creating systemd service file if changed</span>   
+    <span class="na">when</span><span class="pi">:</span> <span class="s">remote_file_sum != local_file_sum</span>  
+    <span class="na">become</span><span class="pi">:</span> <span class="s">yes</span>  
+    <span class="na">copy</span><span class="pi">:</span>  
+      <span class="na">dest</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/etc/systemd/system/app_service.service"</span>  
+      <span class="na">mode</span><span class="pi">:</span> <span class="s">u=rwx,g=rx,o=rx</span>  
+      <span class="na">owner</span><span class="pi">:</span> <span class="s">root</span>  
+      <span class="na">group</span><span class="pi">:</span> <span class="s">root</span>  
+      <span class="na">content</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{systemd_service_file}}"</span>  
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Start app service</span>  
+    <span class="na">become</span><span class="pi">:</span> <span class="s">yes</span>  
+    <span class="na">systemd</span><span class="pi">:</span>  
+      <span class="na">name</span><span class="pi">:</span> <span class="s">app_service</span>  
+      <span class="na">enabled</span><span class="pi">:</span> <span class="s">yes</span>  
+      <span class="na">state</span><span class="pi">:</span> <span class="s">restarted</span>  
+      <span class="na">daemon_reload</span><span class="pi">:</span> <span class="s">yes</span>  
+  <span class="c1"># `name` attribute is optional btw  </span>
+  <span class="pi">-</span> <span class="na">wait_for</span><span class="pi">:</span>  
+      <span class="na">port</span><span class="pi">:</span> <span class="m">80</span>
+
+</code></pre></div></div>
+<p>Save this file as <code class="language-plaintext highlighter-rouge">install_app.yml</code> and run with</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> ansible-playbook install_app.yml
+</code></pre></div></div>
+
+<h3 id="more-power-with-ansible-lightsail-module">More power with Ansible lightsail module</h3>
+<p>If fact, Ansible can manage lightsail for its own - it can create instances, delete them, etc. Take a look on the module:
+<a href="https://docs.ansible.com/ansible/latest/collections/community/aws/lightsail_module.html">community.aws.lightsail module – Manage instances in AWS Lightsail</a></p>
+
+<h3 id="used-resources">Used resources</h3>
+
+<ul>
+  <li><a href="https://dev.to/kkentzo/deploying-a-service-using-ansible-and-systemd-4n11">Deploying a service using ansible and
+systemd</a></li>
+  <li><a href="https://www.digitalocean.com/community/tutorials/how-to-deploy-a-basic-php-application-using-ansible-on-ubuntu-14-04">How To Deploy a Basic PHP Application Using Ansible on Ubuntu</a></li>
+  <li><a href="https://www.cyberciti.biz/faq/how-to-install-and-configure-latest-version-of-ansible-on-ubuntu-linux/">How to Install and Configure latest version of Ansible on Ubuntu Linux</a></li>
+</ul>
+
+<p>Short usefull explanations:</p>
+
+<ul>
+  <li><a href="https://stackoverflow.com/a/56050507/449553">local_action vs
+delegate_to</a></li>
+  <li><a href="https://unix.stackexchange.com/q/506347/207351">system_d
+WantedBy explanation</a></li>
+</ul>
+
+<blockquote>
+  <p>Written with <a href="https://stackedit.io/">StackEdit</a>.
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTIxMzUzODkxMSwxNTE1ODIyMTY3LC00OD
+YzMjQwMjAsLTExNjUyOTMxMjMsLTEwOTYyMTQ0OSwtMTgzNTM2
+NzQzMywxNDY4NDQxMDQxLC0xMTc1MTAxMTQwLDE3OTQ1ODA4OD
+ksLTEzOTY1MjEzNDMsMTI0OTc1NzIyMywtNTAxNzY4MjI4LC0x
+NjU3NTUzNTQ2LDk0NjM5ODMwOCwtMTYzMzA2NzAxMyw0NzE4Nj
+A4ODYsLTc1ODU4MTc2NSwyNjgxMjU4NywyMzc4MzE0MSwtNTEx
+OTgzMjc3XX0=
+--></p>
+</blockquote>
+
+      
+        <h1 style="margin-top: 50px;">Comments</h1>
+      
+    </div>
+    <div id="disqus_thread"></div>
+  </div>
+</div>
+  
+<script>
+    jQuery(document).ready(function() {
+        function debouncer( func , timeout ) {
+            var timeoutID , timeout = timeout || 1000;
+            return function () {
+                var scope = this , args = arguments;
+                clearTimeout( timeoutID );
+                timeoutID = setTimeout( function () {
+                    func.apply( scope , Array.prototype.slice.call( args ) );
+                } , timeout );
+            }
+        }
+        var offset = 300;
+        var duration = 500;
+        var fadeFunc = function () {
+            if (jQuery(window).width() < 1140) {
+                jQuery('.backtotop').fadeOut(0);
+                return;
+            }
+            if (jQuery(window).scrollTop() > offset) {
+                jQuery('.backtotop').fadeIn(duration);
+            } else {
+                jQuery('.backtotop').fadeOut(duration);
+            }
+        }
+        jQuery(window).scroll(debouncer(fadeFunc, 50));
+        jQuery(window).resize(debouncer(fadeFunc));
+
+        jQuery('.backtotop').click(function(event) {
+            event.preventDefault();
+            jQuery('html, body').animate({scrollTop: 0}, duration);
+            return false;
+        })
+    });
+</script>
+<style>
+    .backtotop {
+        display: none;
+    }
+    @media only screen and (min-width:1140px){
+        .backtotop,
+        .backtotop:hover,
+        .backtotop:active,
+        .backtotop:visited,
+        .backtotop:focus {
+            display: none;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            z-index: 10000;
+            text-align: center;
+            color: black;
+            text-decoration: none;
+            padding: 4px 10px;
+            border-radius: 3px;
+            width: 60px;
+            opacity: 0.4;
+        }
+        .backtotop:hover {
+            background-color: rgba(59, 59, 59, 0.10);
+            opacity: 1;
+            transition-property: opacity;
+            transition-duration: 500ms;
+        }
+    }
+
+
+</style>
+<a href="#" class="backtotop"><img src="/assets/noun_Arrow_22173.svg"/></a>
+  
+  <script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    var disqus_config = function () {
+        this.page.url = 'https://k.co.ua/';  // Replace PAGE_URL with your page's canonical URL variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://k-co.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  
+  <div class="footer">
+    <div class="row">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="copyright">
+              <p><a href="https://github.com/msangel/msangel.github.io" target="_self">© 2014-2025 by Vasyl Khrystiuk</a>, powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>, crafted by
+                <a href="https://github.com/msangel/msangel.github.io/blob/master/.github/workflows/github-pages.yml" target="_blank">GitHub Actions</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+<script>anchors.add();</script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-194224445-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+<script src="/assets/links.js"></script>
+<script id="dsq-count-scr" src="//k-co.disqus.com/count.js" async></script>
+</body>
+</html>

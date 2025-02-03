@@ -1,0 +1,378 @@
+<html lang="en" class="mysite">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Selecting self-hosted git service | Vasyl Khrystiuk</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Selecting self-hosted git service" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="Purpose In the world of open-source software, it&#8217;s not a problem to find free-to-use git server for own work and so made this work available to everyone. Most popular are: github, gitlab, bitbucket. There are plenty of them. Most of them do provide paid features. Most do have a private repositories. But not all of them you can own." />
+<meta property="og:description" content="Purpose In the world of open-source software, it&#8217;s not a problem to find free-to-use git server for own work and so made this work available to everyone. Most popular are: github, gitlab, bitbucket. There are plenty of them. Most of them do provide paid features. Most do have a private repositories. But not all of them you can own." />
+<link rel="canonical" href="https://github.com/pages/msangel/blog/2024/04/09/devops1-select-self-hosted-git.html" />
+<meta property="og:url" content="https://github.com/pages/msangel/blog/2024/04/09/devops1-select-self-hosted-git.html" />
+<meta property="og:site_name" content="Vasyl Khrystiuk" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-04-09T16:55:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Selecting self-hosted git service" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-02-03T03:21:25+00:00","datePublished":"2024-04-09T16:55:00+00:00","description":"Purpose In the world of open-source software, it&#8217;s not a problem to find free-to-use git server for own work and so made this work available to everyone. Most popular are: github, gitlab, bitbucket. There are plenty of them. Most of them do provide paid features. Most do have a private repositories. But not all of them you can own.","headline":"Selecting self-hosted git service","mainEntityOfPage":{"@type":"WebPage","@id":"https://github.com/pages/msangel/blog/2024/04/09/devops1-select-self-hosted-git.html"},"url":"https://github.com/pages/msangel/blog/2024/04/09/devops1-select-self-hosted-git.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  
+  <link rel="stylesheet" href="/assets/components-font-awesome/css/fontawesome-all.min.css">
+
+  <link href='/assets/open-sans-all/css/open-sans.min.css' rel='stylesheet' type='text/css'>
+  
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+  <link href='//fonts.googleapis.com/css?family=Ubuntu&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Ubuntu+Mono&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  
+  <link rel="stylesheet" href="/assets/bootstrap/dist/css/bootstrap.min.css">
+  <script src="/assets/jquery/dist/jquery.min.js"></script>
+  <script src="/assets/bootstrap/dist/js/bootstrap.min.js"></script>
+  
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="shortcut icon" type="image/jpg" href="/assets/favicon.ico"/>
+  <link rel="stylesheet" href="/assets/tabs.css">
+  <script src="/assets/tabs.js"></script>
+  <link href="/assets/rouge.css" rel="stylesheet" >
+  <style>
+      .highlighter-rouge > .highlight > pre.highlight {
+          border-radius: unset;
+      }
+  </style>
+</head>
+
+<body>
+<div id="body">
+  <div class="jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 myname"><a href="/"><span>Vasyl </span>Khrystiuk</a></div>
+        <div class="col-xs-12 col-sm-12 subtitle"><a href="/"><span>full stack developer</span></a></div>
+      </div>
+
+    </div>
+  </div>
+
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <ul class="nav navbar-nav">
+        <!--class="active" -->
+        <li><a href="/">BLOG</a></li>
+        <li role="separator" class="divider-vertical"></li>
+        <li><a href="/about">ABOUT</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container central blogpost">
+  <div class="row">
+    <div class="col-lg-12 record">
+
+<h2 class="page-title">Selecting self-hosted git service</h2>
+      <p class="text-muted small page-date">Posted: April 09, 2024 - Updated: February 03, 2025</p>
+
+<h3 id="purpose">Purpose</h3>
+<p>In the world of open-source software, it&#8217;s not a problem to find free-to-use git server for own work and so made this work available to everyone. Most popular are: github, gitlab, bitbucket. There are plenty of them. Most of them do provide paid features. Most do have a private repositories. But not all of them you can own.</p>
+
+<p>You can access to some servers and do some work on them, but physically your work on someone&#8217;s computer.</p>
+
+<p>And this is not always an option for private software. Either you don&#8217;t trust those servers, either want to keen your source codes on your own computer or some policy pushes you to that.</p>
+
+<p>So here I will list some popular git server software you can run on your own computer. As an option, I also will discuss some cloud services for that, which are something in the middle - you&#8217;re still on someone&#8217;s computer but run inside ov virtual VM you bought.</p>
+
+<h3 id="options">Options</h3>
+<p>There a lot of them, but here I picked ones I found popular.</p>
+
+<p>Self-hosted git services:</p>
+<ul>
+  <li><a href="https://about.gitea.com/products/gitea/">Gitea</a></li>
+  <li><a href="https://about.gitlab.com/install/">GitLab</a></li>
+  <li><a href="https://bitbucket.org/">BitBucket</a></li>
+  <li><a href="https://www.gerritcodereview.com/">Gerrit Code Review</a></li>
+  <li><a href="https://savannah.gnu.org/">GNU Savannah</a></li>
+  <li><a href="https://gitbucket.github.io/">GitBucket</a></li>
+  <li>
+    <p><a href="https://gogs.io/">Gogs</a></p>
+  </li>
+  <li><a href="https://buddy.works/docs/version-control">Buddy</a></li>
+  <li><a href="https://www.perforce.com/products/helix-teamhub">Perforce Helix TeamHub</a></li>
+</ul>
+
+<p>Cloud git services:</p>
+<ul>
+  <li><a href="https://azure.microsoft.com/ru-ru/products/devops/server">Azure DevOps Server</a></li>
+  <li><a href="https://cloud.gitea.com/">Gitea cloud</a></li>
+  <li><a href="https://get.assembla.com/assembla-enterprise">Assembla Enterprise</a></li>
+</ul>
+
+<p>Obviously, any self-hosted service can be deployed to the cloud. Idea behind to have it &#8220;cloudy&#8221; is deployment in a few clicks.</p>
+
+<p>Let&#8217;s define some features on which we will compare them:</p>
+<ul>
+  <li>free</li>
+  <li>has builtin CI/CD</li>
+  <li>online code editor</li>
+  <li>code review</li>
+  <li>issue tracker</li>
+  <li>I had a successful experience working with it (very subjective BUT still a factor)</li>
+</ul>
+
+<p>The table:</p>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>product</th>
+      <th>free?</th>
+      <th>builtin CI/CD</th>
+      <th>code editor</th>
+      <th>issue tracker</th>
+      <th>worked with it</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Gitea</td>
+      <td>yes</td>
+      <td><a href="https://docs.gitea.com/usage/actions/overview">yes</a></td>
+      <td>yes</td>
+      <td>yes</td>
+      <td>yes</td>
+    </tr>
+    <tr>
+      <td>GitLab</td>
+      <td><a href="https://about.gitlab.com/pricing/feature-comparison/">partially</a></td>
+      <td><a href="https://docs.gitlab.com/ee/ci/">yes</a></td>
+      <td>yes</td>
+      <td>yes</td>
+      <td>yes</td>
+    </tr>
+    <tr>
+      <td>BitBucket</td>
+      <td><a href="https://www.atlassian.com/software/bitbucket/pricing?tab=self-manageddata-center">no</a></td>
+      <td><a href="https://bitbucket.org/product/ru/features/pipelines">yes</a></td>
+      <td>yes</td>
+      <td>yes</td>
+      <td>yes</td>
+    </tr>
+    <tr>
+      <td>Gerrit Code Review</td>
+      <td>yes</td>
+      <td>no (but still <a href="https://gerrit-documentation.storage.googleapis.com/Documentation/3.9.2/config-hooks.html">have hooks</a>)</td>
+      <td>no</td>
+      <td><a href="https://www.gerritcodereview.com/plugins.html">partially via plugins</a></td>
+      <td>yes</td>
+    </tr>
+    <tr>
+      <td>GNU Savannah</td>
+      <td>yes</td>
+      <td>no</td>
+      <td>no</td>
+      <td>yes</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <td>GitBucket</td>
+      <td>yes</td>
+      <td><a href="https://github.com/takezoe/gitbucket-ci-plugin">via plugin</a></td>
+      <td>yes</td>
+      <td>yes</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <td>Gogs</td>
+      <td>yes</td>
+      <td>no (but still have <a href="https://gogs.io/docs/features/webhook">webhooks</a>)</td>
+      <td>yes</td>
+      <td>yes</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <td>Buddy</td>
+      <td><a href="https://buddy.works/on-premises">no</a></td>
+      <td><a href="https://buddy.works/docs/pipelines">yes</a></td>
+      <td>yes</td>
+      <td>no</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <td>Perforce Helix TeamHub</td>
+      <td><a href="https://www.perforce.com/products/helix-teamhub/pricing">no</a></td>
+      <td>no</td>
+      <td>yes</td>
+      <td>yes</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <td>Azure DevOps Server</td>
+      <td><a href="https://azure.microsoft.com/en-gb/pricing/details/devops/azure-devops-services/">no</a></td>
+      <td><a href="https://learn.microsoft.com/en-us/azure/devops/pipelines/architectures/devops-pipelines-baseline-architecture?view=azure-devops">yes</a></td>
+      <td>yes</td>
+      <td>yes</td>
+      <td>yes</td>
+    </tr>
+    <tr>
+      <td>Gitea cloud</td>
+      <td><a href="https://about.gitea.com/pricing/">no</a></td>
+      <td>yes</td>
+      <td>yes</td>
+      <td>yes</td>
+      <td>no</td>
+    </tr>
+    <tr>
+      <td>Assembla Enterprise</td>
+      <td><a href="https://get.assembla.com/pricing/">no</a></td>
+      <td>no</td>
+      <td>no</td>
+      <td>yes</td>
+      <td>no</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="summary">Summary</h4>
+<p>For new projects, I would rather pick Gitea or GitLab if the target is self-hosted and fully controlled environment. Because they are free, feature-rich and under active development. Bitbucket is a good product too, but is not in this list just because it is too pricey(starting from $2,300 per year).</p>
+
+<p>If the new project had to be developed in Azure infrastructure, I would pick Azure DevOps Server, because it is still feature-rich and because of integration.</p>
+
+<p>When the target is speed and easiness, I would pick paid Gitea cloud. Prices are not that high, but you are getting maganed Gitea instance in a few clicks.</p>
+
+<h3 id="useful-links">Useful links</h3>
+<ul>
+  <li><a href="https://docs.gitea.com/next/installation/comparison">Services comparison by gitea</a></li>
+  <li><a href="https://blog.inedo.com/self-hosted/git-source-control-servers/">Another article about the same thing, which I found after I wrote this one, with essentially the same conclusions.</a></li>
+</ul>
+
+
+      
+        <h1 style="margin-top: 50px;">Comments</h1>
+      
+    </div>
+    <div id="disqus_thread"></div>
+  </div>
+</div>
+  
+<script>
+    jQuery(document).ready(function() {
+        function debouncer( func , timeout ) {
+            var timeoutID , timeout = timeout || 1000;
+            return function () {
+                var scope = this , args = arguments;
+                clearTimeout( timeoutID );
+                timeoutID = setTimeout( function () {
+                    func.apply( scope , Array.prototype.slice.call( args ) );
+                } , timeout );
+            }
+        }
+        var offset = 300;
+        var duration = 500;
+        var fadeFunc = function () {
+            if (jQuery(window).width() < 1140) {
+                jQuery('.backtotop').fadeOut(0);
+                return;
+            }
+            if (jQuery(window).scrollTop() > offset) {
+                jQuery('.backtotop').fadeIn(duration);
+            } else {
+                jQuery('.backtotop').fadeOut(duration);
+            }
+        }
+        jQuery(window).scroll(debouncer(fadeFunc, 50));
+        jQuery(window).resize(debouncer(fadeFunc));
+
+        jQuery('.backtotop').click(function(event) {
+            event.preventDefault();
+            jQuery('html, body').animate({scrollTop: 0}, duration);
+            return false;
+        })
+    });
+</script>
+<style>
+    .backtotop {
+        display: none;
+    }
+    @media only screen and (min-width:1140px){
+        .backtotop,
+        .backtotop:hover,
+        .backtotop:active,
+        .backtotop:visited,
+        .backtotop:focus {
+            display: none;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            z-index: 10000;
+            text-align: center;
+            color: black;
+            text-decoration: none;
+            padding: 4px 10px;
+            border-radius: 3px;
+            width: 60px;
+            opacity: 0.4;
+        }
+        .backtotop:hover {
+            background-color: rgba(59, 59, 59, 0.10);
+            opacity: 1;
+            transition-property: opacity;
+            transition-duration: 500ms;
+        }
+    }
+
+
+</style>
+<a href="#" class="backtotop"><img src="/assets/noun_Arrow_22173.svg"/></a>
+  
+  <script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    var disqus_config = function () {
+        this.page.url = 'https://k.co.ua/';  // Replace PAGE_URL with your page's canonical URL variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://k-co.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  
+  <div class="footer">
+    <div class="row">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="copyright">
+              <p><a href="https://github.com/msangel/msangel.github.io" target="_self">© 2014-2025 by Vasyl Khrystiuk</a>, powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>, crafted by
+                <a href="https://github.com/msangel/msangel.github.io/blob/master/.github/workflows/github-pages.yml" target="_blank">GitHub Actions</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+<script>anchors.add();</script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-194224445-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+<script src="/assets/links.js"></script>
+<script id="dsq-count-scr" src="//k-co.disqus.com/count.js" async></script>
+</body>
+</html>

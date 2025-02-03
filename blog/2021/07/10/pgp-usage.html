@@ -1,0 +1,679 @@
+<html lang="ru" class="mysite">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Основы работы с GnuPG, часть 2. Использование. | Vasyl Khrystiuk</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Основы работы с GnuPG, часть 2. Использование." />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="В этой статье будут более практичные сценарии использования gpg. Предполагается, что у нас уже установлены набор утилит gnupg2 и сгенерирована пара личных ключей. Если нет, то все можно сделать быстро вот так, только подставить свои данные: команда&lt;/summary&gt; : sudo apt install gnupg2 export GPG_TTY=$(tty) gpg --batch --gen-key &lt;&lt;EOF Key-Type: default Key-Length: 4096 Subkey-Type: default Subkey-Length: 4096 Name-Real: Artem Ivanov Name-Email: wl07xo34yq@crepeau12.com Expire-Date: 0 Passphrase: abc EOF &lt;/details&gt; Ну или прочитав детальную статью об этом и все настроив под свои потребности." />
+<meta property="og:description" content="В этой статье будут более практичные сценарии использования gpg. Предполагается, что у нас уже установлены набор утилит gnupg2 и сгенерирована пара личных ключей. Если нет, то все можно сделать быстро вот так, только подставить свои данные: команда&lt;/summary&gt; : sudo apt install gnupg2 export GPG_TTY=$(tty) gpg --batch --gen-key &lt;&lt;EOF Key-Type: default Key-Length: 4096 Subkey-Type: default Subkey-Length: 4096 Name-Real: Artem Ivanov Name-Email: wl07xo34yq@crepeau12.com Expire-Date: 0 Passphrase: abc EOF &lt;/details&gt; Ну или прочитав детальную статью об этом и все настроив под свои потребности." />
+<link rel="canonical" href="https://github.com/pages/msangel/blog/2021/07/10/pgp-usage.html" />
+<meta property="og:url" content="https://github.com/pages/msangel/blog/2021/07/10/pgp-usage.html" />
+<meta property="og:site_name" content="Vasyl Khrystiuk" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-07-10T09:41:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Основы работы с GnuPG, часть 2. Использование." />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-02-03T03:21:25+00:00","datePublished":"2021-07-10T09:41:00+00:00","description":"В этой статье будут более практичные сценарии использования gpg. Предполагается, что у нас уже установлены набор утилит gnupg2 и сгенерирована пара личных ключей. Если нет, то все можно сделать быстро вот так, только подставить свои данные: команда&lt;/summary&gt; : sudo apt install gnupg2 export GPG_TTY=$(tty) gpg --batch --gen-key &lt;&lt;EOF Key-Type: default Key-Length: 4096 Subkey-Type: default Subkey-Length: 4096 Name-Real: Artem Ivanov Name-Email: wl07xo34yq@crepeau12.com Expire-Date: 0 Passphrase: abc EOF &lt;/details&gt; Ну или прочитав детальную статью об этом и все настроив под свои потребности.","headline":"Основы работы с GnuPG, часть 2. Использование.","mainEntityOfPage":{"@type":"WebPage","@id":"https://github.com/pages/msangel/blog/2021/07/10/pgp-usage.html"},"url":"https://github.com/pages/msangel/blog/2021/07/10/pgp-usage.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  
+  <link rel="stylesheet" href="/assets/components-font-awesome/css/fontawesome-all.min.css">
+
+  <link href='/assets/open-sans-all/css/open-sans.min.css' rel='stylesheet' type='text/css'>
+  
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+  <link href='//fonts.googleapis.com/css?family=Ubuntu&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Ubuntu+Mono&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  
+  <link rel="stylesheet" href="/assets/bootstrap/dist/css/bootstrap.min.css">
+  <script src="/assets/jquery/dist/jquery.min.js"></script>
+  <script src="/assets/bootstrap/dist/js/bootstrap.min.js"></script>
+  
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="shortcut icon" type="image/jpg" href="/assets/favicon.ico"/>
+  <link rel="stylesheet" href="/assets/tabs.css">
+  <script src="/assets/tabs.js"></script>
+  <link href="/assets/rouge.css" rel="stylesheet" >
+  <style>
+      .highlighter-rouge > .highlight > pre.highlight {
+          border-radius: unset;
+      }
+  </style>
+</head>
+
+<body>
+<div id="body">
+  <div class="jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 myname"><a href="/"><span>Vasyl </span>Khrystiuk</a></div>
+        <div class="col-xs-12 col-sm-12 subtitle"><a href="/"><span>full stack developer</span></a></div>
+      </div>
+
+    </div>
+  </div>
+
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <ul class="nav navbar-nav">
+        <!--class="active" -->
+        <li><a href="/">BLOG</a></li>
+        <li role="separator" class="divider-vertical"></li>
+        <li><a href="/about">ABOUT</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container central blogpost">
+  <div class="row">
+    <div class="col-lg-12 record">
+
+<h2 class="page-title">Основы работы с GnuPG, часть 2. Использование.</h2>
+      <p class="text-muted small page-date">Posted: July 10, 2021 - Updated: February 03, 2025</p>
+
+<!-- excerpt-start -->
+<p>В этой статье будут более практичные сценарии использования gpg. Предполагается, что у нас уже установлены набор утилит <code class="language-plaintext highlighter-rouge">gnupg2</code> и сгенерирована пара личных ключей. Если нет, то все можно сделать <a href="https://www.gnupg.org/documentation/manuals/gnupg-devel/Unattended-GPG-key-generation.html">быстро вот так</a>, только подставить свои данные<!-- excerpt-start -->:</p>
+<details>
+  <summary>команда</summary>
+  <p><!-- excerpt-start -->:</p>
+  <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>gnupg2
+<span class="nb">export </span><span class="nv">GPG_TTY</span><span class="o">=</span><span class="si">$(</span><span class="nb">tty</span><span class="si">)</span>
+gpg <span class="nt">--batch</span> <span class="nt">--gen-key</span> <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh">
+Key-Type: default
+Key-Length: 4096
+Subkey-Type: default
+Subkey-Length: 4096
+Name-Real: Artem Ivanov
+Name-Email: wl07xo34yq@crepeau12.com
+Expire-Date: 0
+Passphrase: abc
+</span><span class="no">EOF
+</span></code></pre></div>  </div>
+</details>
+<p>Ну или прочитав <a href="https://k.co.ua/blog/2021/07/10/pgp-administration.html">детальную статью об этом</a> и все настроив под свои потребности.</p>
+
+<h2 id="аргументы-запуска">Аргументы запуска</h2>
+<p>Типичный вызов утилиты выглядит так:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> gpg <span class="o">[</span>опции] <span class="o">[</span>входной файл]
+</code></pre></div></div>
+<p>Если входной файл опущен, на вход утилиты подается стандартный ввод.
+Среди множества опций есть группа опций, отвечающих за режим работыЧто и зачем
+Шифрование с помощью gpg бывает:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">-c</code>(<code class="language-plaintext highlighter-rouge">--symmetric</code>) - ассимметрическное (шифрование паролем. Вниманию критиков и параноиков: паролем шифруется не само сообщение, а сеансовый ключ симметрического шифрования, которым уже защищается сообщение</li>
+  <li><code class="language-plaintext highlighter-rouge">-e</code>(<code class="language-plaintext highlighter-rouge">--encrypt</code>) - асимметрическое шифрование публичным ключем получателя. Режим совместим с <code class="language-plaintext highlighter-rouge">-c</code> и тогда сообщение можно будет расшифровать <em>одним из</em> способов. Вместе с этой опцией чаще всего указывают:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">-r &lt;recipient&gt;</code> - получатель, чей ключ использовать</li>
+      <li><code class="language-plaintext highlighter-rouge">-R &lt;recipient&gt;</code> - аналогичная команда с туется публичным ключом, расшифровывается приватным)</li>
+    </ul>
+  </li>
+  <li>симметричное(шифруется и расшифровывается приватным ключом, шифруется и расшифровывается одной и той же парольной фразницей что это еще и имя самого получателя зашифрует</li>
+  <li><code class="language-plaintext highlighter-rouge">-d</code> - расшифровка. Логично что это не совместимо с режимами <code class="language-plaintext highlighter-rouge">-c</code> и <code class="language-plaintext highlighter-rouge">-e</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">-s</code>(<code class="language-plaintext highlighter-rouge">--sign</code>) - создание подписи приватным ключем, которую можно будет проверить публичным. Этот режим можно использовать как самостоятельно, так и в комбинации с любым из шифрований. В том случае подпись будет добавлена в зашифрованное сообщеой)</li>
+</ul>
+
+<p>Еще шифрование можно совмещать с подписыванием файла. 
+Еще зашифровать можно одним или более публичными ключами.</p>
+
+<h2 id="симметричное-шифрование-ис-потому-можно-будетмощью-пароверить-владельца">Симметричное шифрование ис потому можно будетмощью пароверить владельца</h2>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">--verify</code> - проверка подписи, если такая накладна на файл. Работает как самостоятельная команда, так и с режимом расшифровки.</li>
+</ul>
+
+<p>Вообще опций очень много. Если вам нужно что-то сделать нестандартное, скорее всего для этого уже есть опция. Просто поверьте мне, ну или посмотрите на их <a href="https://www.gnupg.org/documentation/manuals/gnupg/Option-Index.html#Option-Index">список</a>. Тем не менее есть некоторые из них, которыми прийдется пользоваться чаще всего:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">-a</code> - по умолчанию ответ утилиты таки бинарный, но эта опция переупакует его в текстовом представлении(ascii-armored). Есть еще отдельно команда для упаковывания файла в PGP ASCII armor: <code class="language-plaintext highlighter-rouge">gpg --enarmor &lt; filename.bin &gt; filename.txt</code> и соответственная обратная операция: <code class="language-plaintext highlighter-rouge">gpg --dearmor &lt; filename.txt &gt; filename.bin</code></li>
+  <li><code class="language-plaintext highlighter-rouge">-o &lt;outFileName&gt;</code>(<code class="language-plaintext highlighter-rouge">--output</code>) - записывает вывод в указанный файл вместо стандартного вывода, по сути команда эквивалент перенаправлении стандартного вывода, но не всегда, так как отладочные сообщения существуютля
+Параметр один. Это имя файла, который нужно зашифровать/расшифровать. Но если этот аргумент опущен, то данные берутся из стандартного ввода. Пример команд с популярными опциями выглядит так:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> gpg <span class="nt">-c</span> <span class="nt">-a</span> <span class="nt">--pinentry-mode</span> loopback <span class="nt">--passphrase</span> mypassw file.txt
+</code></pre></div>    </div>
+    <p>Аргументы:</p>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">--cipher-algo &lt;algo&gt;</code> - устанавливает алгоритм, который будет использован в данной команде. Список доступных можно узнать выполнив <code class="language-plaintext highlighter-rouge">gpg --version</code>. разные алгоритмы для разных задач.
+    <ul>
+      <li>Симметричные: <code class="language-plaintext highlighter-rouge">IDEA</code>, <code class="language-plaintext highlighter-rouge">3DES</code>, <code class="language-plaintext highlighter-rouge">CAST5</code>, <code class="language-plaintext highlighter-rouge">BLOWFISH</code>, <code class="language-plaintext highlighter-rouge">AES</code>(он же <code class="language-plaintext highlighter-rouge">AES128</code>), <code class="language-plaintext highlighter-rouge">AES192</code>, <code class="language-plaintext highlighter-rouge">AES256</code>, <code class="language-plaintext highlighter-rouge">TWOFISH</code>, <code class="language-plaintext highlighter-rouge">CAMELLIA128</code>, <code class="language-plaintext highlighter-rouge">CAMELLIA192</code> и <code class="language-plaintext highlighter-rouge">CAMELLIA256</code></li>
+      <li>С публичным ключем: <code class="language-plaintext highlighter-rouge">RSA</code>, <code class="language-plaintext highlighter-rouge">ELG</code>, <code class="language-plaintext highlighter-rouge">DSA</code>, <code class="language-plaintext highlighter-rouge">ECDH</code>, <code class="language-plaintext highlighter-rouge">ECDSA</code> и <code class="language-plaintext highlighter-rouge">EDDSA</code></li>
+      <li>Хе<code class="language-plaintext highlighter-rouge"> - симметрическое шифрования: </code>SHA1<code class="language-plaintext highlighter-rouge">, </code>RIPEMD160<code class="language-plaintext highlighter-rouge">, </code>SHA256<code class="language-plaintext highlighter-rouge">, </code>SHA384<code class="language-plaintext highlighter-rouge">, </code>SHA512<code class="language-plaintext highlighter-rouge"> и</code>SHA224`</li>
+      <li>Компрессии: <code class="language-plaintext highlighter-rouge">Uncompressed</code>, <code class="language-plaintext highlighter-rouge">ZIP</code>, <code class="language-plaintext highlighter-rouge">ZLIB</code> и <code class="language-plaintext highlighter-rouge">BZIP2</code></li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">--try-all-secrets</code> - если ты не знаешь чьим приватным ключем расшифровывать, оное</li>
+  <li><code class="language-plaintext highlighter-rouge">-a</code> - ответ в текстовом переберет все наличныедставлении</li>
+  <li><code class="language-plaintext highlighter-rouge">--pinentry-mode loopback</code> - включает режим упрощенного ввода паролей с консоли. К использованию этого режима нужно относиться с пониманием, так как тут удобство повышается за счет безопасности. С <a href="https://lists.gnupg.org/pipermail/gnupg-devel/2015-May/029847.html">ответа</a> в одной из рабочих групп по gpg: &#8220;loopback mode is a hack to bypass the standard way of asking for passphrases and to allow a simpler thing&#8221;. Без этого ключа по умолчанию используется ввод пароля с помощью библиотеки <a href="https://manpages.debian.org/testing/pinentry-curses/pinentry-curses.1.en.html">pinentry-curses</a>, которая гарантирует что пароль нигде не будет сохранен. Дополнительные опции:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">--passphrase &lt;password&gt;</code> - ввод пароля как аргумент</li>
+      <li><code class="language-plaintext highlighter-rouge">--passphrase-file &lt;password-file&gt;</code> - ввод файла с паролем как аргумент</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="что-и-зачем">Что и зачем</h2>
+<p>Gpg позволяет шифровать файлы такими способами:</p>
+<ul>
+  <li>ассиметричное - шифруется публичным ключом, расшифровывается приватным</li>
+  <li>симметричное - шифруется и расшифровывается одной и той же парольной фразой</li>
+</ul>
+
+<p>Gpg позволяет подписывать файлы, и соответственно верифицировать подпись на файлах. Еще шифрование можно совмещать с подписыванием файла. И еще зашифровать можно одним или более публичными ключами.</p>
+
+<h2 id="симметричное-шифрование">Симметричное шифрование</h2>
+<p>Это шифрование, когда сообщение шифруется и расшифровывается одним и тем же паролем. 
+Простейший пример шифрования сообщения,</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">--passphrase &lt;password&gt;</code> - ввод пароля как аргумент</li>
+  <li><code class="language-plaintext highlighter-rouge">--passphrase-file &lt;password-file&gt;</code> - ввод файла с паролем как аргумент</li>
+</ul>
+
+<p>При выполнении этой команды пароль будет запрошен в интерактивном режиме:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> <span class="nb">echo</span> <span class="s2">"message"</span> | gpg <span class="nt">-c</span> <span class="nt">-a</span> <span class="nt">--cipher-algo</span> AES
+<span class="nt">-----BEGIN</span> PGP MESSAGE-----
+
+jA0ECQMC+qVtCU87epf/0j0Bmp6SWatIOwGEUb5+u85P0ZzOjsMRjrxgqm8gnPhe
+quv87PIs/iHsGpsGPOr1rY3LhnoYQO3ZjaBZdw/g
+<span class="o">=</span>DSZ/
+<span class="nt">-----END</span> PGP MESSAGE-----
+</code></pre></div></div>
+<p>Для того чтоб задать пароль в виде аргументов, можно использовать <code class="language-plaintext highlighter-rouge">--pinentry-mode loopback</code> и тогда опции <code class="language-plaintext highlighter-rouge">--passphrase</code> и <code class="language-plaintext highlighter-rouge">--passphrase-file</code> будут работать:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="nb">echo</span> <span class="s2">"message"</span> | gpg <span class="nt">-c</span> <span class="nt">-a</span> <span class="nt">--pinentry-mode</span> loopback <span class="nt">--passphrase</span> password
+<span class="nt">-----BEGIN</span> PGP MESSAGE-----
+
+jA0ECQMClRzymhTUUp7/0j0BYRI63DEYYjh8R45k2+U0GJBh5Wr8BiKYUFAPxfHx
+t+zqHuTMSE2AtJ3/zBL4+q7vE5dnBGoGvFMhjNIZ
+<span class="o">=</span>KE8q
+<span class="nt">-----END</span> PGP MESSAGE-----
+</code></pre></div></div>
+<h4 id="расшифровка">Расшифровка</h4>
+
+<p>Для расшифровки сообщений выше можно воспользоваться этими командами:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">read</span> <span class="nt">-r</span> <span class="nt">-d</span> <span class="s1">''</span> mess <span class="o">&lt;&lt;-</span><span class="no">EOF</span><span class="sh">
+-----BEGIN PGP MESSAGE-----
+
+jA0ECQMClRzymhTUUp7/0j0BYRI63DEYYjh8R45k2+U0GJBh5Wr8BiKYUFAPxfHx
+t+zqHuTMSE2AtJ3/zBL4+q7vE5dnBGoGvFMhjNIZ
+=KE8q
+-----END PGP MESSAGE-----
+</span><span class="no">EOF
+</span><span class="o">&gt;</span> <span class="nb">echo</span> <span class="s2">"</span><span class="nv">$mess</span><span class="s2">"</span> | gpg <span class="nt">-d</span> <span class="nt">--pinentry-mode</span> loopback <span class="nt">--passphrase</span> password
+</code></pre></div></div>
+<p>Вообще, данные можно подать на вход разными способами, например(пароль <code class="language-plaintext highlighter-rouge">123</code>):</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cat</span>  <span class="o">&lt;&lt;</span><span class="no">DATA</span><span class="sh"> | gpg --decrypt
+-----BEGIN PGP MESSAGE-----
+
+jA0ECQMCeqYI5XWTG0f/0sALAXTTjLlpuZXLHZRtIKMwEN9XNKPkemq/yv91fCGP
+LRnZIGzyJKZ1G+xRKbFxrhbqo3laW4p29DOcTgQmBAr3+0OtMk1+vhDUJcEo675O
+nBUY4Z8nitI2+wzG6L/JWL1/NtVCGa6pFiWqgyBzAu2bCINMmoS24/bxGuANq1XW
+KKq2YMx/oFA+6EWqih+XT5R3vocBMD2OX6HM4zKvaCEvsuwz2vziza13nQK4T6MY
+7/rsxsEhJr+NgMV5YepLhNscwjkv5scpAsqYjI4=
+=cCk/
+
+-----END PGP MESSAGE-----
+</span><span class="no">DATA
+</span></code></pre></div></div>
+
+<p>Еще вариант: подать их на вход в виде файла</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># файл в бинарном представлении</span>
+gpg <span class="nt">--decrypt</span> doc.gpg
+<span class="c"># если не работает потому что файл в текстовом представлении, </span>
+<span class="c"># можно сначала конвертировать текст в бинарные данные назад</span>
+gpg <span class="nt">--dearmor</span> <span class="nt">-o-</span> doc.gpg | gpg <span class="nt">--decrypt</span>
+<span class="c"># где -o- это -o -, т.е. вывод в stdout ("--output -" тоже работает)</span>
+</code></pre></div></div>
+
+<h4 id="идентифицировать-алгоритм">Идентифицировать алгоритм</h4>
+<p>На самом деле ты не всегда знаешь какой алгоритм использовался. Но в самом сообщение об этом <a href="https://superuser.com/questions/1538456/how-to-find-out-symmetric-encryption-algorithm-used-in-pgp-encryption-with-gpg">пишут</a> и можно узнать не зная пароля(и не введя его, просто нажать &#8220;Cancel&#8221;):</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> gpg <span class="nt">-vv</span> <span class="nt">--show-session-key</span> <span class="nt">--list-packets</span> encrypted_file.asc
+.......
+gpg: AES256 encrypted data
+.......
+</code></pre></div></div>
+<p>или так:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> gpg <span class="nt">--list-only</span> <span class="nt">-d</span> encrypted_file.asc
+gpg: AES256 encrypted data
+gpg: encrypted with 1 passphrase
+</code></pre></div></div>
+
+<h2 id="асимметричное-шифрование">Асимметричное шифрование</h2>
+<p>Это шифрование, когда сообщение шифруется публичным ключем получателя и расшифровать его может только получатель своим приватным ключем. За этот оежим отвечает <code class="language-plaintext highlighter-rouge">-e</code>(<code class="language-plaintext highlighter-rouge">--encrypt</code>) параметр, который часто идет в паре с <code class="language-plaintext highlighter-rouge">-r &lt;получатель&gt;</code>(<code class="language-plaintext highlighter-rouge">--recepient</code>)
+Для эксперимента например скачаем и установим мой публичный ключ:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> curl <span class="nt">-sSL</span> https://k.co.ua/pubkey.pgp | gpg <span class="nt">--import</span> -
+<span class="o">&gt;</span> gpg <span class="nt">--sign-key</span> <span class="s1">'Vasyl Khrystiuk'</span> <span class="c"># подписать для себя мой ключ, чтоб повысить уровень доверия к нему</span>
+</code></pre></div></div>
+<p>Пример команды:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo </span>message | gpg <span class="nt">-e</span> <span class="nt">-a</span> <span class="nt">-r</span> <span class="s2">"Vasyl Khrystiuk"</span>
+gpg: checking the trustdb
+gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+gpg: depth: 0  valid:   1  signed:   1  trust: 0-, 0q, 0n, 0m, 0f, 1u
+gpg: depth: 1  valid:   1  signed:   0  trust: 1-, 0q, 0n, 0m, 0f, 0u
+<span class="nt">-----BEGIN</span> PGP MESSAGE-----
+
+hQEMA0dEe+lKxwSUAQf9HRp67GwrylsyMZzrL1cAtb4dQSs9Q/aEPRxN396bP4C7
+uym/AX53CqdIDJVgdY0Sd2b2M3IKDrr+2NslB1+aIpa+AWXD2XOhAnbvmxCdwwCL
+6om96IheQ2L2cZ5euJ0GMHR+sLiLNy2VbET+hjxWRv6GYG74K5U+or4jD/QlD4nI
+DQnd2i1D6b52TYlVdWKbirmQAQZti200Jea54c/j6VcaUh7uafpR8YDxLq9JoF4G
+wuwVEbqZqWR2+JsssDoyM3Ab56kXHmsajp/Ee0oJywa8SLXpjHlGxMJI6OQeUZja
+CWzWDQBa4Zz9mfQw5dWwi3vstWMBBQQLkT0RUgShsdJDAanzVxgtFu6QGMPZw4sR
+f36E3h4MEg2K7d8iNvnp6wac2vC4leU5FLYL7/DAaUGh7QdMTqro00PzD6tkuhiT
+<span class="nv">7R5U3A</span><span class="o">==</span>
+<span class="o">=</span>PS7o
+<span class="nt">-----END</span> PGP MESSAGE-----
+</code></pre></div></div>
+<p>Для расшифровки используется все тот же <code class="language-plaintext highlighter-rouge">-d</code> параметр с вводом пароля:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cat</span>  <span class="o">&lt;&lt;</span><span class="no">DATA</span><span class="sh"> | gpg --decrypt
+&gt; -----BEGIN PGP MESSAGE-----
+&gt; 
+&gt; hQEMA0dEe+lKxwSUAQf9HRp67GwrylsyMZzrL1cAtb4dQSs9Q/aEPRxN396bP4C7
+&gt; uym/AX53CqdIDJVgdY0Sd2b2M3IKDrr+2NslB1+aIpa+AWXD2XOhAnbvmxCdwwCL
+&gt; 6om96IheQ2L2cZ5euJ0GMHR+sLiLNy2VbET+hjxWRv6GYG74K5U+or4jD/QlD4nI
+&gt; DQnd2i1D6b52TYlVdWKbirmQAQZti200Jea54c/j6VcaUh7uafpR8YDxLq9JoF4G
+&gt; wuwVEbqZqWR2+JsssDoyM3Ab56kXHmsajp/Ee0oJywa8SLXpjHlGxMJI6OQeUZja
+&gt; CWzWDQBa4Zz9mfQw5dWwi3vstWMBBQQLkT0RUgShsdJDAanzVxgtFu6QGMPZw4sR
+&gt; f36E3h4MEg2K7d8iNvnp6wac2vC4leU5FLYL7/DAaUGh7QdMTqro00PzD6tkuhiT
+&gt; 7R5U3A==
+&gt; 
+&gt; -----END PGP MESSAGE-----
+&gt; DATA
+gpg: encrypted with 2048-bit RSA key, ID 47447BE94AC70494, created 2021-03-17
+      "Vasyl Khrystiuk &lt;h6.msangel@gmail.com&gt;"
+message
+</span></code></pre></div></div>
+
+<h2 id="подписывание">Подписывание</h2>
+
+<p>Для подписи файла используется приватный ключ. Так как приватный (секретный) ключ хранится (очевидно же) в секрете владельцем, то исходя из предположения, что никто кроме владельца не имеет доступ к приватному ключу, мы можем быть уверены, что файл, который подписан этим приватным ключом, исходит от этого определённого лица. Если файл как либо после подписи был изменён, то эта подпись перестаёт быть верной (валидной) для данного файла. Поэтому, проверка подписи позволяет гарантировать:</p>
+<ul>
+  <li>файл исходит от того лица, которое её подписало</li>
+  <li>файл не был как либо модифицирован с момента подписи</li>
+</ul>
+
+<p>Для проверки подписи определённого лица у вас должен быть публичный ключ этого лица.</p>
+
+<p>Соединение подписанной версии файла вместе с ключем в бинарном формате:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> gpg <span class="nt">--sign</span> speech.txt
+<span class="c"># создаст speech.txt.gpg</span>
+</code></pre></div></div>
+<p>Соединение подписи внутри файла в изначальном(чаще всего текстовом) формате:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> gpg <span class="nt">--clear-sign</span> speech.txt
+<span class="c"># создаст speech.txt.asc</span>
+<span class="o">&gt;</span> <span class="nb">cat </span>speech.txt.asc 
+<span class="nt">-----BEGIN</span> PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+This is sample text I going to proove it is mine using signing.
+<span class="nt">-----BEGIN</span> PGP SIGNATURE-----
+
+iQEzBAEBCgAdFiEEULZwqN4fPNiVg4lSQcuY8zsGFG4FAmF0s4gACgkQQcuY8zsG
+FG6pyAgAiIVG3Am3QIxrBgwYDlB44QyRr4yh62C6BcbqTZdG0ljzK8HyKs4qTFZz
+Il67UpLfPvziI35WNcJMaoZwdVUT9BpRPGZTSH3yIk9KNHjEz2oh99PUwXBNGYMq
+iXr+W2XL+ZjXk4fsk9DzADrFGR7NbQHz+1wyWNOJmtLN4LwDMk4o4RvuiSpwQdw0
+SHDpefczD5rkC2Z0cD+BL6imHSa8pER4o79qOPiujxuKCtbJZGZf2qTMNJNV8l6S
+PpDUoE7ycmlpmkOi1JnSBO/NfFiV2kA9FIhn4Tk9hyjEE8WWWQxEK2msKCDuKl5m
+<span class="nv">sS141HaDk7LmODcz8MzmpbEdpthXUQ</span><span class="o">==</span>
+<span class="o">=</span>x2TL
+<span class="nt">-----END</span> PGP SIGNATURE-----
+</code></pre></div></div>
+
+<p>Создание подписи для файла в виде отдельного файла подписи параметром <code class="language-plaintext highlighter-rouge">-b</code> (<code class="language-plaintext highlighter-rouge">--detach-sign</code>):</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> gpg <span class="nt">--sign</span> <span class="nt">-b</span> speech.txt
+<span class="c"># создаст speech.txt.sig</span>
+</code></pre></div></div>
+<p>Этот вариант создания подписи <a href="https://serverfault.com/questions/896228/how-to-verify-a-file-using-an-asc-signature-file">используется чаще всего</a>, так как большинству пользователей не интересна эта электронная подпись и они не хотят извлекать оригинальный файл из закодированного сообщения. Потому подпись и оригинальный файл разделены. Ну а если кто-то задастся целью проверить подпись, то это все еще будет доступно.</p>
+
+<h4 id="проверить-подпись">Проверить подпись</h4>
+
+<p>Если файл и подпись в одном файле, то проверить подпись можно так:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> gpg <span class="nt">--verify</span> speech.txt.asc
+gpg: Signature made нд, 24-жов-2021 04:21:29 +0300 EEST
+gpg:                using RSA key 50B670A8DE1F3CD89583895241CB98F33B06146E
+gpg: Good signature from <span class="s2">"Vasyl Khrystiuk &lt;h6.msangel@gmail.com&gt;"</span> <span class="o">[</span>ultimate]
+</code></pre></div></div>
+<p>Если файл и подпись в отдельных файлах, то так:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> gpg <span class="nt">--verify</span> speech.txt.sig speech.txt
+gpg: Signature made нд, 24-жов-2021 04:21:29 +0300 EEST
+gpg:                using RSA key 50B670A8DE1F3CD89583895241CB98F33B06146E
+gpg: Good signature from <span class="s2">"Vasyl Khrystiuk &lt;h6.msangel@gmail.com&gt;"</span> <span class="o">[</span>ultimate]
+</code></pre></div></div>
+<p>Извлечь оригинальный файл из подписанного все той же командой decode <code class="language-plaintext highlighter-rouge">-d</code> (<code class="language-plaintext highlighter-rouge">-o</code> используется чтоб не смешивать вывод верификации и контент файла):</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> gpg <span class="nt">-d</span> <span class="nt">-o</span> original_speech.txt speech.txt.gpg
+gpg: Signature made нд, 24-жов-2021 04:40:22 +0300 EEST
+gpg:                using RSA key 50B670A8DE1F3CD89583895241CB98F33B06146E
+gpg: Good signature from <span class="s2">"Vasyl Khrystiuk &lt;h6.msangel@gmail.com&gt;"</span> <span class="o">[</span>ultimate]
+<span class="c"># будет воссоздан original_speech.txt из зашифрованного файла</span>
+</code></pre></div></div>
+
+<h4 id="доверие-публичному-ключу">Доверие публичному ключу</h4>
+<p>С одной стороны, система публичных ключей гарантирует, что прочитать защищенное сообщение сможет только человек, который его сгенерировал публичный ключ вместе с соответствующим ему приватный. С другой стороны, вообще нет никакой гарантии, что тот ключ, который вы нашли в интернете, сгенерировал именно тот человек, чье имя на нем написано. Ничто не мешает мне назваться именем <a href="https://github.com/torvalds">Линуса Торвальдса</a> и отправить такой ключ на публичный сервер. Именно для того существует система доверия к публичным ключам. Работает она кстати довольно просто. У каждого локального публичного ключа есть <a href="https://www.gnupg.org/gph/en/manual/x334.html">один из соответственных ему уровней доверия</a>:</p>
+<ul>
+  <li>unknown</li>
+  <li>none</li>
+  <li>marginal</li>
+  <li>full</li>
+  <li>ultimate</li>
+</ul>
+
+<p>Уровни доверия каждый пользователь определяет для себя. Можно как вручную установить этот атрибут ключа локально, так и подписать этот ключ своим, что сделает ключ доверенным для себя, а в случае публикации такого измененного ключа даст всем знать, что вот лично вы этому ключу доверяете. И потому люди, которые доверяют вам, частично(marginal) тоже будут доверять этому ключу. Такая вот незадачливая реализация сети доверия.
+Установка уровня доверия вручную:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gpg <span class="nt">--edit-key</span> 39499BDB
+<span class="o">&gt;</span> trust
+ <span class="o">(</span>5 <span class="o">=</span> ultimate trust<span class="o">)</span>
+<span class="o">&gt;</span> save 
+</code></pre></div></div>
+<p>Подписывание публичного ключа своим приватным:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> gpg <span class="nt">--sign-key</span> <span class="s1">'Vasyl Khrystiuk'</span>
+</code></pre></div></div>
+
+<h2 id="хорошие-годные-советы">Хорошие, годные советы</h2>
+<ol>
+  <li>Создаем основной ключ без срока годности, храним в сейфе и используем только для подписи(сертификации) других ключей. Экспортировать только приватные субключи можно опцией при экспорте <code class="language-plaintext highlighter-rouge">--export-secretsubkeys</code></li>
+  <li>Ключи подписи и шифрования имеет смысл делать ограниченными во времени. В случае компрометации у вражеской стороны будет меньше времени ими воспользоваться.</li>
+  <li>Всюду можно пихать fingerprint своего публичного ключа. Кто знает - найдет и сможет безопасно писать вам сообщения.</li>
+  <li>Можно опубликовать публичный ключ в DNS. Есть много техник(RFC 2538, RFC 4398, RFC 7929) и <a href="https://www.gushi.org/make-dns-cert/howto.html">примеров</a> и даже есть опции автоматического считывания такого ключа с домена.</li>
+  <li>Пароль можно сгенерировать стандартными средствами: <code class="language-plaintext highlighter-rouge">gpg --gen-random 1 16 | gpg --enarmor | sed -n 4p</code></li>
+  <li>Так как на вход можно подавать что угодно, значит можно шифровать и архивы: <code class="language-plaintext highlighter-rouge">tar -cf - these files here | gpg -c &gt; these-files-here.tgp</code>. Обратная операция: <code class="language-plaintext highlighter-rouge">gpg &lt; these-files-here.tgp  | tar -xvf -</code></li>
+</ol>
+
+<h2 id="используемые-материалы">Используемые материалы:</h2>
+<ul>
+  <li><a href="https://www.gnupg.org/documentation/manpage.html">https://www.gnupg.org/documentation/manpage.html</a></li>
+  <li><a href="https://www.gnupg.org/gph/en/manual/x334.html">https://www.gnupg.org/gph/en/manual/x334.html</a></li>
+  <li><a href="https://www.gnupg.org/documentation/manuals/gnupg/GPG-Esoteric-Options.html#index-no_002dsymkey_002dcache">https://www.gnupg.org/documentation/manuals/gnupg/GPG-Esoteric-Options.html</a></li>
+  <li><a href="https://hackware.ru/?p=8215">https://hackware.ru/?p=8215</a></li>
+  <li><a href="https://gock.net/blog/2020/gpg-cheat-sheet/">https://gock.net/blog/2020/gpg-cheat-sheet/</a></li>
+</ul>
+
+<p>In the process:
+https://hackware.ru/?p=8215</p>
+
+<hr />
+
+<h2 id="симметричное-шифрование-с-помощью-приватного-ключа">Симметричное шифрование с помощью приватного ключа</h2>
+<p>Пример так(файл опускаем и вводим из консоли):
+gpg -armor -c &#8211;cipher-algo AES256
+&#8212;&#8211;BEGIN PGP MESSAGE&#8212;&#8211;</p>
+
+<p>jA0ECQMCeFG3G8AAfe3/0jwBz66lvQy4M4xBRAWz+dq4u3oB/KpddERVuwIJyniq
+rU+sz6ohLR7m1cihP6/y8TZhDpuh9ntLRe9iDnc=
+=OMF0
+&#8212;&#8211;END PGP MESSAGE&#8212;&#8211;</p>
+
+<p>чтоб расшифровать это, надо:
+для докера(надо же где-то проводить эксперименты):
+export GPG_TTY=$(tty)
+ну и само расшифрование:</p>
+
+<p>cat  &#171;DATA | gpg &#8211;decrypt &#8211;allow-multiple-messages
+&#8212;&#8211;BEGIN PGP MESSAGE&#8212;&#8211;</p>
+
+<p>jA0ECQMCeFG3G8AAfe3/0jwBz66lvQy4M4xBRAWz+dq4u3oB/KpddERVuwIJyniq
+rU+sz6ohLR7m1cihP6/y8TZhDpuh9ntLRe9iDnc=
+=OMF0
+&#8212;&#8211;END PGP MESSAGE&#8212;&#8211;
+DATA
+Хорошие пароли можно сгенерировать на месте:
+gpg &#8211;gen-random 1 16 | gpg &#8211;enarmor | sed -n 5p
+или
+gpg &#8211;gen-random 1 32 | gpg &#8211;enarmor | sed -n 4p
+А узнать чем зашифровано вот так:
+https://superuser.com/questions/1538456/how-to-find-out-symmetric-encryption-algorithm-used-in-pgp-encryption-with-gpg</p>
+
+<h2 id="used-resources">Used resources:</h2>
+<ul>
+  <li><a href="https://hackware.ru/?p=8215">https://hackware.ru/?p=8215</a></li>
+  <li></li>
+</ul>
+
+<p>in progress: 
+https://hackware.ru/?p=8215</p>
+
+<h2 id="асиметричное-шифрование">Асиметричное шифрование</h2>
+<h3 id="шифрование">Шифрование</h3>
+<p>Тут все просто - шифруем публичным ключем получателя, расшифровать сможет только он
+например (файл опущен, данные считываются с stdin):
+gpg &#8211;output doc.gpg &#8211;encrypt &#8211;recipient python273 <файл>
+или в ASCII:
+gpg --output doc.gpg --encrypt --armor --recipient "Vasyl Khrystiuk"</файл></p>
+<h3 id="расшифровывание">Расшифровывание</h3>
+<p>Расшифровка документов:
+gpg &#8211;output doc &#8211;decrypt doc.gpg
+или из ASCII
+gpg &#8211;dearmor -o- doc.gpg | gpg &#8211;decrypt
+где -o- это -o -, т.е. вывод в stdout (&#8220;&#8211;output -&#8220; тоже работает)</p>
+
+<p>Т.е. конвертация с бинарного в ascii встроена. Можно и явно в несколько шагов:
+To wrap a file in PGP ASCII armor, type:
+$ gpg &#8211;enarmor &lt; filename.bin &gt; filename.txt
+To unwrap a file already in PGP ASCII armor, type:
+$ gpg &#8211;dearmor &lt; filename.txt &gt; filename.bin
+Можно создавать шифрованные архивы:
+tar -cf - these files here | gpg -c &gt; these-files-here.tgp
+И разархивировать:
+gpg &lt; these-files-here.tgp  | tar -xvf -</p>
+
+<h2 id="подписывание-1">Подписывание</h2>
+<p>Считать сигнатуру
+https://serverfault.com/questions/896228/how-to-verify-a-file-using-an-asc-signature-file
+Считать сигнатуру на примере https://s01.oss.sonatype.org/service/local/repo_groups/staging/content/ua/co/k/strftime4j/1.0.5/strftime4j-1.0.5-javadoc.jar.asc</p>
+
+<p>Сначала публичный ключ подписавшего должен быть импортирован.</p>
+
+<p>Протом просто проверяешь подпись, где параметры сначала подпись, потом файл.
+gpg &#8211;verify  strftime4j-1.0.5-javadoc.jar.asc strftime4j-1.0.5-javadoc.jar</p>
+
+<p>Подписывание работает вот так
+gpg &#8211;sign file        # produces file.gpg
+gpg &#8211;clear-sign file  # produces file.asc
+gpg &#8211;detach-sign file # produces file.sig</p>
+
+<p>подпись упакована с докумендом
+Подписываем приватным ключем, верифицируем публичным.
+Команда очень проста:
+gpg &#8211;output doc.sig &#8211;sign doc
+(если не указать &#8211;output, то по умолчанию берется оригинальное имя файла и добавляется .gpg  )</p>
+<blockquote>
+  <p>The document is compressed before being signed, and the output is in binary format.
+Декодировать и проверить сигнатуру, верификация:
+gpg &#8211;output doc &#8211;decrypt doc.sig</p>
+</blockquote>
+
+<p>подпись добавлена к документу
+Подпись:
+gpg &#8211;clearsign doc
+Результат:</p>
+
+<p>&#8212;&#8211;BEGIN PGP SIGNED MESSAGE&#8212;&#8211;
+Hash: SHA512</p>
+
+<p>привіт
+&#8212;&#8211;BEGIN PGP SIGNATURE&#8212;&#8211;</p>
+
+<p>iQEzBAEBCgAdFiEEV47yHNOagvp8kQ+4vI4poQ6+AJ4FAmBRczEACgkQvI4poQ6+
+AJ5gCAf/Vr1eFfGpQY5rrwTmmpDQrZeJTXzX5E3RtfHxjQOxVN725vgSDnTV5Vm/
+BEPKrECD/E/DCH75oezXwnogtzWB/I55Ki3hOzKiO1N2etg3mwXPx0PbJa5GSR+P
+jpkWAR0m7G1haQMixX7RgjKo/7lqInsbzYDmscSVAWfoGX1G1gQnxkQFLCS0jocq
+8oSDYYBYiykAShmXMVirgjPeKhlgSwK6IUxuIB9oyzan0xJ3Eix9bypKjodZ+qs/
+rddCQwnV31dfDRvHgVucpXMJ3rDSkH6jOuDr8qGfVfZCqTzNqpEd4J7HH09IQ26w
+AxvRk/OQ/d8ApMonx3YC8CjAzres6Q==
+=2FcN
+&#8212;&#8211;END PGP SIGNATURE&#8212;&#8211;
+Верификация:
+gpg &#8211;verify doc.asc
+gpg: Signature made ср, 17-бер-2021 05:16:49 +0200 EET
+gpg:                using RSA key 578EF21CD39A82FA7C910FB8BC8E29A10EBE009E
+gpg: Good signature from &#8220;Vasyl Khrystiuk (nb7 1st gen) <a href="mailto:h6.msangel@gmail.com">h6.msangel@gmail.com</a>&#8221; [ultimate]</p>
+
+<p>отдельно добавлена подпись:
+gpg &#8211;output doc.sig &#8211;detach-sig doc
+или
+gpg -a &#8211;output doc.sig &#8211;detach-sig doc</p>
+
+<p>Верификация:
+gpg &#8211;verify doc.sig doc</p>
+
+<h3 id="подписывание-и-шифрование-одновременно">Подписывание и шифрование одновременно</h3>
+
+<h2 id="хорошие-годные-советы-1">Хорошие, годные советы</h2>
+<ol>
+  <li>Создаем основной ключ без срока годности, храним в сейфе и используем только для подписи(сертификации) других ключей. Экспортировать только приватные субключи можно опцией при экспорте <code class="language-plaintext highlighter-rouge">--export-secretsubkeys</code></li>
+  <li>Ключи подписи и шифрования имеет смысл делать ограниченными во времени. В случае компрометации у вражеской стороны будет меньше времени ими воспользоваться.</li>
+  <li>Всюду можно пихать fingerprint своего публичного ключа. Кто знает - найдет и сможет безопасно писать вам сообщения.</li>
+  <li>Можно опубликовать публичный ключ в DNS. Есть много техник(RFC 2538, RFC 4398, RFC 7929) и <a href="https://www.gushi.org/make-dns-cert/howto.html">примеров</a> и даже есть опции автоматического считывания такого ключа с домена.</li>
+  <li>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gpg <span class="nt">--edit-key</span> EB0069AC
+<span class="o">&gt;</span> adduid
+<span class="o">&gt;</span> uid &lt;number&gt;
+<span class="o">&gt;</span> trust
+ <span class="o">(</span>5 <span class="o">=</span> ultimate trust<span class="o">)</span>
+<span class="o">&gt;</span> uid &lt;number&gt;
+<span class="o">&gt;</span> primary
+ <span class="o">(</span>для выбора основного идентификатора<span class="o">)</span>
+<span class="o">&gt;</span> save 
+</code></pre></div>    </div>
+    <hr />
+  </li>
+  <li></li>
+</ol>
+
+<h2 id="to-review">To review</h2>
+<ul>
+  <li>https://www.ianatkinson.net/computing/gnupg.htm#gen</li>
+  <li>https://riseup.net/en/security/message-security/openpgp/gpg-best-practices</li>
+  <li>https://www.linuxbabe.com/security/a-practical-guide-to-gpg-part-1-generate-your-keypair</li>
+  <li>https://gock.net/blog/2020/gpg-cheat-sheet/</li>
+  <li>https://www.linuxjournal.com/article/8732
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTIwNzk1NDQ0MzRdfQ==
+--></li>
+</ul>
+
+      
+        <h1 style="margin-top: 50px;">Комментарии</h1>
+      
+    </div>
+    <div id="disqus_thread"></div>
+  </div>
+</div>
+  
+<script>
+    jQuery(document).ready(function() {
+        function debouncer( func , timeout ) {
+            var timeoutID , timeout = timeout || 1000;
+            return function () {
+                var scope = this , args = arguments;
+                clearTimeout( timeoutID );
+                timeoutID = setTimeout( function () {
+                    func.apply( scope , Array.prototype.slice.call( args ) );
+                } , timeout );
+            }
+        }
+        var offset = 300;
+        var duration = 500;
+        var fadeFunc = function () {
+            if (jQuery(window).width() < 1140) {
+                jQuery('.backtotop').fadeOut(0);
+                return;
+            }
+            if (jQuery(window).scrollTop() > offset) {
+                jQuery('.backtotop').fadeIn(duration);
+            } else {
+                jQuery('.backtotop').fadeOut(duration);
+            }
+        }
+        jQuery(window).scroll(debouncer(fadeFunc, 50));
+        jQuery(window).resize(debouncer(fadeFunc));
+
+        jQuery('.backtotop').click(function(event) {
+            event.preventDefault();
+            jQuery('html, body').animate({scrollTop: 0}, duration);
+            return false;
+        })
+    });
+</script>
+<style>
+    .backtotop {
+        display: none;
+    }
+    @media only screen and (min-width:1140px){
+        .backtotop,
+        .backtotop:hover,
+        .backtotop:active,
+        .backtotop:visited,
+        .backtotop:focus {
+            display: none;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            z-index: 10000;
+            text-align: center;
+            color: black;
+            text-decoration: none;
+            padding: 4px 10px;
+            border-radius: 3px;
+            width: 60px;
+            opacity: 0.4;
+        }
+        .backtotop:hover {
+            background-color: rgba(59, 59, 59, 0.10);
+            opacity: 1;
+            transition-property: opacity;
+            transition-duration: 500ms;
+        }
+    }
+
+
+</style>
+<a href="#" class="backtotop"><img src="/assets/noun_Arrow_22173.svg"/></a>
+  
+  <script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    var disqus_config = function () {
+        this.page.url = 'https://k.co.ua/';  // Replace PAGE_URL with your page's canonical URL variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://k-co.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  
+  <div class="footer">
+    <div class="row">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="copyright">
+              <p><a href="https://github.com/msangel/msangel.github.io" target="_self">© 2014-2025 by Vasyl Khrystiuk</a>, powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>, crafted by
+                <a href="https://github.com/msangel/msangel.github.io/blob/master/.github/workflows/github-pages.yml" target="_blank">GitHub Actions</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+<script>anchors.add();</script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-194224445-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+<script src="/assets/links.js"></script>
+<script id="dsq-count-scr" src="//k-co.disqus.com/count.js" async></script>
+</body>
+</html>
