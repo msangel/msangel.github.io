@@ -191,9 +191,7 @@
       <module fileurl="file://$PROJECT_DIR$/samples/sqlite/sqlite-spring-boot/sqlite-spring-boot.iml" filepath="$PROJECT_DIR$/samples/sqlite/sqlite-spring-boot/sqlite-spring-boot.iml" />
     </modules>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="adopt-1.8" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/out" />
-  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="adopt-1.8" project-jdk-type="JavaSDK" />
   <component name="ProjectType">
     <option name="id" value="jpab" />
   </component>
@@ -220,7 +218,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
   </component>
-  <component name="dataSourceStorageLocal" created-in="IU-223.8836.35">
+  <component name="dataSourceStorageLocal" created-in="WS-243.23654.157">
     <data-source name="file" uuid="cb19b539-4e31-4f92-b1e4-1f25deb1b14d">
       <database-info product="SQLite" version="3.39.2" jdbc-version="2.1" driver-name="SQLite JDBC" driver-version="3.39.2.0" dbms="SQLITE" exact-version="3.39.2" exact-driver-version="3.39">
         <identifier-quote-string>&quot;</identifier-quote-string>

@@ -5,22 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6fb24a7b-b67b-439f-8f3c-e66e1d080c89" name="Changes" comment="WIP">
-      <change afterPath="$PROJECT_DIR$/samples/sqlite/sqlite-concurrent-tester/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/sqlite/sqlite-concurrent-tester/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/sqlite/sqlite-concurrent-tester/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/sqlite/sqlite-concurrent-tester/src/main/java/org/example/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/sqlite/sqlite-concurrent-tester/src/test/java/org/example/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/sqlite/sqlite-console/src/main/java/ua/k/co/ConnectionPropsViaPragma.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/sqlite/sqlite-console/src/main/java/ua/k/co/ConnectionPropsViaProps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/samples/sqlite/sqlite-console/src/main/java/ua/k/co/DataSourcePropsViaProps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sqlite-concurrent-tester.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_drafts/sqlite-for-java.md" beforeDir="false" afterPath="$PROJECT_DIR$/_drafts/sqlite-for-java.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2022-07-07-ansible-lightsail.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2022-07-07-ansible-lightsail.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_drafts/2025-02-01-avro.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/samples/avro/avro/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/samples/avro/avro/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/samples/avro/avro/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/samples/avro/avro/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/samples/avro/avro/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/samples/avro/avro/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/samples/avro/avro/src/main/java/ua/co/k/avro/CustomUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/samples/avro/avro/src/main/java/ua/co/k/avro/generated/Mail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/samples/avro/avro/src/main/java/ua/co/k/avro/generated/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/samples/avro/avro/src/main/java/ua/co/k/avro/generated/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/samples/avro/avro/src/main/resources/avro/mail.avpr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/samples/avro/avro/src/main/resources/avro/user.avsc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/samples/avro/avro/src/test/java/ua/co/k/avro/AvroRPCTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/samples/avro/avro/src/test/java/ua/co/k/avro/AvroSecuredRPCTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/samples/avro/avro/src/test/java/ua/co/k/avro/AvroSerializationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/msangel.github.io.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/msangel.github.io.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/msangel.github.io.iws" beforeDir="false" afterPath="$PROJECT_DIR$/msangel.github.io.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/sqlite/sqlite-console/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/samples/sqlite/sqlite-console/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/sqlite/sqlite-console/src/main/java/ua/k/co/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/samples/sqlite/sqlite-console/src/main/java/ua/k/co/SampleUsage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sqlite-console.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sqlite-console.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +61,9 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2LTBozl1j3THV6q8qOlkNLTIfrQ" />
   <component name="ProjectViewState">
     <option name="flattenPackages" value="true" />
@@ -66,37 +71,39 @@
     <option name="showLibraryContents" value="true" />
     <option name="showModules" value="false" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;adopt-1.8&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/msangel/.rvm/bin/rvm&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;890936c6e080741d2241b88ce5454bdd&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "adopt-1.8",
+    "last_opened_file_path": "/home/msangel/.rvm/bin/rvm",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "ruby.rails.projectView.checked": "true",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
+    "spring.configuration.checksum": "890936c6e080741d2241b88ce5454bdd",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;JSON&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "JSON"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ua.k.co" />
@@ -109,7 +116,30 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager">
+    <configuration default="true" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest">
+      <predefined_log_file enabled="true" id="RUBY_TESTUNIT" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPTS_PATHS" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="CUSTOM_SET_OF_FILES" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.App" />
       <module name="sqlite-concurrent-tester" />
@@ -175,45 +205,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest">
-      <predefined_log_file enabled="true" id="RUBY_TESTUNIT" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <EXTENSION ID="BundlerRunConfigurationExtension" BUNDLE_MODE="AUTO" bundleExecEnabled="true" />
-      <EXTENSION ID="org.jetbrains.plugins.ruby.rails.run.RailsRunConfigurationExtension" SCRATCH_USE_RAILS_RUNNER="false" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPTS_PATHS" VALUE="" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="CUSTOM_SET_OF_FILES" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Application.App" />
-      <item itemvalue="Application.ConnectionPropsViaPragma" />
-      <item itemvalue="Application.ConnectionPropsViaProps" />
-      <item itemvalue="Application.DataSourcePropsViaProps" />
-      <item itemvalue="Spring Boot.SqliteSpringBootApplication" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.App" />
-        <item itemvalue="Application.DataSourcePropsViaProps" />
-        <item itemvalue="Application.ConnectionPropsViaProps" />
-        <item itemvalue="Application.ConnectionPropsViaPragma" />
-        <item itemvalue="Spring Boot.SqliteSpringBootApplication" />
-      </list>
-    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-WS-243.23654.157" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
@@ -238,6 +236,8 @@
       <workItem from="1677595095800" duration="1329000" />
       <workItem from="1677689945850" duration="892000" />
       <workItem from="1678403638847" duration="11568000" />
+      <workItem from="1738386337451" duration="4425000" />
+      <workItem from="1738450693384" duration="25231000" />
     </task>
     <task id="LOCAL-00001" summary="sqlite part 1">
       <created>1675898140358</created>
@@ -266,6 +266,23 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
+    <option featureType="com.intellij.configurationType" implementationName="Application" />
+    <option featureType="com.intellij.configurationType" implementationName="SpringBootApplicationConfigurationType" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
@@ -273,17 +290,6 @@
     <MESSAGE value="switch to legacy jekyll action (test)" />
     <MESSAGE value="WIP" />
     <option name="LAST_COMMIT_MESSAGE" value="WIP" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/samples/sqlite/sqlite-spring-boot/src/main/java/com/example/sqlite/SqliteSpringBootApplication.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
