@@ -9,22 +9,27 @@ Default there defined [here](https://github.com/github/pages-gem/blob/master/lib
 Prerequirements:
 * [ruby](https://rvm.io/) v3:
   * install rvm: `curl -sSL https://get.rvm.io | bash -s stable`
-  * install compatible ruby as ubuntu22.04 have only opensslv3: `rvm pkg install openssl`
-  * install selected ruby: `rvm install 3.0.0 --with-openssl-dir=$HOME/.rvm/usr`
-  * use it as default: `rvm use 3.0.0 --default`
+  * if RVM reports that PATH is not properly set up, fix current shell first: `rvm use ruby-3.0.7`
+  * optional permanent RVM shell setup fix: `rvm get stable --auto-dotfiles`
+  * install compatible openssl because ubuntu22.04 have only opensslv3: `rvm pkg install openssl`
+  * after installing openssl, RVM suggests reinstalling all rubies; for this site reinstalling only the selected ruby is enough
+  * install selected ruby: `rvm reinstall 3.0.7 --with-openssl-dir=$HOME/.rvm/usr`
+  * use it as default: `rvm use 3.0.7 --default`
+  * verify openssl is available: `ruby -ropenssl -e 'puts OpenSSL::OPENSSL_VERSION'`
 * [Bundler](https://bundler.io/) :
-  * `gem install bundler`
+  * `gem install bundler:2.2.3`
   * made available: 
     should be already there, but in case: `echo "export PATH=\"\$PATH:\$HOME/.rvm/bin\"" >> ~/.bashrc`
     * `echo "export PATH=\"\$PATH:\$HOME/.rvm/gems/default/bin\"" >> ~/.bashrc`
     * `echo "export PATH=\"\$PATH:\$HOME/.rvm/rubies/default/bin\"" >> ~/.bashrc`
-* [Bundler](https://bundler.io/) 
+## build locally
+1. Install dependencies from `Gemfile.lock`: `bundle install`
+2. Build static output: `bundle exec jekyll build`
+3. Run locally with drafts: `bundle exec jekyll serve --drafts`
+4. http://localhost:4000/ is your friend
 
- 1. Create `Gemfile`.
- 2. run `bundle install` for installing all dependencies
- 3. ruby v3 dependency: `bundle add webrick`
- 4. run locally with: `bundle exec jekyll serve --drafts`
- 54. http://localhost:4000/ is your friend
+## migration target
+Move to another publishing action
 
 ## dev help
 * bootstrap docs: https://getbootstrap.com/docs/3.3/css/#grid

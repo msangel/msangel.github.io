@@ -22,7 +22,9 @@ It's a common problem when developers create their software on their computer an
 
 There also exists a known "Matrix of hell" that show a wide variety of different systems and their different behavior on different hardware:
 
-![Matrix of hell](https://k.co.ua/resources/docker/the_matrix_of_hell.png "Matrix of hell"){: pretty}
+<div class="row" markdown="0">
+  <img src="https://k.co.ua/resources/docker/the_matrix_of_hell.png" alt="Matrix of hell" title="Matrix of hell" loading="lazy" class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+</div>
 
 Also, there exists another problem: developers want to use the latest technologies like Haskel, Rust, Go, Microservices, Cassandra, Hadoop, etc.
 But server operations and security want to use the same tooling as they used before, something that is proven, works, and don't require additional work to configure/secure.
@@ -33,7 +35,9 @@ Server operations have to care about only one thing. They have to support deploy
 
 So docker allows to solve this matrix in a very straightforward way:
 
-![Matrix solved](https://k.co.ua/resources/docker/the_matrix_of_hell_solved.png "Matrix solved"){: pretty}
+<div class="row" markdown="0">
+  <img src="https://k.co.ua/resources/docker/the_matrix_of_hell_solved.png" alt="Matrix solved" title="Matrix solved" loading="lazy" class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+</div>
 
 This is really cool approach we have nowadays. But before everything was different.  Hosting has a long and very complex history. And that has an impact on the docker. I'm pretty sure we must overview some basics of hosting history for understanding what requirements and problems exist prior to docker.
 
@@ -51,7 +55,9 @@ The virtual servers are **software** that allows running another virtual/emulate
 The hypervisor, also referred to as Virtual Machine Manager (VMM), is what enables virtualization (running several operating systems on one physical computer). It allows the host computer to share its resources between VMs([link](https://www.vmware.com/topics/glossary/content/hypervisor)).
 There exists two types of hypervisor: native(or bare metal) and hosted.
 
-![Hypervisor types](https://k.co.ua/resources/docker/hypervisor.png "Hypervisor types"){: pretty}
+<div class="row" markdown="0">
+  <img src="https://k.co.ua/resources/docker/hypervisor.png" alt="Hypervisor types" title="Hypervisor types" loading="lazy" class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+</div>
 
 ### Native hypervisor
 The native hypervisor is installed right on top of the underlying machine’s hardware (so, in this case, there is no host OS, there are only guest OS’s). This is usually installed on a machine on which the whole purpose was to run many virtual machines. The hypervisor here has its own device drivers and interact with hardware directly. Such hypervisors are faster, simpler, and hence more stable.
@@ -88,7 +94,9 @@ Containerization is a lightweight alternative to full machine virtualization tha
 
 Docker is an example of containerization technology.
 
-![VM vs Container](https://k.co.ua/resources/docker/vm_vs_container.png "VM vs Container"){: pretty}
+<div class="row" markdown="0">
+  <img src="https://k.co.ua/resources/docker/vm_vs_container.png" alt="VM vs Container" title="VM vs Container" loading="lazy" class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+</div>
 The image describes the difference between a VM and Docker. Instead of a _hypervisor_ with Guest OSes on top, Docker uses a _Docker engine_ and containers on top. 
 
 Let's look more aspects:
@@ -155,11 +163,15 @@ Terminology:
 -   **volume** — storage outside the container.
 -   **Dockerfile** — a script for creating images.
 
-![Docker use](https://k.co.ua/resources/docker/docker_use.png "Docker use"){: pretty}
+<div class="row" markdown="0">
+  <img src="https://k.co.ua/resources/docker/docker_use.png" alt="Docker use" title="Docker use" loading="lazy" class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+</div>
 
 The mentioned above "Union File system" built on top of "Copy-On-Write" principle and allows high reuse of file systems.
 
-![Union File System](https://k.co.ua/resources/docker/copy_on_write_fs.png "Union File System"){: pretty}
+<div class="row" markdown="0">
+  <img src="https://k.co.ua/resources/docker/copy_on_write_fs.png" alt="Union File System" title="Union File System" loading="lazy" class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+</div>
 
 For example: if you build most of your applications as PHP site driven by Apache Http Server, the single layer with Apache server will be shared between all of your applications. And the files of each of those applications every time will be put on top of that base at runtime time.
 
@@ -174,4 +186,3 @@ You may also want to look at the more practical part of using docker in my docke
 * [A comprehensive introduction to Docker, Virtual Machines, and Containers](https://www.freecodecamp.org/news/comprehensive-introductory-guide-to-docker-vms-and-containers-4e42a13ee103/)
 * [About Hypervisor on wiki](https://en.wikipedia.org/wiki/Hypervisor)
 * [Understanding Union File Systems](https://medium.com/@paccattam/drooling-over-docker-2-understanding-union-file-systems-2e9bf204177c)
-

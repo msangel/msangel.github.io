@@ -1,8 +1,25 @@
 ---
 title: Regexp in java
 date: 2014-04-16 01:57:00 Z
-toc: true
 ---
+
+- [Theory and history.](#theory-and-history)
+- [RegExp in Java](#regexp-in-java)
+  - [Test string for pattern matching](#test-string-for-pattern-matching)
+  - [Flags](#flags)
+  - [Split string with delimiter](#split-string-with-delimiter)
+  - [Check prefix(if string starting with another string)](#check-prefixif-string-starting-with-another-string)
+  - [Changing pattern/data in existing matcher](#changing-patterndata-in-existing-matcher)
+  - [Substring search](#substring-search)
+  - [Replace by pattern](#replace-by-pattern)
+    - [Method 1](#method-1)
+    - [Method 2](#method-2)
+    - [Method 3](#method-3)
+    - [Method 4](#method-4)
+  - [Greedy match](#greedy-match)
+  - [Regions](#regions)
+  - [Regexp escaping](#regexp-escaping)
+- [Tutorials and articles](#tutorials-and-articles)
 
 ### Theory and history.
 <!-- excerpt-start -->

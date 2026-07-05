@@ -455,7 +455,9 @@ https://help.gnome.org/users/seahorse/stable/pgp-photoid.html.en).
 
 ### Заключение
 В целом консольная программа удобна и понятна, однако если нет желания играться в консоль, существует много GUI-инструментов. При желании их можно найти и сравнить. Сам же я предпочитаю пользоваться программой `GPA` которая поставляется в комплекте с всем пакетом.
-![GPA](https://k.co.ua/resources/pgp/Screenshot_2021-10-17_17-56-40.png){: pretty}
+<div class="row" markdown="0">
+  <img src="https://k.co.ua/resources/pgp/Screenshot_2021-10-17_17-56-40.png" alt="GPA" loading="lazy" class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+</div>
 
 ### Используемые материалы
 - [https://www.gnupg.org/gph/en/manual.html](https://www.gnupg.org/gph/en/manual.html)

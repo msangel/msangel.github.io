@@ -28,7 +28,11 @@ Java keeps information about all known timezones in its own internal storage. An
 
 And I'm not going to use it since I found no easy readme, the download anything from Oracle website is a pain, and I have strong concerns it works with mine AdoptOpenJDK installed. You may [try your luck with it](https://www.oracle.com/java/technologies/javase/tzupdater-readme.html), but since there exists opensource alternative [ZIUpdater](https://www.azul.com/products/components/ziupdater-time-zone-tool/), I'm going to use it instead.
 
-Work with `ZIUpdater` is simple: download, extract, run. You can download it from the [website](https://www.azul.com/products/components/ziupdater-time-zone-tool/): ![img.png](/resources/jvm-tz-update/img.png){: pretty}. 
+Work with `ZIUpdater` is simple: download, extract, run. You can download it from the [website](https://www.azul.com/products/components/ziupdater-time-zone-tool/):
+
+<div class="row" markdown="0">
+  <img src="/resources/jvm-tz-update/img.png" alt="img.png" loading="lazy" class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+</div>
 
 For updating timezone information, you also need this information to get somewhere. IANA is a good and reliable source. Just download the latest file from there: https://data.iana.org/time-zones/tzdata-latest.tar.gz 
 
