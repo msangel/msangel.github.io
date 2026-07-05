@@ -8,6 +8,9 @@ on:
     branches:
       - master
 
+permissions:
+  contents: write
+
 jobs:
   github-pages:
     runs-on: ubuntu-latest
@@ -23,6 +26,5 @@ jobs:
             ${{ runner.os }}-gems-
       - uses: helaili/jekyll-action@v2
         with:
-          token: ${{ secrets.JEKYLL_GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           target_branch: 'gh-pages'
-
