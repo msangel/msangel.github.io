@@ -1,0 +1,257 @@
+<html lang="en" class="mysite">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Just SSI | Vasyl Khrystiuk</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Just SSI" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="What it is" />
+<meta property="og:description" content="What it is" />
+<link rel="canonical" href="https://github.com/pages/msangel/blog/2026/07/05/just-ssi.html" />
+<meta property="og:url" content="https://github.com/pages/msangel/blog/2026/07/05/just-ssi.html" />
+<meta property="og:site_name" content="Vasyl Khrystiuk" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-07-05T11:51:14+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Just SSI" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2026-07-05T15:33:08+00:00","datePublished":"2026-07-05T11:51:14+00:00","description":"What it is","headline":"Just SSI","mainEntityOfPage":{"@type":"WebPage","@id":"https://github.com/pages/msangel/blog/2026/07/05/just-ssi.html"},"url":"https://github.com/pages/msangel/blog/2026/07/05/just-ssi.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  
+  <link rel="stylesheet" href="/assets/components-font-awesome/css/fontawesome-all.min.css">
+
+  <link href='/assets/open-sans-all/css/open-sans.min.css' rel='stylesheet' type='text/css'>
+  
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+  <link href='//fonts.googleapis.com/css?family=Ubuntu&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Ubuntu+Mono&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  
+  <link rel="stylesheet" href="/assets/bootstrap/dist/css/bootstrap.min.css">
+  <script src="/assets/jquery/dist/jquery.min.js"></script>
+  <script src="/assets/bootstrap/dist/js/bootstrap.min.js"></script>
+  
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="shortcut icon" type="image/jpg" href="/assets/favicon.ico"/>
+  <link rel="stylesheet" href="/assets/tabs.css">
+  <script src="/assets/tabs.js"></script>
+  <link href="/assets/rouge.css" rel="stylesheet" >
+  <style>
+      .highlighter-rouge > .highlight > pre.highlight {
+          border-radius: unset;
+      }
+  </style>
+</head>
+
+<body>
+<div id="body">
+  <div class="jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 myname"><a href="/"><span>Vasyl </span>Khrystiuk</a></div>
+        <div class="col-xs-12 col-sm-12 subtitle"><a href="/"><span>full stack developer</span></a></div>
+      </div>
+
+    </div>
+  </div>
+
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <ul class="nav navbar-nav">
+        <!--class="active" -->
+        <li><a href="/">BLOG</a></li>
+        <li role="separator" class="divider-vertical"></li>
+        <li><a href="/about">ABOUT</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container central blogpost">
+  <div class="row">
+    <div class="col-lg-12 record">
+
+<h2 class="page-title">Just SSI</h2>
+      <p class="text-muted small page-date">Posted: July 05, 2026 - Updated: July 05, 2026</p>
+
+<h3 id="what-it-is">What it is</h3>
+
+<p>It is a very simple rendering engine that allows you to put dynamically generated content right into plain HTML files.</p>
+
+<p>It comes as a built-in extension of a web server, and native support can be found in Apache HTTP Server (mod_include), NGINX (ngx_http_ssi_module), Microsoft IIS (ServerSideInclude), Apache Tomcat, and many others.</p>
+
+<p>General pattern is:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!--#directive parameter="value"--&gt;</span>
+</code></pre></div></div>
+
+<p>An example is this tag, which after rendering shows the latest page modification date:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!--#flastmod file="index.html" --&gt;</span>
+</code></pre></div></div>
+<p>And for that, you do not need any application, handlers, or other servers. This is built into the existing one.</p>
+
+<h3 id="other-examples">Other examples</h3>
+<p>Use of echo and one of the predefined global variables:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This file last modified <span class="c">&lt;!--#echo var="LAST_MODIFIED" --&gt;</span>
+</code></pre></div></div>
+<p>Include the result of a CGI script:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Page visitors <span class="c">&lt;!--#include virtual="/cgi-bin/counter.pl" --&gt;</span>
+</code></pre></div></div>
+<p>Or just include another HTML file as part of this page:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!--#include virtual="/footer.html" --&gt;</span>
+</code></pre></div></div>
+<p>Alternative via <code class="language-plaintext highlighter-rouge">exec</code>:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Page visitors <span class="c">&lt;!--#exec cgi="/cgi-bin/counter.pl" --&gt;</span>
+</code></pre></div></div>
+<p>A direct call to a local shell script, inlining its result:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!--#exec cmd="perl /path/to/perlscript arg1 arg2" --&gt;</span>
+</code></pre></div></div>
+<p>This is clear:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!--#exec cmd="ls" --&gt;</span>
+</code></pre></div></div>
+
+<h3 id="programming-with-ssi">Programming with SSI</h3>
+<p>Declaring a variable:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!--#set var="Zed" value="${REMOTE_HOST}_${REQUEST_METHOD}" --&gt;</span>
+</code></pre></div></div>
+<p>Conditional rendering:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!--#if expr="\"$DOCUMENT_URI\" = \"/foo/file.html\"" --&gt;</span>
+in foo
+<span class="c">&lt;!--#elif expr="$a = test1 &amp;&amp; $b = test2" --&gt;</span>
+in bar
+<span class="c">&lt;!--#else --&gt;</span>
+in neither
+<span class="c">&lt;!--#endif --&gt;</span>
+</code></pre></div></div>
+
+<h3 id="conclusion">Conclusion</h3>
+<p>There are many directives in SSI, but in general, having variables, expressions, calls to other programs, and generated output from programs and other plain files is enough to generate smart dynamic pages without having anything other than a plain static server. Yes, many static server hoststers do support SSI.</p>
+
+      
+        <h1 style="margin-top: 50px;">Comments</h1>
+      
+    </div>
+    <div id="disqus_thread"></div>
+  </div>
+</div>
+  
+<script>
+    jQuery(document).ready(function() {
+        function debouncer( func , timeout ) {
+            var timeoutID , timeout = timeout || 1000;
+            return function () {
+                var scope = this , args = arguments;
+                clearTimeout( timeoutID );
+                timeoutID = setTimeout( function () {
+                    func.apply( scope , Array.prototype.slice.call( args ) );
+                } , timeout );
+            }
+        }
+        var offset = 300;
+        var duration = 500;
+        var fadeFunc = function () {
+            if (jQuery(window).width() < 1140) {
+                jQuery('.backtotop').fadeOut(0);
+                return;
+            }
+            if (jQuery(window).scrollTop() > offset) {
+                jQuery('.backtotop').fadeIn(duration);
+            } else {
+                jQuery('.backtotop').fadeOut(duration);
+            }
+        }
+        jQuery(window).scroll(debouncer(fadeFunc, 50));
+        jQuery(window).resize(debouncer(fadeFunc));
+
+        jQuery('.backtotop').click(function(event) {
+            event.preventDefault();
+            jQuery('html, body').animate({scrollTop: 0}, duration);
+            return false;
+        })
+    });
+</script>
+<style>
+    .backtotop {
+        display: none;
+    }
+    @media only screen and (min-width:1140px){
+        .backtotop,
+        .backtotop:hover,
+        .backtotop:active,
+        .backtotop:visited,
+        .backtotop:focus {
+            display: none;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            z-index: 10000;
+            text-align: center;
+            color: black;
+            text-decoration: none;
+            padding: 4px 10px;
+            border-radius: 3px;
+            width: 60px;
+            opacity: 0.4;
+        }
+        .backtotop:hover {
+            background-color: rgba(59, 59, 59, 0.10);
+            opacity: 1;
+            transition-property: opacity;
+            transition-duration: 500ms;
+        }
+    }
+
+
+</style>
+<a href="#" class="backtotop"><img src="/assets/noun_Arrow_22173.svg"/></a>
+  
+  <script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    var disqus_config = function () {
+        this.page.url = 'https://k.co.ua/';  // Replace PAGE_URL with your page's canonical URL variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://k-co.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  
+  <div class="footer">
+    <div class="row">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="copyright">
+              <p><a href="https://github.com/msangel/msangel.github.io" target="_self">© 2014-2026 by Vasyl Khrystiuk</a>, powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>, crafted by
+                <a href="https://github.com/msangel/msangel.github.io/blob/master/.github/workflows/github-pages.yml" target="_blank">GitHub Actions</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+<script>anchors.add();</script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-194224445-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+<script src="/assets/links.js"></script>
+<script id="dsq-count-scr" src="//k-co.disqus.com/count.js" async></script>
+</body>
+</html>
